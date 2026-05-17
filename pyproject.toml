@@ -1,0 +1,6 @@
+[project]
+name = "pak-public-kit"
+version = "0.1.0"
+description = "PAK extraction and public asset export tools"
+requires-python = ">=3.9"
+dependencies = []

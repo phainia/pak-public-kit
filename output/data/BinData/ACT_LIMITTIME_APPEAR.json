@@ -1,0 +1,324 @@
+{
+  "RocoDataRows": {
+    "1900001": {
+      "id": 1900001,
+      "petbase_id": 3262,
+      "open_world_map": 70011,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605797,
+        2605798,
+        2605799,
+        2605800,
+        2605801,
+        2605802,
+        2605803,
+        2605804,
+        2605805,
+        2605806,
+        2605807,
+        2605808,
+        2605809,
+        2605810,
+        2605811,
+        2605812,
+        2605813
+      ],
+      "track_type_param1": [
+        3262,
+        3263
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600103
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_huhuzhu.JL_huhuzhu'",
+      "pet_img1_zoom": 0.85,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_huhuzhu.img_manhua_huhuzhu'"
+    },
+    "1900002": {
+      "id": 1900002,
+      "petbase_id": 3081,
+      "open_world_map": 70047,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605984,
+        2605985,
+        2605986,
+        2605987,
+        2605988,
+        2605989,
+        2605990,
+        2605991,
+        2605992,
+        2605994,
+        2606002,
+        2606004,
+        2606005,
+        2606006,
+        2606007,
+        2606008,
+        2606010,
+        2606011,
+        2606012,
+        2606013,
+        2606014,
+        2606015,
+        2606020,
+        2606021,
+        2606022,
+        2606023,
+        2606024
+      ],
+      "track_type_param1": [
+        3081,
+        3082,
+        3350
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600104
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_zhiyuhuowa.JL_zhiyuhuowa'",
+      "pet_img1_zoom": 0.95,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_zhiyutu.img_manhua_zhiyutu'"
+    },
+    "1900003": {
+      "id": 1900003,
+      "petbase_id": 3121,
+      "open_world_map": 70045,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605814,
+        2605815,
+        2605816,
+        2605818,
+        2605819,
+        2605820,
+        2605826,
+        2605827,
+        2605828,
+        2605829,
+        2605830,
+        2605831,
+        2605832,
+        2605835,
+        2605836,
+        2605837,
+        2605838,
+        2605840,
+        2605841
+      ],
+      "track_type_param1": [
+        3121,
+        3122,
+        3123
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600105
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_daermaodou.JL_daermaodou'",
+      "pet_img1_zoom": 1.0,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_daermaodou.img_manhua_daermaodou'"
+    },
+    "1900004": {
+      "id": 1900004,
+      "petbase_id": 3200,
+      "open_world_map": 70010,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605931,
+        2605932,
+        2605933,
+        2605934,
+        2605935,
+        2605936,
+        2605937,
+        2605938,
+        2605939,
+        2605940,
+        2605941,
+        2605942,
+        2605943,
+        2605944,
+        2605945,
+        2605946,
+        2605947,
+        2605948,
+        2605949,
+        2605950,
+        2605951,
+        2605952,
+        2605953,
+        2605954
+      ],
+      "track_type_param1": [
+        3200,
+        3201,
+        3202
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600106
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_jixiefangfang.JL_jixiefangfang'",
+      "pet_img1_zoom": 0.8,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_jixiefangfang.img_manhua_jixiefangfang'"
+    },
+    "1900005": {
+      "id": 1900005,
+      "petbase_id": 3072,
+      "open_world_map": 70008,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605956,
+        2605957,
+        2605960,
+        2605963,
+        2605964,
+        2605965,
+        2605967,
+        2605969,
+        2605971,
+        2605973,
+        2605975,
+        2605976,
+        2605977,
+        2605981,
+        2605982,
+        2605983
+      ],
+      "track_type_param1": [
+        3072,
+        3073,
+        3074
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600107
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_gelanzhongzi.JL_gelanzhongzi'",
+      "pet_img1_zoom": 0.9,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_gelanzhongzi.img_manhua_gelanzhongzi'"
+    },
+    "1900006": {
+      "id": 1900006,
+      "petbase_id": 3011,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605878,
+        2605880,
+        2605881,
+        2605882,
+        2605884,
+        2605886
+      ],
+      "track_type_param1": [
+        3011
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600108
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_emolang.JL_emolang'",
+      "pet_img1_zoom": 1.0,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_emolang.img_manhua_emolang'"
+    },
+    "1900007": {
+      "id": 1900007,
+      "petbase_id": 3029,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2605887,
+        2605889,
+        2605891,
+        2605893,
+        2605895,
+        2605897,
+        2605898,
+        2605900,
+        2605902,
+        2605903,
+        2605904,
+        2605906,
+        2605907,
+        2605909,
+        2605912,
+        2605914,
+        2605915,
+        2605917,
+        2605919,
+        2605920,
+        2605921,
+        2605923,
+        2605924,
+        2605925,
+        2605927,
+        2605928
+      ],
+      "track_type_param1": [
+        3029,
+        3030,
+        3031
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600109
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_qilicao.JL_qilicao'",
+      "pet_img1_zoom": 0.8,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_qilicao.img_manhua_qilicao'"
+    },
+    "1900008": {
+      "id": 1900008,
+      "petbase_id": 3188,
+      "option_txt1": "寻找精灵",
+      "track_type": 2,
+      "track_refresh_id_priority": [
+        2606025,
+        2606026,
+        2606027,
+        2606028,
+        2606029,
+        2606030,
+        2606031,
+        2606032,
+        2606033,
+        2606034,
+        2606035,
+        2606036,
+        2606037,
+        2606038,
+        2606039,
+        2606040,
+        2606041,
+        2606042,
+        2606043,
+        2606044,
+        2606045,
+        2606046,
+        2606047,
+        2606048
+      ],
+      "track_type_param1": [
+        3188,
+        3189
+      ],
+      "option_txt2": "活动任务",
+      "condition_id": [
+        1600110
+      ],
+      "pet_img1": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_late.JL_late'",
+      "pet_img1_zoom": 0.7,
+      "pet_img2": "Texture2D'/Game/NewRoco/Modules/System/Activity/Raw/Textures/img_manhua_late.img_manhua_late'"
+    }
+  }
+}

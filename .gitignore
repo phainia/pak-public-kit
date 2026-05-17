@@ -1,0 +1,52 @@
+# macOS
+.DS_Store
+
+# Local environment
+.env
+.env.*
+.venv/
+.uv-cache/
+.tools/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# .NET build output
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+
+# Generated extraction inputs and scratch artifacts
+temp/
+paks/
+*.pak
+*.ucas
+*.utoc
+*.ipa
+*.app/
+
+# Local secrets
+*.key
+*.keys
+aes_key.txt
+*aes_key*.txt
+
+# Logs and scratch files
+*.log
+*.tmp
+*.temp
