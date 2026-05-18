@@ -1159,7 +1159,7 @@
       "id": 290,
       "key": "drop_npc_auto_interact_time",
       "editor_name": "宝箱、果树等掉落物自动拾取时间",
-      "num": 60
+      "num": 5
     },
     "default_npc_lookat_distance": {
       "id": 291,
@@ -1576,6 +1576,12 @@
       "key": "nexus_overlap_interactive_topcheck_end",
       "editor_name": "创造魔法上方空间检测，检测最高点高度（cm）",
       "num": 550
+    },
+    "bonus_shining_nightmare_keep_zero_switch": {
+      "id": 356,
+      "key": "bonus_shining_nightmare_keep_zero_switch",
+      "editor_name": "连续捕捉异色噩梦是否必定褪色的开关",
+      "num": 1
     }
   }
 }

@@ -50667,7 +50667,7 @@
           "data2": [
             1500
           ],
-          "show_text": "点击收信"
+          "show_text": "打开相机拍摄"
         }
       ],
       "auto_finish": 1,
@@ -54995,7 +54995,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "42021",
-          "show_text": "打开相机拍摄"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -62608,7 +62608,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击继续尝试博德的药水"
         }
       ],
       "auto_finish": 1,
@@ -67047,7 +67047,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10020",
-          "show_text": "点击继续尝试博德的药水"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -67192,7 +67192,7 @@
           "data2": [
             5000
           ],
-          "show_text": "点击收信"
+          "show_text": "使用精灵视野追踪"
         }
       ],
       "auto_finish": 1,
@@ -68845,7 +68845,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10021",
-          "show_text": "使用精灵视野追踪"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -69244,7 +69244,7 @@
             4000
           ],
           "disable_force_track": true,
-          "show_text": "点击收信"
+          "show_text": "使用精灵视野寻找踪迹"
         }
       ],
       "auto_finish": 1,
@@ -70314,7 +70314,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10033",
-          "show_text": "使用精灵视野寻找踪迹"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -73302,7 +73302,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73418,7 +73418,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73510,7 +73510,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73643,7 +73643,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73686,7 +73686,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73793,7 +73793,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73828,7 +73828,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73962,7 +73962,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -73997,7 +73997,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -74032,7 +74032,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -74132,7 +74132,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -74256,7 +74256,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -74316,7 +74316,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -74373,7 +74373,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -74428,7 +74428,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_ASSIGNMENT",
-          "show_text": "点击收信"
+          "show_text": "点击查看魔法师手册"
         }
       ],
       "auto_finish": 1,
@@ -76781,7 +76781,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10022",
-          "show_text": "点击查看魔法师手册"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -76913,7 +76913,7 @@
         {
           "type": 5,
           "text": "TaskModuleCmd.OpenScrapBookPanel",
-          "show_text": "点击收信"
+          "show_text": "点击查看可丽的手账"
         }
       ],
       "auto_finish": 1,
@@ -77345,7 +77345,7 @@
             2800172,
             2800173
           ],
-          "show_text": "点击查看可丽的手账"
+          "show_text": "已到达目标区域"
         },
         {
           "type": 7,
@@ -84891,7 +84891,7 @@
           "data2": [
             3000
           ],
-          "show_text": "已到达目标区域"
+          "show_text": "已进入探索区域"
         },
         {}
       ],
@@ -92013,7 +92013,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "52901",
-          "show_text": "已进入探索区域"
+          "show_text": "点击收取来自远海的信件"
         }
       ],
       "auto_finish": 1,
@@ -92060,7 +92060,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "52101",
-          "show_text": "点击收取来自远海的信件"
+          "show_text": "点击收取信件"
         }
       ],
       "auto_finish": 1,
@@ -93536,7 +93536,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收取信件"
+          "show_text": "点击离开雪山"
         }
       ],
       "auto_finish": 1,
@@ -94046,7 +94046,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击离开雪山"
+          "show_text": "点击进入庄园范围"
         }
       ],
       "auto_finish": 1,
@@ -95374,7 +95374,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "900",
-          "show_text": "点击进入庄园范围"
+          "show_text": "如已离开家园，可点击查看如何返回"
         }
       ],
       "auto_finish": 1,
@@ -96898,7 +96898,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "900",
-          "show_text": "点击进入庄园范围"
+          "show_text": "如已离开家园，可点击查看如何返回"
         }
       ],
       "auto_finish": 1,
@@ -97168,7 +97168,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "900",
-          "show_text": "点击进入庄园范围"
+          "show_text": "如已离开家园，可点击查看如何返回"
         }
       ],
       "auto_finish": 1,
@@ -97566,7 +97566,7 @@
           "text": "BagModuleCmd.OpenBagMainPanelByTableIndex",
           "args": "3",
           "args2": "331000",
-          "show_text": "如已离开家园，可点击查看如何返回"
+          "show_text": "点击打开背包查看种子袋"
         }
       ],
       "auto_finish": 1,
@@ -98641,7 +98641,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "900",
-          "show_text": "点击进入庄园范围"
+          "show_text": "如已离开家园，可点击查看如何返回"
         }
       ],
       "auto_finish": 1,
@@ -98675,7 +98675,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "901",
-          "show_text": "点击打开背包查看种子袋"
+          "show_text": "点击了解如何查看食物消化进度"
         }
       ],
       "auto_finish": 1,
@@ -98812,7 +98812,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "900",
-          "show_text": "点击进入庄园范围"
+          "show_text": "如已离开家园，可点击查看如何返回"
         }
       ],
       "auto_finish": 1,
@@ -102198,7 +102198,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10037",
-          "show_text": "点击了解如何查看食物消化进度"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -102672,7 +102672,7 @@
         {
           "type": 5,
           "text": "MagicManualModuleCmd.OnOpenMagicManualToFlowerPanel",
-          "show_text": "点击收信"
+          "show_text": "点击查看稀兽花种"
         }
       ],
       "auto_finish": 1,
@@ -108375,7 +108375,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_SEASON",
-          "show_text": "点击查看稀兽花种"
+          "show_text": "点击查看赛季作业"
         }
       ],
       "auto_finish": 1,
@@ -108415,7 +108415,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_SEASON",
-          "show_text": "点击查看稀兽花种"
+          "show_text": "点击查看赛季作业"
         }
       ],
       "auto_finish": 1,
@@ -108455,7 +108455,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_SEASON",
-          "show_text": "点击查看稀兽花种"
+          "show_text": "点击查看赛季作业"
         }
       ],
       "auto_finish": 1,
@@ -108495,7 +108495,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_SEASON",
-          "show_text": "点击查看稀兽花种"
+          "show_text": "点击查看赛季作业"
         }
       ],
       "auto_finish": 1,
@@ -108535,7 +108535,7 @@
           "type": 5,
           "text": "MagicManualModuleCmd.OpenMagicManualByIndex",
           "args": "MMT_MAGIC_SEASON",
-          "show_text": "点击查看稀兽花种"
+          "show_text": "点击查看赛季作业"
         }
       ],
       "auto_finish": 1,
@@ -111263,7 +111263,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10040",
-          "show_text": "点击查看赛季作业"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -117425,7 +117425,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "在皮埃尔医馆醒来"
         }
       ],
       "auto_finish": 1,
@@ -123613,7 +123613,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "55000",
-          "show_text": "在皮埃尔医馆醒来"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -126071,7 +126071,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击进入任务场景"
         }
       ],
       "auto_finish": 1,
@@ -128117,7 +128117,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击进入任务场景"
         }
       ],
       "auto_finish": 1,
@@ -129991,7 +129991,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击进入任务场景"
         }
       ],
       "auto_finish": 1,
@@ -130908,7 +130908,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击进入任务场景"
         }
       ],
       "auto_finish": 1,
@@ -131958,7 +131958,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击进入任务场景"
         }
       ],
       "auto_finish": 1,
@@ -133979,7 +133979,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10039",
-          "show_text": "点击进入任务场景"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -135236,7 +135236,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击回到任务场景"
         }
       ],
       "auto_finish": 1,
@@ -140262,7 +140262,7 @@
           ],
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "409",
-          "show_text": "点击回到任务场景"
+          "show_text": "点击了解如何使用精灵飞行"
         }
       ],
       "auto_finish": 1,
@@ -144972,7 +144972,7 @@
           ],
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "104",
-          "show_text": "点击了解如何使用精灵飞行"
+          "show_text": "点击了解如何捕获精灵"
         }
       ],
       "auto_finish": 1,
@@ -145160,7 +145160,7 @@
           ],
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "401",
-          "show_text": "点击了解如何捕获精灵"
+          "show_text": "点击了解如何互动解锁机关"
         },
         {
           "type": 7,
@@ -145615,7 +145615,7 @@
           "type": 5,
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "104",
-          "show_text": "点击了解如何互动解锁机关"
+          "show_text": "点击了解如何捕获精灵"
         }
       ],
       "auto_finish": 1,
@@ -146033,7 +146033,7 @@
           ],
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "429",
-          "show_text": "点击了解如何捕获精灵"
+          "show_text": "点击学习破解守护地机关"
         }
       ],
       "auto_finish": 1,
@@ -152042,7 +152042,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击学习破解守护地机关"
+          "show_text": "点击返回魔法学院"
         }
       ],
       "auto_finish": 1,
@@ -152320,7 +152320,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "10034",
-          "show_text": "点击返回魔法学院"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -157406,7 +157406,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击前往主线任务场景"
         }
       ],
       "auto_finish": 1,
@@ -159405,7 +159405,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "点击前往主线任务场景"
         }
       ],
       "auto_finish": 1,
@@ -161983,7 +161983,7 @@
           "type": 5,
           "text": "BagModuleCmd.OpenBagMainPanelByTableIndex",
           "args2": "296004",
-          "show_text": "点击前往主线任务场景"
+          "show_text": "点击打开背包使用药剂"
         }
       ],
       "auto_finish": 1,
@@ -165468,7 +165468,7 @@
           ],
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "405",
-          "show_text": "点击打开背包使用药剂"
+          "show_text": "点击了解浮风术"
         }
       ],
       "auto_finish": 1,
@@ -165890,7 +165890,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击了解浮风术"
+          "show_text": "点击前往任务场景"
         }
       ],
       "auto_finish": 1,
@@ -166734,7 +166734,7 @@
           ],
           "text": "TeachingManualModuleCmd.OpenMainPanelByTeachId",
           "args": "405",
-          "show_text": "点击打开背包使用药剂"
+          "show_text": "点击了解浮风术"
         }
       ],
       "auto_finish": 1,
@@ -168485,7 +168485,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "42024",
-          "show_text": "点击前往任务场景"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,
@@ -175822,7 +175822,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "点击收信"
+          "show_text": "进入噩梦校园"
         }
       ],
       "auto_finish": 1,
@@ -176655,7 +176655,7 @@
       "go_guide": [
         {
           "type": 12,
-          "show_text": "进入噩梦校园"
+          "show_text": "返回魔法学院"
         }
       ],
       "auto_finish": 1,
@@ -181292,7 +181292,7 @@
           "type": 5,
           "text": "TaskModuleCmd.lookLetter",
           "args": "20000",
-          "show_text": "返回魔法学院"
+          "show_text": "点击收信"
         }
       ],
       "auto_finish": 1,

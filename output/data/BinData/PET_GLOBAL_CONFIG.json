@@ -2512,7 +2512,7 @@
       "id": 466,
       "key": "bonus_shining_prob",
       "editor_name": "连续捕捉标准异色产出概率",
-      "num": 180
+      "num": 240
     },
     "bonus_count_reset_time": {
       "id": 467,

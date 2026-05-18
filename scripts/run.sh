@@ -317,8 +317,14 @@ bin_count=$(find "$OUTPUT_DIR/data/BinData" -type f -name "*.json" 2>/dev/null |
 table_count=$(find "$OUTPUT_DIR/data/tables" -type f -name "*.json" 2>/dev/null | wc -l | tr -d ' ')
 pet_count=$(find "$OUTPUT_DIR/data/pets" -type f -name "*.json" 2>/dev/null | wc -l | tr -d ' ')
 asset_count=$(find "$OUTPUT_DIR/assets" -type f 2>/dev/null | wc -l | tr -d ' ')
-pet_asset_count=$(find "$OUTPUT_DIR/assets/webp/pets" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
-item_asset_count=$(find "$OUTPUT_DIR/assets/webp/items" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+asset_system_root="$OUTPUT_DIR/assets/webp/Game/NewRoco/Modules/System"
+common_icon_count=$(find "$asset_system_root/Common/Icon" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+head_icon_count=$(find "$asset_system_root/Common/Icon/HeadIcon" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+big_head_icon_count=$(find "$asset_system_root/Common/Icon/BigHeadIcon256" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+pet1024_icon_count=$(find "$asset_system_root/Common/Icon/Pet1024" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+pet256_icon_count=$(find "$asset_system_root/Common/Icon/Pet256" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+bag_item_icon_count=$(find "$asset_system_root/Common/Icon/BagItem" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
+battle_atlas_count=$(find "$asset_system_root/BattleUI/Raw/Atlas" -type f -name "*.webp" 2>/dev/null | wc -l | tr -d ' ')
 
 if [[ "$asset_count" -eq 0 ]]; then
     error "No assets generated. Re-run with --keep-temp and check $TEMP_DIR/assets; C# texture export likely matched no icon textures or failed decoding."
@@ -345,8 +351,13 @@ echo "    Pets.json      : $([[ -f "$OUTPUT_DIR/data/Pets.json" ]] && echo yes |
 echo "    moves.json     : $([[ -f "$OUTPUT_DIR/data/moves.json" ]] && echo yes || echo no)"
 echo "    magic_items.json: $([[ -f "$OUTPUT_DIR/data/magic_items.json" ]] && echo yes || echo no)"
 echo "  Assets : $OUTPUT_DIR/assets ($asset_count files)"
-echo "    pets           : $pet_asset_count webp"
-echo "    items          : $item_asset_count webp"
+echo "    Common/Icon    : $common_icon_count webp"
+echo "      HeadIcon     : $head_icon_count webp"
+echo "      BigHeadIcon256: $big_head_icon_count webp"
+echo "      Pet1024      : $pet1024_icon_count webp"
+echo "      Pet256       : $pet256_icon_count webp"
+echo "      BagItem      : $bag_item_icon_count webp"
+echo "    BattleUI Atlas : $battle_atlas_count webp"
 echo "  Temp   : $temp_status"
 echo "  Paks   : $PAKS_DIR ($dedup files)"
 echo "========================================="

@@ -11650,7 +11650,7 @@
     "443": {
       "id": 443,
       "editor_name": [
-        "活动触发刷新，库存24h重置"
+        "活动触发刷新，库存5s重置"
       ],
       "trigger_type": 12,
       "content_reset_type": 4,
@@ -11659,8 +11659,8 @@
         10
       ],
       "refresh_gap": 5,
-      "storage_reset_type": 12,
-      "storage_reset_param": "24",
+      "storage_reset_type": 10,
+      "storage_reset_param": "5",
       "delete_quantity": 3,
       "delete_gap": 3,
       "PlayTrigger": {},

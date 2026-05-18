@@ -403,24 +403,7 @@ foreach (var file in textureFiles)
 
 static bool IsIconTexturePath(GameFile file)
 {
-    return IsPetTexturePath(file) || IsItemTexturePath(file);
-}
-
-static bool IsPetTexturePath(GameFile file)
-{
     var p = file.Path.Replace('\\', '/');
-    return p.Contains("/System/Common/Icon/Pet1024/", StringComparison.OrdinalIgnoreCase);
-}
-
-static bool IsItemTexturePath(GameFile file)
-{
-    var p = file.Path.Replace('\\', '/');
-    if (p.Contains("/System/Common/Icon/Pet1024/", StringComparison.OrdinalIgnoreCase) ||
-        p.Contains("/System/Common/Icon/Pet256/", StringComparison.OrdinalIgnoreCase))
-    {
-        return false;
-    }
-
     return p.Contains("/System/Common/Icon/", StringComparison.OrdinalIgnoreCase) ||
            p.Contains("/System/BattleUI/Raw/Atlas/", StringComparison.OrdinalIgnoreCase);
 }
@@ -428,14 +411,17 @@ static bool IsItemTexturePath(GameFile file)
 static int GetTextureExportPriority(GameFile file)
 {
     var p = file.Path.Replace('\\', '/');
-    if (p.Contains("/System/Common/Icon/Pet1024/", StringComparison.OrdinalIgnoreCase)) return 0;
-    if (p.Contains("/System/Common/Icon/BagItem/", StringComparison.OrdinalIgnoreCase)) return 1;
-    if (p.Contains("/System/Common/Icon/Item190/", StringComparison.OrdinalIgnoreCase)) return 2;
-    if (p.Contains("/System/Common/Icon/", StringComparison.OrdinalIgnoreCase)) return 3;
-    if (p.Contains("/System/BattleUI/Raw/Atlas/FeatureIcon/", StringComparison.OrdinalIgnoreCase)) return 4;
-    if (p.Contains("/System/BattleUI/Raw/Atlas/SkillIcon/", StringComparison.OrdinalIgnoreCase)) return 5;
-    if (p.Contains("/System/BattleUI/Raw/Atlas/", StringComparison.OrdinalIgnoreCase)) return 6;
-    return 9;
+    if (p.Contains("/System/Common/Icon/HeadIcon/", StringComparison.OrdinalIgnoreCase)) return 0;
+    if (p.Contains("/System/Common/Icon/BigHeadIcon256/", StringComparison.OrdinalIgnoreCase)) return 1;
+    if (p.Contains("/System/Common/Icon/Pet1024/", StringComparison.OrdinalIgnoreCase)) return 2;
+    if (p.Contains("/System/Common/Icon/Pet256/", StringComparison.OrdinalIgnoreCase)) return 3;
+    if (p.Contains("/System/Common/Icon/BagItem/", StringComparison.OrdinalIgnoreCase)) return 4;
+    if (p.Contains("/System/Common/Icon/Item190/", StringComparison.OrdinalIgnoreCase)) return 5;
+    if (p.Contains("/System/Common/Icon/", StringComparison.OrdinalIgnoreCase)) return 6;
+    if (p.Contains("/System/BattleUI/Raw/Atlas/FeatureIcon/", StringComparison.OrdinalIgnoreCase)) return 7;
+    if (p.Contains("/System/BattleUI/Raw/Atlas/SkillIcon/", StringComparison.OrdinalIgnoreCase)) return 8;
+    if (p.Contains("/System/BattleUI/Raw/Atlas/", StringComparison.OrdinalIgnoreCase)) return 9;
+    return 10;
 }
 
 Console.WriteLine($"Texture icons: {textures} exported, {textureErrors} errors");
@@ -462,18 +448,52 @@ static bool ExportTexture(DefaultFileProvider provider, GameFile file, string ou
         if (data is null)
             continue;
 
-        var assetName = Path.GetFileNameWithoutExtension(file.Name);
-        var normalizedPath = file.Path.Replace('\\', '/');
-        var outputSubdir = IsPetTexturePath(file)
-            ? Path.Combine("assets", "webp", "pets")
-            : Path.Combine("assets", "webp", "items");
-        var dest = Path.Combine(outDir, outputSubdir, $"{assetName}.webp");
+        var dest = Path.Combine(outDir, GetTextureOutputRelativePath(file));
         Directory.CreateDirectory(Path.GetDirectoryName(dest)!);
         File.WriteAllBytes(dest, data.ToArray());
         exported = true;
     }
 
     return exported;
+}
+
+static string GetTextureOutputRelativePath(GameFile file)
+{
+    var gamePackagePath = ToGamePackagePath(file.Path);
+    var packageDir = Path.GetDirectoryName(gamePackagePath)?.Replace('\\', '/') ?? "Game";
+    var assetName = Path.GetFileNameWithoutExtension(gamePackagePath);
+    if (string.IsNullOrWhiteSpace(assetName))
+        assetName = Path.GetFileNameWithoutExtension(file.Name);
+
+    var segments = new List<string> { "assets", "webp" };
+    segments.AddRange(SafePathSegments(packageDir));
+    segments.Add($"{assetName}.webp");
+    return Path.Combine(segments.ToArray());
+}
+
+static string ToGamePackagePath(string pakPath)
+{
+    var p = pakPath.Replace('\\', '/').TrimStart('/');
+    const string contentMarker = "/Content/";
+    var contentIndex = p.IndexOf(contentMarker, StringComparison.OrdinalIgnoreCase);
+    if (contentIndex >= 0)
+        return "Game/" + p[(contentIndex + contentMarker.Length)..];
+
+    const string contentPrefix = "Content/";
+    if (p.StartsWith(contentPrefix, StringComparison.OrdinalIgnoreCase))
+        return "Game/" + p[contentPrefix.Length..];
+
+    return p.StartsWith("Game/", StringComparison.OrdinalIgnoreCase) ? p : $"Game/{p}";
+}
+
+static IEnumerable<string> SafePathSegments(string path)
+{
+    foreach (var segment in path.Split('/', StringSplitOptions.RemoveEmptyEntries))
+    {
+        if (segment is "." or "..")
+            throw new InvalidOperationException($"Unsafe asset path segment in {path}");
+        yield return segment;
+    }
 }
 
 static SKBitmap? DecodeTexture(UTexture2D texture)

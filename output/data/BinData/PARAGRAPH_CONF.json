@@ -2487,13 +2487,13 @@
     },
     "52956": {
       "id": 52956,
-      "sorthels": "魔法日便笺",
+      "sorthels": "绩点大赛",
       "unit_id": 23007,
       "paragraph_order": 1,
       "show_task_start": true,
-      "title": "「魔法日便笺」",
+      "title": "「绩点大赛」",
       "sub_disappear": true,
-      "description_new": "完成分院仪式后，我从噜噜那里获得了「便笺」，学院生活就要开始啦！"
+      "description_new": "完成分院仪式后，我从噜噜那里获得了「绩点大赛课表」，学院生活就要开始啦！"
     },
     "52957": {
       "id": 52957,

@@ -102,6 +102,9 @@ def decode_tables(bin_root: Path, output_dir: Path, language: str) -> tuple[int,
 def copy_assets(temp_dir: Path, output_dir: Path) -> int:
     copied = 0
     generated_assets = temp_dir / "assets"
+    assets_out = output_dir / "assets"
+    if assets_out.exists():
+        shutil.rmtree(assets_out)
     if not generated_assets.is_dir():
         return 0
     for path in sorted(generated_assets.rglob("*")):
@@ -111,7 +114,7 @@ def copy_assets(temp_dir: Path, output_dir: Path) -> int:
         if suffix != ".webp":
             continue
         rel = path.relative_to(generated_assets)
-        dest = output_dir / "assets" / rel
+        dest = assets_out / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         if dest.exists():
             stem = dest.stem
