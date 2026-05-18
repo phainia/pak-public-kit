@@ -1,0 +1,15 @@
+local MiniGameModuleEvent = {}
+MiniGameModuleEvent.Progression = "MiniGameModuleEvent.Progression"
+MiniGameModuleEvent.AddClock = "MiniGameModuleEvent.AddClock"
+MiniGameModuleEvent.Start = "MiniGameModuleEvent.Start"
+MiniGameModuleEvent.tick = "MiniGameModuleEvent.tick"
+MiniGameModuleEvent.Initialize = "MiniGameModuleEvent.Initialize"
+MiniGameModuleEvent.End = "MiniGameModuleEvent.End"
+MiniGameModuleEvent.Exit = "MiniGameModuleEvent.Exit"
+MiniGameModuleEvent.Recovery = "MiniGameModuleEvent.Recovery"
+MiniGameModuleEvent.OnTaskClick = "MiniGameModuleEvent.OnTaskClick"
+MiniGameModuleEvent.OnGameFinishedImmediate = "MiniGameModuleEvent.OnGameFinishedImmediate"
+MiniGameModuleEvent.OnTimeOut = "MiniGameModuleEvent.OnTimeOut"
+MiniGameModuleEvent.OnMiniGameExit = "MiniGameModuleEvent.OnMiniGameExit"
+MiniGameModuleEvent.StartFinishedCamera = "MiniGameModuleEvent.StartFinishedCamera"
+return MiniGameModuleEvent

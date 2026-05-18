@@ -1,0 +1,28 @@
+local TakePhotosModuleHead = NRCModuleHeadBase:Extend("TakePhotosModuleHead")
+
+function TakePhotosModuleHead:OnConstruct()
+  _G.TakePhotosModuleCmd = reload("NewRoco.Modules.System.TakePhotos.TakePhotosModuleCmd")
+  self:BindCmd(_G.TakePhotosModuleCmd.TryOpenMainPanel, "TryOpenMainPanel")
+  self:BindCmd(_G.TakePhotosModuleCmd.TryExitTakePhotoByTripodDestroyed, "TryExitTakePhotoByTripodDestroyed")
+  self:BindCmd(_G.TakePhotosModuleCmd.ExitTakePhotos, "ExitTakePhotos")
+  self:BindCmd(_G.TakePhotosModuleCmd.IfInTakePhotoState, "IfInTakePhotoState")
+  self:BindCmd(_G.TakePhotosModuleCmd.IfInTakePhotoHandledMode, "IfInTakePhotoHandledMode")
+  self:BindCmd(_G.TakePhotosModuleCmd.IfInTakePhotoTripodMode, "IfInTakePhotoTripodMode")
+  self:BindCmd(_G.TakePhotosModuleCmd.IfInTakePhotoWorldPreviewMode, "IfInTakePhotoWorldPreviewMode")
+  self:BindCmd(_G.TakePhotosModuleCmd.OpenPhotosRemoteHistoryPanel, "OpenPhotosRemoteHistoryPanel")
+  self:BindCmd(_G.TakePhotosModuleCmd.DownloadCard, "DownloadCard")
+  self:BindCmd(_G.TakePhotosModuleCmd.OpenPhotoCroppingPanel, "OpenPhotoCroppingPanel")
+  self:BindCmd(_G.TakePhotosModuleCmd.GetPetLookLensTarget, "GetPetLookLensTarget")
+  self:BindCmd(_G.TakePhotosModuleCmd.IsPetLookLensTargetEnabled, "IsPetLookLensTargetEnabled")
+  self:BindCmd(_G.TakePhotosModuleCmd.GetIdentifyLookViewInfo, "GetIdentifyLookViewInfo")
+  self:BindCmd(_G.TakePhotosModuleCmd.QuickShotCut, "QuickShotCut")
+  self:BindCmd(_G.TakePhotosModuleCmd.GetCurPhotoMode, "OnCmdGetCurPhotoMode")
+  self:BindCmd(_G.TakePhotosModuleCmd.ZoneAddPetRecordAndShareReq, "ZoneAddPetRecordAndShareReq")
+  self:BindCmd(_G.TakePhotosModuleCmd.IsPetInHandbook, "IsPetInHandbook")
+  self:BindCmd(_G.TakePhotosModuleCmd.OnSyncPhotoToken, "OnCmdSyncPhotoToken")
+  self:BindCmd(_G.TakePhotosModuleCmd.SetSelfiePlayerLookAtOffset, "SetSelfiePlayerLookAtOffset")
+  self:BindCmd(_G.TakePhotosModuleCmd.GetSelfiePlayerLookAtOffset, "GetSelfiePlayerLookAtOffset")
+  self:BindCmd(_G.TakePhotosModuleCmd.CheckPhotoFileViewUI, "OnCmdCheckPhotoFileViewUI")
+end
+
+return TakePhotosModuleHead

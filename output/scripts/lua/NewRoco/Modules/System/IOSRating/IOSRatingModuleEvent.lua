@@ -1,0 +1,2 @@
+local IOSRatingModuleEvent = {}
+return IOSRatingModuleEvent

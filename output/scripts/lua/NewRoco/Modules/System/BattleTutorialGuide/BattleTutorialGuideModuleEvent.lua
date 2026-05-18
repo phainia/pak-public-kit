@@ -1,0 +1,4 @@
+local BattleTutorialGuideModuleEvent = {}
+BattleTutorialGuideModuleEvent.BtnClickEvent = "BtnClickEvent"
+BattleTutorialGuideModuleEvent.EnterBattleTutorialGuideEvent = "BattleTutorialGuideModuleEvent.EnterBattleTutorialGuideEvent"
+return BattleTutorialGuideModuleEvent

@@ -1,0 +1,2 @@
+local ScreenClickModuleEvent = {}
+return ScreenClickModuleEvent

@@ -1,0 +1,26 @@
+local PlayerModuleHead = NRCModuleHeadBase:Extend("PlayerModuleHead")
+
+function PlayerModuleHead:OnConstruct()
+  _G.PlayerModuleCmd = require("NewRoco.Modules.Core.PlayerModule.PlayerModuleCmd")
+  self:BindCmd(PlayerModuleCmd.CLEAR_ALL, "ClearAll")
+  self:BindCmd(PlayerModuleCmd.UPDATE_LOCAL_PLAYER, "OnSceneLoaded")
+  self:BindCmd(PlayerModuleCmd.GET_LOCAL_PLAYER, "GetLocalPlayer")
+  self:BindCmd(PlayerModuleCmd.HIDE_ALL, "HideAllPlayer")
+  self:BindCmd(PlayerModuleCmd.ON_PLAYER_DISAPPEAR, "OnPlayerDisappear")
+  self:BindCmd(PlayerModuleCmd.SWITCH_STREAM_BLOCK, "SwitchStreamBlock")
+  self:BindCmd(PlayerModuleCmd.LockLocalPlayerRelaxIdle, "LockLocalPlayerRelaxIdle")
+  self:BindCmd(PlayerModuleCmd.SetLocalPlayerHandIkTargetMesh, "SetLocalPlayerHandIkTargetMesh")
+  self:BindCmd(PlayerModuleCmd.ClearInReconnect, "ClearInReconnect")
+  self:BindCmd(PlayerModuleCmd.SyncPlayerOperation, "SyncPlayerOperation")
+  self:BindCmd(PlayerModuleCmd.GET_LOCAL_UIN, "GetLocalPlayerUIN")
+  self:BindCmd(PlayerModuleCmd.WorldCombatBuffChange, "OnWorldCombatBuffChange")
+  self:BindCmd(PlayerModuleCmd.PosInvalidOutOfStuck, "PosInvalidOutOfStuck")
+  self:BindCmd(PlayerModuleCmd.BanPosInvalidOutOfStuck, "BanPosInvalidOutOfStuck")
+  self:BindCmd(PlayerModuleCmd.TryAddMagicStarCounts, "TryAddMagicStarCounts")
+  self:BindCmd(PlayerModuleCmd.RemoveMagicStarCounts, "RemoveMagicStarCounts")
+  self:BindCmd(PlayerModuleCmd.TryAttackLocalPlayerWithRangeCheck, "TryAttackLocalPlayerWithRangeCheck")
+  self:BindCmd(PlayerModuleCmd.OnCatchRecordInfoChange, "OnCatchRecordInfoChange")
+  self:BindCmd(PlayerModuleCmd.GetRideThrowCameraOffset, "GetRideThrowCameraOffset")
+end
+
+return PlayerModuleHead

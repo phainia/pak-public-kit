@@ -1,0 +1,17 @@
+local MagicCreationModuleCmd = {}
+MagicCreationModuleCmd.OpenTransferNpcPanel = "MagicCreationModuleCmd.OpenTransferNpcPanel"
+MagicCreationModuleCmd.CloseTransferNpcPanel = "MagicCreationModuleCmd.CloseTransferNpcPanel"
+MagicCreationModuleCmd.RegisterCreation = "MagicCreationModuleCmd.RegisterCreation"
+MagicCreationModuleCmd.UnregisterCreation = "MagicCreationModuleCmd.UnregisterCreation"
+MagicCreationModuleCmd.SetNpcAppearance = "MagicCreationModuleCmd.SetNpcAppearance"
+MagicCreationModuleCmd.ApplySuitEffect = "MagicCreationModuleCmd.ApplySuitEffect"
+MagicCreationModuleCmd.RegisterPreperform = "MagicCreationModuleCmd.RegisterPreperform"
+MagicCreationModuleCmd.UnregisterPreperform = "MagicCreationModuleCmd.UnregisterPreperform"
+MagicCreationModuleCmd.MakePreperformPair = "MagicCreationModuleCmd.MakePreperformPair"
+MagicCreationModuleCmd.PreperformLocalReady = "MagicCreationModuleCmd.PreperformLocalReady"
+MagicCreationModuleCmd.CheckLandValid = "MagicCreationModuleCmd.CheckLandValid"
+MagicCreationModuleCmd.CheckNpcHeightDifferenceWithPlayer = "MagicCreationModuleCmd.CheckNpcHeightDifferenceWithPlayer"
+MagicCreationModuleCmd.CheckBossAreaOverlap = "MagicCreationModuleCmd.CheckBossAreaOverlap"
+MagicCreationModuleCmd.CheckEavesExisted = "MagicCreationModuleCmd.CheckEavesExisted"
+MagicCreationModuleCmd.GetCanDrawDebug = "MagicCreationModuleCmd.GetCanDrawDebug"
+return MagicCreationModuleCmd

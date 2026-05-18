@@ -1,0 +1,8 @@
+local SeasonIntegrationModuleCmd = {}
+SeasonIntegrationModuleCmd.OpenSeasonIntegrationPanel = "SeasonIntegrationModuleCmd.OpenSeasonIntegrationPanel"
+SeasonIntegrationModuleCmd.GetSeasonInfo = "SeasonIntegrationModuleCmd.GetSeasonInfo"
+SeasonIntegrationModuleCmd.ShowSeasonBeginsTips = "SeasonIntegrationModuleCmd.ShowSeasonBeginsTips"
+SeasonIntegrationModuleCmd.OpenSeasonIntegrationPopUp = "SeasonIntegrationModuleCmd.OpenSeasonIntegrationPopUp"
+SeasonIntegrationModuleCmd.SendZoneSetSeasonFirstPopReq = "SeasonIntegrationModuleCmd.SendZoneSetSeasonFirstPopReq"
+SeasonIntegrationModuleCmd.OpenSeasonPopup = "SeasonIntegrationModuleCmd.OpenSeasonPopup"
+return SeasonIntegrationModuleCmd

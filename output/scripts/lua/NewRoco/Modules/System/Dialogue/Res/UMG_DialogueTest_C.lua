@@ -1,0 +1,15 @@
+local UMG_DialogueTest_C = _G.NRCPanelBase:Extend("UMG_DialogueTest_C")
+
+function UMG_DialogueTest_C:OnActive()
+  self:AddButtonListener(self.TestButton, self.DoClose)
+  self.TestButton:SetVisibility(UE4.ESlateVisibility.Visible)
+  self.UMG_DialogueText.TypeWritter.Dialogue:settext("<span color=\"#000000ff\">\229\136\154\229\136\154\229\156\168\232\175\180\228\187\128\228\185\136\230\157\165\231\157\128\239\188\159\230\136\145\230\178\161\230\156\137\229\144\172\230\184\133\227\128\130\230\152\175\229\156\168\232\175\180\230\156\128\232\191\145\229\135\186\231\142\176\229\156\168\230\157\145\229\173\144\233\153\132\232\191\145\231\165\158\229\165\135\231\154\132\229\133\137\231\179\187\229\174\160\231\137\169\229\144\151\239\188\159\229\166\130\230\158\156\230\152\175\228\189\160\231\154\132\232\175\157\239\188\140\229\186\148\232\175\165\229\143\175\228\187\1651</>")
+end
+
+function UMG_DialogueTest_C:OnDeactive()
+end
+
+function UMG_DialogueTest_C:OnAddEventListener()
+end
+
+return UMG_DialogueTest_C

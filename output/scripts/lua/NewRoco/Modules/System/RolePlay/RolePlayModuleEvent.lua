@@ -1,0 +1,10 @@
+local RolePlayModuleEvent = {}
+RolePlayModuleEvent.RolePlayMainPanelOpen = "RolePlayModuleEvent.RolePlayMainPanelOpen"
+RolePlayModuleEvent.RolePlayMainPanelClosed = "RolePlayModuleEvent:RolePlayMainPanelClosed"
+RolePlayModuleEvent.GetNewRolePlay = "RolePlayModuleEvent.GetNewRolePlay"
+RolePlayModuleEvent.ItemEraseRedPoint = "RolePlayModuleEvent:ItemEraseRedPoint"
+RolePlayModuleEvent.OnPreBeginPopupPoseSelectPanel = "RolePlayModuleEvent.OnPreBeginPopupPoseSelectPanel"
+RolePlayModuleEvent.OnBeginPopupPoseSelectPanel = "RolePlayModuleEvent.OnBeginPopupPoseSelectPanel"
+RolePlayModuleEvent.OnEndPopupPoseSelectPanel = "RolePlayModuleEvent.OnEndPopupPoseSelectPanel"
+RolePlayModuleEvent.OnRefreshRoleplayGroupSelection = "RolePlayModuleEvent.OnRefreshRoleplayGroupSelection"
+return RolePlayModuleEvent

@@ -1,0 +1,4 @@
+local EnhancedInputModuleEvent = {}
+EnhancedInputModuleEvent.KeyMappingsChanged = "EnhancedInputModuleEvent.KeyMappingsChanged"
+EnhancedInputModuleEvent.TopBlockImcChange = "EnhancedInputModuleEvent.TopBlockImcChange"
+return EnhancedInputModuleEvent

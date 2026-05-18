@@ -1,0 +1,2 @@
+local UMG_TalkingBboutBubbles_Panel_C = _G.NRCPanelBase:Extend("UMG_TalkingBboutBubbles_Panel_C")
+return UMG_TalkingBboutBubbles_Panel_C

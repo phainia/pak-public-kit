@@ -1,0 +1,2 @@
+local UMG_Guidance_DragLine_Inner_C = _G.NRCPanelBase:Extend("UMG_Guidance_DragLine_Inner_C")
+return UMG_Guidance_DragLine_Inner_C

@@ -1,0 +1,12 @@
+local AlchemyModuleEvent = {}
+AlchemyModuleEvent.AlchemyItemChanged = "AlchemyModuleEvent.AlchemyItemChanged"
+AlchemyModuleEvent.AlchemyPanelChanged = "AlchemyModuleEvent.AlchemyPanelChanged"
+AlchemyModuleEvent.ArdourUpPanelClosed = "AlchemyModuleEvent.ArdourUpPanelClosed"
+AlchemyModuleEvent.RecoverTimeUpPanelClosed = "AlchemyModuleEvent.RecoverTimeUpPanelClosed"
+AlchemyModuleEvent.AlchemyVitalityPanelClosed = "AlchemyModuleEvent.AlchemyVitalityPanelClosed"
+AlchemyModuleEvent.SetExchangeMaterial = "AlchemyModuleEvent.SetExchangeMaterial"
+AlchemyModuleEvent.RequestExchangeSuccess = "AlchemyModuleEvent.RequestExchangeSuccess"
+AlchemyModuleEvent.AlchemyOnShowUI = "AlchemyModuleEvent.AlchemyOnShowUI"
+AlchemyModuleEvent.AlchemyOnHideUI = "AlchemyModuleEvent.AlchemyOnHideUI"
+AlchemyModuleEvent.AlchemyOnStatusChange = "AlchemyModuleEvent.AlchemyOnStatusChange"
+return AlchemyModuleEvent

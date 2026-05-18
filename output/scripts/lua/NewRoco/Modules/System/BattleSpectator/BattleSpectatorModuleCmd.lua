@@ -1,0 +1,15 @@
+local BattleSpectatorModuleCmd = {}
+BattleSpectatorModuleCmd.GetEqsRunner = "BattleSpectatorModuleCmd.GetEqsRunner"
+BattleSpectatorModuleCmd.GetWaterPlatformClass = "BattleSpectatorModuleCmd.GetWaterPlatformClass"
+BattleSpectatorModuleCmd.GetBattlePointClass = "BattleSpectatorModuleCmd.GetBattlePointClass"
+BattleSpectatorModuleCmd.GetNpcDisapperSkillClass = "BattleSpectatorModuleCmd.GetNpcDisapperSkillClass"
+BattleSpectatorModuleCmd.GetPerformSkillClass = "BattleSpectatorModuleCmd.GetPerformSkillClass"
+BattleSpectatorModuleCmd.GetPerformEndSkillClass = "BattleSpectatorModuleCmd.GetPerformEndSkillClass"
+BattleSpectatorModuleCmd.GetNightmareShieldBreakSkillClass = "BattleSpectatorModuleCmd.GetNightmareShieldBreakSkillClass"
+BattleSpectatorModuleCmd.OnInnerBattleNotify = "BattleSpectatorModuleCmd.OnInnerBattleNotify"
+BattleSpectatorModuleCmd.RemoveRecord = "BattleSpectatorModuleCmd.RemoveRecord"
+BattleSpectatorModuleCmd.OnInnerBattleShieldBroken = "BattleSpectatorModuleCmd.OnInnerBattleShieldBroken"
+BattleSpectatorModuleCmd.OnInnerBattleChangePet = "BattleSpectatorModuleCmd.OnInnerBattleChangePet"
+BattleSpectatorModuleCmd.GetCanDrawDebug = "BattleSpectatorModuleCmd.GetCanDrawDebug"
+BattleSpectatorModuleCmd.SetCanDrawDebug = "BattleSpectatorModuleCmd.SetCanDrawDebug"
+return BattleSpectatorModuleCmd

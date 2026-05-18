@@ -1,0 +1,18 @@
+local AreaAndZoneModuleCmd = {}
+AreaAndZoneModuleCmd.OnCatcherEnter = "AreaAndZoneModuleCmd.OnCatcherEnter"
+AreaAndZoneModuleCmd.OnCatcherLeave = "AreaAndZoneModuleCmd.OnCatcherLeave"
+AreaAndZoneModuleCmd.OnWeatherChange = "AreaAndZoneModuleCmd.OnWeatherChange"
+AreaAndZoneModuleCmd.IsSafeZone = "AreaAndZoneModuleCmd.IsSafeZone"
+AreaAndZoneModuleCmd.GetPlayerZoneInfo = "AreaAndZoneModuleCmd.GetPlayerZoneInfo"
+AreaAndZoneModuleCmd.GetPlayerZoneArray = "AreaAndZoneModuleCmd.GetPlayerZoneArray"
+AreaAndZoneModuleCmd.IfPlayerInArea = "AreaAndZoneModuleCmd.IfPlayerInArea"
+AreaAndZoneModuleCmd.IfPlayerInInterArea = "AreaAndZoneModuleCmd.IfPlayerInInterArea"
+AreaAndZoneModuleCmd.GetCaveInfo = "AreaAndZoneModuleCmd.GetCaveInfo"
+AreaAndZoneModuleCmd.CanSetMessage = "AreaAndZoneModuleCmd.CanSetMessage"
+AreaAndZoneModuleCmd.OnTeleportClearAreaInfo = "AreaAndZoneModuleCmd.OnTeleportClearAreaInfo"
+AreaAndZoneModuleCmd.OnTimeChange = "AreaAndZoneModuleCmd.OnTimeChange"
+AreaAndZoneModuleCmd.OnAreaChange = "AreaAndZoneModuleCmd.OnAreaChange"
+AreaAndZoneModuleCmd.OnTimeGoBack = "AreaAndZoneModuleCmd.OnTimeGoBack"
+AreaAndZoneModuleCmd.GetTemperature = "AreaAndZoneModuleCmd.GetTemperature"
+AreaAndZoneModuleCmd.DumpBGMArea = "AreaAndZoneModuleCmd.DumpBGMArea"
+return AreaAndZoneModuleCmd

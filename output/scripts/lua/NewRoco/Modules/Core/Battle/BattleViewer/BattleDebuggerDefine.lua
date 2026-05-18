@@ -1,0 +1,2 @@
+local BattleDebuggerDefine = {}
+return BattleDebuggerDefine

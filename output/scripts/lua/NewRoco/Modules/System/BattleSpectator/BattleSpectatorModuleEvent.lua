@@ -1,0 +1,2 @@
+local BattleSpectatorModuleEvent = {}
+return BattleSpectatorModuleEvent

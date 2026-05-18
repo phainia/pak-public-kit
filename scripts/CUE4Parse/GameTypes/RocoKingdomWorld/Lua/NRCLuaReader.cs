@@ -77,14 +77,7 @@ public class NRCLuaReader
 
     private static LuaConstant ReadConstant(FNRCLuaArchive Ar)
     {
-        var constant = FLuaReader.ReadConstant(Ar);
-        constant.Type = (constant.Type & 0x3F) switch
-        {
-            3 => (byte) ((constant.Type & ~0x3F) | 19), // Integer/float tags are shuffled
-            19 => (byte) ((constant.Type & ~0x3F) | 3),
-            _ => constant.Type
-        };
-        return constant;
+        return FLuaReader.ReadConstant(Ar);
     }
 
     private static LuaUpvalue[] ReadUpvalues(FNRCLuaArchive Ar, LuaFunction f)

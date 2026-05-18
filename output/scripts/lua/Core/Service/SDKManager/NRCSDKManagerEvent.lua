@@ -1,0 +1,14 @@
+local NRCSDKManagerEvent = {}
+NRCSDKManagerEvent.OnWebViewOptNotify = "NRCSDKManagerEvent.OnWebViewOptNotify"
+NRCSDKManagerEvent.OnBackToLogin = "NRCSDKManagerEvent.OnBackToLogin"
+NRCSDKManagerEvent.OnGameletViewCreated = "NRCSDKManagerEvent.OnGameletViewCreate"
+NRCSDKManagerEvent.OnGameletViewDestroyed = "NRCSDKManagerEvent.OnGameletViewDestroyed"
+NRCSDKManagerEvent.OnNewGameletAppReady = "NRCSDKManagerEvent.OnNewGameletAppReady"
+NRCSDKManagerEvent.OnDeliverMessageNotify = "NRCSDKManagerEvent.OnDeliverMessageNotify"
+NRCSDKManagerEvent.OnQueryFriendNotify = "NRCSDKManagerEvent.OnQueryFriendNotify"
+NRCSDKManagerEvent.OnIOSMediaIDGetNotify = "NRCSDKManagerEvent.OnIOSMediaIDGetNotify"
+NRCSDKManagerEvent.OnDeepLinkMessageNotify = "NRCSDKManagerEvent.OnDeepLinkMessageNotify"
+NRCSDKManagerEvent.OnWeGameFriendStateUpdate = "NRCSDKManagerEvent.OnWeGameFriendStateUpdate"
+NRCSDKManagerEvent.OnWeGameFriendInfoUpdate = "NRCSDKManagerEvent.OnWeGameFriendInfoUpdate"
+NRCSDKManagerEvent.OnOpenWebView = "NRCSDKManagerEvent.OnOpenWebView"
+return NRCSDKManagerEvent

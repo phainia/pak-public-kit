@@ -1,0 +1,11 @@
+local MusicCollectionModuleCmd = {}
+MusicCollectionModuleCmd.OnOpenMainPanel = "MusicCollectionModuleCmd.OnOpenMainPanel"
+MusicCollectionModuleCmd.EnableMainPanel = "MusicCollectionModuleCmd.EnableMainPanel"
+MusicCollectionModuleCmd.PreLoadMainPanel = "MusicCollectionModuleCmd.PreLoadMainPanel"
+MusicCollectionModuleCmd.OnOpenMusicSettingPanel = "MusicCollectionModuleCmd.OnOpenMusicSettingPanel"
+MusicCollectionModuleCmd.SetMusicToPanel = "MusicCollectionModuleCmd.SetMusicToPanel"
+MusicCollectionModuleCmd.MusicUnlockNotify = "MusicCollectionModuleCmd.MusicUnlockNotify"
+MusicCollectionModuleCmd.MusicUPanelPause = "MusicCollectionModuleCmd.MusicUPanelPause"
+MusicCollectionModuleCmd.MusicUPanelPlay = "MusicCollectionModuleCmd.MusicUPanelPlay"
+MusicCollectionModuleCmd.IsPauseUiBgm = "MusicCollectionModuleCmd.IsPauseUiBgm"
+return MusicCollectionModuleCmd

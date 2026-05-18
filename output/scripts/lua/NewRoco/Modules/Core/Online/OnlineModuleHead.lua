@@ -1,0 +1,27 @@
+local OnlineModuleHead = NRCModuleHeadBase:Extend("OnlineModuleHead")
+
+function OnlineModuleHead:OnConstruct()
+  _G.OnlineModuleCmd = reload("NewRoco.Modules.Core.Online.OnlineModuleCmd")
+  _G.OnlineModuleEvent = reload("NewRoco.Modules.Core.Online.OnlineModuleEvent")
+  self:BindCmd(_G.OnlineModuleCmd.GetLoginState, "GetLoginState")
+  self:BindCmd(_G.OnlineModuleCmd.SetUserAccountInfo, "SetUserAccountInfo")
+  self:BindCmd(_G.OnlineModuleCmd.Connect, "Connect")
+  self:BindCmd(_G.OnlineModuleCmd.Login, "Login")
+  self:BindCmd(_G.OnlineModuleCmd.ConnectAndLogin, "ConnectAndLogin")
+  self:BindCmd(_G.OnlineModuleCmd.Logout, "Logout")
+  self:BindCmd(_G.OnlineModuleCmd.Relogin, "Relogin")
+  self:BindCmd(_G.OnlineModuleCmd.GetUserAccountInfo, "GetUserAccountInfo")
+  self:BindCmd(_G.OnlineModuleCmd.GetDeviceInfo, "GetDeviceInfo")
+  self:BindCmd(_G.OnlineModuleCmd.SetUserPayInfo, "SetUserPayInfo")
+  self:BindCmd(_G.OnlineModuleCmd.UpdateDeviceInfoAsync, "UpdateDeviceInfoAsync")
+  self:BindCmd(_G.OnlineModuleCmd.IsServerLimited, "IsServerLimited")
+  self:BindCmd(_G.OnlineModuleCmd.GetOpenID, "GetOpenID")
+  self:BindCmd(_G.OnlineModuleCmd.GetLoginChannel, "GetLoginChannel")
+  self:BindCmd(_G.OnlineModuleCmd.GetPackageChannel, "GetPackageChannel")
+  self:BindCmd(_G.OnlineModuleCmd.SetPackageChannel, "SetPackageChannel")
+  self:BindCmd(_G.OnlineModuleCmd.SetNetBarData, "SetNetBarData")
+  self:BindCmd(_G.OnlineModuleCmd.GetNetBarData, "GetNetBarData")
+  self:BindCmd(_G.OnlineModuleCmd.SetTpnsToken, "SetTpnsToken")
+end
+
+return OnlineModuleHead

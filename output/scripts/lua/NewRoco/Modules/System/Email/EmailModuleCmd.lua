@@ -1,0 +1,16 @@
+local EmailModuleCmd = {}
+EmailModuleCmd.OpenMainPanel = "EmailModuleCmd.OpenMainPanel"
+EmailModuleCmd.CloseMainPanel = "EmailModuleCmd.CloseMainPanel"
+EmailModuleCmd.EnableMainPanel = "EmailModuleCmd.EnableMainPanel"
+EmailModuleCmd.PreLoadMainPanel = "EmailModuleCmd.PreLoadMainPanel"
+EmailModuleCmd.ZoneMailGetListByPageReq = "EmailModuleCmd.ZoneMailGetListByPageReq"
+EmailModuleCmd.RemoveNoticeRedPoint = "EmailModuleCmd.RemoveNoticeRedPoint"
+EmailModuleCmd.SetSelectEmailIndex = "EmailModuleCmd.SetSelectEmailIndex"
+EmailModuleCmd.GetSelectEmailIndex = "EmailModuleCmd.GetSelectEmailIndex"
+EmailModuleCmd.SetSelectMailGid = "EmailModuleCmd.SetSelectMailGid"
+EmailModuleCmd.GetSelectMailGid = "EmailModuleCmd.GetSelectMailGid"
+EmailModuleCmd.ZoneEmailReadReq = "EmailModuleCmd.ZoneEmailReadReq"
+EmailModuleCmd.UpdateNoticeList = "EmailModuleCmd.UpdateNoticeList"
+EmailModuleCmd.GetMainInfoByGid = "EmailModuleCmd.GetMainInfoByGid"
+EmailModuleCmd.GetMailState = "EmailModuleCmd.GetMailState"
+return EmailModuleCmd

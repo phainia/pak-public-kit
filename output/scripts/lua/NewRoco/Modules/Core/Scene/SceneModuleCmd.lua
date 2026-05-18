@@ -1,0 +1,15 @@
+local SceneModuleCmd = {EnterScene = "EnterScene", EnterMap = "EnterMap"}
+SceneModuleCmd.GetBlockingArea = "SceneModuleCmd.GetBlockingArea"
+SceneModuleCmd.GetRelatedBlockingArea = "SceneModuleCmd.GetRelatedBlockingArea"
+SceneModuleCmd.RegisterBlockingArea = "SceneModuleCmd.RegisterBlockingArea"
+SceneModuleCmd.UnregisterBlockingArea = "SceneModuleCmd.UnregisterBlockingArea"
+SceneModuleCmd.ConsumeCachedNotify = "SceneModuleCmd.ConsumeCachedNotify"
+SceneModuleCmd.ConsumeCachedBattleTag = "SceneModuleCmd.ConsumeCachedBattleTag"
+SceneModuleCmd.ConsumeCachedBattleTagForNpcGuideChange = "SceneModuleCmd.ConsumeCachedBattleTagForNpcGuideChange"
+SceneModuleCmd.ConsumeCachedActorTag = "SceneModuleCmd.ConsumeCachedActorTag"
+SceneModuleCmd.SwitchDynamicLevel = "SceneModuleCmd.SwitchDynamicLevel"
+SceneModuleCmd.GetCurrentZoneSceneTeleportNotify = "SceneModuleCmd.GetCurrentZoneSceneTeleportNotify"
+SceneModuleCmd.GetCurrentMapResId = "SceneModuleCmd.GetCurrentMapResId"
+SceneModuleCmd.CheckSceneFullyEntered = "SceneModuleCmd.CheckSceneFullyEntered"
+SceneModuleCmd.IsMagicBanned = "SceneModuleCmd.IsMagicBanned"
+return SceneModuleCmd

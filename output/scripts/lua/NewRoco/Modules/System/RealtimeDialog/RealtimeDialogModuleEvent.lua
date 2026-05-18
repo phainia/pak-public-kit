@@ -1,0 +1,3 @@
+local RealtimeDialogModuleEvent = {}
+RealtimeDialogModuleEvent.OPEN_REALTIME_DIALOG_UI = "RealtimeDialogModuleEvent.OPEN_REALTIME_DIALOG_UI"
+return RealtimeDialogModuleEvent

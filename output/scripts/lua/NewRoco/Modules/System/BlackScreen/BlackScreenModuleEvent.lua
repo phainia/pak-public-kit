@@ -1,0 +1,2 @@
+local BlackScreenModuleEvent = {}
+return BlackScreenModuleEvent

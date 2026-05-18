@@ -48,7 +48,7 @@ public static class FLuaWriter54
                     break;
                 case 4:  // Short String
                 case 20: // Long String
-                    writer.WriteLuaString(c.StrData);
+                    writer.WriteLuaString(c.StrData, nullable: false);
                     break;
             }
         });
@@ -89,4 +89,3 @@ public static class FLuaWriter54
         });
     }
 }
-

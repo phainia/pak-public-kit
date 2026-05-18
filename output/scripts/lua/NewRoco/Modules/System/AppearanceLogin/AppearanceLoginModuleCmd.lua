@@ -1,0 +1,13 @@
+local AppearanceLoginModuleCmd = {}
+AppearanceLoginModuleCmd.OpenBeautyLoginPanel = "AppearanceLoginModuleCmd.OpenBeautyLoginPanel"
+AppearanceLoginModuleCmd.SetBeautyTabEnum = "AppearanceLoginModuleCmd.SetBeautyTabEnum"
+AppearanceLoginModuleCmd.SetAvatarSalon = "AppearanceLoginModuleCmd.SetAvatarSalon"
+AppearanceLoginModuleCmd.SetAvatarSuit = "AppearanceLoginModuleCmd.SetAvatarSuit"
+AppearanceLoginModuleCmd.SetBeautyColorList = "AppearanceLoginModuleCmd.SetBeautyColorList"
+AppearanceLoginModuleCmd.GetUIColorIndexToColorMap = "AppearanceLoginModuleCmd.GetUIColorIndexToColorMap"
+AppearanceLoginModuleCmd.GetAvatarSalonIdToSalonIds = "AppearanceLoginModuleCmd.GetAvatarSalonIdToSalonIds"
+AppearanceLoginModuleCmd.GetTempBeautyDataByGender = "AppearanceLoginModuleCmd.GetTempBeautyDataByGender"
+AppearanceLoginModuleCmd.GetColorBGResByColorType = "AppearanceLoginModuleCmd.GetColorBGResByColorType"
+AppearanceLoginModuleCmd.GetInitialOptionalSuitIds = "AppearanceLoginModuleCmd.GetInitialOptionalSuitIds"
+AppearanceLoginModuleCmd.GetInitialSelectedSuitId = "AppearanceLoginModuleCmd.GetInitialSelectedSuitId"
+return AppearanceLoginModuleCmd

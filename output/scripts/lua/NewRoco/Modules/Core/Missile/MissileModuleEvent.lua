@@ -1,0 +1,2 @@
+local MissileModuleEvent = {}
+return MissileModuleEvent

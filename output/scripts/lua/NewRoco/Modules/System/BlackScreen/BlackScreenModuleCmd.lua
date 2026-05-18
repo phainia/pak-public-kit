@@ -1,0 +1,5 @@
+local BlackScreenModuleCmd = {}
+BlackScreenModuleCmd.OpenGlobalBlackScreenIfNeed = "BlackScreenModuleCmd.OpenGlobalBlackScreenIfNeed"
+BlackScreenModuleCmd.TryCloseGlobalBlackScreenIfAny = "BlackScreenModuleCmd.TryCloseGlobalBlackScreenIfAny"
+BlackScreenModuleCmd.IsGlobalBlackScreenOn = "BlackScreenModuleCmd.IsGlobalBlackScreenOn"
+return BlackScreenModuleCmd

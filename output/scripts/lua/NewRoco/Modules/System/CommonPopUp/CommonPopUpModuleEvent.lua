@@ -1,0 +1,2 @@
+local CommonPopUpModuleEvent = {}
+return CommonPopUpModuleEvent

@@ -1,0 +1,6 @@
+local FunctionBanModuleEvent = {}
+FunctionBanModuleEvent.OnUIEnterBanStateChange = "FunctionBanModuleEvent.OnUIEnterBanStateChange"
+FunctionBanModuleEvent.OnUIFuncVisibilityChange = "FunctionBanModuleEvent.OnUIBanFuncVisibilityChange"
+FunctionBanModuleEvent.OnShieldingActivitiesChange = "FunctionBanModuleEvent.OnShieldingActivitiesChange"
+FunctionBanModuleEvent.OnSystemFuncBlockingTypeChange = "FunctionBanModuleEvent.OnSystemFuncBlockingTypeChange"
+return FunctionBanModuleEvent

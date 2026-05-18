@@ -1,0 +1,2 @@
+local CosUploadModuleEvent = {}
+return CosUploadModuleEvent

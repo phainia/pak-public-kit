@@ -80,11 +80,11 @@ public class FLuaArchiveWriter(Stream stream) : BinaryWriter(stream)
         Write(bytes.ToArray());
     }
 
-    public void WriteLuaString(string value)
+    public void WriteLuaString(string value, bool nullable = true)
     {
         if (string.IsNullOrEmpty(value))
         {
-            WriteLuaInt(0);
+            WriteLuaInt(nullable ? 0u : 1u);
             return;
         }
 

@@ -1,0 +1,10 @@
+local B1FinalBattleModuleCmd = {}
+B1FinalBattleModuleCmd.OpenTwoScreenDialogue = "B1FinalBattleModuleCmd.OpenTwoScreenDialogue"
+B1FinalBattleModuleCmd.CloseTwoScreenDialogue = "B1FinalBattleModuleCmd.CloseTwoScreenDialogue"
+B1FinalBattleModuleCmd.OpenTwoPetDialogueCamera = "B1FinalBattleModuleCmd.OpenTwoPetDialogueCamera"
+B1FinalBattleModuleCmd.ClearDialogueCamera = "B1FinalBattleModuleCmd.ClearDialogueCamera"
+B1FinalBattleModuleCmd.SetFirstEnterP2Battle = "B1FinalBattleModuleCmd.SetFirstEnterP2Battle"
+B1FinalBattleModuleCmd.GetFirstEnterP2Battle = "B1FinalBattleModuleCmd.GetFirstEnterP2Battle"
+B1FinalBattleModuleCmd.SetIsFirstDialogue = "B1FinalBattleModuleCmd.SetIsFirstDialogue"
+B1FinalBattleModuleCmd.GetIsFirstDialogue = "B1FinalBattleModuleCmd.GetIsFirstDialogue"
+return B1FinalBattleModuleCmd

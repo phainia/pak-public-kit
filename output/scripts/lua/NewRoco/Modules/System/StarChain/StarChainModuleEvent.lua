@@ -1,0 +1,7 @@
+local StarChainModuleEvent = {}
+StarChainModuleEvent.Tips_SelectItemChange = "StarChainModuleEvent.Tips_SelectItemChange"
+StarChainModuleEvent.Tips_PlayerDataChange = "StarChainModuleEvent.Tips_PlayerDataChange"
+StarChainModuleEvent.EnterPanelClosed = "StarChainModuleEvent.EnterPanelClosed"
+StarChainModuleEvent.StarChainChangeUpdateTimeEvent = "StarChainModuleEvent.StarChainChangeUpdateTimeEvent"
+StarChainModuleEvent.PurchaseSucceed = "StarChainModuleEvent.PurchaseSucceed"
+return StarChainModuleEvent

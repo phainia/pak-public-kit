@@ -1,0 +1,8 @@
+local BattleTutorialGuideModuleCmd = {}
+BattleTutorialGuideModuleCmd.EnterGuide = "BattleTutorialGuideModuleCmd.EnterGuide"
+BattleTutorialGuideModuleCmd.ClearGuide = "BattleTutorialGuideModuleCmd.ClearGuide"
+BattleTutorialGuideModuleCmd.BtnClick = "BattleTutorialGuideModuleCmd.BtnClick"
+BattleTutorialGuideModuleCmd.GuideFinishById = "BattleTutorialGuideModuleCmd.GuideFinishById"
+BattleTutorialGuideModuleCmd.RefreshGuideData = "BattleTutorialGuideModuleCmd.RefreshGuideData"
+BattleTutorialGuideModuleCmd.GetIsForBidSkillClick = "BattleTutorialGuideModuleCmd.GetIsForBidSkillClick"
+return BattleTutorialGuideModuleCmd

@@ -1,0 +1,17 @@
+local PayModuleCmd = {}
+PayModuleCmd.OpenMainPanel = "PayModuleCmd.OpenMainPanel"
+PayModuleCmd.SetPayInfo = "PayModuleCmd.SetPayInfo"
+PayModuleCmd.InitializeMidas = "PayModuleCmd.InitializeMidas"
+PayModuleCmd.PayForItem = "PayModuleCmd.PayForItem"
+PayModuleCmd.UpdateBalance = "PayModuleCmd.UpdateBalance"
+PayModuleCmd.LaunchMidasPage = "PayModuleCmd.LaunchMidasPage"
+PayModuleCmd.GetPayInfo = "PayModuleCmd.GetPayInfo"
+PayModuleCmd.ClearPayInfo = "PayModuleCmd.ClearPayInfo"
+PayModuleCmd.PayForCharge = "PayModuleCmd.PayForCharge"
+PayModuleCmd.ShowFailTips = "PayModuleCmd.ShowFailTips"
+PayModuleCmd.GetSaveAmt = "PayModuleCmd.GetSaveAmt"
+PayModuleCmd.IsPaying = "PayModuleCmd.IsPaying"
+PayModuleCmd.SetPayStatus = "PayModuleCmd.SetPayStatus"
+PayModuleCmd.SetPayGoodsInfo = "PayModuleCmd.SetPayGoodsInfo"
+PayModuleCmd.GetPayGoodsInfo = "PayModuleCmd.GetPayGoodsInfo"
+return PayModuleCmd

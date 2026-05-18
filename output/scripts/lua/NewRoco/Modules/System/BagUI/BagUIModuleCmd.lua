@@ -1,0 +1,2 @@
+local BagUIModuleCmd = {}
+return BagUIModuleCmd

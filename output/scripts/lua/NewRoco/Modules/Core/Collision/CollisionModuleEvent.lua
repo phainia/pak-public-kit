@@ -1,0 +1,2 @@
+local CollisionModuleEvent = {}
+return CollisionModuleEvent

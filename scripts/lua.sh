@@ -10,25 +10,24 @@ warn()  { echo -e "${YELLOW}[WARN]${NC}  $1"; }
 error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 
 usage() {
-    echo "Lua bytecode 导出"
+    echo "Lua 源码导出"
     echo ""
     echo "用法:"
-    echo "  ./lua.sh <AES-KEY> [--paks path/to/paks] [--output path/to/output] [--all]"
-    echo "  ./lua.sh --aes-file path/to/aes_key.txt [--paks path/to/paks] [--output path/to/output] [--all]"
+    echo "  ./lua.sh <AES-KEY> [--paks path/to/paks] [--output path/to/output] --decompiler path/to/unluac-cli"
+    echo "  ./lua.sh --aes-file path/to/aes_key.txt [--paks path/to/paks] [--output path/to/output] --decompiler path/to/unluac-cli"
     echo ""
     echo "默认:"
     echo "  --paks     ./paks"
     echo "  --output   ./output/scripts"
-    echo "  默认只导出战斗/技能/buff 相关 Lua，并同时生成 luac 与 disasm"
+    echo "  默认导出完整 Lua 源码，luac 只作为临时中间文件"
     echo ""
     echo "输出:"
-    echo "  luac/battle      已解密的标准 Lua 5.4 bytecode"
-    echo "  disasm/battle    可读反汇编文本"
+    echo "  lua/             反编译还原的 Lua 源码，按 Common/Core/Data/NewRoco 等目录分类"
     echo ""
     echo "选项:"
-    echo "  --all            导出全部 Lua"
-    echo "  --bytecode-only  只写 luac"
-    echo "  --disasm-only    只写 disasm"
+    echo "  --decompiler     指定 unluac-cli 或 unluac.jar"
+    echo "  --unluac-lib     指定 FModel native unluac 库"
+    echo "  --jobs           并发反编译数量，默认 CPU 核数"
 }
 
 have() {
@@ -66,4 +65,4 @@ fi
 ensure_dotnet
 
 "$DOTNET_BIN" restore "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" /p:SkipNatives=true
-"$DOTNET_BIN" run /p:SkipNatives=true --project "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" -- --extract-luac "$@"
+"$DOTNET_BIN" run /p:SkipNatives=true --project "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" -- --extract-lua "$@"

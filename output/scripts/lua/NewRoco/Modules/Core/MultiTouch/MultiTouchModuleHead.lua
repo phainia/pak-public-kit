@@ -1,0 +1,28 @@
+local MultiTouchModuleHead = NRCModuleHeadBase:Extend("MultiTouchModuleHead")
+
+function MultiTouchModuleHead:OnConstruct()
+  _G.MultiTouchModuleCmd = reload("NewRoco.Modules.Core.MultiTouch.MultiTouchModuleCmd")
+  self:BindCmd(_G.MultiTouchModuleCmd.EnableMultiTouch, "OnEnableMultiTouch")
+  self:BindCmd(_G.MultiTouchModuleCmd.DisableMultiTouch, "OnDisableMultiTouch")
+  self:BindCmd(_G.MultiTouchModuleCmd.SetMultiTouchLimit, "OnSetMultiTouchLimit")
+  self:BindCmd(_G.MultiTouchModuleCmd.RevertMultiTouchLimit, "OnRevertMultiTouchLimit")
+  self:BindCmd(_G.MultiTouchModuleCmd.OpenBlockingMask, "OnOpenBlockingMask")
+  self:BindCmd(_G.MultiTouchModuleCmd.CloseBlockingMask, "OnCloseBlockingMask")
+  self:BindCmd(_G.MultiTouchModuleCmd.IsNRCButtonTouchable, "OnIsNRCButtonTouchable")
+  self:BindCmd(_G.MultiTouchModuleCmd.AddSingleTouchPanel, "OnAddSingleTouchPanel")
+  self:BindCmd(_G.MultiTouchModuleCmd.RemoveSingleTouchPanel, "OnRemoveSingleTouchPanel")
+  self:BindCmd(_G.MultiTouchModuleCmd.JoystickStartTouch, "OnJoystickStartTouch")
+  self:BindCmd(_G.MultiTouchModuleCmd.JoystickEndTouch, "OnJoystickEndTouch")
+  self:BindCmd(_G.MultiTouchModuleCmd.LockIsSelectBtn, "OnCmdLockIsSelectBtn")
+  self:BindCmd(_G.MultiTouchModuleCmd.GetIsSelectBtn, "OnCmdGetIsSelectBtn")
+  self:BindCmd(_G.MultiTouchModuleCmd.SetIsOpenPetPanel, "OnCmdSetIsOpenPetPanel")
+  self:BindCmd(_G.MultiTouchModuleCmd.GetIsOpenPetPanel, "OnCmdGetIsOpenPetPanel")
+  self:BindCmd(_G.MultiTouchModuleCmd.GetPanelSelectBtnReason, "OnCmdGetPanelSelectBtnReason")
+  self:BindCmd(_G.MultiTouchModuleCmd.UnlockIsSelectBtn, "OnCmdUnlockIsSelectBtn")
+  self:BindCmd(_G.MultiTouchModuleCmd.GetSpecialSelectLimitReason, "OnCmdGetSpecialSelectLimitReason")
+  self:BindCmd(_G.MultiTouchModuleCmd.IsSpecialSelectLimit, "OnCmdIsSpecialSelectLimit")
+  self:BindCmd(_G.MultiTouchModuleCmd.SetSpecialSelectLimit, "OnCmdSetSpecialSelectLimit")
+  self:BindCmd(_G.MultiTouchModuleCmd.GetLockFlags, "OnCmdGetLockFlags")
+end
+
+return MultiTouchModuleHead

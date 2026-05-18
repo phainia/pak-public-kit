@@ -1,0 +1,27 @@
+local ShareUIModuleHead = NRCModuleHeadBase:Extend("ShareUIModuleHead")
+
+function ShareUIModuleHead:OnConstruct()
+  _G.ShareUIModuleCmd = reload("NewRoco.Modules.System.ShareUI.ShareUIModuleCmd")
+  self:BindCmd(_G.ShareUIModuleCmd.OpenShareUIPanel, "OnCmdOpenShareUIPanel")
+  self:BindCmd(_G.ShareUIModuleCmd.CloseShareUIPanel, "OnCmdCloseShareUIPanel")
+  self:BindCmd(_G.ShareUIModuleCmd.ShareChannelExecute, "OnCmdShareChannelExecute")
+  self:BindCmd(_G.ShareUIModuleCmd.OpenScreenshotSharingPanel, "OnCmdOpenScreenshotSharingPanel")
+  self:BindCmd(_G.ShareUIModuleCmd.CheckIsOpen, "OnCmdCheckIsOpen")
+  self:BindCmd(_G.ShareUIModuleCmd.GetPlayerInfo, "OnCmdGetPlayerInfo")
+  self:BindCmd(_G.ShareUIModuleCmd.SendShareTLog, "OnCmdSendShareTLog")
+  self:BindCmd(_G.ShareUIModuleCmd.TryGetShareRewardReq, "OnCmdTryGetShareRewardReq")
+  self:BindCmd(_G.ShareUIModuleCmd.GetShareRewardItemInfo, "OnCmdGetShareRewardItemInfo")
+  self:BindCmd(_G.ShareUIModuleCmd.GetSharePartIdByShareBaseId, "OnCmdGetSharePartIdByShareBaseId")
+  self:BindCmd(_G.ShareUIModuleCmd.CheckShareChannelOpen, "OnCmdCheckShareChannelOpen")
+  self:BindCmd(_G.ShareUIModuleCmd.GetShareType, "OnCmdGetShareType")
+  self:BindCmd(_G.ShareUIModuleCmd.UpdateSharePartId, "OnCmdUpdateSharePartId")
+  self:BindCmd(_G.ShareUIModuleCmd.ShowShareUIPanelCloseMoreBtn, "OnCmdShowShareUIPanelCloseMoreBtn")
+  self:BindCmd(_G.ShareUIModuleCmd.ShowShareUIPanelPetImage3D, "OnCmdShowShareUIPanelPetImage3D")
+  self:BindCmd(_G.ShareUIModuleCmd.GetSharePartButtonType, "OnCmdGetSharePartButtonType")
+  self:BindCmd(_G.ShareUIModuleCmd.GetShareBaseButtonType, "OnCmdGetShareBaseButtonType")
+  self:BindCmd(_G.ShareUIModuleCmd.OpenShareCardDebugPanel, "OnCmdOpenShareCardDebugPanel")
+  self:BindCmd(_G.ShareUIModuleCmd.CheckRewardStateEntrance, "OnCmdCheckRewardStateEntrance")
+  self:BindCmd(_G.ShareUIModuleCmd.CheckShareChannelIsOpen, "OnCmdCheckShareChannelIsOpen")
+end
+
+return ShareUIModuleHead

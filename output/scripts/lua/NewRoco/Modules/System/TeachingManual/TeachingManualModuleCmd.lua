@@ -1,0 +1,15 @@
+local TeachingManualModuleCmd = {}
+TeachingManualModuleCmd.OpenMainPanel = "TeachingManualModuleCmd.OpenMainPanel"
+TeachingManualModuleCmd.EnableMainPanel = "TeachingManualModuleCmd.EnableMainPanel"
+TeachingManualModuleCmd.PreLoadMainPanel = "TeachingManualModuleCmd.PreLoadMainPanel"
+TeachingManualModuleCmd.OpenMainPanelByTeachId = "TeachingManualModuleCmd.OpenMainPanelByTeachId"
+TeachingManualModuleCmd.CloseTeachingManual = "TeachingManualModuleCmd.CloseTeachingManual"
+TeachingManualModuleCmd.SelectTeachIndex = "TeachingManualModuleCmd.SelectTeachIndex"
+TeachingManualModuleCmd.GetSelectTeachManualIndex = "TeachingManualModuleCmd.GetSelectTeachManualIndex"
+TeachingManualModuleCmd.SelectViewPicture = "TeachingManualModuleCmd.SelectViewPicture"
+TeachingManualModuleCmd.GetManualListByTeachManualIndex = "TeachingManualModuleCmd.GetManualListByTeachManualIndex"
+TeachingManualModuleCmd.OnZoneUnlockTeachConditionReq = "TeachingManualModuleCmd.OnZoneUnlockTeachConditionReq"
+TeachingManualModuleCmd.ResetTeachId = "TeachingManualModuleCmd.ResetTeachId"
+TeachingManualModuleCmd.GetIsShowRed = "TeachingManualModuleCmd.GetIsShowRed"
+TeachingManualModuleCmd.JumpToRelatedFunction = "TeachingManualModuleCmd.JumpToRelatedFunction"
+return TeachingManualModuleCmd

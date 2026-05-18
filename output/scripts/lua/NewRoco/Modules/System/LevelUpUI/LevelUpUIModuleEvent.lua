@@ -1,0 +1,5 @@
+local LevelUpUIModuleEvent = {}
+LevelUpUIModuleEvent.LEVELUP_REFRESH_REWARDS_PANEL = "LevelUpUIModuleEvent.LEVELUP_REFRESH_REWARDS_PANEL"
+LevelUpUIModuleEvent.LEVELUP_OPEN_CARD_SET_LOCK = "LevelUpUIModuleEvent.LEVELUP_OPEN_CARD_SET_LOCK"
+LevelUpUIModuleEvent.LEVLEUP_Close_Mask = "LevelUpUIModuleEvent.LEVLEUP_Close_Mask"
+return LevelUpUIModuleEvent

@@ -1,0 +1,17 @@
+local MagicMessageModuleCmd = {}
+MagicMessageModuleCmd.SetNpcAppearance = "MagicMessageModuleCmd.SetNpcAppearance"
+MagicMessageModuleCmd.RegisterPreperform = "MagicMessageModuleCmd.RegisterPreperform"
+MagicMessageModuleCmd.GetPlayerHpFull = "MagicMessageModuleCmd.GetPlayerHpFull"
+MagicMessageModuleCmd.GetPetEnergyFull = "MagicMessageModuleCmd.GetPetEnergyFull"
+MagicMessageModuleCmd.AddLocalNpcToList = "MagicMessageModuleCmd.AddLocalNpcToList"
+MagicMessageModuleCmd.DeleteNpcByGridAndFeedId = "MagicMessageModuleCmd.DeleteNpcByGridAndFeedId"
+MagicMessageModuleCmd.UpdateNpcByGridAndFeedId = "MagicMessageModuleCmd.UpdateNpcByGridAndFeedId"
+MagicMessageModuleCmd.GetNpcByGridAndFeedId = "MagicMessageModuleCmd.GetNpcByGridAndFeedId"
+MagicMessageModuleCmd.DeleteNpcBeforeEnsure = "MagicMessageModuleCmd.DeleteNpcBeforeEnsure"
+MagicMessageModuleCmd.CheckLandValid = "MagicMessageModuleCmd.CheckLandValid"
+MagicMessageModuleCmd.GetCanDrawDebug = "MagicMessageModuleCmd.GetCanDrawDebug"
+MagicMessageModuleCmd.OnPickUpFlower = "MagicMessageModuleCmd.OnPickUpFlower"
+MagicMessageModuleCmd.AddVideoToList = "MagicMessageModuleCmd.AddVideoToList"
+MagicMessageModuleCmd.GetVideoByFileName = "MagicMessageModuleCmd.GetVideoByFileName"
+MagicMessageModuleCmd.GetVideoByFakeId = "MagicMessageModuleCmd.GetVideoByFakeId"
+return MagicMessageModuleCmd

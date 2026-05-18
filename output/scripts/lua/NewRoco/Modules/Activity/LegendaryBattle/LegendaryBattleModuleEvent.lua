@@ -1,0 +1,2 @@
+local LegendaryBattleModuleEvent = {}
+return LegendaryBattleModuleEvent

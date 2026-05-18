@@ -1,0 +1,44 @@
+local LuaMathUtils = require("NewRoco.Utils.LuaMathUtils")
+local DialogueConst = {}
+DialogueConst.HideObjectParam = {
+  DonntHideSizeX = 1300,
+  DonntHideSizeY = 1300,
+  DonntHideSizeZ = 1300,
+  MaxHideVolume = 1200000,
+  MinHideVolume = 10,
+  SingleMeshMinX = 1,
+  SingleMeshMinY = 1,
+  SingleMeshMinZ = 1,
+  CheckRadius = 30000
+}
+DialogueConst.InputHandleParam = {
+  BaseTurnRate = 3.5,
+  BaseLookUpRate = 0.75,
+  MaxSingleStepYaw = 5
+}
+DialogueConst.DefaultCameraChannel = UE4.ECollisionChannel.DialogCamera
+DialogueConst.OtherCameraChannel = UE.ECollisionChannel.ECC_Camera
+DialogueConst.SpringArmLengthBaseDefault = 550
+DialogueConst.SpringArmLengthFactorDefault = 0.5
+DialogueConst.MiniYawDiff = 25
+DialogueConst.AdjustYawOffset = 25
+DialogueConst.PitchCheckThreshold = 10
+DialogueConst.AdjustPitchOffset = 340
+DialogueConst.ActorTurnTime = 0.3
+DialogueConst.EnterTime = 0.5
+DialogueConst.ExitTime = 0
+DialogueConst.CameraEase = LuaMathUtils.Ease.Quad
+DialogueConst.DrawDebugLines = false
+DialogueConst.ModifySpringArmLength = false
+DialogueConst.SpringArmLengthBase = 650
+DialogueConst.SpringArmLengthFactor = 0.5
+DialogueConst.ModifySpringArmOffsetHeight = false
+DialogueConst.SpringArmOffsetHeight = 0
+DialogueConst.DoubleUpCameraZoffset = 50
+DialogueConst.ModifySpringArmOffset = false
+DialogueConst.BlockDialogueAnimation = false
+DialogueConst.ModifyOverShoulder = false
+DialogueConst.SpringArmYawBase = 10.0
+DialogueConst.SetTargetAsOffset = false
+DialogueConst.SetTargetAsShoulderMain = false
+return DialogueConst

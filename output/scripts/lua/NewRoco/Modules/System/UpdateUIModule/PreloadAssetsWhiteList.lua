@@ -1,0 +1,2 @@
+local PreloadAssetsWhiteList = {}
+return PreloadAssetsWhiteList

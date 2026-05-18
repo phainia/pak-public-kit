@@ -1,0 +1,2 @@
+local MultiTouchModuleEvent = {}
+return MultiTouchModuleEvent

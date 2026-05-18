@@ -1,0 +1,23 @@
+local ShareModuleCmdHead = NRCModuleHeadBase:Extend("ShareModuleCmdHead")
+
+function ShareModuleCmdHead:OnConstruct()
+  _G.ShareModuleCmd = reload("NewRoco.Modules.System.Share.ShareModuleCmd")
+  self:BindCmd(ShareModuleCmd.SharePic, "SharePic")
+  self:BindCmd(ShareModuleCmd.ShareInviteWechat, "ShareInviteWechat")
+  self:BindCmd(ShareModuleCmd.ShareQQArk, "ShareQQArk")
+  self:BindCmd(ShareModuleCmd.StartUploadFile, "StartUploadFile")
+  self:BindCmd(ShareModuleCmd.ShareRecordVideo, "ShareRecordVideo")
+  self:BindCmd(ShareModuleCmd.StartRecordVideo, "StartRecordVideo")
+  self:BindCmd(ShareModuleCmd.EndRecordVideo, "EndRecordVideo")
+  self:BindCmd(ShareModuleCmd.ShareLocalVideo, "ShareLocalVideo")
+  self:BindCmd(ShareModuleCmd.SaveVideoToAlbum, "SaveVideoToAlbum")
+  self:BindCmd(ShareModuleCmd.CheckPermission, "CheckPermission")
+  self:BindCmd(ShareModuleCmd.GetQRCodeTexture, "GetQRCodeTexture")
+  self:BindCmd(ShareModuleCmd.GetFilledBase64, "GetFilledBase64")
+  self:BindCmd(ShareModuleCmd.DecodeFilledBase64, "DecodeFilledBase64")
+  self:BindCmd(ShareModuleCmd.ShareMiniApp, "ShareMiniApp")
+  self:BindCmd(ShareModuleCmd.ShareH5WechatAndQQ, "ShareH5WechatAndQQ")
+  self:BindCmd(ShareModuleCmd.CheckAppInstall, "CheckAppInstall")
+end
+
+return ShareModuleCmdHead

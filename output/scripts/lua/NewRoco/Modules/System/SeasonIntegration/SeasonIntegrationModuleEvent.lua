@@ -1,0 +1,4 @@
+local SeasonIntegrationModuleEvent = {}
+SeasonIntegrationModuleEvent.OnSeasonInfoChange = "SeasonIntegrationModuleEvent.OnSeasonInfoChange"
+SeasonIntegrationModuleEvent.OnSeasonPopUpTabSelect = "SeasonIntegrationModuleEvent.OnSeasonPopUpTabSelect"
+return SeasonIntegrationModuleEvent

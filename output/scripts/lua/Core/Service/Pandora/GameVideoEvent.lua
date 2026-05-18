@@ -1,0 +1,2 @@
+local GameVideoEvent = {}
+return GameVideoEvent

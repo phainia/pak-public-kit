@@ -1,0 +1,16 @@
+local CameraModuleCmd = {}
+CameraModuleCmd.OpenMainPanel = "CameraModuleCmd.OpenMainPanel"
+CameraModuleCmd.RequestCamera = "CameraModuleCmd.RequestCamera"
+CameraModuleCmd.StopCameraSkillPlaying = "CameraModuleCmd.StopCameraSkillPlaying"
+CameraModuleCmd.CreateCameraRequestConfig = "CameraModuleCmd.CreateCameraRequestConfig"
+CameraModuleCmd.RequestDefaultCameraOfType = "CameraModuleCmd.RequestDefaultCameraOfType"
+CameraModuleCmd.ReturnCamera = "CameraModuleCmd.ReturnCamera"
+CameraModuleCmd.FillCameraMotionInfo = "CameraModuleCmd.FillCameraMotionInfo"
+CameraModuleCmd.StartCameraMotion = "CameraModuleCmd.StartCameraMotion"
+CameraModuleCmd.RequestRocoCameraAndInit = "CameraModuleCmd.RequestRocoCameraAndInit"
+CameraModuleCmd.PrepareBlendingToBigWorldCamera = "CameraModuleCmd.PrepareBlendingToBigWorldCamera"
+CameraModuleCmd.OverlapRocoCameraWithBigWorldCamera = "CameraModuleCmd.OverlapRocoCameraWithBigWorldCamera"
+CameraModuleCmd.GetCameraHolder = "CameraModuleCmd.GetCameraHolder"
+CameraModuleCmd.EndCameraMotion = "CameraModuleCmd.EndCameraMotion"
+CameraModuleCmd.RequestCameraDOF = "CameraModuleCmd.RequestCameraDOF"
+return CameraModuleCmd

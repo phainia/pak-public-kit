@@ -1,0 +1,5 @@
+local TeachingManualModuleEvent = {}
+TeachingManualModuleEvent.SelectTeachManualTab = "TeachingManualModuleEvent.SelectTeachManualTab"
+TeachingManualModuleEvent.SelectTeachListIndex = "TeachingManualModuleEvent.SelectTeachListIndex"
+TeachingManualModuleEvent.SelectViewPicture = "TeachingManualModuleEvent.SelectViewPicture"
+return TeachingManualModuleEvent

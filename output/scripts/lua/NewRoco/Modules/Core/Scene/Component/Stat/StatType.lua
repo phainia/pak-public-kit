@@ -1,0 +1,26 @@
+local StatType = {
+  MAX_WALK_SPEED = "MaxWalkSpeed",
+  MAX_ACCELERATION = "MaxAcceleration",
+  ROTATION_SPEED_YAW = "RotationSpeedYaw",
+  GRAVITY_SCALE = "GravityScale",
+  MAX_WALK_SPEED_CURVE = "MaxWalkSpeedCurve",
+  JOYSTICK_SENSITIVITY = "Joystick_Sensitivity",
+  MAX_SPEED_CURVE = "MaxSpeedCurve",
+  MAX_SWIM_SPEED = "MaxSwimSpeed",
+  UP_SPEED_LIMIT = "UpSpeedLimit",
+  DOWN_SPEED_LIMIT = "DownSpeedLimit",
+  BASE_MAX_SPEED = "BaseMaxSpeed",
+  BASE_MAX_UP_SPEED = "BaseMaxUpSpeed",
+  CLIMB_SPEED_TALENT_RATIO = "ClimbSpeedTalentRatio",
+  CLIMB_SPEED_PROPERTY_RATIO = "ClimbSpeedPropertyRatio",
+  VITALITY_COST_RATIO = "VitalityCostRatio",
+  VITALITY_COST_RATIO_TALENT = "VitalityCostRatioTalent",
+  VITALITY_PERCEPTION_COST_RATIO_TALENT = "VitalityPerceptionCostRatioTalent",
+  VITALITY_RIDE_PERCEPTION_COST_RATIO_TALENT = "VitalityRidePerceptionCostRatioTalent",
+  SKILL_RUN_SPEED = "SkillRunSpeed",
+  SKILL_FLY_UP_SPEED = "SkillFlyUpSpeed",
+  SKILL_JUMP_Z_SPEED = "SkillJumpZSpeed",
+  SKILL_JUMP_X_SPEED = "SkillJumpXSpeed",
+  PTE_MOUNT_GATHER_RANGE_RATIO = "PetTalentEffect_MountGatherRangeRatio"
+}
+return StatType

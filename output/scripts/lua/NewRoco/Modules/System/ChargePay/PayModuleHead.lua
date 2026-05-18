@@ -1,0 +1,21 @@
+local PayModuleHead = NRCModuleHeadBase:Extend("PayModuleHead")
+
+function PayModuleHead:OnConstruct()
+  _G.PayModuleCmd = reload("NewRoco.Modules.System.ChargePay.PayModuleCmd")
+  self:BindCmd(PayModuleCmd.PayForCharge, "OnCmdPayForChargeReq")
+  self:BindCmd(PayModuleCmd.PayForItem, "OnCmdPayForItemReq")
+  self:BindCmd(PayModuleCmd.InitializeMidas, "InitializeMidas")
+  self:BindCmd(PayModuleCmd.UpdateBalance, "UpdateBalance")
+  self:BindCmd(PayModuleCmd.LaunchMidasPage, "LaunchMidasPage")
+  self:BindCmd(PayModuleCmd.SetPayInfo, "SetPayInfo")
+  self:BindCmd(PayModuleCmd.GetPayInfo, "GetPayInfo")
+  self:BindCmd(PayModuleCmd.ClearPayInfo, "ClearPayInfo")
+  self:BindCmd(PayModuleCmd.ShowFailTips, "ShowFailTips")
+  self:BindCmd(PayModuleCmd.GetSaveAmt, "GetSaveAmt")
+  self:BindCmd(PayModuleCmd.IsPaying, "IsPaying")
+  self:BindCmd(PayModuleCmd.SetPayInfo, "SetPayInfo")
+  self:BindCmd(PayModuleCmd.SetPayGoodsInfo, "SetPayGoodsInfo")
+  self:BindCmd(PayModuleCmd.GetPayGoodsInfo, "GetPayGoodsInfo")
+end
+
+return PayModuleHead

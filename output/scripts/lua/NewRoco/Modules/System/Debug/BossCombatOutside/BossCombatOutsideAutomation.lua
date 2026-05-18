@@ -1,0 +1,2 @@
+local BossCombatOutsideAutomation = require("Profiler.PerfCat.BossCombatOutside.BossCombatOutsideAutomation")
+return BossCombatOutsideAutomation

@@ -1,0 +1,6 @@
+local MusicCollectionModuleEvent = {}
+MusicCollectionModuleEvent.ChangeTabType = "MusicCollectionModuleEvent.ChangeTabType"
+MusicCollectionModuleEvent.ChangeItem = "MusicCollectionModuleEvent.ChangeItem"
+MusicCollectionModuleEvent.SetMusicOption = "MusicCollectionModuleEvent.SetMusicOption"
+MusicCollectionModuleEvent.SelectedMusicEvent = "MusicCollectionModuleEvent.SelectedMusicEvent"
+return MusicCollectionModuleEvent

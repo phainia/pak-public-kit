@@ -1,0 +1,7 @@
+local TaskPetFollowModuleCmd = {}
+TaskPetFollowModuleCmd.TrySummonPetFollow = "TaskPetFollowModuleCmd.TrySummonPetFollow"
+TaskPetFollowModuleCmd.TrySummonPet = "TaskPetFollowModuleCmd.TrySummonPet"
+TaskPetFollowModuleCmd.RecycleFollowedPets = "TaskPetFollowModuleCmd.RecycleFollowedPets"
+TaskPetFollowModuleCmd.CheckPetInTaskFollow = "TaskPetFollowModuleCmd.CheckPetInTaskFollow"
+TaskPetFollowModuleCmd.OnPetTogetherTaskNotify = "TaskPetFollowModuleCmd.OnPetTogetherTaskNotify"
+return TaskPetFollowModuleCmd

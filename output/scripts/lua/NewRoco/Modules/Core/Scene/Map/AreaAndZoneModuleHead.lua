@@ -1,0 +1,23 @@
+local AreaAndZoneModuleHead = NRCModuleHeadBase:Extend("AreaAndZoneModuleHead")
+
+function AreaAndZoneModuleHead:OnConstruct()
+  _G.AreaAndZoneModuleCmd = reload("NewRoco.Modules.Core.Scene.Map.AreaAndZoneModuleCmd")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnCatcherEnter, "OnCatcherEnter")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnCatcherLeave, "OnCatcherLeave")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnWeatherChange, "OnWeatherChange")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.IsSafeZone, "IsSafeZone")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnAreaChange, "OnAreaChange")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnTimeChange, "OnTimeChange")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnTimeGoBack, "OnTimeGoBack")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.GetPlayerZoneInfo, "GetPlayerZoneInfo")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.GetPlayerZoneArray, "GetPlayerZoneArray")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.GetTemperature, "GetTemperature")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.DumpBGMArea, "DumpBGMArea")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.IfPlayerInArea, "IfPlayerInArea")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.IfPlayerInInterArea, "IfPlayerInInterArea")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.GetCaveInfo, "GetCaveInfo")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.CanSetMessage, "CanSetMessage")
+  self:BindCmd(_G.AreaAndZoneModuleCmd.OnTeleportClearAreaInfo, "OnTeleportClearAreaInfo")
+end
+
+return AreaAndZoneModuleHead

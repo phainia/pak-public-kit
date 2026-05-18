@@ -1,0 +1,11 @@
+local EnhancedInputModuleCmd = {}
+EnhancedInputModuleCmd.GetMappingKey = "EnhancedInputModuleCmd.GetMappingKey"
+EnhancedInputModuleCmd.AddInputMappingContext = "EnhancedInputModuleCmd.AddInputMappingContext"
+EnhancedInputModuleCmd.GetInputMappingContext = "EnhancedInputModuleCmd.GetInputMappingContext"
+EnhancedInputModuleCmd.RemoveInputMappingContext = "EnhancedInputModuleCmd.RemoveInputMappingContext"
+EnhancedInputModuleCmd.ApplyUserModifiedKeyMappings = "EnhancedInputModuleCmd.ApplyUserModifiedKeyMappings"
+EnhancedInputModuleCmd.EnhancedInputHelperAddInputMappingContext = "EnhancedInputModuleCmd.EnhancedInputHelperAddInputMappingContext"
+EnhancedInputModuleCmd.EnhancedInputHelperRemoveInputMappingContext = "EnhancedInputModuleCmd.EnhancedInputHelperRemoveInputMappingContext"
+EnhancedInputModuleCmd.AddBlockIMC = "EnhancedInputModuleCmd.AddBlockIMC"
+EnhancedInputModuleCmd.RemoveBlockIMC = "EnhancedInputModuleCmd.RemoveBlockIMC"
+return EnhancedInputModuleCmd

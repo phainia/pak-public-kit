@@ -1,0 +1,2 @@
+local AppearanceLoginModuleEvent = {}
+return AppearanceLoginModuleEvent

@@ -1,0 +1,13 @@
+local CommonPopUpModuleCmd = {}
+CommonPopUpModuleCmd.OpenRemindPanel = "CommonPopUpModuleCmd.OpenRemindPanel"
+CommonPopUpModuleCmd.CloseRemindPanel = "CommonPopUpModuleCmd.CloseRemindPanel"
+CommonPopUpModuleCmd.OpenCommonPopUpWithItem = "CommonPopUpModuleCmd.OpenCommonPopUpWithItem"
+CommonPopUpModuleCmd.OpenNPCShopItemRewardsPanel = "CommonPopUpModuleCmd.OpenNPCShopItemRewardsPanel"
+CommonPopUpModuleCmd.OpenNounInterpretationTipsPanel = "CommonPopUpModuleCmd.OpenNounInterpretationTipsPanel"
+CommonPopUpModuleCmd.CloseNounInterpretationTipsPanel = "CommonPopUpModuleCmd.CloseNounInterpretationTipsPanel"
+CommonPopUpModuleCmd.ActionOpenNPCShopItemRewardsPanel = "CommonPopUpModuleCmd.ActionOpenNPCShopItemRewardsPanel"
+CommonPopUpModuleCmd.CloseNPCShopItemRewardsPanel = "CommonPopUpModuleCmd.CloseNPCShopItemRewardsPanel"
+CommonPopUpModuleCmd.ChangeScene = "CommonPopUpModuleCmd.ChangeScene"
+CommonPopUpModuleCmd.IsItemRewardsPanelOpen = "CommonPopUpModuleCmd.IsItemRewardsPanelOpen"
+CommonPopUpModuleCmd.OpenActivityCommonPanel = "CommonPopUpModuleCmd.OpenActivityCommonPanel"
+return CommonPopUpModuleCmd

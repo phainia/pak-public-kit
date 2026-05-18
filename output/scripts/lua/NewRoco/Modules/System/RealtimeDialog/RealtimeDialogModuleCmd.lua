@@ -1,0 +1,9 @@
+local RealtimeDialogModuleCmd = {}
+RealtimeDialogModuleCmd.StartRealtimeDialogByNpc = "RealtimeDialogModuleCmd.StartRealtimeDialogByNpc"
+RealtimeDialogModuleCmd.StopRealtimeDialogByNpc = "RealtimeDialogModuleCmd.StopRealtimeDialogByNpc"
+RealtimeDialogModuleCmd.StartRealtimeDialogByOption = "RealtimeDialogModuleCmd.StartRealtimeDialogByOption"
+RealtimeDialogModuleCmd.StartRealtimeDialog = "RealtimeDialogModuleCmd.StartRealtimeDialog"
+RealtimeDialogModuleCmd.UpdateDialogList = "RealtimeDialogModuleCmd.UpdateDialogList"
+RealtimeDialogModuleCmd.FinishDialogOption = "RealtimeDialogModuleCmd.FinishDialogOption"
+RealtimeDialogModuleCmd.CloseDialogPanel = "RealtimeDialogModuleCmd.CloseDialogPanel"
+return RealtimeDialogModuleCmd

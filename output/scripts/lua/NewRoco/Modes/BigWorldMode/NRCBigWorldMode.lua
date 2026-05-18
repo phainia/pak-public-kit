@@ -1,0 +1,125 @@
+local NRCBigWorldMode = NRCModeBase:Extend("NRCBigWorldMode")
+
+function NRCBigWorldMode:OnConstruct()
+  Log.Debug("NRCBigWorldMode OnConstruct")
+  self:CreateAction("LoadingBigWorld", "NRCPreloadAssetsAction", "NewRoco.Modes.BigWorldMode.Actions.NRCPreloadAssetsAction")
+  self:CreateAction("LoadingBigWorld", "NRCPreload3DUIWorldsAction", "NewRoco.Modes.BigWorldMode.Actions.NRCPreload3DUIWorldsAction")
+  self:CreateAction("LoadingBigWorld", "NRCLoadingBigWorldAction", "NewRoco.Modes.BigWorldMode.Actions.NRCLoadingBigWorldAction")
+  self:CreateAction("LoadingBigWorld", "NRCActiveBigWorldModuleAction", "NewRoco.Modes.BigWorldMode.Actions.NRCActiveBigWorldModuleAction")
+  self:CreateAction("LoadingBigWorld", "NRCPreloadBattleFieldAction", "NewRoco.Modes.BigWorldMode.Actions.NRCPreloadBattleFieldAction")
+  self:CreateAction("LoadingBigWorld", "NRCEnterBigWorldAction", "NewRoco.Modes.BigWorldMode.Actions.NRCEnterBigWorldAction")
+  self:RegisterModule("SceneModule", "Type_System", "NewRoco.Modules.Core.Scene.SceneModuleHead", "NewRoco.Modules.Core.Scene.SceneModule")
+  if not _G.GlobalConfig.DisableNPCModule then
+    self:RegisterModule("NPCModule", "Type_System", "NewRoco.Modules.Core.NPC.NPCModuleHead", "NewRoco.Modules.Core.NPC.NPCModule")
+  end
+  if not _G.GlobalConfig.DisablePlayerModule then
+    self:RegisterModule("PlayerModule", "Type_System", "NewRoco.Modules.Core.PlayerModule.PlayerModuleHead", "NewRoco.Modules.Core.PlayerModule.PlayerModule")
+  end
+  if not _G.GlobalConfig.DisableCoreModule then
+    self:RegisterModule("AreaAndZoneModule", "Type_System", "NewRoco.Modules.Core.Scene.Map.AreaAndZoneModuleHead", "NewRoco.Modules.Core.Scene.Map.AreaAndZoneModule")
+    self:RegisterModule("MissileModule", "Type_Core", "NewRoco.Modules.Core.Missile.MissileModuleHead", "NewRoco.Modules.Core.Missile.MissileModule")
+    self:RegisterModule("CollisionModule", "Type_Core", "NewRoco.Modules.Core.Collision.CollisionModuleHead", "NewRoco.Modules.Core.Collision.CollisionModule")
+    self:RegisterModule("BattleModule", "Type_Core", "NewRoco.Modules.Core.Battle.BattleModuleHead", "NewRoco.Modules.Core.Battle.BattleModule")
+    self:RegisterModule("TowerModeModule", "Type_Core", "NewRoco.Modules.Core.TowerMode.TowerModeModuleHead", "NewRoco.Modules.Core.TowerMode.TowerModeModule")
+    self:RegisterModule("CinematicModule", "Type_Core", "NewRoco.Modules.Core.Cinematic.CinematicModuleHead", "NewRoco.Modules.Core.Cinematic.CinematicModule")
+    self:RegisterModule("InstanceModule", "Type_Core", "NewRoco.Modules.Core.Instance.InstanceModuleHead", "NewRoco.Modules.Core.Instance.InstanceModule")
+    self:RegisterModule("InputModule", "Type_System", nil, "NewRoco.Modules.Core.Input.InputModule")
+    self:RegisterModule("TaskModule", "Type_System", "NewRoco.Modules.Core.Task.TaskModuleHead", "NewRoco.Modules.Core.Task.TaskModule")
+    self:RegisterModule("TaskPetFollowModule", "Type_Core", "NewRoco.Modules.Core.TaskPetFollow.TaskPetFollowModuleHead", "NewRoco.Modules.Core.TaskPetFollow.TaskPetFollowModule")
+  end
+  if not _G.GlobalConfig.DisableSystemModule then
+    self:RegisterModule("RedPointModule", "Type_System", nil, "NewRoco.Modules.System.RedPoint.RedPointModule")
+    self:RegisterModule("MarkerModule", "Type_System", "NewRoco.Modules.Core.Marker.MarkerModuleHead", "NewRoco.Modules.Core.Marker.MarkerModule")
+    self:RegisterModule("StoryFlagModule", "Type_System", nil, "NewRoco.Modules.System.StoryFlag.StoryFlagModule")
+    self:RegisterModule("ScreenClickModule", "Type_System", "NewRoco.Modules.System.ScreenClick.ScreenClickModuleHead", "NewRoco.Modules.System.ScreenClick.ScreenClickModule")
+    self:RegisterModule("BattleModule", "Type_System", nil, "NewRoco.Modules.Core.Battle.BattleModule")
+    self:RegisterModule("BattleUIModule", "Type_System", nil, "NewRoco.Modules.System.BattleUI.BattleUIModule")
+    self:RegisterModule("CampingModule", "Type_System", nil, "NewRoco.Modules.System.Camping.CampingModule")
+    self:RegisterModule("AlchemyModule", "Type_System", nil, "NewRoco.Modules.System.Alchemy.AlchemyModule")
+    self:RegisterModule("SkillPerformModule", "Type_System", nil, "NewRoco.Modules.System.SkillPerform.SkillPerformModule")
+    self:RegisterModule("MainUIModule", "Type_System", "NewRoco.Modules.System.MainUI.MainUIModuleHead", "NewRoco.Modules.System.MainUI.MainUIModule")
+    self:RegisterModule("PetUIModule", "Type_System", nil, "NewRoco.Modules.System.PetUI.PetUIModule")
+    self:RegisterModule("PVPRankedMatchModule", "Type_System", nil, "NewRoco.Modules.System.PVPQualifier.PVPRankedMatchModule")
+    self:RegisterModule("BagModule", "Type_System", nil, "NewRoco.Modules.System.Bag.BagModule")
+    self:RegisterModule("HandbookModule", "Type_System", nil, "NewRoco.Modules.System.Handbook.HandbookModule")
+    self:RegisterModule("MiracleExchangeModule", "Type_System", nil, "NewRoco.Modules.System.MiracleExchange.MiracleExchangeModule")
+    self:RegisterModule("DialogueModule", "Type_System", "NewRoco.Modules.System.Dialogue.DialogueModuleHead", "NewRoco.Modules.System.Dialogue.DialogueModule")
+    self:RegisterModule("BlackScreenModule", "Type_System", "NewRoco.Modules.System.BlackScreen.BlackScreenModuleHead", "NewRoco.Modules.System.BlackScreen.BlackScreenModule")
+    self:RegisterModule("MiniGameModule", "Type_System", "NewRoco.Modules.System.MiniGame.MiniGameModuleHead", "NewRoco.Modules.System.MiniGame.MiniGameModule")
+    self:RegisterModule("EnvSystemModule", "Type_System", nil, "NewRoco.Modules.System.EnvSystem.EnvSystemModule")
+    self:RegisterModule("NPCShopUIModule", "Type_System", nil, "NewRoco.Modules.System.NPCShopUI.NPCShopUIModule")
+    self:RegisterModule("AltarModule", "Type_System", "NewRoco.Modules.System.AltarModule.AltarModuleHead", "NewRoco.Modules.System.AltarModule.AltarModule")
+    self:RegisterModule("BigMapModule", "Type_System", nil, "NewRoco.Modules.System.BigMap.BigMapModule")
+    self:RegisterModule("LevelUpUIModule", "Type_System", nil, "NewRoco.Modules.System.LevelUpUI.LevelUpUIModule")
+    self:RegisterModule("TUIModule", "Type_System", nil, "NewRoco.Modules.System.TUI.TUIModule")
+    self:RegisterModule("StarChain", "Type_System", nil, "NewRoco.Modules.System.StarChain.StarChainModule")
+    self:RegisterModule("AppearanceModule", "Type_System", "NewRoco.Modules.System.Appearance.AppearanceModuleHead", "NewRoco.Modules.System.Appearance.AppearanceModule")
+    self:RegisterModule("SleepingOwlModule", "Type_System", "NewRoco.Modules.System.SleepingOwl.SleepingOwlModuleHead", "NewRoco.Modules.System.SleepingOwl.SleepingOwlModule")
+    self:RegisterModule("CameraModule", "Type_System", "NewRoco.Modules.System.Camera.CameraModuleHead", "NewRoco.Modules.System.Camera.CameraModule")
+    self:RegisterModule("FriendModule", "Type_System", "NewRoco.Modules.System.Friend.FriendModuleHead", "NewRoco.Modules.System.Friend.FriendModule")
+    self:RegisterModule("ShopModule", "Type_System", "NewRoco.Modules.System.Shop.ShopModuleHead", "NewRoco.Modules.System.Shop.ShopModule")
+    self:RegisterModule("EmailModule", "Type_System", nil, "NewRoco.Modules.System.Email.EmailModule")
+    self:RegisterModule("BattlePassModule", "Type_System", nil, "NewRoco.Modules.System.BattlePass.BattlePassModule")
+    self:RegisterModule("SystemSettingModule", "Type_System", nil, "NewRoco.Modules.System.SystemSetting.SystemSettingModule")
+    self:RegisterModule("MusicCollectionModule", "Type_System", "NewRoco.Modules.System.MusicCollection.MusicCollectionModuleHead", "NewRoco.Modules.System.MusicCollection.MusicCollectionModule")
+    self:RegisterModule("TravelModule", "Type_System", nil, "NewRoco.Modules.System.Travel.TravelModule")
+    self:RegisterModule("MagicManualModule", "Type_System", "NewRoco.Modules.System.MagicManual.MagicManualModuleHead", "NewRoco.Modules.System.MagicManual.MagicManualModule")
+    self:RegisterModule("TeachingManualModule", "Type_System", "NewRoco.Modules.System.TeachingManual.TeachingManualModuleHead", "NewRoco.Modules.System.TeachingManual.TeachingManualModule")
+    self:RegisterModule("TeamBattleModule", "Type_System", "NewRoco.Modules.System.TeamBattle.TeamBattleModuleHead", "NewRoco.Modules.System.TeamBattle.TeamBattleModule")
+    self:RegisterModule("WeeklyChallengeBattleModule", "Type_System", "NewRoco.Modules.System.WeeklyChallengeBattle.WeeklyChallengeBattleModuleHead", "NewRoco.Modules.System.WeeklyChallengeBattle.WeeklyChallengeBattleModule")
+    self:RegisterModule("B1FinalBattleModule", "Type_System", "NewRoco.Modules.System.B1FinalBattleModule.B1FinalBattleModuleHead", "NewRoco.Modules.System.B1FinalBattleModule.B1FinalBattleModule")
+    self:RegisterModule("WorldCombatModule", "Type_System", "NewRoco.Modules.System.WorldCombat.WorldCombatModuleHead", "NewRoco.Modules.System.WorldCombat.WorldCombatModule")
+    self:RegisterModule("HomeModule", "Type_System", "NewRoco.Modules.System.Home.HomeModuleHead", "NewRoco.Modules.System.Home.HomeModule")
+    self:RegisterModule("FarmModule", "Type_System", "NewRoco.Modules.System.Farm.FarmModuleHead", "NewRoco.Modules.System.Farm.FarmModule")
+    self:RegisterModule("RealtimeDialogModule", "Type_System", nil, "NewRoco.Modules.System.RealtimeDialog.RealtimeDialogModule")
+    self:RegisterModule("MagicCreationModule", "Type_System", "NewRoco.Modules.System.MagicCreation.MagicCreationModuleHead", "NewRoco.Modules.System.MagicCreation.MagicCreationModule")
+    self:RegisterModule("GuidanceModule", "Type_System", nil, "NewRoco.Modules.System.Guidance.GuidanceModule")
+    self:RegisterModule("MagicMessageModule", "Type_System", "NewRoco.Modules.System.MagicMessage.MagicMessageModuleHead", "NewRoco.Modules.System.MagicMessage.MagicMessageModule")
+    self:RegisterModule("MagicReplayModule", "Type_System", "NewRoco.Modules.System.MagicReplay.MagicReplayModuleHead", "NewRoco.Modules.System.MagicReplay.MagicReplayModule")
+    self:RegisterModule("RelationTreeModule", "Type_System", nil, "NewRoco.Modules.System.RelationTree.RelationTreeModule")
+    self:RegisterModule("WishCrystalModule", "Type_System", "NewRoco.Modules.System.WishCrystal.WishCrystalModuleHead", "NewRoco.Modules.System.WishCrystal.WishCrystalModule")
+    self:RegisterModule("BattleSpectatorModule", "Type_System", "NewRoco.Modules.System.BattleSpectator.BattleSpectatorModuleHead", "NewRoco.Modules.System.BattleSpectator.BattleSpectatorModule")
+    self:RegisterModule("AirWallModule", "Type_System", "NewRoco.Modules.System.AirWall.AirWallModuleHead", "NewRoco.Modules.System.AirWall.AirWallModule")
+    self:RegisterModule("ActivityModule", "Type_System", "NewRoco.Modules.System.Activity.ActivityModuleHead", "NewRoco.Modules.System.Activity.ActivityModule")
+    self:RegisterModule("RolePlayModule", "Type_System", "NewRoco.Modules.System.RolePlay.RolePlayModuleHead", "NewRoco.Modules.System.RolePlay.RolePlayModule")
+    self:RegisterModule("TakePhotosModule", "Type_System", "NewRoco/Modules/System/TakePhotos/TakePhotosModuleHead", "NewRoco/Modules/System/TakePhotos/TakePhotosModule")
+    self:RegisterModule("ShareModule", "Type_System", "NewRoco.Modules.System.Share.ShareModuleCmdHead", "NewRoco.Modules.System.Share.ShareModule")
+    self:RegisterModule("LegendaryBattleModule", "Type_Activity", "NewRoco.Modules.Activity.LegendaryBattle.LegendaryBattleModuleHead", "NewRoco.Modules.Activity.LegendaryBattle.LegendaryBattleModule")
+    self:RegisterModule("CosUploadModule", NRCModuleTypeDef.Donnt_Destroy, "NewRoco.Modules.Core.CosUpload.CosUploadModuleHead", "NewRoco.Modules.Core.CosUpload.CosUploadModule")
+    self:RegisterModule("LevelSelectionModule", "Type_System", "NewRoco.Modules.System.LevelSelection.LevelSelectionModuleHead", "NewRoco.Modules.System.LevelSelection.LevelSelectionModule")
+    self:RegisterModule("NpcNeedLookModule", "Type_System", "NewRoco.Modules.System.NpcNeedLook.NpcNeedLookModuleHead", "NewRoco.Modules.System.NpcNeedLook.NpcNeedLookModule")
+    self:RegisterModule("CommonPopUpModule", "Type_System", "NewRoco.Modules.System.CommonPopUp.CommonPopUpModuleHead", "NewRoco.Modules.System.CommonPopUp.CommonPopUpModule")
+    self:RegisterModule("CommonModule", "Type_System", nil, "NewRoco.Modules.System.Common.CommonModule")
+    self:RegisterModule("BattleRogueModule", "Type_System", "NewRoco.Modules.System.BattleRogue.BattleRogueModuleHead", "NewRoco.Modules.System.BattleRogue.BattleRogueModule")
+    self:RegisterModule("SeasonIntegrationModule", "Type_System", "NewRoco.Modules.System.SeasonIntegration.SeasonIntegrationModuleHead", "NewRoco.Modules.System.SeasonIntegration.SeasonIntegrationModule")
+    self:RegisterModule("IOSRatingModule", "Type_System", "NewRoco.Modules.System.IOSRating.IOSRatingModuleHead", "NewRoco.Modules.System.IOSRating.IOSRatingModule")
+    self:RegisterModule("NewbieGuideModule", "Type_System", "NewRoco.Modules.System.NewbieGuide.NewbieGuideModuleHead", "NewRoco.Modules.System.NewbieGuide.NewbieGuideModule")
+    self:RegisterModule("BattleTutorialGuideModule", "Type_System", "NewRoco.Modules.System.BattleTutorialGuide.BattleTutorialGuideModuleHead", "NewRoco.Modules.System.BattleTutorialGuide.BattleTutorialGuideModule")
+    self:RegisterModule("ShareUIModule", "Type_System", "NewRoco.Modules.System.ShareUI.ShareUIModuleHead", "NewRoco.Modules.System.ShareUI.ShareUIModule")
+    self:RegisterModule("HeadIconModule", "Type_System", "NewRoco.Modules.System.HeadIcon.HeadIconModuleHead", "NewRoco.Modules.System.HeadIcon.HeadIconModule")
+    self:RegisterModule("PGCModule", "Type_System", "NewRoco.Modules.System.PGC.PGCModuleHead", "NewRoco.Modules.System.PGC.PGCModule")
+  end
+end
+
+function NRCBigWorldMode:OnDestruct()
+end
+
+function NRCBigWorldMode:OnActive()
+  Log.Debug("NRCBigWorldMode OnActive")
+  self:StartGroup("LoadingBigWorld")
+end
+
+function NRCBigWorldMode:OnGroupFinish(groupName)
+  if "OnGroupFinish" == groupName then
+    self:Log("OnGroupFinish:", groupName)
+  end
+end
+
+function NRCBigWorldMode:OnAllGroupFinished()
+end
+
+function NRCBigWorldMode:OnDeactive()
+  _G.NRCModuleManager:DeactiveModule("NPCModule")
+end
+
+return NRCBigWorldMode

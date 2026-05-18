@@ -1,0 +1,18 @@
+local BattleRogueModuleCmd = {}
+BattleRogueModuleCmd.HideMainInfo = "BattleRogueModuleCmd.HideMainInfo"
+BattleRogueModuleCmd.GetCurChallengeLevelConf = "BattleRogueModuleCmd.GetCurChallengeLevelConf"
+BattleRogueModuleCmd.SendChallengeLevelReq = "BattleRogueModuleCmd.SendChallengeLevelReq"
+BattleRogueModuleCmd.SendChooseRogueEventReq = "BattleRogueModuleCmd.SendChooseRogueEventReq"
+BattleRogueModuleCmd.SendFixedEventReq = "BattleRogueModuleCmd.SendFixedEventReq"
+BattleRogueModuleCmd.SendCombineEventReq = "BattleRogueModuleCmd.SendCombineEventReq"
+BattleRogueModuleCmd.SendRefreshEventReq = "BattleRogueModuleCmd.SendRefreshEventReq"
+BattleRogueModuleCmd.SendChooseBuffReq = "BattleRogueModuleCmd.SendChooseBuffReq"
+BattleRogueModuleCmd.SendStartEventReq = "BattleRogueModuleCmd.SendStartEventReq"
+BattleRogueModuleCmd.SendLetPetFree = "BattleRogueModuleCmd.SendLetPetFree"
+BattleRogueModuleCmd.SelectCombineCard = "BattleRogueModuleCmd.SelectCombineCard"
+BattleRogueModuleCmd.OnCmdSelectCombineCard = "BattleRogueModuleCmd.OnCmdSelectCombineCard"
+BattleRogueModuleCmd.CheckCombineIndexes = "BattleRogueModuleCmd.CheckCombineIndexes"
+BattleRogueModuleCmd.SelectBuffInfo = "BattleRogueModuleCmd.SelectBuffInfo"
+BattleRogueModuleCmd.ChangeState = "BattleRogueModuleCmd.ChangeState"
+BattleRogueModuleCmd.PetMainClose = "BattleRogueModuleCmd.PetMainClose"
+return BattleRogueModuleCmd

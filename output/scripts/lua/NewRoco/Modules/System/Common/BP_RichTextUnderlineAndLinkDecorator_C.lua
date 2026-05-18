@@ -1,0 +1,6 @@
+local BP_RichTextUnderlineAndLinkDecorator_C = NRCClass:Extend("BP_RichTextUnderlineAndLinkDecorator_C")
+
+function BP_RichTextUnderlineAndLinkDecorator_C:ClickFun(id)
+end
+
+return BP_RichTextUnderlineAndLinkDecorator_C

@@ -1,0 +1,2 @@
+local MiracleExchangeModuleEvent = {}
+return MiracleExchangeModuleEvent

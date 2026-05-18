@@ -1,0 +1,7 @@
+local TeamBattleModuleEvent = {}
+TeamBattleModuleEvent.StarNumChange = "TeamBattleModuleEvent.StarNumChange"
+TeamBattleModuleEvent.CloseInformationPanel = "TeamBattleModuleEvent.CloseInformationPanel"
+TeamBattleModuleEvent.SetVisitSelectTeamBattlePet = "TeamBattleModuleEvent.SetVisitSelectTeamBattlePet"
+TeamBattleModuleEvent.PreparationPanelOpen = "TeamBattleModuleEvent.PreparationPanelOpen"
+TeamBattleModuleEvent.PreparationPanelClose = "TeamBattleModuleEvent.PreparationPanelClose"
+return TeamBattleModuleEvent
