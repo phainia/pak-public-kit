@@ -57,11 +57,7 @@ function UMG_Email_ListItme_C:GetIconPath(itemId, itemType, IsShowPetbase)
       if nil ~= petBaseConf then
         self:SetQuality(7)
         local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-        if petBaseConf.have_shiny and 1 == petBaseConf.have_shiny and modelConf.shiny_icon then
-          iconPath = modelConf.shiny_icon
-        else
-          iconPath = modelConf.icon
-        end
+        iconPath = modelConf.icon
       end
     else
       local petInfo = _G.DataConfigManager:GetPetConf(itemId, true)
@@ -70,11 +66,7 @@ function UMG_Email_ListItme_C:GetIconPath(itemId, itemType, IsShowPetbase)
         if nil ~= petBaseConf then
           self:SetQuality(7)
           local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-          if petBaseConf.have_shiny and 1 == petBaseConf.have_shiny and modelConf.shiny_icon then
-            iconPath = modelConf.shiny_icon
-          else
-            iconPath = modelConf.icon
-          end
+          iconPath = modelConf.icon
         end
       else
         local monsterConf = _G.DataConfigManager:GetMonsterConf(itemId)
@@ -83,11 +75,7 @@ function UMG_Email_ListItme_C:GetIconPath(itemId, itemType, IsShowPetbase)
           if nil ~= petBaseConf then
             self:SetQuality(7)
             local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-            if petBaseConf.have_shiny and 1 == petBaseConf.have_shiny and modelConf.shiny_icon then
-              iconPath = modelConf.shiny_icon
-            else
-              iconPath = modelConf.icon
-            end
+            iconPath = modelConf.icon
           end
         end
       end

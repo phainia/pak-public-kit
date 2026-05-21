@@ -1290,11 +1290,7 @@ function TipsModule:OpenItemTips(GoodsID, GoodsType, canCharge, remainCnt, maxCn
       if petbaseConf and petbaseConf.model_conf then
         local modelConf = _G.DataConfigManager:GetModelConf(petbaseConf.model_conf)
         if modelConf then
-          if petbaseConf.have_shiny and 1 == petbaseConf.have_shiny and modelConf.shiny_icon then
-            path = modelConf.shiny_icon
-          else
-            path = modelConf.icon
-          end
+          path = modelConf.icon
           name = petbaseConf.name
         end
       end
@@ -1563,12 +1559,7 @@ function TipsModule:OpenItemTipsSimplify(params)
     if GoodsType == _G.Enum.GoodsType.GT_PET then
       local petbaseConf = _G.DataConfigManager:GetPetbaseConf(GoodsID)
       local modelConf = _G.DataConfigManager:GetModelConf(petbaseConf.model_conf)
-      local path
-      if petbaseConf.have_shiny and 1 == petbaseConf.have_shiny and modelConf.shiny_icon then
-        path = modelConf.shiny_icon
-      else
-        path = modelConf.icon
-      end
+      local path = modelConf.icon
       local name = petbaseConf.name
       local real_acquire_struct = {}
       data = {

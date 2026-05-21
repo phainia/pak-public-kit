@@ -66,7 +66,7 @@ if (args.Length > 0 && args[0] == "--probe-icons")
     }
     else
     {
-        iconQuery = iconQuery.Where(IsIconTexturePath);
+        iconQuery = iconQuery.Where(IsTextureExportPath);
     }
 
     var iconFiles = iconQuery
@@ -77,7 +77,7 @@ if (args.Length > 0 && args[0] == "--probe-icons")
     Console.WriteLine($"Total files: {probeProvider.Files.Count}");
     if (probeContains.Count > 0)
         Console.WriteLine($"Contains: {string.Join(", ", probeContains)}");
-    Console.WriteLine($"Icon texture candidates: {iconFiles.Count}");
+    Console.WriteLine($"Texture candidates: {iconFiles.Count}");
     foreach (var path in iconFiles.Take(120).Select(f => f.Path))
         Console.WriteLine(path);
     Environment.Exit(iconFiles.Count > 0 ? 0 : 3);
@@ -389,10 +389,10 @@ Parallel.ForEach(toExtract, file =>
 
 Console.WriteLine($"Done: {extracted} extracted, {errors} raw files skipped");
 
-Console.WriteLine("Exporting texture icons...");
+Console.WriteLine("Exporting texture assets...");
 var textureFiles = provider.Files.Values
     .Where(f => Path.GetExtension(f.Path).Equals(".uasset", StringComparison.OrdinalIgnoreCase))
-    .Where(IsIconTexturePath)
+    .Where(IsTextureExportPath)
     .OrderBy(GetTextureExportPriority)
     .ThenBy(f => f.Path, StringComparer.OrdinalIgnoreCase)
     .ToList();
@@ -403,7 +403,7 @@ foreach (var path in textureFiles.Take(20).Select(f => f.Path))
 
 if (textureFiles.Count == 0)
 {
-    Console.Error.WriteLine("ERROR: No icon texture candidates found in mounted PAK files.");
+    Console.Error.WriteLine("ERROR: No texture candidates found in mounted PAK files.");
     Environment.Exit(4);
 }
 
@@ -423,11 +423,22 @@ foreach (var file in textureFiles)
     }
 }
 
-static bool IsIconTexturePath(GameFile file)
+static bool IsTextureExportPath(GameFile file)
 {
     var p = file.Path.Replace('\\', '/');
     return p.Contains("/System/Common/Icon/", StringComparison.OrdinalIgnoreCase) ||
-           p.Contains("/System/BattleUI/Raw/Atlas/", StringComparison.OrdinalIgnoreCase);
+           p.Contains("/System/BattleUI/Raw/Atlas/", StringComparison.OrdinalIgnoreCase) ||
+           IsUiRawTexturePath(p);
+}
+
+static bool IsUiRawTexturePath(string path)
+{
+    return (path.Contains("/NewRoco/Modules/", StringComparison.OrdinalIgnoreCase) &&
+            (path.Contains("/Raw/", StringComparison.OrdinalIgnoreCase) ||
+             path.Contains("/RawRes/", StringComparison.OrdinalIgnoreCase))) ||
+           (path.Contains("/ArtRes/AnimSequence/UI/", StringComparison.OrdinalIgnoreCase) &&
+            (path.Contains("/Tex/", StringComparison.OrdinalIgnoreCase) ||
+             path.Contains("/Textures/", StringComparison.OrdinalIgnoreCase)));
 }
 
 static int GetTextureExportPriority(GameFile file)
@@ -443,13 +454,16 @@ static int GetTextureExportPriority(GameFile file)
     if (p.Contains("/System/BattleUI/Raw/Atlas/FeatureIcon/", StringComparison.OrdinalIgnoreCase)) return 7;
     if (p.Contains("/System/BattleUI/Raw/Atlas/SkillIcon/", StringComparison.OrdinalIgnoreCase)) return 8;
     if (p.Contains("/System/BattleUI/Raw/Atlas/", StringComparison.OrdinalIgnoreCase)) return 9;
-    return 10;
+    if (p.Contains("/NewRoco/Modules/System/Activity/", StringComparison.OrdinalIgnoreCase)) return 10;
+    if (p.Contains("/NewRoco/Modules/Activity/", StringComparison.OrdinalIgnoreCase)) return 11;
+    if (IsUiRawTexturePath(p)) return 12;
+    return 13;
 }
 
-Console.WriteLine($"Texture icons: {textures} exported, {textureErrors} errors");
+Console.WriteLine($"Texture assets: {textures} exported, {textureErrors} errors");
 if (textures == 0)
 {
-    Console.Error.WriteLine("ERROR: Icon texture candidates were found, but none decoded to webp.");
+    Console.Error.WriteLine("ERROR: Texture candidates were found, but none decoded to webp.");
     Environment.Exit(4);
 }
 

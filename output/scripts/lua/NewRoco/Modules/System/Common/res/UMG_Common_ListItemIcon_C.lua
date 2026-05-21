@@ -127,11 +127,7 @@ function UMG_Common_ListItemIcon_C:SetInfo()
       local petBaseConf = _G.DataConfigManager:GetPetbaseConf(_data.itemId)
       if nil ~= petBaseConf then
         local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-        if petBaseConf.have_shiny and 1 == petBaseConf.have_shiny and modelConf.shiny_icon then
-          iconPath = modelConf.shiny_icon
-        else
-          iconPath = modelConf.icon
-        end
+        iconPath = modelConf.icon
       end
     else
       local petInfo = _G.DataConfigManager:GetPetConf(_data.itemId, true)
@@ -139,11 +135,7 @@ function UMG_Common_ListItemIcon_C:SetInfo()
         local petBaseConf = _G.DataConfigManager:GetPetbaseConf(petInfo.base_id)
         if nil ~= petBaseConf then
           local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-          if petBaseConf.have_shiny and 1 == petBaseConf.have_shiny and modelConf.shiny_icon then
-            iconPath = modelConf.shiny_icon
-          else
-            iconPath = modelConf.icon
-          end
+          iconPath = modelConf.icon
         end
       else
         local monsterConf = _G.DataConfigManager:GetMonsterConf(_data.itemId)
@@ -151,11 +143,7 @@ function UMG_Common_ListItemIcon_C:SetInfo()
           local petBaseConf = _G.DataConfigManager:GetPetbaseConf(monsterConf.base_id)
           if nil ~= petBaseConf then
             local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-            if petBaseConf.have_shiny and 1 == petBaseConf.have_shiny and modelConf.shiny_icon then
-              iconPath = modelConf.shiny_icon
-            else
-              iconPath = modelConf.icon
-            end
+            iconPath = modelConf.icon
           end
         end
       end

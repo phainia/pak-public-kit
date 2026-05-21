@@ -514,7 +514,7 @@ end
 
 function UMG_ChallengePlaySubPanel_C:OnStarlightShoppingBtnClick()
   _G.NRCModuleManager:DoCmd(NPCShopUIModuleCmd.SetNpcShopOpenType, NPCShopUIModuleEnum.OpenNPCShopFormType.MagicManualMain)
-  _G.NRCModuleManager:DoCmd(NPCShopUIModuleCmd.FinishNPCActionOpenShop, nil, 2006)
+  _G.NRCModuleManager:DoCmd(NPCShopUIModuleCmd.FinishNPCActionOpenShop, nil, 2008)
 end
 
 function UMG_ChallengePlaySubPanel_C:OnPlayerDataUpdate()
