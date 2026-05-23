@@ -2,7 +2,7 @@
   "RocoDataRows": {
     "1": {
       "id": 1,
-      "tips": "",
+      "tips": "分院代表设有4个难度等级，必须从简单到困难依次解锁，不可跳级挑战。（稳扎稳打才是魔法师的修养喔～）\n首通奖励：每个难度首次挑战成功时，均可获得一份专属奖励。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/NPCShopUI/NPCShopUIStatic/Frames/Img_NPCShop_Title_xuefenshangdian_png.Img_NPCShop_Title_xuefenshangdian_png'",
       "title": "绩点大赛",
       "subtitle": "挑战分院代表",
@@ -10,9 +10,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_shengtai.img_xueyuan_shengtai'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "I",
-          "name": "",
+          "name": "难度I",
           "difficult_id": 20000001,
           "recommend_world_level": 1,
           "battle_id": 20000001,
@@ -24,9 +24,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "II",
-          "name": "",
+          "name": "难度II",
           "difficult_id": 20000005,
           "recommend_world_level": 2,
           "battle_id": 20000005,
@@ -38,9 +38,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "III",
-          "name": "",
+          "name": "难度III",
           "difficult_id": 20000009,
           "recommend_world_level": 3,
           "battle_id": 20000009,
@@ -52,9 +52,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "IV",
-          "name": "",
+          "name": "难度IV",
           "difficult_id": 20000013,
           "recommend_world_level": 4,
           "battle_id": 20000013,
@@ -68,7 +68,7 @@
     },
     "2": {
       "id": 2,
-      "tips": "",
+      "tips": "分院代表设有4个难度等级，必须从简单到困难依次解锁，不可跳级挑战。（稳扎稳打才是魔法师的修养喔～）\n首通奖励：每个难度首次挑战成功时，均可获得一份专属奖励。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/NPCShopUI/NPCShopUIStatic/Frames/Img_NPCShop_Title_xuefenshangdian_png.Img_NPCShop_Title_xuefenshangdian_png'",
       "title": "绩点大赛",
       "subtitle": "挑战分院代表",
@@ -76,9 +76,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_lianjin.img_xueyuan_lianjin'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "I",
-          "name": "",
+          "name": "难度I",
           "difficult_id": 20000002,
           "recommend_world_level": 1,
           "battle_id": 20000002,
@@ -90,9 +90,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "II",
-          "name": "",
+          "name": "难度II",
           "difficult_id": 20000006,
           "recommend_world_level": 2,
           "battle_id": 20000006,
@@ -104,9 +104,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "III",
-          "name": "",
+          "name": "难度III",
           "difficult_id": 20000010,
           "recommend_world_level": 3,
           "battle_id": 20000010,
@@ -118,9 +118,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "IV",
-          "name": "",
+          "name": "难度IV",
           "difficult_id": 20000014,
           "recommend_world_level": 4,
           "battle_id": 20000014,
@@ -134,7 +134,7 @@
     },
     "3": {
       "id": 3,
-      "tips": "",
+      "tips": "分院代表设有4个难度等级，必须从简单到困难依次解锁，不可跳级挑战。（稳扎稳打才是魔法师的修养喔～）\n首通奖励：每个难度首次挑战成功时，均可获得一份专属奖励。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/NPCShopUI/NPCShopUIStatic/Frames/Img_NPCShop_Title_xuefenshangdian_png.Img_NPCShop_Title_xuefenshangdian_png'",
       "title": "绩点大赛",
       "subtitle": "挑战分院代表",
@@ -142,9 +142,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_yidian.img_xueyuan_yidian'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "I",
-          "name": "",
+          "name": "难度I",
           "difficult_id": 20000003,
           "recommend_world_level": 1,
           "battle_id": 20000003,
@@ -156,9 +156,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "II",
-          "name": "",
+          "name": "难度II",
           "difficult_id": 20000007,
           "recommend_world_level": 2,
           "battle_id": 20000007,
@@ -170,9 +170,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "III",
-          "name": "",
+          "name": "难度III",
           "difficult_id": 20000011,
           "recommend_world_level": 3,
           "battle_id": 20000011,
@@ -184,9 +184,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "IV",
-          "name": "",
+          "name": "难度IV",
           "difficult_id": 20000015,
           "recommend_world_level": 4,
           "battle_id": 20000015,
@@ -200,7 +200,7 @@
     },
     "4": {
       "id": 4,
-      "tips": "",
+      "tips": "分院代表设有4个难度等级，必须从简单到困难依次解锁，不可跳级挑战。（稳扎稳打才是魔法师的修养喔～）\n首通奖励：每个难度首次挑战成功时，均可获得一份专属奖励。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/NPCShopUI/NPCShopUIStatic/Frames/Img_NPCShop_Title_xuefenshangdian_png.Img_NPCShop_Title_xuefenshangdian_png'",
       "title": "绩点大赛",
       "subtitle": "挑战分院代表",
@@ -208,9 +208,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_jingji.img_xueyuan_jingji'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "I",
-          "name": "",
+          "name": "难度I",
           "difficult_id": 20000004,
           "recommend_world_level": 1,
           "battle_id": 20000004,
@@ -222,9 +222,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "II",
-          "name": "",
+          "name": "难度II",
           "difficult_id": 20000008,
           "recommend_world_level": 2,
           "battle_id": 20000008,
@@ -236,9 +236,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "III",
-          "name": "",
+          "name": "难度III",
           "difficult_id": 20000012,
           "recommend_world_level": 3,
           "battle_id": 20000012,
@@ -250,9 +250,9 @@
         },
         {
           "condition": 1,
-          "lock_tips": "",
+          "lock_tips": "成功挑战上一关后解锁",
           "tab_name": "IV",
-          "name": "",
+          "name": "难度IV",
           "difficult_id": 20000016,
           "recommend_world_level": 4,
           "battle_id": 20000016,
@@ -266,7 +266,7 @@
     },
     "5": {
       "id": 5,
-      "tips": "",
+      "tips": "欢迎来到「鼠于你的解忧时刻」特别战场。\n本场战斗规则特殊，且各关卡设置不尽相同，请留意相关提示。\n挑战成功后，请于「鼠于你的解忧时刻」活动界面【限时挑战】模块查收奖励。\n祝您玩得开心。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/Activity/Raw/ActivityCollegeGlory/Frames/img_biaoti_bg_png.img_biaoti_bg_png'",
       "title": "玩闹时刻",
       "subtitle": "梦想三三",
@@ -274,9 +274,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_liuyi.img_xueyuan_liuyi'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "一",
-          "name": "",
+          "name": "梦想三三的游戏",
           "difficult_id": 5011,
           "recommend_world_level": 1,
           "recommend": [
@@ -289,9 +289,9 @@
           "des": "快乐的玩耍\n本场战斗的胜利条件为：全场一共获得10层萌化效果\n\n梦想三三的游戏\n【全体】回合结束时，获得1层萌化\n\n交流\n【全体】攻击拥有减益效果的精灵时，伤害降低20%\n"
         },
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "起",
-          "name": "",
+          "name": "梦想三三的游戏",
           "difficult_id": 5012,
           "recommend_world_level": 2,
           "recommend": [
@@ -304,9 +304,9 @@
           "des": "快乐的玩耍\n本场战斗的胜利条件为：全场一共获得10层萌化效果\n\n梦想三三的游戏\n【全体】回合结束时，获得1层萌化\n\n成长\n【全体】攻击技能威力-50%，但可以移除目标1层萌化\n"
         },
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "玩",
-          "name": "",
+          "name": "梦想三三的游戏",
           "difficult_id": 5013,
           "recommend_world_level": 2,
           "recommend": [
@@ -322,7 +322,7 @@
     },
     "6": {
       "id": 6,
-      "tips": "",
+      "tips": "欢迎来到「鼠于你的解忧时刻」特别战场。\n本场战斗规则特殊，且各关卡设置不尽相同，请留意相关提示。\n挑战成功后，请于「鼠于你的解忧时刻」活动界面【限时挑战】模块查收奖励。\n祝您玩得开心。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/Activity/Raw/ActivityCollegeGlory/Frames/img_biaoti_bg_png.img_biaoti_bg_png'",
       "title": "玩闹时刻",
       "subtitle": "寒音蛇",
@@ -330,9 +330,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_liuyi.img_xueyuan_liuyi'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "一",
-          "name": "",
+          "name": "寒音蛇的游戏",
           "difficult_id": 5021,
           "recommend_world_level": 1,
           "recommend": [
@@ -345,9 +345,9 @@
           "des": "快乐的玩耍\n本场战斗的胜利条件为：全场一共获得10层萌化效果\n\n寒音蛇的游戏\n【全体】获得萌化时，攻击和防御提升20%\n\n和平\n【全体】首次受到致命伤害，获得1层萌化\n"
         },
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "起",
-          "name": "",
+          "name": "寒音蛇的游戏",
           "difficult_id": 5022,
           "recommend_world_level": 2,
           "recommend": [
@@ -360,9 +360,9 @@
           "des": "快乐的玩耍\n本场战斗的胜利条件为：全场一共获得10层萌化效果\n\n寒音蛇的游戏\n【全体】获得萌化时，攻击和防御提升20%\n\n友善\n【全体】非攻击类技能，能耗-2\n"
         },
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "玩",
-          "name": "",
+          "name": "寒音蛇的游戏",
           "difficult_id": 5023,
           "recommend_world_level": 2,
           "recommend": [
@@ -378,7 +378,7 @@
     },
     "7": {
       "id": 7,
-      "tips": "",
+      "tips": "欢迎来到「鼠于你的解忧时刻」特别战场。\n本场战斗规则特殊，且各关卡设置不尽相同，请留意相关提示。\n挑战成功后，请于「鼠于你的解忧时刻」活动界面【限时挑战】模块查收奖励。\n祝您玩得开心。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/Activity/Raw/ActivityCollegeGlory/Frames/img_biaoti_bg_png.img_biaoti_bg_png'",
       "title": "玩闹时刻",
       "subtitle": "魔眷鸟",
@@ -386,9 +386,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_liuyi.img_xueyuan_liuyi'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "一",
-          "name": "",
+          "name": "魔眷鸟的游戏",
           "difficult_id": 5031,
           "recommend_world_level": 2,
           "recommend": [
@@ -401,9 +401,9 @@
           "des": "快乐的玩耍\n本场战斗的胜利条件为：全场一共获得10层萌化效果\n\n魔眷鸟的游戏\n【全体】萌化可以无限叠加\n\n追忆\n【全体】释放非攻击类技能后，获得1次萌化\n"
         },
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "起",
-          "name": "",
+          "name": "魔眷鸟的游戏",
           "difficult_id": 5032,
           "recommend_world_level": 3,
           "recommend": [
@@ -416,9 +416,9 @@
           "des": "快乐的玩耍\n本场战斗的胜利条件为：全场一共获得10层萌化效果\n\n魔眷鸟的游戏\n【全体】萌化可以无限叠加\n\n快乐\n【全体】萌系技能，能耗-3\n"
         },
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "玩",
-          "name": "",
+          "name": "魔眷鸟的游戏",
           "difficult_id": 5033,
           "recommend_world_level": 3,
           "recommend": [
@@ -434,7 +434,7 @@
     },
     "8": {
       "id": 8,
-      "tips": "",
+      "tips": "欢迎来到「鼠于你的解忧时刻」特别战场。\n本场战斗规则特殊，且各关卡设置不尽相同，请留意相关提示。\n挑战成功后，请于「鼠于你的解忧时刻」活动界面【限时挑战】模块查收奖励。\n祝您玩得开心。",
       "head_icon": "PaperSprite'/Game/NewRoco/Modules/System/Activity/Raw/ActivityCollegeGlory/Frames/img_biaoti_bg_png.img_biaoti_bg_png'",
       "title": "玩闹时刻",
       "subtitle": "？？？",
@@ -442,9 +442,9 @@
       "bg_icon": "Texture2D'/Game/NewRoco/Modules/System/OpenairChallenge/Raw/Textures/img_xueyuan_liuyi.img_xueyuan_liuyi'",
       "difficult_group": [
         {
-          "lock_tips": "",
+          "lock_tips": "刷新重试",
           "tab_name": "？",
-          "name": "",
+          "name": "随机的游戏",
           "difficult_id": 5041,
           "recommend_world_level": 3,
           "recommend": [

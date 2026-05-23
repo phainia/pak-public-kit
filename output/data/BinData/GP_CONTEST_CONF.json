@@ -4,14 +4,14 @@
       "id": 1,
       "contest_list": [
         {
-          "name": ""
+          "name": "name"
         },
         {
-          "name": "",
+          "name": "索菲亚",
           "gp": 486
         },
         {
-          "name": "",
+          "name": "伊森",
           "gp": 460
         }
       ]
@@ -20,15 +20,15 @@
       "id": 2,
       "contest_list": [
         {
-          "name": "",
+          "name": "芙蕾雅",
           "gp": 650
         },
         {
-          "name": "",
+          "name": "索菲亚",
           "gp": 415
         },
         {
-          "name": "",
+          "name": "伊森",
           "gp": 390
         }
       ]
@@ -37,15 +37,15 @@
       "id": 3,
       "contest_list": [
         {
-          "name": "",
+          "name": "芙蕾雅",
           "gp": 580
         },
         {
-          "name": "",
+          "name": "伊森",
           "gp": 370
         },
         {
-          "name": ""
+          "name": "name"
         }
       ]
     },
@@ -53,15 +53,15 @@
       "id": 4,
       "contest_list": [
         {
-          "name": "",
+          "name": "芙蕾雅",
           "gp": 475
         },
         {
-          "name": "",
+          "name": "索菲亚",
           "gp": 110
         },
         {
-          "name": "",
+          "name": "伊森",
           "gp": 105
         }
       ]

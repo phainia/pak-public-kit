@@ -2,6 +2,18 @@
     "id": 3716,
     "name": "songzai",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 14,
         "name": "Cute",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Physical",
     "localized": {
         "zh": {
-            "name": "3716"
+            "name": "糖串串"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 3716,
         "name": "songzai",
         "localized": {
-            "zh": "3716"
+            "zh": "糖串串"
         }
     },
     "trait": {
         "id": 200270,
-        "name": "特性 200270",
-        "description": "",
+        "name": "可烤汪",
+        "description": "萌化状态下，赋予的灼烧层数+3。",
         "icon_id": "200075",
         "localized": {
             "zh": {
-                "name": "特性 200270",
-                "description": ""
+                "name": "可烤汪",
+                "description": "萌化状态下，赋予的灼烧层数+3。"
             }
         }
     },
@@ -66,7 +78,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3716"
+                                "name": "糖串串"
                             }
                         },
                         "is_leader_form": false,
@@ -92,7 +104,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3717"
+                                "name": "可烤汪"
                             }
                         },
                         "is_leader_form": false,
@@ -119,10 +131,12 @@
         "type_desc": null,
         "description_habitat": null,
         "introduction": null,
-        "refresh_locations": [],
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {

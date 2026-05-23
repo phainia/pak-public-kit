@@ -80,8 +80,8 @@
       "id": 3001,
       "start_time": "2025-03-21 04:00:00",
       "end_time": "2026-03-24 03:59:59",
-      "unlock_text": "",
-      "next_tips_text": "",
+      "unlock_text": "明日可领",
+      "next_tips_text": "下次课堂时间：04月22日",
       "reward_group": [
         {
           "reward_id": 200000041
@@ -92,8 +92,8 @@
       "id": 3002,
       "start_time": "2025-05-08 10:00:00",
       "end_time": "2026-05-11 03:59:59",
-      "unlock_text": "",
-      "next_tips_text": "",
+      "unlock_text": "明日可领",
+      "next_tips_text": "下次课堂时间：05月02日",
       "reward_group": [
         {
           "reward_id": 200000042
@@ -104,7 +104,7 @@
       "id": 3003,
       "start_time": "2025-05-02 04:00:00",
       "end_time": "2026-05-05 03:59:59",
-      "unlock_text": "",
+      "unlock_text": "明日可领",
       "reward_group": [
         {
           "reward_id": 200000043
@@ -242,7 +242,7 @@
       "id": 200008,
       "start_time": "2026-04-17 04:00:00",
       "end_time": "2026-04-24 03:59:59",
-      "unlock_text": "",
+      "unlock_text": "4月17日-24日\n登录可领取",
       "reward_group": [
         {
           "reward_id": 200000148
@@ -253,7 +253,7 @@
       "id": 200009,
       "start_time": "2026-04-24 04:00:00",
       "end_time": "2026-05-01 03:59:59",
-      "unlock_text": "",
+      "unlock_text": "4月24日-1日\n登录可领取",
       "reward_group": [
         {
           "reward_id": 200000149
@@ -264,7 +264,7 @@
       "id": 200010,
       "start_time": "2026-05-01 04:00:00",
       "end_time": "2026-05-06 03:59:59",
-      "unlock_text": "",
+      "unlock_text": "5月1日-5日\n登录可领取",
       "reward_group": [
         {
           "reward_id": 200000150

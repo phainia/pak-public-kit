@@ -2,8 +2,8 @@
   "RocoDataRows": {
     "130131": {
       "id": 130131,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "南部海岸",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         5,
         14
@@ -12,8 +12,8 @@
     },
     "130132": {
       "id": 130132,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "咸水湾",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         14
       ],
@@ -21,8 +21,8 @@
     },
     "130133": {
       "id": 130133,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "圣所前哨",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         13,
         3
@@ -38,8 +38,8 @@
     },
     "130134": {
       "id": 130134,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "晨曦山",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         2,
         14,
@@ -53,8 +53,8 @@
     },
     "130135": {
       "id": 130135,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "彼得大道",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         5,
         15
@@ -71,8 +71,8 @@
     },
     "130136": {
       "id": 130136,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "北半岛",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         14
       ],
@@ -80,8 +80,8 @@
     },
     "130137": {
       "id": 130137,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "峡湾",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         5,
         20
@@ -96,8 +96,8 @@
     },
     "130138": {
       "id": 130138,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "王国城堡",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         6,
         11
@@ -114,8 +114,8 @@
     },
     "130139": {
       "id": 130139,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "金叶原",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         4,
         2
@@ -127,8 +127,8 @@
     },
     "130140": {
       "id": 130140,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "恶水沼泽",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         17,
         18
@@ -145,8 +145,8 @@
     },
     "130141": {
       "id": 130141,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "净化绿洲",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         15,
         12
@@ -163,8 +163,8 @@
     },
     "130142": {
       "id": 130142,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "微光湿地",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         6
       ],
@@ -177,8 +177,8 @@
     },
     "130143": {
       "id": 130143,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "巨人裂谷顶",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         9,
         10
@@ -195,8 +195,8 @@
     },
     "130144": {
       "id": 130144,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "巨人裂谷内",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         8,
         18
@@ -214,8 +214,8 @@
     },
     "130145": {
       "id": 130145,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "独角兽领地（废弃）",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         13,
         15
@@ -224,8 +224,8 @@
     },
     "130146": {
       "id": 130146,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "采邑地",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         3,
         11
@@ -242,8 +242,8 @@
     },
     "130147": {
       "id": 130147,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "庭院山崖",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         8,
         4,
@@ -262,8 +262,8 @@
     },
     "130148": {
       "id": 130148,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "花影迷宫",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         18,
         16
@@ -276,8 +276,8 @@
     },
     "130149": {
       "id": 130149,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "幻鸩庭院",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         20
       ],
@@ -288,8 +288,8 @@
     },
     "130150": {
       "id": 130150,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "北部荒原顶部",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         8,
         4,
@@ -309,8 +309,8 @@
     },
     "130151": {
       "id": 130151,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "北部荒原底部",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         17,
         18
@@ -326,8 +326,8 @@
     },
     "130152": {
       "id": 130152,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "甜水农庄",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         13,
         15
@@ -342,8 +342,8 @@
     },
     "130153": {
       "id": 130153,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "大道半岛南部",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         5,
         14
@@ -352,8 +352,8 @@
     },
     "130154": {
       "id": 130154,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "大道半岛内部",
+      "name": "魔力之源（废弃）",
       "advantage_type": [
         5,
         3
@@ -368,8 +368,8 @@
     },
     "130155": {
       "id": 130155,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "咸水湾",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700303,
       "manage_area_func": 700303,
@@ -378,8 +378,8 @@
     },
     "130156": {
       "id": 130156,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "沉船漩涡",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700304,
       "manage_area_func": 700304,
@@ -388,8 +388,8 @@
     },
     "130157": {
       "id": 130157,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "圣所前哨",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700300,
       "manage_area_func": 700300,
@@ -398,8 +398,8 @@
     },
     "130158": {
       "id": 130158,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "回填山涧",
+      "name": "魔力之源",
       "region_star": 4,
       "area_id": 700319,
       "manage_area_func": 700319,
@@ -408,8 +408,8 @@
     },
     "130159": {
       "id": 130159,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "采邑地",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700316,
       "manage_area_func": 700316,
@@ -418,8 +418,8 @@
     },
     "130160": {
       "id": 130160,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "独角兽领地",
+      "name": "魔力之源",
       "region_star": 4,
       "area_id": 700318,
       "manage_area_func": 700318,
@@ -428,8 +428,8 @@
     },
     "130161": {
       "id": 130161,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "恶水沼泽",
+      "name": "魔力之源",
       "region_star": 4,
       "area_id": 700320,
       "manage_area_func": 700320,
@@ -438,8 +438,8 @@
     },
     "130162": {
       "id": 130162,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "黑水峡",
+      "name": "魔力之源",
       "region_star": 4,
       "area_id": 700321,
       "manage_area_func": 700321,
@@ -448,8 +448,8 @@
     },
     "130163": {
       "id": 130163,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "甜水农庄",
+      "name": "魔力之源",
       "region_star": 4,
       "area_id": 700317,
       "manage_area_func": 700317,
@@ -458,8 +458,8 @@
     },
     "130164": {
       "id": 130164,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "咕嘟咕嘟浅滩",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700312,
       "manage_area_func": 700312,
@@ -468,8 +468,8 @@
     },
     "130165": {
       "id": 130165,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "银蛇河口",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700313,
       "manage_area_func": 700313,
@@ -478,8 +478,8 @@
     },
     "130166": {
       "id": 130166,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "王国城堡",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700314,
       "manage_area_func": 700314,
@@ -488,8 +488,8 @@
     },
     "130167": {
       "id": 130167,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "港口驻地",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700309,
       "manage_area_func": 700309,
@@ -498,8 +498,8 @@
     },
     "130168": {
       "id": 130168,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "向日葵海岸",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700310,
       "manage_area_func": 700310,
@@ -508,8 +508,8 @@
     },
     "130169": {
       "id": 130169,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "彼得大道",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700305,
       "manage_area_func": 700305,
@@ -518,8 +518,8 @@
     },
     "130170": {
       "id": 130170,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "二叠山丘",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700311,
       "manage_area_func": 700311,
@@ -528,8 +528,8 @@
     },
     "130171": {
       "id": 130171,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "监管区",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700306,
       "manage_area_func": 700306,
@@ -538,8 +538,8 @@
     },
     "130172": {
       "id": 130172,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "拾荒港口",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700302,
       "manage_area_func": 700302,
@@ -548,8 +548,8 @@
     },
     "130173": {
       "id": 130173,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "晨曦山",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700301,
       "manage_area_func": 700301,
@@ -558,8 +558,8 @@
     },
     "130174": {
       "id": 130174,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "信仰者村落",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700322,
       "manage_area_func": 700322,
@@ -568,8 +568,8 @@
     },
     "130175": {
       "id": 130175,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "月兔暗港",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700307,
       "manage_area_func": 700307,
@@ -578,8 +578,8 @@
     },
     "130176": {
       "id": 130176,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "望风半岛",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700308,
       "manage_area_func": 700308,
@@ -588,8 +588,8 @@
     },
     "130177": {
       "id": 130177,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "金叶原",
+      "name": "魔力之源",
       "region_star": 4,
       "area_id": 700315,
       "manage_area_func": 700315,
@@ -598,8 +598,8 @@
     },
     "130308": {
       "id": 130308,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "奥贝斯坦湖",
+      "name": "魔力之源",
       "area_id": 700101,
       "manage_area_func": 700101,
       "advantage_type": [
@@ -619,8 +619,8 @@
     },
     "130309": {
       "id": 130309,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "月牙湖岸",
+      "name": "魔力之源",
       "area_id": 700102,
       "manage_area_func": 700102,
       "advantage_type": [
@@ -640,8 +640,8 @@
     },
     "130310": {
       "id": 130310,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "商店街周边",
+      "name": "魔力之源",
       "area_id": 700103,
       "manage_area_func": 700103,
       "advantage_type": [
@@ -666,8 +666,8 @@
     },
     "130311": {
       "id": 130311,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "聆风塔地",
+      "name": "魔力之源",
       "area_id": 700104,
       "manage_area_func": 700104,
       "advantage_type": [
@@ -691,8 +691,8 @@
     },
     "130312": {
       "id": 130312,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "风息山口",
+      "name": "魔力之源",
       "region_star": 1,
       "area_id": 700105,
       "manage_area_func": 700105,
@@ -713,8 +713,8 @@
     },
     "130313": {
       "id": 130313,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "魔法学院",
+      "name": "魔力之源",
       "area_id": 700548,
       "manage_area_func": 700548,
       "advantage_type": [
@@ -727,8 +727,8 @@
     },
     "130317": {
       "id": 130317,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "魔法学院",
+      "name": "魔力之源",
       "area_id": 700548,
       "manage_area_func": 700548,
       "unlock_dialog": 102802902,
@@ -737,8 +737,8 @@
     },
     "130318": {
       "id": 130318,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "魔法学院",
+      "name": "魔力之源",
       "area_id": 700548,
       "manage_area_func": 700548,
       "unlock_dialog": 102802902,
@@ -747,8 +747,8 @@
     },
     "130319": {
       "id": 130319,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "魔法学院",
+      "name": "魔力之源",
       "area_id": 700548,
       "manage_area_func": 700548,
       "advantage_type": [
@@ -761,8 +761,8 @@
     },
     "140143": {
       "id": 140143,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "岚语峰西侧",
+      "name": "魔力之源",
       "region_star": 3,
       "area_id": 700106,
       "manage_area_func": 700106,
@@ -788,8 +788,8 @@
     },
     "140144": {
       "id": 140144,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "圣羽祭台",
+      "name": "魔力之源",
       "region_star": 2,
       "area_id": 700107,
       "manage_area_func": 700107,
@@ -812,8 +812,8 @@
     },
     "140145": {
       "id": 140145,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "旧飞艇航道",
+      "name": "魔力之源",
       "region_star": 1,
       "area_id": 700108,
       "manage_area_func": 700108,
@@ -841,8 +841,8 @@
     },
     "140146": {
       "id": 140146,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "挽风屏障",
+      "name": "魔力之源",
       "region_star": 1,
       "area_id": 700109,
       "manage_area_func": 700109,
@@ -863,8 +863,8 @@
     },
     "140147": {
       "id": 140147,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "叽叽喳喳台地",
+      "name": "魔力之源",
       "region_star": 2,
       "area_id": 700110,
       "manage_area_func": 700110,
@@ -886,8 +886,8 @@
     },
     "140149": {
       "id": 140149,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "轻风山",
+      "name": "魔力之源",
       "area_id": 700112,
       "manage_area_func": 700112,
       "advantage_type": [
@@ -903,8 +903,8 @@
     },
     "140150": {
       "id": 140150,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "风眠圣所",
+      "name": "魔力之源",
       "region_star": 1,
       "area_id": 700113,
       "manage_area_func": 700113,
@@ -914,15 +914,15 @@
     },
     "801196": {
       "id": 801196,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "创造魔法的枯枝",
+      "name": "魔力之源",
       "unlock_dialog": 102802402,
       "team_battle_evo_rand_num": 1
     },
     "1200492": {
       "id": 1200492,
-      "camp_name": "",
-      "name": "",
+      "camp_name": "星霜崖地",
+      "name": "魔力之源",
       "region_star": 2,
       "area_id": 700111,
       "manage_area_func": 700111,
@@ -950,113 +950,113 @@
     },
     "1300230": {
       "id": 1300230,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "伴星圣所（副本）",
+      "name": "魔力之源"
     },
     "1300616": {
       "id": 1300616,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "精灵矿工（副本）",
+      "name": "魔力之源"
     },
     "1300714": {
       "id": 1300714,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "破风山谷（副本）",
+      "name": "魔力之源"
     },
     "1300853": {
       "id": 1300853,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "祈雨器（副本）",
+      "name": "魔力之源"
     },
     "1300898": {
       "id": 1300898,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "水系02（副本）",
+      "name": "魔力之源"
     },
     "1301065": {
       "id": 1301065,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "水之道（副本）",
+      "name": "魔力之源"
     },
     "1301362": {
       "id": 1301362,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "战斗01（副本）",
+      "name": "魔力之源"
     },
     "1301363": {
       "id": 1301363,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "战斗02（副本）",
+      "name": "魔力之源"
     },
     "1301364": {
       "id": 1301364,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "战斗03（副本）",
+      "name": "魔力之源"
     },
     "1301365": {
       "id": 1301365,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "战斗04（副本）",
+      "name": "魔力之源"
     },
     "1301366": {
       "id": 1301366,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "战斗05（副本）",
+      "name": "魔力之源"
     },
     "1301370": {
       "id": 1301370,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "精灵矿工（副本）",
+      "name": "魔力之源"
     },
     "2900142": {
       "id": 2900142,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "空中星火（副本）",
+      "name": "魔力之源"
     },
     "2900624": {
       "id": 2900624,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "石柱阵列（副本）",
+      "name": "魔力之源"
     },
     "2900694": {
       "id": 2900694,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "眠星风阵（副本）",
+      "name": "魔力之源"
     },
     "2900867": {
       "id": 2900867,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "浮落幽谷（副本）",
+      "name": "魔力之源"
     },
     "2901040": {
       "id": 2901040,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "暖火雪境（副本）",
+      "name": "魔力之源"
     },
     "2901198": {
       "id": 2901198,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "风眠圣所（副本）",
+      "name": "魔力之源"
     },
     "5100329": {
       "id": 5100329,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "遗迹双巫团（副本）",
+      "name": "魔力之源"
     },
     "5100330": {
       "id": 5100330,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "地下花园（副本）",
+      "name": "魔力之源"
     },
     "5100331": {
       "id": 5100331,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "花中之巫（副本）",
+      "name": "魔力之源"
     },
     "5100332": {
       "id": 5100332,
-      "camp_name": "",
-      "name": ""
+      "camp_name": "黑巫赠宝（副本）",
+      "name": "魔力之源"
     }
   }
 }

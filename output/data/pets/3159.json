@@ -2,6 +2,18 @@
     "id": 3159,
     "name": "zimanbaobao",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 2,
         "name": "Grass",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3159"
+            "name": "紫蔓宝宝"
         }
     },
     "implemented": false,
@@ -37,7 +49,7 @@
         "id": 3159,
         "name": "zimanbaobao",
         "localized": {
-            "zh": "3159"
+            "zh": "紫蔓宝宝"
         }
     },
     "trait": null,
@@ -55,7 +67,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3159"
+                                "name": "紫蔓宝宝"
                             }
                         },
                         "is_leader_form": false,
@@ -81,7 +93,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3160"
+                                "name": "紫蔓祭祀"
                             }
                         },
                         "is_leader_form": false,
@@ -109,7 +121,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3097"
+                                "name": "灵蔓草王"
                             }
                         },
                         "is_leader_form": false,
@@ -137,11 +149,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "极其罕见的精灵，最早洛克们似乎把这种精灵误认为是幼鹿。身体周围的藤曼每天黄昏都会脱落枯萎，再长出新芽。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -152,7 +166,7 @@
     "breeding": {
         "id": 3159001,
         "pet_id": 3159001,
-        "name": null,
+        "name": "异色空空颅的蛋",
         "model_id": 3159001,
         "hatch_data": 1,
         "weight_low": 1,
@@ -168,7 +182,7 @@
             {
                 "id": 3159001,
                 "pet_id": 3159001,
-                "name": null,
+                "name": "异色空空颅的蛋",
                 "model_id": 3159001,
                 "hatch_data": 1,
                 "weight_low": 1,
@@ -182,15 +196,47 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3168002,
+                "pet_id": 3168002,
+                "name": "紫蔓宝宝",
+                "model_id": 3168001,
+                "hatch_data": 57600,
+                "weight_low": 5572,
+                "weight_high": 6368,
+                "height_low": 29,
+                "height_high": 32,
+                "precious_egg_type": 5,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 31590001,
                 "pet_id": 31590001,
-                "name": null,
+                "name": "风铃鲨",
                 "model_id": 3159001,
                 "hatch_data": 300,
                 "weight_low": 1,
                 "weight_high": 10,
                 "height_low": 1,
                 "height_high": 10,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 31950001,
+                "pet_id": 31950001,
+                "name": "紫蔓宝宝",
+                "model_id": 3195001,
+                "hatch_data": 300,
+                "weight_low": 840,
+                "weight_high": 1240,
+                "height_low": 16,
+                "height_high": 19,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

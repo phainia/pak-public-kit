@@ -2,6 +2,18 @@
     "id": 3728,
     "name": "chixinyongshi",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 3,
         "name": "Fire",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Magic",
     "localized": {
         "zh": {
-            "name": "3728"
+            "name": "炽心勇狮"
         }
     },
     "implemented": false,
@@ -43,18 +55,18 @@
         "id": 3728,
         "name": "chixinyongshi",
         "localized": {
-            "zh": "3728"
+            "zh": "炽心勇狮"
         }
     },
     "trait": {
         "id": 200247,
-        "name": "特性 200247",
-        "description": "",
+        "name": "圣火骑士",
+        "description": "应对成功后，下次攻击威力翻倍。",
         "icon_id": "200247",
         "localized": {
             "zh": {
-                "name": "特性 200247",
-                "description": ""
+                "name": "圣火骑士",
+                "description": "应对成功后，下次攻击威力翻倍。"
             }
         }
     },
@@ -72,7 +84,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3589"
+                                "name": "玳龟"
                             }
                         },
                         "is_leader_form": false,
@@ -94,7 +106,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3726"
+                                "name": "小勇狮"
                             }
                         },
                         "is_leader_form": false,
@@ -126,7 +138,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3590"
+                                "name": "玳塔"
                             }
                         },
                         "is_leader_form": false,
@@ -148,7 +160,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3727"
+                                "name": "炽焰狮"
                             }
                         },
                         "is_leader_form": false,
@@ -182,7 +194,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3728"
+                                "name": "炽心勇狮"
                             }
                         },
                         "is_leader_form": false,
@@ -216,11 +228,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "不休的守护者，用无私烈焰凌驾于契约之上，绝对正义才是支持这烈焰的力量源泉。 “让我见识看看吧，你的正义之心”它们的的神态仿佛这样说。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {

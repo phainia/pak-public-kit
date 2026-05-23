@@ -2,6 +2,18 @@
     "id": 9813,
     "name": "9813",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9813"
+            "name": "鸭吉吉_翼"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9813,
         "name": "9813",
         "localized": {
-            "zh": "9813"
+            "zh": "鸭吉吉_翼"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7150250,
-            "name": "技能 7150250",
+            "name": "减伤50%，迅捷，应对攻击。",
             "icon_id": "114020",
             "move_type": {
                 "id": 13,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7150250",
-                    "description": ""
+                    "name": "减伤50%，迅捷，应对攻击。",
+                    "description": "疾风涡轮"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 60,
-            "description": ""
+            "description": "疾风涡轮"
         },
         {
             "id": 7150260,
-            "name": "技能 7150260",
+            "name": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。",
             "icon_id": "114021",
             "move_type": {
                 "id": 13,
@@ -88,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7150260",
-                    "description": ""
+                    "name": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。",
+                    "description": "鸣叫"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": ""
+            "description": "鸣叫"
         },
         {
             "id": 7150270,
-            "name": "技能 7150270",
+            "name": "对敌方精灵造成魔法伤害。",
             "icon_id": "214022",
             "move_type": {
                 "id": 13,
@@ -110,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7150270",
-                    "description": ""
+                    "name": "对敌方精灵造成魔法伤害。",
+                    "description": "鹰爪"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "鹰爪"
         },
         {
             "id": 7150300,
-            "name": "技能 7150300",
+            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -132,18 +144,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7150300",
-                    "description": ""
+                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+                    "description": "风矢"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "风矢"
         },
         {
             "id": 7150310,
-            "name": "技能 7150310",
+            "name": "对敌方精灵造成物理伤害。",
             "icon_id": "114027",
             "move_type": {
                 "id": 13,
@@ -154,18 +166,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7150310",
-                    "description": ""
+                    "name": "对敌方精灵造成物理伤害。",
+                    "description": "回旋风暴"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "回旋风暴"
         },
         {
             "id": 7150320,
-            "name": "技能 7150320",
+            "name": "对敌方精灵造成物理伤害。",
             "icon_id": "314028",
             "move_type": {
                 "id": 13,
@@ -176,14 +188,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7150320",
-                    "description": ""
+                    "name": "对敌方精灵造成物理伤害。",
+                    "description": "闪击"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": ""
+            "description": "闪击"
         }
     ],
     "move_stones": [],
@@ -199,7 +211,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9813"
+                                "name": "鸭吉吉_翼"
                             }
                         },
                         "is_leader_form": false,
@@ -225,11 +237,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

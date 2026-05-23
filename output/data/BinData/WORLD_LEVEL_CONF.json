@@ -2,7 +2,7 @@
   "RocoDataRows": {
     "1": {
       "id": 1,
-      "title": "",
+      "title": "学院新生",
       "pet_top_level": 20,
       "pet_level_limit": 20,
       "pet_team_quantity": 3,
@@ -38,7 +38,7 @@
     "2": {
       "id": 2,
       "world_level": 1,
-      "title": "",
+      "title": "见习魔法生",
       "update_grade_level": 20,
       "update_task_id": 30022001,
       "is_auto_accept_task": true,
@@ -95,7 +95,7 @@
     "3": {
       "id": 3,
       "world_level": 2,
-      "title": "",
+      "title": "精灵研究员",
       "update_grade_level": 30,
       "update_task_id": 52080201,
       "is_auto_accept_task": true,
@@ -152,7 +152,7 @@
     "4": {
       "id": 4,
       "world_level": 3,
-      "title": "",
+      "title": "精灵学士",
       "update_grade_level": 40,
       "update_task_id": 52080301,
       "is_auto_accept_task": true,
@@ -209,7 +209,7 @@
     "5": {
       "id": 5,
       "world_level": 4,
-      "title": "",
+      "title": "精灵博学者",
       "update_grade_level": 50,
       "update_task_id": 52080401,
       "is_auto_accept_task": true,
@@ -265,7 +265,7 @@
     "6": {
       "id": 6,
       "world_level": 5,
-      "title": "",
+      "title": "精灵魔法师",
       "update_grade_level": 60,
       "update_task_id": 52080501,
       "is_auto_accept_task": true,
@@ -316,7 +316,7 @@
     "7": {
       "id": 7,
       "world_level": 6,
-      "title": "",
+      "title": "日之魔法师",
       "update_grade_level": 90,
       "update_task_id": 30027001,
       "is_auto_accept_task": true,
@@ -367,7 +367,7 @@
     "8": {
       "id": 8,
       "world_level": 7,
-      "title": "",
+      "title": "月之魔法师",
       "update_grade_level": 90,
       "update_task_id": 30028001,
       "is_auto_accept_task": true,
@@ -418,7 +418,7 @@
     "9": {
       "id": 9,
       "world_level": 8,
-      "title": "",
+      "title": "星之魔法师",
       "update_grade_level": 90,
       "update_task_id": 30029001,
       "is_auto_accept_task": true,
@@ -469,7 +469,7 @@
     "10": {
       "id": 10,
       "world_level": 9,
-      "title": "",
+      "title": "梦之魔法师",
       "update_grade_level": 90,
       "update_task_id": 30029005,
       "is_auto_accept_task": true,
@@ -520,7 +520,7 @@
     "11": {
       "id": 11,
       "world_level": 10,
-      "title": "",
+      "title": "大魔法师",
       "update_grade_level": 90,
       "update_task_id": 30029005,
       "is_auto_accept_task": true,

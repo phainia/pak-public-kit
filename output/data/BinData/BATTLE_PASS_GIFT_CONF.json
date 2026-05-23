@@ -9,116 +9,116 @@
       "bp_theme": 230011,
       "bp_grade": 2,
       "gift_goods_id": 900002,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_goods_sub_id": 900015,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900018,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_item_main_id": 106016,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-疾光千兽",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[犀角鸟]精灵果实",
           "Type": 1,
           "item_id": 108116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 35,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 36,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-疾光千兽",
           "Type": 1,
           "item_id": 300005,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-疾光千兽",
           "Type": 1,
           "item_id": 300102,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 4,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -134,117 +134,117 @@
       "bp_theme": 230011,
       "bp_grade": 3,
       "gift_goods_id": 900003,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_goods_sub_id": 900017,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900020,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_rewards_id": 710001,
       "gift_item_main_id": 106018,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-疾光千兽",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[犀角鸟]精灵果实",
           "Type": 1,
           "item_id": 108116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 35,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 36,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-疾光千兽",
           "Type": 1,
           "item_id": 300005,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-疾光千兽",
           "Type": 1,
           "item_id": 300102,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 4,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -260,116 +260,116 @@
       "bp_theme": 230012,
       "bp_grade": 2,
       "gift_goods_id": 900004,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_goods_sub_id": 900014,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900019,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_item_main_id": 106017,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-绒仙子",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[绒绒]精灵果实",
           "Type": 1,
           "item_id": 108094,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 35,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 36,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-绒仙子",
           "Type": 1,
           "item_id": 300006,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-绒仙子",
           "Type": 1,
           "item_id": 300103,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 3,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -385,117 +385,117 @@
       "bp_theme": 230012,
       "bp_grade": 3,
       "gift_goods_id": 900005,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_goods_sub_id": 900016,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900021,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_rewards_id": 710002,
       "gift_item_main_id": 106019,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-绒仙子",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[绒绒]精灵果实",
           "Type": 1,
           "item_id": 108094,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 35,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 36,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-绒仙子",
           "Type": 1,
           "item_id": 300006,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-绒仙子",
           "Type": 1,
           "item_id": 300103,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 3,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -511,117 +511,117 @@
       "bp_theme": 230011,
       "bp_grade": 4,
       "gift_goods_id": 900006,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_goods_sub_id": 900017,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900026,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_rewards_id": 710005,
       "gift_item_main_id": 106018,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-疾光千兽",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[犀角鸟]精灵果实",
           "Type": 1,
           "item_id": 108116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 35,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 36,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-疾光千兽",
           "Type": 1,
           "item_id": 300005,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-疾光千兽",
           "Type": 1,
           "item_id": 300102,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 4,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -637,117 +637,117 @@
       "bp_theme": 230012,
       "bp_grade": 4,
       "gift_goods_id": 900007,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_goods_sub_id": 900016,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900027,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_rewards_id": 710006,
       "gift_item_main_id": 106019,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-绒仙子",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[绒绒]精灵果实",
           "Type": 1,
           "item_id": 108094,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 35,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 36,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-绒仙子",
           "Type": 1,
           "item_id": 300006,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-绒仙子",
           "Type": 1,
           "item_id": 300103,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 3,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -763,116 +763,116 @@
       "bp_theme": 230011,
       "bp_grade": 2,
       "gift_goods_id": 900008,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_goods_sub_id": 900015,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900022,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_item_main_id": 106016,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-疾光千兽",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[犀角鸟]精灵果实",
           "Type": 1,
           "item_id": 108116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 38,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 39,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-疾光千兽",
           "Type": 1,
           "item_id": 300005,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-疾光千兽",
           "Type": 1,
           "item_id": 300102,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 4,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -888,117 +888,117 @@
       "bp_theme": 230011,
       "bp_grade": 3,
       "gift_goods_id": 900009,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_goods_sub_id": 900017,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900024,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_rewards_id": 710007,
       "gift_item_main_id": 106018,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-疾光千兽",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[犀角鸟]精灵果实",
           "Type": 1,
           "item_id": 108116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 38,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 39,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-疾光千兽",
           "Type": 1,
           "item_id": 300005,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-疾光千兽",
           "Type": 1,
           "item_id": 300102,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 4,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1014,116 +1014,116 @@
       "bp_theme": 230012,
       "bp_grade": 2,
       "gift_goods_id": 900010,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_goods_sub_id": 900014,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900023,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_item_main_id": 106017,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-绒仙子",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[绒绒]精灵果实",
           "Type": 1,
           "item_id": 108094,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 38,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 39,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-绒仙子",
           "Type": 1,
           "item_id": 300006,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-绒仙子",
           "Type": 1,
           "item_id": 300103,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 3,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1139,117 +1139,117 @@
       "bp_theme": 230012,
       "bp_grade": 3,
       "gift_goods_id": 900011,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_goods_sub_id": 900016,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900025,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_rewards_id": 710008,
       "gift_item_main_id": 106019,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-绒仙子",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[绒绒]精灵果实",
           "Type": 1,
           "item_id": 108094,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 38,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 39,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-绒仙子",
           "Type": 1,
           "item_id": 300006,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-绒仙子",
           "Type": 1,
           "item_id": 300103,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 3,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1265,117 +1265,117 @@
       "bp_theme": 230011,
       "bp_grade": 4,
       "gift_goods_id": 900012,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_goods_sub_id": 900017,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900028,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal1.img_Seal1'",
       "gift_rewards_id": 710011,
       "gift_item_main_id": 106018,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-疾光千兽",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[犀角鸟]精灵果实",
           "Type": 1,
           "item_id": 108116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 38,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 39,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-疾光千兽",
           "Type": 1,
           "item_id": 300005,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-疾光千兽",
           "Type": 1,
           "item_id": 300102,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 4,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1391,117 +1391,117 @@
       "bp_theme": 230012,
       "bp_grade": 4,
       "gift_goods_id": 900013,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_goods_sub_id": 900016,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900029,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Seal2.img_Seal2'",
       "gift_rewards_id": 710012,
       "gift_item_main_id": 106019,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-绒仙子",
       "gift": [
         {
-          "name": "",
+          "name": "织梦棱镜球*3",
           "Type": 1,
           "item_id": 100288,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[绒绒]精灵果实",
           "Type": 1,
           "item_id": 108094,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500201,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "明朗星愿",
           "Type": 23,
           "item_id": 38,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "浪漫星愿",
           "Type": 23,
           "item_id": 39,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-绒仙子",
           "Type": 1,
           "item_id": 300006,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-绒仙子",
           "Type": 1,
           "item_id": 300103,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 3,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "捕光球",
           "Type": 1,
           "item_id": 100285,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1517,116 +1517,116 @@
       "bp_theme": 230021,
       "bp_grade": 2,
       "gift_goods_id": 900030,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_goods_sub_id": 900043,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900046,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_item_main_id": 106020,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-爆焰喷喷",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[爆焰仔]精灵果实",
           "Type": 1,
           "item_id": 108210,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 135,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 137,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-爆焰喷喷",
           "Type": 1,
           "item_id": 300022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-爆焰喷喷",
           "Type": 1,
           "item_id": 300115,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20021,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1642,117 +1642,117 @@
       "bp_theme": 230021,
       "bp_grade": 3,
       "gift_goods_id": 900031,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_goods_sub_id": 900045,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900048,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_rewards_id": 710040,
       "gift_item_main_id": 106022,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-爆焰喷喷",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[爆焰仔]精灵果实",
           "Type": 1,
           "item_id": 108210,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 135,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 137,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-爆焰喷喷",
           "Type": 1,
           "item_id": 300022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-爆焰喷喷",
           "Type": 1,
           "item_id": 300115,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20021,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1768,116 +1768,116 @@
       "bp_theme": 230022,
       "bp_grade": 2,
       "gift_goods_id": 900032,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_goods_sub_id": 900042,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900047,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_item_main_id": 106021,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-雪怪",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[小雪人]精灵果实",
           "Type": 1,
           "item_id": 108203,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 135,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 137,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-雪怪",
           "Type": 1,
           "item_id": 300023,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-雪怪",
           "Type": 1,
           "item_id": 300116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -1893,117 +1893,117 @@
       "bp_theme": 230022,
       "bp_grade": 3,
       "gift_goods_id": 900033,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_goods_sub_id": 900044,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900049,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_rewards_id": 710041,
       "gift_item_main_id": 106023,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-雪怪",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[小雪人]精灵果实",
           "Type": 1,
           "item_id": 108203,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 135,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 137,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-雪怪",
           "Type": 1,
           "item_id": 300023,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-雪怪",
           "Type": 1,
           "item_id": 300116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2019,117 +2019,117 @@
       "bp_theme": 230021,
       "bp_grade": 4,
       "gift_goods_id": 900034,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_goods_sub_id": 900045,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900054,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_rewards_id": 710044,
       "gift_item_main_id": 106022,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-爆焰喷喷",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[爆焰仔]精灵果实",
           "Type": 1,
           "item_id": 108210,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 135,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 137,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-爆焰喷喷",
           "Type": 1,
           "item_id": 300022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-爆焰喷喷",
           "Type": 1,
           "item_id": 300115,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20021,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2145,117 +2145,117 @@
       "bp_theme": 230022,
       "bp_grade": 4,
       "gift_goods_id": 900035,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_goods_sub_id": 900044,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900055,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_rewards_id": 710045,
       "gift_item_main_id": 106023,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-雪怪",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[小雪人]精灵果实",
           "Type": 1,
           "item_id": 108203,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 135,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 137,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-雪怪",
           "Type": 1,
           "item_id": 300023,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-雪怪",
           "Type": 1,
           "item_id": 300116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2271,116 +2271,116 @@
       "bp_theme": 230021,
       "bp_grade": 2,
       "gift_goods_id": 900036,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_goods_sub_id": 900043,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900050,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_item_main_id": 106020,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-爆焰喷喷",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[爆焰仔]精灵果实",
           "Type": 1,
           "item_id": 108210,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 136,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 138,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-爆焰喷喷",
           "Type": 1,
           "item_id": 300022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-爆焰喷喷",
           "Type": 1,
           "item_id": 300115,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20021,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2396,117 +2396,117 @@
       "bp_theme": 230021,
       "bp_grade": 3,
       "gift_goods_id": 900037,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_goods_sub_id": 900045,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900052,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_rewards_id": 710046,
       "gift_item_main_id": 106022,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-爆焰喷喷",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[爆焰仔]精灵果实",
           "Type": 1,
           "item_id": 108210,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 136,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 138,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-爆焰喷喷",
           "Type": 1,
           "item_id": 300022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-爆焰喷喷",
           "Type": 1,
           "item_id": 300115,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20021,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2522,116 +2522,116 @@
       "bp_theme": 230022,
       "bp_grade": 2,
       "gift_goods_id": 900038,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "契约礼券",
+      "main_effect_text": "契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_goods_sub_id": 900042,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "契约副券",
       "gift_goods_couple_id": 900051,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人契约礼券",
       "couple_effect_text": "契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_item_main_id": 106021,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "契约副券-雪怪",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[小雪人]精灵果实",
           "Type": 1,
           "item_id": 108203,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 136,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 138,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-雪怪",
           "Type": 1,
           "item_id": 300023,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-雪怪",
           "Type": 1,
           "item_id": 300116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2647,117 +2647,117 @@
       "bp_theme": 230022,
       "bp_grade": 3,
       "gift_goods_id": 900039,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_goods_sub_id": 900044,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900053,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_rewards_id": 710047,
       "gift_item_main_id": 106023,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-雪怪",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[小雪人]精灵果实",
           "Type": 1,
           "item_id": 108203,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 136,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 138,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-雪怪",
           "Type": 1,
           "item_id": 300023,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-雪怪",
           "Type": 1,
           "item_id": 300116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2773,117 +2773,117 @@
       "bp_theme": 230021,
       "bp_grade": 4,
       "gift_goods_id": 900040,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_goods_sub_id": 900045,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900056,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal2.img_Season2Seal2'",
       "gift_rewards_id": 710050,
       "gift_item_main_id": 106022,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-爆焰喷喷",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[爆焰仔]精灵果实",
           "Type": 1,
           "item_id": 108210,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 136,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 138,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-爆焰喷喷",
           "Type": 1,
           "item_id": 300022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-爆焰喷喷",
           "Type": 1,
           "item_id": 300115,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20021,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080
@@ -2899,117 +2899,117 @@
       "bp_theme": 230022,
       "bp_grade": 4,
       "gift_goods_id": 900041,
-      "gift_goods_name": "",
-      "main_effect_text": "",
+      "gift_goods_name": "闪耀契约礼券",
+      "main_effect_text": "闪耀契约礼券",
       "main_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_goods_sub_id": 900044,
-      "gift_goods_sub_name": "",
+      "gift_goods_sub_name": "闪耀契约副券",
       "gift_goods_couple_id": 900057,
-      "gift_goods_couple_name": "",
+      "gift_goods_couple_name": "双人闪耀契约礼券",
       "couple_effect_text": "闪耀契约礼券",
       "couple_effect_icon": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_Season2Seal1.img_Season2Seal1'",
       "gift_rewards_id": 710051,
       "gift_item_main_id": 106023,
-      "gift_item_main_name": "",
+      "gift_item_main_name": "闪耀契约副券-雪怪",
       "gift": [
         {
-          "name": "",
+          "name": "狂欢棱镜球*3",
           "Type": 1,
           "item_id": 100289,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "[小雪人]精灵果实",
           "Type": 1,
           "item_id": 108203,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "赛季法杖",
           "Type": 10,
           "item_id": 32500301,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "许愿星",
           "Type": 2,
           "item_id": 3,
           "item_num": 240
         },
         {
-          "name": "",
+          "name": "分光水晶",
           "Type": 1,
           "item_id": 100699,
           "item_num": 1200
         },
         {
-          "name": "",
+          "name": "凛冬革风",
           "Type": 23,
           "item_id": 136,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "晴午革风",
           "Type": 23,
           "item_id": 138,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌-雪怪",
           "Type": 1,
           "item_id": 300023,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "精灵奖牌配方-雪怪",
           "Type": 1,
           "item_id": 300116,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "BP精灵背景",
           "Type": 14,
           "item_id": 20022,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "传说精灵凭证",
           "Type": 1,
           "item_id": 280000,
           "item_num": 6
         },
         {
-          "name": "",
+          "name": "奇趣球",
           "Type": 1,
           "item_id": 100290,
           "item_num": 108
         },
         {
-          "name": "",
+          "name": "适格之钥",
           "Type": 1,
           "item_id": 100422,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "相框残片",
           "Type": 1,
           "item_id": 100421,
           "item_num": 1
         },
         {
-          "name": "",
+          "name": "能力砥石",
           "Type": 1,
           "item_id": 100424,
           "item_num": 3
         },
         {
-          "name": "",
+          "name": "贤者碎晶",
           "Type": 1,
           "item_id": 100423,
           "item_num": 72
         },
         {
-          "name": "",
+          "name": "魔法粉尘",
           "Type": 1,
           "item_id": 100201,
           "item_num": 1080

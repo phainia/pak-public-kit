@@ -2,6 +2,18 @@
     "id": 3726,
     "name": "xiaoyongshi",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 3,
         "name": "Fire",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Magic",
     "localized": {
         "zh": {
-            "name": "3726"
+            "name": "小勇狮"
         }
     },
     "implemented": false,
@@ -43,18 +55,18 @@
         "id": 3726,
         "name": "xiaoyongshi",
         "localized": {
-            "zh": "3726"
+            "zh": "小勇狮"
         }
     },
     "trait": {
         "id": 200247,
-        "name": "特性 200247",
-        "description": "",
+        "name": "圣火骑士",
+        "description": "应对成功后，下次攻击威力翻倍。",
         "icon_id": "200247",
         "localized": {
             "zh": {
-                "name": "特性 200247",
-                "description": ""
+                "name": "圣火骑士",
+                "description": "应对成功后，下次攻击威力翻倍。"
             }
         }
     },
@@ -72,7 +84,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3589"
+                                "name": "玳龟"
                             }
                         },
                         "is_leader_form": false,
@@ -94,7 +106,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3726"
+                                "name": "小勇狮"
                             }
                         },
                         "is_leader_form": false,
@@ -126,7 +138,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3590"
+                                "name": "玳塔"
                             }
                         },
                         "is_leader_form": false,
@@ -148,7 +160,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3727"
+                                "name": "炽焰狮"
                             }
                         },
                         "is_leader_form": false,
@@ -182,7 +194,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3728"
+                                "name": "炽心勇狮"
                             }
                         },
                         "is_leader_form": false,
@@ -216,11 +228,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "还处于幼年体，周身环绕的暂时只是小火苗而已，但拥有远大的志向。 总有一天它们会长大，接受命运的安排，为了正义与秩序，燃烧自己的烈焰。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -228,7 +242,68 @@
         "catch_guarant_rate": 1700,
         "catch_ball_level": null
     },
-    "breeding": null,
+    "breeding": {
+        "id": 3618001,
+        "pet_id": 3618001,
+        "name": "小勇狮",
+        "model_id": 3618001,
+        "hatch_data": 43200,
+        "weight_low": 1558,
+        "weight_high": 2724,
+        "height_low": 14,
+        "height_high": 19,
+        "precious_egg_type": null,
+        "egg_base_glass_prob_array": [
+            8,
+            1125
+        ],
+        "egg_add_glass_prob_array": [
+            1,
+            50
+        ],
+        "is_contact_add_glass_prob": true,
+        "is_contact_add_shining_prob": null,
+        "variants": [
+            {
+                "id": 3618001,
+                "pet_id": 3618001,
+                "name": "小勇狮",
+                "model_id": 3618001,
+                "hatch_data": 43200,
+                "weight_low": 1558,
+                "weight_high": 2724,
+                "height_low": 14,
+                "height_high": 19,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    8,
+                    1125
+                ],
+                "egg_add_glass_prob_array": [
+                    1,
+                    50
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 37290001,
+                "pet_id": 37290001,
+                "name": "小勇狮",
+                "model_id": 3729001,
+                "hatch_data": 100,
+                "weight_low": 2940,
+                "weight_high": 7040,
+                "height_low": 24,
+                "height_high": 33,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            }
+        ]
+    },
     "breeding_profile": {
         "pet_base_id": 3726,
         "egg_groups": [

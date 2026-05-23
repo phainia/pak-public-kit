@@ -2,6 +2,18 @@
     "id": 3147,
     "name": "lunhuilinggu",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 2,
         "name": "Grass",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3147"
+            "name": "幻影灵菇"
         }
     },
     "implemented": true,
@@ -43,25 +55,25 @@
         "id": 23,
         "name": "lunhuilinggu",
         "localized": {
-            "zh": "3147"
+            "zh": "幻影灵菇"
         }
     },
     "trait": {
         "id": 200158,
-        "name": "特性 200158",
-        "description": "",
+        "name": "毒蘑菇",
+        "description": "回合结束时，偷取敌方场上所有精灵1能量。",
         "icon_id": "200158",
         "localized": {
             "zh": {
-                "name": "特性 200158",
-                "description": ""
+                "name": "毒蘑菇",
+                "description": "回合结束时，偷取敌方场上所有精灵1能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7020780,
-            "name": "技能 7020780",
+            "name": "防御",
             "icon_id": "700023",
             "move_type": {
                 "id": 1,
@@ -72,18 +84,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7020780",
-                    "description": ""
+                    "name": "防御",
+                    "description": "减伤70%，应对攻击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "减伤70%，应对攻击。"
         },
         {
             "id": 7170090,
-            "name": "技能 7170090",
+            "name": "S3徘徊爪爪B",
             "icon_id": "705003",
             "move_type": {
                 "id": 15,
@@ -94,18 +106,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170090",
-                    "description": ""
+                    "name": "S3徘徊爪爪B",
+                    "description": "心盾"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 0,
             "power": 30,
-            "description": ""
+            "description": "心盾"
         },
         {
             "id": 7030250,
-            "name": "技能 7030250",
+            "name": "自己回复15%生命和4能量。",
             "icon_id": "703012",
             "move_type": {
                 "id": 2,
@@ -116,18 +128,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030250",
-                    "description": ""
+                    "name": "自己回复15%生命和4能量。",
+                    "description": "氧输送"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "氧输送"
         },
         {
             "id": 7030160,
-            "name": "技能 7030160",
+            "name": "获得印记，每回合回1能量。",
             "icon_id": "703028",
             "move_type": {
                 "id": 2,
@@ -138,18 +150,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030160",
-                    "description": ""
+                    "name": "获得印记，每回合回1能量。",
+                    "description": "种子弹"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 0,
             "power": 30,
-            "description": ""
+            "description": "种子弹"
         },
         {
             "id": 7030340,
-            "name": "技能 7030340",
+            "name": "减伤80%，应对攻击：回复3能量。",
             "icon_id": "703018",
             "move_type": {
                 "id": 2,
@@ -160,18 +172,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030340",
-                    "description": ""
+                    "name": "减伤80%，应对攻击：回复3能量。",
+                    "description": "汲取"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 1,
             "power": 30,
-            "description": ""
+            "description": "汲取"
         },
         {
             "id": 7170240,
-            "name": "技能 7170240",
+            "name": "恐吓",
             "icon_id": "116018",
             "move_type": {
                 "id": 15,
@@ -182,18 +194,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170240",
-                    "description": ""
+                    "name": "恐吓",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7020360,
-            "name": "技能 7020360",
+            "name": "抓挠",
             "icon_id": "700005",
             "move_type": {
                 "id": 1,
@@ -204,18 +216,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7020360",
-                    "description": ""
+                    "name": "抓挠",
+                    "description": "造成物伤，自己回复1能量。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 0,
             "power": 35,
-            "description": ""
+            "description": "造成物伤，自己回复1能量。"
         },
         {
             "id": 7170140,
-            "name": "技能 7170140",
+            "name": "造成物伤，应对状态：使敌方失去6能量。",
             "icon_id": "717014",
             "move_type": {
                 "id": 15,
@@ -226,18 +238,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170140",
-                    "description": ""
+                    "name": "造成物伤，应对状态：使敌方失去6能量。",
+                    "description": "造成魔伤，自己回复1能量。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "造成魔伤，自己回复1能量。"
         },
         {
             "id": 7170150,
-            "name": "技能 7170150",
+            "name": "从家里带来的午餐盒，学长说帮我用炼金釜加热一下，就变成这样了……",
             "icon_id": "705001",
             "move_type": {
                 "id": 15,
@@ -248,18 +260,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170150",
-                    "description": ""
+                    "name": "从家里带来的午餐盒，学长说帮我用炼金釜加热一下，就变成这样了……",
+                    "description": "应对！惊吓盒子"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "应对！惊吓盒子"
         },
         {
             "id": 7170200,
-            "name": "技能 7170200",
+            "name": "自从得知跳跃可以加速精灵蛋孵化，我的身体越来越强壮。",
             "icon_id": "116014",
             "move_type": {
                 "id": 15,
@@ -270,18 +282,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170200",
-                    "description": ""
+                    "name": "自从得知跳跃可以加速精灵蛋孵化，我的身体越来越强壮。",
+                    "description": "降灵"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 60,
-            "description": ""
+            "description": "降灵"
         },
         {
             "id": 7030320,
-            "name": "技能 7030320",
+            "name": "减伤80%，应对攻击：自己回复20%生命。",
             "icon_id": "102019",
             "move_type": {
                 "id": 2,
@@ -292,18 +304,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030320",
-                    "description": ""
+                    "name": "减伤80%，应对攻击：自己回复20%生命。",
+                    "description": "自己获得1层光合印记。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "自己获得1层光合印记。"
         },
         {
             "id": 7030200,
-            "name": "技能 7030200",
+            "name": "造成物伤，2连击。",
             "icon_id": "703020",
             "move_type": {
                 "id": 2,
@@ -314,18 +326,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030200",
-                    "description": ""
+                    "name": "造成物伤，2连击。",
+                    "description": "藤绞"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 80,
-            "description": ""
+            "description": "藤绞"
         },
         {
             "id": 7170230,
-            "name": "技能 7170230",
+            "name": "应对！报复",
             "icon_id": "116017",
             "move_type": {
                 "id": 15,
@@ -336,18 +348,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170230",
-                    "description": ""
+                    "name": "应对！报复",
+                    "description": "减伤70%，应对攻击：敌方失去3能量。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 25,
-            "description": ""
+            "description": "减伤70%，应对攻击：敌方失去3能量。"
         },
         {
             "id": 7030460,
-            "name": "技能 7030460",
+            "name": "“完了，这次植物课作业又爆炸了。”",
             "icon_id": "102029",
             "move_type": {
                 "id": 2,
@@ -358,18 +370,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030460",
-                    "description": ""
+                    "name": "“完了，这次植物课作业又爆炸了。”",
+                    "description": "叶绿光束"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 120,
-            "description": ""
+            "description": "叶绿光束"
         },
         {
             "id": 7170100,
-            "name": "技能 7170100",
+            "name": "S3稻草守护者A",
             "icon_id": "717013",
             "move_type": {
                 "id": 15,
@@ -380,18 +392,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7170100",
-                    "description": ""
+                    "name": "S3稻草守护者A",
+                    "description": "心盾"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": ""
+            "description": "心盾"
         },
         {
             "id": 7030530,
-            "name": "技能 7030530",
+            "name": "减伤80%，应对攻击：自己获得物防+70%。",
             "icon_id": "102038",
             "move_type": {
                 "id": 2,
@@ -402,20 +414,20 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7030530",
-                    "description": ""
+                    "name": "减伤80%，应对攻击：自己获得物防+70%。",
+                    "description": "抽枝"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 90,
-            "description": ""
+            "description": "抽枝"
         }
     ],
     "move_stones": [
         {
             "id": 7030450,
-            "name": "孢子爆散",
+            "name": "造成物伤，1连击，每次使用后，本技能连击数永久+2。",
             "icon_id": "102028",
             "move_type": {
                 "id": 2,
@@ -426,18 +438,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "孢子爆散",
-                    "description": ""
+                    "name": "造成物伤，1连击，每次使用后，本技能连击数永久+2。",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 30,
-            "description": ""
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7170260,
-            "name": "虚化",
+            "name": "对敌方精灵造成物理伤害。",
             "icon_id": "116020",
             "move_type": {
                 "id": 15,
@@ -448,18 +460,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "虚化",
-                    "description": ""
+                    "name": "对敌方精灵造成物理伤害。",
+                    "description": "魔法学院传闻有一间废弃的教室，误入的洛克会看到黑板上突然出现了自己的名字，不打扫完卫生没法离开这间教室。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "魔法学院传闻有一间废弃的教室，误入的洛克会看到黑板上突然出现了自己的名字，不打扫完卫生没法离开这间教室。"
         },
         {
             "id": 7170120,
-            "name": "坟场搏击",
+            "name": "S3珀尔鼬B",
             "icon_id": "717010",
             "move_type": {
                 "id": 15,
@@ -470,18 +482,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "坟场搏击",
-                    "description": ""
+                    "name": "S3珀尔鼬B",
+                    "description": "加油"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 180,
-            "description": ""
+            "description": "加油"
         },
         {
             "id": 7030520,
-            "name": "纤维化",
+            "name": "为场下每个精灵回复3能量。",
             "icon_id": "102036",
             "move_type": {
                 "id": 2,
@@ -492,18 +504,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "纤维化",
-                    "description": ""
+                    "name": "为场下每个精灵回复3能量。",
+                    "description": "纤维化"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "纤维化"
         },
         {
             "id": 7120070,
-            "name": "腐蚀酸液",
+            "name": "造成物伤，应对状态：自身速度+50",
             "icon_id": "712005",
             "move_type": {
                 "id": 10,
@@ -514,18 +526,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "腐蚀酸液",
-                    "description": ""
+                    "name": "造成物伤，应对状态：自身速度+50",
+                    "description": "雷暴雨"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 35,
-            "description": ""
+            "description": "雷暴雨"
         },
         {
             "id": 7120080,
-            "name": "连续毒针",
+            "name": "S3雷神之子A",
             "icon_id": "712009",
             "move_type": {
                 "id": 10,
@@ -536,18 +548,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "连续毒针",
-                    "description": ""
+                    "name": "S3雷神之子A",
+                    "description": "通电"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 15,
-            "description": ""
+            "description": "通电"
         },
         {
             "id": 7120250,
-            "name": "不可接触",
+            "name": "毒沼",
             "icon_id": "111022",
             "move_type": {
                 "id": 10,
@@ -558,14 +570,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "不可接触",
-                    "description": ""
+                    "name": "毒沼",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7020920,
@@ -581,13 +593,13 @@
             "localized": {
                 "zh": {
                     "name": "能量炮",
-                    "description": ""
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 50,
-            "description": ""
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7020530,
@@ -603,13 +615,13 @@
             "localized": {
                 "zh": {
                     "name": "穿膛",
-                    "description": ""
+                    "description": "造成物伤，若敌方能量小于等于2，造成5倍伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 65,
-            "description": ""
+            "description": "造成物伤，若敌方能量小于等于2，造成5倍伤害。"
         },
         {
             "id": 7021040,
@@ -625,13 +637,13 @@
             "localized": {
                 "zh": {
                     "name": "鼓劲",
-                    "description": ""
+                    "description": "自己获得魔防+170%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "自己获得魔防+170%。"
         },
         {
             "id": 7020850,
@@ -647,13 +659,13 @@
             "localized": {
                 "zh": {
                     "name": "取念",
-                    "description": ""
+                    "description": "每回合随机变成敌方任意精灵的技能，且该技能能耗-2。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": ""
+            "description": "每回合随机变成敌方任意精灵的技能，且该技能能耗-2。"
         },
         {
             "id": 7020800,
@@ -669,13 +681,13 @@
             "localized": {
                 "zh": {
                     "name": "血气",
-                    "description": ""
+                    "description": "减伤60%，应对攻击：本回合受到致命伤害时，保留1生命值。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "减伤60%，应对攻击：本回合受到致命伤害时，保留1生命值。"
         },
         {
             "id": 7021090,
@@ -691,13 +703,13 @@
             "localized": {
                 "zh": {
                     "name": "热身运动",
-                    "description": ""
+                    "description": "自己获得连击数+3。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "自己获得连击数+3。"
         },
         {
             "id": 7021030,
@@ -713,13 +725,13 @@
             "localized": {
                 "zh": {
                     "name": "加固",
-                    "description": ""
+                    "description": "自己获得物防+140%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "自己获得物防+140%。"
         },
         {
             "id": 7021130,
@@ -735,13 +747,13 @@
             "localized": {
                 "zh": {
                     "name": "吓退",
-                    "description": ""
+                    "description": "减伤60%，应对攻击：敌方脱离。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "减伤60%，应对攻击：敌方脱离。"
         },
         {
             "id": 7020810,
@@ -757,17 +769,17 @@
             "localized": {
                 "zh": {
                     "name": "无畏之心",
-                    "description": ""
+                    "description": "减伤100%，应对攻击：减免的伤害变为回复自己生命，且本技能能耗永久+2。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 5,
             "power": null,
-            "description": ""
+            "description": "减伤100%，应对攻击：减免的伤害变为回复自己生命，且本技能能耗永久+2。"
         },
         {
             "id": 7120300,
-            "name": "刺细胞膜",
+            "name": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
             "icon_id": "111026",
             "move_type": {
                 "id": 10,
@@ -778,18 +790,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "刺细胞膜",
-                    "description": ""
+                    "name": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
+                    "description": "蛰伏"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "蛰伏"
         },
         {
             "id": 7170290,
-            "name": "撞鬼",
+            "name": "如果在凌晨两点的时候，看到魔法学院图书馆里有光，千万不要进去。",
             "icon_id": "116018",
             "move_type": {
                 "id": 15,
@@ -800,14 +812,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "撞鬼",
-                    "description": ""
+                    "name": "如果在凌晨两点的时候，看到魔法学院图书馆里有光，千万不要进去。",
+                    "description": "嘲弄"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 120,
-            "description": ""
+            "description": "嘲弄"
         }
     ],
     "legacy_moves": [
@@ -817,7 +829,7 @@
             "move_id": 7020790,
             "move": {
                 "id": 7020790,
-                "name": "技能 7020790",
+                "name": "防反",
                 "icon_id": "703005",
                 "move_type": {
                     "id": 1,
@@ -828,14 +840,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7020790",
-                        "description": ""
+                        "name": "防反",
+                        "description": "减伤70%，应对攻击：自己获得物攻和魔攻+70%。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "减伤70%，应对攻击：自己获得物攻和魔攻+70%。"
             }
         },
         {
@@ -844,7 +856,7 @@
             "move_id": 7030170,
             "move": {
                 "id": 7030170,
-                "name": "技能 7030170",
+                "name": "造成物伤，自己回复1能量。",
                 "icon_id": "703014",
                 "move_type": {
                     "id": 2,
@@ -855,14 +867,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7030170",
-                        "description": ""
+                        "name": "造成物伤，自己回复1能量。",
+                        "description": "荆棘爪"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": ""
+                "description": "荆棘爪"
             }
         },
         {
@@ -871,7 +883,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "技能 7040300",
+                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -882,14 +894,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7040300",
-                        "description": ""
+                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                        "description": "火焰护盾"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "火焰护盾"
             }
         },
         {
@@ -898,7 +910,7 @@
             "move_id": 7050270,
             "move": {
                 "id": 7050270,
-                "name": "技能 7050270",
+                "name": "应对！泡沫幻影",
                 "icon_id": "703104",
                 "move_type": {
                     "id": 4,
@@ -909,14 +921,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7050270",
-                        "description": ""
+                        "name": "应对！泡沫幻影",
+                        "description": "减伤80%，应对攻击：自己脱离。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "减伤80%，应对攻击：自己脱离。"
             }
         },
         {
@@ -925,7 +937,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "技能 7060200",
+                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -936,14 +948,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7060200",
-                        "description": ""
+                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                        "description": "脉冲光线"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": ""
+                "description": "脉冲光线"
             }
         },
         {
@@ -952,7 +964,7 @@
             "move_id": 7080120,
             "move": {
                 "id": 7080120,
-                "name": "技能 7080120",
+                "name": "造成魔伤，自己每​受​到​一​次​抵抗​伤害，​本技​能​威力​永久​+20。",
                 "icon_id": "708012",
                 "move_type": {
                     "id": 6,
@@ -963,14 +975,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7080120",
-                        "description": ""
+                        "name": "造成魔伤，自己每​受​到​一​次​抵抗​伤害，​本技​能​威力​永久​+20。",
+                        "description": "正在评估——【威胁等级】，嘀嗒，威胁等级评估为——【极高】，判断小洛克需要被保护，正在提高本技能威力。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": ""
+                "description": "正在评估——【威胁等级】，嘀嗒，威胁等级评估为——【极高】，判断小洛克需要被保护，正在提高本技能威力。"
             }
         },
         {
@@ -979,7 +991,7 @@
             "move_id": 7090350,
             "move": {
                 "id": 7090350,
-                "name": "技能 7090350",
+                "name": "冰捆缚",
                 "icon_id": "108031",
                 "move_type": {
                     "id": 7,
@@ -990,14 +1002,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7090350",
-                        "description": ""
+                        "name": "冰捆缚",
+                        "description": "2连击，每次连击敌方获得全技能能耗+1。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "2连击，每次连击敌方获得全技能能耗+1。"
             }
         },
         {
@@ -1006,7 +1018,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "技能 7100150",
+                "name": "精灵蓄力中",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1017,14 +1029,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7100150",
-                        "description": ""
+                        "name": "精灵蓄力中",
+                        "description": "龙吼"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": ""
+                "description": "龙吼"
             }
         },
         {
@@ -1033,7 +1045,7 @@
             "move_id": 7110280,
             "move": {
                 "id": 7110280,
-                "name": "技能 7110280",
+                "name": "落雷",
                 "icon_id": "310012",
                 "move_type": {
                     "id": 9,
@@ -1044,14 +1056,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7110280",
-                        "description": ""
+                        "name": "落雷",
+                        "description": "造成魔伤，每次入场，本技能威力永久+40。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "造成魔伤，每次入场，本技能威力永久+40。"
             }
         },
         {
@@ -1060,7 +1072,7 @@
             "move_id": 7120190,
             "move": {
                 "id": 7120190,
-                "name": "技能 7120190",
+                "name": "剧毒",
                 "icon_id": "111016",
                 "move_type": {
                     "id": 10,
@@ -1071,14 +1083,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7120190",
-                        "description": ""
+                        "name": "剧毒",
+                        "description": "敌方获得3层中毒，应对防御：改为获得8层。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": ""
+                "description": "敌方获得3层中毒，应对防御：改为获得8层。"
             }
         },
         {
@@ -1087,7 +1099,7 @@
             "move_id": 7130220,
             "move": {
                 "id": 7130220,
-                "name": "技能 7130220",
+                "name": "应对！虫击",
                 "icon_id": "212015",
                 "move_type": {
                     "id": 11,
@@ -1098,14 +1110,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7130220",
-                        "description": ""
+                        "name": "应对！虫击",
+                        "description": "造成物伤，应对状态：本次技能威力变为2倍，无视敌方系别抵抗。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "造成物伤，应对状态：本次技能威力变为2倍，无视敌方系别抵抗。"
             }
         },
         {
@@ -1114,7 +1126,7 @@
             "move_id": 7140100,
             "move": {
                 "id": 7140100,
-                "name": "技能 7140100",
+                "name": "崩的是对方的架势，合的是破招的美学。",
                 "icon_id": "113027",
                 "move_type": {
                     "id": 12,
@@ -1125,14 +1137,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7140100",
-                        "description": ""
+                        "name": "崩的是对方的架势，合的是破招的美学。",
+                        "description": "应对！崩拳"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 25,
-                "description": ""
+                "description": "应对！崩拳"
             }
         },
         {
@@ -1141,7 +1153,7 @@
             "move_id": 7150150,
             "move": {
                 "id": 7150150,
-                "name": "技能 7150150",
+                "name": "造成魔伤，迅捷。",
                 "icon_id": "715012",
                 "move_type": {
                     "id": 13,
@@ -1152,14 +1164,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7150150",
-                        "description": ""
+                        "name": "造成魔伤，迅捷。",
+                        "description": "疾风刺"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "疾风刺"
             }
         },
         {
@@ -1168,7 +1180,7 @@
             "move_id": 7160230,
             "move": {
                 "id": 7160230,
-                "name": "技能 7160230",
+                "name": "砂糖弹球",
                 "icon_id": "115011",
                 "move_type": {
                     "id": 14,
@@ -1179,14 +1191,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7160230",
-                        "description": ""
+                        "name": "砂糖弹球",
+                        "description": "造成物伤，双方体重差越大，本次技能威力越高。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": ""
+                "description": "造成物伤，双方体重差越大，本次技能威力越高。"
             }
         },
         {
@@ -1195,7 +1207,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "技能 7170220",
+                "name": "减伤70%，应对攻击：敌方失去3能量。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1206,14 +1218,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7170220",
-                        "description": ""
+                        "name": "减伤70%，应对攻击：敌方失去3能量。",
+                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": ""
+                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
             }
         },
         {
@@ -1222,7 +1234,7 @@
             "move_id": 7180210,
             "move": {
                 "id": 7180210,
-                "name": "技能 7180210",
+                "name": "彼岸之手",
                 "icon_id": "317018",
                 "move_type": {
                     "id": 16,
@@ -1233,14 +1245,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7180210",
-                        "description": ""
+                        "name": "彼岸之手",
+                        "description": "造成物伤，自己每失去10%生命，本技能能耗-1。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 3,
                 "power": null,
-                "description": ""
+                "description": "造成物伤，自己每失去10%生命，本技能能耗-1。"
             }
         },
         {
@@ -1249,7 +1261,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "技能 7070110",
+                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1260,14 +1272,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7070110",
-                        "description": ""
+                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                        "description": "教团不在乎，它只要棋子互相制衡。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": ""
+                "description": "教团不在乎，它只要棋子互相制衡。"
             }
         },
         {
@@ -1276,7 +1288,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "技能 7190400",
+                "name": "心灵洞悉",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1287,14 +1299,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7190400",
-                        "description": ""
+                        "name": "心灵洞悉",
+                        "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 3,
                 "power": null,
-                "description": ""
+                "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
             }
         }
     ],
@@ -1309,7 +1321,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3145"
+                                "name": "小灵菇"
                             }
                         },
                         "is_leader_form": false,
@@ -1335,7 +1347,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3146"
+                                "name": "幻灵菇"
                             }
                         },
                         "is_leader_form": false,
@@ -1369,7 +1381,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3147"
+                                "name": "幻影灵菇"
                             }
                         },
                         "is_leader_form": false,
@@ -1401,13 +1413,15 @@
         "current_monster_id": 3147
     },
     "world_profile": {
-        "type_desc": null,
-        "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "type_desc": "菇精灵",
+        "description_habitat": "常见于草地",
+        "introduction": "仅仅看到它触角上闪烁的荧光就会头痛难耐，对其研究很难有进展。没有生命迹象但是可以自如活动，无法判定是植物还是生物，唯独颈间圆环中似乎蕴含强大生命力。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "地面",
         "classis_id": 2,
-        "classis_name": null,
+        "classis_name": "漂浮类精灵",
         "handbook_area_ids": [
             1,
             2

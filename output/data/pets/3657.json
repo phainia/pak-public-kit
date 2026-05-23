@@ -2,6 +2,18 @@
     "id": 3657,
     "name": "songzai",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 4,
         "name": "Water",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Physical",
     "localized": {
         "zh": {
-            "name": "3657"
+            "name": "泡泡豚"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 3657,
         "name": "songzai",
         "localized": {
-            "zh": "3657"
+            "zh": "泡泡豚"
         }
     },
     "trait": {
         "id": 200280,
-        "name": "特性 200280",
-        "description": "",
+        "name": "冲浪",
+        "description": "入场时，随机一个技能能耗-3。",
         "icon_id": "200075",
         "localized": {
             "zh": {
-                "name": "特性 200280",
-                "description": ""
+                "name": "冲浪",
+                "description": "入场时，随机一个技能能耗-3。"
             }
         }
     },
@@ -63,10 +75,10 @@
                     {
                         "id": 3440,
                         "name": "mengyou_pink",
-                        "form": "default",
+                        "form": "穿星星睡衣的样子",
                         "localized": {
                             "zh": {
-                                "name": "3440"
+                                "name": "梦游"
                             }
                         },
                         "is_leader_form": false,
@@ -92,7 +104,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3656"
+                                "name": "海豚宝"
                             }
                         },
                         "is_leader_form": false,
@@ -115,10 +127,10 @@
                     {
                         "id": 3441,
                         "name": "mengyouyou_pink",
-                        "form": "default",
+                        "form": "穿星星睡衣的样子",
                         "localized": {
                             "zh": {
-                                "name": "3441"
+                                "name": "梦悠悠"
                             }
                         },
                         "is_leader_form": false,
@@ -146,7 +158,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3657"
+                                "name": "泡泡豚"
                             }
                         },
                         "is_leader_form": false,
@@ -172,7 +184,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3658"
+                                "name": "海豚勇士"
                             }
                         },
                         "is_leader_form": false,
@@ -199,10 +211,12 @@
         "type_desc": null,
         "description_habitat": null,
         "introduction": null,
-        "refresh_locations": [],
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "浮游",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {

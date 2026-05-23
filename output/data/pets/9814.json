@@ -2,6 +2,18 @@
     "id": 9814,
     "name": "9814",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9814"
+            "name": "鸭吉吉_萌"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9814,
         "name": "9814",
         "localized": {
-            "zh": "9814"
+            "zh": "鸭吉吉_萌"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7160270,
-            "name": "技能 7160270",
+            "name": "自己获得萌化：全技能能耗永久-3。",
             "icon_id": "215015",
             "move_type": {
                 "id": 14,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7160270",
-                    "description": ""
+                    "name": "自己获得萌化：全技能能耗永久-3。",
+                    "description": "反弹"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "反弹"
         },
         {
             "id": 7160280,
-            "name": "技能 7160280",
+            "name": "将自己的萌化转移给敌方。",
             "icon_id": "115016",
             "move_type": {
                 "id": 14,
@@ -88,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7160280",
-                    "description": ""
+                    "name": "将自己的萌化转移给敌方。",
+                    "description": "甜心续航"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 30,
-            "description": ""
+            "description": "甜心续航"
         },
         {
             "id": 7160290,
-            "name": "技能 7160290",
+            "name": "自己和敌方获得萌化：回复40%生命。",
             "icon_id": "115017",
             "move_type": {
                 "id": 14,
@@ -110,14 +122,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7160290",
-                    "description": ""
+                    "name": "自己和敌方获得萌化：回复40%生命。",
+                    "description": "破罐破摔"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 4,
             "power": null,
-            "description": ""
+            "description": "破罐破摔"
         }
     ],
     "move_stones": [],
@@ -133,7 +145,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9814"
+                                "name": "鸭吉吉_萌"
                             }
                         },
                         "is_leader_form": false,
@@ -159,11 +171,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

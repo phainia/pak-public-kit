@@ -2,7 +2,7 @@
   "RocoDataRows": {
     "1": {
       "id": 1,
-      "tag": "",
+      "tag": "攻击类",
       "condition_skilltype": [
         1
       ],
@@ -10,7 +10,7 @@
     },
     "2": {
       "id": 2,
-      "tag": "",
+      "tag": "防御类",
       "condition_skilltype": [
         3
       ],
@@ -18,7 +18,7 @@
     },
     "3": {
       "id": 3,
-      "tag": "",
+      "tag": "效果类",
       "condition_skilltype": [
         2,
         0
@@ -27,7 +27,7 @@
     },
     "4": {
       "id": 4,
-      "tag": "",
+      "tag": "物攻",
       "condition_damtype": [
         2
       ],
@@ -35,7 +35,7 @@
     },
     "5": {
       "id": 5,
-      "tag": "",
+      "tag": "特攻",
       "condition_damtype": [
         3
       ],
@@ -43,7 +43,7 @@
     },
     "6": {
       "id": 6,
-      "tag": "",
+      "tag": "恢复",
       "condition_effecttype": [
         5,
         11
@@ -52,7 +52,7 @@
     },
     "7": {
       "id": 7,
-      "tag": "",
+      "tag": "回能",
       "condition_effecttype": [
         18,
         19
@@ -61,12 +61,12 @@
     },
     "8": {
       "id": 8,
-      "tag": "",
+      "tag": "特殊",
       "tag_icon": "PaperSprite'/Game/NewRoco/Modules/System/BattleUI/Raw/Atlas/Hints/Frames/img_teshu_png.img_teshu_png'"
     },
     "9": {
       "id": 9,
-      "tag": "",
+      "tag": "小憩",
       "condition_skillid": [
         7000010,
         7000030,
@@ -77,24 +77,24 @@
     },
     "10": {
       "id": 10,
-      "tag": "",
+      "tag": "待机",
       "tag_icon": "PaperSprite'/Game/NewRoco/Modules/System/BattleUI/Raw/Atlas/Hints/Frames/img_daiji_png.img_daiji_png'"
     },
     "101": {
       "id": 101,
-      "tag": ""
+      "tag": "能量"
     },
     "102": {
       "id": 102,
-      "tag": ""
+      "tag": "系别"
     },
     "103": {
       "id": 103,
-      "tag": ""
+      "tag": "技能目标"
     },
     "104": {
       "id": 104,
-      "tag": ""
+      "tag": "技能图标"
     }
   }
 }

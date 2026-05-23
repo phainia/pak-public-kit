@@ -2,6 +2,18 @@
     "id": 9995,
     "name": "9995",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9995"
+            "name": "技能鸭吉吉2"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 9995,
         "name": "9995",
         "localized": {
-            "zh": "9995"
+            "zh": "技能鸭吉吉2"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
@@ -66,7 +78,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9995"
+                                "name": "技能鸭吉吉2"
                             }
                         },
                         "is_leader_form": false,
@@ -92,11 +104,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

@@ -2,7 +2,7 @@
   "RocoDataRows": {
     "10101": {
       "id": 10101,
-      "name": "",
+      "name": "誓约圣骑士",
       "gender": 1,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10101.img_FashionMall_pop_10101'",
@@ -11,7 +11,7 @@
     },
     "10102": {
       "id": 10102,
-      "name": "",
+      "name": "誓约圣骑士",
       "gender": 2,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10102.img_FashionMall_pop_10102'",
@@ -20,7 +20,7 @@
     },
     "10201": {
       "id": 10201,
-      "name": "",
+      "name": "毛绒巡林者",
       "gender": 1,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10201.img_FashionMall_pop_10201'",
@@ -29,7 +29,7 @@
     },
     "10202": {
       "id": 10202,
-      "name": "",
+      "name": "毛绒巡林者",
       "gender": 2,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10202.img_FashionMall_pop_10202'",
@@ -38,7 +38,7 @@
     },
     "10301": {
       "id": 10301,
-      "name": "",
+      "name": "重逢圆舞曲",
       "gender": 1,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10301.img_FashionMall_pop_10301'",
@@ -47,7 +47,7 @@
     },
     "10302": {
       "id": 10302,
-      "name": "",
+      "name": "重逢圆舞曲",
       "gender": 2,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10302.img_FashionMall_pop_10302'",
@@ -56,7 +56,7 @@
     },
     "10401": {
       "id": 10401,
-      "name": "",
+      "name": "雪山研究员",
       "gender": 1,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10401.img_FashionMall_pop_10401'",
@@ -65,7 +65,7 @@
     },
     "10402": {
       "id": 10402,
-      "name": "",
+      "name": "雪山研究员",
       "gender": 2,
       "launch_item": true,
       "kv_pop": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Pop/img_FashionMall_pop_10402.img_FashionMall_pop_10402'",
@@ -74,7 +74,7 @@
     },
     "10501": {
       "id": 10501,
-      "name": "",
+      "name": "治愈童话书",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10501.img_FashionMall_activity_10501'",
@@ -89,7 +89,7 @@
     },
     "10502": {
       "id": 10502,
-      "name": "",
+      "name": "治愈童话书",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10502.img_FashionMall_activity_10502'",
@@ -104,7 +104,7 @@
     },
     "10601": {
       "id": 10601,
-      "name": "",
+      "name": "野外考察队",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10601.img_FashionMall_activity_10601'",
@@ -119,7 +119,7 @@
     },
     "10602": {
       "id": 10602,
-      "name": "",
+      "name": "野外考察队",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10602.img_FashionMall_activity_10602'",
@@ -134,7 +134,7 @@
     },
     "10701": {
       "id": 10701,
-      "name": "",
+      "name": "晚安睡衣派对",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10701.img_FashionMall_activity_10701'",
@@ -149,7 +149,7 @@
     },
     "10702": {
       "id": 10702,
-      "name": "",
+      "name": "晚安睡衣派对",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10702.img_FashionMall_activity_10702'",
@@ -164,7 +164,7 @@
     },
     "10801": {
       "id": 10801,
-      "name": "",
+      "name": "壁炉边伙伴",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10801.img_FashionMall_activity_10801'",
@@ -179,7 +179,7 @@
     },
     "10802": {
       "id": 10802,
-      "name": "",
+      "name": "壁炉边伙伴",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10802.img_FashionMall_activity_10802'",
@@ -194,7 +194,7 @@
     },
     "10901": {
       "id": 10901,
-      "name": "",
+      "name": "嘭炼金药剂",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10901.img_FashionMall_activity_10901'",
@@ -209,7 +209,7 @@
     },
     "10902": {
       "id": 10902,
-      "name": "",
+      "name": "嘭炼金药剂",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_10902.img_FashionMall_activity_10902'",
@@ -224,7 +224,7 @@
     },
     "11001": {
       "id": 11001,
-      "name": "",
+      "name": "乐团协奏曲",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11001.img_FashionMall_activity_11001'",
@@ -239,7 +239,7 @@
     },
     "11002": {
       "id": 11002,
-      "name": "",
+      "name": "乐团协奏曲",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11002.img_FashionMall_activity_11002'",
@@ -254,7 +254,7 @@
     },
     "11101": {
       "id": 11101,
-      "name": "",
+      "name": "梦境流浪者",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11101.img_FashionMall_activity_11101'",
@@ -269,7 +269,7 @@
     },
     "11102": {
       "id": 11102,
-      "name": "",
+      "name": "梦境流浪者",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11102.img_FashionMall_activity_11102'",
@@ -284,7 +284,7 @@
     },
     "11201": {
       "id": 11201,
-      "name": "",
+      "name": "魔法嘉年华",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11201.img_FashionMall_activity_11201'",
@@ -299,7 +299,7 @@
     },
     "11202": {
       "id": 11202,
-      "name": "",
+      "name": "魔法嘉年华",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11202.img_FashionMall_activity_11202'",
@@ -314,7 +314,7 @@
     },
     "11301": {
       "id": 11301,
-      "name": "",
+      "name": "深海的馈赠",
       "gender": 1,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11301.img_FashionMall_activity_11301'",
@@ -329,7 +329,7 @@
     },
     "11302": {
       "id": 11302,
-      "name": "",
+      "name": "深海的馈赠",
       "gender": 2,
       "launch_item": true,
       "kv_activity": "Texture2D'/Game/NewRoco/Modules/System/Appearance/Raw/CostumeBg/Activity/img_FashionMall_activity_11302.img_FashionMall_activity_11302'",

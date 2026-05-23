@@ -409,6 +409,12 @@ Console.WriteLine();
 
 Console.WriteLine($"Done: {extracted} extracted, {errors} raw files skipped");
 
+if (ReadBooleanEnvironment("NRC_SKIP_TEXTURES"))
+{
+    Console.WriteLine("Skipping texture assets because NRC_SKIP_TEXTURES is set.");
+    Environment.Exit(extracted > 0 ? 0 : 4);
+}
+
 Console.WriteLine("Exporting texture assets...");
 var textureJobs = ReadPositiveIntEnvironment("NRC_TEXTURE_JOBS", Math.Max(1, Environment.ProcessorCount));
 var textureFiles = provider.Files.Values
@@ -497,6 +503,15 @@ static int ReadPositiveIntEnvironment(string name, int fallback)
     if (int.TryParse(value, out var parsed) && parsed > 0)
         return parsed;
     return fallback;
+}
+
+static bool ReadBooleanEnvironment(string name)
+{
+    var value = Environment.GetEnvironmentVariable(name);
+    return value is not null &&
+           !string.Equals(value, "0", StringComparison.OrdinalIgnoreCase) &&
+           !string.Equals(value, "false", StringComparison.OrdinalIgnoreCase) &&
+           !string.Equals(value, "no", StringComparison.OrdinalIgnoreCase);
 }
 
 static string? BuildActiveLuaSummary(ConcurrentDictionary<string, DateTimeOffset> activeFiles)

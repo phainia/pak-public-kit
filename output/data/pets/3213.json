@@ -2,6 +2,18 @@
     "id": 3213,
     "name": "heiyanbaobao",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 8,
         "name": "Dragon",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3213"
+            "name": "黑炎宝宝"
         }
     },
     "implemented": false,
@@ -43,18 +55,18 @@
         "id": 3213,
         "name": "heiyanbaobao",
         "localized": {
-            "zh": "3213"
+            "zh": "黑炎宝宝"
         }
     },
     "trait": {
         "id": 200176,
-        "name": "特性 200176",
-        "description": "",
+        "name": "傲慢",
+        "description": "蓄力技能获得50%吸血效果。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200176",
-                "description": ""
+                "name": "傲慢",
+                "description": "蓄力技能获得50%吸血效果。"
             }
         }
     },
@@ -72,7 +84,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3213"
+                                "name": "黑炎宝宝"
                             }
                         },
                         "is_leader_form": false,
@@ -104,7 +116,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3214"
+                                "name": "黑炎"
                             }
                         },
                         "is_leader_form": false,
@@ -138,11 +150,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "革质的双翼坚韧而有力，可以低空飞行。爪和下颚的力量已经超过其他成年精灵许多。双角是外生的骨骼，每年蜕一次，每次会变得更加坚硬锐利，蜕下的龙角据说是上好的药材，千金难求。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "浮游",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -153,7 +167,7 @@
     "breeding": {
         "id": 3213001,
         "pet_id": 3213001,
-        "name": null,
+        "name": "小翼龙",
         "model_id": 3213001,
         "hatch_data": 72000,
         "weight_low": 10325,
@@ -175,7 +189,7 @@
             {
                 "id": 3213001,
                 "pet_id": 3213001,
-                "name": null,
+                "name": "小翼龙",
                 "model_id": 3213001,
                 "hatch_data": 72000,
                 "weight_low": 10325,
@@ -195,15 +209,53 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3227001,
+                "pet_id": 3227001,
+                "name": "黑炎宝宝",
+                "model_id": 3227001,
+                "hatch_data": 28800,
+                "weight_low": 1470,
+                "weight_high": 2320,
+                "height_low": 27,
+                "height_high": 37,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    531,
+                    500
+                ],
+                "egg_add_glass_prob_array": [
+                    0,
+                    24
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": true
+            },
+            {
                 "id": 32130001,
                 "pet_id": 32130001,
-                "name": null,
+                "name": "矮脚爬爬",
                 "model_id": 3213001,
                 "hatch_data": 300,
                 "weight_low": 10325,
                 "weight_high": 16640,
                 "height_low": 41,
                 "height_high": 58,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 32550001,
+                "pet_id": 32550001,
+                "name": "黑炎宝宝",
+                "model_id": 3255001,
+                "hatch_data": 300,
+                "weight_low": 1299,
+                "weight_high": 2560,
+                "height_low": 20,
+                "height_high": 25,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

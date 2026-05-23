@@ -25,9 +25,9 @@
       "total_got_limit": 220,
       "goods_type": 2,
       "goods_id": 12,
-      "drop_num_tips": "",
-      "daily_tips": "",
-      "total_tips": ""
+      "drop_num_tips": "可获取庆典热度剩余",
+      "daily_tips": "可获取庆典热度剩余",
+      "total_tips": "可获取庆典热度剩余"
     },
     "2700006": {
       "id": 2700006,
@@ -38,7 +38,7 @@
       "total_got_limit": 950,
       "goods_type": 1,
       "goods_id": 100699,
-      "drop_num_tips": ""
+      "drop_num_tips": "【本日】可获得："
     },
     "2700007": {
       "id": 2700007,
@@ -255,7 +255,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000002": {
@@ -271,7 +271,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000003": {
@@ -287,7 +287,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000004": {
@@ -303,7 +303,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000005": {
@@ -319,7 +319,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000006": {
@@ -335,7 +335,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000007": {
@@ -351,7 +351,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000008": {
@@ -367,7 +367,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000009": {
@@ -383,7 +383,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000010": {
@@ -399,7 +399,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000011": {
@@ -415,7 +415,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000012": {
@@ -431,7 +431,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000013": {
@@ -447,7 +447,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000014": {
@@ -463,7 +463,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000015": {
@@ -479,7 +479,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000016": {
@@ -495,7 +495,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000017": {
@@ -511,7 +511,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000018": {
@@ -527,7 +527,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000019": {
@@ -543,7 +543,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000020": {
@@ -559,7 +559,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000021": {
@@ -575,7 +575,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000022": {
@@ -591,7 +591,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000023": {
@@ -607,7 +607,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000024": {
@@ -623,7 +623,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000025": {
@@ -639,7 +639,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000026": {
@@ -655,7 +655,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000027": {
@@ -671,7 +671,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000028": {
@@ -687,7 +687,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000029": {
@@ -703,7 +703,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000030": {
@@ -719,7 +719,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000031": {
@@ -735,7 +735,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000032": {
@@ -751,7 +751,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000033": {
@@ -767,7 +767,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000034": {
@@ -783,7 +783,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000035": {
@@ -799,7 +799,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000036": {
@@ -815,7 +815,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000037": {
@@ -831,7 +831,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000038": {
@@ -847,7 +847,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000039": {
@@ -863,7 +863,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000040": {
@@ -879,7 +879,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000041": {
@@ -895,7 +895,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000042": {
@@ -911,7 +911,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000043": {
@@ -927,7 +927,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000044": {
@@ -943,7 +943,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000045": {
@@ -959,7 +959,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000046": {
@@ -975,7 +975,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000047": {
@@ -991,7 +991,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000048": {
@@ -1007,7 +1007,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000049": {
@@ -1023,7 +1023,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000050": {
@@ -1039,7 +1039,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000051": {
@@ -1055,7 +1055,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000052": {
@@ -1071,7 +1071,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000053": {
@@ -1087,7 +1087,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000054": {
@@ -1103,7 +1103,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000055": {
@@ -1119,7 +1119,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000056": {
@@ -1135,7 +1135,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000057": {
@@ -1151,7 +1151,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000058": {
@@ -1167,7 +1167,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000059": {
@@ -1183,7 +1183,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000060": {
@@ -1199,7 +1199,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000061": {
@@ -1215,7 +1215,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000062": {
@@ -1231,7 +1231,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000063": {
@@ -1247,7 +1247,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000064": {
@@ -1263,7 +1263,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000065": {
@@ -1279,7 +1279,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000066": {
@@ -1295,7 +1295,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000067": {
@@ -1311,7 +1311,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000068": {
@@ -1327,7 +1327,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000069": {
@@ -1343,7 +1343,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000070": {
@@ -1359,7 +1359,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000071": {
@@ -1375,7 +1375,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000072": {
@@ -1391,7 +1391,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000073": {
@@ -1407,7 +1407,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000074": {
@@ -1423,7 +1423,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000075": {
@@ -1439,7 +1439,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000076": {
@@ -1455,7 +1455,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000077": {
@@ -1471,7 +1471,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000078": {
@@ -1487,7 +1487,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000079": {
@@ -1503,7 +1503,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000080": {
@@ -1519,7 +1519,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000081": {
@@ -1535,7 +1535,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000082": {
@@ -1551,7 +1551,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000083": {
@@ -1567,7 +1567,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000084": {
@@ -1583,7 +1583,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000085": {
@@ -1599,7 +1599,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000086": {
@@ -1615,7 +1615,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000087": {
@@ -1631,7 +1631,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000088": {
@@ -1647,7 +1647,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000089": {
@@ -1663,7 +1663,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000090": {
@@ -1679,7 +1679,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000091": {
@@ -1695,7 +1695,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000092": {
@@ -1711,7 +1711,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000093": {
@@ -1727,7 +1727,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000094": {
@@ -1743,7 +1743,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000095": {
@@ -1759,7 +1759,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000096": {
@@ -1775,7 +1775,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000097": {
@@ -1791,7 +1791,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000098": {
@@ -1807,7 +1807,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000099": {
@@ -1823,7 +1823,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000100": {
@@ -1839,7 +1839,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000101": {
@@ -1855,7 +1855,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000102": {
@@ -1871,7 +1871,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000103": {
@@ -1887,7 +1887,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000104": {
@@ -1903,7 +1903,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000105": {
@@ -1919,7 +1919,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000106": {
@@ -1935,7 +1935,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000107": {
@@ -1951,7 +1951,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000108": {
@@ -1967,7 +1967,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000109": {
@@ -1983,7 +1983,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000110": {
@@ -1999,7 +1999,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000111": {
@@ -2015,7 +2015,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     },
     "50000112": {
@@ -2031,7 +2031,7 @@
       "total_got_limit": 1200,
       "goods_type": 2,
       "goods_id": 6,
-      "drop_num_tips": "",
+      "drop_num_tips": "【本日】可获得：",
       "finish_area_tips": "Texture2D'/Game/NewRoco/Modules/System/BattlePass/Raw/Theme/img_guaji.img_guaji'"
     }
   }

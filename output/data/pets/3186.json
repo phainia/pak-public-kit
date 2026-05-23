@@ -2,6 +2,18 @@
     "id": 3186,
     "name": "xiaoguang",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 16,
         "name": "Dark",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3186"
+            "name": "小光"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 3186,
         "name": "xiaoguang",
         "localized": {
-            "zh": "3186"
+            "zh": "小光"
         }
     },
     "trait": {
         "id": 200276,
-        "name": "特性 200276",
-        "description": "",
+        "name": "小光",
+        "description": "无视敌方攻击属性和防御属性增益",
         "icon_id": "200276",
         "localized": {
             "zh": {
-                "name": "特性 200276",
-                "description": ""
+                "name": "小光",
+                "description": "无视敌方攻击属性和防御属性增益"
             }
         }
     },
@@ -66,7 +78,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3186"
+                                "name": "小光"
                             }
                         },
                         "is_leader_form": false,
@@ -93,10 +105,12 @@
         "type_desc": null,
         "description_habitat": null,
         "introduction": null,
-        "refresh_locations": [],
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -107,7 +121,7 @@
     "breeding": {
         "id": 3186001,
         "pet_id": 3186001,
-        "name": null,
+        "name": "雪豆丁（水系血脉）",
         "model_id": 3186001,
         "hatch_data": 43200,
         "weight_low": 2520,
@@ -129,7 +143,7 @@
             {
                 "id": 3186001,
                 "pet_id": 3186001,
-                "name": null,
+                "name": "雪豆丁（水系血脉）",
                 "model_id": 3186001,
                 "hatch_data": 43200,
                 "weight_low": 2520,
@@ -149,15 +163,47 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3188004,
+                "pet_id": 3188004,
+                "name": "小光",
+                "model_id": 3188002,
+                "hatch_data": 28800,
+                "weight_low": 2695,
+                "weight_high": 3440,
+                "height_low": 21,
+                "height_high": 25,
+                "precious_egg_type": 2,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 31860001,
                 "pet_id": 31860001,
-                "name": null,
+                "name": "小草虫",
                 "model_id": 3186001,
                 "hatch_data": 300,
                 "weight_low": 2520,
                 "weight_high": 3440,
                 "height_low": 26,
                 "height_high": 36,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 32250001,
+                "pet_id": 32250001,
+                "name": "小光",
+                "model_id": 3225001,
+                "hatch_data": 300,
+                "weight_low": 2415,
+                "weight_high": 3120,
+                "height_low": 40,
+                "height_high": 46,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

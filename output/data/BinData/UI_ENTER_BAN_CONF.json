@@ -20,11 +20,11 @@
           "unlock_param": [
             "9996"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ],
       "auto_perform": true,
-      "func_name": "",
+      "func_name": "「精灵」",
       "img_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/CompassIcon/img_jingling.img_jingling'"
     },
     "2": {
@@ -38,7 +38,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等级达到%s级时再来试试吧。"
         }
       ]
     },
@@ -53,11 +53,11 @@
           "unlock_param": [
             "9990"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ],
       "auto_perform": true,
-      "func_name": "",
+      "func_name": "「地图」",
       "img_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/CompassIcon/img_ditu.img_ditu'"
     },
     "4": {
@@ -72,7 +72,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等级达到%s级时再来试试吧。"
         }
       ]
     },
@@ -92,11 +92,11 @@
           "unlock_param": [
             "9991"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ],
       "auto_perform": true,
-      "func_name": "",
+      "func_name": "「图鉴」",
       "img_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/CompassIcon/img_tujian.img_tujian'"
     },
     "6": {
@@ -110,10 +110,10 @@
           "unlock_param": [
             "12"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ],
-      "func_name": "",
+      "func_name": "「对战」",
       "img_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/CompassIcon/img_pvp.img_pvp'"
     },
     "7": {
@@ -133,7 +133,7 @@
           "unlock_param": [
             "9989"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -154,7 +154,7 @@
           "unlock_param": [
             "8004"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -170,7 +170,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -188,7 +188,7 @@
           "unlock_param": [
             "9925"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -204,7 +204,7 @@
           "unlock_param": [
             "9988"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -223,7 +223,7 @@
           "unlock_param": [
             "9988"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -238,7 +238,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -252,7 +252,7 @@
           "unlock_param": [
             "9888"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -289,7 +289,7 @@
           "unlock_param": [
             "9981"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -354,7 +354,7 @@
           "unlock_param": [
             "9883"
           ],
-          "ban_text": ""
+          "ban_text": "图鉴尚未解锁"
         }
       ]
     },
@@ -372,7 +372,7 @@
           "unlock_param": [
             "9884"
           ],
-          "ban_text": ""
+          "ban_text": "图鉴尚未解锁"
         }
       ]
     },
@@ -388,7 +388,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "留影机尚未解锁。"
         }
       ]
     },
@@ -404,7 +404,7 @@
           "unlock_param": [
             "9889"
           ],
-          "ban_text": ""
+          "ban_text": "皮卡商店尚未营业"
         }
       ]
     },
@@ -434,11 +434,11 @@
           "unlock_param": [
             "9900"
           ],
-          "ban_text": ""
+          "ban_text": "便捷换装功能尚未解锁"
         }
       ],
       "auto_perform": true,
-      "func_name": "",
+      "func_name": "「便捷换装」",
       "img_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/CompassIcon/img_ConvenientCostumeChange.img_ConvenientCostumeChange'"
     },
     "54": {
@@ -453,7 +453,7 @@
           "unlock_param": [
             "9950"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -468,7 +468,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "功能尚未解锁"
         }
       ]
     },
@@ -483,7 +483,7 @@
           "unlock_param": [
             "1"
           ],
-          "ban_text": ""
+          "ban_text": "功能尚未解锁"
         }
       ]
     },
@@ -497,7 +497,7 @@
           "unlock_param": [
             "9926"
           ],
-          "ban_text": ""
+          "ban_text": "好友功能尚未解锁"
         }
       ]
     },
@@ -526,7 +526,7 @@
           "unlock_param": [
             "9900"
           ],
-          "ban_text": ""
+          "ban_text": "便捷换装功能尚未解锁"
         }
       ]
     },
@@ -540,7 +540,7 @@
           "unlock_param": [
             "9933"
           ],
-          "ban_text": ""
+          "ban_text": "图鉴尚未解锁"
         }
       ]
     },
@@ -554,7 +554,7 @@
           "unlock_param": [
             "9934"
           ],
-          "ban_text": ""
+          "ban_text": "图鉴尚未解锁"
         }
       ]
     },
@@ -582,7 +582,7 @@
           "unlock_param": [
             "2"
           ],
-          "ban_text": ""
+          "ban_text": "达到30级，晋升为精灵研究员后再来试试吧。"
         }
       ]
     },
@@ -596,7 +596,7 @@
           "unlock_param": [
             "20"
           ],
-          "ban_text": ""
+          "ban_text": "星盘没有回应你的意志，等待星盘闪耀的时候再来试试吧。"
         }
       ]
     },
@@ -610,7 +610,7 @@
           "unlock_param": [
             "9903"
           ],
-          "ban_text": ""
+          "ban_text": "功能尚未解锁"
         }
       ]
     },
@@ -624,7 +624,7 @@
           "unlock_param": [
             "9921"
           ],
-          "ban_text": ""
+          "ban_text": "功能尚未解锁"
         }
       ]
     },
@@ -639,7 +639,7 @@
           "unlock_param": [
             "9988"
           ],
-          "ban_text": ""
+          "ban_text": "功能尚未解锁"
         }
       ]
     }

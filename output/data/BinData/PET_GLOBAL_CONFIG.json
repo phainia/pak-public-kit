@@ -67,37 +67,37 @@
     "pet_evolution_button_1": {
       "id": 143,
       "key": "pet_evolution_button_1",
-      "str": "",
+      "str": "回应精灵",
       "is_loc": 1
     },
     "pet_evolution_text_1": {
       "id": 144,
       "key": "pet_evolution_text_1",
-      "str": "",
+      "str": "……哦！？%s的样子……！似乎想要进化……！！！",
       "is_loc": 1
     },
     "pet_evolution_button_2": {
       "id": 145,
       "key": "pet_evolution_button_2",
-      "str": "",
+      "str": "查看精灵",
       "is_loc": 1
     },
     "pet_evolution_text_2": {
       "id": 146,
       "key": "pet_evolution_text_2",
-      "str": "",
+      "str": "……太棒了！%s进化为%s了……！！！",
       "is_loc": 1
     },
     "pet_evolution_text_3": {
       "id": 147,
       "key": "pet_evolution_text_3",
-      "str": "",
+      "str": "%s现在是%s。",
       "is_loc": 1
     },
     "pet_evolution_text_4": {
       "id": 148,
       "key": "pet_evolution_text_4",
-      "str": "",
+      "str": "%s现在是%s和%s。",
       "is_loc": 1
     },
     "pet_handbook_find_distance": {
@@ -121,55 +121,55 @@
     "pet_evolution_btn1": {
       "id": 152,
       "key": "pet_evolution_btn1",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/PetUI/Raw/Atlas/PetUI/Frames/btn_shuxing_png.btn_shuxing_png'",
       "is_loc": 2
     },
     "pet_evolution_btn2": {
       "id": 153,
       "key": "pet_evolution_btn2",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Common/Raw/Frames/img_queren_png.img_queren_png'",
       "is_loc": 2
     },
     "pet_catch_up_desc": {
       "id": 154,
       "key": "pet_catch_up_desc",
-      "str": "",
+      "str": "洛克更容易捕捉到“%s”了。",
       "is_loc": 1
     },
     "handbook_desc_item": {
       "id": 155,
       "key": "handbook_desc_item",
-      "str": "",
+      "str": "有图鉴奖励可以领取",
       "is_loc": 1
     },
     "handbook_desc_skill": {
       "id": 156,
       "key": "handbook_desc_skill",
-      "str": "",
+      "str": "解锁新技能",
       "is_loc": 1
     },
     "handbook_desc_catch": {
       "id": 157,
       "key": "handbook_desc_catch",
-      "str": "",
+      "str": "更容易捕捉到“%s”了。",
       "is_loc": 1
     },
     "handbook_desc_new": {
       "id": 158,
       "key": "handbook_desc_new",
-      "str": "",
+      "str": "新精灵？！",
       "is_loc": 1
     },
     "handbook_desc_lvup": {
       "id": 159,
       "key": "handbook_desc_lvup",
-      "str": "",
+      "str": "知识增加了！",
       "is_loc": 1
     },
     "handbook_desc_complete": {
       "id": 160,
       "key": "handbook_desc_complete",
-      "str": "",
+      "str": "研究完成了！",
       "is_loc": 1
     },
     "pet_level_toplimit": {
@@ -187,19 +187,19 @@
     "pet_role_exp_desc": {
       "id": 163,
       "key": "pet_role_exp_desc",
-      "str": "",
+      "str": "魔法经验，用于提升魔法等级",
       "is_loc": 1
     },
     "handbook_desc_role_exp": {
       "id": 164,
       "key": "handbook_desc_role_exp",
-      "str": "",
+      "str": "魔法经验提升",
       "is_loc": 1
     },
     "pet_lock": {
       "id": 165,
       "key": "pet_lock",
-      "str": "",
+      "str": "该宠物只能在古卡恩之灵周围进行更换",
       "is_loc": 1
     },
     "pet_level_boundary": {
@@ -253,13 +253,13 @@
     "pet_screen_desc": {
       "id": 174,
       "key": "pet_screen_desc",
-      "str": "",
+      "str": "已选择系别数量达到上限",
       "is_loc": 1
     },
     "pet_no_synchron": {
       "id": 175,
       "key": "pet_no_synchron",
-      "str": "",
+      "str": "请先编入至少1只精灵",
       "is_loc": 1
     },
     "individuality_range": {
@@ -520,19 +520,19 @@
     "handbook_text_1": {
       "id": 215,
       "key": "handbook_text_1",
-      "str": "",
+      "str": "这是新发现的精灵，快去捕捉吧。",
       "is_loc": 1
     },
     "handbook_text_2": {
       "id": 216,
       "key": "handbook_text_2",
-      "str": "",
+      "str": "通过解决图鉴课题，将这只精灵的图鉴内容填充吧。",
       "is_loc": 1
     },
     "handbook_text_3": {
       "id": 217,
       "key": "handbook_text_3",
-      "str": "",
+      "str": "这是尚未发现的精灵，去找一找它在哪里吧。",
       "is_loc": 1
     },
     "handbook_indentation": {
@@ -544,13 +544,13 @@
     "hatch_interrupt_text": {
       "id": 219,
       "key": "hatch_interrupt_text",
-      "str": "",
+      "str": "精灵蛋被取出后，孵化进度将不会保留，是否确认将精灵蛋取回道具背包？",
       "is_loc": 1
     },
     "pet_hatch_text": {
       "id": 220,
       "key": "pet_hatch_text",
-      "str": "",
+      "str": "蛋孵化成【%s】了！",
       "is_loc": 1
     },
     "pet_level_show_num_max": {
@@ -990,67 +990,67 @@
     "team_battle_no_star": {
       "id": 265,
       "key": "team_battle_no_star",
-      "str": "",
+      "str": "挑战稀兽花种需要<span size=\"24\" color=\"#af3d3e\">%s</>契约印记，当前<span size=\"24\" color=\"#af3d3e\">没有</>契约印记。\n是否仍然参与挑战？",
       "is_loc": 1
     },
     "team_battle_no_ball": {
       "id": 266,
       "key": "team_battle_no_ball",
-      "str": "",
+      "str": "捕捉精灵需要<span size=\"24\" color=\"#af3d3e\">1</>枚任意咕噜球，当前<span size=\"24\" color=\"#af3d3e\">未持有</>咕噜球。\n是否仍然参与挑战？",
       "is_loc": 1
     },
     "team_battle_no_star_ball": {
       "id": 267,
       "key": "team_battle_no_star_ball",
-      "str": "",
+      "str": "挑战稀兽花种需要<span size=\"24\" color=\"#af3d3e\">%s</>契约印记，当前<span size=\"24\" color=\"#af3d3e\">没有</>契约印记。\n捕捉精灵需要<span size=\"24\" color=\"#af3d3e\">1</>枚任意咕噜球，当前<span size=\"24\" color=\"#af3d3e\">未持有</>咕噜球。\n是否仍然参与挑战？",
       "is_loc": 1
     },
     "team_battle_flower": {
       "id": 268,
       "key": "team_battle_flower",
-      "str": "",
+      "str": "孕育着混血精灵的花种，在花种完全消失之前打倒混血精灵吧！",
       "is_loc": 1
     },
     "team_battle_text_single": {
       "id": 269,
       "key": "team_battle_text_single",
-      "str": "",
+      "str": "点击空白处关闭。",
       "is_loc": 1
     },
     "team_battle_text_team": {
       "id": 270,
       "key": "team_battle_text_team",
-      "str": "",
+      "str": "超时将自动拒绝邀请，点击空白处关闭。（%s秒）",
       "is_loc": 1
     },
     "team_battle_single_or_team": {
       "id": 271,
       "key": "team_battle_single_or_team",
-      "str": "",
+      "str": "您当前处于多人游戏状态，是否邀请其他玩家一起进行挑战？",
       "is_loc": 1
     },
     "team_battle_no_accepted": {
       "id": 272,
       "key": "team_battle_no_accepted",
-      "str": "",
+      "str": "%s未接受挑战邀请。",
       "is_loc": 1
     },
     "team_battle_ready_cant_change": {
       "id": 273,
       "key": "team_battle_ready_cant_change",
-      "str": "",
+      "str": "已准备状态下无法更换上场精灵。",
       "is_loc": 1
     },
     "team_battle_cancel_challenge": {
       "id": 274,
       "key": "team_battle_cancel_challenge",
-      "str": "",
+      "str": "%s取消了挑战。",
       "is_loc": 1
     },
     "team_battle_change_pet": {
       "id": 275,
       "key": "team_battle_change_pet",
-      "str": "",
+      "str": "%s更换了上场的精灵。",
       "is_loc": 1
     },
     "team_battle_cost_star": {
@@ -1062,41 +1062,41 @@
     "team_battle_catch_text": {
       "id": 277,
       "key": "team_battle_catch_text",
-      "str": "",
+      "str": "本次捕捉额外消耗%s契约印记",
       "is_loc": 1
     },
     "team_battle_catch_quit": {
       "id": 278,
       "key": "team_battle_catch_quit",
-      "str": "",
+      "str": "是否放弃本次捕捉机会，并退出挑战？\n放弃捕捉<span size=\"26\" color=\"#af3d3e\">不会消耗</>任何契约印记或咕噜球。",
       "is_loc": 1
     },
     "pet_talent_text1": {
       "id": 279,
       "key": "pet_talent_text1",
       "num": 1,
-      "str": "",
+      "str": "一般般的天分",
       "is_loc": 1
     },
     "pet_talent_text2": {
       "id": 280,
       "key": "pet_talent_text2",
       "num": 2,
-      "str": "",
+      "str": "还不错的天分",
       "is_loc": 1
     },
     "pet_talent_text3": {
       "id": 281,
       "key": "pet_talent_text3",
       "num": 3,
-      "str": "",
+      "str": "相当好的天分",
       "is_loc": 1
     },
     "pet_talent_text4": {
       "id": 282,
       "key": "pet_talent_text4",
       "num": 4,
-      "str": "",
+      "str": "了不起的天分",
       "is_loc": 1
     },
     "pet_blood_mix_prob": {
@@ -1120,7 +1120,7 @@
     "team_battle_cant_accept": {
       "id": 286,
       "key": "team_battle_cant_accept",
-      "str": "",
+      "str": "当前状态无法参与挑战。",
       "is_loc": 1
     },
     "Equipped_magic_max": {
@@ -1132,7 +1132,7 @@
     "pet_evolution_button_3": {
       "id": 288,
       "key": "pet_evolution_button_3",
-      "str": "",
+      "str": "回到战斗",
       "is_loc": 1
     },
     "owl_blood_mix_prob": {
@@ -1174,13 +1174,13 @@
     "collection_cant_release": {
       "id": 295,
       "key": "collection_cant_release",
-      "str": "",
+      "str": "精灵已被标记，无法放生",
       "is_loc": 1
     },
     "pet_collection_tips": {
       "id": 296,
       "key": "pet_collection_tips",
-      "str": "",
+      "str": "精灵已收藏",
       "is_loc": 1
     },
     "universal_growth_material": {
@@ -1221,7 +1221,7 @@
     "pet_depot_max_hint": {
       "id": 305,
       "key": "pet_depot_max_hint",
-      "str": "",
+      "str": "精灵仓库的容量不太够了哦，还是先整理一下吧~",
       "is_loc": 1
     },
     "pet_bag_number_max": {
@@ -1446,13 +1446,13 @@
     "hb_record_nightmare_color": {
       "id": 331,
       "key": "hb_record_nightmare_color",
-      "str": "",
+      "str": "#772478;#cd4579",
       "is_loc": 2
     },
     "hb_record_nightmare_icon": {
       "id": 332,
       "key": "hb_record_nightmare_icon",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_wemeng_png.img_wemeng_png'",
       "is_loc": 2
     },
     "talent_effect_item": {
@@ -1512,49 +1512,49 @@
     "pet_recommend_option_icon_nature_unselect": {
       "id": 337,
       "key": "pet_recommend_option_icon_nature_unselect",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_xingge1_png.img_xingge1_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_nature_selected": {
       "id": 338,
       "key": "pet_recommend_option_icon_nature_selected",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_xingge2_png.img_xingge2_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_talent_unselect": {
       "id": 339,
       "key": "pet_recommend_option_icon_talent_unselect",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_getizhi1_png.img_getizhi1_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_talent_selected": {
       "id": 340,
       "key": "pet_recommend_option_icon_talent_selected",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_getizhi2_png.img_getizhi2_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_blood_unselect": {
       "id": 341,
       "key": "pet_recommend_option_icon_blood_unselect",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_xuemai1_png.img_xuemai1_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_blood_selected": {
       "id": 342,
       "key": "pet_recommend_option_icon_blood_selected",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_xuemai2_png.img_xuemai2_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_skill_unselect": {
       "id": 343,
       "key": "pet_recommend_option_icon_skill_unselect",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_jinng1_png.img_jinng1_png'",
       "is_loc": 2
     },
     "pet_recommend_option_icon_skill_selected": {
       "id": 344,
       "key": "pet_recommend_option_icon_skill_selected",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_jinng2_png.img_jinng2_png'",
       "is_loc": 2
     },
     "record_defeat_pet_battle_type": {
@@ -1571,19 +1571,19 @@
     "hb_boy_roco_shadow": {
       "id": 346,
       "key": "hb_boy_roco_shadow",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_ren_yinying_png.img_ren_yinying_png'",
       "is_loc": 2
     },
     "hb_girl_roco_shadow": {
       "id": 347,
       "key": "hb_girl_roco_shadow",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Handbook/Raw/Common/Images/Frames/img_ren_yinying_nv_png.img_ren_yinying_nv_png'",
       "is_loc": 2
     },
     "star_debris_rule_description": {
       "id": 348,
       "key": "star_debris_rule_description",
-      "str": "",
+      "str": "契约印记达到或超出上限时，将随时间恢复凝练印记。\n每满24小时恢复20点，最多储存600点。",
       "is_loc": 1
     },
     "close_riding_moving_time": {
@@ -1787,7 +1787,7 @@
     "select_marked_pet": {
       "id": 370,
       "key": "select_marked_pet",
-      "str": "",
+      "str": "该精灵已标记",
       "is_loc": 1
     },
     "pet_trial_data_version_autofix": {
@@ -2045,7 +2045,7 @@
     "mainworld_team_default_name": {
       "id": 401,
       "key": "mainworld_team_default_name",
-      "str": "",
+      "str": "大世界小队%d",
       "is_loc": 1
     },
     "team_pet_recommend": {
@@ -2187,28 +2187,28 @@
     "report_text_super": {
       "id": 423,
       "key": "report_text_super",
-      "str": "",
+      "str": "#CF3D3E",
       "is_loc": 2
     },
     "report_text_hard": {
       "id": 424,
       "key": "report_text_hard",
       "num": 45,
-      "str": "",
+      "str": "#D56C1F",
       "is_loc": 2
     },
     "report_text_middle": {
       "id": 425,
       "key": "report_text_middle",
       "num": 15,
-      "str": "",
+      "str": "#7F4DFF",
       "is_loc": 2
     },
     "report_text_easy": {
       "id": 426,
       "key": "report_text_easy",
       "num": 3,
-      "str": "",
+      "str": "#42A7CC",
       "is_loc": 2
     },
     "report_title_ratio": {
@@ -2505,7 +2505,7 @@
     "pet_grow_icon": {
       "id": 465,
       "key": "pet_grow_icon",
-      "str": "",
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/BattleUI/Raw/Atlas/PetSystem/Frames/ui_pet_Strive_png.ui_pet_Strive_png'",
       "is_loc": 2
     },
     "bonus_shining_prob": {
@@ -2600,17 +2600,17 @@
     "glass_egg_piece_icon": {
       "id": 482,
       "key": "glass_egg_piece_icon",
-      "str": ""
+      "str": "PaperSprite'/Game/NewRoco/Modules/System/Common/Raw/Frames/img_Icondan_suipian_png.img_Icondan_suipian_png'"
     },
     "glass_egg_icon_mat": {
       "id": 483,
       "key": "glass_egg_icon_mat",
-      "str": ""
+      "str": "MaterialInstanceConstant'/Game/ArtRes/UI/TUI/Materials/MI_UI_PetEgg_Glassy.MI_UI_PetEgg_Glassy'"
     },
     "glass_egg_model_mat": {
       "id": 484,
       "key": "glass_egg_model_mat",
-      "str": ""
+      "str": "MaterialInstanceConstant'/Game/ArtRes/Material/Characters/PetBase/MaterialInstance/Special/MI_P_EggGlassy_Outline.MI_P_EggGlassy_Outline'"
     },
     "glass_egg_hatch_ball": {
       "id": 485,
@@ -2630,7 +2630,7 @@
     "season_photo_red_point_reason": {
       "id": 488,
       "key": "season_photo_red_point_reason",
-      "str": ""
+      "str": "RPR_LEGEND_SEASON_PHOTO_FINISH"
     },
     "pet_belong_handbook_version": {
       "id": 489,
@@ -2694,12 +2694,12 @@
     "mainworld_pet_tips_glass_mat": {
       "id": 498,
       "key": "mainworld_pet_tips_glass_mat",
-      "str": ""
+      "str": "MaterialInstanceConstant'/Game/ArtRes/UI/TUI/Materials/MI_UI_PetDazzleCloseUp2.MI_UI_PetDazzleCloseUp2'"
     },
     "mainworld_pet_tips_chaos_mat": {
       "id": 499,
       "key": "mainworld_pet_tips_chaos_mat",
-      "str": ""
+      "str": "MaterialInstanceConstant'/Game/ArtRes/UI/TUI/Materials/MI_UI_InnerLineCloseUp2.MI_UI_InnerLineCloseUp2'"
     },
     "PC_hold_extra_time": {
       "id": 500,

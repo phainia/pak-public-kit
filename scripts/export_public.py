@@ -45,9 +45,36 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def decode_tables(bin_root: Path, output_dir: Path, language: str) -> tuple[int, int]:
+def resolve_loc_dir(bin_root: Path, language: str | None) -> Path | None:
+    loc_root = bin_root / "BinLocalize"
+    if not loc_root.is_dir():
+        return None
+
+    loc_dirs = sorted(path for path in loc_root.iterdir() if path.is_dir())
+    if language:
+        loc_dir = loc_root / language
+        if loc_dir.is_dir():
+            print(f"Localization: {loc_dir.name}")
+            return loc_dir
+        fallback = next((path for path in loc_dirs if path.name == "dev_CN"), None)
+        if fallback:
+            print(f"Localization '{language}' not found; using {fallback.name}")
+            return fallback
+        if loc_dirs:
+            print(f"Localization '{language}' not found; using {loc_dirs[0].name}")
+            return loc_dirs[0]
+        return None
+
+    preferred = next((path for path in loc_dirs if path.name == "dev_CN"), None)
+    loc_dir = preferred or (loc_dirs[0] if loc_dirs else None)
+    if loc_dir:
+        print(f"Localization: {loc_dir.name}")
+    return loc_dir
+
+
+def decode_tables(bin_root: Path, output_dir: Path, language: str | None) -> tuple[int, int]:
     schema_dir = bin_root / "BinConf"
-    loc_dir = bin_root / "BinLocalize" / language
+    loc_dir = resolve_loc_dir(bin_root, language)
     data_out = output_dir / "data" / "BinData"
     tables_out = output_dir / "data" / "tables"
     data_out.mkdir(parents=True, exist_ok=True)
@@ -74,13 +101,13 @@ def decode_tables(bin_root: Path, output_dir: Path, language: str) -> tuple[int,
             if not schema_path.exists():
                 continue
 
-            loc_path = loc_dir / bytes_path.name
+            loc_path = loc_dir / bytes_path.name if loc_dir else None
             try:
                 payload = decode_file(
                     str(bytes_path),
                     schema_path=str(schema_path),
                     bin_type=bin_type,
-                    loc_path=str(loc_path) if loc_path.exists() else None,
+                    loc_path=str(loc_path) if loc_path and loc_path.exists() else None,
                 )
             except Exception as exc:
                 failed += 1
@@ -144,7 +171,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Export extracted data and assets.")
     parser.add_argument("temp_dir", help="Directory produced by extract_paks")
     parser.add_argument("output_dir", help="Output directory")
-    parser.add_argument("--language", default="zh_CN", help="Localization folder under BinLocalize")
+    parser.add_argument("--language", default=None, help="Localization folder under BinLocalize; auto-detects when omitted")
     parser.add_argument("--skip-assets", action="store_true", help="Only export JSON data")
     parser.add_argument("--skip-pets", action="store_true", help="Only export raw BinData and table mirrors")
     return parser.parse_args()

@@ -2,6 +2,18 @@
     "id": 9816,
     "name": "9816",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9816"
+            "name": "鸭吉吉_恶魔"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9816,
         "name": "9816",
         "localized": {
-            "zh": "9816"
+            "zh": "鸭吉吉_恶魔"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7180300,
-            "name": "技能 7180300",
+            "name": "恶念交换",
             "icon_id": "217028",
             "move_type": {
                 "id": 16,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7180300",
-                    "description": ""
+                    "name": "恶念交换",
+                    "description": "减伤90%，应对攻击：自己获得50%吸血。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 110,
-            "description": ""
+            "description": "减伤90%，应对攻击：自己获得50%吸血。"
         },
         {
             "id": 7180310,
-            "name": "技能 7180310",
+            "name": "迫害",
             "icon_id": "117029",
             "move_type": {
                 "id": 16,
@@ -88,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7180310",
-                    "description": ""
+                    "name": "迫害",
+                    "description": "与敌方交换生命比例。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 85,
-            "description": ""
+            "description": "与敌方交换生命比例。"
         },
         {
             "id": 7180320,
-            "name": "技能 7180320",
+            "name": "对敌方精灵造成物理伤害。",
             "icon_id": "117030",
             "move_type": {
                 "id": 16,
@@ -110,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7180320",
-                    "description": ""
+                    "name": "对敌方精灵造成物理伤害。",
+                    "description": "掠夺"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "掠夺"
         },
         {
             "id": 7180330,
-            "name": "技能 7180330",
+            "name": "造成魔伤，2连击。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -132,18 +144,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7180330",
-                    "description": ""
+                    "name": "造成魔伤，2连击。",
+                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
         },
         {
             "id": 7180340,
-            "name": "技能 7180340",
+            "name": "栽赃",
             "icon_id": "117033",
             "move_type": {
                 "id": 16,
@@ -154,18 +166,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7180340",
-                    "description": ""
+                    "name": "栽赃",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 35,
-            "description": ""
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7180350,
-            "name": "技能 7180350",
+            "name": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。",
             "icon_id": "117034",
             "move_type": {
                 "id": 16,
@@ -176,14 +188,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7180350",
-                    "description": ""
+                    "name": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。",
+                    "description": "应对！跌落"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "应对！跌落"
         }
     ],
     "move_stones": [],
@@ -199,7 +211,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9816"
+                                "name": "鸭吉吉_恶魔"
                             }
                         },
                         "is_leader_form": false,
@@ -225,11 +237,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

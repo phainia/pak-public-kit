@@ -4,7 +4,7 @@
       "id": 1900001,
       "petbase_id": 3262,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2605799,
@@ -22,7 +22,7 @@
         3262,
         3263
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600103
       ],
@@ -34,7 +34,7 @@
       "id": 1900002,
       "petbase_id": 3081,
       "open_world_map": 70047,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2605986,
@@ -58,7 +58,7 @@
         3082,
         3350
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600104
       ],
@@ -70,7 +70,7 @@
       "id": 1900003,
       "petbase_id": 3121,
       "open_world_map": 70045,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2605815,
@@ -88,7 +88,7 @@
         3122,
         3123
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600105
       ],
@@ -100,7 +100,7 @@
       "id": 1900004,
       "petbase_id": 3200,
       "open_world_map": 70010,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2605931,
@@ -124,7 +124,7 @@
         3201,
         3202
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600106
       ],
@@ -136,7 +136,7 @@
       "id": 1900005,
       "petbase_id": 3072,
       "open_world_map": 70008,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2605960,
@@ -156,7 +156,7 @@
         3073,
         3074
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600107
       ],
@@ -167,7 +167,7 @@
     "1900006": {
       "id": 1900006,
       "petbase_id": 3011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2605878,
@@ -179,7 +179,7 @@
       "track_type_param1": [
         3011
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600108
       ],
@@ -190,7 +190,7 @@
     "1900007": {
       "id": 1900007,
       "petbase_id": 3029,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606382,
@@ -214,7 +214,7 @@
         3030,
         3031
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600109
       ],
@@ -225,7 +225,7 @@
     "1900008": {
       "id": 1900008,
       "petbase_id": 3188,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606026,
@@ -250,7 +250,7 @@
         3188,
         3189
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600110
       ],
@@ -262,7 +262,7 @@
       "id": 1900012,
       "petbase_id": 3367,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606076,
@@ -287,7 +287,7 @@
         3367,
         3368
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600152
       ],
@@ -299,7 +299,7 @@
       "id": 1900013,
       "petbase_id": 3010,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606093,
@@ -325,7 +325,7 @@
         3010,
         3039
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600153
       ],
@@ -337,7 +337,7 @@
       "id": 1900014,
       "petbase_id": 3499,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606111,
@@ -361,7 +361,7 @@
       "track_type_param1": [
         3499
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600154
       ],
@@ -373,7 +373,7 @@
       "id": 1900015,
       "petbase_id": 3142,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606128,
@@ -401,7 +401,7 @@
         3143,
         3144
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600155
       ],
@@ -413,7 +413,7 @@
       "id": 1900016,
       "petbase_id": 3062,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606147,
@@ -438,7 +438,7 @@
         3062,
         3063
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600156
       ],
@@ -450,7 +450,7 @@
       "id": 1900017,
       "petbase_id": 3227,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606164,
@@ -474,7 +474,7 @@
       "track_type_param1": [
         3227
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600157
       ],
@@ -486,7 +486,7 @@
       "id": 1900018,
       "petbase_id": 3075,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606181,
@@ -514,7 +514,7 @@
         3076,
         3077
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600158
       ],
@@ -526,7 +526,7 @@
       "id": 1900019,
       "petbase_id": 3064,
       "open_world_map": 70011,
-      "option_txt1": "",
+      "option_txt1": "寻找精灵",
       "track_type": 2,
       "track_refresh_id_priority": [
         2606200,
@@ -550,7 +550,7 @@
       "track_type_param1": [
         3064
       ],
-      "option_txt2": "",
+      "option_txt2": "活动任务",
       "condition_id": [
         1600159
       ],

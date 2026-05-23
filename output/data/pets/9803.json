@@ -2,6 +2,18 @@
     "id": 9803,
     "name": "9803",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9803"
+            "name": "鸭吉吉_火"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9803,
         "name": "9803",
         "localized": {
-            "zh": "9803"
+            "zh": "鸭吉吉_火"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7040430,
-            "name": "技能 7040430",
+            "name": "造成高额魔法伤害，自己获得物防-40%。",
             "icon_id": "103032",
             "move_type": {
                 "id": 3,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7040430",
-                    "description": ""
+                    "name": "造成高额魔法伤害，自己获得物防-40%。",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 95,
-            "description": ""
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7040440,
-            "name": "技能 7040440",
+            "name": "进攻是最好的防守",
             "icon_id": "103033",
             "move_type": {
                 "id": 3,
@@ -88,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7040440",
-                    "description": ""
+                    "name": "进攻是最好的防守",
+                    "description": "怒火"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "怒火"
         },
         {
             "id": 7040450,
-            "name": "技能 7040450",
+            "name": "自己获得双攻+120%和双防-40%。",
             "icon_id": "103034",
             "move_type": {
                 "id": 3,
@@ -110,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7040450",
-                    "description": ""
+                    "name": "自己获得双攻+120%和双防-40%。",
+                    "description": "淬火"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 4,
             "power": null,
-            "description": ""
+            "description": "淬火"
         },
         {
             "id": 7040470,
-            "name": "技能 7040470",
+            "name": "“都结束了，敌人燃尽了，我们也燃尽了。”",
             "icon_id": "203036",
             "move_type": {
                 "id": 3,
@@ -132,18 +144,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7040470",
-                    "description": ""
+                    "name": "“都结束了，敌人燃尽了，我们也燃尽了。”",
+                    "description": "焚毁"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 40,
-            "description": ""
+            "description": "焚毁"
         },
         {
             "id": 7040500,
-            "name": "技能 7040500",
+            "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
             "icon_id": "103039",
             "move_type": {
                 "id": 3,
@@ -154,14 +166,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7040500",
-                    "description": ""
+                    "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
+                    "description": "焚烧烙印"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "焚烧烙印"
         }
     ],
     "move_stones": [],
@@ -177,7 +189,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9803"
+                                "name": "鸭吉吉_火"
                             }
                         },
                         "is_leader_form": false,
@@ -203,11 +215,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

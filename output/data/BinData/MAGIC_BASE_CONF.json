@@ -2,7 +2,7 @@
   "RocoDataRows": {
     "1": {
       "id": 1,
-      "name": "",
+      "name": "星星魔法",
       "magic_priority": 1,
       "localization_id": "umg_magic_learned_1",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_005.T_UI_WZ_005'",
@@ -35,7 +35,7 @@
     },
     "2": {
       "id": 2,
-      "name": "",
+      "name": "星星魔法",
       "magic_priority": 1,
       "localization_id": "umg_magic_learned_1",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_005.T_UI_WZ_005'",
@@ -68,7 +68,7 @@
     },
     "3": {
       "id": 3,
-      "name": "",
+      "name": "星星魔法",
       "magic_priority": 1,
       "localization_id": "umg_magic_learned_1",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_005.T_UI_WZ_005'",
@@ -101,7 +101,7 @@
     },
     "21": {
       "id": 21,
-      "name": "",
+      "name": "浮风术",
       "magic_priority": 5,
       "localization_id": "umg_magic_learned_2",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_020.T_UI_WZ_020'",
@@ -138,7 +138,7 @@
     },
     "22": {
       "id": 22,
-      "name": "",
+      "name": "浮风术",
       "magic_priority": 5,
       "localization_id": "umg_magic_learned_2",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_020.T_UI_WZ_020'",
@@ -175,7 +175,7 @@
     },
     "23": {
       "id": 23,
-      "name": "",
+      "name": "浮风术",
       "magic_priority": 5,
       "localization_id": "umg_magic_learned_2",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_020.T_UI_WZ_020'",
@@ -212,7 +212,7 @@
     },
     "31": {
       "id": 31,
-      "name": "",
+      "name": "光系魔法",
       "magic_priority": 7,
       "localization_id": "umg_magic_learned_4",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_023.T_UI_WZ_023'",
@@ -249,7 +249,7 @@
     },
     "32": {
       "id": 32,
-      "name": "",
+      "name": "光系魔法",
       "magic_priority": 7,
       "localization_id": "umg_magic_learned_4",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_023.T_UI_WZ_023'",
@@ -286,7 +286,7 @@
     },
     "33": {
       "id": 33,
-      "name": "",
+      "name": "光系魔法",
       "magic_priority": 7,
       "localization_id": "umg_magic_learned_4",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_023.T_UI_WZ_023'",
@@ -323,7 +323,7 @@
     },
     "98": {
       "id": 98,
-      "name": "",
+      "name": "老配置星星魔法",
       "magic_priority": 999,
       "localization_id": "umg_magic_learned_1",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_005.T_UI_WZ_005'",
@@ -351,7 +351,7 @@
     },
     "99": {
       "id": 99,
-      "name": "",
+      "name": "老配置浮风术",
       "magic_priority": 998,
       "localization_id": "umg_magic_learned_2",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_020.T_UI_WZ_020'",
@@ -377,7 +377,7 @@
     },
     "101": {
       "id": 101,
-      "name": "",
+      "name": "液化术",
       "magic_priority": 6,
       "localization_id": "umg_magic_learned_3",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_021.T_UI_WZ_021'",
@@ -399,7 +399,7 @@
     },
     "201": {
       "id": 201,
-      "name": "",
+      "name": "创造魔法",
       "magic_priority": 4,
       "localization_id": "umg_magic_learned_5",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/MainUI/Raw/Texture/T_UI_WZ_022.T_UI_WZ_022'",
@@ -421,7 +421,7 @@
     },
     "301": {
       "id": 301,
-      "name": "",
+      "name": "留言魔法",
       "magic_priority": 2,
       "localization_id": "umg_magic_learned_6",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Item190/7010100.7010100'",
@@ -439,7 +439,7 @@
     },
     "401": {
       "id": 401,
-      "name": "",
+      "name": "留影魔法",
       "magic_priority": 3,
       "localization_id": "umg_magic_learned_7",
       "get_path": "Texture2D'/Game/NewRoco/Modules/System/Common/Icon/Item190/7010110.7010110'",

@@ -183,7 +183,7 @@ class RocoBinDecoder:
                     continue
                 self.reader.seek(entry.offset)
                 raw = self.reader.read_bytes(entry.length)
-                self.loc_strings[i + 1] = raw.decode('utf-8')
+                self.loc_strings[entry.index] = raw.decode('utf-8')
             return
 
         if not self.data_table:

@@ -112,6 +112,7 @@ path/to/output/
     pets/
       *.json
     Pets.json
+    PetAssetIndex.json
     items.json
     moves.json
     magic_items.json
@@ -136,9 +137,13 @@ path/to/output/
 --ipa path/to/app.ipa            从 IPA 收集基础 pak
 --app path/to/app_container      从 App 容器收集补丁 pak
 --output path/to/output          自定义输出目录
---language zh_CN                 本地化语言，默认 zh_CN
+--language dir                   本地化语言目录；不传时从 BinLocalize 实际目录自动选择
 --keep-temp                      保留 temp，方便排查中间产物
 ```
+
+导出会优先读取 `BinLocalize` 下实际存在的本地化目录；当前 NRC 包通常是 `dev_CN`。如果手动传入的语言目录不存在，导出会回退到可用目录，否则物品和技能描述会是空值。
+
+精灵图片不要按 ID 暴力拼路径，优先从 `data/PetAssetIndex.json` 或单个 `data/pets/<id>.json` 的 `assets.preview`、`assets.head.normal`、`assets.portrait` 读取。`assets` 只写入已实际导出的 WebP 路径，特殊形态会尽量使用配置图标、图鉴插图或 BigHeadIcon 中可用的一张作为 `preview`。
 
 `./lua.sh` 额外支持：
 

@@ -2,6 +2,18 @@
     "id": 3351,
     "name": "pilibaobao",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 9,
         "name": "Electric",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3351"
+            "name": "霹雳宝宝"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 3351,
         "name": "pilibaobao",
         "localized": {
-            "zh": "3351"
+            "zh": "霹雳宝宝"
         }
     },
     "trait": {
         "id": 200168,
-        "name": "特性 200168",
-        "description": "",
+        "name": "自发电",
+        "description": "在场下时回合结束时攻击提升10%；在场上时，回合结束时攻击降低30%。",
         "icon_id": "200168",
         "localized": {
             "zh": {
-                "name": "特性 200168",
-                "description": ""
+                "name": "自发电",
+                "description": "在场下时回合结束时攻击提升10%；在场上时，回合结束时攻击降低30%。"
             }
         }
     },
@@ -66,7 +78,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3351"
+                                "name": "霹雳宝宝"
                             }
                         },
                         "is_leader_form": false,
@@ -92,7 +104,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3352"
+                                "name": "雷鸣小子"
                             }
                         },
                         "is_leader_form": false,
@@ -121,10 +133,12 @@
         "type_desc": null,
         "description_habitat": null,
         "introduction": null,
-        "refresh_locations": [],
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -135,7 +149,7 @@
     "breeding": {
         "id": 3351001,
         "pet_id": 3351001,
-        "name": null,
+        "name": "海盔虫（首领血脉）",
         "model_id": 3351001,
         "hatch_data": 1,
         "weight_low": 1,
@@ -151,7 +165,7 @@
             {
                 "id": 3351001,
                 "pet_id": 3351001,
-                "name": null,
+                "name": "海盔虫（首领血脉）",
                 "model_id": 3351001,
                 "hatch_data": 1,
                 "weight_low": 1,
@@ -165,15 +179,47 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3367003,
+                "pet_id": 3367003,
+                "name": "霹雳宝宝",
+                "model_id": 3367001,
+                "hatch_data": 300,
+                "weight_low": 16975,
+                "weight_high": 22400,
+                "height_low": 28,
+                "height_high": 33,
+                "precious_egg_type": 6,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 33510001,
                 "pet_id": 33510001,
-                "name": null,
+                "name": "蹦蹦种子",
                 "model_id": 3351001,
                 "hatch_data": 300,
                 "weight_low": 1,
                 "weight_high": 10,
                 "height_low": 1,
                 "height_high": 10,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 34010001,
+                "pet_id": 34010001,
+                "name": "霹雳宝宝",
+                "model_id": 3401001,
+                "hatch_data": 300,
+                "weight_low": 33250,
+                "weight_high": 42000,
+                "height_low": 70,
+                "height_high": 73,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

@@ -2,6 +2,18 @@
     "id": 3187,
     "name": "mimiyan",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 15,
         "name": "Ghost",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3187"
+            "name": "迷迷眼"
         }
     },
     "implemented": false,
@@ -43,18 +55,18 @@
         "id": 3187,
         "name": "mimiyan",
         "localized": {
-            "zh": "3187"
+            "zh": "迷迷眼"
         }
     },
     "trait": {
         "id": 200159,
-        "name": "特性 200159",
-        "description": "",
+        "name": "黑洞",
+        "description": "每使用2次幻系技能，清空敌方精灵能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200159",
-                "description": ""
+                "name": "黑洞",
+                "description": "每使用2次幻系技能，清空敌方精灵能量。"
             }
         }
     },
@@ -72,7 +84,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3187"
+                                "name": "迷迷眼"
                             }
                         },
                         "is_leader_form": false,
@@ -104,11 +116,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "拥有奇特的双眼，似乎能看到身边人脑海里浮现的事物，以目前的知识完全无法理解其中构造。头顶的小圆球似乎是某种屏蔽装置，目前猜测可能是用于屏蔽过量的信息。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -119,7 +133,7 @@
     "breeding": {
         "id": 3187001,
         "pet_id": 3187001,
-        "name": null,
+        "name": "咔咔羽毛",
         "model_id": 3187001,
         "hatch_data": 57600,
         "weight_low": 5600,
@@ -141,7 +155,7 @@
             {
                 "id": 3187001,
                 "pet_id": 3187001,
-                "name": null,
+                "name": "咔咔羽毛",
                 "model_id": 3187001,
                 "hatch_data": 57600,
                 "weight_low": 5600,
@@ -161,15 +175,53 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3190001,
+                "pet_id": 3190001,
+                "name": "迷迷眼",
+                "model_id": 3190001,
+                "hatch_data": 72000,
+                "weight_low": 2510,
+                "weight_high": 3640,
+                "height_low": 25,
+                "height_high": 34,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    400,
+                    3125
+                ],
+                "egg_add_glass_prob_array": [
+                    2,
+                    113
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 31870001,
                 "pet_id": 31870001,
-                "name": null,
+                "name": "小夜",
                 "model_id": 3187001,
                 "hatch_data": 300,
                 "weight_low": 5600,
                 "weight_high": 8600,
                 "height_low": 25,
                 "height_high": 35,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 32270001,
+                "pet_id": 32270001,
+                "name": "迷迷眼",
+                "model_id": 3227001,
+                "hatch_data": 300,
+                "weight_low": 1470,
+                "weight_high": 2320,
+                "height_low": 27,
+                "height_high": 37,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

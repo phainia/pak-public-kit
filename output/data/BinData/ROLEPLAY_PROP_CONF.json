@@ -2,7 +2,7 @@
   "RocoDataRows": {
     "68000": {
       "id": 68000,
-      "name_text": "",
+      "name_text": "小板凳",
       "put_prop_type": 1,
       "occupy_num": 1,
       "prop_server_radius": 150,
@@ -17,7 +17,7 @@
     },
     "68001": {
       "id": 68001,
-      "name_text": "",
+      "name_text": "木头长椅",
       "put_prop_type": 1,
       "occupy_num": 2,
       "prop_server_radius": 300,
@@ -32,7 +32,7 @@
     },
     "68002": {
       "id": 68002,
-      "name_text": "",
+      "name_text": "木头圆桌",
       "put_prop_type": 1,
       "occupy_num": 4,
       "prop_server_radius": 500,
@@ -47,7 +47,7 @@
     },
     "68003": {
       "id": 68003,
-      "name_text": "",
+      "name_text": "旧皮箱",
       "put_prop_type": 1,
       "occupy_num": 1,
       "prop_server_radius": 150,
@@ -62,7 +62,7 @@
     },
     "68004": {
       "id": 68004,
-      "name_text": "",
+      "name_text": "知识板凳",
       "put_prop_type": 1,
       "occupy_num": 2,
       "prop_server_radius": 300,
@@ -89,7 +89,7 @@
     },
     "68005": {
       "id": 68005,
-      "name_text": "",
+      "name_text": "舒适课桌",
       "put_prop_type": 1,
       "occupy_num": 4,
       "prop_server_radius": 500,
@@ -160,7 +160,7 @@
     },
     "68006": {
       "id": 68006,
-      "name_text": "",
+      "name_text": "鹅鹅鹅长椅",
       "put_prop_type": 1,
       "occupy_num": 2,
       "prop_server_radius": 300,
@@ -175,7 +175,7 @@
     },
     "68007": {
       "id": 68007,
-      "name_text": "",
+      "name_text": "吓人箱",
       "put_prop_type": 2,
       "occupy_num": 1,
       "prop_server_radius": 300,
@@ -200,7 +200,7 @@
     },
     "68008": {
       "id": 68008,
-      "name_text": "",
+      "name_text": "星星躺枕",
       "put_prop_type": 1,
       "occupy_num": 1,
       "prop_server_radius": 500,
@@ -220,7 +220,7 @@
     },
     "68009": {
       "id": 68009,
-      "name_text": "",
+      "name_text": "南瓜墩",
       "put_prop_type": 1,
       "occupy_num": 1,
       "prop_server_radius": 300,
@@ -235,7 +235,7 @@
     },
     "640006": {
       "id": 640006,
-      "name_text": "",
+      "name_text": "篝火",
       "put_prop_type": 1,
       "occupy_num": 4,
       "prop_server_radius": 500,
@@ -283,7 +283,7 @@
     },
     "640007": {
       "id": 640007,
-      "name_text": "",
+      "name_text": "智慧树",
       "put_prop_type": 1,
       "occupy_num": 2,
       "prop_server_radius": 500,

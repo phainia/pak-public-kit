@@ -2,6 +2,18 @@
     "id": 9818,
     "name": "9818",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9818"
+            "name": "鸭吉吉_幻"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9818,
         "name": "9818",
         "localized": {
-            "zh": "9818"
+            "zh": "鸭吉吉_幻"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7190220,
-            "name": "技能 7190220",
+            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
             "icon_id": "719002",
             "move_type": {
                 "id": 18,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190220",
-                    "description": ""
+                    "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+                    "description": "应对！小光恶1"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 70,
-            "description": ""
+            "description": "应对！小光恶1"
         },
         {
             "id": 7190230,
-            "name": "技能 7190230",
+            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
             "icon_id": "719011",
             "move_type": {
                 "id": 18,
@@ -88,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190230",
-                    "description": ""
+                    "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+                    "description": "黑荆棘"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": ""
+            "description": "黑荆棘"
         },
         {
             "id": 7190240,
-            "name": "技能 7190240",
+            "name": "S3卡拉波斯A",
             "icon_id": "118004",
             "move_type": {
                 "id": 18,
@@ -110,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190240",
-                    "description": ""
+                    "name": "S3卡拉波斯A",
+                    "description": "纺纱"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 7,
             "power": 100,
-            "description": ""
+            "description": "纺纱"
         },
         {
             "id": 7190260,
-            "name": "技能 7190260",
+            "name": "S3夜游魔B",
             "icon_id": "218006",
             "move_type": {
                 "id": 18,
@@ -132,18 +144,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190260",
-                    "description": ""
+                    "name": "S3夜游魔B",
+                    "description": "凝望"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 15,
-            "description": ""
+            "description": "凝望"
         },
         {
             "id": 7190270,
-            "name": "技能 7190270",
+            "name": "晃攻",
             "icon_id": "118007",
             "move_type": {
                 "id": 18,
@@ -154,18 +166,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190270",
-                    "description": ""
+                    "name": "晃攻",
+                    "description": "S3障眼魔A"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 65,
-            "description": ""
+            "description": "S3障眼魔A"
         },
         {
             "id": 7190280,
-            "name": "技能 7190280",
+            "name": "假冒",
             "icon_id": "719004",
             "move_type": {
                 "id": 18,
@@ -176,18 +188,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190280",
-                    "description": ""
+                    "name": "假冒",
+                    "description": "自己的生命比例变为与敌方生命比例相同，巧变：恶系攻击技能。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": ""
+            "description": "自己的生命比例变为与敌方生命比例相同，巧变：恶系攻击技能。"
         },
         {
             "id": 7190290,
-            "name": "技能 7190290",
+            "name": "空间压迫",
             "icon_id": "118009",
             "move_type": {
                 "id": 18,
@@ -198,18 +210,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190290",
-                    "description": ""
+                    "name": "空间压迫",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7190300,
-            "name": "技能 7190300",
+            "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
             "icon_id": "218007",
             "move_type": {
                 "id": 18,
@@ -220,18 +232,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190300",
-                    "description": ""
+                    "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
+                    "description": "造成物伤，敌方获得1层星陨印记。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "造成物伤，敌方获得1层星陨印记。"
         },
         {
             "id": 7190310,
-            "name": "技能 7190310",
+            "name": "四维降解",
             "icon_id": "318016",
             "move_type": {
                 "id": 18,
@@ -242,18 +254,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190310",
-                    "description": ""
+                    "name": "四维降解",
+                    "description": "造成魔伤，敌方每有1层印记，本技能能耗-1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "造成魔伤，敌方每有1层印记，本技能能耗-1。"
         },
         {
             "id": 7190320,
-            "name": "技能 7190320",
+            "name": "造成物伤，自己回复1能量。",
             "icon_id": "719012",
             "move_type": {
                 "id": 18,
@@ -264,18 +276,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190320",
-                    "description": ""
+                    "name": "造成物伤，自己回复1能量。",
+                    "description": "多维击打"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": ""
+            "description": "多维击打"
         },
         {
             "id": 7190330,
-            "name": "技能 7190330",
+            "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
             "icon_id": "719009",
             "move_type": {
                 "id": 18,
@@ -286,18 +298,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190330",
-                    "description": ""
+                    "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
+                    "description": "这不是巫术，是还无法理解的科学。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": ""
+            "description": "这不是巫术，是还无法理解的科学。"
         },
         {
             "id": 7190400,
-            "name": "技能 7190400",
+            "name": "心灵洞悉",
             "icon_id": "118022",
             "move_type": {
                 "id": 18,
@@ -308,14 +320,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7190400",
-                    "description": ""
+                    "name": "心灵洞悉",
+                    "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
         }
     ],
     "move_stones": [],
@@ -331,7 +343,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9818"
+                                "name": "鸭吉吉_幻"
                             }
                         },
                         "is_leader_form": false,
@@ -357,11 +369,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

@@ -6,7 +6,7 @@ ROOT="$(dirname "$SCRIPT_DIR")"
 PAKS_DIR="$ROOT/paks"
 TEMP_DIR="$ROOT/temp"
 OUTPUT_DIR="$ROOT/output"
-LANGUAGE="zh_CN"
+LANGUAGE=""
 KEEP_TEMP=0
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
@@ -18,7 +18,7 @@ usage() {
     echo "PAK public 数据/资源一键导出"
     echo ""
     echo "用法:"
-    echo "  ./run.sh <AES-KEY> [--ipa <path>] [--app <path>] [--output <path>] [--language zh_CN]"
+    echo "  ./run.sh <AES-KEY> [--ipa <path>] [--app <path>] [--output <path>] [--language <dir>]"
     echo "  ./run.sh --aes-file <path> [--ipa <path>] [--app <path>] [--output <path>]"
     echo ""
     echo "参数:"
@@ -28,7 +28,7 @@ usage() {
     echo "  --app           已安装 App 容器路径；也可用 APP_CONTAINER 设置默认值"
     echo "  -o, --output    输出目录"
     echo "                  默认: ./output"
-    echo "  --language      本地化语言目录，默认 zh_CN"
+    echo "  --language      本地化语言目录；不传时从 BinLocalize 实际目录自动选择"
     echo "  --keep-temp     保留 temp 中间产物，方便排查资源导出"
     echo ""
     echo "示例:"
@@ -311,7 +311,11 @@ mkdir -p "$OUTPUT_DIR"
 rm -rf "$OUTPUT_DIR/data" "$OUTPUT_DIR/assets"
 
 cd "$ROOT"
-"${PY_RUN[@]}" "$SCRIPT_DIR/export_public.py" "$TEMP_DIR" "$OUTPUT_DIR" --language "$LANGUAGE"
+export_args=("$SCRIPT_DIR/export_public.py" "$TEMP_DIR" "$OUTPUT_DIR")
+if [[ -n "$LANGUAGE" ]]; then
+    export_args+=(--language "$LANGUAGE")
+fi
+"${PY_RUN[@]}" "${export_args[@]}"
 
 bin_count=$(find "$OUTPUT_DIR/data/BinData" -type f -name "*.json" 2>/dev/null | wc -l | tr -d ' ')
 table_count=$(find "$OUTPUT_DIR/data/tables" -type f -name "*.json" 2>/dev/null | wc -l | tr -d ' ')

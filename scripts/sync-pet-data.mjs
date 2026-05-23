@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -12,10 +13,12 @@ const petsDetailDir = path.join(publicDataDir, "pets");
 const typesPath = path.join(publicDataDir, "types.json");
 const bloodlineIndexPath = path.join(publicDataDir, "bloodline_index.json");
 const petSkillIndexPath = path.join(publicDataDir, "PetSkillIndex.json");
+const petAssetIndexPath = path.join(publicDataDir, "PetAssetIndex.json");
 const itemsIndexPath = path.join(publicDataDir, "items.json");
 const movesPath = path.join(publicDataDir, "moves.json");
 const magicItemsPath = path.join(publicDataDir, "magic_items.json");
 const handbookRewardsPath = path.join(publicDataDir, "handbook-rewards.json");
+const outputRootDir = path.resolve(publicDataDir, "..");
 
 const UNKNOWN_TYPE_ID = 20;
 const CANONICAL_PETBASE_ID_RANGE = {
@@ -97,7 +100,7 @@ const UNKNOWN_TYPE = {
 };
 
 async function main() {
-    const [typeRows, petBaseTable, handbookTable, evolutionTable, levelSkillTable, skillTable, classisTable, petEggTable, petRandomEggTable, petNameMapTable, bagItemTable, megaMapGatheringTable, monsterTable, monsterCatchTable, rewardTable, visualItemTable, exchangeTable] =
+    const [typeRows, petBaseTable, handbookTable, evolutionTable, levelSkillTable, skillTable, classisTable, petEggTable, petRandomEggTable, petNameMapTable, modelTable, rideSocketExportTable, bagItemTable, megaMapGatheringTable, monsterTable, monsterCatchTable, rewardTable, visualItemTable, exchangeTable] =
         await Promise.all([
             readJson(typesPath),
             readTable("PETBASE_CONF.json"),
@@ -109,6 +112,8 @@ async function main() {
             readTable("PET_EGG_CONF.json"),
             readTable("PET_RANDOM_EGG_CONF.json"),
             readTable("PET_NAME_MAP_CONF.json"),
+            readTable("MODEL_CONF.json"),
+            readTable("RIDE_SOCKET_EXPORT.json"),
             readTable("BAG_ITEM_CONF.json"),
             readTable("MEGAMAP_GATHERING_CONF.json"),
             readTable("MONSTER_CONF.json"),
@@ -150,6 +155,8 @@ async function main() {
     const petEggRows = getRows(petEggTable);
     const petRandomEggRows = getRows(petRandomEggTable);
     const petNameMapById = indexBy(getRows(petNameMapTable));
+    const modelById = indexBy(getRows(modelTable));
+    const rideFormById = buildRideFormByPetBaseId(getRows(rideSocketExportTable));
     const itemById = indexBy(getRows(bagItemTable));
     const gatheringGenreByParamId = new Map(
         getRows(megaMapGatheringTable)
@@ -199,6 +206,8 @@ async function main() {
             ),
             portraitKey,
             displayName: cleanText(petBase.name) ?? String(petBase.id),
+            rideForm: rideFormById.get(petBase.id) ?? null,
+            assets: buildPetAssets(petBase, modelById.get(petBase.model_conf), portraitKey),
             evolutionRow,
             evolutionFamilyKey: getEvolutionFamilyKeyFromRow(
                 evolutionRow,
@@ -277,6 +286,7 @@ async function main() {
             id: context.id,
             name: context.portraitKey,
             form: extractForm(context),
+            assets: context.assets,
             main_type: context.typePair.mainType,
             sub_type: context.typePair.subType,
             default_legacy_type: context.typePair.mainType,
@@ -314,6 +324,7 @@ async function main() {
         id: detail.id,
         name: detail.name,
         form: detail.form,
+        assets: detail.assets,
         main_type: detail.main_type,
         sub_type: detail.sub_type,
         default_legacy_type: detail.default_legacy_type,
@@ -368,6 +379,18 @@ async function main() {
     const handbookRewards = buildHandbookRewards(handbookRows, rewardTable, visualItemTable, itemById);
     const moveEntries = buildMoveEntries(details);
     const magicItemEntries = buildMagicItemEntries(itemEntries);
+    const petAssetEntries = Object.fromEntries(
+        details.map((detail) => [
+            detail.id,
+            {
+                id: detail.id,
+                name: detail.name,
+                form: detail.form,
+                localized: detail.localized,
+                assets: detail.assets,
+            },
+        ]),
+    );
 
     await syncMirroredTables();
     await fs.mkdir(petsDetailDir, { recursive: true });
@@ -388,6 +411,7 @@ async function main() {
         writeJson(itemsIndexPath, itemEntries),
         writeJson(movesPath, moveEntries),
         writeJson(magicItemsPath, magicItemEntries),
+        writeJson(petAssetIndexPath, petAssetEntries),
         writeJson(handbookRewardsPath, handbookRewards),
     ]);
 
@@ -714,6 +738,11 @@ function isLeaderForm(petBase, portraitKey) {
 }
 
 function extractForm(context) {
+    const rideForm = cleanText(context.rideForm);
+    if (rideForm) {
+        return rideForm;
+    }
+
     const handbookName = cleanText(context.handbookRow?.name);
     const displayName = context.displayName;
     const wrapped = displayName.match(/[（(]([^）)]+)[）)]/u);
@@ -743,6 +772,102 @@ function extractForm(context) {
     }
 
     return displayName;
+}
+
+function buildRideFormByPetBaseId(rows) {
+    const forms = new Map();
+
+    for (const row of rows) {
+        if (typeof row?.id !== "number") {
+            continue;
+        }
+
+        const editorName = cleanText(row.editor_name);
+        if (!editorName) {
+            continue;
+        }
+
+        const wrapped = editorName.match(/[（(]([^）)]+)[）)]/u);
+        if (wrapped?.[1]) {
+            forms.set(row.id, wrapped[1].trim());
+        }
+    }
+
+    return forms;
+}
+
+function buildPetAssets(petBase, model, portraitKey) {
+    const configuredPortrait = textureRefToAssetPath(petBase?.JL_res);
+    const configuredPortraitSmall = textureRefToAssetPath(petBase?.JL_small_res);
+    const configuredNormalHead = textureRefToAssetPath(model?.icon ?? model?.small_icon ?? model?.ui_icon);
+    const configuredShinyHead = textureRefToAssetPath(model?.shiny_icon);
+    const configuredBigHead = textureRefToAssetPath(model?.big_icon);
+    const configuredBigShinyHead = textureRefToAssetPath(model?.big_shiny_icon);
+    const illustrations = findExistingHandbookIllustrations(portraitKey);
+
+    const portrait = firstExistingAsset(configuredPortrait, ...illustrations);
+    const portraitSmall = firstExistingAsset(configuredPortraitSmall, portrait);
+    const bigHead = firstExistingAsset(configuredBigHead);
+    const normalHead = firstExistingAsset(configuredNormalHead, bigHead, portraitSmall, portrait);
+    const shinyHead = firstExistingAsset(configuredShinyHead);
+    const bigShinyHead = firstExistingAsset(configuredBigShinyHead);
+
+    return {
+        preview: firstExistingAsset(normalHead, portraitSmall, portrait, bigHead, ...illustrations),
+        portrait,
+        portrait_small: portraitSmall,
+        head: {
+            normal: normalHead,
+            shiny: shinyHead && shinyHead !== normalHead ? shinyHead : null,
+            big: bigHead,
+            big_shiny: bigShinyHead && bigShinyHead !== bigHead ? bigShinyHead : null,
+        },
+        illustrations,
+    };
+}
+
+function firstExistingAsset(...assetPaths) {
+    return assetPaths.find((assetPath) => assetExists(assetPath)) ?? null;
+}
+
+function assetExists(assetPath) {
+    return typeof assetPath === "string" && fsSyncExists(path.join(outputRootDir, assetPath));
+}
+
+function fsSyncExists(filePath) {
+    try {
+        return Boolean(fsSync.statSync(filePath).isFile());
+    } catch {
+        return false;
+    }
+}
+
+function findExistingHandbookIllustrations(portraitKey) {
+    const key = cleanText(portraitKey);
+    if (!key) {
+        return [];
+    }
+
+    return [1, 2]
+        .map((index) => `assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_${key}_${index}.webp`)
+        .filter(assetExists);
+}
+
+function textureRefToAssetPath(ref) {
+    if (typeof ref !== "string") {
+        return null;
+    }
+
+    const match = ref.match(/'\/Game\/([^']+)'/u);
+    if (!match) {
+        return null;
+    }
+
+    const objectPath = match[1];
+    const lastSlash = objectPath.lastIndexOf("/");
+    const lastDot = objectPath.lastIndexOf(".");
+    const packagePath = lastDot > lastSlash ? objectPath.slice(0, lastDot) : objectPath;
+    return `assets/webp/Game/${packagePath}.webp`;
 }
 
 function normalizeStat(value) {

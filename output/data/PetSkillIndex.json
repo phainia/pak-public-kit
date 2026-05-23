@@ -30131,70 +30131,220 @@
     ],
     "skills": [
         {
-            "id": 7180120,
-            "name": "暗突袭",
+            "id": 7040210,
+            "name": "“不要给精灵喝太多上头水饮料！即使对战的时候有用也不行！”",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180090,
+            "name": "\"传闻误入灵魂之河的洛克，会短暂地失去和肉体的链接，如果能及时回来，会拥有一段被自己遗忘的记忆。”",
             "type_label": "恶",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7170150,
-            "name": "报复",
-            "type_label": "幽",
-            "move_category": "Defense"
+            "id": 7040470,
+            "name": "“都结束了，敌人燃尽了，我们也燃尽了。”",
+            "type_label": "火",
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7150140,
-            "name": "暴风眼",
-            "type_label": "翼",
+            "id": 7140160,
+            "name": "“对决的时候，我从不说话，精灵的技能就是我的回答”。",
+            "type_label": "武",
             "move_category": "Status"
         },
         {
-            "id": 7180150,
-            "name": "彼岸之手",
+            "id": 7100230,
+            "name": "“对上眼神就放马过来吧，放别的过来也可以。”",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040170,
+            "name": "“前锋听令——扬焚旗之矛，贯敌方于焦土，火族永不燃尽。”",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150220,
+            "name": "“圣城！请带着无翼的我们乘风而起吧！”",
+            "type_label": "翼",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7180260,
+            "name": "“他有急事，先走了。”",
+            "type_label": "恶",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7180270,
+            "name": "“他有急事，先走了。”",
             "type_label": "恶",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7160220,
-            "name": "鞭打",
+            "id": 7160260,
+            "name": "“它只是一个柔弱无害的小小精灵罢了！”",
             "type_label": "萌",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7090130,
-            "name": "冰雹",
-            "type_label": "冰",
+            "id": 7160380,
+            "name": "“它只是一个柔弱无害的小小精灵罢了！”",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030460,
+            "name": "“完了，这次植物课作业又爆炸了。”",
+            "type_label": "草",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7080160,
+            "name": "“小心落石”的标语总是值得注意，但是地系部族的洛克不会提示你。",
+            "type_label": "地",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7090150,
-            "name": "冰冻光线",
+            "id": 7030290,
+            "name": "“信我！白树真的没有死，她仍然在喂养我们！”",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030500,
+            "name": "2连击，每次连击自己回复8%生命，使用后本技能连击数永久+1。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7130160,
+            "name": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。",
+            "type_label": "虫",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7180170,
+            "name": "暗突袭",
+            "type_label": "恶",
+            "move_category": "Status"
+        },
+        {
+            "id": 7170210,
+            "name": "报复",
+            "type_label": "幽",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090140,
+            "name": "暴风雪",
             "type_label": "冰",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7090320,
+            "id": 7150210,
+            "name": "暴风眼",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140100,
+            "name": "崩的是对方的架势，合的是破招的美学。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180210,
+            "name": "彼岸之手",
+            "type_label": "恶",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7100190,
+            "name": "必将加倍奉还。",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080270,
+            "name": "壁垒",
+            "type_label": "地",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090440,
+            "name": "冰1",
+            "type_label": "冰",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7300004,
+            "name": "冰刺",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090360,
+            "name": "冰蛋壳",
+            "type_label": "冰",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7300003,
+            "name": "冰化",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090350,
             "name": "冰捆缚",
             "type_label": "冰",
-            "move_category": "Status"
+            "move_category": "Defense"
         },
         {
-            "id": 7090210,
+            "id": 7090250,
             "name": "冰墙",
             "type_label": "冰",
-            "move_category": "Defense"
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7090200,
+            "id": 7090230,
             "name": "冰天雪地",
             "type_label": "冰",
-            "move_category": "Defense"
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7120250,
-            "name": "不可接触",
-            "type_label": "毒",
-            "move_category": "Defense"
+            "id": 7100120,
+            "name": "冰越厚，越安静，越有力。",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090280,
+            "name": "冰爪",
+            "type_label": "冰",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7300005,
+            "name": "冰之花",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090270,
+            "name": "冰锥",
+            "type_label": "冰",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030300,
+            "name": "不算逃跑。",
+            "type_label": "草",
+            "move_category": "Status"
         },
         {
             "id": 7020720,
@@ -30203,21 +30353,51 @@
             "move_category": "Status"
         },
         {
-            "id": 7140230,
-            "name": "缠丝劲",
-            "type_label": "武",
+            "id": 7999107,
+            "name": "测试共鸣魔法npc",
+            "type_label": "翼",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7150120,
-            "name": "乘风",
-            "type_label": "翼",
-            "move_category": "Status"
+            "id": 7070120,
+            "name": "拆卸",
+            "type_label": "机械",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7160220,
+            "name": "超级糖果",
+            "type_label": "萌",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7190360,
+            "name": "超维投射",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7190390,
+            "name": "超新星馈赠",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050370,
+            "name": "潮涌",
+            "type_label": "水",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7020510,
             "name": "乘胜追击",
             "type_label": "普通",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070040,
+            "name": "齿轮扭矩",
+            "type_label": "机械",
             "move_category": "Physical Attack"
         },
         {
@@ -30227,39 +30407,15 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7130250,
-            "name": "虫刺",
-            "type_label": "虫",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7130280,
-            "name": "虫蛊",
-            "type_label": "虫",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7130150,
+            "id": 7130210,
             "name": "虫击",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130200,
-            "name": "虫群智慧",
             "type_label": "虫",
             "move_category": "Status"
         },
         {
-            "id": 7030530,
-            "name": "抽枝",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040610,
-            "name": "除厄",
-            "type_label": "火",
+            "id": 7130280,
+            "name": "虫群智慧",
+            "type_label": "虫",
             "move_category": "Magic Attack"
         },
         {
@@ -30269,25 +30425,25 @@
             "move_category": "Magic Attack"
         },
         {
+            "id": 7110250,
+            "name": "触电",
+            "type_label": "电",
+            "move_category": "Status"
+        },
+        {
             "id": 7020530,
             "name": "穿膛",
             "type_label": "普通",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7070120,
-            "name": "传感器",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
+            "id": 7040220,
+            "name": "传说以心脏为代价，可以和流星签订契约，使用流星的力量。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7120290,
-            "name": "传染",
-            "type_label": "毒",
-            "move_category": "Status"
-        },
-        {
-            "id": 7100130,
+            "id": 7100160,
             "name": "吹炎",
             "type_label": "龙",
             "move_category": "Physical Attack"
@@ -30299,27 +30455,45 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7080220,
-            "name": "刺盾",
-            "type_label": "地",
+            "id": 7070160,
+            "name": "磁暴",
+            "type_label": "机械",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7110370,
+            "name": "磁干扰",
+            "type_label": "电",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020700,
+            "name": "伺机而动",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7170150,
+            "name": "从家里带来的午餐盒，学长说帮我用炼金釜加热一下，就变成这样了……",
+            "type_label": "幽",
             "move_category": "Defense"
         },
         {
-            "id": 7120300,
-            "name": "刺细胞膜",
-            "type_label": "毒",
-            "move_category": "Defense"
+            "id": 7140090,
+            "name": "寸拳",
+            "type_label": "武",
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7040450,
-            "name": "淬火",
-            "type_label": "火",
-            "move_category": "Defense"
+            "id": 7020960,
+            "name": "打鼾",
+            "type_label": "普通",
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7190390,
-            "name": "大爆炸",
-            "type_label": "幻",
+            "id": 7090290,
+            "name": "打雪仗",
+            "type_label": "冰",
             "move_category": "Magic Attack"
         },
         {
@@ -30329,124 +30503,406 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7110010,
-            "name": "导电撞击",
-            "type_label": "电",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080330,
-            "name": "地陷",
+            "id": 7080470,
+            "name": "地2",
             "type_label": "地",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7180270,
-            "name": "诋毁",
-            "type_label": "恶",
+            "id": 7080150,
+            "name": "地刺",
+            "type_label": "地",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7110180,
-            "name": "电弧",
-            "type_label": "电",
-            "move_category": "Physical Attack"
+            "id": 7070260,
+            "name": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”",
+            "type_label": "机械",
+            "move_category": "Status"
         },
         {
-            "id": 7110410,
-            "name": "电离爆破",
-            "type_label": "电",
+            "id": 7080360,
+            "name": "地陷",
+            "type_label": "地",
             "move_category": "Status"
         },
         {
             "id": 7180290,
-            "name": "跌落",
+            "name": "等价交换",
             "type_label": "恶",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7190430,
-            "name": "叠加态",
-            "type_label": "幻",
+            "id": 7080210,
+            "name": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。",
+            "type_label": "地",
             "move_category": "Status"
         },
         {
-            "id": 7140270,
-            "name": "叠势",
+            "id": 7040300,
+            "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+            "type_label": "火",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7030270,
+            "name": "敌方获得1层寄生。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7120210,
+            "name": "敌方获得3层中毒，应对防御：改为获得8层。",
+            "type_label": "毒",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7140210,
+            "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
             "type_label": "武",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7090280,
+            "id": 7140220,
+            "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7110240,
+            "name": "电弧",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110350,
+            "name": "电流",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030510,
+            "name": "调配炼金药剂也讲究缘分，盐多加水，水多加盐。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7090320,
             "name": "丢冰块",
+            "type_label": "冰",
+            "move_category": "Status"
+        },
+        {
+            "id": 7090410,
+            "name": "冬至",
             "type_label": "冰",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7090440,
-            "name": "冻土层",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7120120,
-            "name": "毒孢子",
+            "id": 7120230,
+            "name": "毒泡泡",
             "type_label": "毒",
             "move_category": "Status"
         },
         {
-            "id": 7120090,
-            "name": "毒囊",
-            "type_label": "毒",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7120130,
+            "id": 7120160,
             "name": "毒雾",
             "type_label": "毒",
             "move_category": "Status"
         },
         {
-            "id": 7120200,
-            "name": "毒沼",
-            "type_label": "毒",
+            "id": 7130110,
+            "name": "毒线针",
+            "type_label": "虫",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7070280,
-            "name": "锻造",
-            "type_label": "机械",
-            "move_category": "Magic Attack"
+            "id": 7120140,
+            "name": "毒液渗透",
+            "type_label": "毒",
+            "move_category": "Status"
         },
         {
-            "id": 7080250,
-            "name": "遁地",
-            "type_label": "地",
+            "id": 7120250,
+            "name": "毒沼",
+            "type_label": "毒",
             "move_category": "Defense"
         },
         {
-            "id": 7190260,
-            "name": "多维击打",
+            "id": 7030440,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "草",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030470,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040160,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040340,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040350,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040370,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070150,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "机械",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080310,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "地",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7080340,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140290,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "武",
+            "move_category": "Status"
+        },
+        {
+            "id": 7150270,
+            "name": "对敌方精灵造成魔法伤害。",
+            "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030180,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030190,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030480,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040330,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040380,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040400,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040420,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7050340,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7060130,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "光",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7060220,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "光",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7100240,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "龙",
+            "move_category": "Status"
+        },
+        {
+            "id": 7100260,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "龙",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7100270,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7110390,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7140310,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "武",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7140320,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "武",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7150310,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "翼",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7150320,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7170260,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "幽",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7180120,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180320,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "恶",
+            "move_category": "Status"
+        },
+        {
+            "id": 7190430,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "幻",
+            "move_category": "Status"
+        },
+        {
+            "id": 7190440,
+            "name": "对敌方精灵造成物理伤害。",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140120,
+            "name": "对战课的某个老师，认为精灵对战存在一种美学，来自对手之间默契的喂招和破招。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140270,
+            "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
+            "type_label": "武",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7150060,
+            "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140180,
+            "name": "对战课的某个老师，认为精灵对战中存在一种哲学，以此发展出后发先制的战术，是为“截”。",
+            "type_label": "武",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7000344,
+            "name": "对撞",
             "type_label": "幻",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7080120,
+            "id": 7020990,
+            "name": "吨位压制",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080140,
             "name": "跺地",
             "type_label": "地",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7190330,
-            "name": "二律背反",
-            "type_label": "幻",
+            "id": 7180440,
+            "name": "恶1",
+            "type_label": "恶",
             "move_category": "Status"
         },
         {
-            "id": 7140100,
-            "name": "反击拳",
-            "type_label": "武",
+            "id": 7180140,
+            "name": "恶能量",
+            "type_label": "恶",
             "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180300,
+            "name": "恶念交换",
+            "type_label": "恶",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7180250,
+            "name": "恶意逃离",
+            "type_label": "恶",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170170,
+            "name": "恶作剧",
+            "type_label": "幽",
+            "move_category": "Magic Attack"
         },
         {
             "id": 7020790,
@@ -30455,15 +30911,27 @@
             "move_category": "Defense"
         },
         {
-            "id": 7140300,
-            "name": "防御反击",
-            "type_label": "武",
+            "id": 7020780,
+            "name": "防御",
+            "type_label": "普通",
             "move_category": "Defense"
         },
         {
-            "id": 7150380,
+            "id": 7130180,
+            "name": "飞断",
+            "type_label": "虫",
+            "move_category": "Status"
+        },
+        {
+            "id": 7160190,
             "name": "飞箭",
-            "type_label": "翼",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7090100,
+            "name": "飞沙",
+            "type_label": "冰",
             "move_category": "Magic Attack"
         },
         {
@@ -30473,55 +30941,37 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7150260,
-            "name": "飞羽",
-            "type_label": "翼",
-            "move_category": "Status"
+            "id": 7160210,
+            "name": "飞吻",
+            "type_label": "萌",
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7170120,
+            "id": 7050350,
+            "name": "肥皂泡",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170160,
             "name": "坟场搏击",
             "type_label": "幽",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7130290,
+            "name": "奉献吧！为了虫群的崇高意志！",
+            "type_label": "虫",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7040680,
-            "name": "焚尽",
-            "type_label": "火",
-            "move_category": "Status"
-        },
-        {
-            "id": 7150210,
-            "name": "风矢",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150270,
-            "name": "风隐",
-            "type_label": "翼",
-            "move_category": "Status"
-        },
-        {
-            "id": 7150390,
+            "id": 7160200,
             "name": "俯冲",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150240,
-            "name": "俯冲猛击",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7120230,
-            "name": "腐化",
-            "type_label": "毒",
+            "type_label": "萌",
             "move_category": "Status"
         },
         {
-            "id": 7120070,
+            "id": 7120110,
             "name": "腐蚀酸液",
             "type_label": "毒",
             "move_category": "Magic Attack"
@@ -30533,22 +30983,34 @@
             "move_category": "Status"
         },
         {
-            "id": 7120110,
-            "name": "感染病",
-            "type_label": "毒",
+            "id": 7020861,
+            "name": "复写",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020862,
+            "name": "复写",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020863,
+            "name": "复写",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7060200,
+            "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+            "type_label": "光",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7070050,
-            "name": "杠杆置换",
-            "type_label": "机械",
-            "move_category": "Status"
-        },
-        {
-            "id": 7170250,
+            "id": 7180070,
             "name": "勾魂",
-            "type_label": "幽",
-            "move_category": "Status"
+            "type_label": "恶",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7021040,
@@ -30558,15 +31020,27 @@
         },
         {
             "id": 7060170,
+            "name": "光球",
+            "type_label": "光",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7060190,
+            "name": "光刃",
+            "type_label": "光",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7060180,
             "name": "光之矛",
             "type_label": "光",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7170190,
-            "name": "诡刺",
-            "type_label": "幽",
-            "move_category": "Physical Attack"
+            "id": 7090300,
+            "name": "滚雪球",
+            "type_label": "冰",
+            "move_category": "Status"
         },
         {
             "id": 7020650,
@@ -30575,22 +31049,22 @@
             "move_category": "Status"
         },
         {
-            "id": 7110360,
-            "name": "过载回路",
-            "type_label": "电",
+            "id": 7080130,
+            "name": "过山车",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090330,
+            "name": "寒风吹",
+            "type_label": "冰",
             "move_category": "Status"
         },
         {
-            "id": 7090290,
-            "name": "寒风吹",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7180260,
-            "name": "黑手",
-            "type_label": "恶",
-            "move_category": "Magic Attack"
+            "id": 7140080,
+            "name": "横剪",
+            "type_label": "武",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7021020,
@@ -30599,15 +31073,51 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7170200,
-            "name": "幻象",
-            "type_label": "幽",
+            "id": 7300002,
+            "name": "唤雪",
+            "type_label": "地",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7150220,
-            "name": "回旋风暴",
-            "type_label": "翼",
+            "id": 7190270,
+            "name": "晃攻",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110420,
+            "name": "回合结束自己返场，下回合所选技能使用次数+1。",
+            "type_label": "电",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7021060,
+            "name": "彗星",
+            "type_label": "普通",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040260,
+            "name": "火红的烈焰从地底最深处向外迸发，构成了火系部族的盛大舞台。",
+            "type_label": "火",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030160,
+            "name": "获得印记，每回合回1能量。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070060,
+            "name": "机械原本没有意志，所行善恶来自造物者的欲望。",
+            "type_label": "机械",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050390,
+            "name": "激流",
+            "type_label": "水",
             "move_category": "Magic Attack"
         },
         {
@@ -30617,22 +31127,22 @@
             "move_category": "Status"
         },
         {
-            "id": 7090140,
-            "name": "极寒领域",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
+            "id": 7080230,
+            "name": "即使地底蛮兽也不曾让他们退缩。",
+            "type_label": "地",
+            "move_category": "Defense"
         },
         {
-            "id": 7180130,
+            "id": 7130200,
+            "name": "即使圣城坠毁，虫群也不会灭绝。",
+            "type_label": "虫",
+            "move_category": "Status"
+        },
+        {
+            "id": 7180190,
             "name": "极限撕裂",
             "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150090,
-            "name": "疾风刺",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
+            "move_category": "Status"
         },
         {
             "id": 7020740,
@@ -30641,1857 +31151,15 @@
             "move_category": "Status"
         },
         {
-            "id": 7000341,
-            "name": "技能 7000341",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7000342,
-            "name": "技能 7000342",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7000343,
-            "name": "技能 7000343",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7000344,
-            "name": "技能 7000344",
-            "type_label": "幻",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7000345,
-            "name": "技能 7000345",
-            "type_label": "幻",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020360,
-            "name": "技能 7020360",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020370,
-            "name": "技能 7020370",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020390,
-            "name": "技能 7020390",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020400,
-            "name": "技能 7020400",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020480,
-            "name": "技能 7020480",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020600,
-            "name": "技能 7020600",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020620,
-            "name": "技能 7020620",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020630,
-            "name": "技能 7020630",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020640,
-            "name": "技能 7020640",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020670,
-            "name": "技能 7020670",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020700,
-            "name": "技能 7020700",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020780,
-            "name": "技能 7020780",
-            "type_label": "普通",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7020841,
-            "name": "技能 7020841",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020842,
-            "name": "技能 7020842",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020843,
-            "name": "技能 7020843",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020851,
-            "name": "技能 7020851",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020852,
-            "name": "技能 7020852",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020853,
-            "name": "技能 7020853",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020861,
-            "name": "技能 7020861",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020862,
-            "name": "技能 7020862",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020863,
-            "name": "技能 7020863",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7020870,
-            "name": "技能 7020870",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020880,
-            "name": "技能 7020880",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020890,
-            "name": "技能 7020890",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020920,
-            "name": "技能 7020920",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020950,
-            "name": "技能 7020950",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020960,
-            "name": "技能 7020960",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7020970,
-            "name": "技能 7020970",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020980,
-            "name": "技能 7020980",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7020990,
-            "name": "技能 7020990",
-            "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7021050,
-            "name": "技能 7021050",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7021060,
-            "name": "技能 7021060",
-            "type_label": "普通",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7021090,
-            "name": "技能 7021090",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7021180,
-            "name": "技能 7021180",
-            "type_label": "普通",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030160,
-            "name": "技能 7030160",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030170,
-            "name": "技能 7030170",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030180,
-            "name": "技能 7030180",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030190,
-            "name": "技能 7030190",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030200,
-            "name": "技能 7030200",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030210,
-            "name": "技能 7030210",
-            "type_label": "草",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7030220,
-            "name": "技能 7030220",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030230,
-            "name": "技能 7030230",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030240,
-            "name": "技能 7030240",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030260,
-            "name": "技能 7030260",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030270,
-            "name": "技能 7030270",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030280,
-            "name": "技能 7030280",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030300,
-            "name": "技能 7030300",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030320,
-            "name": "技能 7030320",
-            "type_label": "草",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7030330,
-            "name": "技能 7030330",
-            "type_label": "草",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7030340,
-            "name": "技能 7030340",
-            "type_label": "草",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7030410,
-            "name": "技能 7030410",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030430,
-            "name": "技能 7030430",
-            "type_label": "草",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7030440,
-            "name": "技能 7030440",
-            "type_label": "草",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7030450,
-            "name": "技能 7030450",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030460,
-            "name": "技能 7030460",
-            "type_label": "草",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7030470,
-            "name": "技能 7030470",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030480,
-            "name": "技能 7030480",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7030490,
-            "name": "技能 7030490",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030500,
-            "name": "技能 7030500",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030510,
-            "name": "技能 7030510",
-            "type_label": "草",
-            "move_category": "Status"
-        },
-        {
-            "id": 7030540,
-            "name": "技能 7030540",
-            "type_label": "草",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7030610,
-            "name": "技能 7030610",
-            "type_label": "草",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040150,
-            "name": "技能 7040150",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040160,
-            "name": "技能 7040160",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040170,
-            "name": "技能 7040170",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040180,
-            "name": "技能 7040180",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040190,
-            "name": "技能 7040190",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040200,
-            "name": "技能 7040200",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040210,
-            "name": "技能 7040210",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040220,
-            "name": "技能 7040220",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040230,
-            "name": "技能 7040230",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040240,
-            "name": "技能 7040240",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040250,
-            "name": "技能 7040250",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040270,
-            "name": "技能 7040270",
-            "type_label": "火",
-            "move_category": "Status"
-        },
-        {
-            "id": 7040280,
-            "name": "技能 7040280",
-            "type_label": "火",
-            "move_category": "Status"
-        },
-        {
-            "id": 7040300,
-            "name": "技能 7040300",
-            "type_label": "火",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7040320,
-            "name": "技能 7040320",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040330,
-            "name": "技能 7040330",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040340,
-            "name": "技能 7040340",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040360,
-            "name": "技能 7040360",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040370,
-            "name": "技能 7040370",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040380,
-            "name": "技能 7040380",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040390,
-            "name": "技能 7040390",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040410,
-            "name": "技能 7040410",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040420,
-            "name": "技能 7040420",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7040440,
-            "name": "技能 7040440",
-            "type_label": "火",
-            "move_category": "Status"
-        },
-        {
-            "id": 7040460,
-            "name": "技能 7040460",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040470,
-            "name": "技能 7040470",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040500,
-            "name": "技能 7040500",
-            "type_label": "火",
-            "move_category": "Status"
-        },
-        {
-            "id": 7040600,
-            "name": "技能 7040600",
-            "type_label": "火",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7050160,
-            "name": "技能 7050160",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050170,
-            "name": "技能 7050170",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050180,
-            "name": "技能 7050180",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050190,
-            "name": "技能 7050190",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050210,
-            "name": "技能 7050210",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050240,
-            "name": "技能 7050240",
-            "type_label": "水",
-            "move_category": "Status"
-        },
-        {
-            "id": 7050250,
-            "name": "技能 7050250",
-            "type_label": "水",
-            "move_category": "Status"
-        },
-        {
-            "id": 7050260,
-            "name": "技能 7050260",
-            "type_label": "水",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7050270,
-            "name": "技能 7050270",
-            "type_label": "水",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7050280,
-            "name": "技能 7050280",
-            "type_label": "水",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7050290,
-            "name": "技能 7050290",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050320,
-            "name": "技能 7050320",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050330,
-            "name": "技能 7050330",
-            "type_label": "水",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7050340,
-            "name": "技能 7050340",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050350,
-            "name": "技能 7050350",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050360,
-            "name": "技能 7050360",
-            "type_label": "水",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7050380,
-            "name": "技能 7050380",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050390,
-            "name": "技能 7050390",
-            "type_label": "水",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7050400,
-            "name": "技能 7050400",
-            "type_label": "水",
-            "move_category": "Status"
-        },
-        {
-            "id": 7050410,
-            "name": "技能 7050410",
-            "type_label": "水",
-            "move_category": "Status"
-        },
-        {
-            "id": 7050420,
-            "name": "技能 7050420",
-            "type_label": "水",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7050430,
-            "name": "技能 7050430",
-            "type_label": "水",
-            "move_category": "Status"
-        },
-        {
-            "id": 7050450,
-            "name": "技能 7050450",
-            "type_label": "水",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7050460,
-            "name": "技能 7050460",
-            "type_label": "水",
-            "move_category": "Status"
-        },
-        {
-            "id": 7060090,
-            "name": "技能 7060090",
-            "type_label": "光",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7060100,
-            "name": "技能 7060100",
-            "type_label": "光",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7060120,
-            "name": "技能 7060120",
-            "type_label": "光",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7060130,
-            "name": "技能 7060130",
-            "type_label": "光",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7060140,
-            "name": "技能 7060140",
-            "type_label": "光",
-            "move_category": "Status"
-        },
-        {
-            "id": 7060150,
-            "name": "技能 7060150",
-            "type_label": "光",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7060160,
-            "name": "技能 7060160",
-            "type_label": "光",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7060180,
-            "name": "技能 7060180",
-            "type_label": "光",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7060200,
-            "name": "技能 7060200",
-            "type_label": "光",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7060240,
-            "name": "技能 7060240",
-            "type_label": "光",
-            "move_category": "Status"
-        },
-        {
-            "id": 7070010,
-            "name": "技能 7070010",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7070020,
-            "name": "技能 7070020",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7070030,
-            "name": "技能 7070030",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7070040,
-            "name": "技能 7070040",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7070060,
-            "name": "技能 7070060",
-            "type_label": "机械",
-            "move_category": "Status"
-        },
-        {
-            "id": 7070070,
-            "name": "技能 7070070",
-            "type_label": "机械",
-            "move_category": "Status"
-        },
-        {
-            "id": 7070080,
-            "name": "技能 7070080",
-            "type_label": "机械",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7070100,
-            "name": "技能 7070100",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7070110,
-            "name": "技能 7070110",
-            "type_label": "机械",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7070140,
-            "name": "技能 7070140",
-            "type_label": "机械",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7070150,
-            "name": "技能 7070150",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7070170,
-            "name": "技能 7070170",
-            "type_label": "机械",
-            "move_category": "Status"
-        },
-        {
-            "id": 7080110,
-            "name": "技能 7080110",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080130,
-            "name": "技能 7080130",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080140,
-            "name": "技能 7080140",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080150,
-            "name": "技能 7080150",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080160,
-            "name": "技能 7080160",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080170,
-            "name": "技能 7080170",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080180,
-            "name": "技能 7080180",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080200,
-            "name": "技能 7080200",
-            "type_label": "地",
-            "move_category": "Status"
-        },
-        {
-            "id": 7080240,
-            "name": "技能 7080240",
-            "type_label": "地",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7080270,
-            "name": "技能 7080270",
-            "type_label": "地",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7080300,
-            "name": "技能 7080300",
-            "type_label": "地",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7080310,
-            "name": "技能 7080310",
-            "type_label": "地",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7080320,
-            "name": "技能 7080320",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080340,
-            "name": "技能 7080340",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080350,
-            "name": "技能 7080350",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080370,
-            "name": "技能 7080370",
-            "type_label": "地",
-            "move_category": "Status"
-        },
-        {
-            "id": 7080380,
-            "name": "技能 7080380",
-            "type_label": "地",
-            "move_category": "Status"
-        },
-        {
-            "id": 7080400,
-            "name": "技能 7080400",
-            "type_label": "地",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7080410,
-            "name": "技能 7080410",
-            "type_label": "地",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7080420,
-            "name": "技能 7080420",
-            "type_label": "地",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7080470,
-            "name": "技能 7080470",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7090100,
-            "name": "技能 7090100",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7090110,
-            "name": "技能 7090110",
-            "type_label": "冰",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7090120,
-            "name": "技能 7090120",
-            "type_label": "冰",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7090160,
-            "name": "技能 7090160",
-            "type_label": "冰",
-            "move_category": "Status"
-        },
-        {
-            "id": 7090180,
-            "name": "技能 7090180",
-            "type_label": "冰",
-            "move_category": "Status"
-        },
-        {
-            "id": 7090230,
-            "name": "技能 7090230",
-            "type_label": "冰",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7090250,
-            "name": "技能 7090250",
-            "type_label": "冰",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7090260,
-            "name": "技能 7090260",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7090270,
-            "name": "技能 7090270",
-            "type_label": "冰",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7090310,
-            "name": "技能 7090310",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7090340,
-            "name": "技能 7090340",
-            "type_label": "冰",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7090350,
-            "name": "技能 7090350",
-            "type_label": "冰",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7090360,
-            "name": "技能 7090360",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7090370,
-            "name": "技能 7090370",
-            "type_label": "冰",
-            "move_category": "Status"
-        },
-        {
-            "id": 7090390,
-            "name": "技能 7090390",
-            "type_label": "冰",
-            "move_category": "Status"
-        },
-        {
-            "id": 7090400,
-            "name": "技能 7090400",
-            "type_label": "冰",
-            "move_category": "Status"
-        },
-        {
-            "id": 7090410,
-            "name": "技能 7090410",
-            "type_label": "冰",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7100140,
-            "name": "技能 7100140",
-            "type_label": "龙",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7100150,
-            "name": "技能 7100150",
-            "type_label": "龙",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7100180,
-            "name": "技能 7100180",
-            "type_label": "龙",
-            "move_category": "Status"
-        },
-        {
-            "id": 7100190,
-            "name": "技能 7100190",
-            "type_label": "龙",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7100200,
-            "name": "技能 7100200",
-            "type_label": "龙",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7100210,
-            "name": "技能 7100210",
-            "type_label": "龙",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7100220,
-            "name": "技能 7100220",
-            "type_label": "龙",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7100240,
-            "name": "技能 7100240",
-            "type_label": "龙",
-            "move_category": "Status"
-        },
-        {
-            "id": 7100250,
-            "name": "技能 7100250",
-            "type_label": "龙",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7100270,
-            "name": "技能 7100270",
-            "type_label": "龙",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7100280,
-            "name": "技能 7100280",
-            "type_label": "龙",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7100290,
-            "name": "技能 7100290",
-            "type_label": "龙",
-            "move_category": "Status"
-        },
-        {
-            "id": 7110190,
-            "name": "技能 7110190",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110200,
-            "name": "技能 7110200",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110210,
-            "name": "技能 7110210",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110230,
-            "name": "技能 7110230",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110240,
-            "name": "技能 7110240",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110260,
-            "name": "技能 7110260",
-            "type_label": "电",
-            "move_category": "Status"
-        },
-        {
-            "id": 7110270,
-            "name": "技能 7110270",
-            "type_label": "电",
-            "move_category": "Status"
-        },
-        {
-            "id": 7110280,
-            "name": "技能 7110280",
-            "type_label": "电",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7110290,
-            "name": "技能 7110290",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110300,
-            "name": "技能 7110300",
+            "id": 7110330,
+            "name": "集中",
             "type_label": "电",
             "move_category": "Physical Attack"
-        },
-        {
-            "id": 7110310,
-            "name": "技能 7110310",
-            "type_label": "电",
-            "move_category": "Magic Attack"
         },
         {
             "id": 7110320,
-            "name": "技能 7110320",
+            "name": "加大功率",
             "type_label": "电",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7110330,
-            "name": "技能 7110330",
-            "type_label": "电",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7110340,
-            "name": "技能 7110340",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110380,
-            "name": "技能 7110380",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7110400,
-            "name": "技能 7110400",
-            "type_label": "电",
-            "move_category": "Status"
-        },
-        {
-            "id": 7110420,
-            "name": "技能 7110420",
-            "type_label": "电",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7110430,
-            "name": "技能 7110430",
-            "type_label": "电",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7120060,
-            "name": "技能 7120060",
-            "type_label": "毒",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7120100,
-            "name": "技能 7120100",
-            "type_label": "毒",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7120150,
-            "name": "技能 7120150",
-            "type_label": "毒",
-            "move_category": "Status"
-        },
-        {
-            "id": 7120160,
-            "name": "技能 7120160",
-            "type_label": "毒",
-            "move_category": "Status"
-        },
-        {
-            "id": 7120180,
-            "name": "技能 7120180",
-            "type_label": "毒",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7120190,
-            "name": "技能 7120190",
-            "type_label": "毒",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7120240,
-            "name": "技能 7120240",
-            "type_label": "毒",
-            "move_category": "Status"
-        },
-        {
-            "id": 7130100,
-            "name": "技能 7130100",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130110,
-            "name": "技能 7130110",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130120,
-            "name": "技能 7130120",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130130,
-            "name": "技能 7130130",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130140,
-            "name": "技能 7130140",
-            "type_label": "虫",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7130160,
-            "name": "技能 7130160",
-            "type_label": "虫",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7130170,
-            "name": "技能 7130170",
-            "type_label": "虫",
-            "move_category": "Status"
-        },
-        {
-            "id": 7130180,
-            "name": "技能 7130180",
-            "type_label": "虫",
-            "move_category": "Status"
-        },
-        {
-            "id": 7130190,
-            "name": "技能 7130190",
-            "type_label": "虫",
-            "move_category": "Status"
-        },
-        {
-            "id": 7130220,
-            "name": "技能 7130220",
-            "type_label": "虫",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7130240,
-            "name": "技能 7130240",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130260,
-            "name": "技能 7130260",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130270,
-            "name": "技能 7130270",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130290,
-            "name": "技能 7130290",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130300,
-            "name": "技能 7130300",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130310,
-            "name": "技能 7130310",
-            "type_label": "虫",
-            "move_category": "Status"
-        },
-        {
-            "id": 7130320,
-            "name": "技能 7130320",
-            "type_label": "虫",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7130350,
-            "name": "技能 7130350",
-            "type_label": "虫",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140050,
-            "name": "技能 7140050",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140060,
-            "name": "技能 7140060",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140070,
-            "name": "技能 7140070",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140120,
-            "name": "技能 7140120",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140130,
-            "name": "技能 7140130",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140140,
-            "name": "技能 7140140",
-            "type_label": "武",
-            "move_category": "Status"
-        },
-        {
-            "id": 7140160,
-            "name": "技能 7140160",
-            "type_label": "武",
-            "move_category": "Status"
-        },
-        {
-            "id": 7140170,
-            "name": "技能 7140170",
-            "type_label": "武",
-            "move_category": "Status"
-        },
-        {
-            "id": 7140190,
-            "name": "技能 7140190",
-            "type_label": "武",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7140220,
-            "name": "技能 7140220",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140260,
-            "name": "技能 7140260",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7140310,
-            "name": "技能 7140310",
-            "type_label": "武",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7140320,
-            "name": "技能 7140320",
-            "type_label": "武",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7140360,
-            "name": "技能 7140360",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150050,
-            "name": "技能 7150050",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150130,
-            "name": "技能 7150130",
-            "type_label": "翼",
-            "move_category": "Status"
-        },
-        {
-            "id": 7150150,
-            "name": "技能 7150150",
-            "type_label": "翼",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7150170,
-            "name": "技能 7150170",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150180,
-            "name": "技能 7150180",
-            "type_label": "翼",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7150190,
-            "name": "技能 7150190",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150200,
-            "name": "技能 7150200",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150250,
-            "name": "技能 7150250",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7150320,
-            "name": "技能 7150320",
-            "type_label": "翼",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160130,
-            "name": "技能 7160130",
-            "type_label": "萌",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7160140,
-            "name": "技能 7160140",
-            "type_label": "萌",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7160160,
-            "name": "技能 7160160",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160170,
-            "name": "技能 7160170",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160180,
-            "name": "技能 7160180",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160190,
-            "name": "技能 7160190",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160210,
-            "name": "技能 7160210",
-            "type_label": "萌",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7160230,
-            "name": "技能 7160230",
-            "type_label": "萌",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7160240,
-            "name": "技能 7160240",
-            "type_label": "萌",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7160250,
-            "name": "技能 7160250",
-            "type_label": "萌",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7160260,
-            "name": "技能 7160260",
-            "type_label": "萌",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7160270,
-            "name": "技能 7160270",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160280,
-            "name": "技能 7160280",
-            "type_label": "萌",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7160310,
-            "name": "技能 7160310",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7160320,
-            "name": "技能 7160320",
-            "type_label": "萌",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7170090,
-            "name": "技能 7170090",
-            "type_label": "幽",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7170110,
-            "name": "技能 7170110",
-            "type_label": "幽",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7170130,
-            "name": "技能 7170130",
-            "type_label": "幽",
-            "move_category": "Status"
-        },
-        {
-            "id": 7170160,
-            "name": "技能 7170160",
-            "type_label": "幽",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7170170,
-            "name": "技能 7170170",
-            "type_label": "幽",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7170240,
-            "name": "技能 7170240",
-            "type_label": "幽",
-            "move_category": "Status"
-        },
-        {
-            "id": 7170260,
-            "name": "技能 7170260",
-            "type_label": "幽",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7170270,
-            "name": "技能 7170270",
-            "type_label": "幽",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180070,
-            "name": "技能 7180070",
-            "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7180080,
-            "name": "技能 7180080",
-            "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7180090,
-            "name": "技能 7180090",
-            "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7180110,
-            "name": "技能 7180110",
-            "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7180140,
-            "name": "技能 7180140",
-            "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7180160,
-            "name": "技能 7180160",
-            "type_label": "恶",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180190,
-            "name": "技能 7180190",
-            "type_label": "恶",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180210,
-            "name": "技能 7180210",
-            "type_label": "恶",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7180300,
-            "name": "技能 7180300",
-            "type_label": "恶",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7180310,
-            "name": "技能 7180310",
-            "type_label": "恶",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7180320,
-            "name": "技能 7180320",
-            "type_label": "恶",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180340,
-            "name": "技能 7180340",
-            "type_label": "恶",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7180350,
-            "name": "技能 7180350",
-            "type_label": "恶",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180360,
-            "name": "技能 7180360",
-            "type_label": "恶",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7190210,
-            "name": "技能 7190210",
-            "type_label": "幻",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7190250,
-            "name": "技能 7190250",
-            "type_label": "幻",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7190270,
-            "name": "技能 7190270",
-            "type_label": "幻",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7190280,
-            "name": "技能 7190280",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7190310,
-            "name": "技能 7190310",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7190320,
-            "name": "技能 7190320",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7190360,
-            "name": "技能 7190360",
-            "type_label": "幻",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7190380,
-            "name": "技能 7190380",
-            "type_label": "幻",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7190400,
-            "name": "技能 7190400",
-            "type_label": "幻",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7300001,
-            "name": "技能 7300001",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7300002,
-            "name": "技能 7300002",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7300003,
-            "name": "技能 7300003",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7300004,
-            "name": "技能 7300004",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7300005,
-            "name": "技能 7300005",
-            "type_label": "地",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7999107,
-            "name": "技能 7999107",
-            "type_label": "翼",
             "move_category": "Physical Attack"
         },
         {
@@ -32501,22 +31169,160 @@
             "move_category": "Status"
         },
         {
-            "id": 7160380,
-            "name": "加油",
-            "type_label": "萌",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180440,
+            "id": 7190280,
             "name": "假冒",
-            "type_label": "恶",
+            "type_label": "幻",
             "move_category": "Status"
         },
         {
-            "id": 7070250,
-            "name": "减压阀",
-            "type_label": "机械",
+            "id": 7130250,
+            "name": "假寐",
+            "type_label": "虫",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7100220,
+            "name": "架势",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120290,
+            "name": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。",
+            "type_label": "毒",
             "move_category": "Status"
+        },
+        {
+            "id": 7150240,
+            "name": "减伤50%，迅捷，应对攻击。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150250,
+            "name": "减伤50%，迅捷，应对攻击。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080290,
+            "name": "减伤50%并脱离，应对攻击。",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080300,
+            "name": "减伤50%并脱离，应对攻击。",
+            "type_label": "地",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7140280,
+            "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
+            "type_label": "武",
+            "move_category": "Status"
+        },
+        {
+            "id": 7100280,
+            "name": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7130300,
+            "name": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7130310,
+            "name": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
+            "type_label": "虫",
+            "move_category": "Status"
+        },
+        {
+            "id": 7130150,
+            "name": "减伤70%，巧变：毒系状态技能，应对攻击。",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040320,
+            "name": "减伤70%，应对攻击：敌方获得6层灼烧。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080240,
+            "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
+            "type_label": "地",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7170220,
+            "name": "减伤70%，应对攻击：敌方失去3能量。",
+            "type_label": "幽",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110460,
+            "name": "减伤70%，应对攻击：下回合所选技能使用次数+1。",
+            "type_label": "电",
+            "move_category": "Status"
+        },
+        {
+            "id": 7150380,
+            "name": "减伤70%，应对攻击：自己获得连击数+2。",
+            "type_label": "翼",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030340,
+            "name": "减伤80%，应对攻击：回复3能量。",
+            "type_label": "草",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7070110,
+            "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+            "type_label": "机械",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030320,
+            "name": "减伤80%，应对攻击：自己回复20%生命。",
+            "type_label": "草",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7140360,
+            "name": "减伤80%，应对攻击：自己获得全技能威力+40。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030530,
+            "name": "减伤80%，应对攻击：自己获得物防+70%。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080280,
+            "name": "减伤90%，应对攻击：防御技能冷却-1。",
+            "type_label": "地",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170130,
+            "name": "减伤90%，应对攻击。",
+            "type_label": "幽",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110200,
+            "name": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。",
+            "type_label": "电",
+            "move_category": "Magic Attack"
         },
         {
             "id": 7020430,
@@ -32531,15 +31337,27 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7170140,
-            "name": "降灵",
-            "type_label": "幽",
-            "move_category": "Status"
+            "id": 7120180,
+            "name": "将敌方所有增益，转化成中毒。",
+            "type_label": "毒",
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7090430,
-            "name": "解冻",
-            "type_label": "冰",
+            "id": 7160280,
+            "name": "将自己的萌化转移给敌方。",
+            "type_label": "萌",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7110010,
+            "name": "降低敌方50%防御，应对防御：下次技能无需蓄力。",
+            "type_label": "电",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070100,
+            "name": "教团不在乎，它只要棋子互相制衡。",
+            "type_label": "机械",
             "move_category": "Physical Attack"
         },
         {
@@ -32549,16 +31367,46 @@
             "move_category": "Status"
         },
         {
-            "id": 7070130,
-            "name": "金属噪音",
-            "type_label": "机械",
+            "id": 7020841,
+            "name": "借用",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020842,
+            "name": "借用",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020843,
+            "name": "借用",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040440,
+            "name": "进攻是最好的防守",
+            "type_label": "火",
+            "move_category": "Status"
+        },
+        {
+            "id": 7060240,
+            "name": "晶石蜗的狂热研究员说，可以在这个世界上找到6种天然矿石，矿石中蕴含的魔力与相似颜色的晶石蜗十分相似。",
+            "type_label": "光",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110380,
+            "name": "精灵对决中常发生的怪异现象，突然，指南针开始指北。",
+            "type_label": "电",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7170100,
-            "name": "惊吓盒子",
-            "type_label": "幽",
-            "move_category": "Physical Attack"
+            "id": 7100150,
+            "name": "精灵蓄力中",
+            "type_label": "龙",
+            "move_category": "Magic Attack"
         },
         {
             "id": 7020760,
@@ -32567,16 +31415,34 @@
             "move_category": "Status"
         },
         {
-            "id": 7120140,
+            "id": 7180110,
+            "name": "镜影",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120190,
             "name": "剧毒",
             "type_label": "毒",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7000343,
+            "name": "聚变",
+            "type_label": "幻",
             "move_category": "Status"
         },
         {
-            "id": 7190220,
+            "id": 7190290,
             "name": "空间压迫",
             "type_label": "幻",
-            "move_category": "Physical Attack"
+            "move_category": "Status"
+        },
+        {
+            "id": 7170240,
+            "name": "恐吓",
+            "type_label": "幽",
+            "move_category": "Status"
         },
         {
             "id": 7020690,
@@ -32585,28 +31451,58 @@
             "move_category": "Status"
         },
         {
-            "id": 7090240,
-            "name": "冷风",
-            "type_label": "冰",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7180170,
-            "name": "力量吞噬",
-            "type_label": "恶",
+            "id": 7120240,
+            "name": "溃烂触碰",
+            "type_label": "毒",
             "move_category": "Status"
         },
         {
-            "id": 7190350,
-            "name": "粒子对撞",
-            "type_label": "幻",
+            "id": 7130240,
+            "name": "捆缚",
+            "type_label": "虫",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7120080,
+            "id": 7110220,
+            "name": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。",
+            "type_label": "电",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120300,
+            "name": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
+            "type_label": "毒",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7130130,
+            "name": "老师千叮咛万嘱咐，实验室里的粉尘不要用嘴吹，但总有人不听。",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7130140,
+            "name": "老师千叮咛万嘱咐，实验室里的粉尘不要用嘴吹，但总有人不听。",
+            "type_label": "虫",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7070130,
+            "name": "离子震荡",
+            "type_label": "机械",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7020620,
+            "name": "力量增效",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7120120,
             "name": "连续毒针",
             "type_label": "毒",
-            "move_category": "Physical Attack"
+            "move_category": "Status"
         },
         {
             "id": 7020460,
@@ -32615,64 +31511,28 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7040400,
-            "name": "烈焰风暴",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7100320,
-            "name": "鳞甲",
-            "type_label": "龙",
+            "id": 7070080,
+            "name": "联动装置",
+            "type_label": "机械",
             "move_category": "Defense"
         },
         {
-            "id": 7170230,
-            "name": "灵光",
-            "type_label": "幽",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7170220,
-            "name": "灵媒",
-            "type_label": "幽",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040350,
-            "name": "流火",
-            "type_label": "火",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7080190,
+            "id": 7080200,
             "name": "流沙",
             "type_label": "地",
             "move_category": "Status"
         },
         {
-            "id": 7100120,
-            "name": "龙吼",
+            "id": 7100140,
+            "name": "龙舞",
             "type_label": "龙",
-            "move_category": "Physical Attack"
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7150110,
-            "name": "龙卷风",
-            "type_label": "翼",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7100170,
+            "id": 7100210,
             "name": "龙吟",
             "type_label": "龙",
-            "move_category": "Status"
-        },
-        {
-            "id": 7100160,
-            "name": "龙之利爪",
-            "type_label": "龙",
-            "move_category": "Physical Attack"
+            "move_category": "Magic Attack"
         },
         {
             "id": 7020500,
@@ -32681,22 +31541,28 @@
             "move_category": "Magic Attack"
         },
         {
-            "id": 7180250,
-            "name": "掠夺",
-            "type_label": "恶",
-            "move_category": "Magic Attack"
+            "id": 7110280,
+            "name": "落雷",
+            "type_label": "电",
+            "move_category": "Defense"
         },
         {
-            "id": 7080290,
-            "name": "落石",
-            "type_label": "地",
+            "id": 7020870,
+            "name": "落星",
+            "type_label": "普通",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7110250,
+            "id": 7050260,
+            "name": "落雨",
+            "type_label": "水",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7110290,
             "name": "麻痹",
             "type_label": "电",
-            "move_category": "Status"
+            "move_category": "Magic Attack"
         },
         {
             "id": 7021140,
@@ -32705,20 +31571,50 @@
             "move_category": "Magic Attack"
         },
         {
-            "id": 7060190,
-            "name": "脉冲光线",
+            "id": 7030330,
+            "name": "酶溶剂有一点臭臭的，但精灵们很喜欢，会使劲地嗅。",
+            "type_label": "草",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7060150,
+            "name": "每种系别中的至多1个技能，威力+35。",
+            "type_label": "光",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7020370,
+            "name": "猛烈撞击",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7060120,
+            "name": "米特族存在人口断层，原因尚不得而知。",
             "type_label": "光",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7100260,
-            "name": "绵里藏针",
-            "type_label": "龙",
-            "move_category": "Magic Attack"
+            "id": 7020630,
+            "name": "魔法增效",
+            "type_label": "普通",
+            "move_category": "Status"
         },
         {
             "id": 7020550,
             "name": "魔能爆",
+            "type_label": "普通",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7100130,
+            "name": "那年冬天冷得连影子都冻在了地上。",
+            "type_label": "龙",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7020920,
+            "name": "能量炮",
             "type_label": "普通",
             "move_category": "Magic Attack"
         },
@@ -32729,10 +31625,22 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7080280,
+            "id": 7080320,
             "name": "泥巴喷射",
             "type_label": "地",
-            "move_category": "Magic Attack"
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080220,
+            "name": "泥浆铠甲",
+            "type_label": "地",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7300001,
+            "name": "泥涌",
+            "type_label": "地",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7021150,
@@ -32741,39 +31649,63 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7070260,
+            "id": 7020880,
+            "name": "拍击",
+            "type_label": "普通",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7070280,
             "name": "排气",
             "type_label": "机械",
-            "move_category": "Status"
+            "move_category": "Magic Attack"
         },
         {
-            "id": 7160290,
-            "name": "捧杀",
-            "type_label": "萌",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7180240,
-            "name": "迫害",
-            "type_label": "恶",
+            "id": 7090110,
+            "name": "磐岩",
+            "type_label": "冰",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7140150,
+            "id": 7020670,
+            "name": "咆哮",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7180310,
+            "name": "迫害",
+            "type_label": "恶",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7020400,
+            "name": "迫近攻击",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140190,
             "name": "破绽",
             "type_label": "武",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7021180,
+            "name": "普1",
+            "type_label": "普通",
             "move_category": "Status"
         },
         {
-            "id": 7180180,
-            "name": "欺诈契约",
-            "type_label": "恶",
-            "move_category": "Status"
+            "id": 7030410,
+            "name": "奇怪的种子弹，不知道效果如何",
+            "type_label": "草",
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7140210,
-            "name": "气波",
-            "type_label": "武",
+            "id": 7050190,
+            "name": "气泡",
+            "type_label": "水",
             "move_category": "Magic Attack"
         },
         {
@@ -32783,9 +31715,9 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7110390,
-            "name": "强制重启",
-            "type_label": "电",
+            "id": 7050160,
+            "name": "潜水遁逃",
+            "type_label": "水",
             "move_category": "Magic Attack"
         },
         {
@@ -32795,10 +31727,28 @@
             "move_category": "Magic Attack"
         },
         {
-            "id": 7050510,
+            "id": 7060090,
             "name": "清洗",
-            "type_label": "水",
+            "type_label": "光",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110360,
+            "name": "球状闪电",
+            "type_label": "电",
             "move_category": "Status"
+        },
+        {
+            "id": 7140060,
+            "name": "驱散敌方印记，每层印记回复自己10%生命。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040600,
+            "name": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7020850,
@@ -32807,10 +31757,46 @@
             "move_category": "Status"
         },
         {
-            "id": 7170300,
-            "name": "入梦",
-            "type_label": "幽",
+            "id": 7020851,
+            "name": "取念",
+            "type_label": "普通",
             "move_category": "Status"
+        },
+        {
+            "id": 7020852,
+            "name": "取念",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020853,
+            "name": "取念",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7021090,
+            "name": "热身运动",
+            "type_label": "普通",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040240,
+            "name": "认识这些东西吗？他们是让蛮兽们落荒而逃的恐怖物质。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170290,
+            "name": "如果在凌晨两点的时候，看到魔法学院图书馆里有光，千万不要进去。",
+            "type_label": "幽",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180130,
+            "name": "如果在学院里看到野生的枕头，不要躺上去，它会闯入你的梦里借走一夜安眠。",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7020680,
@@ -32831,22 +31817,22 @@
             "move_category": "Status"
         },
         {
-            "id": 7060270,
-            "name": "色散",
-            "type_label": "光",
-            "move_category": "Magic Attack"
+            "id": 7020390,
+            "name": "扫尾",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7080210,
-            "name": "沙涌",
-            "type_label": "地",
-            "move_category": "Status"
+            "id": 7090120,
+            "name": "砂石冲撞",
+            "type_label": "冰",
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7160150,
+            "id": 7160230,
             "name": "砂糖弹球",
             "type_label": "萌",
-            "move_category": "Physical Attack"
+            "move_category": "Magic Attack"
         },
         {
             "id": 7021100,
@@ -32855,22 +31841,58 @@
             "move_category": "Status"
         },
         {
-            "id": 7110220,
-            "name": "闪击折返",
+            "id": 7110230,
+            "name": "闪电步",
             "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7060100,
+            "name": "闪光",
+            "type_label": "光",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7150060,
+            "id": 7150140,
             "name": "扇风",
             "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7000342,
+            "name": "熵增",
+            "type_label": "幻",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050510,
+            "name": "升华",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7160240,
+            "name": "生日蛋糕",
+            "type_label": "萌",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7080360,
-            "name": "石肤术",
-            "type_label": "地",
+            "id": 7040290,
+            "name": "使敌方身上的灼烧翻倍，并触发1次灼烧伤害。",
+            "type_label": "火",
             "move_category": "Status"
+        },
+        {
+            "id": 7160250,
+            "name": "示弱",
+            "type_label": "萌",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7150390,
+            "name": "释放自己释放过的迅捷技能，其能耗之和的二分之一加至本技能能耗，每次使用后能耗+1。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7021120,
@@ -32879,112 +31901,100 @@
             "move_category": "Defense"
         },
         {
-            "id": 7110350,
-            "name": "双联脉冲",
-            "type_label": "电",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7190370,
-            "name": "双星",
-            "type_label": "幻",
-            "move_category": "Physical Attack"
-        },
-        {
             "id": 7090190,
-            "name": "霜天",
+            "name": "霜降",
             "type_label": "冰",
             "move_category": "Status"
         },
         {
-            "id": 7050300,
+            "id": 7050460,
+            "name": "水2",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050320,
             "name": "水波术",
             "type_label": "水",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7050370,
-            "name": "水幕冲击",
+            "id": 7050330,
+            "name": "水弹",
             "type_label": "水",
             "move_category": "Physical Attack"
+        },
+        {
+            "id": 7050180,
+            "name": "水弹枪",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050300,
+            "name": "水光冲击",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050380,
+            "name": "水幕冲击",
+            "type_label": "水",
+            "move_category": "Magic Attack"
         },
         {
             "id": 7050200,
-            "name": "水刃",
+            "name": "水炮",
             "type_label": "水",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7090170,
+            "id": 7090200,
             "name": "瞬间零度",
             "type_label": "冰",
-            "move_category": "Status"
+            "move_category": "Defense"
         },
         {
-            "id": 7180100,
+            "id": 7180150,
             "name": "撕裂",
             "type_label": "恶",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7190240,
+            "id": 7190310,
             "name": "四维降解",
             "type_label": "幻",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7090330,
-            "name": "速冻",
-            "type_label": "冰",
             "move_category": "Status"
         },
         {
-            "id": 7100230,
-            "name": "隼鳞",
-            "type_label": "龙",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7110460,
-            "name": "踏雷",
-            "type_label": "电",
-            "move_category": "Status"
-        },
-        {
-            "id": 7190230,
-            "name": "坍缩",
-            "type_label": "幻",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7140280,
-            "name": "提气",
-            "type_label": "武",
-            "move_category": "Status"
-        },
-        {
-            "id": 7060220,
+            "id": 7060230,
             "name": "天光",
             "type_label": "光",
-            "move_category": "Magic Attack"
-        },
-        {
-            "id": 7040290,
-            "name": "天火",
-            "type_label": "火",
-            "move_category": "Status"
-        },
-        {
-            "id": 7190440,
-            "name": "天体吸积",
-            "type_label": "幻",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7160200,
-            "name": "甜心续航",
-            "type_label": "萌",
+            "id": 7050210,
+            "name": "天洪",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7020980,
+            "name": "天旋地转",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070250,
+            "name": "铁蒺藜",
+            "type_label": "机械",
             "move_category": "Status"
+        },
+        {
+            "id": 7140260,
+            "name": "听桥",
+            "type_label": "武",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7021220,
@@ -32996,12 +32006,6 @@
             "id": 7020490,
             "name": "偷袭",
             "type_label": "普通",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7060230,
-            "name": "透射",
-            "type_label": "光",
             "move_category": "Physical Attack"
         },
         {
@@ -33023,21 +32027,63 @@
             "move_category": "Physical Attack"
         },
         {
+            "id": 7180430,
+            "name": "伪造账单",
+            "type_label": "恶",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030520,
+            "name": "为场下每个精灵回复3能量。",
+            "type_label": "草",
+            "move_category": "Defense"
+        },
+        {
             "id": 7020810,
             "name": "无畏之心",
             "type_label": "普通",
             "move_category": "Defense"
         },
         {
-            "id": 7140080,
-            "name": "无影脚",
-            "type_label": "武",
+            "id": 7090130,
+            "name": "雾气环绕",
+            "type_label": "冰",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7170210,
-            "name": "午夜噪音",
-            "type_label": "幽",
+            "id": 7090210,
+            "name": "雾气环绕",
+            "type_label": "冰",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7000341,
+            "name": "希望超新星",
+            "type_label": "幻",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050410,
+            "name": "洗礼",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040280,
+            "name": "下一次攻击技能威力翻倍，应对防御：改为威力变为4倍。",
+            "type_label": "火",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040270,
+            "name": "下一次攻击时，技能威力翻倍，应对防御：改为威力变为4倍。",
+            "type_label": "火",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030430,
+            "name": "下周野外考察课的考察对象有些危险，大家穿上能防弹的魔法袍再来。",
+            "type_label": "草",
             "move_category": "Magic Attack"
         },
         {
@@ -33047,16 +32093,16 @@
             "move_category": "Defense"
         },
         {
-            "id": 7030520,
-            "name": "纤维化",
-            "type_label": "草",
-            "move_category": "Defense"
+            "id": 7020970,
+            "name": "先发制人",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7070270,
-            "name": "相位移动",
+            "id": 7070070,
+            "name": "想得到些什么，就要付出些什么。想清楚代价是什么再行动。",
             "type_label": "机械",
-            "move_category": "Defense"
+            "move_category": "Status"
         },
         {
             "id": 7021070,
@@ -33065,22 +32111,22 @@
             "move_category": "Magic Attack"
         },
         {
-            "id": 7190290,
-            "name": "星轨裂变",
+            "id": 7190400,
+            "name": "心灵洞悉",
             "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7190300,
-            "name": "星链",
-            "type_label": "幻",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180330,
-            "name": "虚假破产",
-            "type_label": "恶",
             "move_category": "Defense"
+        },
+        {
+            "id": 7000345,
+            "name": "星系团",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7020640,
+            "name": "休息回复",
+            "type_label": "普通",
+            "move_category": "Status"
         },
         {
             "id": 7020900,
@@ -33089,14 +32135,56 @@
             "move_category": "Magic Attack"
         },
         {
-            "id": 7050230,
+            "id": 7100200,
+            "name": "蓄力，对敌方造成魔法伤害。",
+            "type_label": "龙",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7100180,
+            "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+            "type_label": "龙",
+            "move_category": "Status"
+        },
+        {
+            "id": 7100320,
+            "name": "蓄力，造成物伤，先手+1。",
+            "type_label": "龙",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7100170,
+            "name": "蓄力，造成物伤，应对状态：本次技能威力翻倍。",
+            "type_label": "龙",
+            "move_category": "Status"
+        },
+        {
+            "id": 7020600,
+            "name": "蓄能轰击",
+            "type_label": "普通",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050240,
             "name": "蓄水",
             "type_label": "水",
             "move_category": "Status"
         },
         {
-            "id": 7090300,
+            "id": 7020480,
+            "name": "旋转突击",
+            "type_label": "普通",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090340,
             "name": "雪球",
+            "type_label": "冰",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7090390,
+            "name": "雪替身",
             "type_label": "冰",
             "move_category": "Status"
         },
@@ -33113,22 +32201,22 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7040430,
-            "name": "炎打",
-            "type_label": "火",
+            "id": 7020950,
+            "name": "湮灭",
+            "type_label": "普通",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7040620,
-            "name": "阳火增辉",
-            "type_label": "火",
-            "move_category": "Magic Attack"
+            "id": 7080170,
+            "name": "岩土暴击",
+            "type_label": "地",
+            "move_category": "Physical Attack"
         },
         {
-            "id": 7030250,
-            "name": "氧输送",
-            "type_label": "草",
-            "move_category": "Status"
+            "id": 7130260,
+            "name": "研究手记：我在巢中坠入无光之梦，听见黑暗深处传来虫群的轰鸣。",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7021160,
@@ -33137,16 +32225,22 @@
             "move_category": "Status"
         },
         {
-            "id": 7070240,
-            "name": "冶炼",
-            "type_label": "机械",
-            "move_category": "Magic Attack"
+            "id": 7021050,
+            "name": "耀眼",
+            "type_label": "普通",
+            "move_category": "Status"
         },
         {
-            "id": 7030290,
-            "name": "移花接木",
-            "type_label": "草",
-            "move_category": "Status"
+            "id": 7190370,
+            "name": "一位小洛克一口气许下五个愿望，此时五颗星星应声划过。",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120220,
+            "name": "以毒攻毒",
+            "type_label": "毒",
+            "move_category": "Magic Attack"
         },
         {
             "id": 7021000,
@@ -33155,28 +32249,226 @@
             "move_category": "Physical Attack"
         },
         {
-            "id": 7150080,
-            "name": "翼击",
-            "type_label": "翼",
-            "move_category": "Magic Attack"
-        },
-        {
             "id": 7020410,
             "name": "音爆",
             "type_label": "普通",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7040260,
-            "name": "引燃",
-            "type_label": "火",
+            "id": 7020890,
+            "name": "音波弹",
+            "type_label": "普通",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110260,
+            "name": "引雷",
+            "type_label": "电",
             "move_category": "Status"
         },
         {
+            "id": 7170230,
+            "name": "应对！报复",
+            "type_label": "幽",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090150,
+            "name": "应对！冰雹",
+            "type_label": "冰",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090370,
+            "name": "应对！冰蛋壳",
+            "type_label": "冰",
+            "move_category": "Status"
+        },
+        {
+            "id": 7090430,
+            "name": "应对！冰点",
+            "type_label": "冰",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090260,
+            "name": "应对！冰墙",
+            "type_label": "冰",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090240,
+            "name": "应对！冰天雪地",
+            "type_label": "冰",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050430,
+            "name": "应对！潮汐",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7130220,
+            "name": "应对！虫击",
+            "type_label": "虫",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7140070,
+            "name": "应对！虫结阵",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7190350,
+            "name": "应对！错乱",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080370,
+            "name": "应对！地陷",
+            "type_label": "地",
+            "move_category": "Status"
+        },
+        {
+            "id": 7120130,
+            "name": "应对！毒囊",
+            "type_label": "毒",
+            "move_category": "Status"
+        },
+        {
+            "id": 7190210,
+            "name": "应对！恶1",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150050,
+            "name": "应对！防御反击",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090310,
+            "name": "应对！滚雪球",
+            "type_label": "冰",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090170,
+            "name": "应对！极寒领域",
+            "type_label": "冰",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110340,
+            "name": "应对！集中",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7060160,
+            "name": "应对！镜像反射",
+            "type_label": "光",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7080190,
+            "name": "应对！裂石",
+            "type_label": "地",
+            "move_category": "Status"
+        },
+        {
+            "id": 7100290,
+            "name": "应对！龙血",
+            "type_label": "龙",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110300,
+            "name": "应对！麻痹",
+            "type_label": "电",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7050270,
+            "name": "应对！泡沫幻影",
+            "type_label": "水",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7110210,
+            "name": "应对！守护咒",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050450,
+            "name": "应对！水1",
+            "type_label": "水",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7050290,
+            "name": "应对！水环",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7050280,
+            "name": "应对！水泡盾",
+            "type_label": "水",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7160180,
+            "name": "应对！速降",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7080110,
+            "name": "应对！相位移动",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090400,
+            "name": "应对！雪替身",
+            "type_label": "冰",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050420,
+            "name": "应对！盐水浴",
+            "type_label": "水",
+            "move_category": "Defense"
+        },
+        {
             "id": 7180200,
-            "name": "隐藏条款",
+            "name": "应对！灾厄",
             "type_label": "恶",
             "move_category": "Status"
+        },
+        {
+            "id": 7140140,
+            "name": "应对！斩断",
+            "type_label": "武",
+            "move_category": "Status"
+        },
+        {
+            "id": 7070240,
+            "name": "应对！杖责",
+            "type_label": "机械",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7140250,
+            "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
         },
         {
             "id": 7020730,
@@ -33185,22 +32477,34 @@
             "move_category": "Status"
         },
         {
-            "id": 7140250,
-            "name": "影袭",
-            "type_label": "武",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7080230,
+            "id": 7080250,
             "name": "硬化",
             "type_label": "地",
             "move_category": "Defense"
         },
         {
-            "id": 7140180,
+            "id": 7140230,
             "name": "硬门",
             "type_label": "武",
-            "move_category": "Defense"
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7050400,
+            "name": "涌泉",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7180100,
+            "name": "幽1",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7170250,
+            "name": "幽灵爆发",
+            "type_label": "幽",
+            "move_category": "Status"
         },
         {
             "id": 7021110,
@@ -33209,63 +32513,519 @@
             "move_category": "Defense"
         },
         {
-            "id": 7150300,
-            "name": "羽化加速",
-            "type_label": "翼",
-            "move_category": "Status"
-        },
-        {
-            "id": 7150310,
-            "name": "羽翼庇护",
-            "type_label": "翼",
-            "move_category": "Defense"
-        },
-        {
-            "id": 7140290,
-            "name": "预备势",
-            "type_label": "武",
-            "move_category": "Status"
-        },
-        {
-            "id": 7110370,
-            "name": "远程访问",
-            "type_label": "电",
-            "move_category": "Status"
-        },
-        {
-            "id": 7180430,
-            "name": "杂耍",
-            "type_label": "恶",
+            "id": 7080420,
+            "name": "淤泥表皮",
+            "type_label": "地",
             "move_category": "Magic Attack"
         },
         {
             "id": 7180280,
-            "name": "栽赃",
+            "name": "与敌方交换携带的技能。",
             "type_label": "恶",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7140090,
-            "name": "斩断",
+            "id": 7180240,
+            "name": "与敌方交换增益和减益。",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180340,
+            "name": "栽赃",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180350,
+            "name": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。",
+            "type_label": "恶",
+            "move_category": "Status"
+        },
+        {
+            "id": 7180360,
+            "name": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。",
+            "type_label": "恶",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7040430,
+            "name": "造成高额魔法伤害，自己获得物防-40%。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7190330,
+            "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
+            "type_label": "幻",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040230,
+            "name": "造成魔伤，2连击，每次连击使敌方获得2层灼烧。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7180330,
+            "name": "造成魔伤，2连击。",
+            "type_label": "恶",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7040360,
+            "name": "造成魔伤，3连击。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7130320,
+            "name": "造成魔伤，3连击。",
+            "type_label": "虫",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7160310,
+            "name": "造成魔伤，3连击。自己获得萌化：威力永久+20。",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050360,
+            "name": "造成魔伤，4连击。",
+            "type_label": "水",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7170270,
+            "name": "造成魔伤，5连击。",
+            "type_label": "幽",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110410,
+            "name": "造成魔伤，迸发：本技能使用次数+1。",
+            "type_label": "电",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040390,
+            "name": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040410,
+            "name": "造成魔伤，敌方获得6层灼烧。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7090180,
+            "name": "造成魔伤，敌方获得全技能能耗+2。",
+            "type_label": "冰",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040460,
+            "name": "造成魔伤，敌方每失去5%生命，本次技能威力-5。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110430,
+            "name": "造成魔伤，每离场1次，本技能使用次数永久+1。",
+            "type_label": "电",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7060140,
+            "name": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。",
+            "type_label": "光",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040500,
+            "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
+            "type_label": "火",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040620,
+            "name": "造成魔伤，驱散自己的减益。",
+            "type_label": "火",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7150080,
+            "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
+            "type_label": "翼",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7090160,
+            "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
+            "type_label": "冰",
+            "move_category": "Status"
+        },
+        {
+            "id": 7190300,
+            "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
+            "type_label": "幻",
+            "move_category": "Status"
+        },
+        {
+            "id": 7120150,
+            "name": "造成魔伤，若击败敌方则将中毒转化为中毒印记。",
+            "type_label": "毒",
+            "move_category": "Status"
+        },
+        {
+            "id": 7150150,
+            "name": "造成魔伤，迅捷。",
+            "type_label": "翼",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7070270,
+            "name": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。",
+            "type_label": "机械",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7100250,
+            "name": "造成魔伤，应对状态：下次技能无需蓄力。",
+            "type_label": "龙",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7190220,
+            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7190230,
+            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7150090,
+            "name": "造成魔伤，应对状态：自身魔攻增益翻倍",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7050170,
+            "name": "造成魔伤，自己回复1能量。",
+            "type_label": "水",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7110400,
+            "name": "造成魔伤，自己获得速度+30。",
+            "type_label": "电",
+            "move_category": "Status"
+        },
+        {
+            "id": 7080120,
+            "name": "造成魔伤，自己每​受​到​一​次​抵抗​伤害，​本技​能​威力​永久​+20。",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7130170,
+            "name": "造成物伤，1连击，本技能会受奉献影响，每被影响1次，能耗永久+1。",
+            "type_label": "虫",
+            "move_category": "Status"
+        },
+        {
+            "id": 7130190,
+            "name": "造成物伤，1连击，本技能会受奉献影响。",
+            "type_label": "虫",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030450,
+            "name": "造成物伤，1连击，每次使用后，本技能连击数永久+2。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150170,
+            "name": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080330,
+            "name": "造成物伤，1连击。",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070140,
+            "name": "造成物伤，2连击，本技能位于1号或3号位时连击+1，传动1。",
+            "type_label": "机械",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7140150,
+            "name": "造成物伤，2连击，若后手攻击，改为3连击。",
+            "type_label": "武",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110270,
+            "name": "造成物伤，2连击，自己脱离。",
+            "type_label": "电",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030200,
+            "name": "造成物伤，2连击。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030420,
+            "name": "造成物伤，2连击。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140300,
+            "name": "造成物伤，2连击。",
+            "type_label": "武",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7150130,
+            "name": "造成物伤，2连击。",
+            "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7080380,
+            "name": "造成物伤，本技能能耗固定为4。",
+            "type_label": "地",
+            "move_category": "Status"
+        },
+        {
+            "id": 7070170,
+            "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+            "type_label": "机械",
+            "move_category": "Status"
+        },
+        {
+            "id": 7070030,
+            "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
+            "type_label": "机械",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7070050,
+            "name": "造成物伤，本技能位于1号位时威力+90，传动2。",
+            "type_label": "机械",
+            "move_category": "Status"
+        },
+        {
+            "id": 7120100,
+            "name": "造成物伤，敌方获得1层中毒。",
+            "type_label": "毒",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7080400,
+            "name": "造成物伤，敌方获得连击数-3。",
+            "type_label": "地",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7040200,
+            "name": "造成物伤，每次使用后，本技能威力永久+20。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040250,
+            "name": "造成物伤，每使用1次其他火系技能，本技能威力永久翻倍。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7130350,
+            "name": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140050,
+            "name": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。",
             "type_label": "武",
             "move_category": "Physical Attack"
         },
         {
-            "id": 7120210,
-            "name": "瘴气喷射",
-            "type_label": "毒",
+            "id": 7040150,
+            "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150260,
+            "name": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。",
+            "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7080350,
+            "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180180,
+            "name": "造成物伤，吸血50%，应对状态：本次技能威力翻倍。",
+            "type_label": "恶",
+            "move_category": "Status"
+        },
+        {
+            "id": 7150180,
+            "name": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
+            "type_label": "翼",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7120220,
-            "name": "鸩毒",
-            "type_label": "毒",
+            "id": 7150190,
+            "name": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180160,
+            "name": "造成物伤，应对状态：本次攻击吸血100%。",
+            "type_label": "恶",
+            "move_category": "Status"
+        },
+        {
+            "id": 7140130,
+            "name": "造成物伤，应对状态：本次技能威力变为2倍。",
+            "type_label": "武",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040180,
+            "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7040190,
+            "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+            "type_label": "火",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080180,
+            "name": "造成物伤，应对状态：敌方获得物防-80%。",
+            "type_label": "地",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7140170,
+            "name": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。",
+            "type_label": "武",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040610,
+            "name": "造成物伤，应对状态：赋予敌方5层灼烧。",
+            "type_label": "火",
             "move_category": "Magic Attack"
         },
         {
-            "id": 7030420,
-            "name": "种子炸弹",
+            "id": 7150300,
+            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7170140,
+            "name": "造成物伤，应对状态：使敌方失去6能量。",
+            "type_label": "幽",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030540,
+            "name": "造成物伤，应对状态：自己回复50%生命和5能量。",
             "type_label": "草",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7120060,
+            "name": "造成物伤，应对状态：自身速度+50",
+            "type_label": "毒",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120070,
+            "name": "造成物伤，应对状态：自身速度+50",
+            "type_label": "毒",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030170,
+            "name": "造成物伤，自己回复1能量。",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7190320,
+            "name": "造成物伤，自己回复1能量。",
+            "type_label": "幻",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030210,
+            "name": "造成物伤，自己回复5能量。",
+            "type_label": "草",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7030490,
+            "name": "造成物伤，自己生命大于80%时，本次技能威力+75。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7110310,
+            "name": "增程电池",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7070020,
+            "name": "战斗学科的某位老师，望着彩虹思索配队的时候，领悟到不同系别魔法穿过空气的速率是不一样的。",
+            "type_label": "机械",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7180080,
+            "name": "真的有鬼，月圆夜的时候，魔法学院2楼厕所的卫生纸会全部消失，太可怕了。",
+            "type_label": "恶",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030230,
+            "name": "只要能活下来，不论用什么手段……",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7120200,
+            "name": "中毒之后，你能做的还有祈祷。",
+            "type_label": "毒",
             "move_category": "Physical Attack"
         },
         {
@@ -33275,27 +33035,21 @@
             "move_category": "Physical Attack"
         },
         {
+            "id": 7130120,
+            "name": "重金属粉尘",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
             "id": 7020710,
             "name": "主场优势",
             "type_label": "普通",
             "move_category": "Status"
         },
         {
-            "id": 7070160,
-            "name": "主轴",
-            "type_label": "机械",
-            "move_category": "Physical Attack"
-        },
-        {
-            "id": 7130210,
-            "name": "贮藏",
-            "type_label": "虫",
-            "move_category": "Status"
-        },
-        {
-            "id": 7170290,
-            "name": "撞鬼",
-            "type_label": "幽",
+            "id": 7020360,
+            "name": "抓挠",
+            "type_label": "普通",
             "move_category": "Physical Attack"
         },
         {
@@ -33305,10 +33059,256 @@
             "move_category": "Magic Attack"
         },
         {
+            "id": 7170190,
+            "name": "自从得知跳跃可以加速精灵蛋孵化，我的身体越来越强壮。",
+            "type_label": "幽",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7170200,
+            "name": "自从得知跳跃可以加速精灵蛋孵化，我的身体越来越强壮。",
+            "type_label": "幽",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7160290,
+            "name": "自己和敌方获得萌化：回复40%生命。",
+            "type_label": "萌",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7030220,
+            "name": "自己回复10能量。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030250,
+            "name": "自己回复15%生命和4能量。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7130270,
+            "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030260,
+            "name": "自己回复4能量，并获得魔攻+70%。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050250,
+            "name": "自己获得1层湿润印记。",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7160270,
+            "name": "自己获得萌化：全技能能耗永久-3。",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7050230,
+            "name": "自己获得魔攻+190%。",
+            "type_label": "水",
+            "move_category": "Status"
+        },
+        {
+            "id": 7170300,
+            "name": "自己获得魔攻+90%，若敌方本回合更换精灵，自己获得速度+70。",
+            "type_label": "幽",
+            "move_category": "Status"
+        },
+        {
+            "id": 7030240,
+            "name": "自己获得全技能威力+30，应对防御：改为威力+60。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040450,
+            "name": "自己获得双攻+120%和双防-40%。",
+            "type_label": "火",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7150200,
+            "name": "自己获得速度+120。",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7080410,
+            "name": "自己获得物防+140%和速度-30。",
+            "type_label": "地",
+            "move_category": "Defense"
+        },
+        {
+            "id": 7030280,
+            "name": "自己获得物攻和魔攻+140%。",
+            "type_label": "草",
+            "move_category": "Status"
+        },
+        {
+            "id": 7160320,
+            "name": "自己脱离，下个入场精灵继承自己增益。",
+            "type_label": "萌",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7190380,
+            "name": "走失的星星在愿力的指引下，正在寻找回去的轨道。",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
             "id": 7020520,
             "name": "阻断",
             "type_label": "普通",
             "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170100,
+            "name": "S3稻草守护者A",
+            "type_label": "幽",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150120,
+            "name": "S3稻草守护者B",
+            "type_label": "翼",
+            "move_category": "Status"
+        },
+        {
+            "id": 7040680,
+            "name": "S3火巨人B",
+            "type_label": "火",
+            "move_category": "Status"
+        },
+        {
+            "id": 7160170,
+            "name": "S3火羽B",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7190240,
+            "name": "S3卡拉波斯A",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7190250,
+            "name": "S3卡拉波斯B",
+            "type_label": "幻",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7130100,
+            "name": "S3壳栗丝鼠A",
+            "type_label": "虫",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7110180,
+            "name": "S3克莱因龙A",
+            "type_label": "电",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120080,
+            "name": "S3雷神之子A",
+            "type_label": "毒",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7120090,
+            "name": "S3雷神之子B",
+            "type_label": "毒",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7060270,
+            "name": "S3流明坎德拉B",
+            "type_label": "光",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7070010,
+            "name": "S3流明坎德拉B",
+            "type_label": "机械",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7170090,
+            "name": "S3徘徊爪爪B",
+            "type_label": "幽",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170110,
+            "name": "S3珀尔鼬A",
+            "type_label": "幽",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7170120,
+            "name": "S3珀尔鼬B",
+            "type_label": "幽",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7030610,
+            "name": "S3森巨人B",
+            "type_label": "草",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7150110,
+            "name": "S3深渊蛙B",
+            "type_label": "翼",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7110190,
+            "name": "S3溯源钟A",
+            "type_label": "电",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7160150,
+            "name": "S3溯源钟B",
+            "type_label": "萌",
+            "move_category": "Physical Attack"
+        },
+        {
+            "id": 7160160,
+            "name": "S3星云旅者A",
+            "type_label": "萌",
+            "move_category": "Status"
+        },
+        {
+            "id": 7190260,
+            "name": "S3夜游魔B",
+            "type_label": "幻",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7160130,
+            "name": "S3友爱星飞A",
+            "type_label": "萌",
+            "move_category": "Magic Attack"
+        },
+        {
+            "id": 7160140,
+            "name": "S3友爱星飞A",
+            "type_label": "萌",
+            "move_category": "Physical Attack"
         }
     ]
 }

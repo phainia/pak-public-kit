@@ -2,6 +2,18 @@
     "id": 9805,
     "name": "9805",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9805"
+            "name": "鸭吉吉_光"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9805,
         "name": "9805",
         "localized": {
-            "zh": "9805"
+            "zh": "鸭吉吉_光"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7060220,
-            "name": "技能 7060220",
+            "name": "对敌方精灵造成物理伤害。",
             "icon_id": "205014",
             "move_type": {
                 "id": 5,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7060220",
-                    "description": ""
+                    "name": "对敌方精灵造成物理伤害。",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 95,
-            "description": ""
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7060240,
-            "name": "技能 7060240",
+            "name": "晶石蜗的狂热研究员说，可以在这个世界上找到6种天然矿石，矿石中蕴含的魔力与相似颜色的晶石蜗十分相似。",
             "icon_id": "205017",
             "move_type": {
                 "id": 5,
@@ -88,14 +100,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7060240",
-                    "description": ""
+                    "name": "晶石蜗的狂热研究员说，可以在这个世界上找到6种天然矿石，矿石中蕴含的魔力与相似颜色的晶石蜗十分相似。",
+                    "description": "透射"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": ""
+            "description": "透射"
         }
     ],
     "move_stones": [],
@@ -111,7 +123,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9805"
+                                "name": "鸭吉吉_光"
                             }
                         },
                         "is_leader_form": false,
@@ -137,11 +149,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

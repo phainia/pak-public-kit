@@ -2,6 +2,18 @@
     "id": 9810,
     "name": "9810",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 1,
         "name": "Normal",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "9810"
+            "name": "鸭吉吉_毒"
         }
     },
     "implemented": false,
@@ -37,25 +49,25 @@
         "id": 9810,
         "name": "9810",
         "localized": {
-            "zh": "9810"
+            "zh": "鸭吉吉_毒"
         }
     },
     "trait": {
         "id": 200000,
-        "name": "特性 200000",
-        "description": "",
+        "name": "GM被动",
+        "description": "回合末恢复10能量。",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200000",
-                "description": ""
+                "name": "GM被动",
+                "description": "回合末恢复10能量。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7120230,
-            "name": "技能 7120230",
+            "name": "毒泡泡",
             "icon_id": "111020",
             "move_type": {
                 "id": 10,
@@ -66,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7120230",
-                    "description": ""
+                    "name": "毒泡泡",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7120240,
-            "name": "技能 7120240",
+            "name": "溃烂触碰",
             "icon_id": "211021",
             "move_type": {
                 "id": 10,
@@ -88,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7120240",
-                    "description": ""
+                    "name": "溃烂触碰",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7120250,
-            "name": "技能 7120250",
+            "name": "毒沼",
             "icon_id": "111022",
             "move_type": {
                 "id": 10,
@@ -110,14 +122,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7120250",
-                    "description": ""
+                    "name": "毒沼",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "对敌方精灵造成物理伤害。"
         }
     ],
     "move_stones": [],
@@ -133,7 +145,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "9810"
+                                "name": "鸭吉吉_毒"
                             }
                         },
                         "is_leader_form": false,
@@ -159,11 +171,11 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
+        "introduction": "这是一只测试宠物，如果你在不该看到的地方看到了它，请联系策划。",
         "refresh_locations": [],
         "movement_type": null,
         "classis_id": 3,
-        "classis_name": null,
+        "classis_name": "猫咪类精灵",
         "handbook_area_ids": []
     },
     "catch_info": null,

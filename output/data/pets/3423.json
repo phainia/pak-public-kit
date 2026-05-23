@@ -2,6 +2,18 @@
     "id": 3423,
     "name": "konglingshou",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 2,
         "name": "Grass",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3423"
+            "name": "空灵兽"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 3423,
         "name": "konglingshou",
         "localized": {
-            "zh": "3423"
+            "zh": "空灵兽"
         }
     },
     "trait": {
         "id": 200271,
-        "name": "特性 200271",
-        "description": "",
+        "name": "空灵斗士",
+        "description": "回合末获得20%攻击。",
         "icon_id": "200075",
         "localized": {
             "zh": {
-                "name": "特性 200271",
-                "description": ""
+                "name": "空灵斗士",
+                "description": "回合末获得20%攻击。"
             }
         }
     },
@@ -66,7 +78,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3423"
+                                "name": "空灵兽"
                             }
                         },
                         "is_leader_form": false,
@@ -92,7 +104,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3424"
+                                "name": "空灵斗士"
                             }
                         },
                         "is_leader_form": false,
@@ -121,10 +133,12 @@
         "type_desc": null,
         "description_habitat": null,
         "introduction": null,
-        "refresh_locations": [],
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -135,7 +149,7 @@
     "breeding": {
         "id": 3423001,
         "pet_id": 3423001,
-        "name": null,
+        "name": "齿轮小子（龙系血脉）",
         "model_id": 3423001,
         "hatch_data": 1,
         "weight_low": 1,
@@ -151,7 +165,7 @@
             {
                 "id": 3423001,
                 "pet_id": 3423001,
-                "name": null,
+                "name": "齿轮小子（龙系血脉）",
                 "model_id": 3423001,
                 "hatch_data": 1,
                 "weight_low": 1,
@@ -167,13 +181,29 @@
             {
                 "id": 34230001,
                 "pet_id": 34230001,
-                "name": null,
+                "name": "双灯鱼",
                 "model_id": 3423001,
                 "hatch_data": 300,
                 "weight_low": 1,
                 "weight_high": 10,
                 "height_low": 1,
                 "height_high": 10,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 34400001,
+                "pet_id": 34400001,
+                "name": "空灵兽",
+                "model_id": 3440001,
+                "hatch_data": 300,
+                "weight_low": 298,
+                "weight_high": 420,
+                "height_low": 21,
+                "height_high": 25,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

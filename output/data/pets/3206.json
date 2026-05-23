@@ -2,6 +2,18 @@
     "id": 3206,
     "name": "duoxi",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 6,
         "name": "Ground",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Physical",
     "localized": {
         "zh": {
-            "name": "3206"
+            "name": "多西"
         }
     },
     "implemented": true,
@@ -43,25 +55,25 @@
         "id": 221,
         "name": "duoxi",
         "localized": {
-            "zh": "3206"
+            "zh": "多西"
         }
     },
     "trait": {
         "id": 200172,
-        "name": "特性 200172",
-        "description": "",
+        "name": "定向精炼",
+        "description": "己方精灵每使用1次防御技能，自己入场时机械系和地系技能威力+10%。",
         "icon_id": "200172",
         "localized": {
             "zh": {
-                "name": "特性 200172",
-                "description": ""
+                "name": "定向精炼",
+                "description": "己方精灵每使用1次防御技能，自己入场时机械系和地系技能威力+10%。"
             }
         }
     },
     "move_pool": [
         {
             "id": 7020970,
-            "name": "技能 7020970",
+            "name": "先发制人",
             "icon_id": "101079",
             "move_type": {
                 "id": 1,
@@ -72,18 +84,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7020970",
-                    "description": ""
+                    "name": "先发制人",
+                    "description": "造成物理伤害，先手+1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 55,
-            "description": ""
+            "description": "造成物理伤害，先手+1。"
         },
         {
             "id": 7070170,
-            "name": "技能 7070170",
+            "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
             "icon_id": "106017",
             "move_type": {
                 "id": 17,
@@ -94,18 +106,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7070170",
-                    "description": ""
+                    "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+                    "description": "主轴"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "主轴"
         },
         {
             "id": 7070080,
-            "name": "技能 7070080",
+            "name": "联动装置",
             "icon_id": "206008",
             "move_type": {
                 "id": 17,
@@ -116,18 +128,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7070080",
-                    "description": ""
+                    "name": "联动装置",
+                    "description": "使用后两侧技能的威力永久+20，应对防御：变为威力永久+30。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "使用后两侧技能的威力永久+20，应对防御：变为威力永久+30。"
         },
         {
             "id": 7070020,
-            "name": "技能 7070020",
+            "name": "战斗学科的某位老师，望着彩虹思索配队的时候，领悟到不同系别魔法穿过空气的速率是不一样的。",
             "icon_id": "720008",
             "move_type": {
                 "id": 17,
@@ -138,18 +150,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7070020",
-                    "description": ""
+                    "name": "战斗学科的某位老师，望着彩虹思索配队的时候，领悟到不同系别魔法穿过空气的速率是不一样的。",
+                    "description": "械斗"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": ""
+            "description": "械斗"
         },
         {
             "id": 7070060,
-            "name": "技能 7070060",
+            "name": "机械原本没有意志，所行善恶来自造物者的欲望。",
             "icon_id": "720004",
             "move_type": {
                 "id": 17,
@@ -160,18 +172,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7070060",
-                    "description": ""
+                    "name": "机械原本没有意志，所行善恶来自造物者的欲望。",
+                    "description": "杠杆置换"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "杠杆置换"
         },
         {
             "id": 7080320,
-            "name": "技能 7080320",
+            "name": "泥巴喷射",
             "icon_id": "107028",
             "move_type": {
                 "id": 6,
@@ -182,18 +194,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7080320",
-                    "description": ""
+                    "name": "泥巴喷射",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 60,
-            "description": ""
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7080380,
-            "name": "技能 7080380",
+            "name": "造成物伤，本技能能耗固定为4。",
             "icon_id": "307035",
             "move_type": {
                 "id": 6,
@@ -204,18 +216,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7080380",
-                    "description": ""
+                    "name": "造成物伤，本技能能耗固定为4。",
+                    "description": "震击"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": ""
+            "description": "震击"
         },
         {
             "id": 7080240,
-            "name": "技能 7080240",
+            "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
             "icon_id": "708004",
             "move_type": {
                 "id": 6,
@@ -226,18 +238,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7080240",
-                    "description": ""
+                    "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
+                    "description": "“可我们不是那种棋子。”——棋棋"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "“可我们不是那种棋子。”——棋棋"
         },
         {
             "id": 7070030,
-            "name": "技能 7070030",
+            "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
             "icon_id": "720006",
             "move_type": {
                 "id": 17,
@@ -248,18 +260,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7070030",
-                    "description": ""
+                    "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
+                    "description": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": null,
-            "description": ""
+            "description": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长"
         },
         {
             "id": 7070150,
-            "name": "技能 7070150",
+            "name": "对敌方精灵造成魔法伤害。",
             "icon_id": "106015",
             "move_type": {
                 "id": 17,
@@ -270,18 +282,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7070150",
-                    "description": ""
+                    "name": "对敌方精灵造成魔法伤害。",
+                    "description": "啊——是谁在指甲抓挠钢板？"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 130,
-            "description": ""
+            "description": "啊——是谁在指甲抓挠钢板？"
         },
         {
             "id": 7080140,
-            "name": "技能 7080140",
+            "name": "跺地",
             "icon_id": "708013",
             "move_type": {
                 "id": 6,
@@ -292,18 +304,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7080140",
-                    "description": ""
+                    "name": "跺地",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 8,
             "power": 140,
-            "description": ""
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7080180,
-            "name": "技能 7080180",
+            "name": "造成物伤，应对状态：敌方获得物防-80%。",
             "icon_id": "708006",
             "move_type": {
                 "id": 6,
@@ -314,18 +326,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7080180",
-                    "description": ""
+                    "name": "造成物伤，应对状态：敌方获得物防-80%。",
+                    "description": "造成物伤，敌方3回合无法更换精灵。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 10,
             "power": 190,
-            "description": ""
+            "description": "造成物伤，敌方3回合无法更换精灵。"
         },
         {
             "id": 7080130,
-            "name": "技能 7080130",
+            "name": "过山车",
             "icon_id": "708002",
             "move_type": {
                 "id": 6,
@@ -336,20 +348,20 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技能 7080130",
-                    "description": ""
+                    "name": "过山车",
+                    "description": "使己方队伍中的所有精灵携带的技能跨精灵向下移动1个位置，巧变：机械系技能。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": ""
+            "description": "使己方队伍中的所有精灵携带的技能跨精灵向下移动1个位置，巧变：机械系技能。"
         }
     ],
     "move_stones": [
         {
             "id": 7080410,
-            "name": "不动如山",
+            "name": "自己获得物防+140%和速度-30。",
             "icon_id": "107039",
             "move_type": {
                 "id": 6,
@@ -360,18 +372,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "不动如山",
-                    "description": ""
+                    "name": "自己获得物防+140%和速度-30。",
+                    "description": "现在我与山岳同呼吸。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "现在我与山岳同呼吸。"
         },
         {
             "id": 7080250,
-            "name": "遁地",
+            "name": "硬化",
             "icon_id": "708016",
             "move_type": {
                 "id": 6,
@@ -382,18 +394,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "遁地",
-                    "description": ""
+                    "name": "硬化",
+                    "description": "减伤90%，若上次使用攻击技则本技能能耗-2，应对攻击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 3,
             "power": null,
-            "description": ""
+            "description": "减伤90%，若上次使用攻击技则本技能能耗-2，应对攻击。"
         },
         {
             "id": 7180150,
-            "name": "彼岸之手",
+            "name": "撕裂",
             "icon_id": "706003",
             "move_type": {
                 "id": 16,
@@ -404,18 +416,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "彼岸之手",
-                    "description": ""
+                    "name": "撕裂",
+                    "description": "造成物伤，应对状态：本次攻击吸血100%。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 10,
             "power": 150,
-            "description": ""
+            "description": "造成物伤，应对状态：本次攻击吸血100%。"
         },
         {
             "id": 7180330,
-            "name": "虚假破产",
+            "name": "造成魔伤，2连击。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -426,14 +438,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "虚假破产",
-                    "description": ""
+                    "name": "造成魔伤，2连击。",
+                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
         },
         {
             "id": 7020540,
@@ -449,13 +461,13 @@
             "localized": {
                 "zh": {
                     "name": "重击",
-                    "description": ""
+                    "description": "造成物伤，每次使用后，本技能能耗永久+1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 110,
-            "description": ""
+            "description": "造成物伤，每次使用后，本技能能耗永久+1。"
         },
         {
             "id": 7020460,
@@ -471,13 +483,13 @@
             "localized": {
                 "zh": {
                     "name": "连续爪击",
-                    "description": ""
+                    "description": "造成物伤，2连击，应对状态：本次技能连击数翻倍。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 30,
-            "description": ""
+            "description": "造成物伤，2连击，应对状态：本次技能连击数翻倍。"
         },
         {
             "id": 7020850,
@@ -493,13 +505,13 @@
             "localized": {
                 "zh": {
                     "name": "取念",
-                    "description": ""
+                    "description": "每回合随机变成敌方任意精灵的技能，且该技能能耗-2。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": ""
+            "description": "每回合随机变成敌方任意精灵的技能，且该技能能耗-2。"
         },
         {
             "id": 7020740,
@@ -515,13 +527,13 @@
             "localized": {
                 "zh": {
                     "name": "棘刺",
-                    "description": ""
+                    "description": "敌方获得1层棘刺印记。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "敌方获得1层棘刺印记。"
         },
         {
             "id": 7021120,
@@ -537,13 +549,13 @@
             "localized": {
                 "zh": {
                     "name": "嗜痛",
-                    "description": ""
+                    "description": "减伤80%，应对攻击：期间自己每次受到伤害，获得双攻+40%。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "减伤80%，应对攻击：期间自己每次受到伤害，获得双攻+40%。"
         },
         {
             "id": 7021110,
@@ -559,13 +571,13 @@
             "localized": {
                 "zh": {
                     "name": "有效预防",
-                    "description": ""
+                    "description": "减伤50%，应对攻击：下一次行动获得先手+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "减伤50%，应对攻击：下一次行动获得先手+1。"
         },
         {
             "id": 7021130,
@@ -581,17 +593,17 @@
             "localized": {
                 "zh": {
                     "name": "吓退",
-                    "description": ""
+                    "description": "减伤60%，应对攻击：敌方脱离。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "减伤60%，应对攻击：敌方脱离。"
         },
         {
             "id": 7080220,
-            "name": "刺盾",
+            "name": "泥浆铠甲",
             "icon_id": "708019",
             "move_type": {
                 "id": 6,
@@ -602,14 +614,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "刺盾",
-                    "description": ""
+                    "name": "泥浆铠甲",
+                    "description": "自己获得物攻和物防+60%，应对防御：额外使自己的增益翻倍。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": ""
+            "description": "自己获得物攻和物防+60%，应对防御：额外使自己的增益翻倍。"
         },
         {
             "id": 7020780,
@@ -625,17 +637,17 @@
             "localized": {
                 "zh": {
                     "name": "防御",
-                    "description": ""
+                    "description": "减伤70%，应对攻击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "减伤70%，应对攻击。"
         },
         {
             "id": 7070270,
-            "name": "相位移动",
+            "name": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。",
             "icon_id": "206026",
             "move_type": {
                 "id": 17,
@@ -646,18 +658,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "相位移动",
-                    "description": ""
+                    "name": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。",
+                    "description": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”"
         },
         {
             "id": 7070250,
-            "name": "减压阀",
+            "name": "铁蒺藜",
             "icon_id": "306023",
             "move_type": {
                 "id": 17,
@@ -668,14 +680,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减压阀",
-                    "description": ""
+                    "name": "铁蒺藜",
+                    "description": "造成​魔伤，应对状态：​本​次​伤害翻倍。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": ""
+            "description": "造成​魔伤，应对状态：​本​次​伤害翻倍。"
         }
     ],
     "legacy_moves": [
@@ -685,7 +697,7 @@
             "move_id": 7020790,
             "move": {
                 "id": 7020790,
-                "name": "技能 7020790",
+                "name": "防反",
                 "icon_id": "703005",
                 "move_type": {
                     "id": 1,
@@ -696,14 +708,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7020790",
-                        "description": ""
+                        "name": "防反",
+                        "description": "减伤70%，应对攻击：自己获得物攻和魔攻+70%。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "减伤70%，应对攻击：自己获得物攻和魔攻+70%。"
             }
         },
         {
@@ -712,7 +724,7 @@
             "move_id": 7030330,
             "move": {
                 "id": 7030330,
-                "name": "技能 7030330",
+                "name": "酶溶剂有一点臭臭的，但精灵们很喜欢，会使劲地嗅。",
                 "icon_id": "703026",
                 "move_type": {
                     "id": 2,
@@ -723,14 +735,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7030330",
-                        "description": ""
+                        "name": "酶溶剂有一点臭臭的，但精灵们很喜欢，会使劲地嗅。",
+                        "description": "蜡质膜"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "蜡质膜"
             }
         },
         {
@@ -739,7 +751,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "技能 7040300",
+                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -750,14 +762,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7040300",
-                        "description": ""
+                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                        "description": "火焰护盾"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "火焰护盾"
             }
         },
         {
@@ -766,7 +778,7 @@
             "move_id": 7050270,
             "move": {
                 "id": 7050270,
-                "name": "技能 7050270",
+                "name": "应对！泡沫幻影",
                 "icon_id": "703104",
                 "move_type": {
                     "id": 4,
@@ -777,14 +789,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7050270",
-                        "description": ""
+                        "name": "应对！泡沫幻影",
+                        "description": "减伤80%，应对攻击：自己脱离。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "减伤80%，应对攻击：自己脱离。"
             }
         },
         {
@@ -793,7 +805,7 @@
             "move_id": 7060230,
             "move": {
                 "id": 7060230,
-                "name": "技能 7060230",
+                "name": "天光",
                 "icon_id": "105015",
                 "move_type": {
                     "id": 5,
@@ -804,14 +816,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7060230",
-                        "description": ""
+                        "name": "天光",
+                        "description": "造成魔伤，本技能系别和天气系别相同。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": ""
+                "description": "造成魔伤，本技能系别和天气系别相同。"
             }
         },
         {
@@ -820,7 +832,7 @@
             "move_id": 7080120,
             "move": {
                 "id": 7080120,
-                "name": "技能 7080120",
+                "name": "造成魔伤，自己每​受​到​一​次​抵抗​伤害，​本技​能​威力​永久​+20。",
                 "icon_id": "708012",
                 "move_type": {
                     "id": 6,
@@ -831,14 +843,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7080120",
-                        "description": ""
+                        "name": "造成魔伤，自己每​受​到​一​次​抵抗​伤害，​本技​能​威力​永久​+20。",
+                        "description": "正在评估——【威胁等级】，嘀嗒，威胁等级评估为——【极高】，判断小洛克需要被保护，正在提高本技能威力。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": ""
+                "description": "正在评估——【威胁等级】，嘀嗒，威胁等级评估为——【极高】，判断小洛克需要被保护，正在提高本技能威力。"
             }
         },
         {
@@ -847,7 +859,7 @@
             "move_id": 7090350,
             "move": {
                 "id": 7090350,
-                "name": "技能 7090350",
+                "name": "冰捆缚",
                 "icon_id": "108031",
                 "move_type": {
                     "id": 7,
@@ -858,14 +870,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7090350",
-                        "description": ""
+                        "name": "冰捆缚",
+                        "description": "2连击，每次连击敌方获得全技能能耗+1。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "2连击，每次连击敌方获得全技能能耗+1。"
             }
         },
         {
@@ -874,7 +886,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "技能 7100150",
+                "name": "精灵蓄力中",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -885,14 +897,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7100150",
-                        "description": ""
+                        "name": "精灵蓄力中",
+                        "description": "龙吼"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": ""
+                "description": "龙吼"
             }
         },
         {
@@ -901,7 +913,7 @@
             "move_id": 7110280,
             "move": {
                 "id": 7110280,
-                "name": "技能 7110280",
+                "name": "落雷",
                 "icon_id": "310012",
                 "move_type": {
                     "id": 9,
@@ -912,14 +924,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7110280",
-                        "description": ""
+                        "name": "落雷",
+                        "description": "造成魔伤，每次入场，本技能威力永久+40。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "造成魔伤，每次入场，本技能威力永久+40。"
             }
         },
         {
@@ -928,7 +940,7 @@
             "move_id": 7120190,
             "move": {
                 "id": 7120190,
-                "name": "技能 7120190",
+                "name": "剧毒",
                 "icon_id": "111016",
                 "move_type": {
                     "id": 10,
@@ -939,14 +951,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7120190",
-                        "description": ""
+                        "name": "剧毒",
+                        "description": "敌方获得3层中毒，应对防御：改为获得8层。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": ""
+                "description": "敌方获得3层中毒，应对防御：改为获得8层。"
             }
         },
         {
@@ -955,7 +967,7 @@
             "move_id": 7130220,
             "move": {
                 "id": 7130220,
-                "name": "技能 7130220",
+                "name": "应对！虫击",
                 "icon_id": "212015",
                 "move_type": {
                     "id": 11,
@@ -966,14 +978,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7130220",
-                        "description": ""
+                        "name": "应对！虫击",
+                        "description": "造成物伤，应对状态：本次技能威力变为2倍，无视敌方系别抵抗。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "造成物伤，应对状态：本次技能威力变为2倍，无视敌方系别抵抗。"
             }
         },
         {
@@ -982,7 +994,7 @@
             "move_id": 7140100,
             "move": {
                 "id": 7140100,
-                "name": "技能 7140100",
+                "name": "崩的是对方的架势，合的是破招的美学。",
                 "icon_id": "113027",
                 "move_type": {
                     "id": 12,
@@ -993,14 +1005,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7140100",
-                        "description": ""
+                        "name": "崩的是对方的架势，合的是破招的美学。",
+                        "description": "应对！崩拳"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 25,
-                "description": ""
+                "description": "应对！崩拳"
             }
         },
         {
@@ -1009,7 +1021,7 @@
             "move_id": 7150310,
             "move": {
                 "id": 7150310,
-                "name": "技能 7150310",
+                "name": "对敌方精灵造成物理伤害。",
                 "icon_id": "114027",
                 "move_type": {
                     "id": 13,
@@ -1020,14 +1032,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7150310",
-                        "description": ""
+                        "name": "对敌方精灵造成物理伤害。",
+                        "description": "回旋风暴"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": ""
+                "description": "回旋风暴"
             }
         },
         {
@@ -1036,7 +1048,7 @@
             "move_id": 7160240,
             "move": {
                 "id": 7160240,
-                "name": "技能 7160240",
+                "name": "生日蛋糕",
                 "icon_id": "115012",
                 "move_type": {
                     "id": 14,
@@ -1047,14 +1059,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7160240",
-                        "description": ""
+                        "name": "生日蛋糕",
+                        "description": "驱散自己的减益，自己的增益翻倍。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": ""
+                "description": "驱散自己的减益，自己的增益翻倍。"
             }
         },
         {
@@ -1063,7 +1075,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "技能 7170220",
+                "name": "减伤70%，应对攻击：敌方失去3能量。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1074,14 +1086,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7170220",
-                        "description": ""
+                        "name": "减伤70%，应对攻击：敌方失去3能量。",
+                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": ""
+                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
             }
         },
         {
@@ -1090,7 +1102,7 @@
             "move_id": 7180210,
             "move": {
                 "id": 7180210,
-                "name": "技能 7180210",
+                "name": "彼岸之手",
                 "icon_id": "317018",
                 "move_type": {
                     "id": 16,
@@ -1101,14 +1113,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7180210",
-                        "description": ""
+                        "name": "彼岸之手",
+                        "description": "造成物伤，自己每失去10%生命，本技能能耗-1。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 3,
                 "power": null,
-                "description": ""
+                "description": "造成物伤，自己每失去10%生命，本技能能耗-1。"
             }
         },
         {
@@ -1117,7 +1129,7 @@
             "move_id": 7070130,
             "move": {
                 "id": 7070130,
-                "name": "技能 7070130",
+                "name": "离子震荡",
                 "icon_id": "106013",
                 "move_type": {
                     "id": 17,
@@ -1128,14 +1140,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7070130",
-                        "description": ""
+                        "name": "离子震荡",
+                        "description": "造成魔伤，本技能位于3号位时威力+40，传动1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": ""
+                "description": "造成魔伤，本技能位于3号位时威力+40，传动1。"
             }
         },
         {
@@ -1144,7 +1156,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "技能 7190400",
+                "name": "心灵洞悉",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1155,14 +1167,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "技能 7190400",
-                        "description": ""
+                        "name": "心灵洞悉",
+                        "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 3,
                 "power": null,
-                "description": ""
+                "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
             }
         }
     ],
@@ -1177,7 +1189,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3206"
+                                "name": "多西"
                             }
                         },
                         "is_leader_form": false,
@@ -1209,7 +1221,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3207"
+                                "name": "库多西"
                             }
                         },
                         "is_leader_form": false,
@@ -1243,7 +1255,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3208"
+                                "name": "波多西"
                             }
                         },
                         "is_leader_form": false,
@@ -1275,13 +1287,15 @@
         "current_monster_id": 3206
     },
     "world_profile": {
-        "type_desc": null,
-        "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "type_desc": "钢铁精灵",
+        "description_habitat": "行踪神秘",
+        "introduction": "可以通过磁性来悬浮在空中，对影响磁场稳定的东西异常敏感，偶尔会因为磁力吸来一些莫名其妙的小零件。可以通过操纵磁力来造成巨大的破坏，常是电力故障的罪魁祸首。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "地面",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": [
             1,
             3
@@ -1295,7 +1309,7 @@
     "breeding": {
         "id": 3206001,
         "pet_id": 3206001,
-        "name": null,
+        "name": "异色机械方方",
         "model_id": 3206001,
         "hatch_data": 28800,
         "weight_low": 1995,
@@ -1317,7 +1331,7 @@
             {
                 "id": 3206001,
                 "pet_id": 3206001,
-                "name": null,
+                "name": "异色机械方方",
                 "model_id": 3206001,
                 "hatch_data": 28800,
                 "weight_low": 1995,
@@ -1337,15 +1351,47 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3211004,
+                "pet_id": 3211004,
+                "name": "多西",
+                "model_id": 3211001,
+                "hatch_data": 72000,
+                "weight_low": 9520,
+                "weight_high": 13600,
+                "height_low": 31,
+                "height_high": 39,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 32060001,
                 "pet_id": 32060001,
-                "name": null,
+                "name": "石石",
                 "model_id": 3206001,
                 "hatch_data": 300,
                 "weight_low": 1995,
                 "weight_high": 2840,
                 "height_low": 28,
                 "height_high": 39,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 32480001,
+                "pet_id": 32480001,
+                "name": "多西",
+                "model_id": 3248001,
+                "hatch_data": 300,
+                "weight_low": 33250,
+                "weight_high": 44000,
+                "height_low": 34,
+                "height_high": 48,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

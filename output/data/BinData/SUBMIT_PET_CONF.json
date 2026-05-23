@@ -23,7 +23,7 @@
       "base_id": [
         3012
       ],
-      "submit_desc": "",
+      "submit_desc": "需要一只外向性格的鸭吉吉（勇敢、逞强、稳重、天真、慎重、开朗）",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -72,7 +72,7 @@
         3601,
         3602
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只能生火的精灵"
     },
     "6": {
       "id": 6,
@@ -136,7 +136,7 @@
         3547,
         3571
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只能能飞的精灵"
     },
     "7": {
       "id": 7,
@@ -199,7 +199,7 @@
         3598,
         3599
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只能渡海的精灵"
     },
     "8": {
       "id": 8,
@@ -225,7 +225,7 @@
         3333,
         3315
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只小小精灵"
     },
     "9": {
       "id": 9,
@@ -239,7 +239,7 @@
         3277,
         3278
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只翅膀很大的精灵"
     },
     "10": {
       "id": 10,
@@ -268,7 +268,7 @@
         3442,
         3443
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只会发光的精灵"
     },
     "11": {
       "id": 11,
@@ -279,7 +279,7 @@
         3251,
         3357
       ],
-      "submit_desc": ""
+      "submit_desc": "需要活跃在彼得大道的精灵"
     },
     "12": {
       "id": 12,
@@ -292,28 +292,28 @@
       "base_id": [
         3082
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只红丝绒"
     },
     "14": {
       "id": 14,
       "base_id": [
         3055
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只？？？"
     },
     "15": {
       "id": 15,
       "base_id": [
         3098
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只？？？"
     },
     "16": {
       "id": 16,
       "base_id": [
         3058
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只？？？"
     },
     "17": {
       "id": 17,
@@ -323,56 +323,56 @@
         3298,
         3299
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只蹦蹦种子"
     },
     "18": {
       "id": 18,
       "base_id": [
         3483
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只蓬叶虫"
     },
     "19": {
       "id": 19,
       "base_id": [
         3104
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只布是岩"
     },
     "20": {
       "id": 20,
       "base_id": [
         3115
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只风铃鲨"
     },
     "21": {
       "id": 21,
       "base_id": [
         3012
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只会跳舞的蓬松鸭吉吉"
     },
     "22": {
       "id": 22,
       "base_id": [
         3104
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只布是岩"
     },
     "23": {
       "id": 23,
       "base_id": [
         3070
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只护主犬"
     },
     "24": {
       "id": 24,
       "base_id": [
         3071
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只音速犬"
     },
     "25": {
       "id": 25,
@@ -382,39 +382,39 @@
         3283,
         3284
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只冬羽雀"
     },
     "26": {
       "id": 26,
       "base_id": [
         3047
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只花影羚羊"
     },
     "27": {
       "id": 27,
       "base_id": [
         3046
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只羚兰羊"
     },
     "28": {
       "id": 28,
       "base_id": [
         3045
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只锥尾羊"
     },
     "29": {
       "id": 29,
       "base_id": [
         3027
       ],
-      "submit_desc": ""
+      "submit_desc": "需要一只蒲公英娃娃"
     },
     "30": {
       "id": 30,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「悠闲」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -426,7 +426,7 @@
     },
     "31": {
       "id": 31,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「大胆」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -438,7 +438,7 @@
     },
     "32": {
       "id": 32,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「固执」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -450,7 +450,7 @@
     },
     "33": {
       "id": 33,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「沉默」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -462,7 +462,7 @@
     },
     "34": {
       "id": 34,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「稳重」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -474,7 +474,7 @@
     },
     "35": {
       "id": 35,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「勇敢」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -486,7 +486,7 @@
     },
     "36": {
       "id": 36,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「粗心」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -498,7 +498,7 @@
     },
     "37": {
       "id": 37,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「急躁」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -510,7 +510,7 @@
     },
     "38": {
       "id": 38,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「温顺」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -522,7 +522,7 @@
     },
     "39": {
       "id": 39,
-      "submit_desc": "",
+      "submit_desc": "需要一只性格为「开朗」的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 1,
@@ -534,7 +534,7 @@
     },
     "40": {
       "id": 40,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「淘沙球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -546,7 +546,7 @@
     },
     "41": {
       "id": 41,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「好战球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -558,7 +558,7 @@
     },
     "42": {
       "id": 42,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「暗星球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -570,7 +570,7 @@
     },
     "43": {
       "id": 43,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「调温球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -582,7 +582,7 @@
     },
     "44": {
       "id": 44,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「光合球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -594,7 +594,7 @@
     },
     "45": {
       "id": 45,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「捕光球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -606,7 +606,7 @@
     },
     "46": {
       "id": 46,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「网兜球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -618,7 +618,7 @@
     },
     "47": {
       "id": 47,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「绝缘球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,
@@ -630,7 +630,7 @@
     },
     "48": {
       "id": 48,
-      "submit_desc": "",
+      "submit_desc": "需要一只使用「变幻球」捕捉的精灵",
       "attr_cond": [
         {
           "attr_cond_type": 7,

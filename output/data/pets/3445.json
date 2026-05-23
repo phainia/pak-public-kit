@@ -1,7 +1,19 @@
 {
     "id": 3445,
     "name": "xuemaojiaolinyang",
-    "form": "default",
+    "form": "本来的样子",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 6,
         "name": "Ground",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3445"
+            "name": "雪毛角羚牛"
         }
     },
     "implemented": false,
@@ -43,18 +55,18 @@
         "id": 3445,
         "name": "xuemaojiaolinyang",
         "localized": {
-            "zh": "3445"
+            "zh": "雪毛角羚牛"
         }
     },
     "trait": {
         "id": 200121,
-        "name": "特性 200121",
-        "description": "",
+        "name": "迟滞",
+        "description": "每有一个其他的己方精灵携带一个系别的技能，威力+10",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200121",
-                "description": ""
+                "name": "迟滞",
+                "description": "每有一个其他的己方精灵携带一个系别的技能，威力+10"
             }
         }
     },
@@ -69,10 +81,10 @@
                     {
                         "id": 3445,
                         "name": "xuemaojiaolinyang",
-                        "form": "default",
+                        "form": "本来的样子",
                         "localized": {
                             "zh": {
-                                "name": "3445"
+                                "name": "雪毛角羚牛"
                             }
                         },
                         "is_leader_form": false,
@@ -95,10 +107,10 @@
                     {
                         "id": 3446,
                         "name": "xuemaojiaolinyang_wanjiao",
-                        "form": "default",
+                        "form": "卷角的样子",
                         "localized": {
                             "zh": {
-                                "name": "3446"
+                                "name": "雪毛角羚牛"
                             }
                         },
                         "is_leader_form": false,
@@ -121,10 +133,10 @@
                     {
                         "id": 3447,
                         "name": "xuemaojiaolinyang_huanjiao",
-                        "form": "default",
+                        "form": "换角时的样子",
                         "localized": {
                             "zh": {
-                                "name": "3447"
+                                "name": "雪毛角羚牛"
                             }
                         },
                         "is_leader_form": false,
@@ -156,11 +168,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "永远在嚼着什么，所有长到它们嘴边的东西，全部都吃。不是正在吃东西，就在回味刚才吃的东西，还很喜欢舔东西，要么舔路边的盐岩，要么舔出汗的洛克。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -171,7 +185,7 @@
     "breeding": {
         "id": 3445001,
         "pet_id": 3445001,
-        "name": null,
+        "name": "梦游",
         "model_id": 3445001,
         "hatch_data": 72000,
         "weight_low": 34825,
@@ -193,7 +207,7 @@
             {
                 "id": 3445001,
                 "pet_id": 3445001,
-                "name": null,
+                "name": "梦游",
                 "model_id": 3445001,
                 "hatch_data": 72000,
                 "weight_low": 34825,
@@ -213,15 +227,91 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3454001,
+                "pet_id": 3454001,
+                "name": "雪毛角羚牛",
+                "model_id": 3454001,
+                "hatch_data": 28800,
+                "weight_low": 1330,
+                "weight_high": 2052,
+                "height_low": 20,
+                "height_high": 27,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    531,
+                    500
+                ],
+                "egg_add_glass_prob_array": [
+                    0,
+                    24
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 3457001,
+                "pet_id": 3457001,
+                "name": "雪毛角羚牛",
+                "model_id": 3457001,
+                "hatch_data": 72000,
+                "weight_low": 26775,
+                "weight_high": 37000,
+                "height_low": 53,
+                "height_high": 60,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    400,
+                    3125
+                ],
+                "egg_add_glass_prob_array": [
+                    2,
+                    113
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": true
+            },
+            {
                 "id": 34450001,
                 "pet_id": 34450001,
-                "name": null,
+                "name": "碧蓝珊瑚",
                 "model_id": 3445001,
                 "hatch_data": 300,
                 "weight_low": 34825,
                 "weight_high": 43200,
                 "height_low": 64,
                 "height_high": 68,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 34870001,
+                "pet_id": 34870001,
+                "name": "雪毛角羚牛",
+                "model_id": 3487001,
+                "hatch_data": 300,
+                "weight_low": 1698,
+                "weight_high": 2540,
+                "height_low": 20,
+                "height_high": 27,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 34920001,
+                "pet_id": 34920001,
+                "name": "雪毛角羚牛",
+                "model_id": 3492001,
+                "hatch_data": 300,
+                "weight_low": 1488,
+                "weight_high": 2600,
+                "height_low": 16,
+                "height_high": 19,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

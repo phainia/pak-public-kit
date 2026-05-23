@@ -2,6 +2,18 @@
     "id": 3425,
     "name": "sanyecaolong",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 2,
         "name": "Grass",
@@ -28,7 +40,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3425"
+            "name": "三叶草龙"
         }
     },
     "implemented": false,
@@ -43,7 +55,7 @@
         "id": 3425,
         "name": "sanyecaolong",
         "localized": {
-            "zh": "3425"
+            "zh": "三叶草龙"
         }
     },
     "trait": null,
@@ -61,7 +73,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3425"
+                                "name": "三叶草龙"
                             }
                         },
                         "is_leader_form": false,
@@ -93,7 +105,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3426"
+                                "name": "花叶龙"
                             }
                         },
                         "is_leader_form": false,
@@ -128,10 +140,12 @@
         "type_desc": null,
         "description_habitat": null,
         "introduction": null,
-        "refresh_locations": [],
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -142,7 +156,7 @@
     "breeding": {
         "id": 3425001,
         "pet_id": 3425001,
-        "name": null,
+        "name": "权杖-Ⅱ",
         "model_id": 3425001,
         "hatch_data": 1,
         "weight_low": 1,
@@ -158,7 +172,7 @@
             {
                 "id": 3425001,
                 "pet_id": 3425001,
-                "name": null,
+                "name": "权杖-Ⅱ",
                 "model_id": 3425001,
                 "hatch_data": 1,
                 "weight_low": 1,
@@ -172,9 +186,25 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3431002,
+                "pet_id": 3431002,
+                "name": "三叶草龙",
+                "model_id": 3431001,
+                "hatch_data": 300,
+                "weight_low": 1229,
+                "weight_high": 2728,
+                "height_low": 32,
+                "height_high": 35,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 34250001,
                 "pet_id": 34250001,
-                "name": null,
+                "name": "豆丁鱼",
                 "model_id": 3425001,
                 "hatch_data": 300,
                 "weight_low": 1,

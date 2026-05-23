@@ -2,6 +2,18 @@
     "id": 3228,
     "name": "feiman",
     "form": "default",
+    "assets": {
+        "preview": null,
+        "portrait": null,
+        "portrait_small": null,
+        "head": {
+            "normal": null,
+            "shiny": null,
+            "big": null,
+            "big_shiny": null
+        },
+        "illustrations": []
+    },
     "main_type": {
         "id": 14,
         "name": "Cute",
@@ -22,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "3228"
+            "name": "友爱天天"
         }
     },
     "implemented": false,
@@ -37,18 +49,18 @@
         "id": 3228,
         "name": "feiman",
         "localized": {
-            "zh": "3228"
+            "zh": "友爱天天"
         }
     },
     "trait": {
         "id": 200184,
-        "name": "特性 200184",
-        "description": "",
+        "name": "磁力",
+        "description": "0",
         "icon_id": "200074",
         "localized": {
             "zh": {
-                "name": "特性 200184",
-                "description": ""
+                "name": "磁力",
+                "description": "0"
             }
         }
     },
@@ -66,7 +78,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3228"
+                                "name": "友爱天天"
                             }
                         },
                         "is_leader_form": false,
@@ -92,7 +104,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "3229"
+                                "name": "友爱星飞"
                             }
                         },
                         "is_leader_form": false,
@@ -120,11 +132,13 @@
     "world_profile": {
         "type_desc": null,
         "description_habitat": null,
-        "introduction": null,
-        "refresh_locations": [],
+        "introduction": "被某个古老贵族世代圈养的种族，几乎褪去了野生的天性，无法通过精灵的手段在野外生存。个体均沿袭了贵族般的礼仪与行为，但翻看历史发现整个种族的社交状态堪忧，除了洛克族之外，几乎没有与任何精灵保持友好联系。",
+        "refresh_locations": [
+            "由于昼夜或者天气的原因，这只精灵还没有出现哦！"
+        ],
         "movement_type": "步行",
         "classis_id": 6,
-        "classis_name": null,
+        "classis_name": "自然类精灵",
         "handbook_area_ids": []
     },
     "catch_info": {
@@ -135,7 +149,7 @@
     "breeding": {
         "id": 3228001,
         "pet_id": 3228001,
-        "name": null,
+        "name": "海豹战士（翼系血脉）",
         "model_id": 3228001,
         "hatch_data": 43200,
         "weight_low": 2839,
@@ -157,7 +171,7 @@
             {
                 "id": 3228001,
                 "pet_id": 3228001,
-                "name": null,
+                "name": "海豹战士（翼系血脉）",
                 "model_id": 3228001,
                 "hatch_data": 43200,
                 "weight_low": 2839,
@@ -177,15 +191,53 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 3236001,
+                "pet_id": 3236001,
+                "name": "友爱天天",
+                "model_id": 3236001,
+                "hatch_data": 57600,
+                "weight_low": 3220,
+                "weight_high": 5120,
+                "height_low": 36,
+                "height_high": 51,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    395,
+                    2000
+                ],
+                "egg_add_glass_prob_array": [
+                    1,
+                    80
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 32280001,
                 "pet_id": 32280001,
-                "name": null,
+                "name": "拉特",
                 "model_id": 3228001,
                 "hatch_data": 300,
                 "weight_low": 2839,
                 "weight_high": 3760,
                 "height_low": 28,
                 "height_high": 39,
+                "precious_egg_type": 7,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 32660001,
+                "pet_id": 32660001,
+                "name": "友爱天天",
+                "model_id": 3266001,
+                "hatch_data": 300,
+                "weight_low": 6125,
+                "weight_high": 10740,
+                "height_low": 31,
+                "height_high": 44,
                 "precious_egg_type": 7,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,
