@@ -80,9 +80,12 @@ ensure_java() {
         return
     fi
 
-    if have java; then
+    if have java && java -version >/dev/null 2>&1; then
         info "Java: $(java -version 2>&1 | head -n 1)"
         return
+    fi
+    if have java; then
+        warn "System java command exists but no usable Java runtime was found; installing local OpenJDK"
     fi
 
     warn "Java not found; installing local OpenJDK into $ROOT/.tools/openjdk"

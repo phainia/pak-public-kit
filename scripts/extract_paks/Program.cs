@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using AssetRipper.TextureDecoder.Astc;
 using AssetRipper.TextureDecoder.Dxt;
 using CUE4Parse.Compression;
@@ -90,7 +91,7 @@ if (args.Length > 0 && args[0] == "--extract-lua")
     string? luaAesKeyHex = null;
     string? luaDecompilerPath = null;
     string? luaUnluacLibraryPath = null;
-    int luaJobs = Math.Max(1, Environment.ProcessorCount);
+    int luaJobs = ReadPositiveIntEnvironment("NRC_LUA_JOBS", Math.Max(1, Environment.ProcessorCount));
     int luaDecompilerTimeoutMs = 30_000;
     List<string> luaContains = [];
 
@@ -205,13 +206,16 @@ if (args.Length > 0 && args[0] == "--extract-lua")
         Directory.CreateDirectory(luaSourceDir);
 
     var sourceIndex = new List<string>();
-    int sourceWritten = 0, luacErrors = 0, sourceErrors = 0;
+    int sourceWritten = 0, luacErrors = 0, sourceErrors = 0, luaProcessed = 0;
+    var luaProgress = new ProgressState();
+    var activeLuaFiles = new ConcurrentDictionary<string, DateTimeOffset>(StringComparer.OrdinalIgnoreCase);
     var decompileOptions = new ParallelOptions
     {
         MaxDegreeOfParallelism = luaJobs
     };
     Parallel.ForEach(luacFiles, decompileOptions, file =>
     {
+        activeLuaFiles[file.CleanPath] = DateTimeOffset.UtcNow;
         try
         {
             var data = luaProvider.SaveAsset(file.File);
@@ -240,7 +244,15 @@ if (args.Length > 0 && args[0] == "--extract-lua")
             if (luacErrors <= 10)
                 Console.Error.WriteLine($"LUAC WARN: {file.File.Path}: {ex.Message}");
         }
+        finally
+        {
+            activeLuaFiles.TryRemove(file.CleanPath, out _);
+            var processed = Interlocked.Increment(ref luaProcessed);
+            ReportProgress("Lua", processed, luacFiles.Count, sourceWritten, sourceErrors + luacErrors, luaProgress, extra: BuildActiveLuaSummary(activeLuaFiles));
+        }
     });
+    ReportProgress("Lua", luaProcessed, luacFiles.Count, sourceWritten, sourceErrors + luacErrors, luaProgress, force: true, extra: BuildActiveLuaSummary(activeLuaFiles));
+    Console.WriteLine();
 
     WriteJsonIndex(luaSourceDir, luaContains.Count == 0 ? sourceIndex : EnumerateLuaSourceFiles(luaSourceDir));
     Console.WriteLine($"Lua source  : {sourceWritten} exported, {sourceErrors} decompile errors, {luacErrors} read errors");
@@ -368,7 +380,8 @@ var toExtract = provider.Files.Values
 Console.WriteLine($"Files to extract: {toExtract.Count}");
 Console.WriteLine("Extracting...");
 
-int extracted = 0, errors = 0;
+int extracted = 0, errors = 0, extractProcessed = 0;
+var extractProgress = new ProgressState();
 Parallel.ForEach(toExtract, file =>
 {
     try
@@ -385,11 +398,19 @@ Parallel.ForEach(toExtract, file =>
         if (errors <= 10)
             Console.Error.WriteLine($"RAW WARN: {file.Path}: {ex.Message}");
     }
+    finally
+    {
+        var processed = Interlocked.Increment(ref extractProcessed);
+        ReportProgress("Extract", processed, toExtract.Count, extracted, errors, extractProgress);
+    }
 });
+ReportProgress("Extract", extractProcessed, toExtract.Count, extracted, errors, extractProgress, force: true);
+Console.WriteLine();
 
 Console.WriteLine($"Done: {extracted} extracted, {errors} raw files skipped");
 
 Console.WriteLine("Exporting texture assets...");
+var textureJobs = ReadPositiveIntEnvironment("NRC_TEXTURE_JOBS", Math.Max(1, Environment.ProcessorCount));
 var textureFiles = provider.Files.Values
     .Where(f => Path.GetExtension(f.Path).Equals(".uasset", StringComparison.OrdinalIgnoreCase))
     .Where(IsTextureExportPath)
@@ -398,6 +419,7 @@ var textureFiles = provider.Files.Values
     .ToList();
 
 Console.WriteLine($"Texture candidates: {textureFiles.Count}");
+Console.WriteLine($"Texture jobs: {textureJobs}");
 foreach (var path in textureFiles.Take(20).Select(f => f.Path))
     Console.WriteLine($"  TEX {path}");
 
@@ -407,21 +429,30 @@ if (textureFiles.Count == 0)
     Environment.Exit(4);
 }
 
-int textures = 0, textureErrors = 0;
-foreach (var file in textureFiles)
+int textures = 0, textureErrors = 0, textureProcessed = 0;
+var textureProgress = new ProgressState();
+var textureOptions = new ParallelOptions { MaxDegreeOfParallelism = textureJobs };
+Parallel.ForEach(textureFiles, textureOptions, file =>
 {
     try
     {
         if (ExportTexture(provider, file, outDir))
-            textures++;
+            Interlocked.Increment(ref textures);
     }
     catch (Exception ex)
     {
-        textureErrors++;
-        if (textureErrors <= 10)
+        var currentErrors = Interlocked.Increment(ref textureErrors);
+        if (currentErrors <= 10)
             Console.Error.WriteLine($"TEX ERR: {file.Path}: {ex.Message}");
     }
-}
+    finally
+    {
+        var processed = Interlocked.Increment(ref textureProcessed);
+        ReportProgress("Textures", processed, textureFiles.Count, textures, textureErrors, textureProgress);
+    }
+});
+ReportProgress("Textures", textureProcessed, textureFiles.Count, textures, textureErrors, textureProgress, force: true);
+Console.WriteLine();
 
 static bool IsTextureExportPath(GameFile file)
 {
@@ -458,6 +489,88 @@ static int GetTextureExportPriority(GameFile file)
     if (p.Contains("/NewRoco/Modules/Activity/", StringComparison.OrdinalIgnoreCase)) return 11;
     if (IsUiRawTexturePath(p)) return 12;
     return 13;
+}
+
+static int ReadPositiveIntEnvironment(string name, int fallback)
+{
+    var value = Environment.GetEnvironmentVariable(name);
+    if (int.TryParse(value, out var parsed) && parsed > 0)
+        return parsed;
+    return fallback;
+}
+
+static string? BuildActiveLuaSummary(ConcurrentDictionary<string, DateTimeOffset> activeFiles)
+{
+    if (activeFiles.IsEmpty)
+        return null;
+
+    var now = DateTimeOffset.UtcNow;
+    var slowest = activeFiles
+        .Select(item => new
+        {
+            Path = item.Key,
+            Duration = now - item.Value
+        })
+        .OrderByDescending(item => item.Duration)
+        .Take(3)
+        .ToList();
+
+    if (slowest.Count == 0)
+        return null;
+
+    var names = string.Join(", ", slowest.Select(item => $"{ShortenProgressPath(item.Path)} {item.Duration:mm\\:ss}"));
+    return $"active {activeFiles.Count} slowest {names}";
+}
+
+static string ShortenProgressPath(string path)
+{
+    path = path.Replace('\\', '/');
+    const int maxLength = 72;
+    if (path.Length <= maxLength)
+        return path;
+    return $"...{path[^maxLength..]}";
+}
+
+static void ReportProgress(
+    string label,
+    int processed,
+    int total,
+    int completed,
+    int errors,
+    ProgressState state,
+    bool force = false,
+    string? extra = null)
+{
+    if (total <= 0)
+        return;
+
+    if (!force && processed < total && processed % 100 != 0 && state.SinceLast.ElapsedMilliseconds < 1_000)
+        return;
+
+    lock (state.Gate)
+    {
+        if (!force && processed < total && processed % 100 != 0 && state.SinceLast.ElapsedMilliseconds < 1_000)
+            return;
+
+        var percent = Math.Min(1.0, Math.Max(0.0, processed / (double)total));
+        var filled = (int)Math.Round(percent * 24);
+        var bar = new string('#', filled).PadRight(24, '-');
+        var elapsed = state.Elapsed.Elapsed;
+        var rate = elapsed.TotalSeconds > 0 ? processed / elapsed.TotalSeconds : 0;
+        var eta = rate > 0 && processed < total
+            ? TimeSpan.FromSeconds((total - processed) / rate)
+            : TimeSpan.Zero;
+        var message = $"{label} [{bar}] {processed}/{total} {percent:P1} done {completed} errors {errors} elapsed {elapsed:mm\\:ss} eta {eta:mm\\:ss}";
+        if (!string.IsNullOrWhiteSpace(extra))
+            message = $"{message} {extra}";
+
+        if (Console.IsOutputRedirected)
+            Console.WriteLine(message);
+        else
+            Console.Write($"\r{message.PadRight(Console.WindowWidth > 1 ? Console.WindowWidth - 1 : message.Length)}");
+
+        state.SinceLast.Restart();
+    }
 }
 
 Console.WriteLine($"Texture assets: {textures} exported, {textureErrors} errors");
@@ -964,4 +1077,11 @@ static string FindRepoRoot(string startDir)
     }
 
     return Path.GetFullPath(Path.Combine(startDir, "../../../../.."));
+}
+
+sealed class ProgressState
+{
+    public readonly Stopwatch Elapsed = Stopwatch.StartNew();
+    public readonly Stopwatch SinceLast = Stopwatch.StartNew();
+    public readonly object Gate = new();
 }
