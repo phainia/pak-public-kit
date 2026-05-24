@@ -3,13 +3,13 @@
     "name": "gujuanxiamoxiang",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3613.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_gujuanxiamoxiang.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_gujuanxiamoxiang.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3613.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3613.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -271,7 +271,7 @@
         },
         {
             "id": 7140250,
-            "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
+            "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
             "icon_id": "113029",
             "move_type": {
                 "id": 12,
@@ -282,14 +282,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
-                    "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+                    "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
+                    "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+            "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
         },
         {
             "id": 7140100,
@@ -315,7 +315,7 @@
         },
         {
             "id": 7140300,
-            "name": "造成物伤，2连击。",
+            "name": "缠丝劲",
             "icon_id": "113035",
             "move_type": {
                 "id": 12,
@@ -326,7 +326,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击。",
+                    "name": "缠丝劲",
                     "description": "造成物伤，应对状态：本次技能威力变为5倍。"
                 }
             },
@@ -625,7 +625,7 @@
         },
         {
             "id": 7190390,
-            "name": "超新星馈赠",
+            "name": "别睡了，醒醒！老师点名了！",
             "icon_id": "118021",
             "move_type": {
                 "id": 18,
@@ -636,7 +636,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "超新星馈赠",
+                    "name": "别睡了，醒醒！老师点名了！",
                     "description": "2连击，每次连击使敌方获得1层星陨印记。"
                 }
             },
@@ -735,7 +735,7 @@
         },
         {
             "id": 7180330,
-            "name": "造成魔伤，2连击。",
+            "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -746,18 +746,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，2连击。",
-                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+                    "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7140060,
-            "name": "驱散敌方印记，每层印记回复自己10%生命。",
+            "name": "食腐",
             "icon_id": "714001",
             "move_type": {
                 "id": 12,
@@ -768,7 +768,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "驱散敌方印记，每层印记回复自己10%生命。",
+                    "name": "食腐",
                     "description": "造成物伤，敌方获得物防-30%。"
                 }
             },
@@ -905,7 +905,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                "name": "火焰护盾",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -916,14 +916,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
-                        "description": "火焰护盾"
+                        "name": "火焰护盾",
+                        "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "火焰护盾"
+                "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
             }
         },
         {
@@ -959,7 +959,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -970,14 +970,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -986,7 +986,7 @@
             "move_id": 7080400,
             "move": {
                 "id": 7080400,
-                "name": "造成物伤，敌方获得连击数-3。",
+                "name": "石肤术",
                 "icon_id": "107036",
                 "move_type": {
                     "id": 6,
@@ -997,14 +997,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，敌方获得连击数-3。",
-                        "description": "石肤术"
+                        "name": "石肤术",
+                        "description": "造成物伤，敌方获得连击数-3。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "石肤术"
+                "description": "造成物伤，敌方获得连击数-3。"
             }
         },
         {
@@ -1040,7 +1040,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1051,14 +1051,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1175,7 +1175,7 @@
             "move_id": 7150150,
             "move": {
                 "id": 7150150,
-                "name": "造成魔伤，迅捷。",
+                "name": "疾风刺",
                 "icon_id": "715012",
                 "move_type": {
                     "id": 13,
@@ -1186,14 +1186,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，迅捷。",
-                        "description": "疾风刺"
+                        "name": "疾风刺",
+                        "description": "造成魔伤，迅捷。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "疾风刺"
+                "description": "造成魔伤，迅捷。"
             }
         },
         {
@@ -1283,7 +1283,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1294,14 +1294,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {
@@ -1310,7 +1310,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1321,7 +1321,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

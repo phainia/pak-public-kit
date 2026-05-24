@@ -3,13 +3,13 @@
     "name": "qilihua_boss",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4022.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_qilihua_boss.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_qilihua_boss.webp",
         "head": {
-            "normal": null,
-            "shiny": null,
-            "big": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4022.webp",
+            "shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4022_1.webp",
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/4022.webp",
             "big_shiny": null
         },
         "illustrations": []

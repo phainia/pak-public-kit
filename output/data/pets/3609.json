@@ -3,13 +3,13 @@
     "name": "huajianchentieshou",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3609.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_huajianchentieshou.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_huajianchentieshou.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3609.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3609.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -271,7 +271,7 @@
         },
         {
             "id": 7140360,
-            "name": "减伤80%，应对攻击：自己获得全技能威力+40。",
+            "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
             "icon_id": "113029",
             "move_type": {
                 "id": 12,
@@ -282,14 +282,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤80%，应对攻击：自己获得全技能威力+40。",
-                    "description": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。"
+                    "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
+                    "description": "减伤80%，应对攻击：自己获得全技能威力+40。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。"
+            "description": "减伤80%，应对攻击：自己获得全技能威力+40。"
         },
         {
             "id": 7020450,
@@ -315,7 +315,7 @@
         },
         {
             "id": 7140280,
-            "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
+            "name": "气波",
             "icon_id": "113032",
             "move_type": {
                 "id": 12,
@@ -326,14 +326,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
-                    "description": "气波"
+                    "name": "气波",
+                    "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "气波"
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
         },
         {
             "id": 7140100,
@@ -381,7 +381,7 @@
         },
         {
             "id": 7140250,
-            "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
+            "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
             "icon_id": "113029",
             "move_type": {
                 "id": 12,
@@ -392,14 +392,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
-                    "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+                    "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
+                    "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+            "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
         },
         {
             "id": 7140130,
@@ -625,7 +625,7 @@
         },
         {
             "id": 7140170,
-            "name": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。",
+            "name": "截拳",
             "icon_id": "213020",
             "move_type": {
                 "id": 12,
@@ -636,7 +636,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。",
+                    "name": "截拳",
                     "description": "造成物伤，应对状态：本次技能威力变为10倍。"
                 }
             },
@@ -647,7 +647,7 @@
         },
         {
             "id": 7140220,
-            "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+            "name": "气沉丹田",
             "icon_id": "113026",
             "move_type": {
                 "id": 12,
@@ -658,14 +658,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
-                    "description": "气沉丹田"
+                    "name": "气沉丹田",
+                    "description": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 65,
-            "description": "气沉丹田"
+            "description": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。"
         },
         {
             "id": 7020920,
@@ -713,7 +713,7 @@
         },
         {
             "id": 7170220,
-            "name": "减伤70%，应对攻击：敌方失去3能量。",
+            "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
             "icon_id": "116016",
             "move_type": {
                 "id": 15,
@@ -724,14 +724,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，应对攻击：敌方失去3能量。",
-                    "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                    "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                    "description": "减伤70%，应对攻击：敌方失去3能量。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+            "description": "减伤70%，应对攻击：敌方失去3能量。"
         },
         {
             "id": 7170200,
@@ -801,7 +801,7 @@
         },
         {
             "id": 7190290,
-            "name": "空间压迫",
+            "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
             "icon_id": "118009",
             "move_type": {
                 "id": 18,
@@ -812,7 +812,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "空间压迫",
+                    "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -911,7 +911,7 @@
         },
         {
             "id": 7170210,
-            "name": "报复",
+            "name": "午夜，在黑暗的教室里，两个人共同握着一根羽毛笔，嘴里念念有词，笔尖疯狂抖动。",
             "icon_id": "116015",
             "move_type": {
                 "id": 15,
@@ -922,7 +922,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "报复",
+                    "name": "午夜，在黑暗的教室里，两个人共同握着一根羽毛笔，嘴里念念有词，笔尖疯狂抖动。",
                     "description": "敌方获得1层降灵印记。"
                 }
             },
@@ -1037,7 +1037,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -1048,14 +1048,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -1172,7 +1172,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1183,14 +1183,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {

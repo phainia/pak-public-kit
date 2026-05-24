@@ -3,11 +3,11 @@
     "name": "9919",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Item190/100606.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Item190/100606.webp",
             "shiny": null,
             "big": null,
             "big_shiny": null

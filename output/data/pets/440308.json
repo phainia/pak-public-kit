@@ -3,14 +3,14 @@
     "name": "440308",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3401.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
-            "shiny": null,
-            "big": null,
-            "big_shiny": null
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3401.webp",
+            "shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3401_1.webp",
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3401.webp",
+            "big_shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3401_1.webp"
         },
         "illustrations": []
     },

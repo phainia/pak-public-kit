@@ -3,13 +3,13 @@
     "name": "lihaixiuluo",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3420.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_lihaixiuluo.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_lihaixiuluo.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3420.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3420.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -216,7 +216,7 @@
         },
         {
             "id": 7120130,
-            "name": "应对！毒囊",
+            "name": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
             "icon_id": "712002",
             "move_type": {
                 "id": 10,
@@ -227,7 +227,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对！毒囊",
+                    "name": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
                     "description": "造成物伤，敌方获得2层中毒，应对状态：改为获得6层。"
                 }
             },
@@ -372,7 +372,7 @@
         },
         {
             "id": 7150200,
-            "name": "自己获得速度+120。",
+            "name": "风起",
             "icon_id": "114015",
             "move_type": {
                 "id": 13,
@@ -383,18 +383,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得速度+120。",
-                    "description": "风起"
+                    "name": "风起",
+                    "description": "自己获得速度+120。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 75,
-            "description": "风起"
+            "description": "自己获得速度+120。"
         },
         {
             "id": 7030420,
-            "name": "造成物伤，2连击。",
+            "name": "种皮爆裂",
             "icon_id": "102025",
             "move_type": {
                 "id": 2,
@@ -405,7 +405,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击。",
+                    "name": "种皮爆裂",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -614,7 +614,7 @@
         },
         {
             "id": 7180170,
-            "name": "暗突袭",
+            "name": "“别担心，受点小伤可以促进血液循环”。",
             "icon_id": "718009",
             "move_type": {
                 "id": 16,
@@ -625,7 +625,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "暗突袭",
+                    "name": "“别担心，受点小伤可以促进血液循环”。",
                     "description": "造成物伤，3连击，若自己的生命低于50%，本次技能连击数+2。"
                 }
             },
@@ -636,7 +636,7 @@
         },
         {
             "id": 7120290,
-            "name": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。",
+            "name": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
             "icon_id": "211024",
             "move_type": {
                 "id": 10,
@@ -647,14 +647,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。",
-                    "description": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。"
+                    "name": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。",
+                    "description": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "老师千叮咛万嘱咐，给精灵使用毒系秘药的时候，记得带好口罩手套。"
+            "description": "减伤50%，敌方每有1层中毒效果，本技能减伤+10%，应对攻击。"
         }
     ],
     "legacy_moves": [
@@ -718,7 +718,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -729,14 +729,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -853,7 +853,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -864,14 +864,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1042,7 +1042,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1053,14 +1053,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {

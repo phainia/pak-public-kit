@@ -3,13 +3,13 @@
     "name": "qiqilei_yidi",
     "form": "黑子",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3558.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_qiqilei_yidi.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_qiqilei_yidi.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3558.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3558.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -117,7 +117,7 @@
         },
         {
             "id": 7140050,
-            "name": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。",
+            "name": "网缚",
             "icon_id": "714005",
             "move_type": {
                 "id": 12,
@@ -128,14 +128,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。",
-                    "description": "网缚"
+                    "name": "网缚",
+                    "description": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 0,
             "power": 30,
-            "description": "网缚"
+            "description": "造成物伤，驱散敌方所有印记，应对状态：改为偷取印记。"
         },
         {
             "id": 7140210,
@@ -271,7 +271,7 @@
         },
         {
             "id": 7140250,
-            "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
+            "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
             "icon_id": "113029",
             "move_type": {
                 "id": 12,
@@ -282,18 +282,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
-                    "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+                    "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
+                    "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+            "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
         },
         {
             "id": 7080410,
-            "name": "自己获得物防+140%和速度-30。",
+            "name": "现在我与山岳同呼吸。",
             "icon_id": "107039",
             "move_type": {
                 "id": 6,
@@ -304,14 +304,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得物防+140%和速度-30。",
-                    "description": "现在我与山岳同呼吸。"
+                    "name": "现在我与山岳同呼吸。",
+                    "description": "自己获得物防+140%和速度-30。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "现在我与山岳同呼吸。"
+            "description": "自己获得物防+140%和速度-30。"
         },
         {
             "id": 7080360,
@@ -359,7 +359,7 @@
         },
         {
             "id": 7140280,
-            "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
+            "name": "气波",
             "icon_id": "113032",
             "move_type": {
                 "id": 12,
@@ -370,14 +370,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
-                    "description": "气波"
+                    "name": "气波",
+                    "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "气波"
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
         },
         {
             "id": 7140180,
@@ -493,7 +493,7 @@
         },
         {
             "id": 7140300,
-            "name": "造成物伤，2连击。",
+            "name": "缠丝劲",
             "icon_id": "113035",
             "move_type": {
                 "id": 12,
@@ -504,7 +504,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击。",
+                    "name": "缠丝劲",
                     "description": "造成物伤，应对状态：本次技能威力变为5倍。"
                 }
             },
@@ -559,7 +559,7 @@
         },
         {
             "id": 7180330,
-            "name": "造成魔伤，2连击。",
+            "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -570,14 +570,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，2连击。",
-                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+                    "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7021090,
@@ -757,7 +757,7 @@
         },
         {
             "id": 7080240,
-            "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
+            "name": "“可我们不是那种棋子。”——棋棋",
             "icon_id": "708004",
             "move_type": {
                 "id": 6,
@@ -768,14 +768,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
-                    "description": "“可我们不是那种棋子。”——棋棋"
+                    "name": "“可我们不是那种棋子。”——棋棋",
+                    "description": "减伤70%，应对攻击：敌方获得物攻-70%。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "“可我们不是那种棋子。”——棋棋"
+            "description": "减伤70%，应对攻击：敌方获得物攻-70%。"
         },
         {
             "id": 7021130,
@@ -883,7 +883,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                "name": "火焰护盾",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -894,14 +894,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
-                        "description": "火焰护盾"
+                        "name": "火焰护盾",
+                        "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "火焰护盾"
+                "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
             }
         },
         {
@@ -1018,7 +1018,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1029,14 +1029,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1153,7 +1153,7 @@
             "move_id": 7150150,
             "move": {
                 "id": 7150150,
-                "name": "造成魔伤，迅捷。",
+                "name": "疾风刺",
                 "icon_id": "715012",
                 "move_type": {
                     "id": 13,
@@ -1164,14 +1164,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，迅捷。",
-                        "description": "疾风刺"
+                        "name": "疾风刺",
+                        "description": "造成魔伤，迅捷。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "疾风刺"
+                "description": "造成魔伤，迅捷。"
             }
         },
         {
@@ -1288,7 +1288,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1299,7 +1299,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

@@ -3,13 +3,13 @@
     "name": "9813",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -67,7 +67,7 @@
     "move_pool": [
         {
             "id": 7150250,
-            "name": "减伤50%，迅捷，应对攻击。",
+            "name": "疾风涡轮",
             "icon_id": "114020",
             "move_type": {
                 "id": 13,
@@ -78,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤50%，迅捷，应对攻击。",
-                    "description": "疾风涡轮"
+                    "name": "疾风涡轮",
+                    "description": "减伤50%，迅捷，应对攻击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 60,
-            "description": "疾风涡轮"
+            "description": "减伤50%，迅捷，应对攻击。"
         },
         {
             "id": 7150260,
-            "name": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。",
+            "name": "鸣叫",
             "icon_id": "114021",
             "move_type": {
                 "id": 13,
@@ -100,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。",
-                    "description": "鸣叫"
+                    "name": "鸣叫",
+                    "description": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": "鸣叫"
+            "description": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。"
         },
         {
             "id": 7150270,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "鹰爪",
             "icon_id": "214022",
             "move_type": {
                 "id": 13,
@@ -122,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "鹰爪"
+                    "name": "鹰爪",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "鹰爪"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7150300,
-            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "name": "风矢",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -144,18 +144,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                    "description": "风矢"
+                    "name": "风矢",
+                    "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "风矢"
+            "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
         },
         {
             "id": 7150310,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "回旋风暴",
             "icon_id": "114027",
             "move_type": {
                 "id": 13,
@@ -166,18 +166,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "回旋风暴"
+                    "name": "回旋风暴",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "回旋风暴"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7150320,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "闪击",
             "icon_id": "314028",
             "move_type": {
                 "id": 13,
@@ -188,14 +188,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "闪击"
+                    "name": "闪击",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 0,
             "power": null,
-            "description": "闪击"
+            "description": "对敌方精灵造成物理伤害。"
         }
     ],
     "move_stones": [],

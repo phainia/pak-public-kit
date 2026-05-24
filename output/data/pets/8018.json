@@ -3,16 +3,19 @@
     "name": "qiuka",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3156.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_qiuka.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_qiuka.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3156.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3156.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_qiuka_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_qiuka_2.webp"
+        ]
     },
     "main_type": {
         "id": 10,
@@ -78,7 +81,7 @@
         },
         {
             "id": 7120150,
-            "name": "造成魔伤，若击败敌方则将中毒转化为中毒印记。",
+            "name": "毒孢子",
             "icon_id": "211012",
             "move_type": {
                 "id": 10,
@@ -89,18 +92,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若击败敌方则将中毒转化为中毒印记。",
-                    "description": "毒孢子"
+                    "name": "毒孢子",
+                    "description": "造成魔伤，若击败敌方则将中毒转化为中毒印记。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "毒孢子"
+            "description": "造成魔伤，若击败敌方则将中毒转化为中毒印记。"
         },
         {
             "id": 7120180,
-            "name": "将敌方所有增益，转化成中毒。",
+            "name": "紫雀花迷雾下签订的契约。",
             "icon_id": "111015",
             "move_type": {
                 "id": 10,
@@ -111,14 +114,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "将敌方所有增益，转化成中毒。",
-                    "description": "紫雀花迷雾下签订的契约。"
+                    "name": "紫雀花迷雾下签订的契约。",
+                    "description": "将敌方所有增益，转化成中毒。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 0,
             "power": 40,
-            "description": "紫雀花迷雾下签订的契约。"
+            "description": "将敌方所有增益，转化成中毒。"
         },
         {
             "id": 7020480,
@@ -298,7 +301,7 @@
         },
         {
             "id": 7120100,
-            "name": "造成物伤，敌方获得1层中毒。",
+            "name": "毒针",
             "icon_id": "311006",
             "move_type": {
                 "id": 10,
@@ -309,7 +312,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，敌方获得1层中毒。",
+                    "name": "毒针",
                     "description": "自己回合结束时返场，​携带的攻击​技​能​​下回合获得1个已触发过的迸发效果，​应对防御：​改为​获得​所有​触​发过​的迸发​效果​。"
                 }
             },
@@ -320,7 +323,7 @@
         },
         {
             "id": 7120140,
-            "name": "毒液渗透",
+            "name": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
             "icon_id": "712004",
             "move_type": {
                 "id": 10,
@@ -331,7 +334,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "毒液渗透",
+                    "name": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
                     "description": "造成物伤，敌方获得2层中毒，应对状态：改为获得6层。"
                 }
             },
@@ -410,7 +413,7 @@
         },
         {
             "id": 7110200,
-            "name": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。",
+            "name": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。",
             "icon_id": "711002",
             "move_type": {
                 "id": 9,
@@ -421,14 +424,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。",
-                    "description": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。"
+                    "name": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。",
+                    "description": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 95,
-            "description": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。"
+            "description": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。"
         },
         {
             "id": 7110220,
@@ -454,7 +457,7 @@
         },
         {
             "id": 7110390,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "交叉闪电",
             "icon_id": "110025",
             "move_type": {
                 "id": 9,
@@ -465,14 +468,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "交叉闪电"
+                    "name": "交叉闪电",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "交叉闪电"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7180070,
@@ -520,7 +523,7 @@
         },
         {
             "id": 7180120,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
             "icon_id": "718002",
             "move_type": {
                 "id": 16,
@@ -531,14 +534,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+                    "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 70,
-            "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7180180,
@@ -586,7 +589,7 @@
         },
         {
             "id": 7140060,
-            "name": "驱散敌方印记，每层印记回复自己10%生命。",
+            "name": "食腐",
             "icon_id": "714001",
             "move_type": {
                 "id": 12,
@@ -597,7 +600,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "驱散敌方印记，每层印记回复自己10%生命。",
+                    "name": "食腐",
                     "description": "造成物伤，敌方获得物防-30%。"
                 }
             },
@@ -800,7 +803,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -811,14 +814,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -854,7 +857,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -865,14 +868,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -935,7 +938,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -946,14 +949,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1070,7 +1073,7 @@
             "move_id": 7150190,
             "move": {
                 "id": 7150190,
-                "name": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
+                "name": "乘风",
                 "icon_id": "114014",
                 "move_type": {
                     "id": 13,
@@ -1081,14 +1084,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
-                        "description": "乘风"
+                        "name": "乘风",
+                        "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "乘风"
+                "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。"
             }
         },
         {
@@ -1178,7 +1181,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1189,14 +1192,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

@@ -3,16 +3,19 @@
     "name": "xijiaoniao",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3309.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_xijiaoniao.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_xijiaoniao.webp",
         "head": {
-            "normal": null,
-            "shiny": null,
-            "big": null,
-            "big_shiny": null
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3309.webp",
+            "shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3309_1.webp",
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3309.webp",
+            "big_shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3309_1.webp"
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_xijiaoniao_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_xijiaoniao_2.webp"
+        ]
     },
     "main_type": {
         "id": 5,
@@ -155,7 +158,7 @@
         },
         {
             "id": 7060140,
-            "name": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。",
+            "name": "折射",
             "icon_id": "706008",
             "move_type": {
                 "id": 5,
@@ -166,14 +169,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。",
-                    "description": "折射"
+                    "name": "折射",
+                    "description": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "折射"
+            "description": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。"
         },
         {
             "id": 7060170,
@@ -265,7 +268,7 @@
         },
         {
             "id": 7060130,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "过曝",
             "icon_id": "706009",
             "move_type": {
                 "id": 5,
@@ -276,14 +279,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "过曝"
+                    "name": "过曝",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 50,
-            "description": "过曝"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7020690,
@@ -355,7 +358,7 @@
         },
         {
             "id": 7150130,
-            "name": "造成物伤，2连击。",
+            "name": "啄击",
             "icon_id": "715003",
             "move_type": {
                 "id": 13,
@@ -366,7 +369,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击。",
+                    "name": "啄击",
                     "description": "造成物伤，若敌方本回合更换精灵，本次技能威力翻倍。"
                 }
             },
@@ -377,7 +380,7 @@
         },
         {
             "id": 7150270,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "鹰爪",
             "icon_id": "214022",
             "move_type": {
                 "id": 13,
@@ -388,18 +391,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "鹰爪"
+                    "name": "鹰爪",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "鹰爪"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7150300,
-            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "name": "风矢",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -410,14 +413,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                    "description": "风矢"
+                    "name": "风矢",
+                    "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "风矢"
+            "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
         },
         {
             "id": 7190350,
@@ -443,7 +446,7 @@
         },
         {
             "id": 7190290,
-            "name": "空间压迫",
+            "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
             "icon_id": "118009",
             "move_type": {
                 "id": 18,
@@ -454,7 +457,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "空间压迫",
+                    "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -465,7 +468,7 @@
         },
         {
             "id": 7140060,
-            "name": "驱散敌方印记，每层印记回复自己10%生命。",
+            "name": "食腐",
             "icon_id": "714001",
             "move_type": {
                 "id": 12,
@@ -476,7 +479,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "驱散敌方印记，每层印记回复自己10%生命。",
+                    "name": "食腐",
                     "description": "造成物伤，敌方获得物防-30%。"
                 }
             },
@@ -641,7 +644,7 @@
         },
         {
             "id": 7190440,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "双星",
             "icon_id": "118035",
             "move_type": {
                 "id": 18,
@@ -652,14 +655,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "双星"
+                    "name": "双星",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 20,
-            "description": "双星"
+            "description": "对敌方精灵造成物理伤害。"
         }
     ],
     "legacy_moves": [
@@ -723,7 +726,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -734,14 +737,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -777,7 +780,7 @@
             "move_id": 7060210,
             "move": {
                 "id": 7060210,
-                "name": "对敌方精灵造成魔法伤害。",
+                "name": "虹光冲击",
                 "icon_id": "105013",
                 "move_type": {
                     "id": 5,
@@ -788,14 +791,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成魔法伤害。",
-                        "description": "虹光冲击"
+                        "name": "虹光冲击",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "虹光冲击"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -858,7 +861,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -869,14 +872,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1047,7 +1050,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1058,14 +1061,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {

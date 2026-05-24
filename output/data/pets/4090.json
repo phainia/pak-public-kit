@@ -3,11 +3,11 @@
     "name": "yilanyalong_shouling",
     "form": "伊兰龙",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4090.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_yilanyalong_shouling.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_yilanyalong_shouling.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4090.webp",
             "shiny": null,
             "big": null,
             "big_shiny": null
@@ -89,7 +89,7 @@
         },
         {
             "id": 7100260,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "隼鳞",
             "icon_id": "309017",
             "move_type": {
                 "id": 8,
@@ -100,14 +100,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "隼鳞"
+                    "name": "隼鳞",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 60,
-            "description": "隼鳞"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7100210,
@@ -155,7 +155,7 @@
         },
         {
             "id": 7100180,
-            "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+            "name": "怨力打击",
             "icon_id": "309008",
             "move_type": {
                 "id": 8,
@@ -166,7 +166,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+                    "name": "怨力打击",
                     "description": "蓄力，造成物伤，应对状态：本次技能威力翻倍。"
                 }
             },
@@ -177,7 +177,7 @@
         },
         {
             "id": 7100150,
-            "name": "精灵蓄力中",
+            "name": "龙吼",
             "icon_id": "710004",
             "move_type": {
                 "id": 8,
@@ -188,14 +188,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "精灵蓄力中",
-                    "description": "龙吼"
+                    "name": "龙吼",
+                    "description": "精灵蓄力中"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 200,
-            "description": "龙吼"
+            "description": "精灵蓄力中"
         },
         {
             "id": 7100170,
@@ -243,7 +243,7 @@
         },
         {
             "id": 7100240,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "龙息环爆",
             "icon_id": "209014",
             "move_type": {
                 "id": 8,
@@ -254,14 +254,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "龙息环爆"
+                    "name": "龙息环爆",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "龙息环爆"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7100140,
@@ -309,7 +309,7 @@
         },
         {
             "id": 7100200,
-            "name": "蓄力，对敌方造成魔法伤害。",
+            "name": "龙之利爪",
             "icon_id": "109010",
             "move_type": {
                 "id": 8,
@@ -320,14 +320,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，对敌方造成魔法伤害。",
-                    "description": "龙之利爪"
+                    "name": "龙之利爪",
+                    "description": "蓄力，对敌方造成魔法伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 1,
             "power": 55,
-            "description": "龙之利爪"
+            "description": "蓄力，对敌方造成魔法伤害。"
         },
         {
             "id": 7020450,
@@ -355,7 +355,7 @@
     "move_stones": [
         {
             "id": 7190390,
-            "name": "超新星馈赠",
+            "name": "别睡了，醒醒！老师点名了！",
             "icon_id": "118021",
             "move_type": {
                 "id": 18,
@@ -366,7 +366,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "超新星馈赠",
+                    "name": "别睡了，醒醒！老师点名了！",
                     "description": "2连击，每次连击使敌方获得1层星陨印记。"
                 }
             },
@@ -377,7 +377,7 @@
         },
         {
             "id": 7190230,
-            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+            "name": "黑荆棘",
             "icon_id": "719011",
             "move_type": {
                 "id": 18,
@@ -388,14 +388,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
-                    "description": "黑荆棘"
+                    "name": "黑荆棘",
+                    "description": "造成魔伤，应对状态：自身立即使用一次被应对技能"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": "黑荆棘"
+            "description": "造成魔伤，应对状态：自身立即使用一次被应对技能"
         },
         {
             "id": 7190350,
@@ -421,7 +421,7 @@
         },
         {
             "id": 7190290,
-            "name": "空间压迫",
+            "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
             "icon_id": "118009",
             "move_type": {
                 "id": 18,
@@ -432,7 +432,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "空间压迫",
+                    "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -443,7 +443,7 @@
         },
         {
             "id": 7110200,
-            "name": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。",
+            "name": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。",
             "icon_id": "711002",
             "move_type": {
                 "id": 9,
@@ -454,18 +454,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。",
-                    "description": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。"
+                    "name": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。",
+                    "description": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 95,
-            "description": "老龙给幼崽念的睡前故事，谁都无法打扰它们的好梦。"
+            "description": "减​伤90%，​应对攻击。​​​巧变：龙系​状态技能。"
         },
         {
             "id": 7110390,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "交叉闪电",
             "icon_id": "110025",
             "move_type": {
                 "id": 9,
@@ -476,14 +476,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "交叉闪电"
+                    "name": "交叉闪电",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "交叉闪电"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7110360,
@@ -531,7 +531,7 @@
         },
         {
             "id": 7030250,
-            "name": "自己回复15%生命和4能量。",
+            "name": "氧输送",
             "icon_id": "703012",
             "move_type": {
                 "id": 2,
@@ -542,14 +542,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己回复15%生命和4能量。",
-                    "description": "氧输送"
+                    "name": "氧输送",
+                    "description": "自己回复15%生命和4能量。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "氧输送"
+            "description": "自己回复15%生命和4能量。"
         },
         {
             "id": 7030290,
@@ -641,7 +641,7 @@
         },
         {
             "id": 7190430,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "星云漩涡",
             "icon_id": "118033",
             "move_type": {
                 "id": 18,
@@ -652,18 +652,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "星云漩涡"
+                    "name": "星云漩涡",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "星云漩涡"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7100320,
-            "name": "蓄力，造成物伤，先手+1。",
+            "name": "龙3",
             "icon_id": "109018",
             "move_type": {
                 "id": 8,
@@ -674,14 +674,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，造成物伤，先手+1。",
-                    "description": "龙3"
+                    "name": "龙3",
+                    "description": "蓄力，造成物伤，先手+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": "龙3"
+            "description": "蓄力，造成物伤，先手+1。"
         }
     ],
     "legacy_moves": [
@@ -718,7 +718,7 @@
             "move_id": 7030170,
             "move": {
                 "id": 7030170,
-                "name": "造成物伤，自己回复1能量。",
+                "name": "荆棘爪",
                 "icon_id": "703014",
                 "move_type": {
                     "id": 2,
@@ -729,14 +729,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，自己回复1能量。",
-                        "description": "荆棘爪"
+                        "name": "荆棘爪",
+                        "description": "造成物伤，自己回复1能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "荆棘爪"
+                "description": "造成物伤，自己回复1能量。"
             }
         },
         {
@@ -745,7 +745,7 @@
             "move_id": 7040360,
             "move": {
                 "id": 7040360,
-                "name": "造成魔伤，3连击。",
+                "name": "火爪",
                 "icon_id": "103025",
                 "move_type": {
                     "id": 3,
@@ -756,14 +756,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，3连击。",
-                        "description": "火爪"
+                        "name": "火爪",
+                        "description": "造成魔伤，3连击。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火爪"
+                "description": "造成魔伤，3连击。"
             }
         },
         {
@@ -772,7 +772,7 @@
             "move_id": 7050340,
             "move": {
                 "id": 7050340,
-                "name": "对敌方精灵造成物理伤害。",
+                "name": "白的、轻的、易碎的。",
                 "icon_id": "104023",
                 "move_type": {
                     "id": 4,
@@ -783,14 +783,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成物理伤害。",
-                        "description": "白的、轻的、易碎的。"
+                        "name": "白的、轻的、易碎的。",
+                        "description": "对敌方精灵造成物理伤害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "白的、轻的、易碎的。"
+                "description": "对敌方精灵造成物理伤害。"
             }
         },
         {
@@ -799,7 +799,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -810,14 +810,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -961,7 +961,7 @@
             "move_id": 7130270,
             "move": {
                 "id": 7130270,
-                "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
+                "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
                 "icon_id": "112019",
                 "move_type": {
                     "id": 11,
@@ -972,14 +972,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
-                        "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+                        "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
+                        "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+                "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
             }
         },
         {
@@ -1069,7 +1069,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1080,14 +1080,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {
@@ -1123,7 +1123,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1134,14 +1134,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

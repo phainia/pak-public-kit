@@ -3,13 +3,13 @@
     "name": "bulaikeyan_shouling",
     "form": "初级",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4072.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_bulaikeyan_shouling.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_bulaikeyan_shouling.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/4072.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/4072.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -133,7 +133,7 @@
         },
         {
             "id": 7080340,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "鸣沙陷阱",
             "icon_id": "107031",
             "move_type": {
                 "id": 6,
@@ -144,14 +144,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "鸣沙陷阱"
+                    "name": "鸣沙陷阱",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 120,
-            "description": "鸣沙陷阱"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7080230,
@@ -199,7 +199,7 @@
         },
         {
             "id": 7080380,
-            "name": "造成物伤，本技能能耗固定为4。",
+            "name": "震击",
             "icon_id": "307035",
             "move_type": {
                 "id": 6,
@@ -210,14 +210,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，本技能能耗固定为4。",
-                    "description": "震击"
+                    "name": "震击",
+                    "description": "造成物伤，本技能能耗固定为4。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "震击"
+            "description": "造成物伤，本技能能耗固定为4。"
         },
         {
             "id": 7020990,
@@ -243,7 +243,7 @@
         },
         {
             "id": 7080240,
-            "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
+            "name": "“可我们不是那种棋子。”——棋棋",
             "icon_id": "708004",
             "move_type": {
                 "id": 6,
@@ -254,14 +254,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
-                    "description": "“可我们不是那种棋子。”——棋棋"
+                    "name": "“可我们不是那种棋子。”——棋棋",
+                    "description": "减伤70%，应对攻击：敌方获得物攻-70%。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "“可我们不是那种棋子。”——棋棋"
+            "description": "减伤70%，应对攻击：敌方获得物攻-70%。"
         },
         {
             "id": 7080470,
@@ -309,7 +309,7 @@
         },
         {
             "id": 7080180,
-            "name": "造成物伤，应对状态：敌方获得物防-80%。",
+            "name": "裂石",
             "icon_id": "708006",
             "move_type": {
                 "id": 6,
@@ -320,7 +320,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：敌方获得物防-80%。",
+                    "name": "裂石",
                     "description": "造成物伤，敌方3回合无法更换精灵。"
                 }
             },
@@ -331,7 +331,7 @@
         },
         {
             "id": 7080210,
-            "name": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。",
+            "name": "越挣扎，时间反而流走得越快。",
             "icon_id": "708021",
             "move_type": {
                 "id": 6,
@@ -342,14 +342,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。",
-                    "description": "越挣扎，时间反而流走得越快。"
+                    "name": "越挣扎，时间反而流走得越快。",
+                    "description": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": "越挣扎，时间反而流走得越快。"
+            "description": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。"
         },
         {
             "id": 7080130,
@@ -375,7 +375,7 @@
         },
         {
             "id": 7080410,
-            "name": "自己获得物防+140%和速度-30。",
+            "name": "现在我与山岳同呼吸。",
             "icon_id": "107039",
             "move_type": {
                 "id": 6,
@@ -386,14 +386,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得物防+140%和速度-30。",
-                    "description": "现在我与山岳同呼吸。"
+                    "name": "现在我与山岳同呼吸。",
+                    "description": "自己获得物防+140%和速度-30。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "现在我与山岳同呼吸。"
+            "description": "自己获得物防+140%和速度-30。"
         }
     ],
     "move_stones": [
@@ -443,7 +443,7 @@
         },
         {
             "id": 7170140,
-            "name": "造成物伤，应对状态：使敌方失去6能量。",
+            "name": "惊吓盒子",
             "icon_id": "717014",
             "move_type": {
                 "id": 15,
@@ -454,7 +454,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：使敌方失去6能量。",
+                    "name": "惊吓盒子",
                     "description": "造成魔伤，自己回复1能量。"
                 }
             },
@@ -509,7 +509,7 @@
         },
         {
             "id": 7180330,
-            "name": "造成魔伤，2连击。",
+            "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -520,14 +520,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，2连击。",
-                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+                    "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7021020,
@@ -767,7 +767,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                "name": "火焰护盾",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -778,14 +778,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
-                        "description": "火焰护盾"
+                        "name": "火焰护盾",
+                        "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "火焰护盾"
+                "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
             }
         },
         {
@@ -902,7 +902,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -913,14 +913,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1037,7 +1037,7 @@
             "move_id": 7150310,
             "move": {
                 "id": 7150310,
-                "name": "对敌方精灵造成物理伤害。",
+                "name": "回旋风暴",
                 "icon_id": "114027",
                 "move_type": {
                     "id": 13,
@@ -1048,14 +1048,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成物理伤害。",
-                        "description": "回旋风暴"
+                        "name": "回旋风暴",
+                        "description": "对敌方精灵造成物理伤害。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "回旋风暴"
+                "description": "对敌方精灵造成物理伤害。"
             }
         },
         {
@@ -1172,7 +1172,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1183,7 +1183,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

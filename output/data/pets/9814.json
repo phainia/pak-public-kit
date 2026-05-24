@@ -3,13 +3,13 @@
     "name": "9814",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -67,7 +67,7 @@
     "move_pool": [
         {
             "id": 7160270,
-            "name": "自己获得萌化：全技能能耗永久-3。",
+            "name": "反弹",
             "icon_id": "215015",
             "move_type": {
                 "id": 14,
@@ -78,18 +78,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得萌化：全技能能耗永久-3。",
-                    "description": "反弹"
+                    "name": "反弹",
+                    "description": "自己获得萌化：全技能能耗永久-3。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "反弹"
+            "description": "自己获得萌化：全技能能耗永久-3。"
         },
         {
             "id": 7160280,
-            "name": "将自己的萌化转移给敌方。",
+            "name": "甜心续航",
             "icon_id": "115016",
             "move_type": {
                 "id": 14,
@@ -100,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "将自己的萌化转移给敌方。",
-                    "description": "甜心续航"
+                    "name": "甜心续航",
+                    "description": "将自己的萌化转移给敌方。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 30,
-            "description": "甜心续航"
+            "description": "将自己的萌化转移给敌方。"
         },
         {
             "id": 7160290,
-            "name": "自己和敌方获得萌化：回复40%生命。",
+            "name": "破罐破摔",
             "icon_id": "115017",
             "move_type": {
                 "id": 14,
@@ -122,14 +122,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己和敌方获得萌化：回复40%生命。",
-                    "description": "破罐破摔"
+                    "name": "破罐破摔",
+                    "description": "自己和敌方获得萌化：回复40%生命。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 4,
             "power": null,
-            "description": "破罐破摔"
+            "description": "自己和敌方获得萌化：回复40%生命。"
         }
     ],
     "move_stones": [],

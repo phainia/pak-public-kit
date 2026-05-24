@@ -3,16 +3,19 @@
     "name": "boduoxi",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3208.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_boduoxi.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_boduoxi.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3208.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3208.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_boduoxi_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_boduoxi_2.webp"
+        ]
     },
     "main_type": {
         "id": 6,
@@ -95,7 +98,7 @@
         },
         {
             "id": 7070170,
-            "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+            "name": "主轴",
             "icon_id": "106017",
             "move_type": {
                 "id": 17,
@@ -106,14 +109,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
-                    "description": "主轴"
+                    "name": "主轴",
+                    "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "主轴"
+            "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
         },
         {
             "id": 7070080,
@@ -205,7 +208,7 @@
         },
         {
             "id": 7080380,
-            "name": "造成物伤，本技能能耗固定为4。",
+            "name": "震击",
             "icon_id": "307035",
             "move_type": {
                 "id": 6,
@@ -216,18 +219,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，本技能能耗固定为4。",
-                    "description": "震击"
+                    "name": "震击",
+                    "description": "造成物伤，本技能能耗固定为4。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "震击"
+            "description": "造成物伤，本技能能耗固定为4。"
         },
         {
             "id": 7080240,
-            "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
+            "name": "“可我们不是那种棋子。”——棋棋",
             "icon_id": "708004",
             "move_type": {
                 "id": 6,
@@ -238,18 +241,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，应对攻击：敌方获得物攻-70%。",
-                    "description": "“可我们不是那种棋子。”——棋棋"
+                    "name": "“可我们不是那种棋子。”——棋棋",
+                    "description": "减伤70%，应对攻击：敌方获得物攻-70%。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "“可我们不是那种棋子。”——棋棋"
+            "description": "减伤70%，应对攻击：敌方获得物攻-70%。"
         },
         {
             "id": 7070030,
-            "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
+            "name": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长",
             "icon_id": "720006",
             "move_type": {
                 "id": 17,
@@ -260,18 +263,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
-                    "description": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长"
+                    "name": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长",
+                    "description": "造成物伤，本技能位于1号位时威力+60，传动1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": null,
-            "description": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长"
+            "description": "造成物伤，本技能位于1号位时威力+60，传动1。"
         },
         {
             "id": 7070150,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "啊——是谁在指甲抓挠钢板？",
             "icon_id": "106015",
             "move_type": {
                 "id": 17,
@@ -282,14 +285,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "啊——是谁在指甲抓挠钢板？"
+                    "name": "啊——是谁在指甲抓挠钢板？",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 130,
-            "description": "啊——是谁在指甲抓挠钢板？"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7080140,
@@ -315,7 +318,7 @@
         },
         {
             "id": 7080180,
-            "name": "造成物伤，应对状态：敌方获得物防-80%。",
+            "name": "裂石",
             "icon_id": "708006",
             "move_type": {
                 "id": 6,
@@ -326,7 +329,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：敌方获得物防-80%。",
+                    "name": "裂石",
                     "description": "造成物伤，敌方3回合无法更换精灵。"
                 }
             },
@@ -361,7 +364,7 @@
     "move_stones": [
         {
             "id": 7080410,
-            "name": "自己获得物防+140%和速度-30。",
+            "name": "现在我与山岳同呼吸。",
             "icon_id": "107039",
             "move_type": {
                 "id": 6,
@@ -372,14 +375,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得物防+140%和速度-30。",
-                    "description": "现在我与山岳同呼吸。"
+                    "name": "现在我与山岳同呼吸。",
+                    "description": "自己获得物防+140%和速度-30。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "现在我与山岳同呼吸。"
+            "description": "自己获得物防+140%和速度-30。"
         },
         {
             "id": 7080250,
@@ -427,7 +430,7 @@
         },
         {
             "id": 7180330,
-            "name": "造成魔伤，2连击。",
+            "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -438,14 +441,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，2连击。",
-                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+                    "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7020540,
@@ -647,7 +650,7 @@
         },
         {
             "id": 7070270,
-            "name": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。",
+            "name": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”",
             "icon_id": "206026",
             "move_type": {
                 "id": 17,
@@ -658,14 +661,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。",
-                    "description": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”"
+                    "name": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”",
+                    "description": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": "地系氏族众多发明中不起眼的一个。“它可以一直等，直到有人来。”"
+            "description": "造成​魔伤，​应对状态：​本​次​伤害​翻倍。"
         },
         {
             "id": 7070250,
@@ -751,7 +754,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                "name": "火焰护盾",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -762,14 +765,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
-                        "description": "火焰护盾"
+                        "name": "火焰护盾",
+                        "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "火焰护盾"
+                "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
             }
         },
         {
@@ -886,7 +889,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -897,14 +900,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1021,7 +1024,7 @@
             "move_id": 7150310,
             "move": {
                 "id": 7150310,
-                "name": "对敌方精灵造成物理伤害。",
+                "name": "回旋风暴",
                 "icon_id": "114027",
                 "move_type": {
                     "id": 13,
@@ -1032,14 +1035,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成物理伤害。",
-                        "description": "回旋风暴"
+                        "name": "回旋风暴",
+                        "description": "对敌方精灵造成物理伤害。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "回旋风暴"
+                "description": "对敌方精灵造成物理伤害。"
             }
         },
         {
@@ -1075,7 +1078,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1086,14 +1089,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {
@@ -1156,7 +1159,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1167,7 +1170,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

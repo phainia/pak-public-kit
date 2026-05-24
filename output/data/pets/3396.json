@@ -3,16 +3,19 @@
     "name": "lingyuyongshi",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3396.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_lingyuyongshi.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_lingyuyongshi.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3396.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3396.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_lingyuyongshi_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_lingyuyongshi_2.webp"
+        ]
     },
     "main_type": {
         "id": 13,
@@ -287,7 +290,7 @@
         },
         {
             "id": 7150300,
-            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "name": "风矢",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -298,18 +301,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                    "description": "风矢"
+                    "name": "风矢",
+                    "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "风矢"
+            "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
         },
         {
             "id": 7150080,
-            "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
+            "name": "格斗小七2",
             "icon_id": "715004",
             "move_type": {
                 "id": 13,
@@ -320,18 +323,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
-                    "description": "格斗小七2"
+                    "name": "格斗小七2",
+                    "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 50,
-            "description": "格斗小七2"
+            "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
         },
         {
             "id": 7150130,
-            "name": "造成物伤，2连击。",
+            "name": "啄击",
             "icon_id": "715003",
             "move_type": {
                 "id": 13,
@@ -342,7 +345,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击。",
+                    "name": "啄击",
                     "description": "造成物伤，若敌方本回合更换精灵，本次技能威力翻倍。"
                 }
             },
@@ -353,7 +356,7 @@
         },
         {
             "id": 7150200,
-            "name": "自己获得速度+120。",
+            "name": "风起",
             "icon_id": "114015",
             "move_type": {
                 "id": 13,
@@ -364,14 +367,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得速度+120。",
-                    "description": "风起"
+                    "name": "风起",
+                    "description": "自己获得速度+120。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 75,
-            "description": "风起"
+            "description": "自己获得速度+120。"
         },
         {
             "id": 7150110,
@@ -487,7 +490,7 @@
         },
         {
             "id": 7050230,
-            "name": "自己获得魔攻+190%。",
+            "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
             "icon_id": "705024",
             "move_type": {
                 "id": 4,
@@ -498,14 +501,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得魔攻+190%。",
-                    "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+                    "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
+                    "description": "自己获得魔攻+190%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+            "description": "自己获得魔攻+190%。"
         },
         {
             "id": 7060170,
@@ -531,7 +534,7 @@
         },
         {
             "id": 7060220,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "折线冲击",
             "icon_id": "205014",
             "move_type": {
                 "id": 5,
@@ -542,7 +545,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
+                    "name": "折线冲击",
                     "description": "对敌方精灵造成魔法伤害。"
                 }
             },
@@ -751,7 +754,7 @@
         },
         {
             "id": 7150250,
-            "name": "减伤50%，迅捷，应对攻击。",
+            "name": "疾风涡轮",
             "icon_id": "114020",
             "move_type": {
                 "id": 13,
@@ -762,14 +765,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤50%，迅捷，应对攻击。",
-                    "description": "疾风涡轮"
+                    "name": "疾风涡轮",
+                    "description": "减伤50%，迅捷，应对攻击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 60,
-            "description": "疾风涡轮"
+            "description": "减伤50%，迅捷，应对攻击。"
         },
         {
             "id": 7021110,
@@ -855,7 +858,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -866,14 +869,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -909,7 +912,7 @@
             "move_id": 7060210,
             "move": {
                 "id": 7060210,
-                "name": "对敌方精灵造成魔法伤害。",
+                "name": "虹光冲击",
                 "icon_id": "105013",
                 "move_type": {
                     "id": 5,
@@ -920,14 +923,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成魔法伤害。",
-                        "description": "虹光冲击"
+                        "name": "虹光冲击",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "虹光冲击"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -990,7 +993,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1001,14 +1004,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1233,7 +1236,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1244,14 +1247,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

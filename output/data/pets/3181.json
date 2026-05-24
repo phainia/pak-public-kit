@@ -3,13 +3,13 @@
     "name": "paersasi2",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3181.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_paersasi2.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_paersasi2.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3181.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3181.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -331,7 +331,7 @@
         },
         {
             "id": 7180120,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
             "icon_id": "718002",
             "move_type": {
                 "id": 16,
@@ -342,14 +342,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+                    "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 70,
-            "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+            "description": "对敌方精灵造成物理伤害。"
         }
     ],
     "move_stones": [
@@ -377,7 +377,7 @@
         },
         {
             "id": 7100160,
-            "name": "吹炎",
+            "name": "当第300个村庄在晨间被摧毁后，龙终于同意在打哈欠前先看看周围。",
             "icon_id": "209006",
             "move_type": {
                 "id": 8,
@@ -388,7 +388,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "吹炎",
+                    "name": "当第300个村庄在晨间被摧毁后，龙终于同意在打哈欠前先看看周围。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -443,7 +443,7 @@
         },
         {
             "id": 7040320,
-            "name": "减伤70%，应对攻击：敌方获得6层灼烧。",
+            "name": "火云车",
             "icon_id": "704026",
             "move_type": {
                 "id": 3,
@@ -454,18 +454,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，应对攻击：敌方获得6层灼烧。",
-                    "description": "火云车"
+                    "name": "火云车",
+                    "description": "减伤70%，应对攻击：敌方获得6层灼烧。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 140,
-            "description": "火云车"
+            "description": "减伤70%，应对攻击：敌方获得6层灼烧。"
         },
         {
             "id": 7040180,
-            "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+            "name": "闪燃",
             "icon_id": "704013",
             "move_type": {
                 "id": 3,
@@ -476,7 +476,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+                    "name": "闪燃",
                     "description": "造成物伤，自己回复1能量。"
                 }
             },
@@ -745,7 +745,7 @@
             "move_id": 7040370,
             "move": {
                 "id": 7040370,
-                "name": "对敌方精灵造成魔法伤害。",
+                "name": "火焰箭",
                 "icon_id": "103026",
                 "move_type": {
                     "id": 3,
@@ -756,14 +756,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成魔法伤害。",
-                        "description": "火焰箭"
+                        "name": "火焰箭",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "火焰箭"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -880,7 +880,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -891,14 +891,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1069,7 +1069,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1080,14 +1080,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {

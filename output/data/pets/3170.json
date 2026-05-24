@@ -3,13 +3,13 @@
     "name": "xiaoshitou",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3170.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_xiaoshitou.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_xiaoshitou.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3170.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3170.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -133,7 +133,7 @@
         },
         {
             "id": 7080280,
-            "name": "减伤90%，应对攻击：防御技能冷却-1。",
+            "name": "遁地",
             "icon_id": "107024",
             "move_type": {
                 "id": 6,
@@ -144,14 +144,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤90%，应对攻击：防御技能冷却-1。",
-                    "description": "遁地"
+                    "name": "遁地",
+                    "description": "减伤90%，应对攻击：防御技能冷却-1。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 1,
             "power": 60,
-            "description": "遁地"
+            "description": "减伤90%，应对攻击：防御技能冷却-1。"
         },
         {
             "id": 7170240,
@@ -221,7 +221,7 @@
         },
         {
             "id": 7080410,
-            "name": "自己获得物防+140%和速度-30。",
+            "name": "现在我与山岳同呼吸。",
             "icon_id": "107039",
             "move_type": {
                 "id": 6,
@@ -232,18 +232,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得物防+140%和速度-30。",
-                    "description": "现在我与山岳同呼吸。"
+                    "name": "现在我与山岳同呼吸。",
+                    "description": "自己获得物防+140%和速度-30。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "现在我与山岳同呼吸。"
+            "description": "自己获得物防+140%和速度-30。"
         },
         {
             "id": 7080310,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "别人用来捏人偶的泥土，在他们手中也是神兵。",
             "icon_id": "107027",
             "move_type": {
                 "id": 6,
@@ -254,18 +254,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "别人用来捏人偶的泥土，在他们手中也是神兵。"
+                    "name": "别人用来捏人偶的泥土，在他们手中也是神兵。",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "别人用来捏人偶的泥土，在他们手中也是神兵。"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7080210,
-            "name": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。",
+            "name": "越挣扎，时间反而流走得越快。",
             "icon_id": "708021",
             "move_type": {
                 "id": 6,
@@ -276,14 +276,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。",
-                    "description": "越挣扎，时间反而流走得越快。"
+                    "name": "越挣扎，时间反而流走得越快。",
+                    "description": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": "越挣扎，时间反而流走得越快。"
+            "description": "敌方3回合无法更换精灵，应对防御：敌方获得双防-60%。"
         },
         {
             "id": 7020530,
@@ -309,7 +309,7 @@
         },
         {
             "id": 7170130,
-            "name": "减伤90%，应对攻击。",
+            "name": "灵质化",
             "icon_id": "717011",
             "move_type": {
                 "id": 15,
@@ -320,7 +320,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤90%，应对攻击。",
+                    "name": "灵质化",
                     "description": "它觉得自己帮不上什么忙，但每一句加油都是真心的。"
                 }
             },
@@ -399,7 +399,7 @@
     "move_stones": [
         {
             "id": 7080180,
-            "name": "造成物伤，应对状态：敌方获得物防-80%。",
+            "name": "裂石",
             "icon_id": "708006",
             "move_type": {
                 "id": 6,
@@ -410,7 +410,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：敌方获得物防-80%。",
+                    "name": "裂石",
                     "description": "造成物伤，敌方3回合无法更换精灵。"
                 }
             },
@@ -421,7 +421,7 @@
         },
         {
             "id": 7170140,
-            "name": "造成物伤，应对状态：使敌方失去6能量。",
+            "name": "惊吓盒子",
             "icon_id": "717014",
             "move_type": {
                 "id": 15,
@@ -432,7 +432,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：使敌方失去6能量。",
+                    "name": "惊吓盒子",
                     "description": "造成魔伤，自己回复1能量。"
                 }
             },
@@ -443,7 +443,7 @@
         },
         {
             "id": 7080200,
-            "name": "流沙",
+            "name": "大地伸着懒腰，翻了个身。",
             "icon_id": "708018",
             "move_type": {
                 "id": 6,
@@ -454,7 +454,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "流沙",
+                    "name": "大地伸着懒腰，翻了个身。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -784,7 +784,7 @@
             "move_id": 7030220,
             "move": {
                 "id": 7030220,
-                "name": "自己回复10能量。",
+                "name": "徒长",
                 "icon_id": "703029",
                 "move_type": {
                     "id": 2,
@@ -795,7 +795,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己回复10能量。",
+                        "name": "徒长",
                         "description": "造成魔伤，每次使用其他草系技能后，本技能威力永久+60。"
                     }
                 },
@@ -838,7 +838,7 @@
             "move_id": 7050230,
             "move": {
                 "id": 7050230,
-                "name": "自己获得魔攻+190%。",
+                "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
                 "icon_id": "705024",
                 "move_type": {
                     "id": 4,
@@ -849,14 +849,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己获得魔攻+190%。",
-                        "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+                        "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
+                        "description": "自己获得魔攻+190%。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+                "description": "自己获得魔攻+190%。"
             }
         },
         {
@@ -865,7 +865,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -876,14 +876,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -919,7 +919,7 @@
             "move_id": 7090160,
             "move": {
                 "id": 7090160,
-                "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
+                "name": "“雪人里面怎么有人啊！”",
                 "icon_id": "709006",
                 "move_type": {
                     "id": 7,
@@ -930,14 +930,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
-                        "description": "“雪人里面怎么有人啊！”"
+                        "name": "“雪人里面怎么有人啊！”",
+                        "description": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "“雪人里面怎么有人啊！”"
+                "description": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。"
             }
         },
         {
@@ -946,7 +946,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -957,14 +957,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1081,7 +1081,7 @@
             "move_id": 7150300,
             "move": {
                 "id": 7150300,
-                "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+                "name": "风矢",
                 "icon_id": "114025",
                 "move_type": {
                     "id": 13,
@@ -1092,14 +1092,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                        "description": "风矢"
+                        "name": "风矢",
+                        "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 2,
                 "power": null,
-                "description": "风矢"
+                "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
             }
         },
         {
@@ -1135,7 +1135,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1146,14 +1146,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {
@@ -1162,7 +1162,7 @@
             "move_id": 7180160,
             "move": {
                 "id": 7180160,
-                "name": "造成物伤，应对状态：本次攻击吸血100%。",
+                "name": "撕咬",
                 "icon_id": "718014",
                 "move_type": {
                     "id": 16,
@@ -1173,14 +1173,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，应对状态：本次攻击吸血100%。",
-                        "description": "撕咬"
+                        "name": "撕咬",
+                        "description": "造成物伤，应对状态：本次攻击吸血100%。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 2,
                 "power": null,
-                "description": "撕咬"
+                "description": "造成物伤，应对状态：本次攻击吸血100%。"
             }
         },
         {
@@ -1189,7 +1189,7 @@
             "move_id": 7070170,
             "move": {
                 "id": 7070170,
-                "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+                "name": "主轴",
                 "icon_id": "106017",
                 "move_type": {
                     "id": 17,
@@ -1200,14 +1200,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
-                        "description": "主轴"
+                        "name": "主轴",
+                        "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "主轴"
+                "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
             }
         },
         {

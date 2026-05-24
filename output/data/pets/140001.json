@@ -3,13 +3,13 @@
     "name": "140001",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3001.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3001.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3001.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -78,7 +78,7 @@
         },
         {
             "id": 7040150,
-            "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+            "name": "火焰冲锋",
             "icon_id": "704010",
             "move_type": {
                 "id": 3,
@@ -89,14 +89,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                    "description": "火焰冲锋"
+                    "name": "火焰冲锋",
+                    "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 60,
-            "description": "火焰冲锋"
+            "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
         },
         {
             "id": 7070010,

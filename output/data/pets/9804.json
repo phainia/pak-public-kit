@@ -3,13 +3,13 @@
     "name": "9804",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -67,7 +67,7 @@
     "move_pool": [
         {
             "id": 7050250,
-            "name": "自己获得1层湿润印记。",
+            "name": "海风在这里留下未成熟的盐。",
             "icon_id": "705019",
             "move_type": {
                 "id": 4,
@@ -78,14 +78,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得1层湿润印记。",
-                    "description": "海风在这里留下未成熟的盐。"
+                    "name": "海风在这里留下未成熟的盐。",
+                    "description": "自己获得1层湿润印记。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 5,
             "power": null,
-            "description": "海风在这里留下未成熟的盐。"
+            "description": "自己获得1层湿润印记。"
         },
         {
             "id": 7050390,

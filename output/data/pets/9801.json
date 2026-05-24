@@ -3,13 +3,13 @@
     "name": "9801",
     "form": "蓬松的样子",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -89,7 +89,7 @@
         },
         {
             "id": 7030540,
-            "name": "造成物伤，应对状态：自己回复50%生命和5能量。",
+            "name": "草1",
             "icon_id": "102038",
             "move_type": {
                 "id": 2,
@@ -100,18 +100,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：自己回复50%生命和5能量。",
-                    "description": "草1"
+                    "name": "草1",
+                    "description": "造成物伤，应对状态：自己回复50%生命和5能量。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 90,
-            "description": "草1"
+            "description": "造成物伤，应对状态：自己回复50%生命和5能量。"
         },
         {
             "id": 7040600,
-            "name": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。",
+            "name": "火1",
             "icon_id": "704013",
             "move_type": {
                 "id": 3,
@@ -122,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。",
-                    "description": "火1"
+                    "name": "火1",
+                    "description": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 40,
-            "description": "火1"
+            "description": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。"
         },
         {
             "id": 7050230,
-            "name": "自己获得魔攻+190%。",
+            "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
             "icon_id": "705024",
             "move_type": {
                 "id": 4,
@@ -144,14 +144,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得魔攻+190%。",
-                    "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+                    "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
+                    "description": "自己获得魔攻+190%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+            "description": "自己获得魔攻+190%。"
         },
         {
             "id": 7050430,
@@ -287,7 +287,7 @@
         },
         {
             "id": 7100270,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "龙威",
             "icon_id": "710004",
             "move_type": {
                 "id": 8,
@@ -298,18 +298,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "龙威"
+                    "name": "龙威",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 7,
             "power": 150,
-            "description": "龙威"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7100280,
-            "name": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。",
+            "name": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。",
             "icon_id": "710005",
             "move_type": {
                 "id": 8,
@@ -320,14 +320,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。",
-                    "description": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。"
+                    "name": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。",
+                    "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 190,
-            "description": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。"
+            "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。"
         },
         {
             "id": 7100290,
@@ -353,7 +353,7 @@
         },
         {
             "id": 7110430,
-            "name": "造成魔伤，每离场1次，本技能使用次数永久+1。",
+            "name": "强制重启",
             "icon_id": "110025",
             "move_type": {
                 "id": 9,
@@ -364,18 +364,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，每离场1次，本技能使用次数永久+1。",
-                    "description": "强制重启"
+                    "name": "强制重启",
+                    "description": "造成魔伤，每离场1次，本技能使用次数永久+1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "强制重启"
+            "description": "造成魔伤，每离场1次，本技能使用次数永久+1。"
         },
         {
             "id": 7140310,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "一拳",
             "icon_id": "113032",
             "move_type": {
                 "id": 12,
@@ -386,18 +386,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "一拳"
+                    "name": "一拳",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "一拳"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7140320,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "叠势",
             "icon_id": "113032",
             "move_type": {
                 "id": 12,
@@ -408,18 +408,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "叠势"
+                    "name": "叠势",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "叠势"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7150170,
-            "name": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。",
+            "name": "龙卷风",
             "icon_id": "715017",
             "move_type": {
                 "id": 13,
@@ -430,18 +430,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。",
-                    "description": "龙卷风"
+                    "name": "龙卷风",
+                    "description": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 0,
             "power": 80,
-            "description": "龙卷风"
+            "description": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。"
         },
         {
             "id": 7160310,
-            "name": "造成魔伤，3连击。自己获得萌化：威力永久+20。",
+            "name": "撒娇",
             "icon_id": "716004",
             "move_type": {
                 "id": 14,
@@ -452,7 +452,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，3连击。自己获得萌化：威力永久+20。",
+                    "name": "撒娇",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -463,7 +463,7 @@
         },
         {
             "id": 7160320,
-            "name": "自己脱离，下个入场精灵继承自己增益。",
+            "name": "月光合奏",
             "icon_id": "717013",
             "move_type": {
                 "id": 14,
@@ -474,18 +474,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己脱离，下个入场精灵继承自己增益。",
-                    "description": "月光合奏"
+                    "name": "月光合奏",
+                    "description": "自己脱离，下个入场精灵继承自己增益。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "月光合奏"
+            "description": "自己脱离，下个入场精灵继承自己增益。"
         },
         {
             "id": 7170270,
-            "name": "造成魔伤，5连击。",
+            "name": "铃铛幽灵从不发声。",
             "icon_id": "705004",
             "move_type": {
                 "id": 15,
@@ -496,18 +496,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，5连击。",
-                    "description": "铃铛幽灵从不发声。"
+                    "name": "铃铛幽灵从不发声。",
+                    "description": "造成魔伤，5连击。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "铃铛幽灵从不发声。"
+            "description": "造成魔伤，5连击。"
         },
         {
             "id": 7180360,
-            "name": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。",
+            "name": "骗局",
             "icon_id": "117027",
             "move_type": {
                 "id": 16,
@@ -518,14 +518,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。",
-                    "description": "骗局"
+                    "name": "骗局",
+                    "description": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 130,
-            "description": "骗局"
+            "description": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。"
         }
     ],
     "move_stones": [],

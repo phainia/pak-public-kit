@@ -3,13 +3,13 @@
     "name": "shengjianX",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3546.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_shengjianX.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_shengjianX.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3546.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3546.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -155,7 +155,7 @@
         },
         {
             "id": 7070170,
-            "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+            "name": "主轴",
             "icon_id": "106017",
             "move_type": {
                 "id": 17,
@@ -166,14 +166,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
-                    "description": "主轴"
+                    "name": "主轴",
+                    "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "主轴"
+            "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
         },
         {
             "id": 7020970,
@@ -309,7 +309,7 @@
         },
         {
             "id": 7070140,
-            "name": "造成物伤，2连击，本技能位于1号或3号位时连击+1，传动1。",
+            "name": "金属噪音",
             "icon_id": "106014",
             "move_type": {
                 "id": 17,
@@ -320,14 +320,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击，本技能位于1号或3号位时连击+1，传动1。",
-                    "description": "金属噪音"
+                    "name": "金属噪音",
+                    "description": "造成物伤，2连击，本技能位于1号或3号位时连击+1，传动1。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 70,
-            "description": "金属噪音"
+            "description": "造成物伤，2连击，本技能位于1号或3号位时连击+1，传动1。"
         },
         {
             "id": 7070060,
@@ -353,7 +353,7 @@
         },
         {
             "id": 7070030,
-            "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
+            "name": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长",
             "icon_id": "720006",
             "move_type": {
                 "id": 17,
@@ -364,14 +364,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，本技能位于1号位时威力+60，传动1。",
-                    "description": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长"
+                    "name": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长",
+                    "description": "造成物伤，本技能位于1号位时威力+60，传动1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": null,
-            "description": "“我要存在，即使以最不优雅的姿态，也要拥有站在这个舞台上的权力。”——第437任盖布族族长"
+            "description": "造成物伤，本技能位于1号位时威力+60，传动1。"
         },
         {
             "id": 7070070,
@@ -397,7 +397,7 @@
         },
         {
             "id": 7070150,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "啊——是谁在指甲抓挠钢板？",
             "icon_id": "106015",
             "move_type": {
                 "id": 17,
@@ -408,14 +408,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "啊——是谁在指甲抓挠钢板？"
+                    "name": "啊——是谁在指甲抓挠钢板？",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 130,
-            "description": "啊——是谁在指甲抓挠钢板？"
+            "description": "对敌方精灵造成魔法伤害。"
         }
     ],
     "move_stones": [
@@ -465,7 +465,7 @@
         },
         {
             "id": 7060220,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "折线冲击",
             "icon_id": "205014",
             "move_type": {
                 "id": 5,
@@ -476,7 +476,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
+                    "name": "折线冲击",
                     "description": "对敌方精灵造成魔法伤害。"
                 }
             },
@@ -487,7 +487,7 @@
         },
         {
             "id": 7060140,
-            "name": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。",
+            "name": "折射",
             "icon_id": "706008",
             "move_type": {
                 "id": 5,
@@ -498,18 +498,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。",
-                    "description": "折射"
+                    "name": "折射",
+                    "description": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "折射"
+            "description": "造成魔伤，每使用过1个其他系别技能，本技能威力永久+30。"
         },
         {
             "id": 7080310,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "别人用来捏人偶的泥土，在他们手中也是神兵。",
             "icon_id": "107027",
             "move_type": {
                 "id": 6,
@@ -520,14 +520,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "别人用来捏人偶的泥土，在他们手中也是神兵。"
+                    "name": "别人用来捏人偶的泥土，在他们手中也是神兵。",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "别人用来捏人偶的泥土，在他们手中也是神兵。"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7080320,
@@ -553,7 +553,7 @@
         },
         {
             "id": 7080330,
-            "name": "造成物伤，1连击。",
+            "name": "热砂",
             "icon_id": "107029",
             "move_type": {
                 "id": 6,
@@ -564,14 +564,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击。",
-                    "description": "热砂"
+                    "name": "热砂",
+                    "description": "造成物伤，1连击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 80,
-            "description": "热砂"
+            "description": "造成物伤，1连击。"
         },
         {
             "id": 7080370,
@@ -773,7 +773,7 @@
         },
         {
             "id": 7070240,
-            "name": "应对！杖责",
+            "name": "S3胡桃王子B",
             "icon_id": "106018",
             "move_type": {
                 "id": 17,
@@ -784,14 +784,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对！杖责",
-                    "description": "S3胡桃王子B"
+                    "name": "S3胡桃王子B",
+                    "description": "应对！杖责"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": "S3胡桃王子B"
+            "description": "应对！杖责"
         }
     ],
     "legacy_moves": [
@@ -855,7 +855,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -866,14 +866,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -990,7 +990,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1001,14 +1001,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1179,7 +1179,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1190,14 +1190,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {
@@ -1233,7 +1233,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1244,14 +1244,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

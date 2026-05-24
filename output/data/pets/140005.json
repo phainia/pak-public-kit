@@ -3,13 +3,13 @@
     "name": "140005",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3001.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3001.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3001.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -78,7 +78,7 @@
         },
         {
             "id": 7030170,
-            "name": "造成物伤，自己回复1能量。",
+            "name": "荆棘爪",
             "icon_id": "703014",
             "move_type": {
                 "id": 2,
@@ -89,18 +89,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，自己回复1能量。",
-                    "description": "荆棘爪"
+                    "name": "荆棘爪",
+                    "description": "造成物伤，自己回复1能量。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 80,
-            "description": "荆棘爪"
+            "description": "造成物伤，自己回复1能量。"
         },
         {
             "id": 7050170,
-            "name": "造成魔伤，自己回复1能量。",
+            "name": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。",
             "icon_id": "703101",
             "move_type": {
                 "id": 4,
@@ -111,14 +111,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，自己回复1能量。",
-                    "description": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。"
+                    "name": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。",
+                    "description": "造成魔伤，自己回复1能量。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 80,
-            "description": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。"
+            "description": "造成魔伤，自己回复1能量。"
         },
         {
             "id": 7060090,

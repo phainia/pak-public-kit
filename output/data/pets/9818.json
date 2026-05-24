@@ -3,13 +3,13 @@
     "name": "9818",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -89,7 +89,7 @@
         },
         {
             "id": 7190230,
-            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+            "name": "黑荆棘",
             "icon_id": "719011",
             "move_type": {
                 "id": 18,
@@ -100,14 +100,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
-                    "description": "黑荆棘"
+                    "name": "黑荆棘",
+                    "description": "造成魔伤，应对状态：自身立即使用一次被应对技能"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": "黑荆棘"
+            "description": "造成魔伤，应对状态：自身立即使用一次被应对技能"
         },
         {
             "id": 7190240,
@@ -199,7 +199,7 @@
         },
         {
             "id": 7190290,
-            "name": "空间压迫",
+            "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
             "icon_id": "118009",
             "move_type": {
                 "id": 18,
@@ -210,7 +210,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "空间压迫",
+                    "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -221,7 +221,7 @@
         },
         {
             "id": 7190300,
-            "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
+            "name": "坍缩",
             "icon_id": "218007",
             "move_type": {
                 "id": 18,
@@ -232,7 +232,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
+                    "name": "坍缩",
                     "description": "造成物伤，敌方获得1层星陨印记。"
                 }
             },
@@ -265,7 +265,7 @@
         },
         {
             "id": 7190320,
-            "name": "造成物伤，自己回复1能量。",
+            "name": "多维击打",
             "icon_id": "719012",
             "move_type": {
                 "id": 18,
@@ -276,18 +276,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，自己回复1能量。",
-                    "description": "多维击打"
+                    "name": "多维击打",
+                    "description": "造成物伤，自己回复1能量。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": "多维击打"
+            "description": "造成物伤，自己回复1能量。"
         },
         {
             "id": 7190330,
-            "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
+            "name": "这不是巫术，是还无法理解的科学。",
             "icon_id": "719009",
             "move_type": {
                 "id": 18,
@@ -298,18 +298,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
-                    "description": "这不是巫术，是还无法理解的科学。"
+                    "name": "这不是巫术，是还无法理解的科学。",
+                    "description": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "这不是巫术，是还无法理解的科学。"
+            "description": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。"
         },
         {
             "id": 7190400,
-            "name": "心灵洞悉",
+            "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
             "icon_id": "118022",
             "move_type": {
                 "id": 18,
@@ -320,7 +320,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "心灵洞悉",
+                    "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                     "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                 }
             },

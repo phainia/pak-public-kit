@@ -3,16 +3,19 @@
     "name": "yilisi",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3401.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_yilisi_1.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_yilisi_1.webp",
         "head": {
-            "normal": null,
-            "shiny": null,
-            "big": null,
-            "big_shiny": null
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3401.webp",
+            "shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3401_1.webp",
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3401.webp",
+            "big_shiny": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3401_1.webp"
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_yilisi_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_yilisi_2.webp"
+        ]
     },
     "main_type": {
         "id": 5,

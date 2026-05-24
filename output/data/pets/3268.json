@@ -3,16 +3,19 @@
     "name": "datougulong",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3268.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_datougulong.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_datougulong.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3268.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3268.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_datougulong_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_datougulong_2.webp"
+        ]
     },
     "main_type": {
         "id": 8,
@@ -117,7 +120,7 @@
         },
         {
             "id": 7170140,
-            "name": "造成物伤，应对状态：使敌方失去6能量。",
+            "name": "惊吓盒子",
             "icon_id": "717014",
             "move_type": {
                 "id": 15,
@@ -128,7 +131,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：使敌方失去6能量。",
+                    "name": "惊吓盒子",
                     "description": "造成魔伤，自己回复1能量。"
                 }
             },
@@ -161,7 +164,7 @@
         },
         {
             "id": 7100180,
-            "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+            "name": "怨力打击",
             "icon_id": "309008",
             "move_type": {
                 "id": 8,
@@ -172,7 +175,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+                    "name": "怨力打击",
                     "description": "蓄力，造成物伤，应对状态：本次技能威力翻倍。"
                 }
             },
@@ -205,7 +208,7 @@
         },
         {
             "id": 7100240,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "龙息环爆",
             "icon_id": "209014",
             "move_type": {
                 "id": 8,
@@ -216,14 +219,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "龙息环爆"
+                    "name": "龙息环爆",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "龙息环爆"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7170260,
@@ -315,7 +318,7 @@
         },
         {
             "id": 7100160,
-            "name": "吹炎",
+            "name": "当第300个村庄在晨间被摧毁后，龙终于同意在打哈欠前先看看周围。",
             "icon_id": "209006",
             "move_type": {
                 "id": 8,
@@ -326,7 +329,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "吹炎",
+                    "name": "当第300个村庄在晨间被摧毁后，龙终于同意在打哈欠前先看看周围。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -383,7 +386,7 @@
         },
         {
             "id": 7110420,
-            "name": "回合结束自己返场，下回合所选技能使用次数+1。",
+            "name": "远程访问",
             "icon_id": "110029",
             "move_type": {
                 "id": 9,
@@ -394,14 +397,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "回合结束自己返场，下回合所选技能使用次数+1。",
-                    "description": "远程访问"
+                    "name": "远程访问",
+                    "description": "回合结束自己返场，下回合所选技能使用次数+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 3,
             "power": null,
-            "description": "远程访问"
+            "description": "回合结束自己返场，下回合所选技能使用次数+1。"
         },
         {
             "id": 7020530,
@@ -647,7 +650,7 @@
         },
         {
             "id": 7100320,
-            "name": "蓄力，造成物伤，先手+1。",
+            "name": "龙3",
             "icon_id": "109018",
             "move_type": {
                 "id": 8,
@@ -658,14 +661,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，造成物伤，先手+1。",
-                    "description": "龙3"
+                    "name": "龙3",
+                    "description": "蓄力，造成物伤，先手+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": "龙3"
+            "description": "蓄力，造成物伤，先手+1。"
         },
         {
             "id": 7170290,
@@ -751,7 +754,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                "name": "火焰护盾",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -762,14 +765,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
-                        "description": "火焰护盾"
+                        "name": "火焰护盾",
+                        "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "火焰护盾"
+                "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
             }
         },
         {
@@ -832,7 +835,7 @@
             "move_id": 7080400,
             "move": {
                 "id": 7080400,
-                "name": "造成物伤，敌方获得连击数-3。",
+                "name": "石肤术",
                 "icon_id": "107036",
                 "move_type": {
                     "id": 6,
@@ -843,14 +846,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，敌方获得连击数-3。",
-                        "description": "石肤术"
+                        "name": "石肤术",
+                        "description": "造成物伤，敌方获得连击数-3。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "石肤术"
+                "description": "造成物伤，敌方获得连击数-3。"
             }
         },
         {
@@ -1021,7 +1024,7 @@
             "move_id": 7150310,
             "move": {
                 "id": 7150310,
-                "name": "对敌方精灵造成物理伤害。",
+                "name": "回旋风暴",
                 "icon_id": "114027",
                 "move_type": {
                     "id": 13,
@@ -1032,14 +1035,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成物理伤害。",
-                        "description": "回旋风暴"
+                        "name": "回旋风暴",
+                        "description": "对敌方精灵造成物理伤害。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "回旋风暴"
+                "description": "对敌方精灵造成物理伤害。"
             }
         },
         {
@@ -1075,7 +1078,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1086,14 +1089,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {
@@ -1156,7 +1159,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1167,7 +1170,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

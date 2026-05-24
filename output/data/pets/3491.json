@@ -3,13 +3,13 @@
     "name": "nihouya",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3491.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_nihouya.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_nihouya.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3491.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3491.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -227,7 +227,7 @@
         },
         {
             "id": 7080200,
-            "name": "流沙",
+            "name": "大地伸着懒腰，翻了个身。",
             "icon_id": "708018",
             "move_type": {
                 "id": 6,
@@ -238,7 +238,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "流沙",
+                    "name": "大地伸着懒腰，翻了个身。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -315,7 +315,7 @@
         },
         {
             "id": 7150200,
-            "name": "自己获得速度+120。",
+            "name": "风起",
             "icon_id": "114015",
             "move_type": {
                 "id": 13,
@@ -326,14 +326,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得速度+120。",
-                    "description": "风起"
+                    "name": "风起",
+                    "description": "自己获得速度+120。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 75,
-            "description": "风起"
+            "description": "自己获得速度+120。"
         },
         {
             "id": 7080130,
@@ -383,7 +383,7 @@
         },
         {
             "id": 7080330,
-            "name": "造成物伤，1连击。",
+            "name": "热砂",
             "icon_id": "107029",
             "move_type": {
                 "id": 6,
@@ -394,18 +394,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击。",
-                    "description": "热砂"
+                    "name": "热砂",
+                    "description": "造成物伤，1连击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 80,
-            "description": "热砂"
+            "description": "造成物伤，1连击。"
         },
         {
             "id": 7180240,
-            "name": "与敌方交换增益和减益。",
+            "name": "有借有还，再借不难。",
             "icon_id": "117022",
             "move_type": {
                 "id": 16,
@@ -416,18 +416,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "与敌方交换增益和减益。",
-                    "description": "有借有还，再借不难。"
+                    "name": "有借有还，再借不难。",
+                    "description": "与敌方交换增益和减益。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 0,
             "power": 40,
-            "description": "有借有还，再借不难。"
+            "description": "与敌方交换增益和减益。"
         },
         {
             "id": 7180120,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
             "icon_id": "718002",
             "move_type": {
                 "id": 16,
@@ -438,14 +438,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+                    "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 70,
-            "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7180180,
@@ -625,7 +625,7 @@
         },
         {
             "id": 7150300,
-            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "name": "风矢",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -636,14 +636,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                    "description": "风矢"
+                    "name": "风矢",
+                    "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "风矢"
+            "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
         },
         {
             "id": 7021110,
@@ -729,7 +729,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -740,14 +740,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -864,7 +864,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -875,14 +875,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1053,7 +1053,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1064,14 +1064,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {

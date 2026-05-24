@@ -3,11 +3,11 @@
     "name": "8010",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3499.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3499.webp",
             "shiny": null,
             "big": null,
             "big_shiny": null
@@ -575,7 +575,7 @@
         },
         {
             "id": 7140250,
-            "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
+            "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
             "icon_id": "113029",
             "move_type": {
                 "id": 12,
@@ -586,14 +586,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对攻击：打断被应对技能，并造成90威力物伤。",
-                    "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+                    "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
+                    "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。"
+            "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
         },
         {
             "id": 7140100,
@@ -619,7 +619,7 @@
         },
         {
             "id": 7140280,
-            "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
+            "name": "气波",
             "icon_id": "113032",
             "move_type": {
                 "id": 12,
@@ -630,18 +630,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
-                    "description": "气波"
+                    "name": "气波",
+                    "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "气波"
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
         },
         {
             "id": 7140170,
-            "name": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。",
+            "name": "截拳",
             "icon_id": "213020",
             "move_type": {
                 "id": 12,
@@ -652,7 +652,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。",
+                    "name": "截拳",
                     "description": "造成物伤，应对状态：本次技能威力变为10倍。"
                 }
             },
@@ -663,7 +663,7 @@
         },
         {
             "id": 7140150,
-            "name": "造成物伤，2连击，若后手攻击，改为3连击。",
+            "name": "“对决的时候，我从不说话，精灵的技能就是我的回答”。",
             "icon_id": "714003",
             "move_type": {
                 "id": 12,
@@ -674,18 +674,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击，若后手攻击，改为3连击。",
-                    "description": "“对决的时候，我从不说话，精灵的技能就是我的回答”。"
+                    "name": "“对决的时候，我从不说话，精灵的技能就是我的回答”。",
+                    "description": "造成物伤，2连击，若后手攻击，改为3连击。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "“对决的时候，我从不说话，精灵的技能就是我的回答”。"
+            "description": "造成物伤，2连击，若后手攻击，改为3连击。"
         },
         {
             "id": 7100260,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "隼鳞",
             "icon_id": "309017",
             "move_type": {
                 "id": 8,
@@ -696,18 +696,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "隼鳞"
+                    "name": "隼鳞",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 60,
-            "description": "隼鳞"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7100160,
-            "name": "吹炎",
+            "name": "当第300个村庄在晨间被摧毁后，龙终于同意在打哈欠前先看看周围。",
             "icon_id": "209006",
             "move_type": {
                 "id": 8,
@@ -718,7 +718,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "吹炎",
+                    "name": "当第300个村庄在晨间被摧毁后，龙终于同意在打哈欠前先看看周围。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -729,7 +729,7 @@
         },
         {
             "id": 7100180,
-            "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+            "name": "怨力打击",
             "icon_id": "309008",
             "move_type": {
                 "id": 8,
@@ -740,7 +740,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，造成魔伤，若蓄力期间受到攻击，本技能威力变为敌方技能威力的3倍。",
+                    "name": "怨力打击",
                     "description": "蓄力，造成物伤，应对状态：本次技能威力翻倍。"
                 }
             },
@@ -751,7 +751,7 @@
         },
         {
             "id": 7100320,
-            "name": "蓄力，造成物伤，先手+1。",
+            "name": "龙3",
             "icon_id": "109018",
             "move_type": {
                 "id": 8,
@@ -762,14 +762,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄力，造成物伤，先手+1。",
-                    "description": "龙3"
+                    "name": "龙3",
+                    "description": "蓄力，造成物伤，先手+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 1,
             "power": null,
-            "description": "龙3"
+            "description": "蓄力，造成物伤，先手+1。"
         }
     ],
     "legacy_moves": [
@@ -806,7 +806,7 @@
             "move_id": 7030220,
             "move": {
                 "id": 7030220,
-                "name": "自己回复10能量。",
+                "name": "徒长",
                 "icon_id": "703029",
                 "move_type": {
                     "id": 2,
@@ -817,7 +817,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己回复10能量。",
+                        "name": "徒长",
                         "description": "造成魔伤，每次使用其他草系技能后，本技能威力永久+60。"
                     }
                 },
@@ -860,7 +860,7 @@
             "move_id": 7050170,
             "move": {
                 "id": 7050170,
-                "name": "造成魔伤，自己回复1能量。",
+                "name": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。",
                 "icon_id": "703101",
                 "move_type": {
                     "id": 4,
@@ -871,14 +871,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，自己回复1能量。",
-                        "description": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。"
+                        "name": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。",
+                        "description": "造成魔伤，自己回复1能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "一滴水珠被波波拉的小手托起，它说赠我小小的蓝。"
+                "description": "造成魔伤，自己回复1能量。"
             }
         },
         {
@@ -887,7 +887,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -898,14 +898,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -914,7 +914,7 @@
             "move_id": 7080200,
             "move": {
                 "id": 7080200,
-                "name": "流沙",
+                "name": "大地伸着懒腰，翻了个身。",
                 "icon_id": "708018",
                 "move_type": {
                     "id": 6,
@@ -925,7 +925,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "流沙",
+                        "name": "大地伸着懒腰，翻了个身。",
                         "description": "对敌方精灵造成物理伤害。"
                     }
                 },
@@ -941,7 +941,7 @@
             "move_id": 7090160,
             "move": {
                 "id": 7090160,
-                "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
+                "name": "“雪人里面怎么有人啊！”",
                 "icon_id": "709006",
                 "move_type": {
                     "id": 7,
@@ -952,14 +952,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
-                        "description": "“雪人里面怎么有人啊！”"
+                        "name": "“雪人里面怎么有人啊！”",
+                        "description": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "“雪人里面怎么有人啊！”"
+                "description": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。"
             }
         },
         {
@@ -968,7 +968,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -979,14 +979,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1103,7 +1103,7 @@
             "move_id": 7150300,
             "move": {
                 "id": 7150300,
-                "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+                "name": "风矢",
                 "icon_id": "114025",
                 "move_type": {
                     "id": 13,
@@ -1114,14 +1114,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                        "description": "风矢"
+                        "name": "风矢",
+                        "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 2,
                 "power": null,
-                "description": "风矢"
+                "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
             }
         },
         {
@@ -1184,7 +1184,7 @@
             "move_id": 7180160,
             "move": {
                 "id": 7180160,
-                "name": "造成物伤，应对状态：本次攻击吸血100%。",
+                "name": "撕咬",
                 "icon_id": "718014",
                 "move_type": {
                     "id": 16,
@@ -1195,14 +1195,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，应对状态：本次攻击吸血100%。",
-                        "description": "撕咬"
+                        "name": "撕咬",
+                        "description": "造成物伤，应对状态：本次攻击吸血100%。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 2,
                 "power": null,
-                "description": "撕咬"
+                "description": "造成物伤，应对状态：本次攻击吸血100%。"
             }
         },
         {
@@ -1211,7 +1211,7 @@
             "move_id": 7070170,
             "move": {
                 "id": 7070170,
-                "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+                "name": "主轴",
                 "icon_id": "106017",
                 "move_type": {
                     "id": 17,
@@ -1222,14 +1222,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
-                        "description": "主轴"
+                        "name": "主轴",
+                        "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "主轴"
+                "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
             }
         },
         {

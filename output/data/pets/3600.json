@@ -3,13 +3,13 @@
     "name": "xiaoyongshi",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3600.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_xiaoyongshi.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_xiaoyongshi.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3600.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3600.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -139,7 +139,7 @@
         },
         {
             "id": 7040430,
-            "name": "造成高额魔法伤害，自己获得物防-40%。",
+            "name": "炎打",
             "icon_id": "103032",
             "move_type": {
                 "id": 3,
@@ -150,7 +150,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成高额魔法伤害，自己获得物防-40%。",
+                    "name": "炎打",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -183,7 +183,7 @@
         },
         {
             "id": 7040450,
-            "name": "自己获得双攻+120%和双防-40%。",
+            "name": "淬火",
             "icon_id": "103034",
             "move_type": {
                 "id": 3,
@@ -194,14 +194,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得双攻+120%和双防-40%。",
-                    "description": "淬火"
+                    "name": "淬火",
+                    "description": "自己获得双攻+120%和双防-40%。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 4,
             "power": null,
-            "description": "淬火"
+            "description": "自己获得双攻+120%和双防-40%。"
         },
         {
             "id": 7040220,
@@ -315,7 +315,7 @@
         },
         {
             "id": 7040330,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "爆裂飞弹",
             "icon_id": "704016",
             "move_type": {
                 "id": 3,
@@ -326,14 +326,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "爆裂飞弹"
+                    "name": "爆裂飞弹",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 7,
             "power": 160,
-            "description": "爆裂飞弹"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7140190,
@@ -383,7 +383,7 @@
         },
         {
             "id": 7060220,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "折线冲击",
             "icon_id": "205014",
             "move_type": {
                 "id": 5,
@@ -394,7 +394,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
+                    "name": "折线冲击",
                     "description": "对敌方精灵造成魔法伤害。"
                 }
             },
@@ -405,7 +405,7 @@
         },
         {
             "id": 7060150,
-            "name": "每种系别中的至多1个技能，威力+35。",
+            "name": "漫反射",
             "icon_id": "305006",
             "move_type": {
                 "id": 5,
@@ -416,7 +416,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "每种系别中的至多1个技能，威力+35。",
+                    "name": "漫反射",
                     "description": "造成魔伤，携带其他系别技能会给本技能带来不同效果。"
                 }
             },
@@ -537,7 +537,7 @@
         },
         {
             "id": 7040380,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "炙热波动",
             "icon_id": "103027",
             "move_type": {
                 "id": 3,
@@ -548,14 +548,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "炙热波动"
+                    "name": "炙热波动",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 55,
-            "description": "炙热波动"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7020800,
@@ -647,7 +647,7 @@
         },
         {
             "id": 7140300,
-            "name": "造成物伤，2连击。",
+            "name": "缠丝劲",
             "icon_id": "113035",
             "move_type": {
                 "id": 12,
@@ -658,7 +658,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击。",
+                    "name": "缠丝劲",
                     "description": "造成物伤，应对状态：本次技能威力变为5倍。"
                 }
             },
@@ -669,7 +669,7 @@
         },
         {
             "id": 7040460,
-            "name": "造成魔伤，敌方每失去5%生命，本次技能威力-5。",
+            "name": "燃尽",
             "icon_id": "203035",
             "move_type": {
                 "id": 3,
@@ -680,7 +680,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，敌方每失去5%生命，本次技能威力-5。",
+                    "name": "燃尽",
                     "description": "减伤80%，应对攻击：下次攻击技能威力翻倍。"
                 }
             },
@@ -691,7 +691,7 @@
         },
         {
             "id": 7040620,
-            "name": "造成魔伤，驱散自己的减益。",
+            "name": "阳火增辉",
             "icon_id": "303045",
             "move_type": {
                 "id": 3,
@@ -702,14 +702,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，驱散自己的减益。",
-                    "description": "阳火增辉"
+                    "name": "阳火增辉",
+                    "description": "造成魔伤，驱散自己的减益。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 75,
-            "description": "阳火增辉"
+            "description": "造成魔伤，驱散自己的减益。"
         }
     ],
     "legacy_moves": [
@@ -773,7 +773,7 @@
             "move_id": 7040370,
             "move": {
                 "id": 7040370,
-                "name": "对敌方精灵造成魔法伤害。",
+                "name": "火焰箭",
                 "icon_id": "103026",
                 "move_type": {
                     "id": 3,
@@ -784,14 +784,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成魔法伤害。",
-                        "description": "火焰箭"
+                        "name": "火焰箭",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "火焰箭"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -908,7 +908,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -919,14 +919,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1043,7 +1043,7 @@
             "move_id": 7150310,
             "move": {
                 "id": 7150310,
-                "name": "对敌方精灵造成物理伤害。",
+                "name": "回旋风暴",
                 "icon_id": "114027",
                 "move_type": {
                     "id": 13,
@@ -1054,14 +1054,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成物理伤害。",
-                        "description": "回旋风暴"
+                        "name": "回旋风暴",
+                        "description": "对敌方精灵造成物理伤害。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "回旋风暴"
+                "description": "对敌方精灵造成物理伤害。"
             }
         },
         {
@@ -1178,7 +1178,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1189,7 +1189,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

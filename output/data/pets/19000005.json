@@ -3,16 +3,19 @@
     "name": "keliji",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3086.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_keliji.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_keliji.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3086.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3086.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_keliji_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_keliji_2.webp"
+        ]
     },
     "main_type": {
         "id": 3,
@@ -89,7 +92,7 @@
         },
         {
             "id": 7040150,
-            "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+            "name": "火焰冲锋",
             "icon_id": "704010",
             "move_type": {
                 "id": 3,
@@ -100,18 +103,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                    "description": "火焰冲锋"
+                    "name": "火焰冲锋",
+                    "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 60,
-            "description": "火焰冲锋"
+            "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
         },
         {
             "id": 7040190,
-            "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+            "name": "双响炮",
             "icon_id": "704025",
             "move_type": {
                 "id": 3,
@@ -122,18 +125,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：本次技能威力变为4倍。",
-                    "description": "双响炮"
+                    "name": "双响炮",
+                    "description": "造成物伤，应对状态：本次技能威力变为4倍。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 25,
-            "description": "双响炮"
+            "description": "造成物伤，应对状态：本次技能威力变为4倍。"
         },
         {
             "id": 7040500,
-            "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
+            "name": "焚烧烙印",
             "icon_id": "103039",
             "move_type": {
                 "id": 3,
@@ -144,14 +147,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
-                    "description": "焚烧烙印"
+                    "name": "焚烧烙印",
+                    "description": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "焚烧烙印"
+            "description": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。"
         },
         {
             "id": 7140230,
@@ -221,7 +224,7 @@
         },
         {
             "id": 7140280,
-            "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
+            "name": "气波",
             "icon_id": "113032",
             "move_type": {
                 "id": 12,
@@ -232,18 +235,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。",
-                    "description": "气波"
+                    "name": "气波",
+                    "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "气波"
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
         },
         {
             "id": 7040390,
-            "name": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。",
+            "name": "火焰切割",
             "icon_id": "103028",
             "move_type": {
                 "id": 3,
@@ -254,18 +257,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。",
-                    "description": "火焰切割"
+                    "name": "火焰切割",
+                    "description": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "火焰切割"
+            "description": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。"
         },
         {
             "id": 7140360,
-            "name": "减伤80%，应对攻击：自己获得全技能威力+40。",
+            "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
             "icon_id": "113029",
             "move_type": {
                 "id": 12,
@@ -276,18 +279,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤80%，应对攻击：自己获得全技能威力+40。",
-                    "description": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。"
+                    "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
+                    "description": "减伤80%，应对攻击：自己获得全技能威力+40。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。"
+            "description": "减伤80%，应对攻击：自己获得全技能威力+40。"
         },
         {
             "id": 7040270,
-            "name": "下一次攻击时，技能威力翻倍，应对防御：改为威力变为4倍。",
+            "name": "热身",
             "icon_id": "704011",
             "move_type": {
                 "id": 3,
@@ -298,7 +301,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "下一次攻击时，技能威力翻倍，应对防御：改为威力变为4倍。",
+                    "name": "热身",
                     "description": "敌方获得10层灼烧。"
                 }
             },
@@ -311,7 +314,7 @@
     "move_stones": [
         {
             "id": 7140220,
-            "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+            "name": "气沉丹田",
             "icon_id": "113026",
             "move_type": {
                 "id": 12,
@@ -322,14 +325,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
-                    "description": "气沉丹田"
+                    "name": "气沉丹田",
+                    "description": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 65,
-            "description": "气沉丹田"
+            "description": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。"
         },
         {
             "id": 7040440,
@@ -377,7 +380,7 @@
         },
         {
             "id": 7150200,
-            "name": "自己获得速度+120。",
+            "name": "风起",
             "icon_id": "114015",
             "move_type": {
                 "id": 13,
@@ -388,14 +391,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得速度+120。",
-                    "description": "风起"
+                    "name": "风起",
+                    "description": "自己获得速度+120。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 75,
-            "description": "风起"
+            "description": "自己获得速度+120。"
         },
         {
             "id": 7150140,
@@ -591,7 +594,7 @@
             "move_id": 7040370,
             "move": {
                 "id": 7040370,
-                "name": "对敌方精灵造成魔法伤害。",
+                "name": "火焰箭",
                 "icon_id": "103026",
                 "move_type": {
                     "id": 3,
@@ -602,14 +605,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成魔法伤害。",
-                        "description": "火焰箭"
+                        "name": "火焰箭",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "火焰箭"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -645,7 +648,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -656,14 +659,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -726,7 +729,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -737,14 +740,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -969,7 +972,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -980,14 +983,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

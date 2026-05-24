@@ -3,13 +3,13 @@
     "name": "9809",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -177,7 +177,7 @@
         },
         {
             "id": 7110390,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "交叉闪电",
             "icon_id": "110025",
             "move_type": {
                 "id": 9,
@@ -188,18 +188,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "交叉闪电"
+                    "name": "交叉闪电",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "交叉闪电"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7110400,
-            "name": "造成魔伤，自己获得速度+30。",
+            "name": "双联脉冲",
             "icon_id": "310026",
             "move_type": {
                 "id": 9,
@@ -210,18 +210,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，自己获得速度+30。",
-                    "description": "双联脉冲"
+                    "name": "双联脉冲",
+                    "description": "造成魔伤，自己获得速度+30。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 8,
             "power": null,
-            "description": "双联脉冲"
+            "description": "造成魔伤，自己获得速度+30。"
         },
         {
             "id": 7110410,
-            "name": "造成魔伤，迸发：本技能使用次数+1。",
+            "name": "过载回路",
             "icon_id": "110027",
             "move_type": {
                 "id": 9,
@@ -232,18 +232,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，迸发：本技能使用次数+1。",
-                    "description": "过载回路"
+                    "name": "过载回路",
+                    "description": "造成魔伤，迸发：本技能使用次数+1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "过载回路"
+            "description": "造成魔伤，迸发：本技能使用次数+1。"
         },
         {
             "id": 7110420,
-            "name": "回合结束自己返场，下回合所选技能使用次数+1。",
+            "name": "远程访问",
             "icon_id": "110029",
             "move_type": {
                 "id": 9,
@@ -254,14 +254,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "回合结束自己返场，下回合所选技能使用次数+1。",
-                    "description": "远程访问"
+                    "name": "远程访问",
+                    "description": "回合结束自己返场，下回合所选技能使用次数+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 3,
             "power": null,
-            "description": "远程访问"
+            "description": "回合结束自己返场，下回合所选技能使用次数+1。"
         }
     ],
     "move_stones": [],

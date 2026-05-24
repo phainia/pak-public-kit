@@ -3,16 +3,19 @@
     "name": "youlingli",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3066.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_youlingli.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_youlingli.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3066.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3066.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_youlingli_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_youlingli_2.webp"
+        ]
     },
     "main_type": {
         "id": 10,
@@ -227,7 +230,7 @@
         },
         {
             "id": 7120100,
-            "name": "造成物伤，敌方获得1层中毒。",
+            "name": "毒针",
             "icon_id": "311006",
             "move_type": {
                 "id": 10,
@@ -238,7 +241,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，敌方获得1层中毒。",
+                    "name": "毒针",
                     "description": "自己回合结束时返场，​携带的攻击​技​能​​下回合获得1个已触发过的迸发效果，​应对防御：​改为​获得​所有​触​发过​的迸发​效果​。"
                 }
             },
@@ -249,7 +252,7 @@
         },
         {
             "id": 7170140,
-            "name": "造成物伤，应对状态：使敌方失去6能量。",
+            "name": "惊吓盒子",
             "icon_id": "717014",
             "move_type": {
                 "id": 15,
@@ -260,7 +263,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：使敌方失去6能量。",
+                    "name": "惊吓盒子",
                     "description": "造成魔伤，自己回复1能量。"
                 }
             },
@@ -315,7 +318,7 @@
         },
         {
             "id": 7120140,
-            "name": "毒液渗透",
+            "name": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
             "icon_id": "712004",
             "move_type": {
                 "id": 10,
@@ -326,7 +329,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "毒液渗透",
+                    "name": "黑市里淘来的毒系技能石，摸起来总是黏糊糊的，建议戴着手套触摸。",
                     "description": "造成物伤，敌方获得2层中毒，应对状态：改为获得6层。"
                 }
             },
@@ -427,7 +430,7 @@
         },
         {
             "id": 7180120,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
             "icon_id": "718002",
             "move_type": {
                 "id": 16,
@@ -438,14 +441,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+                    "name": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 70,
-            "description": "走廊尽头明明什么都没有，鼻子却撞到了毛绒绒的东西。"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7180180,
@@ -537,7 +540,7 @@
         },
         {
             "id": 7140150,
-            "name": "造成物伤，2连击，若后手攻击，改为3连击。",
+            "name": "“对决的时候，我从不说话，精灵的技能就是我的回答”。",
             "icon_id": "714003",
             "move_type": {
                 "id": 12,
@@ -548,14 +551,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，2连击，若后手攻击，改为3连击。",
-                    "description": "“对决的时候，我从不说话，精灵的技能就是我的回答”。"
+                    "name": "“对决的时候，我从不说话，精灵的技能就是我的回答”。",
+                    "description": "造成物伤，2连击，若后手攻击，改为3连击。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "“对决的时候，我从不说话，精灵的技能就是我的回答”。"
+            "description": "造成物伤，2连击，若后手攻击，改为3连击。"
         },
         {
             "id": 7020850,
@@ -839,7 +842,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -850,14 +853,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -974,7 +977,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -985,14 +988,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1163,7 +1166,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1174,14 +1177,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {

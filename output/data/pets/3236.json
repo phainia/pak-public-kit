@@ -337,7 +337,7 @@
         },
         {
             "id": 7190330,
-            "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
+            "name": "这不是巫术，是还无法理解的科学。",
             "icon_id": "719009",
             "move_type": {
                 "id": 18,
@@ -348,14 +348,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
-                    "description": "这不是巫术，是还无法理解的科学。"
+                    "name": "这不是巫术，是还无法理解的科学。",
+                    "description": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "这不是巫术，是还无法理解的科学。"
+            "description": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。"
         },
         {
             "id": 7160150,
@@ -1395,7 +1395,7 @@
         },
         {
             "id": 7190230,
-            "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
+            "name": "黑荆棘",
             "icon_id": "719011",
             "move_type": {
                 "id": 18,
@@ -1406,14 +1406,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，应对状态：自身立即使用一次被应对技能",
-                    "description": "黑荆棘"
+                    "name": "黑荆棘",
+                    "description": "造成魔伤，应对状态：自身立即使用一次被应对技能"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": "黑荆棘"
+            "description": "造成魔伤，应对状态：自身立即使用一次被应对技能"
         },
         {
             "id": 7190260,
@@ -1439,7 +1439,7 @@
         },
         {
             "id": 7190290,
-            "name": "空间压迫",
+            "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
             "icon_id": "118009",
             "move_type": {
                 "id": 18,
@@ -1450,7 +1450,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "空间压迫",
+                    "name": "曾有洛克企图用愿力重塑现实，但他毕竟只是凡人。",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -1461,7 +1461,7 @@
         },
         {
             "id": 7190300,
-            "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
+            "name": "坍缩",
             "icon_id": "218007",
             "move_type": {
                 "id": 18,
@@ -1472,7 +1472,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若击败敌方，自己获得魔攻+70%。",
+                    "name": "坍缩",
                     "description": "造成物伤，敌方获得1层星陨印记。"
                 }
             },
@@ -1483,7 +1483,7 @@
         },
         {
             "id": 7190320,
-            "name": "造成物伤，自己回复1能量。",
+            "name": "多维击打",
             "icon_id": "719012",
             "move_type": {
                 "id": 18,
@@ -1494,18 +1494,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，自己回复1能量。",
-                    "description": "多维击打"
+                    "name": "多维击打",
+                    "description": "造成物伤，自己回复1能量。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": "多维击打"
+            "description": "造成物伤，自己回复1能量。"
         },
         {
             "id": 7190330,
-            "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
+            "name": "这不是巫术，是还无法理解的科学。",
             "icon_id": "719009",
             "move_type": {
                 "id": 18,
@@ -1516,18 +1516,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。",
-                    "description": "这不是巫术，是还无法理解的科学。"
+                    "name": "这不是巫术，是还无法理解的科学。",
+                    "description": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "这不是巫术，是还无法理解的科学。"
+            "description": "造成魔伤，1连击，敌方每有1层星陨印记，本次技能连击数+1。"
         },
         {
             "id": 7190390,
-            "name": "超新星馈赠",
+            "name": "别睡了，醒醒！老师点名了！",
             "icon_id": "118021",
             "move_type": {
                 "id": 18,
@@ -1538,7 +1538,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "超新星馈赠",
+                    "name": "别睡了，醒醒！老师点名了！",
                     "description": "2连击，每次连击使敌方获得1层星陨印记。"
                 }
             },
@@ -1615,7 +1615,7 @@
         },
         {
             "id": 7160180,
-            "name": "应对！速降",
+            "name": "S3夜游魔A",
             "icon_id": "716001",
             "move_type": {
                 "id": 14,
@@ -1626,14 +1626,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "应对！速降",
-                    "description": "S3夜游魔A"
+                    "name": "S3夜游魔A",
+                    "description": "应对！速降"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "S3夜游魔A"
+            "description": "应对！速降"
         },
         {
             "id": 7160210,
@@ -1681,7 +1681,7 @@
         },
         {
             "id": 7160280,
-            "name": "将自己的萌化转移给敌方。",
+            "name": "甜心续航",
             "icon_id": "115016",
             "move_type": {
                 "id": 14,
@@ -1692,18 +1692,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "将自己的萌化转移给敌方。",
-                    "description": "甜心续航"
+                    "name": "甜心续航",
+                    "description": "将自己的萌化转移给敌方。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 30,
-            "description": "甜心续航"
+            "description": "将自己的萌化转移给敌方。"
         },
         {
             "id": 7160290,
-            "name": "自己和敌方获得萌化：回复40%生命。",
+            "name": "破罐破摔",
             "icon_id": "115017",
             "move_type": {
                 "id": 14,
@@ -1714,14 +1714,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己和敌方获得萌化：回复40%生命。",
-                    "description": "破罐破摔"
+                    "name": "破罐破摔",
+                    "description": "自己和敌方获得萌化：回复40%生命。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 4,
             "power": null,
-            "description": "破罐破摔"
+            "description": "自己和敌方获得萌化：回复40%生命。"
         },
         {
             "id": 7080190,
@@ -1791,7 +1791,7 @@
         },
         {
             "id": 7080280,
-            "name": "减伤90%，应对攻击：防御技能冷却-1。",
+            "name": "遁地",
             "icon_id": "107024",
             "move_type": {
                 "id": 6,
@@ -1802,14 +1802,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤90%，应对攻击：防御技能冷却-1。",
-                    "description": "遁地"
+                    "name": "遁地",
+                    "description": "减伤90%，应对攻击：防御技能冷却-1。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 1,
             "power": 60,
-            "description": "遁地"
+            "description": "减伤90%，应对攻击：防御技能冷却-1。"
         },
         {
             "id": 7080290,
@@ -1835,7 +1835,7 @@
         },
         {
             "id": 7080350,
-            "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
+            "name": "地系部族会把敌人和秘密一同用沙土掩埋。",
             "icon_id": "107032",
             "move_type": {
                 "id": 6,
@@ -1846,14 +1846,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
-                    "description": "地系部族会把敌人和秘密一同用沙土掩埋。"
+                    "name": "地系部族会把敌人和秘密一同用沙土掩埋。",
+                    "description": "造成物伤，物防比敌方越高，本次技能威力越高。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": "地系部族会把敌人和秘密一同用沙土掩埋。"
+            "description": "造成物伤，物防比敌方越高，本次技能威力越高。"
         },
         {
             "id": 7080360,
@@ -1934,7 +1934,7 @@
             "move_id": 7030220,
             "move": {
                 "id": 7030220,
-                "name": "自己回复10能量。",
+                "name": "徒长",
                 "icon_id": "703029",
                 "move_type": {
                     "id": 2,
@@ -1945,7 +1945,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己回复10能量。",
+                        "name": "徒长",
                         "description": "造成魔伤，每次使用其他草系技能后，本技能威力永久+60。"
                     }
                 },
@@ -1988,7 +1988,7 @@
             "move_id": 7050230,
             "move": {
                 "id": 7050230,
-                "name": "自己获得魔攻+190%。",
+                "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
                 "icon_id": "705024",
                 "move_type": {
                     "id": 4,
@@ -1999,14 +1999,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己获得魔攻+190%。",
-                        "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+                        "name": "水就挨着陆地，摸到水就摸到了世界的尽头。",
+                        "description": "自己获得魔攻+190%。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
+                "description": "自己获得魔攻+190%。"
             }
         },
         {
@@ -2015,7 +2015,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -2026,14 +2026,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -2042,7 +2042,7 @@
             "move_id": 7080200,
             "move": {
                 "id": 7080200,
-                "name": "流沙",
+                "name": "大地伸着懒腰，翻了个身。",
                 "icon_id": "708018",
                 "move_type": {
                     "id": 6,
@@ -2053,7 +2053,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "流沙",
+                        "name": "大地伸着懒腰，翻了个身。",
                         "description": "对敌方精灵造成物理伤害。"
                     }
                 },
@@ -2069,7 +2069,7 @@
             "move_id": 7090160,
             "move": {
                 "id": 7090160,
-                "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
+                "name": "“雪人里面怎么有人啊！”",
                 "icon_id": "709006",
                 "move_type": {
                     "id": 7,
@@ -2080,14 +2080,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。",
-                        "description": "“雪人里面怎么有人啊！”"
+                        "name": "“雪人里面怎么有人啊！”",
+                        "description": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "“雪人里面怎么有人啊！”"
+                "description": "造成魔伤，若敌方有冻结，本次技能威力+60，应对状态：使冻结翻倍。"
             }
         },
         {
@@ -2096,7 +2096,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -2107,14 +2107,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -2231,7 +2231,7 @@
             "move_id": 7150300,
             "move": {
                 "id": 7150300,
-                "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+                "name": "风矢",
                 "icon_id": "114025",
                 "move_type": {
                     "id": 13,
@@ -2242,14 +2242,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                        "description": "风矢"
+                        "name": "风矢",
+                        "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 2,
                 "power": null,
-                "description": "风矢"
+                "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
             }
         },
         {
@@ -2312,7 +2312,7 @@
             "move_id": 7180160,
             "move": {
                 "id": 7180160,
-                "name": "造成物伤，应对状态：本次攻击吸血100%。",
+                "name": "撕咬",
                 "icon_id": "718014",
                 "move_type": {
                     "id": 16,
@@ -2323,14 +2323,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，应对状态：本次攻击吸血100%。",
-                        "description": "撕咬"
+                        "name": "撕咬",
+                        "description": "造成物伤，应对状态：本次攻击吸血100%。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 2,
                 "power": null,
-                "description": "撕咬"
+                "description": "造成物伤，应对状态：本次攻击吸血100%。"
             }
         },
         {
@@ -2339,7 +2339,7 @@
             "move_id": 7070170,
             "move": {
                 "id": 7070170,
-                "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
+                "name": "主轴",
                 "icon_id": "106017",
                 "move_type": {
                     "id": 17,
@@ -2350,14 +2350,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。",
-                        "description": "主轴"
+                        "name": "主轴",
+                        "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
                     }
                 },
                 "move_category": "Status",
                 "energy_cost": 1,
                 "power": null,
-                "description": "主轴"
+                "description": "造成物伤，本技能位于1号或3号位时能耗-2，传动1。"
             }
         },
         {

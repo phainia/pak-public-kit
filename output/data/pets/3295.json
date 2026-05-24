@@ -3,13 +3,13 @@
     "name": "kawachong_shamo",
     "form": "沙地附近的样子",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3295.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_kawachong_shamo.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_kawachong_shamo.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3295.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3295.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -117,7 +117,7 @@
         },
         {
             "id": 7080350,
-            "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
+            "name": "地系部族会把敌人和秘密一同用沙土掩埋。",
             "icon_id": "107032",
             "move_type": {
                 "id": 6,
@@ -128,14 +128,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
-                    "description": "地系部族会把敌人和秘密一同用沙土掩埋。"
+                    "name": "地系部族会把敌人和秘密一同用沙土掩埋。",
+                    "description": "造成物伤，物防比敌方越高，本次技能威力越高。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": "地系部族会把敌人和秘密一同用沙土掩埋。"
+            "description": "造成物伤，物防比敌方越高，本次技能威力越高。"
         },
         {
             "id": 7080360,
@@ -161,7 +161,7 @@
         },
         {
             "id": 7030480,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "筛管奔流",
             "icon_id": "102031",
             "move_type": {
                 "id": 2,
@@ -172,14 +172,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "筛管奔流"
+                    "name": "筛管奔流",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": "筛管奔流"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7030510,
@@ -205,7 +205,7 @@
         },
         {
             "id": 7030470,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "顶端优势",
             "icon_id": "102030",
             "move_type": {
                 "id": 2,
@@ -216,18 +216,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "顶端优势"
+                    "name": "顶端优势",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "顶端优势"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7030280,
-            "name": "自己获得物攻和魔攻+140%。",
+            "name": "丰饶",
             "icon_id": "202015",
             "move_type": {
                 "id": 2,
@@ -238,7 +238,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得物攻和魔攻+140%。",
+                    "name": "丰饶",
                     "description": "自己获得连击数+2，应对防御：额外造成打断，且敌方下回合获得眩晕。"
                 }
             },
@@ -293,7 +293,7 @@
         },
         {
             "id": 7030450,
-            "name": "造成物伤，1连击，每次使用后，本技能连击数永久+2。",
+            "name": "孢子爆散",
             "icon_id": "102028",
             "move_type": {
                 "id": 2,
@@ -304,7 +304,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击，每次使用后，本技能连击数永久+2。",
+                    "name": "孢子爆散",
                     "description": "对敌方精灵造成魔法伤害。"
                 }
             },
@@ -337,7 +337,7 @@
         },
         {
             "id": 7030530,
-            "name": "减伤80%，应对攻击：自己获得物防+70%。",
+            "name": "抽枝",
             "icon_id": "102038",
             "move_type": {
                 "id": 2,
@@ -348,14 +348,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤80%，应对攻击：自己获得物防+70%。",
-                    "description": "抽枝"
+                    "name": "抽枝",
+                    "description": "减伤80%，应对攻击：自己获得物防+70%。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 90,
-            "description": "抽枝"
+            "description": "减伤80%，应对攻击：自己获得物防+70%。"
         }
     ],
     "move_stones": [
@@ -383,7 +383,7 @@
         },
         {
             "id": 7130270,
-            "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
+            "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
             "icon_id": "112019",
             "move_type": {
                 "id": 11,
@@ -394,18 +394,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
-                    "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+                    "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
+                    "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 80,
-            "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+            "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
         },
         {
             "id": 7130150,
-            "name": "减伤70%，巧变：毒系状态技能，应对攻击。",
+            "name": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。",
             "icon_id": "713001",
             "move_type": {
                 "id": 11,
@@ -416,14 +416,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，巧变：毒系状态技能，应对攻击。",
-                    "description": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。"
+                    "name": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。",
+                    "description": "减伤70%，巧变：毒系状态技能，应对攻击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。"
+            "description": "减伤70%，巧变：毒系状态技能，应对攻击。"
         },
         {
             "id": 7130200,
@@ -625,7 +625,7 @@
         },
         {
             "id": 7080340,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "鸣沙陷阱",
             "icon_id": "107031",
             "move_type": {
                 "id": 6,
@@ -636,14 +636,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "鸣沙陷阱"
+                    "name": "鸣沙陷阱",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 120,
-            "description": "鸣沙陷阱"
+            "description": "对敌方精灵造成魔法伤害。"
         }
     ],
     "legacy_moves": [
@@ -680,7 +680,7 @@
             "move_id": 7030170,
             "move": {
                 "id": 7030170,
-                "name": "造成物伤，自己回复1能量。",
+                "name": "荆棘爪",
                 "icon_id": "703014",
                 "move_type": {
                     "id": 2,
@@ -691,14 +691,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，自己回复1能量。",
-                        "description": "荆棘爪"
+                        "name": "荆棘爪",
+                        "description": "造成物伤，自己回复1能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "荆棘爪"
+                "description": "造成物伤，自己回复1能量。"
             }
         },
         {
@@ -707,7 +707,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -718,14 +718,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -842,7 +842,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -853,14 +853,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1031,7 +1031,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1042,14 +1042,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {

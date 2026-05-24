@@ -3,13 +3,13 @@
     "name": "9811",
     "form": "default",
     "assets": {
-        "preview": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
         "portrait": null,
         "portrait_small": null,
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3012.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3012.webp",
             "big_shiny": null
         },
         "illustrations": []
@@ -111,7 +111,7 @@
         },
         {
             "id": 7130310,
-            "name": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
+            "name": "蛰针",
             "icon_id": "112023",
             "move_type": {
                 "id": 11,
@@ -122,18 +122,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
-                    "description": "蛰针"
+                    "name": "蛰针",
+                    "description": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "蛰针"
+            "description": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。"
         },
         {
             "id": 7130320,
-            "name": "造成魔伤，3连击。",
+            "name": "虫刺",
             "icon_id": "112025",
             "move_type": {
                 "id": 11,
@@ -144,7 +144,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，3连击。",
+                    "name": "虫刺",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },

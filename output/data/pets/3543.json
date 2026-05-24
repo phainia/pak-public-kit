@@ -265,7 +265,7 @@
         },
         {
             "id": 7170210,
-            "name": "报复",
+            "name": "午夜，在黑暗的教室里，两个人共同握着一根羽毛笔，嘴里念念有词，笔尖疯狂抖动。",
             "icon_id": "116015",
             "move_type": {
                 "id": 15,
@@ -276,7 +276,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "报复",
+                    "name": "午夜，在黑暗的教室里，两个人共同握着一根羽毛笔，嘴里念念有词，笔尖疯狂抖动。",
                     "description": "敌方获得1层降灵印记。"
                 }
             },
@@ -287,7 +287,7 @@
         },
         {
             "id": 7170140,
-            "name": "造成物伤，应对状态：使敌方失去6能量。",
+            "name": "惊吓盒子",
             "icon_id": "717014",
             "move_type": {
                 "id": 15,
@@ -298,7 +298,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：使敌方失去6能量。",
+                    "name": "惊吓盒子",
                     "description": "造成魔伤，自己回复1能量。"
                 }
             },
@@ -399,7 +399,7 @@
     "move_stones": [
         {
             "id": 7050360,
-            "name": "造成魔伤，4连击。",
+            "name": "咕嘟咕嘟浅滩的温泉里不可以跳水哦。",
             "icon_id": "104025",
             "move_type": {
                 "id": 4,
@@ -410,14 +410,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，4连击。",
-                    "description": "咕嘟咕嘟浅滩的温泉里不可以跳水哦。"
+                    "name": "咕嘟咕嘟浅滩的温泉里不可以跳水哦。",
+                    "description": "造成魔伤，4连击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 80,
-            "description": "咕嘟咕嘟浅滩的温泉里不可以跳水哦。"
+            "description": "造成魔伤，4连击。"
         },
         {
             "id": 7050290,
@@ -487,7 +487,7 @@
         },
         {
             "id": 7050220,
-            "name": "润泽",
+            "name": "月兔暗港最好的水手，可以让船在洪水风暴里张满帆。",
             "icon_id": "104001",
             "move_type": {
                 "id": 4,
@@ -498,7 +498,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "润泽",
+                    "name": "月兔暗港最好的水手，可以让船在洪水风暴里张满帆。",
                     "description": "造成魔伤，应对状态：本技能能耗永久-6。"
                 }
             },
@@ -531,7 +531,7 @@
         },
         {
             "id": 7150080,
-            "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
+            "name": "格斗小七2",
             "icon_id": "715004",
             "move_type": {
                 "id": 13,
@@ -542,18 +542,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
-                    "description": "格斗小七2"
+                    "name": "格斗小七2",
+                    "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 50,
-            "description": "格斗小七2"
+            "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
         },
         {
             "id": 7150200,
-            "name": "自己获得速度+120。",
+            "name": "风起",
             "icon_id": "114015",
             "move_type": {
                 "id": 13,
@@ -564,14 +564,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己获得速度+120。",
-                    "description": "风起"
+                    "name": "风起",
+                    "description": "自己获得速度+120。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 75,
-            "description": "风起"
+            "description": "自己获得速度+120。"
         },
         {
             "id": 7150120,
@@ -811,7 +811,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -822,14 +822,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -865,7 +865,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -876,14 +876,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -946,7 +946,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -957,14 +957,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1135,7 +1135,7 @@
             "move_id": 7170220,
             "move": {
                 "id": 7170220,
-                "name": "减伤70%，应对攻击：敌方失去3能量。",
+                "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
                 "icon_id": "116016",
                 "move_type": {
                     "id": 15,
@@ -1146,14 +1146,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤70%，应对攻击：敌方失去3能量。",
-                        "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                        "name": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。",
+                        "description": "减伤70%，应对攻击：敌方失去3能量。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "为报答学长的照顾，今天在他的炼金药剂里面加了一些汽水儿。"
+                "description": "减伤70%，应对攻击：敌方失去3能量。"
             }
         },
         {
@@ -1189,7 +1189,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1200,14 +1200,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

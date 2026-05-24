@@ -3,16 +3,19 @@
     "name": "huangfenghou",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3059.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_huangfenghou.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_huangfenghou.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3059.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3059.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_huangfenghou_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_huangfenghou_2.webp"
+        ]
     },
     "main_type": {
         "id": 11,
@@ -139,7 +142,7 @@
         },
         {
             "id": 7130190,
-            "name": "造成物伤，1连击，本技能会受奉献影响。",
+            "name": "虫群",
             "icon_id": "212011",
             "move_type": {
                 "id": 11,
@@ -150,7 +153,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击，本技能会受奉献影响。",
+                    "name": "虫群",
                     "description": "造成物伤，2连击。己方队伍获得1次奉献：获得连击数+1。"
                 }
             },
@@ -183,7 +186,7 @@
         },
         {
             "id": 7130170,
-            "name": "造成物伤，1连击，本技能会受奉献影响，每被影响1次，能耗永久+1。",
+            "name": "轻轻咬一小口，不会痛。",
             "icon_id": "112009",
             "move_type": {
                 "id": 11,
@@ -194,14 +197,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击，本技能会受奉献影响，每被影响1次，能耗永久+1。",
-                    "description": "轻轻咬一小口，不会痛。"
+                    "name": "轻轻咬一小口，不会痛。",
+                    "description": "造成物伤，1连击，本技能会受奉献影响，每被影响1次，能耗永久+1。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "轻轻咬一小口，不会痛。"
+            "description": "造成物伤，1连击，本技能会受奉献影响，每被影响1次，能耗永久+1。"
         },
         {
             "id": 7150210,
@@ -293,7 +296,7 @@
         },
         {
             "id": 7150300,
-            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "name": "风矢",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -304,18 +307,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                    "description": "风矢"
+                    "name": "风矢",
+                    "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "风矢"
+            "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
         },
         {
             "id": 7150080,
-            "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
+            "name": "格斗小七2",
             "icon_id": "715004",
             "move_type": {
                 "id": 13,
@@ -326,14 +329,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
-                    "description": "格斗小七2"
+                    "name": "格斗小七2",
+                    "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 50,
-            "description": "格斗小七2"
+            "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
         },
         {
             "id": 7130120,
@@ -449,7 +452,7 @@
         },
         {
             "id": 7130150,
-            "name": "减伤70%，巧变：毒系状态技能，应对攻击。",
+            "name": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。",
             "icon_id": "713001",
             "move_type": {
                 "id": 11,
@@ -460,14 +463,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，巧变：毒系状态技能，应对攻击。",
-                    "description": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。"
+                    "name": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。",
+                    "description": "减伤70%，巧变：毒系状态技能，应对攻击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "啊——阿嚏—— 没关系，喝下之后，就可以拥抱。"
+            "description": "减伤70%，巧变：毒系状态技能，应对攻击。"
         },
         {
             "id": 7120210,
@@ -801,7 +804,7 @@
         },
         {
             "id": 7150390,
-            "name": "释放自己释放过的迅捷技能，其能耗之和的二分之一加至本技能能耗，每次使用后能耗+1。",
+            "name": "颠簸",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -812,14 +815,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "释放自己释放过的迅捷技能，其能耗之和的二分之一加至本技能能耗，每次使用后能耗+1。",
-                    "description": "颠簸"
+                    "name": "颠簸",
+                    "description": "释放自己释放过的迅捷技能，其能耗之和的二分之一加至本技能能耗，每次使用后能耗+1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 7,
             "power": 170,
-            "description": "颠簸"
+            "description": "释放自己释放过的迅捷技能，其能耗之和的二分之一加至本技能能耗，每次使用后能耗+1。"
         }
     ],
     "legacy_moves": [
@@ -883,7 +886,7 @@
             "move_id": 7040150,
             "move": {
                 "id": 7040150,
-                "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
+                "name": "火焰冲锋",
                 "icon_id": "704010",
                 "move_type": {
                     "id": 3,
@@ -894,14 +897,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。",
-                        "description": "火焰冲锋"
+                        "name": "火焰冲锋",
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "火焰冲锋"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -937,7 +940,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -948,14 +951,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -1018,7 +1021,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -1029,14 +1032,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1099,7 +1102,7 @@
             "move_id": 7130270,
             "move": {
                 "id": 7130270,
-                "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
+                "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
                 "icon_id": "112019",
                 "move_type": {
                     "id": 11,
@@ -1110,14 +1113,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
-                        "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+                        "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
+                        "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+                "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
             }
         },
         {
@@ -1153,7 +1156,7 @@
             "move_id": 7150190,
             "move": {
                 "id": 7150190,
-                "name": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
+                "name": "乘风",
                 "icon_id": "114014",
                 "move_type": {
                     "id": 13,
@@ -1164,14 +1167,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。",
-                        "description": "乘风"
+                        "name": "乘风",
+                        "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "乘风"
+                "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。"
             }
         },
         {
@@ -1261,7 +1264,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1272,14 +1275,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {

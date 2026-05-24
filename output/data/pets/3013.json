@@ -3,16 +3,19 @@
     "name": "kaijiachong",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3013.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_kaijiachong.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_kaijiachong.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3013.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3013.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_kaijiachong_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_kaijiachong_2.webp"
+        ]
     },
     "main_type": {
         "id": 11,
@@ -133,7 +136,7 @@
         },
         {
             "id": 7130270,
-            "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
+            "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
             "icon_id": "112019",
             "move_type": {
                 "id": 11,
@@ -144,18 +147,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。",
-                    "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+                    "name": "研究手记：茧不透光，只听到内里传出咀嚼声。",
+                    "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 80,
-            "description": "研究手记：茧不透光，只听到内里传出咀嚼声。"
+            "description": "自己回复20%生命，己方队伍获得1次奉献：获得10%吸血。"
         },
         {
             "id": 7130190,
-            "name": "造成物伤，1连击，本技能会受奉献影响。",
+            "name": "虫群",
             "icon_id": "212011",
             "move_type": {
                 "id": 11,
@@ -166,7 +169,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，1连击，本技能会受奉献影响。",
+                    "name": "虫群",
                     "description": "造成物伤，2连击。己方队伍获得1次奉献：获得连击数+1。"
                 }
             },
@@ -221,7 +224,7 @@
         },
         {
             "id": 7130310,
-            "name": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
+            "name": "蛰针",
             "icon_id": "112023",
             "move_type": {
                 "id": 11,
@@ -232,14 +235,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。",
-                    "description": "蛰针"
+                    "name": "蛰针",
+                    "description": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "蛰针"
+            "description": "减伤70%，紧急脱离，应对攻击：下个入场精灵获得减伤。"
         },
         {
             "id": 7021130,
@@ -287,7 +290,7 @@
         },
         {
             "id": 7130320,
-            "name": "造成魔伤，3连击。",
+            "name": "虫刺",
             "icon_id": "112025",
             "move_type": {
                 "id": 11,
@@ -298,7 +301,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，3连击。",
+                    "name": "虫刺",
                     "description": "对敌方精灵造成物理伤害。"
                 }
             },
@@ -399,7 +402,7 @@
         },
         {
             "id": 7150270,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "鹰爪",
             "icon_id": "214022",
             "move_type": {
                 "id": 13,
@@ -410,14 +413,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "鹰爪"
+                    "name": "鹰爪",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "鹰爪"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7021120,
@@ -443,7 +446,7 @@
         },
         {
             "id": 7150310,
-            "name": "对敌方精灵造成物理伤害。",
+            "name": "回旋风暴",
             "icon_id": "114027",
             "move_type": {
                 "id": 13,
@@ -454,18 +457,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成物理伤害。",
-                    "description": "回旋风暴"
+                    "name": "回旋风暴",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "回旋风暴"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7180330,
-            "name": "造成魔伤，2连击。",
+            "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
             "icon_id": "117032",
             "move_type": {
                 "id": 16,
@@ -476,14 +479,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，2连击。",
-                    "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+                    "name": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。",
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "炼金药剂课上课之前要严格遵循七步洗手法，挨个把手洗干净。"
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7180130,
@@ -701,7 +704,7 @@
             "move_id": 7040300,
             "move": {
                 "id": 7040300,
-                "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
+                "name": "火焰护盾",
                 "icon_id": "704019",
                 "move_type": {
                     "id": 3,
@@ -712,14 +715,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "敌方获得10层灼烧，应对防御：改为获得30层。",
-                        "description": "火焰护盾"
+                        "name": "火焰护盾",
+                        "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "火焰护盾"
+                "description": "敌方获得10层灼烧，应对防御：改为获得30层。"
             }
         },
         {
@@ -782,7 +785,7 @@
             "move_id": 7080400,
             "move": {
                 "id": 7080400,
-                "name": "造成物伤，敌方获得连击数-3。",
+                "name": "石肤术",
                 "icon_id": "107036",
                 "move_type": {
                     "id": 6,
@@ -793,14 +796,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成物伤，敌方获得连击数-3。",
-                        "description": "石肤术"
+                        "name": "石肤术",
+                        "description": "造成物伤，敌方获得连击数-3。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "石肤术"
+                "description": "造成物伤，敌方获得连击数-3。"
             }
         },
         {
@@ -836,7 +839,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -847,14 +850,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -971,7 +974,7 @@
             "move_id": 7150150,
             "move": {
                 "id": 7150150,
-                "name": "造成魔伤，迅捷。",
+                "name": "疾风刺",
                 "icon_id": "715012",
                 "move_type": {
                     "id": 13,
@@ -982,14 +985,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "造成魔伤，迅捷。",
-                        "description": "疾风刺"
+                        "name": "疾风刺",
+                        "description": "造成魔伤，迅捷。"
                     }
                 },
                 "move_category": "Defense",
                 "energy_cost": 2,
                 "power": null,
-                "description": "疾风刺"
+                "description": "造成魔伤，迅捷。"
             }
         },
         {
@@ -1106,7 +1109,7 @@
             "move_id": 7190400,
             "move": {
                 "id": 7190400,
-                "name": "心灵洞悉",
+                "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                 "icon_id": "118022",
                 "move_type": {
                     "id": 18,
@@ -1117,7 +1120,7 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "心灵洞悉",
+                        "name": "多了一次许愿的机会，而愿望的代价由敌人付清。",
                         "description": "敌方获得2层星陨印记，每使用1次，赋予的星陨印记层数永久+1。"
                     }
                 },

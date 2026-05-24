@@ -3,16 +3,19 @@
     "name": "liezuanniao",
     "form": "default",
     "assets": {
-        "preview": null,
-        "portrait": null,
-        "portrait_small": null,
+        "preview": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3078.webp",
+        "portrait": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet1024/JL_liezuanniao.webp",
+        "portrait_small": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/Pet256/JL_liezuanniao.webp",
         "head": {
-            "normal": null,
+            "normal": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/HeadIcon/3078.webp",
             "shiny": null,
-            "big": null,
+            "big": "assets/webp/Game/NewRoco/Modules/System/Common/Icon/BigHeadIcon256/3078.webp",
             "big_shiny": null
         },
-        "illustrations": []
+        "illustrations": [
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_liezuanniao_1.webp",
+            "assets/webp/Game/NewRoco/Modules/System/Handbook/Raw/LineElves/Images/XG_liezuanniao_2.webp"
+        ]
     },
     "main_type": {
         "id": 3,
@@ -95,7 +98,7 @@
         },
         {
             "id": 7040190,
-            "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+            "name": "双响炮",
             "icon_id": "704025",
             "move_type": {
                 "id": 3,
@@ -106,18 +109,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：本次技能威力变为4倍。",
-                    "description": "双响炮"
+                    "name": "双响炮",
+                    "description": "造成物伤，应对状态：本次技能威力变为4倍。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 25,
-            "description": "双响炮"
+            "description": "造成物伤，应对状态：本次技能威力变为4倍。"
         },
         {
             "id": 7040500,
-            "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
+            "name": "焚烧烙印",
             "icon_id": "103039",
             "move_type": {
                 "id": 3,
@@ -128,18 +131,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。",
-                    "description": "焚烧烙印"
+                    "name": "焚烧烙印",
+                    "description": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "焚烧烙印"
+            "description": "造成魔伤，驱散敌方所有印记，每驱散1层，获得物攻+20%。"
         },
         {
             "id": 7040350,
-            "name": "对敌方精灵造成魔法伤害。",
+            "name": "流火",
             "icon_id": "103024",
             "move_type": {
                 "id": 3,
@@ -150,18 +153,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "对敌方精灵造成魔法伤害。",
-                    "description": "流火"
+                    "name": "流火",
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 1,
             "power": 15,
-            "description": "流火"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7150300,
-            "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
+            "name": "风矢",
             "icon_id": "114025",
             "move_type": {
                 "id": 13,
@@ -172,14 +175,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：回合结束使敌方紧急脱离。",
-                    "description": "风矢"
+                    "name": "风矢",
+                    "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "风矢"
+            "description": "造成物伤，应对状态：回合结束使敌方紧急脱离。"
         },
         {
             "id": 7020510,
@@ -249,7 +252,7 @@
         },
         {
             "id": 7040270,
-            "name": "下一次攻击时，技能威力翻倍，应对防御：改为威力变为4倍。",
+            "name": "热身",
             "icon_id": "704011",
             "move_type": {
                 "id": 3,
@@ -260,7 +263,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "下一次攻击时，技能威力翻倍，应对防御：改为威力变为4倍。",
+                    "name": "热身",
                     "description": "敌方获得10层灼烧。"
                 }
             },
@@ -271,7 +274,7 @@
         },
         {
             "id": 7040390,
-            "name": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。",
+            "name": "火焰切割",
             "icon_id": "103028",
             "move_type": {
                 "id": 3,
@@ -282,14 +285,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。",
-                    "description": "火焰切割"
+                    "name": "火焰切割",
+                    "description": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "火焰切割"
+            "description": "造成魔伤，敌方获得4层灼烧，应对状态：本次技能威力和赋予灼烧翻倍。"
         },
         {
             "id": 7150060,
@@ -337,7 +340,7 @@
         },
         {
             "id": 7150080,
-            "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
+            "name": "格斗小七2",
             "icon_id": "715004",
             "move_type": {
                 "id": 13,
@@ -348,18 +351,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。",
-                    "description": "格斗小七2"
+                    "name": "格斗小七2",
+                    "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 50,
-            "description": "格斗小七2"
+            "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
         },
         {
             "id": 7040180,
-            "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+            "name": "闪燃",
             "icon_id": "704013",
             "move_type": {
                 "id": 3,
@@ -370,7 +373,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，应对状态：本次技能威力变为4倍。",
+                    "name": "闪燃",
                     "description": "造成物伤，自己回复1能量。"
                 }
             },
@@ -493,7 +496,7 @@
         },
         {
             "id": 7190390,
-            "name": "超新星馈赠",
+            "name": "别睡了，醒醒！老师点名了！",
             "icon_id": "118021",
             "move_type": {
                 "id": 18,
@@ -504,7 +507,7 @@
             },
             "localized": {
                 "zh": {
-                    "name": "超新星馈赠",
+                    "name": "别睡了，醒醒！老师点名了！",
                     "description": "2连击，每次连击使敌方获得1层星陨印记。"
                 }
             },
@@ -515,7 +518,7 @@
         },
         {
             "id": 7190320,
-            "name": "造成物伤，自己回复1能量。",
+            "name": "多维击打",
             "icon_id": "719012",
             "move_type": {
                 "id": 18,
@@ -526,14 +529,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "造成物伤，自己回复1能量。",
-                    "description": "多维击打"
+                    "name": "多维击打",
+                    "description": "造成物伤，自己回复1能量。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": "多维击打"
+            "description": "造成物伤，自己回复1能量。"
         },
         {
             "id": 7170190,
@@ -817,7 +820,7 @@
             "move_id": 7040370,
             "move": {
                 "id": 7040370,
-                "name": "对敌方精灵造成魔法伤害。",
+                "name": "火焰箭",
                 "icon_id": "103026",
                 "move_type": {
                     "id": 3,
@@ -828,14 +831,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "对敌方精灵造成魔法伤害。",
-                        "description": "火焰箭"
+                        "name": "火焰箭",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "火焰箭"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -871,7 +874,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "move_type": {
                     "id": 5,
@@ -882,14 +885,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。",
-                        "description": "脉冲光线"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "脉冲光线"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -952,7 +955,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "精灵蓄力中",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "move_type": {
                     "id": 8,
@@ -963,14 +966,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "精灵蓄力中",
-                        "description": "龙吼"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "龙吼"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1195,7 +1198,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                "name": "教团不在乎，它只要棋子互相制衡。",
                 "icon_id": "106011",
                 "move_type": {
                     "id": 17,
@@ -1206,14 +1209,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
-                        "description": "教团不在乎，它只要棋子互相制衡。"
+                        "name": "教团不在乎，它只要棋子互相制衡。",
+                        "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "教团不在乎，它只要棋子互相制衡。"
+                "description": "减伤80%，应对攻击：两侧技能能耗永久-1。"
             }
         },
         {
