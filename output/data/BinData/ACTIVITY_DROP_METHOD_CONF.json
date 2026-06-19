@@ -181,6 +181,52 @@
         }
       ]
     },
+    "2700098": {
+      "id": 2700098,
+      "drop_behavior": 23,
+      "drop_behavior_condition": [
+        10
+      ],
+      "begin_time": "2026-03-26 04:00:00",
+      "end_time": "2026-05-27 03:59:59",
+      "area_id": 900000107,
+      "world_map_activity_conf_id": 1001,
+      "area_show": 1,
+      "player_world_type": 1,
+      "reward_group": [
+        {
+          "goods_type": 2,
+          "goods_id": 6,
+          "goods_count": 6,
+          "drop_prob": 100,
+          "day_got_limit": 1200,
+          "total_got_limit": 1200
+        }
+      ]
+    },
+    "2700099": {
+      "id": 2700099,
+      "drop_behavior": 23,
+      "drop_behavior_condition": [
+        10
+      ],
+      "begin_time": "2026-03-26 04:00:00",
+      "end_time": "2026-05-27 03:59:59",
+      "area_id": 900000105,
+      "world_map_activity_conf_id": 1001,
+      "area_show": 1,
+      "player_world_type": 1,
+      "reward_group": [
+        {
+          "goods_type": 2,
+          "goods_id": 6,
+          "goods_count": 6,
+          "drop_prob": 100,
+          "day_got_limit": 1200,
+          "total_got_limit": 1200
+        }
+      ]
+    },
     "4500003": {
       "id": 4500003,
       "drop_behavior": 24,
@@ -205,10 +251,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -259,10 +305,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -290,10 +336,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -344,10 +390,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -375,10 +421,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -429,10 +475,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -460,10 +506,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -514,10 +560,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -545,10 +591,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -599,10 +645,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -630,10 +676,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -684,10 +730,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -715,10 +761,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -769,10 +815,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -800,10 +846,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -854,10 +900,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -885,10 +931,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -939,10 +985,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -970,10 +1016,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1024,10 +1070,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1055,10 +1101,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1109,10 +1155,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1140,10 +1186,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1194,10 +1240,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1225,10 +1271,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1279,10 +1325,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1310,10 +1356,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1364,10 +1410,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1395,10 +1441,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1449,10 +1495,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1480,10 +1526,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1534,10 +1580,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1565,10 +1611,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1619,10 +1665,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1650,10 +1696,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1704,10 +1750,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1735,10 +1781,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1789,10 +1835,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1820,10 +1866,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1874,10 +1920,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1905,10 +1951,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1959,10 +2005,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 6,
+          "goods_count": 10,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1978,10 +2024,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -1997,10 +2043,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2016,10 +2062,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2035,10 +2081,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2054,10 +2100,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2073,10 +2119,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2092,10 +2138,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2111,10 +2157,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2130,10 +2176,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2149,10 +2195,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2168,10 +2214,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2187,10 +2233,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2206,10 +2252,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2225,10 +2271,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2244,10 +2290,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2263,10 +2309,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2282,10 +2328,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2301,10 +2347,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2320,10 +2366,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2339,10 +2385,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },
@@ -2358,10 +2404,10 @@
         {
           "goods_type": 2,
           "goods_id": 51,
-          "goods_count": 12,
+          "goods_count": 20,
           "drop_prob": 100,
-          "day_got_limit": 120,
-          "total_got_limit": 120
+          "day_got_limit": 200,
+          "total_got_limit": 200
         }
       ]
     },

@@ -126,7 +126,7 @@
         },
         {
             "id": 7140210,
-            "name": "气波",
+            "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
             "icon_id": "113025",
             "assets": {
                 "icon_id": "113025",
@@ -143,18 +143,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "气波",
-                    "description": "对敌方精灵造成魔法伤害。"
+                    "name": "敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。",
+                    "description": "应对！破防"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 0,
             "power": 40,
-            "description": "对敌方精灵造成魔法伤害。"
+            "description": "应对！破防"
         },
         {
             "id": 7140230,
-            "name": "缠丝劲",
+            "name": "硬门",
             "icon_id": "113027",
             "assets": {
                 "icon_id": "113027",
@@ -171,18 +171,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "缠丝劲",
-                    "description": "造成物伤，2连击。"
+                    "name": "硬门",
+                    "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 25,
-            "description": "造成物伤，2连击。"
+            "description": "应对攻击：打断被应对技能，并造成90威力物伤。"
         },
         {
             "id": 7140140,
-            "name": "化劲",
+            "name": "应对！斩断",
             "icon_id": "714011",
             "assets": {
                 "icon_id": "714011",
@@ -199,14 +199,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "化劲",
-                    "description": "自己获得全技能威力+40。"
+                    "name": "应对！斩断",
+                    "description": "造成物伤，应对状态：额外打断被应对技能。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "自己获得全技能威力+40。"
+            "description": "造成物伤，应对状态：额外打断被应对技能。"
         },
         {
             "id": 7020970,
@@ -266,7 +266,7 @@
         },
         {
             "id": 7140260,
-            "name": "一拳",
+            "name": "听桥",
             "icon_id": "113030",
             "assets": {
                 "icon_id": "113030",
@@ -283,18 +283,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "一拳",
-                    "description": "对敌方精灵造成物理伤害。"
+                    "name": "听桥",
+                    "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 140,
-            "description": "对敌方精灵造成物理伤害。"
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
         },
         {
             "id": 7140280,
-            "name": "提气",
+            "name": "气波",
             "icon_id": "113032",
             "assets": {
                 "icon_id": "113032",
@@ -311,18 +311,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "提气",
-                    "description": "自己获得全技能威力+40，若敌方本回合更换精灵，额外获得威力+50。"
+                    "name": "气波",
+                    "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "自己获得全技能威力+40，若敌方本回合更换精灵，额外获得威力+50。"
+            "description": "减伤60%，应对攻击：对敌方造成武系物理伤害，威力与被应对技能相等。"
         },
         {
             "id": 7140270,
-            "name": "叠势",
+            "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
             "icon_id": "113031",
             "assets": {
                 "icon_id": "113031",
@@ -339,14 +339,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "叠势",
-                    "description": "造成魔伤，2连击，每成功应对1次，本技能连击数永久+2。"
+                    "name": "对战课的某个老师，认为精灵对战中存在一种流体力学，感受空气中魔法的流动，能预测和防御对手的招式。",
+                    "description": "应对！听桥"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 25,
-            "description": "造成魔伤，2连击，每成功应对1次，本技能连击数永久+2。"
+            "description": "应对！听桥"
         },
         {
             "id": 7021160,
@@ -378,7 +378,7 @@
         },
         {
             "id": 7140080,
-            "name": "无影脚",
+            "name": "横剪",
             "icon_id": "714002",
             "assets": {
                 "icon_id": "714002",
@@ -395,18 +395,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "无影脚",
-                    "description": "造成物伤，应对状态：本次技能威力变为2倍。"
+                    "name": "横剪",
+                    "description": "S3邪眼巨魔B"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": "造成物伤，应对状态：本次技能威力变为2倍。"
+            "description": "S3邪眼巨魔B"
         },
         {
             "id": 7140130,
-            "name": "截拳",
+            "name": "造成物伤，应对状态：本次技能威力变为2倍。",
             "icon_id": "213014",
             "assets": {
                 "icon_id": "213014",
@@ -423,14 +423,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "截拳",
-                    "description": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。"
+                    "name": "造成物伤，应对状态：本次技能威力变为2倍。",
+                    "description": "应对！无影脚"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 85,
-            "description": "造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。"
+            "description": "应对！无影脚"
         },
         {
             "id": 7020540,
@@ -462,7 +462,7 @@
         },
         {
             "id": 7140120,
-            "name": "技巧打击",
+            "name": "对战课的某个老师，认为精灵对战存在一种美学，来自对手之间默契的喂招和破招。",
             "icon_id": "714004",
             "assets": {
                 "icon_id": "714004",
@@ -479,20 +479,20 @@
             },
             "localized": {
                 "zh": {
-                    "name": "技巧打击",
-                    "description": "造成物伤，应对状态：本次技能威力变为10倍。"
+                    "name": "对战课的某个老师，认为精灵对战存在一种美学，来自对手之间默契的喂招和破招。",
+                    "description": "应对！散手"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 35,
-            "description": "造成物伤，应对状态：本次技能威力变为10倍。"
+            "description": "应对！散手"
         }
     ],
     "move_stones": [
         {
             "id": 7080280,
-            "name": "泥巴喷射",
+            "name": "遁地",
             "icon_id": "107024",
             "assets": {
                 "icon_id": "107024",
@@ -509,18 +509,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "泥巴喷射",
-                    "description": "对敌方精灵造成魔法伤害。"
+                    "name": "遁地",
+                    "description": "减伤90%，应对攻击：防御技能冷却-1。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 1,
             "power": 60,
-            "description": "对敌方精灵造成魔法伤害。"
+            "description": "减伤90%，应对攻击：防御技能冷却-1。"
         },
         {
             "id": 7080350,
-            "name": "震击",
+            "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
             "icon_id": "107032",
             "assets": {
                 "icon_id": "107032",
@@ -537,18 +537,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "震击",
-                    "description": "造成物伤，敌方获得连击数-3。"
+                    "name": "造成物伤，物防比敌方越高，本次技能威力越高。",
+                    "description": "地系部族会把敌人和秘密一同用沙土掩埋。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 80,
-            "description": "造成物伤，敌方获得连击数-3。"
+            "description": "地系部族会把敌人和秘密一同用沙土掩埋。"
         },
         {
             "id": 7080290,
-            "name": "落石",
+            "name": "减伤50%并脱离，应对攻击。",
             "icon_id": "107025",
             "assets": {
                 "icon_id": "107025",
@@ -565,18 +565,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "落石",
-                    "description": "造成物伤，1连击。"
+                    "name": "减伤50%并脱离，应对攻击。",
+                    "description": "应对！遁地"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 55,
-            "description": "造成物伤，1连击。"
+            "description": "应对！遁地"
         },
         {
             "id": 7080130,
-            "name": "地刺",
+            "name": "过山车",
             "icon_id": "708002",
             "assets": {
                 "icon_id": "708002",
@@ -593,18 +593,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "地刺",
-                    "description": "造成物伤，应对状态：额外打断被应对技能。"
+                    "name": "过山车",
+                    "description": "使己方队伍中的所有精灵携带的技能跨精灵向下移动1个位置，巧变：机械系技能。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "造成物伤，应对状态：额外打断被应对技能。"
+            "description": "使己方队伍中的所有精灵携带的技能跨精灵向下移动1个位置，巧变：机械系技能。"
         },
         {
             "id": 7080370,
-            "name": "钧势",
+            "name": "应对！地陷",
             "icon_id": "107034",
             "assets": {
                 "icon_id": "107034",
@@ -621,14 +621,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "钧势",
-                    "description": "自己获得物防+140%和速度-30。"
+                    "name": "应对！地陷",
+                    "description": "造成物伤，自己获得物防+70%，应对状态：本次技能威力翻倍，且物防额外+70%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "自己获得物防+140%和速度-30。"
+            "description": "造成物伤，自己获得物防+70%，应对状态：本次技能威力翻倍，且物防额外+70%。"
         },
         {
             "id": 7030470,
@@ -650,13 +650,13 @@
             "localized": {
                 "zh": {
                     "name": "顶端优势",
-                    "description": "对敌方精灵造成物理伤害。"
+                    "description": "对敌方精灵造成魔法伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "对敌方精灵造成物理伤害。"
+            "description": "对敌方精灵造成魔法伤害。"
         },
         {
             "id": 7030200,
@@ -678,13 +678,13 @@
             "localized": {
                 "zh": {
                     "name": "藤绞",
-                    "description": "造成物伤，自己回复5能量。"
+                    "description": "造成物伤，2连击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 4,
             "power": 80,
-            "description": "造成物伤，自己回复5能量。"
+            "description": "造成物伤，2连击。"
         },
         {
             "id": 7021090,
@@ -716,7 +716,7 @@
         },
         {
             "id": 7160140,
-            "name": "超级糖果",
+            "name": "S3友爱星飞A",
             "icon_id": "215002",
             "assets": {
                 "icon_id": "215002",
@@ -733,18 +733,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "超级糖果",
-                    "description": "造成物伤，自己获得萌化：本次技能威力+60。"
+                    "name": "S3友爱星飞A",
+                    "description": "失衡"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "造成物伤，自己获得萌化：本次技能威力+60。"
+            "description": "失衡"
         },
         {
             "id": 7160250,
-            "name": "撒娇",
+            "name": "示弱",
             "icon_id": "115013",
             "assets": {
                 "icon_id": "115013",
@@ -761,14 +761,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "撒娇",
-                    "description": "造成魔伤，3连击。自己获得萌化：威力永久+20。"
+                    "name": "示弱",
+                    "description": "自己获得萌化：速度永久+150。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 30,
-            "description": "造成魔伤，3连击。自己获得萌化：威力永久+20。"
+            "description": "自己获得萌化：速度永久+150。"
         },
         {
             "id": 7021170,
@@ -1025,13 +1025,13 @@
                 "localized": {
                     "zh": {
                         "name": "花香",
-                        "description": "对敌方精灵造成魔法伤害。"
+                        "description": "下周野外考察课的考察对象有些危险，大家穿上能防弹的魔法袍再来。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成魔法伤害。"
+                "description": "下周野外考察课的考察对象有些危险，大家穿上能防弹的魔法袍再来。"
             }
         },
         {
@@ -1058,13 +1058,13 @@
                 "localized": {
                     "zh": {
                         "name": "火焰冲锋",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "造成物伤，若敌方本回合更换精灵，自己回复7点能量。"
             }
         },
         {
@@ -1073,7 +1073,7 @@
             "move_id": 7050330,
             "move": {
                 "id": 7050330,
-                "name": "泡沫",
+                "name": "水弹",
                 "icon_id": "104022",
                 "assets": {
                     "icon_id": "104022",
@@ -1090,14 +1090,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "泡沫",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "水弹",
+                        "description": "对敌方精灵造成魔法伤害。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "对敌方精灵造成魔法伤害。"
             }
         },
         {
@@ -1106,7 +1106,7 @@
             "move_id": 7060200,
             "move": {
                 "id": 7060200,
-                "name": "虹光冲击",
+                "name": "脉冲光线",
                 "icon_id": "105012",
                 "assets": {
                     "icon_id": "105012",
@@ -1123,14 +1123,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "虹光冲击",
-                        "description": "对敌方精灵造成魔法伤害。"
+                        "name": "脉冲光线",
+                        "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 100,
-                "description": "对敌方精灵造成魔法伤害。"
+                "description": "高能量的离子束，一不小心就会划伤皮肤，让粗心的研究员深受其害。"
             }
         },
         {
@@ -1139,7 +1139,7 @@
             "move_id": 7080110,
             "move": {
                 "id": 7080110,
-                "name": "扬沙",
+                "name": "应对！相位移动",
                 "icon_id": "708015",
                 "assets": {
                     "icon_id": "708015",
@@ -1156,14 +1156,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "扬沙",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "应对！相位移动",
+                        "description": "减​伤50%，​本技​能​位​于​1号​位​或​3号​位​时，​额​外减​伤40%，应对攻击，​传动1。​"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "减​伤50%，​本技​能​位​于​1号​位​或​3号​位​时，​额​外减​伤40%，应对攻击，​传动1。​"
             }
         },
         {
@@ -1172,7 +1172,7 @@
             "move_id": 7090240,
             "move": {
                 "id": 7090240,
-                "name": "冷风",
+                "name": "应对！冰天雪地",
                 "icon_id": "108019",
                 "assets": {
                     "icon_id": "108019",
@@ -1189,14 +1189,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "冷风",
-                        "description": "对敌方精灵造成魔法伤害。"
+                        "name": "应对！冰天雪地",
+                        "description": "减伤80%，应对攻击：被应对技能能耗+3。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成魔法伤害。"
+                "description": "减伤80%，应对攻击：被应对技能能耗+3。"
             }
         },
         {
@@ -1205,7 +1205,7 @@
             "move_id": 7100150,
             "move": {
                 "id": 7100150,
-                "name": "升龙咆哮",
+                "name": "龙吼",
                 "icon_id": "710004",
                 "assets": {
                     "icon_id": "710004",
@@ -1222,14 +1222,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "升龙咆哮",
-                        "description": "蓄力，对敌方造成魔法伤害。"
+                        "name": "龙吼",
+                        "description": "精灵蓄力中"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 200,
-                "description": "蓄力，对敌方造成魔法伤害。"
+                "description": "精灵蓄力中"
             }
         },
         {
@@ -1238,7 +1238,7 @@
             "move_id": 7110300,
             "move": {
                 "id": 7110300,
-                "name": "球状闪电",
+                "name": "应对！麻痹",
                 "icon_id": "110015",
                 "assets": {
                     "icon_id": "110015",
@@ -1255,14 +1255,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "球状闪电",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "应对！麻痹",
+                        "description": "敌方先手-1，应对防御：额外使敌方获得双攻-70%。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "敌方先手-1，应对防御：额外使敌方获得双攻-70%。"
             }
         },
         {
@@ -1271,7 +1271,7 @@
             "move_id": 7120190,
             "move": {
                 "id": 7120190,
-                "name": "溃烂触碰",
+                "name": "剧毒",
                 "icon_id": "111016",
                 "assets": {
                     "icon_id": "111016",
@@ -1288,14 +1288,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "溃烂触碰",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "剧毒",
+                        "description": "敌方获得3层中毒，应对防御：改为获得8层。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "敌方获得3层中毒，应对防御：改为获得8层。"
             }
         },
         {
@@ -1304,7 +1304,7 @@
             "move_id": 7130260,
             "move": {
                 "id": 7130260,
-                "name": "噬心",
+                "name": "虫茧",
                 "icon_id": "112018",
                 "assets": {
                     "icon_id": "112018",
@@ -1321,14 +1321,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "噬心",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "虫茧",
+                        "description": "研究手记：我在巢中坠入无光之梦，听见黑暗深处传来虫群的轰鸣。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "研究手记：我在巢中坠入无光之梦，听见黑暗深处传来虫群的轰鸣。"
             }
         },
         {
@@ -1337,7 +1337,7 @@
             "move_id": 7140240,
             "move": {
                 "id": 7140240,
-                "name": "贯手",
+                "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
                 "icon_id": "113028",
                 "assets": {
                     "icon_id": "113028",
@@ -1354,14 +1354,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "贯手",
-                        "description": "对敌方精灵造成魔法伤害。"
+                        "name": "某个擅长对决的魔法师点评此武学：硬门之韵在于对手先攻，我方以静制动。",
+                        "description": "应对！硬门"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 2,
                 "power": 80,
-                "description": "对敌方精灵造成魔法伤害。"
+                "description": "应对！硬门"
             }
         },
         {
@@ -1370,7 +1370,7 @@
             "move_id": 7150190,
             "move": {
                 "id": 7150190,
-                "name": "鹰爪",
+                "name": "乘风",
                 "icon_id": "114014",
                 "assets": {
                     "icon_id": "114014",
@@ -1387,14 +1387,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "鹰爪",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "乘风",
+                        "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "造成物伤，迅捷，应对状态：本次技能威力变为1.5倍。"
             }
         },
         {
@@ -1403,7 +1403,7 @@
             "move_id": 7160230,
             "move": {
                 "id": 7160230,
-                "name": "魅惑",
+                "name": "砂糖弹球",
                 "icon_id": "115011",
                 "assets": {
                     "icon_id": "115011",
@@ -1420,14 +1420,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "魅惑",
-                        "description": "对敌方精灵造成魔法伤害。"
+                        "name": "砂糖弹球",
+                        "description": "造成物伤，双方体重差越大，本次技能威力越高。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成魔法伤害。"
+                "description": "造成物伤，双方体重差越大，本次技能威力越高。"
             }
         },
         {
@@ -1436,7 +1436,7 @@
             "move_id": 7170200,
             "move": {
                 "id": 7170200,
-                "name": "幻象",
+                "name": "降灵",
                 "icon_id": "116014",
                 "assets": {
                     "icon_id": "116014",
@@ -1453,14 +1453,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "幻象",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "降灵",
+                        "description": "自从得知跳跃可以加速精灵蛋孵化，我的身体越来越强壮。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "自从得知跳跃可以加速精灵蛋孵化，我的身体越来越强壮。"
             }
         },
         {
@@ -1469,7 +1469,7 @@
             "move_id": 7180080,
             "move": {
                 "id": 7180080,
-                "name": "恶能量",
+                "name": "虚化",
                 "icon_id": "718013",
                 "assets": {
                     "icon_id": "718013",
@@ -1486,14 +1486,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "恶能量",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "虚化",
+                        "description": "减伤80%，应对攻击：自己获得魔防+70%。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "减伤80%，应对攻击：自己获得魔防+70%。"
             }
         },
         {
@@ -1502,7 +1502,7 @@
             "move_id": 7070110,
             "move": {
                 "id": 7070110,
-                "name": "离子震荡",
+                "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
                 "icon_id": "106011",
                 "assets": {
                     "icon_id": "106011",
@@ -1519,14 +1519,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "离子震荡",
-                        "description": "造成魔伤，本技能位于3号位时威力+40，传动1。"
+                        "name": "减伤80%，应对攻击：两侧技能能耗永久-1。",
+                        "description": "教团不在乎，它只要棋子互相制衡。"
                     }
                 },
                 "move_category": "Magic Attack",
                 "energy_cost": 3,
                 "power": 90,
-                "description": "造成魔伤，本技能位于3号位时威力+40，传动1。"
+                "description": "教团不在乎，它只要棋子互相制衡。"
             }
         },
         {
@@ -1535,7 +1535,7 @@
             "move_id": 7190360,
             "move": {
                 "id": 7190360,
-                "name": "星云漩涡",
+                "name": "超维投射",
                 "icon_id": "118018",
                 "assets": {
                     "icon_id": "118018",
@@ -1552,14 +1552,14 @@
                 },
                 "localized": {
                     "zh": {
-                        "name": "星云漩涡",
-                        "description": "对敌方精灵造成物理伤害。"
+                        "name": "超维投射",
+                        "description": "敌方获得4层星陨印记。"
                     }
                 },
                 "move_category": "Physical Attack",
                 "energy_cost": 1,
                 "power": 60,
-                "description": "对敌方精灵造成物理伤害。"
+                "description": "敌方获得4层星陨印记。"
             }
         }
     ],
@@ -1648,7 +1648,7 @@
     "breeding": {
         "id": 3237001,
         "pet_id": 3237001,
-        "name": "小怂猫",
+        "name": "加灵",
         "model_id": 3237001,
         "hatch_data": 43200,
         "weight_low": 6860,
@@ -1670,7 +1670,7 @@
             {
                 "id": 3237001,
                 "pet_id": 3237001,
-                "name": "小怂猫",
+                "name": "加灵",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
@@ -1685,6 +1685,28 @@
                 "egg_add_glass_prob_array": [
                     1,
                     50
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 3248001,
+                "pet_id": 3248001,
+                "name": "小怂猫",
+                "model_id": 3248001,
+                "hatch_data": 72000,
+                "weight_low": 33250,
+                "weight_high": 44000,
+                "height_low": 34,
+                "height_high": 48,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    400,
+                    3125
+                ],
+                "egg_add_glass_prob_array": [
+                    2,
+                    113
                 ],
                 "is_contact_add_glass_prob": true,
                 "is_contact_add_shining_prob": null
@@ -1692,7 +1714,7 @@
             {
                 "id": 32370001,
                 "pet_id": 32370001,
-                "name": "小怂猫",
+                "name": "闪电环",
                 "model_id": 3237001,
                 "hatch_data": 300,
                 "weight_low": 6860,
@@ -1706,25 +1728,31 @@
                 "is_contact_add_shining_prob": null
             },
             {
-                "id": 37380001,
-                "pet_id": 37380001,
+                "id": 91000011,
+                "pet_id": 91000011,
                 "name": "小怂猫",
-                "model_id": 3738001,
-                "hatch_data": 300,
-                "weight_low": 6860,
-                "weight_high": 9000,
-                "height_low": 25,
-                "height_high": 35,
-                "precious_egg_type": 7,
-                "egg_base_glass_prob_array": null,
-                "egg_add_glass_prob_array": null,
-                "is_contact_add_glass_prob": null,
+                "model_id": 3618001,
+                "hatch_data": 43200,
+                "weight_low": 1558,
+                "weight_high": 2724,
+                "height_low": 14,
+                "height_high": 19,
+                "precious_egg_type": null,
+                "egg_base_glass_prob_array": [
+                    8,
+                    1125
+                ],
+                "egg_add_glass_prob_array": [
+                    1,
+                    50
+                ],
+                "is_contact_add_glass_prob": true,
                 "is_contact_add_shining_prob": null
             },
             {
                 "id": 91000104,
                 "pet_id": 91000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
@@ -1744,15 +1772,47 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 92000003,
+                "pet_id": 92000003,
+                "name": "小怂猫",
+                "model_id": 3499001,
+                "hatch_data": 43200,
+                "weight_low": 875,
+                "weight_high": 1576,
+                "height_low": 19,
+                "height_high": 25,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 92000104,
                 "pet_id": 92000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
                 "weight_high": 9000,
                 "height_low": 25,
                 "height_high": 35,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 93000003,
+                "pet_id": 93000003,
+                "name": "小怂猫",
+                "model_id": 3499001,
+                "hatch_data": 43200,
+                "weight_low": 875,
+                "weight_high": 1576,
+                "height_low": 19,
+                "height_high": 25,
                 "precious_egg_type": 1,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,
@@ -1762,13 +1822,29 @@
             {
                 "id": 93000104,
                 "pet_id": 93000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
                 "weight_high": 9000,
                 "height_low": 25,
                 "height_high": 35,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 94000003,
+                "pet_id": 94000003,
+                "name": "小怂猫",
+                "model_id": 3499001,
+                "hatch_data": 43200,
+                "weight_low": 875,
+                "weight_high": 1576,
+                "height_low": 19,
+                "height_high": 25,
                 "precious_egg_type": 1,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,
@@ -1778,7 +1854,7 @@
             {
                 "id": 94000104,
                 "pet_id": 94000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
@@ -1792,9 +1868,31 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 95000003,
+                "pet_id": 95000003,
+                "name": "小怂猫",
+                "model_id": 3017001,
+                "hatch_data": 28800,
+                "weight_low": 1505,
+                "weight_high": 2240,
+                "height_low": 20,
+                "height_high": 28,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": [
+                    531,
+                    500
+                ],
+                "egg_add_glass_prob_array": [
+                    0,
+                    24
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 95000026,
                 "pet_id": 95000026,
-                "name": "小怂猫",
+                "name": "一窝蜂",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
@@ -1816,13 +1914,29 @@
             {
                 "id": 96000104,
                 "pet_id": 96000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
                 "weight_high": 9000,
                 "height_low": 25,
                 "height_high": 35,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 97000003,
+                "pet_id": 97000003,
+                "name": "小怂猫",
+                "model_id": 3499001,
+                "hatch_data": 43200,
+                "weight_low": 875,
+                "weight_high": 1576,
+                "height_low": 19,
+                "height_high": 25,
                 "precious_egg_type": 1,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,
@@ -1832,13 +1946,29 @@
             {
                 "id": 97000104,
                 "pet_id": 97000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
                 "weight_high": 9000,
                 "height_low": 25,
                 "height_high": 35,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 98000003,
+                "pet_id": 98000003,
+                "name": "小怂猫",
+                "model_id": 3499001,
+                "hatch_data": 43200,
+                "weight_low": 875,
+                "weight_high": 1576,
+                "height_low": 19,
+                "height_high": 25,
                 "precious_egg_type": 1,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,
@@ -1848,7 +1978,7 @@
             {
                 "id": 98000104,
                 "pet_id": 98000104,
-                "name": "小怂猫",
+                "name": "本来的样子",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
@@ -1862,9 +1992,31 @@
                 "is_contact_add_shining_prob": null
             },
             {
+                "id": 99000003,
+                "pet_id": 99000003,
+                "name": "小怂猫",
+                "model_id": 3017001,
+                "hatch_data": 28800,
+                "weight_low": 1505,
+                "weight_high": 2240,
+                "height_low": 20,
+                "height_high": 28,
+                "precious_egg_type": 1,
+                "egg_base_glass_prob_array": [
+                    531,
+                    500
+                ],
+                "egg_add_glass_prob_array": [
+                    0,
+                    24
+                ],
+                "is_contact_add_glass_prob": true,
+                "is_contact_add_shining_prob": null
+            },
+            {
                 "id": 99000026,
                 "pet_id": 99000026,
-                "name": "小怂猫",
+                "name": "一窝蜂",
                 "model_id": 3237001,
                 "hatch_data": 43200,
                 "weight_low": 6860,
@@ -1886,13 +2038,29 @@
             {
                 "id": 99000086,
                 "pet_id": 99000086,
-                "name": "小怂猫",
+                "name": "厉毒小萝",
                 "model_id": 3237001,
                 "hatch_data": 72000,
                 "weight_low": 6860,
                 "weight_high": 9000,
                 "height_low": 25,
                 "height_high": 35,
+                "precious_egg_type": 4,
+                "egg_base_glass_prob_array": null,
+                "egg_add_glass_prob_array": null,
+                "is_contact_add_glass_prob": null,
+                "is_contact_add_shining_prob": null
+            },
+            {
+                "id": 99000102,
+                "pet_id": 99000102,
+                "name": "小怂猫",
+                "model_id": 3012001,
+                "hatch_data": 72000,
+                "weight_low": 5110,
+                "weight_high": 7040,
+                "height_low": 28,
+                "height_high": 39,
                 "precious_egg_type": 4,
                 "egg_base_glass_prob_array": null,
                 "egg_add_glass_prob_array": null,

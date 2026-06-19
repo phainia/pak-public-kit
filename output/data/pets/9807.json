@@ -67,7 +67,7 @@
     "move_pool": [
         {
             "id": 7090280,
-            "name": "丢冰块",
+            "name": "冰爪",
             "icon_id": "108023",
             "assets": {
                 "icon_id": "108023",
@@ -84,18 +84,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "丢冰块",
-                    "description": "造成物伤，敌方获得速度-30。"
+                    "name": "冰爪",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "造成物伤，敌方获得速度-30。"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7090290,
-            "name": "寒风吹",
+            "name": "打雪仗",
             "icon_id": "108024",
             "assets": {
                 "icon_id": "108024",
@@ -112,18 +112,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "寒风吹",
-                    "description": "造成魔伤，敌方获得魔防-50%。"
+                    "name": "打雪仗",
+                    "description": "造成魔伤，2连击。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 70,
-            "description": "造成魔伤，敌方获得魔防-50%。"
+            "description": "造成魔伤，2连击。"
         },
         {
             "id": 7090300,
-            "name": "雪球",
+            "name": "滚雪球",
             "icon_id": "108025",
             "assets": {
                 "icon_id": "108025",
@@ -140,18 +140,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "雪球",
-                    "description": "敌方获得速度-90。"
+                    "name": "滚雪球",
+                    "description": "造成物伤，敌方获得2层冻结，应对状态：额外获得2层，本次技能威力翻倍。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "敌方获得速度-90。"
+            "description": "造成物伤，敌方获得2层冻结，应对状态：额外获得2层，本次技能威力翻倍。"
         },
         {
             "id": 7090310,
-            "name": "碎冰冰",
+            "name": "应对！滚雪球",
             "icon_id": "108026",
             "assets": {
                 "icon_id": "108026",
@@ -168,18 +168,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "碎冰冰",
-                    "description": "造成魔伤，敌方每有1层冻结，本次技能威力+20。"
+                    "name": "应对！滚雪球",
+                    "description": "造成物伤，敌方获得2层冻结，应对状态：额外获得2层，本次技能威力翻倍。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 40,
-            "description": "造成魔伤，敌方每有1层冻结，本次技能威力+20。"
+            "description": "造成物伤，敌方获得2层冻结，应对状态：额外获得2层，本次技能威力翻倍。"
         },
         {
             "id": 7090320,
-            "name": "冰捆缚",
+            "name": "丢冰块",
             "icon_id": "108027",
             "assets": {
                 "icon_id": "108027",
@@ -196,18 +196,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "冰捆缚",
-                    "description": "2连击，每次连击敌方获得全技能能耗+1。"
+                    "name": "丢冰块",
+                    "description": "造成物伤，敌方获得速度-30。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "2连击，每次连击敌方获得全技能能耗+1。"
+            "description": "造成物伤，敌方获得速度-30。"
         },
         {
             "id": 7090330,
-            "name": "速冻",
+            "name": "寒风吹",
             "icon_id": "108028",
             "assets": {
                 "icon_id": "108028",
@@ -224,18 +224,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "速冻",
-                    "description": "敌方获得2层减速印记。"
+                    "name": "寒风吹",
+                    "description": "造成魔伤，敌方获得魔防-50%。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "敌方获得2层减速印记。"
+            "description": "造成魔伤，敌方获得魔防-50%。"
         },
         {
             "id": 7090340,
-            "name": "冰蛋壳",
+            "name": "雪球",
             "icon_id": "108029",
             "assets": {
                 "icon_id": "108029",
@@ -252,18 +252,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "冰蛋壳",
-                    "description": "减伤70%，应对攻击：敌方获得2层减速印记。"
+                    "name": "雪球",
+                    "description": "敌方获得速度-90。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 3,
             "power": null,
-            "description": "减伤70%，应对攻击：敌方获得2层减速印记。"
+            "description": "敌方获得速度-90。"
         },
         {
             "id": 7090350,
-            "name": "雪替身",
+            "name": "冰捆缚",
             "icon_id": "108031",
             "assets": {
                 "icon_id": "108031",
@@ -280,18 +280,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "雪替身",
-                    "description": "减伤70%，应对攻击：回复能量，回复值等于被应对技能能耗的2倍。"
+                    "name": "冰捆缚",
+                    "description": "2连击，每次连击敌方获得全技能能耗+1。"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "减伤70%，应对攻击：回复能量，回复值等于被应对技能能耗的2倍。"
+            "description": "2连击，每次连击敌方获得全技能能耗+1。"
         },
         {
             "id": 7090360,
-            "name": "冰锋横扫",
+            "name": "冰蛋壳",
             "icon_id": "108034",
             "assets": {
                 "icon_id": "108034",
@@ -308,18 +308,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "冰锋横扫",
-                    "description": "造成魔伤，本技能威力等于敌方精灵技能总能耗的10倍。"
+                    "name": "冰蛋壳",
+                    "description": "减伤70%，应对攻击：敌方获得2层减速印记。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": null,
-            "description": "造成魔伤，本技能威力等于敌方精灵技能总能耗的10倍。"
+            "description": "减伤70%，应对攻击：敌方获得2层减速印记。"
         },
         {
             "id": 7090370,
-            "name": "冬至",
+            "name": "应对！冰蛋壳",
             "icon_id": "709009",
             "assets": {
                 "icon_id": "709009",
@@ -336,18 +336,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "冬至",
-                    "description": "将天气改为暴风雪，持续8回合。"
+                    "name": "应对！冰蛋壳",
+                    "description": "减伤70%，应对攻击：敌方获得2层减速印记。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 7,
             "power": null,
-            "description": "将天气改为暴风雪，持续8回合。"
+            "description": "减伤70%，应对攻击：敌方获得2层减速印记。"
         },
         {
             "id": 7090390,
-            "name": "霜冻",
+            "name": "雪替身",
             "icon_id": "108033",
             "assets": {
                 "icon_id": "108033",
@@ -364,18 +364,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "霜冻",
-                    "description": "敌方获得魔防-100%。"
+                    "name": "雪替身",
+                    "description": "减伤70%，应对攻击：回复能量，回复值等于被应对技能能耗的2倍。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "敌方获得魔防-100%。"
+            "description": "减伤70%，应对攻击：回复能量，回复值等于被应对技能能耗的2倍。"
         },
         {
             "id": 7090400,
-            "name": "冰点",
+            "name": "应对！雪替身",
             "icon_id": "208034",
             "assets": {
                 "icon_id": "208034",
@@ -392,14 +392,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "冰点",
-                    "description": "敌方获得5层冻结，应对防御：额外获得5层。"
+                    "name": "应对！雪替身",
+                    "description": "减伤70%，应对攻击：回复能量，回复值等于被应对技能能耗的2倍。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "敌方获得5层冻结，应对防御：额外获得5层。"
+            "description": "减伤70%，应对攻击：回复能量，回复值等于被应对技能能耗的2倍。"
         }
     ],
     "move_stones": [],

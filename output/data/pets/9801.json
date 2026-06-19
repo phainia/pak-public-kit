@@ -113,13 +113,13 @@
             "localized": {
                 "zh": {
                     "name": "草1",
-                    "description": "造成魔伤，应对状态：赋予敌方一层寄生。"
+                    "description": "造成物伤，应对状态：自己回复50%生命和5能量。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 4,
             "power": 90,
-            "description": "造成魔伤，应对状态：赋予敌方一层寄生。"
+            "description": "造成物伤，应对状态：自己回复50%生命和5能量。"
         },
         {
             "id": 7040600,
@@ -141,17 +141,17 @@
             "localized": {
                 "zh": {
                     "name": "火1",
-                    "description": "造成物伤，应对状态：赋予敌方5层灼烧。"
+                    "description": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 1,
             "power": 40,
-            "description": "造成物伤，应对状态：赋予敌方5层灼烧。"
+            "description": "驱散双方所有印记，每驱散1层，敌方获得5层灼烧。"
         },
         {
             "id": 7050230,
-            "name": "蓄水",
+            "name": "自己获得魔攻+190%。",
             "icon_id": "705024",
             "assets": {
                 "icon_id": "705024",
@@ -168,18 +168,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "蓄水",
-                    "description": "下次使用的技能能耗-6。"
+                    "name": "自己获得魔攻+190%。",
+                    "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "下次使用的技能能耗-6。"
+            "description": "水就挨着陆地，摸到水就摸到了世界的尽头。"
         },
         {
             "id": 7050430,
-            "name": "北冥之歌",
+            "name": "应对！潮汐",
             "icon_id": "304034",
             "assets": {
                 "icon_id": "304034",
@@ -196,18 +196,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "北冥之歌",
-                    "description": "将背包内精灵技能能耗改为本技能能耗。"
+                    "name": "应对！潮汐",
+                    "description": "减伤60%，应对攻击：自己获得1层湿润印记。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 10,
             "power": null,
-            "description": "将背包内精灵技能能耗改为本技能能耗。"
+            "description": "减伤60%，应对攻击：自己获得1层湿润印记。"
         },
         {
             "id": 7050450,
-            "name": "水2",
+            "name": "应对！水1",
             "icon_id": "705015",
             "assets": {
                 "icon_id": "705015",
@@ -224,18 +224,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "水2",
-                    "description": "对敌方精灵造成物理伤害。"
+                    "name": "应对！水1",
+                    "description": "造成魔伤，应对状态：驱散敌方增益"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 12,
             "power": 220,
-            "description": "对敌方精灵造成物理伤害。"
+            "description": "造成魔伤，应对状态：驱散敌方增益"
         },
         {
             "id": 7050460,
-            "name": "水3",
+            "name": "水2",
             "icon_id": "104031",
             "assets": {
                 "icon_id": "104031",
@@ -252,18 +252,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "水3",
-                    "description": "提高自身50%攻击，应对防御：下次释放技能能耗-5"
+                    "name": "水2",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 3,
             "power": null,
-            "description": "提高自身50%攻击，应对防御：下次释放技能能耗-5"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7080420,
-            "name": "地1",
+            "name": "淤泥表皮",
             "icon_id": "708003",
             "assets": {
                 "icon_id": "708003",
@@ -280,18 +280,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "地1",
-                    "description": "造成魔伤，应对状态：提高自身80%魔防。"
+                    "name": "淤泥表皮",
+                    "description": "减伤80%，应对攻击：敌方获得连击数-3。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 2,
             "power": 70,
-            "description": "造成魔伤，应对状态：提高自身80%魔防。"
+            "description": "减伤80%，应对攻击：敌方获得连击数-3。"
         },
         {
             "id": 7090410,
-            "name": "冰1",
+            "name": "冬至",
             "icon_id": "108022",
             "assets": {
                 "icon_id": "108022",
@@ -308,18 +308,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "冰1",
-                    "description": "造成大量物伤，降低自身物防"
+                    "name": "冬至",
+                    "description": "将天气改为暴风雪，持续8回合。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 2,
             "power": 100,
-            "description": "造成大量物伤，降低自身物防"
+            "description": "将天气改为暴风雪，持续8回合。"
         },
         {
             "id": 7100250,
-            "name": "龙血",
+            "name": "造成魔伤，应对状态：下次技能无需蓄力。",
             "icon_id": "109016",
             "assets": {
                 "icon_id": "109016",
@@ -336,18 +336,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "龙血",
-                    "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。"
+                    "name": "造成魔伤，应对状态：下次技能无需蓄力。",
+                    "description": "应对！龙息环爆"
                 }
             },
             "move_category": "Defense",
             "energy_cost": 2,
             "power": null,
-            "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。"
+            "description": "应对！龙息环爆"
         },
         {
             "id": 7100270,
-            "name": "龙1",
+            "name": "龙威",
             "icon_id": "710004",
             "assets": {
                 "icon_id": "710004",
@@ -364,18 +364,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "龙1",
-                    "description": "造成物伤，应对状态：威力翻倍"
+                    "name": "龙威",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 7,
             "power": 150,
-            "description": "造成物伤，应对状态：威力翻倍"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7100280,
-            "name": "龙2",
+            "name": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。",
             "icon_id": "710005",
             "assets": {
                 "icon_id": "710005",
@@ -392,18 +392,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "龙2",
-                    "description": "蓄力，造成物伤，先手+1。"
+                    "name": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。",
+                    "description": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 5,
             "power": 190,
-            "description": "蓄力，造成物伤，先手+1。"
+            "description": "龙血可以加固鳞甲，这一直是黑巫师们求而不得的材料。"
         },
         {
             "id": 7100290,
-            "name": "龙3",
+            "name": "应对！龙血",
             "icon_id": "710004",
             "assets": {
                 "icon_id": "710004",
@@ -420,18 +420,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "龙3",
-                    "description": "降低敌方50%防御，应对防御：下次技能无需蓄力。"
+                    "name": "应对！龙血",
+                    "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 2,
             "power": null,
-            "description": "降低敌方50%防御，应对防御：下次技能无需蓄力。"
+            "description": "减伤70%，本技能可以在蓄力状态下使用，应对攻击：下次技能无需蓄力。"
         },
         {
             "id": 7110430,
-            "name": "电1",
+            "name": "强制重启",
             "icon_id": "110025",
             "assets": {
                 "icon_id": "110025",
@@ -448,18 +448,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "电1",
-                    "description": "造成物伤，应对状态：自身速度+50"
+                    "name": "强制重启",
+                    "description": "造成魔伤，每离场1次，本技能使用次数永久+1。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "造成物伤，应对状态：自身速度+50"
+            "description": "造成魔伤，每离场1次，本技能使用次数永久+1。"
         },
         {
             "id": 7140310,
-            "name": "武1",
+            "name": "一拳",
             "icon_id": "113032",
             "assets": {
                 "icon_id": "113032",
@@ -476,18 +476,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "武1",
-                    "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
+                    "name": "一拳",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "造成魔伤，若敌方本回合替换精灵，提高自身50%魔攻。"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7140320,
-            "name": "格斗小七2",
+            "name": "叠势",
             "icon_id": "113032",
             "assets": {
                 "icon_id": "113032",
@@ -504,18 +504,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "格斗小七2",
-                    "description": "造成魔伤，应对状态：自身魔攻增益翻倍"
+                    "name": "叠势",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 100,
-            "description": "造成魔伤，应对状态：自身魔攻增益翻倍"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7150170,
-            "name": "疾风涡轮",
+            "name": "龙卷风",
             "icon_id": "715017",
             "assets": {
                 "icon_id": "715017",
@@ -532,18 +532,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "疾风涡轮",
-                    "description": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。"
+                    "name": "龙卷风",
+                    "description": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 0,
             "power": 80,
-            "description": "造成物伤，无法主动使用，在使用3次翼系技能后会自动使用此技能。"
+            "description": "造成物伤，1连击，若先于敌方攻击，本次攻击改为3连击。"
         },
         {
             "id": 7160310,
-            "name": "萌2",
+            "name": "撒娇",
             "icon_id": "716004",
             "assets": {
                 "icon_id": "716004",
@@ -560,18 +560,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "萌2",
-                    "description": "赋予敌方一层萌化，应对防御：额外赋予一层。"
+                    "name": "撒娇",
+                    "description": "对敌方精灵造成物理伤害。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 4,
             "power": null,
-            "description": "赋予敌方一层萌化，应对防御：额外赋予一层。"
+            "description": "对敌方精灵造成物理伤害。"
         },
         {
             "id": 7160320,
-            "name": "萌1",
+            "name": "月光合奏",
             "icon_id": "717013",
             "assets": {
                 "icon_id": "717013",
@@ -588,18 +588,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "萌1",
-                    "description": "造成物伤，应对状态：赋予敌方1层萌化。"
+                    "name": "月光合奏",
+                    "description": "自己脱离，下个入场精灵继承自己增益。"
                 }
             },
             "move_category": "Physical Attack",
             "energy_cost": 3,
             "power": 90,
-            "description": "造成物伤，应对状态：赋予敌方1层萌化。"
+            "description": "自己脱离，下个入场精灵继承自己增益。"
         },
         {
             "id": 7170270,
-            "name": "幽1",
+            "name": "造成魔伤，5连击。",
             "icon_id": "705004",
             "assets": {
                 "icon_id": "705004",
@@ -616,18 +616,18 @@
             },
             "localized": {
                 "zh": {
-                    "name": "幽1",
-                    "description": "使双方失去8能量，应对防御：自身不失去能量。"
+                    "name": "造成魔伤，5连击。",
+                    "description": "铃铛幽灵从不发声。"
                 }
             },
             "move_category": "Status",
             "energy_cost": 1,
             "power": null,
-            "description": "使双方失去8能量，应对防御：自身不失去能量。"
+            "description": "铃铛幽灵从不发声。"
         },
         {
             "id": 7180360,
-            "name": "恶1",
+            "name": "骗局",
             "icon_id": "117027",
             "assets": {
                 "icon_id": "117027",
@@ -644,14 +644,14 @@
             },
             "localized": {
                 "zh": {
-                    "name": "恶1",
-                    "description": "造成大量魔伤，降低自身60%魔防，应对状态：改为降低敌方60%魔防"
+                    "name": "骗局",
+                    "description": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。"
                 }
             },
             "move_category": "Magic Attack",
             "energy_cost": 3,
             "power": 130,
-            "description": "造成大量魔伤，降低自身60%魔防，应对状态：改为降低敌方60%魔防"
+            "description": "造成大量物伤，自己获得物攻-50%，应对状态：改为获得物攻+50%。"
         }
     ],
     "move_stones": [],

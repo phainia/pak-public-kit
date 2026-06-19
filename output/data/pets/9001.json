@@ -34,7 +34,7 @@
     "preferred_attack_style": "Both",
     "localized": {
         "zh": {
-            "name": "红色惊喜"
+            "name": "幸运惊喜盒"
         }
     },
     "implemented": false,
@@ -49,7 +49,7 @@
         "id": 9001,
         "name": "songzai",
         "localized": {
-            "zh": "红色惊喜"
+            "zh": "幸运惊喜盒"
         }
     },
     "trait": null,
@@ -67,7 +67,7 @@
                         "form": "default",
                         "localized": {
                             "zh": {
-                                "name": "红色惊喜"
+                                "name": "幸运惊喜盒"
                             }
                         },
                         "is_leader_form": false,
