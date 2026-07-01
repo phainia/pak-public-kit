@@ -59,7 +59,7 @@ function AppMain.OnStart()
   if RocoEnv.PLATFORM == "PLATFORM_WINDOWS" and not this.hasInitHardwareCursors then
     this.hasInitHardwareCursors = UE4.UNRCTUIStatics.ReplaceWithHardwareCursors(_G.UE4Helper.GetCurrentWorld())
   end
-  UE.UKismetSystemLibrary.ExecuteConsoleCommand(nil, "n.NRCAvatarWaitForStreamInWhenLoadSuit 0")
+  UE.UKismetSystemLibrary.ExecuteConsoleCommand(nil, "n.NRCAvatarWaitForStreamInWhenLoadAvatarObject 0")
 end
 
 function AppMain.BackToLogin(forceCleanupLua)

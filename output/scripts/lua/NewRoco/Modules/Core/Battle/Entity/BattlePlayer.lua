@@ -1640,4 +1640,24 @@ function BattlePlayer:GetName()
   return self.roleInfo.base.name
 end
 
+function BattlePlayer.DoDebug_CustomizeIndex(index)
+  BattlePlayer.__debug_CustomizeIndex = index
+end
+
+function BattlePlayer:GetAnimationCustomizeIndex(type)
+  local custom_anims = self.roleInfo and self.roleInfo.base and self.roleInfo.base.custom_anims
+  if custom_anims and custom_anims.custom_anim_list then
+    for i = 1, #custom_anims.custom_anim_list do
+      local customize = custom_anims.custom_anim_list[i]
+      if customize.custom_anim_type == type then
+        return customize.selected_index + 1
+      end
+    end
+  end
+  if BattlePlayer.__debug_CustomizeIndex and BattlePlayer.__debug_CustomizeIndex > 0 then
+    return BattlePlayer.__debug_CustomizeIndex
+  end
+  return _G.SkillUtils.CustomizeTypeDefaultIndex(type)
+end
+
 return BattlePlayer

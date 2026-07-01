@@ -116,6 +116,10 @@ function ScenePlayerTransformBuff:OnFXLoadSucc(req, class)
   self._fxClassRef = UnLua.Ref(class)
   self._fxClass = class
   self:PlaySkill()
+  if not self.isCustomPerform then
+    self._isInStartPerform = false
+    Log.Debug("ScenePlayerTransformBuff: \233\128\154\231\148\168\232\161\168\230\188\148\229\138\160\232\189\189\229\174\140\230\136\144, _isInStartPerform=false")
+  end
 end
 
 function ScenePlayerTransformBuff:OnStartFXLoadSucc(req, class)
@@ -299,6 +303,7 @@ end
 function ScenePlayerTransformBuff:OnLocalTrasnformFailed(FailedReason)
   if self.owner.isLocal and not self._isInEndPerform then
     Log.Debug("ScenePlayerTransformBuff:OnLocalTrasnformFailed")
+    self._isInStartPerform = false
     self._isExitingTransform = true
     self.owner.statusComponent:RemoveStatus(ProtoEnum.WorldPlayerStatusType.WPST_TRANSFORM, ProtoEnum.WPST_OpCode.WPST_OPCODE_REMOVE, 1)
     local req = _G.ProtoMessage:newZoneSceneCancelPlayerTransformReq()

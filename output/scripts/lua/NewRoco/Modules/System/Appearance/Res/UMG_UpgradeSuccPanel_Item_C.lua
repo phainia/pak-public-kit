@@ -54,7 +54,7 @@ function UMG_UpgradeSuccPanel_Item_C:UpdatePanelInfo()
   elseif currentItem.lv_item_type == _G.Enum.GoodsType.GT_FASHION_SUITS then
     local fashionSuitsConf = _G.DataConfigManager:GetFashionSuitsConf(currentItem.lv_item_id)
     self.Icon:SetPath(fashionSuitsConf.suits_icon)
-    quality = fashionSuitsConf.suit_grade
+    quality = AppearanceUtils.GetSuitQuality(fashionSuitsConf.suit_grade)
   elseif currentItem.lv_item_type == _G.Enum.GoodsType.GT_FASHION_BOND then
     local bondConf = _G.DataConfigManager:GetFashionBondConf(currentItem.lv_item_id)
     if bondConf then
@@ -77,6 +77,8 @@ function UMG_UpgradeSuccPanel_Item_C:UpdatePanelInfo()
       end
     elseif 4 == quality then
       self.Selected:SetPath("PaperSprite'/Game/NewRoco/Modules/System/Appearance/Raw/Frames/img_jiesuo_zi_png.img_jiesuo_zi_png'")
+    elseif 3 == quality then
+      self.Selected:SetPath("PaperSprite'/Game/NewRoco/Modules/System/Appearance/Raw/AppearanceNew/Frames/img_jiesuo_lan_png.img_jiesuo_lan_png'")
     end
   end
 end

@@ -178,7 +178,8 @@ function AICoachModuleUtils.ParsePetsData(petsData)
       skillBId = petData.skill_b_id,
       skillCId = petData.skill_c_id,
       skillDId = petData.skill_d_id,
-      nature = petData.nature_id
+      nature = petData.nature_id,
+      gid = petData.elf_gid
     }
     table.insert(pets, pet)
   end
@@ -233,6 +234,7 @@ function AICoachModuleUtils.ConvertLineupData(lineup)
     petInfo.blood_id = tonumber(pet.bloodline)
     petInfo.changed_nature_pos_attr_type = tonumber(pet.upCharacterId or "0")
     petInfo.changed_nature_neg_attr_type = tonumber(pet.downCharacterId or "0")
+    petInfo.gid = pet.gid and tonumber(pet.gid)
     AICoachModuleUtils.InitTalentData(petInfo)
     AICoachModuleUtils.SetTalentData(petInfo, tonumber(pet.talentAName))
     AICoachModuleUtils.SetTalentData(petInfo, tonumber(pet.talentBName))

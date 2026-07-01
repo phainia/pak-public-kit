@@ -4,6 +4,9 @@ local ProtoEnum = require("Data.PB.ProtoEnum")
 local FriendModuleEvent = require("NewRoco.Modules.System.Friend.FriendModuleEvent")
 local UIUtils = require("NewRoco.Utils.UIUtils")
 local BattleUtils = require("NewRoco.Modules.Core.Battle.Common.BattleUtils")
+local BattleModuleCmd = require("NewRoco.Modules.Core.Battle.BattleModuleCmd")
+local DialogContext = require("NewRoco.Modules.System.TipsModule.DialogContext")
+local CommonBtnEnum = require("NewRoco.Modules.System.CommonBtn.CommonBtnEnum")
 local UMG_Friend_Item_C = Base:Extend("UMG_Friend_Itme_C")
 local FarmUtils = require("NewRoco.Modules.System.Farm.FarmUtils")
 
@@ -56,6 +59,11 @@ function UMG_Friend_Item_C:OnFriendBatchModeUpdate(isBatchMode)
       end
     end
     self.isBatchMode = isBatchMode
+    if self.isBatchMode then
+      self:ResetUnselectedState()
+      self.isLogicSelected = false
+      self.ParentView:ClearSelection()
+    end
   end
   self:UpdateInfo()
 end
@@ -208,7 +216,8 @@ function UMG_Friend_Item_C:OnAddEventListener()
   self.AcceptBtn1.OnClicked:Add(self, self.OnBatchDeleteFriendBtn)
   self.Privilege.QQBtn.OnClicked:Add(self, self.OnClickedQQ)
   self.Privilege.WeiXinBtn.OnClicked:Add(self, self.OnClickedWX)
-  self.SendAttachment.btnLevelUp.OnClicked:Add(self, self.OnTeleportPlayer)
+  self.SendAttachment.btnLevelUp.OnClicked:Add(self, self.OnClickTeleportAndWatchBtn)
+  self.WatchingTheGame.btnLevelUp.OnClicked:Add(self, self.OnClickTeleportAndWatchBtn)
 end
 
 function UMG_Friend_Item_C:OnSendMessage()
@@ -307,8 +316,103 @@ function UMG_Friend_Item_C:OnBatchDeleteFriendBtn()
 end
 
 function UMG_Friend_Item_C:OnTeleportPlayer()
-  _G.NRCAudioManager:PlaySound2DAuto(41401003, "UMG_Friend_Item_C:OnTeleportPlayer")
   _G.NRCModuleManager:DoCmd(BigMapModuleCmd.OnCmdTeleportToPlayerReq, self.data.uin)
+end
+
+function UMG_Friend_Item_C:CheckFriendInWatchablePvp()
+  local battleBriefInfo = self.data.battle_brief_info
+  if not battleBriefInfo or next(battleBriefInfo) == nil then
+    return false, ""
+  end
+  local battleState = battleBriefInfo.battle_state
+  local battleConfId = battleBriefInfo.battle_conf_id
+  local isInBattle = battleState == ProtoEnum.PlayerBattleState.PLAYER_BATTLE_STATE_IN_BATTLE
+  if not isInBattle then
+    return false, ""
+  end
+  local canWatch = BattleUtils.IsBattleConfigIdCanBeWatch(battleConfId)
+  if not canWatch then
+    return false, ""
+  end
+  local battleConf = _G.DataConfigManager:GetBattleConf(battleConfId)
+  local battleType = battleConf and battleConf.type
+  local pvpConf = _G.NRCModuleManager:DoCmd(BattleModuleCmd.GetPvpConfByBattleType, battleType)
+  local pvpName = pvpConf and pvpConf.name or ""
+  return true, pvpName
+end
+
+function UMG_Friend_Item_C:OnClickTeleportAndWatchBtn()
+  Log.DebugFormat("UMG_Friend_Item_C:OnClickTeleportAndWatchBtn, uin=%s", tostring(self.data.uin))
+  if self:CheckIsSelectBtn() then
+    return
+  end
+  local touchReasonType = _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.GetPanelSelectBtnReason, "Friend").TeleportAndWatch
+  _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.LockIsSelectBtn, "FriendModule", "Friend", touchReasonType)
+  _G.NRCAudioManager:PlaySound2DAuto(41401003, "UMG_Friend_Item_C:OnClickTeleportAndWatchBtn")
+  self:RequestFriendRecentInfoForWatch()
+end
+
+function UMG_Friend_Item_C:RequestFriendRecentInfoForWatch()
+  Log.DebugFormat("UMG_Friend_Item_C:RequestFriendRecentInfoForWatch, uin=%s", tostring(self.data.uin))
+  local req = _G.ProtoMessage:newZoneBatchGetOthersSocialExtDataReq()
+  table.insert(req.uin_list, self.data.uin)
+  req.ext_data_types = {
+    ProtoEnum.SocialExtDataType.SEDT_RECENT_INFO
+  }
+  _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_BATCH_GET_OTHERS_SOCIAL_EXT_DATA_REQ, req, self, self.OnGetFriendRecentInfoForWatchRsp, false, true)
+end
+
+function UMG_Friend_Item_C:OnGetFriendRecentInfoForWatchRsp(rsp)
+  self:UnlockTeleportAndWatchBtn()
+  if rsp.ret_info and 0 == rsp.ret_info.ret_code and rsp.ext_datas and rsp.ext_datas[1] and rsp.ext_datas[1].recent_info then
+    Log.DebugFormat("UMG_Friend_Item_C:OnGetFriendRecentInfoForWatchRsp success, uin=%s", tostring(self.data.uin))
+    local recentInfo = rsp.ext_datas[1].recent_info
+    self.data.online = recentInfo.online
+    self.data.last_logout_time = recentInfo.last_logout_time
+    self.data.battle_brief_info = recentInfo.battle_brief_info
+    self.data.pos_info = recentInfo.pos_info
+    self.data.visit_info = recentInfo.visit_info
+    self:UpdateInfo()
+    local isInWatchablePvp, pvpName = self:CheckFriendInWatchablePvp()
+    if isInWatchablePvp then
+      Log.DebugFormat("UMG_Friend_Item_C:OnGetFriendRecentInfoForWatchRsp friend is in watchable pvp, uin=%s, pvpName=%s", tostring(self.data.uin), tostring(pvpName))
+      self:ShowTeleportAndWatchPopup(pvpName)
+    else
+      Log.DebugFormat("UMG_Friend_Item_C:OnGetFriendRecentInfoForWatchRsp friend is NOT in watchable pvp, uin=%s, teleport directly", tostring(self.data.uin))
+      self:OnTeleportPlayer()
+    end
+  else
+    local retCode = rsp.ret_info and rsp.ret_info.ret_code or -1
+    Log.ErrorFormat("UMG_Friend_Item_C:OnGetFriendRecentInfoForWatchRsp failed, uin=%s, ret_code=%s, use local cache", tostring(self.data.uin), tostring(retCode))
+    self:ShowTeleportAndWatchPopup(self.pvpName)
+  end
+end
+
+function UMG_Friend_Item_C:ShowTeleportAndWatchPopup(pvpName)
+  local dialogContext = DialogContext()
+  dialogContext:SetTitle(LuaText.pvpwatch_tp_title):SetContent(string.safeFormat(LuaText.pvpwatch_tp_describe, pvpName)):SetMode(DialogContext.Mode.OK_CANCEL):SetButtonText(LuaText.pvpwatch_tp_button_2, LuaText.pvpwatch_tp_button_1):SetCloseOnOK(true):SetCloseOnCancel(true):SetCallback(self, self.OnTeleportAndWatchDialogCallback)
+  _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.Dialog_OpenDialog, dialogContext)
+end
+
+function UMG_Friend_Item_C:OnTeleportAndWatchDialogCallback(isOk, CancelType)
+  if isOk then
+    self:DoTeleportAndWatch()
+  else
+    if CancelType == CommonBtnEnum.DialogCancelType.BtnClickType then
+      self:OnTeleportPlayer()
+    else
+    end
+  end
+end
+
+function UMG_Friend_Item_C:DoTeleportAndWatch()
+  _G.NRCModuleManager:DoCmd(FriendModuleCmd.SetPendingWatchBattle, self.data.uin)
+  _G.NRCModuleManager:DoCmd(BigMapModuleCmd.OnCmdTeleportToPlayerReq, self.data.uin)
+end
+
+function UMG_Friend_Item_C:UnlockTeleportAndWatchBtn()
+  local touchReasonType = _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.GetPanelSelectBtnReason, "Friend").TeleportAndWatch
+  _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.UnlockIsSelectBtn, "FriendModule", "Friend", touchReasonType)
 end
 
 function UMG_Friend_Item_C:OnClickedQQ()
@@ -348,8 +452,6 @@ function UMG_Friend_Item_C:UpdateInfo()
   if Data.online then
     self.WorldBtn:SetIsEnabled(true)
     self.State:SetActiveWidgetIndex(0)
-    self:PrepareOnlineData()
-    self.OnlineOrNot_Title:SetText(self.onlineTitle)
     self.WeGameTips:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.WorldBtn:SetIsEnabled(false)
@@ -622,7 +724,13 @@ function UMG_Friend_Item_C:SelectSwitcher1()
   local CurSelectTabIndex = self:GetFriendTabType()
   local isPlatOrWegameFriendTab = CurSelectTabIndex == FriendEnum.FriendTab.PlatformFriend or CurSelectTabIndex == FriendEnum.FriendTab.WeGameFriend
   if self.data.online then
-    selectIndex = 8
+    local isInWatchablePvp, pvpName = self:CheckFriendInWatchablePvp()
+    self.pvpName = pvpName
+    if isInWatchablePvp then
+      selectIndex = 9
+    else
+      selectIndex = 8
+    end
     showGrayTeleport = false
   elseif not isPlatOrWegameFriendTab then
     selectIndex = 8
@@ -818,19 +926,17 @@ function UMG_Friend_Item_C:OnItemSelected(_bSelected, bScrolled)
   if self.HeadItem then
     self.HeadItem:PlayAni(_bSelected)
   end
-  self.isLogicSelected = _bSelected
-  if _bSelected then
-    local CurSelectTabIndex = self:GetFriendTabType()
-    if not bScrolled and CurSelectTabIndex == FriendEnum.FriendTab.GameFriend and self.moduleData:GetIsFriendBatchDeleteMode() then
-      self:OnBatchDeleteFriendBtn()
-    end
-    _G.NRCModuleManager:DoCmd(FriendModuleCmd.SetSelectFriendIndex, self.index)
-    if not self.moduleData:GetIsFriendBatchDeleteMode() then
-      _G.NRCAudioManager:PlaySound2DAuto(40006008, "UMG_Friend_Item_C:OnItemSelected")
-    end
-    self:PlayAnimation(self.Select_in)
+  local isBatchMode = self.moduleData:GetIsFriendBatchDeleteMode()
+  if isBatchMode then
+    self.isLogicSelected = false
   else
-    self:PlayAnimation(self.Select_out)
+    self.isLogicSelected = _bSelected
+    if _bSelected then
+      _G.NRCAudioManager:PlaySound2DAuto(40006008, "UMG_Friend_Item_C:OnItemSelected")
+      self:PlayAnimation(self.Select_in)
+    else
+      self:PlayAnimation(self.Select_out)
+    end
   end
   self:UpdatePlayerNameInfo()
 end

@@ -184,10 +184,25 @@ function BattleChangeSkillPositionPlayer:Play(performNode)
         table.insert(newSkillPoseInfos, info)
       end
     end
+    local skillListWidget = self.skillListWidget
+    local TrackSkillItemCount = skillListWidget and skillListWidget.TrackSkillItemCount or {}
+    local TrackType = skillListWidget and skillListWidget.TrackType
+    local minPosValue = 1
+    local maxPosValue = TrackSkillItemCount and TrackType and TrackType.Main and TrackSkillItemCount[TrackType.Main] or 4
+    local filterValidPosSkillPosInfos = {}
+    for i, info in ipairs(newSkillPoseInfos) do
+      local oldPos = info and info.old_pos or -1
+      local newPos = info and info.new_pos or -1
+      local isOldPosValid = minPosValue <= oldPos and maxPosValue >= oldPos
+      local isNewPosValid = minPosValue <= newPos and maxPosValue >= newPos
+      if isOldPosValid and isNewPosValid then
+        table.insert(filterValidPosSkillPosInfos, info)
+      end
+    end
     local nextSkillDisplayInfo = {}
     nextSkillDisplayInfo.slotIndexToSkill = nextSlotIndexToSkill
     nextSkillDisplayInfo.globalSkillList = prevGlobalSkillList
-    self.skill_pos_infos = newSkillPoseInfos
+    self.skill_pos_infos = filterValidPosSkillPosInfos
     skillComponent:SetSkillDisplayInfo(nextSkillDisplayInfo)
   end
   do
@@ -533,7 +548,10 @@ end
 
 BattleChangeSkillPositionPlayer.ChangeFirstStep = a.sync(ChangeFirstStep)
 
-local function ChangeSecondStep(self, changeInfo, currentSkillItem, noChangeInfoList)
+local function ChangeSecondStep(self, changeInfo, currentSkillItem, noChangeInfoList, skillNum)
+  skillNum = skillNum or 4
+  local oldPos = changeInfo and changeInfo.old_pos
+  local newPos = changeInfo and changeInfo.new_pos
   local newSkillItem = currentSkillItem
   if changeInfo.old_pos == changeInfo.new_pos then
     return newSkillItem
@@ -557,7 +575,14 @@ local function ChangeSecondStep(self, changeInfo, currentSkillItem, noChangeInfo
     local currentIndex = changeInfo.old_pos
     local lastBeginIndex = currentIndex
     local lastEndIndex = -1
+    local maxLoopCount = 2 * skillNum
+    local loopCount = 0
     while currentIndex ~= changeInfo.new_pos do
+      loopCount = loopCount + 1
+      if maxLoopCount < loopCount then
+        Log.ErrorFormat("BattleChangeSkillPositionPlayer:ChangeSecondStep \228\184\187\229\138\168\228\188\160\229\138\168\231\167\187\229\138\168\229\190\170\231\142\175\232\182\133\232\191\135\230\156\128\229\164\167\230\172\161\230\149\176 %d\239\188\140\231\150\145\228\188\188\230\173\187\229\190\170\231\142\175\229\183\178\232\183\179\229\135\186\239\188\140old_pos=%d, new_pos=%d, skillNum=%d", maxLoopCount, oldPos, newPos, skillNum)
+        break
+      end
       local nextIndex = currentIndex + 1
       if nextIndex > skillListWidget.TrackSkillItemCount[skillListWidget.TrackType.Main] then
         nextIndex = 1
@@ -1087,11 +1112,12 @@ local function PlayAsync(self, battlePet)
     skillItem = skillItem or self.skillListWidget:TryGetNextPerformSkillItem(self.skillItemClass)
     self:InitSkillItem(skillItem, changeInfo.skill_id)
     local container = skillItemLoaderContainerList[changeInfo.old_pos]
-    local skillItem1Slot = container.Slot
-    local newSkillItemSlot = skillItem.Slot
-    local position = skillItem1Slot:GetPosition()
+    local skillItem1Slot = UE.UObject.IsValid(container) and container.Slot
+    local newSkillItemSlot = UE.UObject.IsValid(skillItem) and skillItem.Slot
+    local position = UE.UObject.IsValid(skillItem1Slot) and skillItem1Slot:GetPosition() or UE.FVector2D(0, 0)
+    local renderTransformAngle = UE.UObject.IsValid(container) and container:GetRenderTransformAngle() or 0
     newSkillItemSlot:SetPosition(position)
-    skillItem:SetRenderTransformAngle(container:GetRenderTransformAngle())
+    skillItem:SetRenderTransformAngle(renderTransformAngle)
     table.insert(skillItemList, skillItem)
     table.insert(firstStepThunks, self:ChangeFirstStep(changeInfo, skillItem))
   end
@@ -1118,11 +1144,20 @@ local function PlayAsync(self, battlePet)
     end
   end
   a.wait(au.DelaySeconds(BattleConst.ChangeSkillPositionParams.TimeBetweenGoOutAndMoving))
+  local skillListWidget = self.skillListWidget
+  local TrackSkillItemCount = skillListWidget and skillListWidget.TrackSkillItemCount or {}
+  local TrackType = skillListWidget and skillListWidget.TrackType
+  local mainTrackItemCount = TrackSkillItemCount and TrackType and TrackType.Main and TrackSkillItemCount[TrackType.Main] or 4
+  local battleCard = battlePet and battlePet.card
+  local petInfo = battleCard and battleCard.petInfo
+  local insideInfo = petInfo and petInfo.battle_inside_pet_info
+  local skillNum = insideInfo and insideInfo.skill_num or 0
+  skillNum = math.max(skillNum, mainTrackItemCount)
   local secondStepThunks = {}
   for i, changeInfo in ipairs(changeInfoList) do
     local skillItem = skillItemList[i]
     table.insert(skillItemList, skillItem)
-    table.insert(secondStepThunks, self:ChangeSecondStep(changeInfo, skillItem, noChangeInfoList))
+    table.insert(secondStepThunks, self:ChangeSecondStep(changeInfo, skillItem, noChangeInfoList, skillNum))
   end
   _G.NRCAudioManager:PlaySound2DAuto(BattleConst.ChangeSkillPositionParams.SkillMovingAudioId, "BattleChangeSkillPositionPlayer:PlayAsync")
   resultList = {

@@ -48,4 +48,5 @@ BigMapModuleEvent.ShowSanctuary = "BigMapModuleEvent.ShowSanctuary"
 BigMapModuleEvent.OnNewMapUnlocked = "BigMapModuleEvent.OnNewMapUnlocked"
 BigMapModuleEvent.OnMapVisitorInfoChanged = "BigMapModuleEvent.OnMapVisitorInfoChanged"
 BigMapModuleEvent.DefaultTrackNpcChange = "BigMapModuleEvent.DefaultTrackNpcChange"
+BigMapModuleEvent.OnTeleportToPlayerResult = "BigMapModuleEvent.OnTeleportToPlayerResult"
 return BigMapModuleEvent

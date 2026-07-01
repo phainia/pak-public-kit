@@ -605,7 +605,7 @@ function AppearanceModule:OnCmdOpenAppearanceClosetPanel(action, bFastDressUp, b
     self:OpenPanel("AppearanceCloset", action, bFastDressUp, bDirectToUpgrade, suitId, defaultUpgradeSelectIndex, defaultTabIndex, defaultSubTabIndex, bSkipSaveOnExit, resListData)
   end
   _G.NRCModeManager:DoCmd(_G.NPCModuleCmd.RecycleAllThrowPets)
-  UE.UKismetSystemLibrary.ExecuteConsoleCommand(nil, "n.NRCAvatarWaitForStreamInWhenLoadSuit 1")
+  UE.UKismetSystemLibrary.ExecuteConsoleCommand(nil, "n.NRCAvatarWaitForStreamInWhenLoadAvatarObject 1")
 end
 
 function AppearanceModule:OnCmdCloseAppearanceClosetPanel()
@@ -616,7 +616,7 @@ function AppearanceModule:OnCmdCloseAppearanceClosetPanel()
       panel:ConfirmClose(true)
     end
   end
-  UE.UKismetSystemLibrary.ExecuteConsoleCommand(nil, "n.NRCAvatarWaitForStreamInWhenLoadSuit 0")
+  UE.UKismetSystemLibrary.ExecuteConsoleCommand(nil, "n.NRCAvatarWaitForStreamInWhenLoadAvatarObject 0")
 end
 
 function AppearanceModule:OnCmdGetColorBGResByColorType(colorType)
@@ -1813,12 +1813,16 @@ function AppearanceModule:SetFashionDataRsp(_rsp)
     local bSameAsAvatar = self:IsClosetAvatarSameAsSaved(initSuit, initSalon)
     if bSameAsAvatar then
       self:PlayReloadingSkill(self.closetAvatarPlayer)
-      self:BakeToCharacter()
+      self:SetDefaultSuitDirect(initSuit, initSalon, function()
+        self:PlayReloadingSkill(localPlayer.viewObj)
+      end, false)
     else
       self:PlayReloadingSkill(self.closetAvatarPlayer)
       self:SetDefaultSuitAvatar(true, initSuit, initSalon, self.closetAvatarPlayer, function()
         self.closetAvatarPlayer.OnLoadAvatarActorComplete:Unbind()
-        self:BakeToCharacter()
+        self:SetDefaultSuitDirect(initSuit, initSalon, function()
+          self:PlayReloadingSkill(localPlayer.viewObj)
+        end, false)
       end)
     end
     local isPanelOpen = self:HasPanel("AppearanceCloset")
@@ -2179,6 +2183,50 @@ function AppearanceModule:OnQuickDressAllCollect(fashionIds, suitID)
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, tipText)
   end
   self.data.lastSelectedAllCollectFashionIds = fashionIds
+end
+
+function AppearanceModule:SetDefaultSuitDirect(fashionItems, salonIds, callback, bShouldShowTips)
+  local localPlayer = _G.NRCModuleManager:DoCmd(_G.PlayerModuleCmd.GET_LOCAL_PLAYER)
+  local defaultSuitClass
+  if 1 == localPlayer.gender then
+    defaultSuitClass = _G.NRCBigWorldPreloader:Get(UEPath.DEFAULT_AVATAR_SUIT_MALE)
+  elseif 2 == localPlayer.gender then
+    defaultSuitClass = _G.NRCBigWorldPreloader:Get(UEPath.DEFAULT_AVATAR_SUIT_FEMALE)
+  end
+  local defaultSuitObj = NewObject(defaultSuitClass, _G.UE4Helper.GetCurrentWorld())
+  defaultSuitObj.Gender = localPlayer.gender
+  if salonIds and #salonIds > 0 then
+    local salonWearIds = {}
+    for k, v in ipairs(salonIds) do
+      if v.item_wear_id and 0 ~= v.item_wear_id then
+        local salonItemConf = _G.DataConfigManager:GetSalonItemConf(v.item_wear_id)
+        if salonItemConf then
+          local fullSalonId = self:GetFullSalonId(salonItemConf.avatar_id, salonItemConf.texture_id)
+          table.insert(salonWearIds, fullSalonId)
+        end
+      end
+    end
+    defaultSuitObj:SetSalons(salonWearIds)
+  end
+  if fashionItems and #fashionItems > 0 then
+    for k, v in ipairs(fashionItems) do
+      if v and 0 ~= v.wearing_item_id then
+        local fashionItemConf = _G.DataConfigManager:GetFashionItemConf(v.wearing_item_id)
+        if fashionItemConf then
+          local bBodyType, avatarEnum = UIUtils.GetAvatarEnumByConfigEnumFashion(fashionItemConf.type)
+          if bBodyType then
+            local glassId = 0
+            if v.wearing_glass and v.wearing_glass.glass_type ~= _G.Enum.GlassType.GT_NULL and 0 ~= v.wearing_item_id then
+              glassId = CommonUIUtils.GetGlassInfoId(v.wearing_glass)
+            end
+            defaultSuitObj:SetBody(v.wearing_item_id, glassId)
+          end
+        end
+      end
+    end
+  end
+  local avatarSystem = UE.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(UE4Helper.GetCurrentWorld(), UE.UAvatarSubsystem)
+  avatarSystem:StartSwitchAvatarSuit(localPlayer.viewObj.Mesh, defaultSuitObj)
 end
 
 function AppearanceModule:SetDefaultSuit(fashionItems, salonIds, callback, bShouldShowTips)

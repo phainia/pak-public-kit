@@ -9985,31 +9985,6 @@
       "ride_foot_num": 4,
       "selfie_takephoto_params": "0;15;0;200;34;0;150"
     },
-    "3401": {
-      "id": 3401,
-      "editor_name": "伊里斯",
-      "animation_name": "Lig_YiLiSi3_001",
-      "basic_movement_list": [
-        10003,
-        20001
-      ],
-      "passive_skill": [
-        4003,
-        5001,
-        2004
-      ],
-      "active_skill_list": [
-        50007,
-        50001
-      ],
-      "model_scale": 107,
-      "capsule_half_height": 143,
-      "capsule_radius": 143,
-      "mesh_offset_z": -143,
-      "climb_mesh_offset": "X=0.000 Y=0.000 Z=0.000",
-      "start_swim_water_depth": 60,
-      "selfie_takephoto_params": "0;35;0;237;95;0;150"
-    },
     "3402": {
       "id": 3402,
       "editor_name": "碎晶蝎 ",
@@ -16022,7 +15997,7 @@
       "animation_name": "Mac_GuXiang3_001",
       "basic_movement_list": [
         10102,
-        210003
+        210002
       ],
       "passive_skill": [
         5002,
@@ -16031,7 +16006,7 @@
         3004
       ],
       "active_skill_list": [
-        210003
+        210002
       ],
       "second_active_skill__list": [
         40005

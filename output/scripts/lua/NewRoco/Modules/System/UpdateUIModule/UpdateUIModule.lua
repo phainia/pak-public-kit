@@ -2262,11 +2262,11 @@ function UpdateUIModule:OnUpdateProgress(UpdateTask, Stage, Total, Now)
 end
 
 function UpdateUIModule:ShowInstallAndroidApkConfirmPopUpWindow()
-  local Title = LuaText.updateuimodule_37
+  local Title = LuaText.updateuimodule_26
   local Content = LuaText.updateuimodule_38
   local Mode = DialogContext.Mode.OK
   local Context = DialogContext()
-  Context:SetTitle(Title):SetContent(Content):SetMode(Mode):SetCallback(self, self.InstallAndroidAPK):SetCloseOnOK(false):SetButtonText(LuaText.YES, LuaText.NO)
+  Context:SetTitle(Title):SetContent(Content):SetMode(Mode):SetCallback(self, self.InstallAndroidAPK):SetCloseOnOK(false):SetButtonText(LuaText.umg_login_new_3)
   NRCModuleManager:DoCmd(TipsModuleCmd.Dialog_OpenDialog, Context)
 end
 

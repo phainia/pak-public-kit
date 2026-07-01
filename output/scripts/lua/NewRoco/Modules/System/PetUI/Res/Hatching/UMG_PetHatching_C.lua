@@ -47,6 +47,9 @@ function UMG_PetHatching_C:UpdatePanel(isRemove)
   local dataList = {}
   self.bHaveHatchingEgg = #backpackEggList > 0
   self.Egg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if self.Particulars then
+    self.Particulars:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
   self.Switcher:SetActiveWidgetIndex(self.bHaveHatchingEgg and 0 or 1)
   if not self.bHaveHatchingEgg then
     self:PlayAnimation(self.Empty_In)
@@ -270,6 +273,9 @@ end
 
 function UMG_PetHatching_C:OnAddEventListener()
   self:AddButtonListener(self.btnCloseSubPanel2.btnClose, self.ClosePanel1)
+  if self.Particulars then
+    self:AddButtonListener(self.Particulars.btnLevelUp, self.OnClickQuestionBtn)
+  end
   self:AddButtonListener(self.btn, self.ClosePanel)
   self:AddButtonListener(self.ClickBtn, self.OnClickIncubationProgressBtn)
   self:AddButtonListener(self.UMG_Btn2Grey.btnLevelUp, self.ClickEggBtn)
@@ -707,6 +713,10 @@ function UMG_PetHatching_C:IsRemoveEggItem(item)
     end
   end
   return false
+end
+
+function UMG_PetHatching_C:OnClickQuestionBtn()
+  _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.OpenHatchingExplanationPanel)
 end
 
 function UMG_PetHatching_C:IsBagHaveEggItem()

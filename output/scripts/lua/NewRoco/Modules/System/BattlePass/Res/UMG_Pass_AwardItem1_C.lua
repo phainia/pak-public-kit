@@ -78,4 +78,12 @@ function UMG_Pass_AwardItem1_C:PlayInAnimation(delaySec)
   end)
 end
 
+function UMG_Pass_AwardItem1_C:OpItem(isPlayAnim, animTime)
+  if 1 == isPlayAnim then
+    self:PlayInAnimation(animTime)
+  else
+    self:PlayNormalAnimation()
+  end
+end
+
 return UMG_Pass_AwardItem1_C

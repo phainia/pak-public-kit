@@ -1,3 +1,4 @@
+local TimeUtils = require("NewRoco.Modules.System.EnvSystem.TimeUtils")
 local PetUIModuleEvent = reload("NewRoco.Modules.System.PetUI.PetUIModuleEvent")
 local ENUM_PLAYER_DATA_EVENT = require("Data.Global.PlayerDataEvent")
 local BagModuleEvent = require("NewRoco.Modules.System.Bag.BagModuleEvent")
@@ -197,6 +198,7 @@ function PetUIModule:OnActive()
   self:RegisterCmd(PetUIModuleCmd.CheckIsPetHatchingPanelShow, self.OnCmdCheckIsPetHatchingPanelShow)
   self:RegisterCmd(PetUIModuleCmd.GetVaildPetBallItemList, self.OnCmdGetVaildPetBallItemList)
   self:RegisterCmd(PetUIModuleCmd.ClosePetHatchingPanel, self.OnCmdClosePetHatchingPanel)
+  self:RegisterCmd(PetUIModuleCmd.OpenHatchingExplanationPanel, self.OnCmdOpenHatchingExplanationPanel)
   self:RegisterCmd(PetUIModuleCmd.OpenChoosePetBallPanel, self.OnCmdOpenChoosePetBallPanel)
   self:RegisterCmd(PetUIModuleCmd.CloseChoosePetBallPanel, self.OnCmdCloseChoosePetBallPanel)
   self:RegisterCmd(PetUIModuleCmd.OpenHatchingRightPanel, self.OnCmdOpenHatchingRightPanel)
@@ -327,6 +329,7 @@ function PetUIModule:OnActive()
   self:RegisterCmd(PetUIModuleCmd.OpenLoadPetTeamPanel, self.OpenLoadPetTeamPanel)
   self:RegisterCmd(PetUIModuleCmd.OpenTeamChangeBloodPanel, self.OpenTeamChangeBloodPanel)
   self:RegisterCmd(PetUIModuleCmd.GetSkillSource, self.GetSkillSource)
+  self:RegisterCmd(PetUIModuleCmd.GetSkillSourceFlag, self.GetSkillSourceFlag)
   self:RegisterCmd(PetUIModuleCmd.GetSkillSourceAndUnlockInfo, self.GetSkillSourceAndUnlockInfo)
   self:RegisterCmd(PetUIModuleCmd.OpenSkillLearningPanel2, self.OpenSkillLearningPanel2)
   self:RegisterCmd(PetUIModuleCmd.CloseSkillLearningPanel2, self.CloseSkillLearningPanel2)
@@ -433,6 +436,10 @@ function PetUIModule:OnActive()
   self:RegisterCmd(PetUIModuleCmd.SetPetMainPanelPetImage3DActive, self.OnCmdSetPetMainPanelPetImage3DActive)
   self:RegisterCmd(PetUIModuleCmd.CheckIsOpenEvoPanel, self.OnCmdCheckIsOpenEvoPanel)
   self:RegisterCmd(PetUIModuleCmd.OpenBoxOrganizationFethod, self.OnCmdOpenBoxOrganizationFethod)
+  self:RegisterCmd(PetUIModuleCmd.CheckPetPauseEvolute, self.OnCmdCheckPetPauseEvolute)
+  self:RegisterCmd(PetUIModuleCmd.SendPetPauseEvoluteReq, self.OnCmdSendPetPauseEvoluteReq)
+  self:RegisterCmd(PetUIModuleCmd.GetCurrentSeasonkRoundInfo, self.GetCurrentSeasonkRoundInfo)
+  self:RegisterCmd(PetUIModuleCmd.GetCurrentSeasonkRoundCount, self.GetCurrentSeasonkRoundCount)
   _G.ZoneServer:AddProtocolListener(self, ProtoCMD.ZoneSvrCmd.ZONE_PLAYER_IN_CHANGE_PET_ZONE_NOTIFY, self.OnZonePlayerInChangePetZoneNotify)
   _G.ZoneServer:AddProtocolListener(self, ProtoCMD.ZoneSvrCmd.ZONE_PLAYER_LEAVE_CHANGE_PET_ZONE_NOTIFY, self.OnZonePlayerLeaveChangePetZoneNotify)
   self:RegPanel("PetInfoMain", "UMG_PetInfoMain", _G.Enum.UILayerType.UI_LAYER_FULLSCREEN, nil, nil, nil, nil, true)
@@ -480,6 +487,7 @@ function PetUIModule:OnActive()
   self:RegPanel("ChoosePetBallPanel", "Hatching/UMG_ChooseGollball", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, nil, true)
   self:RegPanel("HatchingRightPanel", "Hatching/UMG_NewChoosePetBall", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, nil, true)
   self:RegPanel("ColorfulMatchingTips", "Hatching/UMG_ColorfulMatchingTips", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, nil, true)
+  self:RegPanel("HatchingExplanationPanel", "Hatching/UMG_ExplanationDescription", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, nil, true)
   self:RegPanel("PetConfirmPanel", "Backpack/UMG_ChangePetConfirmPanel", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, true, nil, nil, true)
   self:RegPanel("PetFilterTips", "Backpack/UMG_PetFilterTips", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, nil, true)
   self:RegPanel("CandidateTips", "Backpack/UMG_CandidateTips", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, nil, true)
@@ -2183,6 +2191,9 @@ function PetUIModule:OnPetTraceBackRsp(rsp)
     self:ClosePetTraceBackPopup()
     Log.Error("PetUIModule:OnPetTraceBackRsp failed")
   end
+  if rsp.backtrack_usage_count then
+    self:UpdateBacktrackRoundUseCount(rsp.backtrack_usage_count)
+  end
 end
 
 function PetUIModule:OnCmdSendQueryBacktrackPetRewardReq(petDataList)
@@ -2212,11 +2223,10 @@ function PetUIModule:OnQueryBacktrackPetRewardRsp(rsp)
         end
       end
     end
-    if 1 == #rsp.pet_gid then
-      self:OpenPanel("PetFreeCaptive", PetDataList, PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet, rsp.reward_list)
-    else
-      self:OpenPanel("PetFreeCaptiveAnimals", PetDataList, PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet, rsp.reward_list)
-    end
+    self:OpenPanel("PetFreeCaptiveAnimals", PetDataList, PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet, rsp.reward_list)
+  end
+  if rsp.backtrack_usage_count then
+    self:UpdateBacktrackRoundUseCount(rsp.backtrack_usage_count)
   end
 end
 
@@ -2377,12 +2387,13 @@ function PetUIModule:OnCmdCloseCommonTips()
   self:DispatchEvent(PetUIModuleEvent.PET_UI_COMMON_TIP_CLOSE)
 end
 
-function PetUIModule:OnCmdSendFangShengPet(_petgid)
+function PetUIModule:OnCmdSendFangShengPet(_petgid, need_backtrack)
   Log.Debug("PetUIModule:OnCmdSendFangShengPet")
   local req = _G.ProtoMessage:newZonePetFreeReq()
   for i, petinfo in ipairs(_petgid) do
     table.insert(req.pet_gid, petinfo)
   end
+  req.need_backtrack = need_backtrack
   _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_PET_FREE_REQ, req, self, self.OnFangShengPetCallback, true, true)
 end
 
@@ -2415,6 +2426,9 @@ function PetUIModule:OnFangShengPetCallback(rsp)
     _G.NRCModuleManager:DoCmd(NPCShopUIModuleCmd.OpenNPCShopItemRewardsPanel, rsp.ret_info.goods_reward.rewards, LuaText.get_reward_tips_title)
   end
   _G.NRCModuleManager:DoCmd(_G.AppearanceModuleCmd.OnPetFreeCheckHeterochromeSuit, rsp)
+  if rsp and rsp.backtrack_usage_count then
+    self:UpdateBacktrackRoundUseCount(rsp.backtrack_usage_count)
+  end
 end
 
 function PetUIModule:OnCmdOpenSendPetToFriendPanel(gid)
@@ -3148,6 +3162,18 @@ function PetUIModule:OnCmdOpenPetHatchingPanel(arg, isUpdateData)
     end
   end
   self.isDisableInEggAnimation = false
+end
+
+function PetUIModule:OnCmdOpenHatchingExplanationPanel()
+  Log.Debug("PetUIModule:OnCmdOpenHatchingExplanationPanel")
+  if self:HasPanel("HatchingExplanationPanel") then
+    local panel = self:GetPanel("HatchingExplanationPanel")
+    if panel then
+      panel:OnActive()
+      return
+    end
+  end
+  self:OpenPanel("HatchingExplanationPanel")
 end
 
 function PetUIModule:OnCmdCheckIsPetHatchingPanelShow()
@@ -4935,6 +4961,7 @@ function PetUIModule:OnPetTeamShareQuickAdjust(ExchangeInfo, BagItemInfo, RspPar
   if ExchangeInfo and #ExchangeInfo > 0 then
     local req = _G.ProtoMessage:newZoneBatchExchangeReq()
     req.exchange_items = ExchangeInfo
+    Log.Dump(req, 6, "PetUIModule:OnPetTeamShareQuickAdjust")
     _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_BATCH_EXCHANGE_REQ, req, self, self._OnBatchExchangeRsp)
   elseif BagItemInfo and #BagItemInfo > 0 then
     self:_SendUseMultiBagItemReq(BagItemInfo)
@@ -4942,6 +4969,7 @@ function PetUIModule:OnPetTeamShareQuickAdjust(ExchangeInfo, BagItemInfo, RspPar
 end
 
 function PetUIModule:_OnBatchExchangeRsp(Rsp)
+  Log.Dump(Rsp, 6, "PetUIModule:_OnBatchExchangeRsp")
   if 0 == Rsp.ret_info.ret_code then
     if self._pendingBagItemInfo and #self._pendingBagItemInfo > 0 then
       self:_UpdateBagItemGid(self._pendingBagItemInfo)
@@ -4979,11 +5007,13 @@ end
 function PetUIModule:_SendUseMultiBagItemReq(BagItemInfo)
   local req = _G.ProtoMessage:newZonePetTeamShareQuickAdjustReq()
   req.item_info = BagItemInfo
+  Log.Dump(req, 6, "PetUIModule:_SendUseMultiBagItemReq")
   _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_PET_TEAM_SHARE_QUICK_ADJUST_REQ, req, self, self._OnUseMultiBagItemRsp)
 end
 
 function PetUIModule:_OnUseMultiBagItemRsp(Rsp)
   self._pendingBagItemInfo = nil
+  Log.Dump(Rsp, 6, "PetUIModule:_OnUseMultiBagItemRsp")
   self:OnPetTeamShareQuickAdjustRsp(Rsp)
 end
 
@@ -5018,8 +5048,10 @@ function PetUIModule:SendLoadPetTeamReq(bOK, teamShareCode)
     if false ~= sharePetTeamInfo then
       if self:PreCheckTeamValid(sharePetTeamInfo.pets) then
         local req = ProtoMessage:newZonePetApplySharedPetTeamReq()
+        self:AddPetGIDForAICoachTeam(sharePetTeamInfo.pets)
         req.shared_team = sharePetTeamInfo
         req.team_type = self.OpenAdjustTeamType or _G.ProtoEnum.PlayerTeamType.PTT_BIG_WORLD
+        Log.Dump(req, 6, "PetUIModule:SendLoadPetTeamReq")
         _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_PET_APPLY_SHARED_PET_TEAM_REQ, req, self, self.OnLoadPetTeamRsp, nil, true)
       else
         _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.lineup_code_not_available)
@@ -5030,7 +5062,27 @@ function PetUIModule:SendLoadPetTeamReq(bOK, teamShareCode)
   end
 end
 
+function PetUIModule:AddPetGIDForAICoachTeam(pets)
+  if -1 ~= self.OpenAdjustTeamIndex then
+    return
+  end
+  local aiTeamData = self.data:GetAICoachRecommendTeamUIData()
+  local aiTeamPets = aiTeamData and aiTeamData.teamData and aiTeamData.teamData.pet_team_info and aiTeamData.teamData.pet_team_info.pets or {}
+  for i, aiPet in ipairs(aiTeamPets) do
+    if not aiPet.gid or 0 == aiPet.gid then
+    else
+      for j, pet in ipairs(pets) do
+        if aiPet.base_conf_id == pet.base_conf_id then
+          pet.gid = aiPet.gid
+          break
+        end
+      end
+    end
+  end
+end
+
 function PetUIModule:OnLoadPetTeamRsp(rsp)
+  Log.Dump(rsp, 6, "PetUIModule:OnLoadPetTeamRsp")
   if 0 == rsp.ret_info.ret_code then
     NRCModuleManager:DoCmd(PetUIModuleCmd.OpenAdjustTeamPanel, rsp, self.OpenAdjustTeamType, self.OpenAdjustTeamIndex)
   else
@@ -5302,32 +5354,17 @@ function PetUIModule:OnCmdGetLevelSkillConfByPetBaseId(petBaseId)
 end
 
 function PetUIModule:GetSkillSource(skillId, petBaseId)
-  local sourceTypes = {}
-  local levelSkillConf = _G.NRCModeManager:DoCmd(_G.PetUIModuleCmd.GetLevelSkillConfByPetBaseId, petBaseId)
-  if levelSkillConf then
-    for i, v in ipairs(levelSkillConf.level) do
-      if v.param == skillId then
-        table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP)
-        break
-      end
-    end
-    for i, v in ipairs(levelSkillConf.machine_skill_group) do
-      if v.machine_skill_id == skillId then
-        table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_SKILL_BOOK)
-        break
-      end
-    end
-    if levelSkillConf.blood_skill_COMMON == skillId or levelSkillConf.blood_skill_GRASS == skillId or levelSkillConf.blood_skill_FIRE == skillId or levelSkillConf.blood_skill_WATER == skillId or levelSkillConf.blood_skill_LIGHT == skillId or levelSkillConf.blood_skill_STONE == skillId or levelSkillConf.blood_skill_ICE == skillId or levelSkillConf.blood_skill_DRAGON == skillId or levelSkillConf.blood_skill_ELECTRIC == skillId or levelSkillConf.blood_skill_TOXIC == skillId or levelSkillConf.blood_skill_INSECT == skillId or levelSkillConf.blood_skill_FIGHT == skillId or levelSkillConf.blood_skill_WING == skillId or levelSkillConf.blood_skill_MOE == skillId or levelSkillConf.blood_skill_GHOST == skillId or levelSkillConf.blood_skill_DEMON == skillId or levelSkillConf.blood_skill_MECHANIC == skillId or levelSkillConf.blood_skill_PHANTOM == skillId then
-      table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
-    end
-    if levelSkillConf.legendary_skill == skillId then
-      table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_LEGENDARY)
-    end
-    if 0 == #sourceTypes then
-      table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
-    end
+  if not self.data.cachedPetSkillSource[petBaseId] then
+    self.data:InitPetSkillSourceInfo(petBaseId, skillId)
   end
-  return sourceTypes
+  return self.data:GetPetSkillSource(petBaseId, skillId)
+end
+
+function PetUIModule:GetSkillSourceFlag(skillId, petBaseId)
+  if not self.data.cachedPetSkillSource[petBaseId] then
+    self.data:InitPetSkillSourceInfo(petBaseId, skillId)
+  end
+  return self.data:GetPetSkillSourceFlag(petBaseId, skillId)
 end
 
 function PetUIModule:GetSkillSourceAndUnlockInfo(skillId, petBaseId, petGid)
@@ -5501,6 +5538,7 @@ end
 function PetUIModule:CalcuBloodChangeNeedItems(bloodItemID)
   local ItemDosageInfo, ItemDosageInfoList, ItemSynthesisInfoList, exchangeID
   local bloodItemList = {bloodItemID}
+  local GetItemId = bloodItemID
   local bagItemConf = _G.DataConfigManager:GetBagItemConf(bloodItemID)
   if bagItemConf and bagItemConf.item_behavior and bagItemConf.item_behavior[1] then
     if bagItemConf.item_behavior[1].use_action ~= Enum.ItemBehavior.IB_CHANGE_BLOOD_BOSS then
@@ -5513,9 +5551,9 @@ function PetUIModule:CalcuBloodChangeNeedItems(bloodItemID)
   ItemDosageInfoList = {ItemDosageInfo}
   if ItemSynthesisInfoList then
     exchangeID = ItemSynthesisInfoList[1].exchangeId
-    ItemDosageInfoList = self:OnCmdGetItemDosageBySynthesis(exchangeID)
+    ItemDosageInfoList, GetItemId = self:OnCmdGetItemDosageBySynthesis(exchangeID)
   end
-  return ItemDosageInfoList, exchangeID
+  return ItemDosageInfoList, exchangeID, GetItemId
 end
 
 function PetUIModule:OnCmdGetPetSkillUnLockInfo(skillId, petBaseId, petGid)
@@ -5592,6 +5630,7 @@ function PetUIModule:OnCmdGetItemDosageBySynthesis(exchangeId)
     end
     
     local itemDosageInfo = {}
+    local getItemId = exChangeConf.get_item and exChangeConf.get_item[1] and exChangeConf.get_item[1].get_goods_id
     for i, costItem in ipairs(exChangeConf.cost_item) do
       if #costItem.cost_goods_id > 1 then
         itemDosageInfo[2] = table.deepCopy(_GetSortFirstItem(costItem))
@@ -5600,7 +5639,7 @@ function PetUIModule:OnCmdGetItemDosageBySynthesis(exchangeId)
         table.insert(itemDosageInfo, self:OnCmdCreateItemDosageInfo(costItem.cost_goods_id[1], num, costItem.cost_goods_num, costItem.cost_goods_type))
       end
     end
-    return itemDosageInfo
+    return itemDosageInfo, getItemId
   end
   return nil
 end
@@ -7664,6 +7703,109 @@ end
 
 function PetUIModule:OnCmdOpenBoxOrganizationFethod(curBoxIndex)
   self:OpenPanel("BoxOrganizationFethod", curBoxIndex)
+end
+
+function PetUIModule:OnCmdCheckPetPauseEvolute(petGid)
+  if petGid then
+    local petData = _G.DataModelMgr.PlayerDataModel:GetPetDataByGid(petGid)
+    if petData and petData.bitflag and 1 == petData.bitflag & _G.ProtoEnum.PetDataBitFlag.PDBF_PET_PAUSE_EVOLUTE then
+      return true
+    end
+  end
+  return false
+end
+
+function PetUIModule:OnCmdSendPetPauseEvoluteReq(petGid)
+  local req = _G.ProtoMessage:newZonePetPauseEvoluteReq()
+  req.pet_gid = petGid
+  _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_PET_PAUSE_EVOLUTE_REQ, req, self, self.OnPetPauseEvoluteRsp, false, true)
+end
+
+function PetUIModule:OnPetPauseEvoluteRsp(rsp)
+  if rsp and rsp.ret_info and rsp.ret_info.ret_code and 0 ~= rsp.ret_info.ret_code then
+    Log.Error(string.format("PetUIModule:OnPetPauseEvoluteRsp ErrorCode:%d"), rsp.ret_info.ret_code)
+  end
+end
+
+function PetUIModule:GetSeasonkRoundMaxCount()
+  if not self.rollbackConfs then
+    self.rollbackConfs = _G.DataConfigManager:GetTable(DataConfigManager.ConfigTableId.PET_ROLLBACK_CONF):GetAllDatas()
+  end
+  local currentTime = math.round(_G.ZoneServer:GetServerTime() / 1000)
+  if self.rollCountConf then
+    local cachedStart = TimeUtils.ToTimeStamp(self.rollCountConf.start_time or "")
+    local cachedEnd = TimeUtils.ToTimeStamp(self.rollCountConf.end_time or "")
+    if currentTime >= cachedStart and currentTime <= cachedEnd then
+      return self.rollCountConf.pet_rollback_number
+    end
+  end
+  self.rollCountConf = nil
+  local rollbackConf = self.rollbackConfs
+  for k, conf in pairs(rollbackConf) do
+    local StartTimeStamp = TimeUtils.ToTimeStamp(conf.start_time or "")
+    local EndTimeStamp = TimeUtils.ToTimeStamp(conf.end_time or "")
+    if currentTime >= StartTimeStamp and currentTime <= EndTimeStamp then
+      self.rollCountConf = conf
+      break
+    end
+  end
+  return self.rollCountConf and self.rollCountConf.pet_rollback_number
+end
+
+function PetUIModule:GetCurrentSeasonkRoundInfo()
+  local playerInfo = _G.DataModelMgr.PlayerDataModel:GetPlayerInfo()
+  if playerInfo and playerInfo.pet_info and playerInfo.pet_info.backtrack_round_info and playerInfo.pet_info.backtrack_round_info.current_round_id then
+    local cachedRoundInfo = playerInfo.pet_info.backtrack_round_info
+    local cachedConf = _G.DataConfigManager:GetPetRollbackConf(cachedRoundInfo.current_round_id)
+    if cachedConf then
+      local currentTime = math.round(_G.ZoneServer:GetServerTime() / 1000)
+      local StartTimeStamp = TimeUtils.ToTimeStamp(cachedConf.start_time or "")
+      local EndTimeStamp = TimeUtils.ToTimeStamp(cachedConf.end_time or "")
+      if currentTime >= StartTimeStamp and currentTime <= EndTimeStamp then
+        return cachedRoundInfo
+      end
+    end
+  end
+  local RoundInfo = ProtoMessage:newPetBacktrackRoundInfo()
+  if not self.rollbackConfs then
+    self.rollbackConfs = _G.DataConfigManager:GetTable(DataConfigManager.ConfigTableId.PET_ROLLBACK_CONF):GetAllDatas()
+  end
+  local rollbackConf = self.rollbackConfs
+  local currentTime = math.round(_G.ZoneServer:GetServerTime() / 1000)
+  for k, conf in pairs(rollbackConf) do
+    local StartTimeStamp = TimeUtils.ToTimeStamp(conf.start_time or "")
+    local EndTimeStamp = TimeUtils.ToTimeStamp(conf.end_time or "")
+    if currentTime >= StartTimeStamp and currentTime <= EndTimeStamp then
+      RoundInfo.current_round_id = conf.id
+      RoundInfo.used_count = 0
+      playerInfo.pet_info.backtrack_round_info = RoundInfo
+      return RoundInfo
+    end
+  end
+  return RoundInfo
+end
+
+function PetUIModule:GetCurrentSeasonkRoundCount()
+  local num = 0
+  local roundInfo = self:GetCurrentSeasonkRoundInfo()
+  if roundInfo.current_round_id then
+    local conf = _G.DataConfigManager:GetPetRollbackConf(roundInfo.current_round_id)
+    if conf and conf.pet_rollback_number then
+      local maxCount = conf.pet_rollback_number or 0
+      num = maxCount - roundInfo.used_count
+    end
+  end
+  return num
+end
+
+function PetUIModule:UpdateBacktrackRoundUseCount(num)
+  local playerInfo = _G.DataModelMgr.PlayerDataModel:GetPlayerInfo()
+  if playerInfo and playerInfo.pet_info and playerInfo.pet_info.backtrack_round_info then
+    playerInfo.pet_info.backtrack_round_info.used_count = num
+    local maxCount = self:GetSeasonkRoundMaxCount()
+    local count = maxCount - num
+    self:DispatchEvent(PetUIModuleEvent.OnUpdatePetBacktrackRoundCount, count)
+  end
 end
 
 return PetUIModule

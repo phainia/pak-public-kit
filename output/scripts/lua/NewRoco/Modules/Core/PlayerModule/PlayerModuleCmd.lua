@@ -93,4 +93,5 @@ PlayerModuleCmd.OnAIMutualPerformStateChanged = "PlayerModuleCmd.OnAIMutualPerfo
 PlayerModuleCmd.GetRidePetEyeViewOffset = "PlayerModuleCmd.GetRidePetEyeViewOffset"
 PlayerModuleCmd.GetRideThrowCameraOffset = "PlayerModuleCmd.GetRideThrowCameraOffset"
 PlayerModuleCmd.OnAbnormalStatusChange = "PlayerModuleCmd.OnAbnormalStatusChange"
+PlayerModuleCmd.OnPlayerCustomAnimChange = "PlayerModuleCmd.OnPlayerCustomAnimChange"
 return PlayerModuleCmd

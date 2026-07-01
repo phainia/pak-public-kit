@@ -192,15 +192,9 @@ end
 function UMG_Activity_TakePhotoCompetition_Vote_C:OnActivityPhotoContestEvaluationNty(rsp)
   if rsp then
     self.photoData = rsp
-    if self.recommendCount > 0 then
-      self.NRCSwitcher_0:SetActiveWidgetIndex(0)
-      self:OnRefreshRecommendPanel()
-      self.currentSwitcherIndex = 0
-    else
-      self.NRCSwitcher_0:SetActiveWidgetIndex(1)
-      self:OnRefreshRecommendFinishPanel()
-      self.currentSwitcherIndex = 1
-    end
+    self.NRCSwitcher_0:SetActiveWidgetIndex(0)
+    self:OnRefreshRecommendPanel()
+    self.currentSwitcherIndex = 0
     self.Text_Push:SetText(string.format(LuaText.pic_game_judge_push_times, self.photoData.recommend_count))
     self.recommendCount = rsp.recommend_count
     self.activityInst:OnUpdateActivityDataRecommendCount(rsp.recommend_count)
@@ -249,8 +243,7 @@ function UMG_Activity_TakePhotoCompetition_Vote_C:OnRefreshRecommendPanel()
   self.shuliang:SetText(string.format("%s%d/%d", LuaText.pic_game_judge_skip_button, num, skipNum))
   self.PhotoFile:DisplayFixedFramePhotoMiniMode(self.photoData.photos[1].mini_photo_url, self.photoData.photos[1].mini_photo_md5)
   self.PhotoFile_1:DisplayFixedFramePhotoMiniMode(self.photoData.photos[2].mini_photo_url, self.photoData.photos[2].mini_photo_md5)
-  self:OnPhotoInfoUpdate(self.HeadPortrait_A, self.Text_Name_A, self.photoData.photos[1].uin, self, self.OnLeftPhotoInfoUpdateRsp)
-  self:OnPhotoInfoUpdate(self.HeadPortrait_B, self.Text_Name_B, self.photoData.photos[2].uin, self, self.OnRightPhotoInfoUpdateRsp)
+  self:OnUpdatePhotoNameAndHeadIcon()
   self.CanvasPanel_165:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.CanvasPanel_2:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.NumberLikesA:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -261,6 +254,8 @@ function UMG_Activity_TakePhotoCompetition_Vote_C:OnRefreshRecommendPanel()
   self.PhotoMaskB:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.VoteBtn:SetRenderOpacity(1)
   self.VoteBtn_1:SetRenderOpacity(1)
+  self.VoteBtn:SetClickAble(true)
+  self.VoteBtn_1:SetClickAble(true)
   if self.HorizontalBox_2 then
     self.HorizontalBox_2:SetRenderOpacity(1)
   end
@@ -268,35 +263,57 @@ function UMG_Activity_TakePhotoCompetition_Vote_C:OnRefreshRecommendPanel()
   self.CloseBtn:SetVisibility(UE4.ESlateVisibility.Visible)
 end
 
-function UMG_Activity_TakePhotoCompetition_Vote_C:OnPhotoInfoUpdate(headNode, nameNode, uin, caller, callback)
-  local friendData = _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.GetFriendByUin, uin)
-  if friendData then
-    local card_icon_selected = friendData.card_icon_selected
-    self:SetHeadIcon(headNode, card_icon_selected)
-    local playerName = friendData.name
-    nameNode:SetText(playerName)
-  else
-    local req = _G.ProtoMessage:newZoneFriendSearchPlayerReq()
-    req.uin = uin
-    _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_FRIEND_SEARCH_PLAYER_REQ, req, caller, callback, false, true)
+function UMG_Activity_TakePhotoCompetition_Vote_C:OnUpdatePhotoNameAndHeadIcon()
+  if not (self.photoData and self.photoData.photos) or not next(self.photoData.photos) then
+    Log.Error("UMG_Activity_TakePhotoCompetition_Vote_C:OnUpdatePhotoNameAndHeadIcon, photoData is nil")
+    return
+  end
+  local req = _G.ProtoMessage:newZoneBatchGetOthersSocialExtDataReq()
+  for i, photo in ipairs(self.photoData.photos) do
+    local friendData = _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.GetFriendByUin, photo.uin)
+    if friendData then
+      local headNode = self.HeadPortrait_A
+      local nameNode = self.Text_Name_A
+      if 2 == i then
+        headNode = self.HeadPortrait_B
+        nameNode = self.Text_Name_B
+      end
+      local card_icon_selected = friendData.card_icon_selected
+      self:SetHeadIcon(headNode, card_icon_selected)
+      local playerName = friendData.name
+      nameNode:SetText(playerName)
+    else
+      table.insert(req.uin_list, photo.uin)
+    end
+  end
+  if #req.uin_list > 0 then
+    req.ext_data_types = {
+      Enum.SocialExtDataType.SEDT_PROFILE
+    }
+    _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_BATCH_GET_OTHERS_SOCIAL_EXT_DATA_REQ, req, self, self.OnGetOtherSocialExtDataRsp, false, true)
   end
 end
 
-function UMG_Activity_TakePhotoCompetition_Vote_C:OnLeftPhotoInfoUpdateRsp(rsp)
-  if 0 == rsp.ret_info.ret_code and rsp.player_info then
-    local card_icon_selected = rsp.player_info.card_icon_selected
-    self:SetHeadIcon(self.HeadPortrait_A, card_icon_selected)
-    local playerName = rsp.player_info.name
-    self.Text_Name_A:SetText(playerName)
+function UMG_Activity_TakePhotoCompetition_Vote_C:OnGetOtherSocialExtDataRsp(rsp)
+  Log.Dump(rsp, 6, "UMG_Activity_TakePhotoCompetition_Vote_C:OnGetOtherSocialExtDataRsp")
+  if not (self.photoData and self.photoData.photos) or not next(self.photoData.photos) then
+    Log.Error("UMG_Activity_TakePhotoCompetition_Vote_C:OnGetOtherSocialExtDataRsp, photoData is nil")
+    return
   end
-end
-
-function UMG_Activity_TakePhotoCompetition_Vote_C:OnRightPhotoInfoUpdateRsp(rsp)
-  if 0 == rsp.ret_info.ret_code and rsp.player_info then
-    local card_icon_selected = rsp.player_info.card_icon_selected
-    self:SetHeadIcon(self.HeadPortrait_B, card_icon_selected)
-    local playerName = rsp.player_info.name
-    self.Text_Name_B:SetText(playerName)
+  if 0 == rsp.ret_info.ret_code and rsp.ext_datas then
+    for i, extData in ipairs(rsp.ext_datas) do
+      local friendData = extData.profile
+      local headNode = self.HeadPortrait_A
+      local nameNode = self.Text_Name_A
+      if extData.uin == self.photoData.photos[2].uin then
+        headNode = self.HeadPortrait_B
+        nameNode = self.Text_Name_B
+      end
+      local card_icon_selected = friendData.card_icon_selected
+      self:SetHeadIcon(headNode, card_icon_selected)
+      local playerName = friendData.name
+      nameNode:SetText(playerName)
+    end
   end
 end
 
@@ -331,6 +348,7 @@ function UMG_Activity_TakePhotoCompetition_Vote_C:OnVoteBtnClick()
     return
   end
   self.voteIndex = 1
+  self.RefreshBtn:SetIsEnabled(false)
   self.activityInst:SendPlayerLike(self.photoData.photos[self.voteIndex].uin)
   self:HideRewardRedPoint()
   self:RefreshCloseTimer()
@@ -348,6 +366,7 @@ function UMG_Activity_TakePhotoCompetition_Vote_C:OnVoteBtn1Click()
     return
   end
   self.voteIndex = 2
+  self.RefreshBtn:SetIsEnabled(false)
   self.activityInst:SendPlayerLike(self.photoData.photos[self.voteIndex].uin)
   self:HideRewardRedPoint()
   self:RefreshCloseTimer()
@@ -369,6 +388,8 @@ function UMG_Activity_TakePhotoCompetition_Vote_C:OnRefreshBtnClick()
   if self.photoData.skip_count >= _G.DataConfigManager:GetActivityGlobalConfig("takephoto_competition_skip_num").num then
     return
   end
+  self.VoteBtn:SetClickAble(false)
+  self.VoteBtn_1:SetClickAble(false)
   self:PlayAnimation(self.Vote_ChangePhoto_Refresh)
 end
 
@@ -440,6 +461,11 @@ end
 
 function UMG_Activity_TakePhotoCompetition_Vote_C:OnActivityPhotoContestLikeNty(rsp)
   if rsp then
+    local skipNum = _G.DataConfigManager:GetActivityGlobalConfig("takephoto_competition_skip_num").num
+    local num = skipNum - (self.photoData.skip_count or 0)
+    if num > 0 then
+      self.RefreshBtn:SetIsEnabled(true)
+    end
     self.likeData = rsp
     if not (self.likeData and self.likeData.photos) or #self.likeData.photos < 2 then
       Log.Error("UMG_Activity_TakePhotoCompetition_Vote_C:OnActivityPhotoContestLikeNty likeData photos is invalid")

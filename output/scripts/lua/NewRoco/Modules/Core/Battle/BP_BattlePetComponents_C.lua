@@ -242,9 +242,9 @@ end
 
 function BP_BattlePetComponents_C:ShowClickTipUI(data)
   if self.ClickTipUIActor then
-    self.ClickTipUIActor:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    Log.Dump(self.ClickTipUI, 3, "BP_BattlePetComponents_C")
     self.ClickTipUIActor:SetData(data, self.pet)
+    self.ClickTipUIActor:Show()
+    Log.Dump(self.ClickTipUI, 3, "BP_BattlePetComponents_C")
   else
     Log.Error("zgx error there is no ClickTipUIActor")
   end
@@ -252,8 +252,7 @@ end
 
 function BP_BattlePetComponents_C:HideClickTipUI()
   if self.ClickTipUIActor then
-    self.ClickTipUIActor:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.ClickTipUIActor.ownerPet = nil
+    self.ClickTipUIActor:Hide()
   else
     Log.Error("zgx error there is no ClickTipUIActor")
   end

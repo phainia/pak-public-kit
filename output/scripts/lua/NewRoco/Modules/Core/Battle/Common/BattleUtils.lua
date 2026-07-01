@@ -258,31 +258,31 @@ function BattleUtils.CalculateBallThresholdBattle(data)
     if BattleUtils.CalculateBallProb_CONDITION(data, ballCfg) then
       return ballCfg.ball_threshold_modify
     else
-      return 0
+      return ballCfg.Noeffect_threshold_modify or 0
     end
   elseif ballCfg.ball_type == ProtoEnum.BallType.BT_NORMAL then
     if BattleUtils.CalculateBallProb_Normal(data, ballCfg) then
       return ballCfg.ball_threshold_modify
     else
-      return 0
+      return ballCfg.Noeffect_threshold_modify or 0
     end
   elseif ballCfg.ball_type == ProtoEnum.BallType.BT_WEATHER then
     if BattleUtils.CalculateBallProb_WEATHER(data, ballCfg) then
       return ballCfg.ball_threshold_modify
     else
-      return 0
+      return ballCfg.Noeffect_threshold_modify or 0
     end
   elseif ballCfg.ball_type == ProtoEnum.BallType.BT_PETSDT then
     if BattleUtils.CalculateBallProb_PETSDT(data, ballCfg) then
       return ballCfg.ball_threshold_modify
     else
-      return 0
+      return ballCfg.Noeffect_threshold_modify or 0
     end
   elseif ballCfg.ball_type == ProtoEnum.BallType.BT_PETACT then
     if BattleUtils.CalculateBallProb_PETACT(data, ballCfg) then
       return ballCfg.ball_threshold_modify
     else
-      return 0
+      return ballCfg.Noeffect_threshold_modify or 0
     end
   end
   return 0
@@ -3413,6 +3413,18 @@ function BattleUtils.GetFashionPerformById(performId, petBaseId)
       return PerformConf, PerformConf.suiteffect4_callout_skill
     end
   end
+end
+
+function BattleUtils.GetCustomizeConditionKeyValue(customizeType, playerSelectedIndex)
+  local index = playerSelectedIndex
+  if not playerSelectedIndex or playerSelectedIndex <= 0 then
+    index = _G.SkillUtils.CustomizeTypeDefaultIndex(customizeType)
+  end
+  local conditionKey = _G.SkillUtils.CustomizeTypeToString(customizeType)
+  local conditionValue = _G.SkillUtils.GetCustomizeAnimName(customizeType, index)
+  local battleConfig = _G.BattleManager.battleRuntimeData and _G.BattleManager.battleRuntimeData.battleConfig
+  Log.DebugFormat("[PlayerAnimationCustomize] customizeType={0}, playerIndex={1}, index={2}, battleConfig={3}, conditionKey={4}, conditionValue={5}", customizeType, playerSelectedIndex, index, battleConfig and battleConfig.id or "nil", conditionKey, conditionValue)
+  return conditionKey, conditionValue
 end
 
 function BattleUtils.IsPlayerCanSeeTarget()

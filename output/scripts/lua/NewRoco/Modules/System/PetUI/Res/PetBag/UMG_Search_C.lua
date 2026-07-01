@@ -1,4 +1,5 @@
 local BagModuleEvent = reload("NewRoco.Modules.System.Bag.BagModuleEvent")
+local PetUtils = require("NewRoco.Utils.PetUtils")
 local UMG_Search_C = _G.NRCPanelBase:Extend("UMG_Search_C")
 
 function UMG_Search_C:OnConstruct()
@@ -46,6 +47,164 @@ function UMG_Search_C:GetHandbookAllBaseId(bookConf)
   return baseId
 end
 
+function UMG_Search_C:GetHandbookAllBaseIdRaw(bookConf)
+  local baseId = {}
+  if bookConf and bookConf.include_petbase_id and #bookConf.include_petbase_id > 0 then
+    for j = 1, #bookConf.include_petbase_id do
+      local include = bookConf.include_petbase_id[j]
+      if include.petbase_id and #include.petbase_id > 0 then
+        for i = 1, #include.petbase_id do
+          table.insert(baseId, include.petbase_id[i])
+        end
+      end
+    end
+  end
+  return baseId
+end
+
+function UMG_Search_C:ExpandEvolutionChain(seedBaseId, resultSet)
+  local backChain = PetUtils.GetEvoListIDs(seedBaseId)
+  local startId
+  if backChain and #backChain > 0 then
+    for i = 1, #backChain do
+      resultSet[backChain[i]] = true
+    end
+    startId = backChain[1]
+  else
+    resultSet[seedBaseId] = true
+    startId = seedBaseId
+  end
+  local queue = {startId}
+  local visited = {
+    [startId] = true
+  }
+  local head = 1
+  while head <= #queue do
+    local curId = queue[head]
+    head = head + 1
+    local conf = _G.DataConfigManager:GetPetbaseConf(curId)
+    if conf and conf.evolution_pet_id then
+      for i = 1, #conf.evolution_pet_id do
+        local nextId = conf.evolution_pet_id[i]
+        if nextId and not visited[nextId] then
+          visited[nextId] = true
+          resultSet[nextId] = true
+          table.insert(queue, nextId)
+        end
+      end
+    end
+  end
+end
+
+local function _ufFind(parent, x)
+  local root = x
+  while parent[root] and parent[root] ~= root do
+    root = parent[root]
+  end
+  local cur = x
+  while parent[cur] and parent[cur] ~= root do
+    local nxt = parent[cur]
+    parent[cur] = root
+    cur = nxt
+  end
+  return root
+end
+
+local function _ufUnion(parent, a, b)
+  local ra = _ufFind(parent, a)
+  local rb = _ufFind(parent, b)
+  if ra == rb then
+    return
+  end
+  if ra < rb then
+    parent[rb] = ra
+  else
+    parent[ra] = rb
+  end
+end
+
+function UMG_Search_C:BuildFamilyMap(chainSet, allHandbookConfs)
+  local parent = {}
+  for baseId, _ in pairs(chainSet) do
+    parent[baseId] = baseId
+  end
+  for baseId, _ in pairs(chainSet) do
+    local conf = _G.DataConfigManager:GetPetbaseConf(baseId)
+    if conf and conf.evolution_pet_id then
+      for i = 1, #conf.evolution_pet_id do
+        local nextId = conf.evolution_pet_id[i]
+        if nextId and chainSet[nextId] then
+          _ufUnion(parent, baseId, nextId)
+        end
+      end
+    end
+  end
+  for baseId, _ in pairs(chainSet) do
+    local backChain = PetUtils.GetEvoListIDs(baseId)
+    if backChain and #backChain > 1 then
+      for i = 2, #backChain do
+        if chainSet[backChain[i]] and chainSet[backChain[i - 1]] then
+          _ufUnion(parent, backChain[i - 1], backChain[i])
+        end
+      end
+    end
+  end
+  if allHandbookConfs then
+    for _, bookConf in pairs(allHandbookConfs) do
+      if bookConf.include_petbase_id then
+        local firstInChain
+        for j = 1, #bookConf.include_petbase_id do
+          local include = bookConf.include_petbase_id[j]
+          if include.petbase_id then
+            for k = 1, #include.petbase_id do
+              local pid = include.petbase_id[k]
+              if pid and chainSet[pid] then
+                if nil == firstInChain then
+                  firstInChain = pid
+                else
+                  _ufUnion(parent, firstInChain, pid)
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  local familyMap = {}
+  for baseId, _ in pairs(chainSet) do
+    familyMap[baseId] = _ufFind(parent, baseId)
+  end
+  return familyMap
+end
+
+function UMG_Search_C:BuildBaseIdHandbookIndex(allHandbookConfs)
+  local index = {}
+  if not allHandbookConfs then
+    return index
+  end
+  for _, bookConf in pairs(allHandbookConfs) do
+    if bookConf and bookConf.id and bookConf.include_petbase_id then
+      for i = 1, #bookConf.include_petbase_id do
+        local include = bookConf.include_petbase_id[i]
+        if include and include.petbase_id then
+          for k = 1, #include.petbase_id do
+            local pid = include.petbase_id[k]
+            if pid and not index[pid] then
+              index[pid] = {
+                handbookId = bookConf.id,
+                sequence = i,
+                subIndex = k
+              }
+            end
+          end
+        end
+      end
+    end
+  end
+  return index
+end
+
 function UMG_Search_C:OnClearText()
   self.InputBox:SetText("")
 end
@@ -80,20 +239,59 @@ function UMG_Search_C:OnScreen(text)
     end
   end
   if #results > 0 then
-    local datas = {}
+    local seedSet = {}
     for _, bookConf in pairs(results) do
-      local baseId = self:GetHandbookAllBaseId(bookConf)
-      for _, id in pairs(baseId) do
-        local data = {petBaseId = id, isShowReduction = false}
-        table.insert(datas, data)
+      local rawBaseIds = self:GetHandbookAllBaseIdRaw(bookConf)
+      for _, id in pairs(rawBaseIds) do
+        seedSet[id] = true
+      end
+    end
+    local chainSet = {}
+    for seedId, _ in pairs(seedSet) do
+      self:ExpandEvolutionChain(seedId, chainSet)
+    end
+    local familyMap = self:BuildFamilyMap(chainSet, self.allPetHandbookConfs)
+    local handbookIndex = self:BuildBaseIdHandbookIndex(self.allPetHandbookConfs)
+    local datas = {}
+    for baseId, _ in pairs(chainSet) do
+      if self.PetDataDic[baseId] then
+        local hbInfo = handbookIndex[baseId]
+        table.insert(datas, {
+          petBaseId = baseId,
+          isShowReduction = false,
+          _familyKey = familyMap[baseId] or baseId,
+          _handbookId = hbInfo and hbInfo.handbookId or math.huge,
+          _handbookSeq = hbInfo and hbInfo.sequence or math.huge,
+          _handbookSub = hbInfo and hbInfo.subIndex or math.huge
+        })
       end
     end
     table.sort(datas, function(a, b)
+      if a._familyKey ~= b._familyKey then
+        return a._familyKey < b._familyKey
+      end
+      if a._handbookId ~= b._handbookId then
+        return a._handbookId < b._handbookId
+      end
+      if a._handbookSeq ~= b._handbookSeq then
+        return a._handbookSeq < b._handbookSeq
+      end
+      if a._handbookSub ~= b._handbookSub then
+        return a._handbookSub < b._handbookSub
+      end
       return a.petBaseId < b.petBaseId
     end)
+    for i = 1, #datas do
+      datas[i]._familyKey = nil
+      datas[i]._handbookId = nil
+      datas[i]._handbookSeq = nil
+      datas[i]._handbookSub = nil
+    end
     self.petList:InitGridView(datas)
     if #datas > 0 then
       self.NRCSwitcher_0:SetActiveWidgetIndex(0)
+    else
+      self.NRCSwitcher_0:SetActiveWidgetIndex(1)
     end
   else
     self.petList:InitGridView({})
@@ -140,6 +338,7 @@ function UMG_Search_C:SetCommonPopUpInfo()
   CommonPopUpData.Btn_RightHandler = self.OnRightBtn
   CommonPopUpData.ClosePanelHandler = self.OnCloseBtn
   CommonPopUpData.CloseBtnSound = 41401010
+  CommonPopUpData.Btn_LeftText = LuaText.umg_rename_3
   self.OnPcCloseHandler = CommonPopUpData.ClosePanelHandler
   self.PopUp2.Btn_Right_GrayState = false
   self.PopUp2:SetPanelInfo(CommonPopUpData)

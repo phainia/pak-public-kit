@@ -212,53 +212,17 @@ function UMG_Pass_AwardMain_C:GetUpdateActiveTime()
 end
 
 function UMG_Pass_AwardMain_C:CalculateNextResetCountdown(curTime, bpTaskResetBeginTime)
-  if not curTime or curTime <= 0 then
-    curTime = os.time()
+  if not curTime or curTime <= 0 or not bpTaskResetBeginTime then
+    return 0
   end
-  local currentDate = os.date("*t", curTime)
-  if not (currentDate and currentDate.year and currentDate.month and currentDate.day) or currentDate.year < 1970 or currentDate.year > 3000 or currentDate.month < 1 or currentDate.month > 12 or currentDate.day < 1 or currentDate.day > 31 then
-    currentDate = os.date("*t")
+  local SECS_PER_DAY = 86400
+  local TZ_OFFSET = 28800
+  local secInDay = (curTime + TZ_OFFSET) % SECS_PER_DAY
+  local remain = bpTaskResetBeginTime - secInDay
+  if remain <= 0 then
+    remain = remain + SECS_PER_DAY
   end
-  local todayResetTime = os.time({
-    year = currentDate.year,
-    month = currentDate.month,
-    day = currentDate.day,
-    hour = 0,
-    min = 0,
-    sec = 0
-  })
-  if not todayResetTime or todayResetTime <= 0 then
-    local nowDate = os.date("*t")
-    todayResetTime = os.time({
-      year = nowDate.year,
-      month = nowDate.month,
-      day = nowDate.day,
-      hour = 0,
-      min = 0,
-      sec = 0
-    })
-  end
-  todayResetTime = todayResetTime + bpTaskResetBeginTime
-  if curTime < todayResetTime then
-    return todayResetTime - curTime
-  else
-    local tomorrowDate = os.date("*t", todayResetTime)
-    tomorrowDate.day = tomorrowDate.day + 1
-    local tomorrowResetTime = os.time({
-      year = tomorrowDate.year,
-      month = tomorrowDate.month,
-      day = tomorrowDate.day,
-      hour = 0,
-      min = 0,
-      sec = 0
-    })
-    if not tomorrowResetTime or tomorrowResetTime <= 0 then
-      tomorrowResetTime = todayResetTime + 86400
-    else
-      tomorrowResetTime = tomorrowResetTime + bpTaskResetBeginTime
-    end
-    return tomorrowResetTime - curTime
-  end
+  return remain
 end
 
 function UMG_Pass_AwardMain_C:DisablePass(pass_id)

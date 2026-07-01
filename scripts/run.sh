@@ -57,9 +57,56 @@ read_aes_file() {
 }
 
 ensure_dotnet() {
+    DOTNET_CMD=()
+    if [[ -n "${DOTNET_BIN:-}" && -x "$DOTNET_BIN" ]]; then
+        DOTNET_CMD=("$DOTNET_BIN")
+        info ".NET: $("${DOTNET_CMD[@]}" --version) ($DOTNET_BIN)"
+        return
+    fi
+
     if have dotnet; then
         DOTNET_BIN="$(command -v dotnet)"
-        info ".NET: $("$DOTNET_BIN" --version)"
+        DOTNET_CMD=("$DOTNET_BIN")
+        info ".NET: $("${DOTNET_CMD[@]}" --version)"
+        return
+    fi
+
+    if [[ -x "$ROOT/.tools/dotnet/dotnet" ]]; then
+        DOTNET_BIN="$ROOT/.tools/dotnet/dotnet"
+        DOTNET_CMD=("$DOTNET_BIN")
+        export DOTNET_ROOT="$ROOT/.tools/dotnet"
+        export PATH="$DOTNET_ROOT:$PATH"
+        info ".NET: $("${DOTNET_CMD[@]}" --version) (local)"
+        return
+    fi
+
+    if have nix; then
+        local nix_pkg version
+        nix_pkg="${NRC_DOTNET_NIX_PACKAGE:-nixpkgs#dotnet-sdk_10}"
+        DOTNET_CMD=(nix --extra-experimental-features "nix-command flakes" shell "$nix_pkg" --command dotnet)
+        if version="$("${DOTNET_CMD[@]}" --version 2>/dev/null)"; then
+            info ".NET: $version (nix: $nix_pkg)"
+            return
+        fi
+        DOTNET_CMD=()
+        warn "Nix dotnet package failed: $nix_pkg"
+        warn "Set NRC_DOTNET_NIX_PACKAGE to the package you use, e.g. nixpkgs#dotnet-sdk_10"
+    fi
+
+    if [[ "${NRC_DOTNET_AUTO_INSTALL:-1}" != "1" ]]; then
+        error ".NET SDK not found. Install/enter Nix env, set DOTNET_BIN, or set NRC_DOTNET_NIX_PACKAGE."
+    fi
+
+    if have nix; then
+        warn "Falling back to local .NET install because Nix dotnet was not usable"
+    fi
+
+    if [[ -x "$ROOT/.tools/dotnet/dotnet" ]]; then
+        DOTNET_BIN="$ROOT/.tools/dotnet/dotnet"
+        DOTNET_CMD=("$DOTNET_BIN")
+        export DOTNET_ROOT="$ROOT/.tools/dotnet"
+        export PATH="$DOTNET_ROOT:$PATH"
+        info ".NET: $("${DOTNET_CMD[@]}" --version) (local)"
         return
     fi
 
@@ -74,9 +121,10 @@ ensure_dotnet() {
         || error "Failed to install .NET SDK locally"
 
     DOTNET_BIN="$ROOT/.tools/dotnet/dotnet"
+    DOTNET_CMD=("$DOTNET_BIN")
     export DOTNET_ROOT="$ROOT/.tools/dotnet"
     export PATH="$DOTNET_ROOT:$PATH"
-    info ".NET installed: $("$DOTNET_BIN" --version)"
+    info ".NET installed: $("${DOTNET_CMD[@]}" --version)"
 }
 
 ensure_node() {
@@ -300,8 +348,8 @@ rm -rf "$TEMP_DIR"/.ipa_extract
 find "$TEMP_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf {} + 2>/dev/null || true
 mkdir -p "$TEMP_DIR"
 
-"$DOTNET_BIN" restore "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" /p:SkipNatives=true
-"$DOTNET_BIN" run /p:SkipNatives=true --project "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" -- "$AES_KEY" "$PAKS_DIR" "$TEMP_DIR"
+"${DOTNET_CMD[@]}" restore "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" /p:SkipNatives=true
+"${DOTNET_CMD[@]}" run /p:SkipNatives=true --project "$SCRIPT_DIR/extract_paks/ExtractPaks.csproj" -- "$AES_KEY" "$PAKS_DIR" "$TEMP_DIR"
 extracted=$(find "$TEMP_DIR" -type f | wc -l | tr -d ' ')
 info "Files extracted: $extracted"
 

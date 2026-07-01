@@ -10,4 +10,5 @@ CommonPopUpModuleCmd.CloseNPCShopItemRewardsPanel = "CommonPopUpModuleCmd.CloseN
 CommonPopUpModuleCmd.ChangeScene = "CommonPopUpModuleCmd.ChangeScene"
 CommonPopUpModuleCmd.IsItemRewardsPanelOpen = "CommonPopUpModuleCmd.IsItemRewardsPanelOpen"
 CommonPopUpModuleCmd.OpenActivityCommonPanel = "CommonPopUpModuleCmd.OpenActivityCommonPanel"
+CommonPopUpModuleCmd.OpenActivityCommonPanelById = "CommonPopUpModuleCmd.OpenActivityCommonPanelById"
 return CommonPopUpModuleCmd

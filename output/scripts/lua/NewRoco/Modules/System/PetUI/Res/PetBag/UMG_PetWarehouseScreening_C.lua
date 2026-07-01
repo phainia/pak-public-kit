@@ -112,7 +112,8 @@ function UMG_PetWarehouseScreening_C:OnActive()
   end
   self.GainTheTime:InitGridView(timeDatas)
   self.TimeRewindList:InitGridView(self.TraceBackConfigs)
-  if #self.TraceBackConfigs > 0 and PetUtils.CheckCurIsInTraceBackTime() then
+  local isShowTraceback = _G.NRCModeManager:DoCmd(_G.PetUIModuleCmd.GetCurrentSeasonkRoundCount) > 0
+  if #self.TraceBackConfigs > 0 and PetUtils.CheckCurIsInTraceBackTime() and isShowTraceback then
     self.TimeRewind:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.TimeRewind:SetVisibility(UE4.ESlateVisibility.Collapsed)

@@ -242,8 +242,6 @@ function UMG_Activity_RoyalGriffin_C:OnTraceBtnClick()
   end
   if self.activityInst:IsInProgress() then
     ActivityUtils.DoActivityOptionCmd(self.curSelectFlowerData.activity_option_id)
-  else
-    _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, _G.LuaText.activity_expired_interaction_tip)
   end
 end
 
@@ -261,12 +259,12 @@ end
 
 function UMG_Activity_RoyalGriffin_C:OpenRewardPanel()
   self:PlayAnimation(self.click_1)
-  if self.activityInst:IsInProgress() then
-    _G.NRCAudioManager:PlaySound2DAuto(41401004, "UMG_Activity_RoyalGriffin_C:OpenRewardPanel")
-    _G.NRCModuleManager:DoCmd(_G.ActivityModuleCmd.OnCmdOpenOrdinaryReward, self.rewardData or {})
-  else
-    _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, _G.LuaText.activity_expired_interaction_tip)
+  _G.NRCAudioManager:PlaySound2DAuto(41401004, "UMG_Activity_RoyalGriffin_C:OpenRewardPanel")
+  if self.activityInst and self.activityInst:IsActivityInactive() then
+    ActivityUtils.ShowActivityExpiredTips()
+    return
   end
+  _G.NRCModuleManager:DoCmd(_G.ActivityModuleCmd.OnCmdOpenOrdinaryReward, self.rewardData or {})
 end
 
 function UMG_Activity_RoyalGriffin_C:OpenMedalRecord()

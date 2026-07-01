@@ -445,7 +445,7 @@ end
 function TipsModule:DoCmdOpenDialog(DialogContext, bReconnect, Layer)
   if not DialogContext then
     Log.Error("TipsModule:DoCmdOpenDialog DialogContext is nil")
-    return false
+    return false, nil
   end
   if self.bReConnectPopUp == false then
     local queueElement = {
@@ -455,12 +455,26 @@ function TipsModule:DoCmdOpenDialog(DialogContext, bReconnect, Layer)
     }
     self.dialogPq:EnQueue(queueElement)
     self:TryShowDialog()
-    return true
+    return true, queueElement
   end
   if DialogContext.bReconnect == true then
     self.bReConnectPopUp = true
   end
-  return false
+  return false, nil
+end
+
+function TipsModule:OnCmdRemoveTargetDialog(queueElement)
+  if self:HasPanel("UMG_Dialog") then
+    local DialogCtrl = self:GetPanel("UMG_Dialog")
+    if DialogCtrl then
+      local context = DialogCtrl.context
+      if context and context == queueElement.context then
+        DialogCtrl:TryClose()
+        return
+      end
+    end
+  end
+  self.dialogPq:Remove(queueElement)
 end
 
 function TipsModule:DoCmdOpenDialog2(DialogContext, Timer, Time, bReconnect)

@@ -10,6 +10,7 @@ function PreDownloadActivityObject:OnConstruct(_conf, _briefInfo)
   self.bStoppedByUser = false
   self.bAutoStart = false
   _G.NRCEventCenter:RegisterEvent("PreDownloadProgressNotify", self, PreDownloadEvent.PreDownloadBatchReturn, self.OnPreDownloadFinished)
+  _G.NRCEventCenter:RegisterEvent("PreDownloadActivityObject", self, PreDownloadEvent.PreDownloadStart, self.OnEraseRedPoint)
 end
 
 function PreDownloadActivityObject:OnPreDownloadFinished(bSuccess)
@@ -24,6 +25,10 @@ function PreDownloadActivityObject:OnPreDownloadFinished(bSuccess)
   else
     Log.Error("PreDownloadActivityObject OnPreDownloadFinished failed")
   end
+end
+
+function PreDownloadActivityObject:OnEraseRedPoint()
+  _G.NRCModuleManager:DoCmd(_G.RedPointModuleCmd.EraseRedPoint, 498)
 end
 
 function PreDownloadActivityObject:NotifyDownloadFinished()
@@ -121,6 +126,7 @@ end
 
 function PreDownloadActivityObject:OnDestruct()
   _G.NRCEventCenter:UnRegisterEvent(self, PreDownloadEvent.PreDownloadBatchReturn, self.OnPreDownloadFinished)
+  _G.NRCEventCenter:UnRegisterEvent(self, PreDownloadEvent.PreDownloadStart, self.OnEraseRedPoint)
 end
 
 return PreDownloadActivityObject

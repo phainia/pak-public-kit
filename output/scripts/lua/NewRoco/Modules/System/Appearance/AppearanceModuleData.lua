@@ -982,6 +982,8 @@ function AppearanceModuleData:CheckSuitTime(suitId, count)
     local activityStartTime = ActivityUtils.ToTimestamp(suitConf.activity_time) * 1000
     if svrTime < activityStartTime then
       return false
+    else
+      return true
     end
   end
   local fashionGoodsConf = self.FashionIdToGoodsIdMap[suitId]

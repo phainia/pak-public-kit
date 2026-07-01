@@ -78,11 +78,19 @@ end
 function BP_NRCScrollView_C:UpdateList(itemData, index)
   if index > 0 then
     self._listDatas[index] = itemData
-    self:RefreshItemByIndex(index - 1)
+    if self.bRecycle then
+      self:RefreshItemByIndex(index - 1)
+    else
+      self:RefreshItemByIndex(index)
+    end
   else
     self._listDatas = itemData
     for i = 1, #self._listDatas do
-      self:RefreshItemByIndex(i - 1)
+      if self.bRecycle then
+        self:RefreshItemByIndex(i - 1)
+      else
+        self:RefreshItemByIndex(i)
+      end
     end
   end
 end
@@ -132,7 +140,11 @@ function BP_NRCScrollView_C:AddOrRemoveItemEx(bAdd, index, itemData)
       self:AddOrRemoveCPP(true, index)
     end
     if self.RefreshItemByIndex then
-      self:RefreshItemByIndex(index - 1)
+      if self.bRecycle then
+        self:RefreshItemByIndex(index - 1)
+      else
+        self:RefreshItemByIndex(index)
+      end
     end
     local ItemTemplate = self:GetItemByIndex(index - 1)
     if ItemTemplate and ItemTemplate.AddOrRemove then

@@ -12,6 +12,39 @@ end
 function UMG_PetEggItem_C:OnAddEventListener()
 end
 
+function UMG_PetEggItem_C:SetEggIconWithItemId(itemId)
+  if nil == itemId then
+    Log.Error("UMG_PetEggItem_C:SetEggIconWithItemId: itemId is nil")
+    return
+  end
+  local bagItemConf = _G.DataConfigManager:GetBagItemConf(itemId)
+  if nil == bagItemConf then
+    Log.Error("UMG_PetEggItem_C:SetEggIconWithItemId: bagItemConf is nil")
+    return
+  end
+  local petEggConfId
+  for i, v in pairs(bagItemConf.item_behavior or {}) do
+    if v and v.use_action == _G.Enum.ItemBehavior.IB_PET_EGG_HATCH and v.ratio and v.ratio[1] then
+      petEggConfId = v.ratio[1]
+      break
+    end
+  end
+  if nil == petEggConfId then
+    Log.Error("UMG_PetEggItem_C:SetEggIconWithItemId: petEggConfId is nil")
+    return
+  end
+  local petEggConf = _G.DataConfigManager:GetPetEggConf(petEggConfId)
+  if nil == petEggConf then
+    Log.Error("UMG_PetEggItem_C:SetEggIconWithItemId: petEggConf is nil")
+    return
+  end
+  local tempEggInfo = {
+    precious_egg_type = petEggConf.precious_egg_type
+  }
+  local iconPath = bagItemConf.icon
+  self:SetEggIcon(tempEggInfo, iconPath)
+end
+
 function UMG_PetEggItem_C:SetEggIcon(eggInfo, icon_path, panel)
   self.eggInfo = eggInfo
   self.iconPath = icon_path

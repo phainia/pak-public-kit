@@ -38,6 +38,7 @@ function UMG_Battle_ChangePanel_C:Construct()
   self.isUserScrollingSinceLastPress = false
   self.lastFrameScrollingState = false
   self.ArcScrollBar:SetRenderOpacity(0)
+  self:InitClickPetBtns()
   self.stateManager = WidgetStateManager()
   local initState = {}
   initState.onPetClickCallback = self.OnPetIconClicked
@@ -62,7 +63,9 @@ function UMG_Battle_ChangePanel_C:OnDestruct()
 end
 
 function UMG_Battle_ChangePanel_C:Destruct()
+  self.syncTickInfos = nil
   self:RemoveListener()
+  self:UninitClickPetBtns()
   table.clear(self.items)
   self.items = nil
   self.TweenInCallback = nil
@@ -108,7 +111,7 @@ function UMG_Battle_ChangePanel_C:WaitingRecycle()
 end
 
 function UMG_Battle_ChangePanel_C:AddListener()
-  _G.BattleEventCenter:Bind(self, BattleEvent.BATTLE_CLICKED_BAG_PET, BattleEvent.BATTLE_BEGING_USE_CHANGE_PET_SKILL, BattleEvent.BATTLE_CLICKED_UI_CANCELPLAYERSKILL, BattleEvent.UI_HIDE, BattleEvent.UI_USE_PLAYERSKILL_UPDATE, BattleEvent.BATTLE_CANCEL_USE_PLAYERSKILL, BattleEvent.UPDATE_DATA, BattleEvent.BATTLE_CLICKED_PET)
+  _G.BattleEventCenter:Bind(self, BattleEvent.BATTLE_CLICKED_BAG_PET, BattleEvent.BATTLE_BEGING_USE_CHANGE_PET_SKILL, BattleEvent.BATTLE_CLICKED_UI_CANCELPLAYERSKILL, BattleEvent.UI_HIDE, BattleEvent.UI_USE_PLAYERSKILL_UPDATE, BattleEvent.BATTLE_CANCEL_USE_PLAYERSKILL, BattleEvent.UPDATE_DATA, BattleEvent.BATTLE_CLICKED_PET, BattleEvent.BATTLE_CLICK_TIP_UI_SHOW, BattleEvent.BATTLE_CLICK_TIP_UI_HIDE)
 end
 
 function UMG_Battle_ChangePanel_C:RemoveListener()
@@ -209,6 +212,10 @@ function UMG_Battle_ChangePanel_C:OnBattleEvent(eventName, ...)
   elseif eventName == BattleEvent.UPDATE_DATA then
     self:UpdatePlayerData(...)
   elseif eventName == BattleEvent.BATTLE_CLICKED_PET then
+  elseif eventName == BattleEvent.BATTLE_CLICK_TIP_UI_SHOW then
+    self:OnClickTipUIShow(...)
+  elseif eventName == BattleEvent.BATTLE_CLICK_TIP_UI_HIDE then
+    self:OnClickTipUIHide(...)
   end
 end
 
@@ -486,6 +493,217 @@ function UMG_Battle_ChangePanel_C:OnPetClicked(pet)
   end
 end
 
+function UMG_Battle_ChangePanel_C:InitClickPetBtns()
+  self.clickTipUIMap = {}
+  if self.ClickPetBtn1 then
+    self.ClickPetBtn1:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ClickPetBtn1.OnClicked:Add(self, self.OnClickPetBtn1)
+  end
+  if self.ClickPetBtn2 then
+    self.ClickPetBtn2:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ClickPetBtn2.OnClicked:Add(self, self.OnClickPetBtn2)
+  end
+end
+
+function UMG_Battle_ChangePanel_C:UninitClickPetBtns()
+  if self.ClickPetBtn1 then
+    self.ClickPetBtn1.OnClicked:Remove(self, self.OnClickPetBtn1)
+  end
+  if self.ClickPetBtn2 then
+    self.ClickPetBtn2.OnClicked:Remove(self, self.OnClickPetBtn2)
+  end
+  self.clickTipUIMap = nil
+end
+
+function UMG_Battle_ChangePanel_C:GetValidPosInField(ownerPet)
+  if not ownerPet or not ownerPet.card then
+    return nil
+  end
+  if ownerPet.teamEnm ~= BattleEnum.Team.ENUM_TEAM then
+    return nil
+  end
+  local posInField = ownerPet.card.posInField
+  if 1 == posInField or 2 == posInField then
+    return posInField
+  end
+  return nil
+end
+
+function UMG_Battle_ChangePanel_C:GetClickPetBtnByPos(posInField)
+  if 1 == posInField then
+    return self.ClickPetBtn1
+  elseif 2 == posInField then
+    return self.ClickPetBtn2
+  end
+  return nil
+end
+
+function UMG_Battle_ChangePanel_C:OnClickTipUIShow(clickTipUI, ownerPet, clickBtn)
+  local posInField = self:GetValidPosInField(ownerPet)
+  if not posInField then
+    return
+  end
+  local targetBtn = self:GetClickPetBtnByPos(posInField)
+  if not targetBtn then
+    return
+  end
+  self.clickTipUIMap = self.clickTipUIMap or {}
+  self.clickTipUIMap[posInField] = clickTipUI
+  targetBtn:SetVisibility(UE4.ESlateVisibility.Visible)
+  self:SyncClickPetBtnTransform(targetBtn, ownerPet, clickBtn)
+  self:StartSyncTick(posInField, targetBtn, ownerPet, clickBtn)
+end
+
+function UMG_Battle_ChangePanel_C:StartSyncTick(posInField, targetBtn, ownerPet, clickBtn)
+  if not targetBtn or not ownerPet then
+    return
+  end
+  self.syncTickInfos = self.syncTickInfos or {}
+  if self.syncTickInfos[posInField] then
+    self:StopSyncTick(posInField)
+  end
+  self.syncTickInfos[posInField] = {
+    targetBtn = targetBtn,
+    ownerPet = ownerPet,
+    clickBtn = clickBtn,
+    lastUpdateTime = 0,
+    updateInterval = 0.1
+  }
+  BattleLog.WJFDebug("[StartSyncTick]", "\229\188\128\229\167\139\229\174\154\230\156\159\229\144\140\230\173\165\229\143\183\228\189\141", posInField, "\228\189\191\231\148\168Tick\228\186\139\228\187\182")
+end
+
+function UMG_Battle_ChangePanel_C:StopSyncTick(posInField)
+  if not self.syncTickInfos or not self.syncTickInfos[posInField] then
+    return
+  end
+  self.syncTickInfos[posInField] = nil
+  BattleLog.WJFDebug("[StopSyncTick]", "\229\129\156\230\173\162\229\144\140\230\173\165\229\143\183\228\189\141", posInField)
+end
+
+function UMG_Battle_ChangePanel_C:HandleSyncTick(DeltaTime)
+  if not self.syncTickInfos or not next(self.syncTickInfos) then
+    return
+  end
+  for posInField, info in pairs(self.syncTickInfos) do
+    if info and info.targetBtn and info.ownerPet then
+      info.lastUpdateTime = info.lastUpdateTime + DeltaTime
+      if info.lastUpdateTime >= info.updateInterval then
+        self:SyncClickPetBtnTransform(info.targetBtn, info.ownerPet, info.clickBtn)
+        info.lastUpdateTime = 0
+      end
+    else
+      self.syncTickInfos[posInField] = nil
+    end
+  end
+end
+
+function UMG_Battle_ChangePanel_C:SyncClickPetBtnTransform(targetBtn, ownerPet, clickBtn)
+  if not targetBtn or not UE4.UObject.IsValid(targetBtn) then
+    return
+  end
+  if nil == ownerPet then
+    return
+  end
+  local btnSlot = targetBtn.Slot
+  local parent = targetBtn:GetParent()
+  if not parent then
+    return
+  end
+  local clickBtnValid = clickBtn and UE4.UObject.IsValid(clickBtn)
+  local btnSize = UE4.FVector2D(100, 100)
+  if clickBtnValid and clickBtn.GetDesiredSize then
+    local desiredSize = clickBtn:GetDesiredSize()
+    if desiredSize and desiredSize.X > 0 and desiredSize.Y > 0 then
+      btnSize = desiredSize
+    end
+  end
+  local worldPos
+  local components = ownerPet.battlePetComponents
+  if components and components.ClickTipUIOffset and UE4.UObject.IsValid(components.ClickTipUIOffset) then
+    worldPos = components.ClickTipUIOffset:K2_GetComponentLocation()
+  else
+    worldPos = ownerPet:GetActorLocation()
+  end
+  local world = _G.UE4Helper.GetCurrentWorld()
+  if not world then
+    return
+  end
+  local playerController = UE4.UGameplayStatics.GetPlayerController(world, 0)
+  if not playerController then
+    return
+  end
+  local finalScreenPos
+  if clickBtnValid and clickBtn.GetCachedGeometry then
+    local clickBtnGeometry = clickBtn:GetCachedGeometry()
+    if clickBtnGeometry then
+      local clickBtnAbsolutePos = UE4.USlateBlueprintLibrary.LocalToAbsolute(clickBtnGeometry, UE4.FVector2D(0, 0))
+      if 0 ~= clickBtnAbsolutePos.X or 0 ~= clickBtnAbsolutePos.Y then
+        finalScreenPos = clickBtnAbsolutePos
+      end
+    end
+  end
+  if not finalScreenPos then
+    local screenPos, projected = playerController:Abs_ProjectWorldLocationToScreen(worldPos, nil, true)
+    if projected and screenPos then
+      finalScreenPos = screenPos
+    end
+  end
+  if not finalScreenPos then
+    return
+  end
+  local localPos
+  if parent.GetCachedGeometry then
+    local parentGeometry = parent:GetCachedGeometry()
+    if parentGeometry then
+      local parentAbsolutePos = UE4.USlateBlueprintLibrary.LocalToAbsolute(parentGeometry, UE4.FVector2D(0, 0))
+      localPos = UE4.FVector2D(finalScreenPos.X - parentAbsolutePos.X, finalScreenPos.Y - parentAbsolutePos.Y)
+    end
+  end
+  if not localPos then
+    return
+  end
+  local finalPos = UE4.FVector2D(localPos.X - btnSize.X * 0.5, localPos.Y - btnSize.Y * 0.5)
+  local viewportScale = UE4.UWidgetLayoutLibrary.GetViewportScale(world)
+  if viewportScale and viewportScale > 0 then
+    finalPos = UE4.FVector2D(finalPos.X / viewportScale, finalPos.Y / viewportScale)
+  end
+  if btnSlot.SetPosition then
+    btnSlot:SetPosition(finalPos)
+  end
+end
+
+function UMG_Battle_ChangePanel_C:OnClickTipUIHide(clickTipUI)
+  if not self.clickTipUIMap then
+    return
+  end
+  for posInField, ui in pairs(self.clickTipUIMap) do
+    if ui == clickTipUI then
+      local targetBtn = self:GetClickPetBtnByPos(posInField)
+      if targetBtn then
+        targetBtn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
+      self.clickTipUIMap[posInField] = nil
+      self:StopSyncTick(posInField)
+      break
+    end
+  end
+end
+
+function UMG_Battle_ChangePanel_C:OnClickPetBtn1()
+  self:OnClickPetBtnCommon(1)
+end
+
+function UMG_Battle_ChangePanel_C:OnClickPetBtn2()
+  self:OnClickPetBtnCommon(2)
+end
+
+function UMG_Battle_ChangePanel_C:OnClickPetBtnCommon(posInField)
+  local clickTipUI = self.clickTipUIMap and self.clickTipUIMap[posInField]
+  if clickTipUI and UE4.UObject.IsValid(clickTipUI) and clickTipUI.OnClickPet then
+    clickTipUI:OnClickPet()
+  end
+end
+
 function UMG_Battle_ChangePanel_C:PCModeScreenSetting()
   local pcKeyLoaderVisibility = UE.ESlateVisibility.Collapsed
   local arrowVisibility = UE.ESlateVisibility.SelfHitTestInvisible
@@ -654,6 +872,7 @@ function UMG_Battle_ChangePanel_C:DisposeHideContext(hideContext)
 end
 
 function UMG_Battle_ChangePanel_C:OnTick(deltaTime)
+  self:HandleSyncTick(deltaTime)
   self.ArcScrollView:OnTick(deltaTime)
   local scrollPercentage = self.ArcScrollView:GetScrollOffset() / self.ArcScrollView:GetMaxScrollOffset()
   self:SetScrollBarPosition(scrollPercentage)

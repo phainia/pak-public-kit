@@ -193,6 +193,10 @@ local function PlayOverSkillTask(self, callback)
   skill:SetCharacters(Characters)
   skill.BattleGenderType = self.WinPlayer.roleInfo.base.sex
   skill:SetCaster(self.WinPlayer.model)
+  local customizeType = _G.Enum.PlayerAnimationCustomizeType.PACT_PVP_LOSE_NORMAL
+  local playerSelectedIndex = self.LosePlayer:GetAnimationCustomizeIndex(customizeType)
+  local key, value = _G.BattleUtils.GetCustomizeConditionKeyValue(customizeType, playerSelectedIndex)
+  skill:GetBlackboard():SetValueAsString(key, value)
   if self.WinPlayer.model and self.WinPlayer.model.mesh then
     self.WinPlayer.model.mesh.BoundsScale = 20
     self.WinPlayer.model.mesh.bNRCUseFixedSkelBounds = false

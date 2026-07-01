@@ -8,6 +8,7 @@ local BattlePassModuleEvent = require("NewRoco.Modules.System.BattlePass.BattleP
 local MainUIModuleEvent = require("NewRoco.Modules.System.MainUI.MainUIModuleEvent")
 local JsonUtils = require("Common.JsonUtils")
 local PetUtils = require("NewRoco.Utils.PetUtils")
+local TimeUtils = require("NewRoco.Modules.System.EnvSystem.TimeUtils")
 local BattlePassModule = NRCModuleBase:Extend("BattlePassModule")
 
 function BattlePassModule:OnConstruct()
@@ -798,19 +799,7 @@ function BattlePassModule:ConvertToTimeSeconds(timeStr)
   if nil == timeStr then
     return 0
   end
-  local year, month, day, hour, min, sec = timeStr:match("(%d+)%-(%d+)%-(%d+) (%d+):(%d+):(%d+)")
-  if nil == year or nil == month or nil == day or nil == hour or nil == min or nil == sec then
-    return 0
-  end
-  local local_time = os.time({
-    year = tonumber(year),
-    month = tonumber(month),
-    day = tonumber(day),
-    hour = tonumber(hour),
-    min = tonumber(min),
-    sec = tonumber(sec)
-  })
-  return local_time
+  return TimeUtils.ToTimeStamp(timeStr) or 0
 end
 
 function BattlePassModule:GetCurServerTime()

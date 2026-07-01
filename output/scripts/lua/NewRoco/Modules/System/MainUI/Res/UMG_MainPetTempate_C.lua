@@ -139,6 +139,28 @@ function UMG_MainPetTempate_C:OpenSkillPanel()
   })
 end
 
+function UMG_MainPetTempate_C:UpdateEnergyState()
+  if self.CurPlayingTipsType and self.CurPlayingTipsType == TipEnum.MainPetTipsType.Energy then
+    return
+  end
+  if self.uiData and self.uiData.PetData and self.uiData.PetData.gid then
+    local petData = _G.DataModelMgr.PlayerDataModel:GetPetDataByGid(self.uiData.PetData.gid)
+    if petData then
+      local curEnergy = petData.energy
+      if 0 == curEnergy then
+        self.Energy:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        self.Switcher_90:SetActiveWidgetIndex(1)
+        self.Switcher:SetActiveWidgetIndex(1)
+        self.PetLevel_4:SetText(tostring(curEnergy))
+        self.EmptyEnergy:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        self.PetLevel_4:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      else
+        self.EmptyEnergy:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
+    end
+  end
+end
+
 function UMG_MainPetTempate_C:UpdateDiedState()
   local curHp = PetUtils.GetPetAdditionalByType(self.uiData.PetData, _G.ProtoEnum.AttributeType.AT_HPCUR)
   if curHp <= 0 then
@@ -183,6 +205,7 @@ function UMG_MainPetTempate_C:UpdateItemInfo()
     self.oldRecycle = self.uiData.RecycleState
     self:ShowSelected(self.uiData.SelectedState)
     self:UpdateDiedState()
+    self:UpdateEnergyState()
     self:UpdateFriendRideStateShow()
   end
 end

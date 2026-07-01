@@ -1002,42 +1002,32 @@ function UMG_PetSkillMain_C:SkillRuleSortHandle(skillList)
   if isReverse then
     if sortType == Enum.SkillSequenceSwitch.SSS_DAM_TYPE_DOWN then
       function sortFunc(a, b)
-        return self:CompareSkills(a, b, "damType", "cost", "default")
+        return self:CompareSkills(a, b, PetUIModuleEnum.PetSkillSortRuleType.DamType, PetUIModuleEnum.PetSkillSortRuleType.Cost, PetUIModuleEnum.PetSkillSortRuleType.Default)
       end
     elseif sortType == Enum.SkillSequenceSwitch.SSS_ENERGY_DOWN then
       function sortFunc(a, b)
-        return self:CompareSkills(a, b, "cost", "damType", "default")
+        return self:CompareSkills(a, b, PetUIModuleEnum.PetSkillSortRuleType.Cost, PetUIModuleEnum.PetSkillSortRuleType.DamType, PetUIModuleEnum.PetSkillSortRuleType.Default)
       end
     elseif sortType == Enum.SkillSequenceSwitch.SSS_LEARN_SEQUENCE_DOWN then
       function sortFunc(a, b)
-        return self:CompareSkills(a, b, "default", "damType", "cost")
+        return self:CompareSkills(a, b, PetUIModuleEnum.PetSkillSortRuleType.Default, PetUIModuleEnum.PetSkillSortRuleType.DamType, PetUIModuleEnum.PetSkillSortRuleType.Cost)
       end
     end
   elseif sortType == Enum.SkillSequenceDefault.SSD_DAM_TYPE_UP then
     function sortFunc(a, b)
-      return self:CompareSkills(a, b, "damType", "cost", "default")
+      return self:CompareSkills(a, b, PetUIModuleEnum.PetSkillSortRuleType.DamType, PetUIModuleEnum.PetSkillSortRuleType.Cost, PetUIModuleEnum.PetSkillSortRuleType.Default)
     end
   elseif sortType == Enum.SkillSequenceDefault.SSD_ENERGY_UP then
     function sortFunc(a, b)
-      return self:CompareSkills(a, b, "cost", "damType", "default")
+      return self:CompareSkills(a, b, PetUIModuleEnum.PetSkillSortRuleType.Cost, PetUIModuleEnum.PetSkillSortRuleType.DamType, PetUIModuleEnum.PetSkillSortRuleType.Default)
     end
   elseif sortType == Enum.SkillSequenceDefault.SSD_LEARN_SEQUENCE_UP then
     function sortFunc(a, b)
-      return self:CompareSkills(a, b, "default", "damType", "cost")
+      return self:CompareSkills(a, b, PetUIModuleEnum.PetSkillSortRuleType.Default, PetUIModuleEnum.PetSkillSortRuleType.DamType, PetUIModuleEnum.PetSkillSortRuleType.Cost)
     end
   end
   if sortFunc then
-    self:StableSort(skillList, sortFunc)
-  end
-end
-
-function UMG_PetSkillMain_C:StableSort(list, compareFunc)
-  for i = 2, #list do
-    local j = i
-    while j > 1 and compareFunc(list[j], list[j - 1]) do
-      list[j], list[j - 1] = list[j - 1], list[j]
-      j = j - 1
-    end
+    table.stableSort(skillList, sortFunc)
   end
 end
 
@@ -1070,13 +1060,13 @@ function UMG_PetSkillMain_C:CompareSkills(a, b, primaryKey, secondaryKey, tertia
   local primaryA = self:GetCompareValue(confA, primaryKey, 3)
   local primaryB = self:GetCompareValue(confB, primaryKey, 3)
   if primaryA ~= primaryB then
-    if self.skillSortReverse and "default" ~= primaryKey then
+    if self.skillSortReverse and primaryKey ~= PetUIModuleEnum.PetSkillSortRuleType.Default then
       return primaryA > primaryB
     else
       return primaryA < primaryB
     end
   end
-  if "default" ~= primaryKey then
+  if primaryKey ~= PetUIModuleEnum.PetSkillSortRuleType.Default then
     local secondaryA = self:GetCompareValue(confA, secondaryKey)
     local secondaryB = self:GetCompareValue(confB, secondaryKey)
     if secondaryA ~= secondaryB then
@@ -1096,11 +1086,11 @@ function UMG_PetSkillMain_C:GetCompareValue(conf, key, level)
     Log.Error("CompareSkills: conf is nil")
     return nil
   end
-  if "damType" == key then
+  if key == PetUIModuleEnum.PetSkillSortRuleType.DamType then
     return self:GetSkillDamTypeOrderFromConf(conf, level)
-  elseif "cost" == key then
+  elseif key == PetUIModuleEnum.PetSkillSortRuleType.Cost then
     return conf.energy_cost[1]
-  elseif "default" == key then
+  elseif key == PetUIModuleEnum.PetSkillSortRuleType.Default then
     return self:GetDefaultSortWeighting(conf)
   end
 end
@@ -1126,34 +1116,15 @@ function UMG_PetSkillMain_C:GetDefaultSortWeighting(skillConf)
   if not skillConf then
     return Weighting
   end
-  local skillSourceList = _G.NRCModeManager:DoCmd(_G.PetUIModuleCmd.GetSkillSource, skillConf.id, self.uiData.petBaseConf.id)
-  if #skillSourceList > 0 then
-    if skillSourceList[1] == Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP then
-      local levelSkillConf = _G.NRCModeManager:DoCmd(_G.PetUIModuleCmd.GetLevelSkillConfByPetBaseId, self.uiData.petBaseConf.id)
-      if levelSkillConf then
-        if self.skillSortReverse then
-          for i, v in ipairs(levelSkillConf.level) do
-            if v.param == skillConf.id then
-              Weighting = self.petMaxLevelLimit - v.level_point
-              break
-            end
-          end
-        else
-          for i, v in ipairs(levelSkillConf.level) do
-            if v.param == skillConf.id then
-              Weighting = v.level_point
-              break
-            end
-          end
-        end
-      end
-    elseif skillSourceList[1] == Enum.PetNewSkillSrc.PNSS_LEGENDARY then
-      Weighting = self.petMaxLevelLimit + 1
-    elseif skillSourceList[1] == Enum.PetNewSkillSrc.PNSS_SKILL_BOOK then
-      Weighting = self.petMaxLevelLimit + 2
-    elseif skillSourceList[1] == Enum.PetNewSkillSrc.PNSS_PET_BLOOD then
-      Weighting = self.petMaxLevelLimit + 3
-    end
+  local flags, levelUpLevel = _G.NRCModeManager:DoCmd(_G.PetUIModuleCmd.GetSkillSourceFlag, skillConf.id, self.uiData.petBaseConf.id)
+  if 0 ~= flags & 1 << Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP then
+    return self.skillSortReverse and self.petMaxLevelLimit - levelUpLevel or levelUpLevel
+  elseif 0 ~= flags & 1 << Enum.PetNewSkillSrc.PNSS_LEGENDARY then
+    return self.petMaxLevelLimit + 1
+  elseif 0 ~= flags & 1 << Enum.PetNewSkillSrc.PNSS_SKILL_BOOK then
+    return self.petMaxLevelLimit + 2
+  elseif 0 ~= flags & 1 << Enum.PetNewSkillSrc.PNSS_PET_BLOOD then
+    return self.petMaxLevelLimit + 3
   end
   return Weighting
 end

@@ -149,7 +149,6 @@ function UMG_PVP_FirstReward_C:InitData()
   self.data = self.module:GetData("PVPRankedMatchModuleData")
   self.dataList = self.data:GetCurStarReward()
   self.season_record_data = {}
-  self:SetTitle(self.data:GetCurSeasonId())
 end
 
 function UMG_PVP_FirstReward_C:RefreshUI()
@@ -194,7 +193,6 @@ function UMG_PVP_FirstReward_C:OnTabIndexChanged(index)
     self.SeasonReward:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.SeasonRecord:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.ShareBtn:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self:SetTitle(self.data:GetCurSeasonId())
   else
     self.NRCImage_4:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.TextQuantity_1:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -309,8 +307,6 @@ function UMG_PVP_FirstReward_C:RefreshSeasonRecord(record_season_data)
   self.ShareDataSnapshot.TableIndex = self.season_record_index
   self.ShareDataSnapshot.CurSeasonData = record_season_data
   local sort_season_data = self.sort_season_data
-  local sort_season_data_id = sort_season_data and sort_season_data.id or 1
-  self:SetTitle(sort_season_data_id)
   local is_dan_grading = false
   local end_time = sort_season_data and sort_season_data.end_time or ""
   local timestamp = PVPRankedMatchModuleUtils.GetTimestampFromTimeStr(end_time)
@@ -599,13 +595,16 @@ function UMG_PVP_FirstReward_C:RenderWidget(prevProps, currProps, prevState, cur
   local currIsFlagShow = currState and currState.isFlagShow or false
   local prevIsPvpQualifierStarShow = prevState and prevState.isPvpQualifierStarShow or false
   local currIsPvpQualifierStarShow = currState and currState.isPvpQualifierStarShow or false
-  local prevSelectRankSeasonInfo = prevState and prevState.selectRankSeasonInfo
-  local currSelectRankSeasonInfo = currState and currState.selectRankSeasonInfo
+  local prevSeasonId = prevState and prevState.seasonId
+  local currSeasonId = currState and currState.seasonId
   if prevIsFlagShow ~= currIsFlagShow or prevKey ~= currKey then
     self:RenderSpineFlagShow(currIsFlagShow)
   end
   if prevIsPvpQualifierStarShow ~= currIsPvpQualifierStarShow or prevKey ~= currKey then
     self:RenderPvpQualifierStarShow(currIsPvpQualifierStarShow)
+  end
+  if (prevSeasonId ~= currSeasonId or prevKey ~= currKey) and currSeasonId then
+    self:SetTitle(currSeasonId)
   end
 end
 

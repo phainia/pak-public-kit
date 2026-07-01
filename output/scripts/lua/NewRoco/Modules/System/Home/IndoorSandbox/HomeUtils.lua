@@ -612,6 +612,8 @@ function HomeUtils.CapsuleTraceValidPos(DesiredPos, AdditionExtentRadius, Furnit
     FurnitureView
   }, OutComponents)
   local bHasFloor = false
+  local DesiredRoomId = FurnitureView.PropsData.RoomId
+  HomeIndoorSandbox:LogDebug("CapsuleTraceValidPos", DesiredPos, DesiredRoomId, FurnitureView)
   for i, Component in tpairs(OutComponents) do
     local Actor = Component:GetOwner()
     if Actor and Actor then
@@ -619,8 +621,8 @@ function HomeUtils.CapsuleTraceValidPos(DesiredPos, AdditionExtentRadius, Furnit
         HomeIndoorSandbox:LogDebug("Collision Props", Actor:GetName(), PlayerLocation)
         return false
       end
-      if Actor.IsFloor then
-        if not Actor:IsFloor() then
+      if Actor.IsFloor and Actor._RoomId and Actor._RoomId == DesiredRoomId then
+        if not Actor:IsFloor() and Actor.FaceType ~= UE.ENRCHomeBuildingFaceType.Down then
           HomeIndoorSandbox:LogDebug("Collision Building", Actor:GetName(), PlayerLocation)
           return false
         else
@@ -952,6 +954,10 @@ function HomeUtils.PlayerChangeHomeSeat(Player, FurnitureView, Index)
 end
 
 function HomeUtils.FindValidExitPosForSeat(FurnitureNPC, FurnitureView)
+  local PlayerRoomId = HomeIndoorSandbox.World:GetPlayerRoomId()
+  if not PlayerRoomId then
+    return
+  end
   local ValidPoint = FurnitureNPC.ValidExitPoint
   if ValidPoint then
     return ValidPoint

@@ -24,6 +24,16 @@ function UMG_ViewPhoto_C:OnActive(DisplayData)
   end
   local TexturePath = DisplayData.TexturePath
   local FurnitureName = DisplayData.FurnitureName
+  local Factor = 0.85
+  local CanvasSlot = UE.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.ContentPadding)
+  CanvasSlot:SetMinimum(UE.FVector2D(1 - Factor, 1 - Factor))
+  CanvasSlot:SetMaximum(UE.FVector2D(Factor, Factor))
+  local Margin = CanvasSlot:GetOffsets()
+  Margin.Left = 0
+  Margin.Top = 0
+  Margin.Right = 0
+  Margin.Bottom = 0
+  CanvasSlot:SetOffsets(Margin)
   self:SetTextureByPath(TexturePath)
   self.PhotoName:SetText(FurnitureName or "")
 end
@@ -36,8 +46,19 @@ function UMG_ViewPhoto_C:SetTextureByPath(TexturePath)
     self:LogError("Invalid TexturePath", TexturePath)
     return
   end
+  local Paths = string.split(TexturePath, ";")
+  local Width = 0
+  local Height = 0
+  if #Paths > 1 then
+    Width = Paths[2] and math.tointeger(Paths[2]) or 0
+    Height = Paths[3] and math.tointeger(Paths[3]) or 0
+  end
+  Log.Debug("UMG_ViewPhoto_C:SetTextureByPath", TexturePath, Width, Height)
+  TexturePath = Paths[1]
   if TexturePath ~= self.TexturePath then
     self.TexturePath = TexturePath
+    self.Width = _G.DEBUG_VIEWPHOTO_WIDTH or Width
+    self.Height = _G.DEBUG_VIEWPHOTO_HEIGHT or Height
     self.TextureFile:SetVisibility(UE.ESlateVisibility.Hidden)
     self:InternalLoadTexture()
   end
@@ -55,7 +76,7 @@ end
 function UMG_ViewPhoto_C:OnTextureLoaded(req, Texture)
   if Texture and UE.UObject.IsValid(Texture) then
     self.TextureFile:SetVisibility(UE.ESlateVisibility.SelfHitTestInvisible)
-    self.TextureFile:SetTexture(Texture, self.Content.Slot)
+    self.TextureFile:SetTexture(Texture, self.Content.Slot, self.Width, self.Height)
   else
     self:LogError("Invalid Texture")
   end

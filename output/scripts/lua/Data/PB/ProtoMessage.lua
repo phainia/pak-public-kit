@@ -1061,6 +1061,10 @@ function ProtoMessage:newPetUsedItems()
   return {id = nil, used_num = nil}
 end
 
+function ProtoMessage:newPetBacktrackRoundInfo()
+  return {current_round_id = nil, used_count = nil}
+end
+
 function ProtoMessage:newPetTravelInfo()
   return {
     camp_content_id = nil,
@@ -2555,7 +2559,8 @@ function ProtoMessage:newSharedPetInfo()
     blood_id = nil,
     skills = {},
     changed_nature_pos_attr_type = nil,
-    changed_nature_neg_attr_type = nil
+    changed_nature_neg_attr_type = nil,
+    gid = nil
   }
 end
 
@@ -2749,7 +2754,8 @@ function ProtoMessage:newTaskContentItem()
     options = ProtoMessage:newTaskContentOptionList(),
     sale_lock = nil,
     is_openorclose = nil,
-    reward_cnt = nil
+    reward_cnt = nil,
+    need_recover_next_login = nil
   }
 end
 
@@ -3207,6 +3213,14 @@ function ProtoMessage:newPlayerActivityInfo_ActivityTerritoryTrialData()
     base_id = nil,
     trial_info = ProtoMessage:newPlayerActivityInfo_TerritoryTrialInfo(),
     rewards = {}
+  }
+end
+
+function ProtoMessage:newTerritoryTrialHistoryItem()
+  return {
+    activity_conf_id = nil,
+    base_id = nil,
+    has_token = nil
   }
 end
 
@@ -4859,6 +4873,362 @@ function ProtoMessage:newSpecBattleDifficultyInfo()
   }
 end
 
+function ProtoMessage:newObserveBattle()
+  return {
+    deny = nil,
+    mode = ProtoEnum.ObserveBattleMode.OBM_MODE_1
+  }
+end
+
+function ProtoMessage:newPlayerSettings_Pvp()
+  return {
+    observe_battle = ProtoMessage:newObserveBattle(),
+    open_rank = nil
+  }
+end
+
+function ProtoMessage:newPlayerSettings_Friendship()
+  return {
+    can_be_searched = nil,
+    can_be_sugguested = nil,
+    can_be_add_friend = nil,
+    can_stranger_visit = nil
+  }
+end
+
+function ProtoMessage:newPlayerSettings_UserSubscribe()
+  return {
+    hatch_egg = nil,
+    travel = nil,
+    debris_full = nil,
+    new_activity = nil,
+    friend_battle = nil,
+    exchange_egg = nil,
+    friend_visit = nil
+  }
+end
+
+function ProtoMessage:newPlayerSettings_PersonalizedRecommendations()
+  return {friend_pr = nil}
+end
+
+function ProtoMessage:newPlayerSettings_PlayerCustomAnim()
+  return {custom_anim_type = nil, selected_index = nil}
+end
+
+function ProtoMessage:newPlayerSettings_PlayerCustomAnims()
+  return {
+    custom_anim_list = {}
+  }
+end
+
+function ProtoMessage:newPlayerSettings()
+  return {
+    observe_battle = ProtoMessage:newObserveBattle(),
+    friendship = ProtoMessage:newPlayerSettings_Friendship(),
+    quality = nil,
+    is_hide_unlock_skill = nil,
+    user_subsribe = ProtoMessage:newPlayerSettings_UserSubscribe(),
+    pvp = ProtoMessage:newPlayerSettings_Pvp(),
+    recommendations = ProtoMessage:newPlayerSettings_PersonalizedRecommendations(),
+    custom_anims = ProtoMessage:newPlayerSettings_PlayerCustomAnims()
+  }
+end
+
+function ProtoMessage:newClientDevInfo()
+  return {
+    device_info = nil,
+    plat_id = nil,
+    system_software = nil,
+    system_hardware = nil,
+    telecom_oper = nil,
+    network = nil,
+    screen_width = nil,
+    screen_hight = nil,
+    density = nil,
+    channel = nil,
+    cpu_hardware = nil,
+    memory = nil,
+    gl_render = nil,
+    gl_version = nil,
+    device_id = nil,
+    language = nil,
+    ping = nil,
+    area = nil,
+    appstore = nil,
+    package_channel = nil,
+    aid = nil,
+    user_agent = nil,
+    old_caid = nil,
+    is_gamematrix = nil
+  }
+end
+
+function ProtoMessage:newClientVerInfo()
+  return {
+    cli_version = nil,
+    cli_res_version = nil,
+    cli_cfg_version = nil,
+    app_version = nil,
+    res_version = nil
+  }
+end
+
+function ProtoMessage:newClientTokenInfo()
+  return {
+    auth_type = nil,
+    access_token = nil,
+    pay_token = nil,
+    pf = nil,
+    tpns_token = nil,
+    wg_login_info = nil
+  }
+end
+
+function ProtoMessage:newClientExtInfo()
+  return {bag_item_use_page = nil}
+end
+
+function ProtoMessage:newClientInfo()
+  return {
+    ver_info = ProtoMessage:newClientVerInfo(),
+    dev_info = ProtoMessage:newClientDevInfo(),
+    token_info = ProtoMessage:newClientTokenInfo(),
+    ext_info = ProtoMessage:newClientExtInfo()
+  }
+end
+
+function ProtoMessage:newDeviceInfo()
+  return {
+    device = nil,
+    lod_level = nil,
+    ext = nil,
+    screen_scale = nil,
+    fps = nil,
+    forbid = nil
+  }
+end
+
+function ProtoMessage:newPlayerNpcRefreshBanInfo()
+  return {
+    ban_time = nil,
+    ban_probability = nil,
+    ban_type = nil
+  }
+end
+
+function ProtoMessage:newPlayerBanItem()
+  return {permission_date = nil, reason = nil}
+end
+
+function ProtoMessage:newPlayerFuncBanItem()
+  return {
+    func_id = nil,
+    permission_date = nil,
+    reason = nil
+  }
+end
+
+function ProtoMessage:newPlayerBanInfo()
+  return {
+    ban_items = {},
+    npc_refresh_ban_info = ProtoMessage:newPlayerNpcRefreshBanInfo(),
+    func_ban_items = {},
+    npc_refresh_ban_infos = {}
+  }
+end
+
+function ProtoMessage:newWebGamePlayerInfo()
+  return {
+    uin = nil,
+    nick_name = nil,
+    last_access_time = nil,
+    player_level = nil,
+    pet_id = nil,
+    pet_get_time = nil,
+    pet_nature = nil,
+    pet_level = nil,
+    reg_time = nil
+  }
+end
+
+function ProtoMessage:newPlayerTitleLBSInfo()
+  return {province = nil, rank = nil}
+end
+
+function ProtoMessage:newPlayerTitleExtendInfo()
+  return {
+    lbs_info = ProtoMessage:newPlayerTitleLBSInfo(),
+    effect_begin_time = nil
+  }
+end
+
+function ProtoMessage:newKickoutType()
+  return {}
+end
+
+function ProtoMessage:newKickoutSubType()
+  return {}
+end
+
+function ProtoMessage:newLangType()
+  return {}
+end
+
+function ProtoMessage:newMultiLangPb()
+  return {
+    langs = {}
+  }
+end
+
+function ProtoMessage:newLang()
+  return {lang_type = nil, lang = nil}
+end
+
+function ProtoMessage:newSnsAuthInfo()
+  return {
+    openid = nil,
+    access_token = nil,
+    cli_login_channel = nil,
+    world_id = nil
+  }
+end
+
+function ProtoMessage:newSafetyContentID()
+  return {
+    id_type = nil,
+    id_list = {}
+  }
+end
+
+function ProtoMessage:newSafetyBusinessInfo()
+  return {
+    report_category = ProtoEnum.SafetyBusinessInfo.ReportCategory.RPTCAT_VIOLATING_CONTENT,
+    report_reason = {},
+    report_scene = ProtoEnum.SafetyBusinessInfo.ReportScense.RPTSS_CONVERSATION_SPEAKING_SCENE,
+    reported_profile_url = nil,
+    report_battle_id = nil,
+    report_battle_time = nil,
+    report_desc = nil,
+    report_content = nil,
+    pic_url_array = {},
+    video_url_array = {},
+    voice_url_array = {},
+    report_group_id = nil,
+    report_group_name = nil,
+    language_id = nil,
+    callback = nil,
+    content_id = ProtoMessage:newSafetyContentID(),
+    report_entrance = nil
+  }
+end
+
+function ProtoMessage:newHopeInstruction()
+  return {
+    type = nil,
+    openid = nil,
+    uin = nil,
+    title = nil,
+    msg = nil,
+    url = nil,
+    modal = nil,
+    rule_name = nil,
+    logout_type = nil,
+    trace_id = nil,
+    logout_time = nil
+  }
+end
+
+function ProtoMessage:newHopeInstructionReportData()
+  return {
+    openid = nil,
+    rule_name = nil,
+    instruction_trace_id = nil,
+    exec_time = nil
+  }
+end
+
+function ProtoMessage:newPlayerHopeData()
+  return {
+    last_report_time = nil,
+    instruction = ProtoMessage:newHopeInstruction(),
+    pvp_match_banned_timestamp = nil
+  }
+end
+
+function ProtoMessage:newOpenIdList()
+  return {
+    openid = {}
+  }
+end
+
+function ProtoMessage:newWhitelistTagList()
+  return {
+    tags = {},
+    ori_key = nil,
+    wx = nil,
+    comment = nil
+  }
+end
+
+function ProtoMessage:newPlayerSecInfo()
+  return {
+    score = nil,
+    tag_black = nil,
+    tag_ugc = nil,
+    last_update_time = nil
+  }
+end
+
+function ProtoMessage:newCreditScoreLimitInfo()
+  return {
+    scene_entry_list = {}
+  }
+end
+
+function ProtoMessage:newGroupEntry()
+  return {
+    group_id = nil,
+    threshold_lo = nil,
+    threshold_hi = nil,
+    is_tag_used = nil,
+    tag_type = nil,
+    tag_hi = nil,
+    tag_lo = nil
+  }
+end
+
+function ProtoMessage:newSceneEntry()
+  return {
+    scene_id = nil,
+    group_entry_list = {}
+  }
+end
+
+function ProtoMessage:newSceneIdipActionNpcInfo()
+  return {
+    type = nil,
+    is_finish = nil,
+    param1 = nil,
+    param2 = nil,
+    task_id = nil,
+    time = nil,
+    seq = nil
+  }
+end
+
+function ProtoMessage:newSceneIdipActionNpcList()
+  return {
+    idip_actions = {},
+    max_seq = nil,
+    finish_seq = nil
+  }
+end
+
+function ProtoMessage:newWegameAuthResult()
+  return {error_code = nil, error_message = nil}
+end
+
 function ProtoMessage:newBattleSupplyPetPlayerInfo()
   return {
     player_id = nil,
@@ -5159,7 +5529,8 @@ function ProtoMessage:newPetSkillRoundData()
     cost_energy_buff_mul_10000 = nil,
     cost_energy_buff_factor_list = {},
     cd_outfield_round = nil,
-    season_id = nil
+    season_id = nil,
+    skill_change_status = ProtoEnum.PetSkillRoundData.SkillChangeStatus.SKILL_CHANGE_STATUS_NONE
   }
 end
 
@@ -5384,7 +5755,9 @@ function ProtoMessage:newBattleRoleBaseInfo()
     season_adv_prob_add = nil,
     fri_type_list = {},
     role_avatar_id = nil,
-    free_catch = nil
+    free_catch = nil,
+    custom_anims = ProtoMessage:newPlayerSettings_PlayerCustomAnims(),
+    npc_refresh_ban_infos = {}
   }
 end
 
@@ -6316,6 +6689,10 @@ function ProtoMessage:newBattleRoleMagicOpReq()
   }
 end
 
+function ProtoMessage:newBattleEvolutionReq()
+  return {pause_evolute = nil}
+end
+
 function ProtoMessage:newBattleRoundFlowReq()
   return {
     req_type = nil,
@@ -6325,7 +6702,8 @@ function ProtoMessage:newBattleRoundFlowReq()
     catch_pet = ProtoMessage:newBattleCatchPetReq(),
     idle = ProtoMessage:newBattleIdleReq(),
     skill_state = ProtoMessage:newBattleSkillStateReq(),
-    magic_op = ProtoMessage:newBattleRoleMagicOpReq()
+    magic_op = ProtoMessage:newBattleRoleMagicOpReq(),
+    evolution = ProtoMessage:newBattleEvolutionReq()
   }
 end
 
@@ -6820,295 +7198,6 @@ function ProtoMessage:newH5PlayerInfo()
     pet_nature = nil,
     pet_level = nil
   }
-end
-
-function ProtoMessage:newClientDevInfo()
-  return {
-    device_info = nil,
-    plat_id = nil,
-    system_software = nil,
-    system_hardware = nil,
-    telecom_oper = nil,
-    network = nil,
-    screen_width = nil,
-    screen_hight = nil,
-    density = nil,
-    channel = nil,
-    cpu_hardware = nil,
-    memory = nil,
-    gl_render = nil,
-    gl_version = nil,
-    device_id = nil,
-    language = nil,
-    ping = nil,
-    area = nil,
-    appstore = nil,
-    package_channel = nil,
-    aid = nil,
-    user_agent = nil,
-    old_caid = nil,
-    is_gamematrix = nil
-  }
-end
-
-function ProtoMessage:newClientVerInfo()
-  return {
-    cli_version = nil,
-    cli_res_version = nil,
-    cli_cfg_version = nil,
-    app_version = nil,
-    res_version = nil
-  }
-end
-
-function ProtoMessage:newClientTokenInfo()
-  return {
-    auth_type = nil,
-    access_token = nil,
-    pay_token = nil,
-    pf = nil,
-    tpns_token = nil,
-    wg_login_info = nil
-  }
-end
-
-function ProtoMessage:newClientExtInfo()
-  return {bag_item_use_page = nil}
-end
-
-function ProtoMessage:newClientInfo()
-  return {
-    ver_info = ProtoMessage:newClientVerInfo(),
-    dev_info = ProtoMessage:newClientDevInfo(),
-    token_info = ProtoMessage:newClientTokenInfo(),
-    ext_info = ProtoMessage:newClientExtInfo()
-  }
-end
-
-function ProtoMessage:newDeviceInfo()
-  return {
-    device = nil,
-    lod_level = nil,
-    ext = nil,
-    screen_scale = nil,
-    fps = nil,
-    forbid = nil
-  }
-end
-
-function ProtoMessage:newPlayerNpcRefreshBanInfo()
-  return {ban_time = nil, ban_probability = nil}
-end
-
-function ProtoMessage:newPlayerBanItem()
-  return {permission_date = nil, reason = nil}
-end
-
-function ProtoMessage:newPlayerFuncBanItem()
-  return {
-    func_id = nil,
-    permission_date = nil,
-    reason = nil
-  }
-end
-
-function ProtoMessage:newPlayerBanInfo()
-  return {
-    ban_items = {},
-    npc_refresh_ban_info = ProtoMessage:newPlayerNpcRefreshBanInfo(),
-    func_ban_items = {}
-  }
-end
-
-function ProtoMessage:newWebGamePlayerInfo()
-  return {
-    uin = nil,
-    nick_name = nil,
-    last_access_time = nil,
-    player_level = nil,
-    pet_id = nil,
-    pet_get_time = nil,
-    pet_nature = nil,
-    pet_level = nil,
-    reg_time = nil
-  }
-end
-
-function ProtoMessage:newPlayerTitleLBSInfo()
-  return {province = nil, rank = nil}
-end
-
-function ProtoMessage:newPlayerTitleExtendInfo()
-  return {
-    lbs_info = ProtoMessage:newPlayerTitleLBSInfo(),
-    effect_begin_time = nil
-  }
-end
-
-function ProtoMessage:newKickoutType()
-  return {}
-end
-
-function ProtoMessage:newKickoutSubType()
-  return {}
-end
-
-function ProtoMessage:newLangType()
-  return {}
-end
-
-function ProtoMessage:newMultiLangPb()
-  return {
-    langs = {}
-  }
-end
-
-function ProtoMessage:newLang()
-  return {lang_type = nil, lang = nil}
-end
-
-function ProtoMessage:newSnsAuthInfo()
-  return {
-    openid = nil,
-    access_token = nil,
-    cli_login_channel = nil,
-    world_id = nil
-  }
-end
-
-function ProtoMessage:newSafetyContentID()
-  return {
-    id_type = nil,
-    id_list = {}
-  }
-end
-
-function ProtoMessage:newSafetyBusinessInfo()
-  return {
-    report_category = ProtoEnum.SafetyBusinessInfo.ReportCategory.RPTCAT_VIOLATING_CONTENT,
-    report_reason = {},
-    report_scene = ProtoEnum.SafetyBusinessInfo.ReportScense.RPTSS_CONVERSATION_SPEAKING_SCENE,
-    reported_profile_url = nil,
-    report_battle_id = nil,
-    report_battle_time = nil,
-    report_desc = nil,
-    report_content = nil,
-    pic_url_array = {},
-    video_url_array = {},
-    voice_url_array = {},
-    report_group_id = nil,
-    report_group_name = nil,
-    language_id = nil,
-    callback = nil,
-    content_id = ProtoMessage:newSafetyContentID(),
-    report_entrance = nil
-  }
-end
-
-function ProtoMessage:newHopeInstruction()
-  return {
-    type = nil,
-    openid = nil,
-    uin = nil,
-    title = nil,
-    msg = nil,
-    url = nil,
-    modal = nil,
-    rule_name = nil,
-    logout_type = nil,
-    trace_id = nil,
-    logout_time = nil
-  }
-end
-
-function ProtoMessage:newHopeInstructionReportData()
-  return {
-    openid = nil,
-    rule_name = nil,
-    instruction_trace_id = nil,
-    exec_time = nil
-  }
-end
-
-function ProtoMessage:newPlayerHopeData()
-  return {
-    last_report_time = nil,
-    instruction = ProtoMessage:newHopeInstruction(),
-    pvp_match_banned_timestamp = nil
-  }
-end
-
-function ProtoMessage:newOpenIdList()
-  return {
-    openid = {}
-  }
-end
-
-function ProtoMessage:newWhitelistTagList()
-  return {
-    tags = {},
-    ori_key = nil,
-    wx = nil,
-    comment = nil
-  }
-end
-
-function ProtoMessage:newPlayerSecInfo()
-  return {
-    score = nil,
-    tag_black = nil,
-    tag_ugc = nil,
-    last_update_time = nil
-  }
-end
-
-function ProtoMessage:newCreditScoreLimitInfo()
-  return {
-    scene_entry_list = {}
-  }
-end
-
-function ProtoMessage:newGroupEntry()
-  return {
-    group_id = nil,
-    threshold_lo = nil,
-    threshold_hi = nil,
-    is_tag_used = nil,
-    tag_type = nil,
-    tag_hi = nil,
-    tag_lo = nil
-  }
-end
-
-function ProtoMessage:newSceneEntry()
-  return {
-    scene_id = nil,
-    group_entry_list = {}
-  }
-end
-
-function ProtoMessage:newSceneIdipActionNpcInfo()
-  return {
-    type = nil,
-    is_finish = nil,
-    param1 = nil,
-    param2 = nil,
-    task_id = nil,
-    time = nil,
-    seq = nil
-  }
-end
-
-function ProtoMessage:newSceneIdipActionNpcList()
-  return {
-    idip_actions = {},
-    max_seq = nil,
-    finish_seq = nil
-  }
-end
-
-function ProtoMessage:newWegameAuthResult()
-  return {error_code = nil, error_message = nil}
 end
 
 function ProtoMessage:newRewardState()
@@ -8548,6 +8637,13 @@ function ProtoMessage:newWorldMapAutoTrackNpcInfo()
   }
 end
 
+function ProtoMessage:newSpecialMapNpcEntry()
+  return {
+    map_show_type = nil,
+    npc_infos = {}
+  }
+end
+
 function ProtoMessage:newLogicStatusOpInfo()
   return {op_type = nil, status = nil}
 end
@@ -8670,6 +8766,1464 @@ function ProtoMessage:newActorPlantData()
   return {steal_cnt = nil}
 end
 
+function ProtoMessage:newBookData_NightmareData()
+  return {done = nil}
+end
+
+function ProtoMessage:newBookData_BloodMagicData()
+  return {done = nil, reward = nil}
+end
+
+function ProtoMessage:newBookData_NotebookKeliData_Clew()
+  return {
+    stage = nil,
+    is_new = nil,
+    unlock = nil
+  }
+end
+
+function ProtoMessage:newBookData_NotebookKeliData()
+  return {
+    to_do_done = {},
+    clews = {},
+    black_text = ProtoMessage:newBookData_NotebookKeliData_Clew(),
+    medal_state = nil
+  }
+end
+
+function ProtoMessage:newBookData()
+  return {
+    book_type = ProtoEnum.TaleTaskType.TTT_NONE,
+    book_id = nil,
+    unlock = nil,
+    unlock_timestamp = nil,
+    nightmare_data = ProtoMessage:newBookData_NightmareData(),
+    blood_magic_data = ProtoMessage:newBookData_BloodMagicData(),
+    notebook_keli_data = ProtoMessage:newBookData_NotebookKeliData()
+  }
+end
+
+function ProtoMessage:newMageNpcItem()
+  return {
+    id = nil,
+    unlocked = nil,
+    awarded = nil
+  }
+end
+
+function ProtoMessage:newMageNpcInfo()
+  return {
+    id = nil,
+    items = {},
+    unlocked = nil,
+    disabled_in_camp = nil,
+    assist_times = nil
+  }
+end
+
+function ProtoMessage:newMageNpcAssignInfo()
+  return {
+    id = nil,
+    type = nil,
+    npcs = {}
+  }
+end
+
+function ProtoMessage:newMageCampAssignInfo()
+  return {id = nil, rest_conf_id = nil}
+end
+
+function ProtoMessage:newMageNpcCampInfo()
+  return {
+    id = nil,
+    task_finish = nil,
+    disabled = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialFusedSkillData()
+  return {
+    base_skill_id = nil,
+    fused_power = nil,
+    fused_energy_cost = nil,
+    fusion_count = nil,
+    fusion_max = nil,
+    skill_type = nil,
+    merged_skill_ids = {},
+    slot_pos = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialPet()
+  return {
+    pet_gid = nil,
+    base_conf_id = nil,
+    current_hp = nil,
+    max_hp = nil,
+    level = nil,
+    energy_ceiling = nil,
+    growth = nil,
+    skills = {},
+    acquired_feature_ids = {},
+    acquired_shard_effect_ids = {}
+  }
+end
+
+function ProtoMessage:newGrassTrialNodeRecord()
+  return {
+    chapter_id = nil,
+    node_index = nil,
+    event_conf_id = nil,
+    opponent_monster_id = nil,
+    is_completed = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialNodeEvent()
+  return {
+    slot_index = nil,
+    event_conf_id = nil,
+    reward_id = nil,
+    event_refresh_cost = nil,
+    reward_refresh_cost = nil,
+    random_skills = {},
+    level = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialNodeSelection()
+  return {
+    node_events = {},
+    event_refresh_count = nil,
+    reward_refresh_count = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialEventSelected()
+  return {
+    event_conf_id = nil,
+    reward_id = nil,
+    is_waiting_recieve = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialChallengeData()
+  return {
+    state = nil,
+    trial_conf_id = nil,
+    current_chapter_id = nil,
+    current_node_index = nil,
+    trial_pet_data = ProtoMessage:newGrassTrialPet(),
+    initial_skill_id = nil,
+    remaining_coin = nil,
+    active_trial_effect_ids = {},
+    completed_nodes = {},
+    chapter_event_pool = {},
+    current_selection = ProtoMessage:newGrassTrialNodeSelection(),
+    challenge_start_time = nil,
+    accumulated_score = nil,
+    discovered_monster_ids = {},
+    fusion_type = nil,
+    event_selected = ProtoMessage:newGrassTrialEventSelected(),
+    first_dungeon_id = nil,
+    leaved_second_scene = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialReviewRecord()
+  return {
+    settle_timestamp = nil,
+    petbase_conf_id = nil,
+    pet_level = nil,
+    pet_growth = nil,
+    trial_conf_id = nil,
+    is_victory = nil,
+    challenge_duration = nil,
+    node_records = {},
+    review_skills = {},
+    review_feature_ids = {},
+    review_shard_ids = {}
+  }
+end
+
+function ProtoMessage:newGrassTrialReviewSkillInfo()
+  return {
+    base_skill_id = nil,
+    fusion_count = nil,
+    merged_skill_ids = {}
+  }
+end
+
+function ProtoMessage:newGrassTrialHandbookSlotReward()
+  return {
+    trial_conf_id = nil,
+    reward_id = nil,
+    reward_count = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialHandbookSlotState()
+  return {
+    pet_base_id = nil,
+    slot_index = nil,
+    slot_type = nil,
+    slot_reward = {}
+  }
+end
+
+function ProtoMessage:newGrassTrialLogSceneRecord()
+  return {
+    log_conf_id = nil,
+    discovered_monster_ids = {},
+    final_reward_claimed = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialPeriodReward()
+  return {
+    required_score = nil,
+    state = ProtoMessage:newRewardState()
+  }
+end
+
+function ProtoMessage:newGrassTrialPeriodData()
+  return {
+    period_conf_id = nil,
+    period_reward = {},
+    current_period_score = nil
+  }
+end
+
+function ProtoMessage:newGrassTrialProgressData()
+  return {
+    cleared_trial_ids = {},
+    first_reward_claimed_trial_ids = {},
+    handbook_slots = {},
+    review_records = {},
+    log_records = {}
+  }
+end
+
+function ProtoMessage:newGrassTrialData()
+  return {
+    challenge_data = ProtoMessage:newGrassTrialChallengeData(),
+    progress_data = ProtoMessage:newGrassTrialProgressData(),
+    period_data = ProtoMessage:newGrassTrialPeriodData()
+  }
+end
+
+function ProtoMessage:newBadgeTrialData()
+  return {
+    grass_trial_data = ProtoMessage:newGrassTrialData()
+  }
+end
+
+function ProtoMessage:newGoodsPrice()
+  return {
+    num = nil,
+    goods_type = ProtoEnum.GoodsType.GT_NONE,
+    goods_id = nil
+  }
+end
+
+function ProtoMessage:newSubGoodsData()
+  return {
+    goods_id = nil,
+    origin_price = ProtoMessage:newGoodsPrice(),
+    real_price = ProtoMessage:newGoodsPrice(),
+    is_gift = nil
+  }
+end
+
+function ProtoMessage:newGoodsData()
+  return {
+    goods_id = nil,
+    buy_num = nil,
+    next_refresh_time = nil,
+    origin_price = ProtoMessage:newGoodsPrice(),
+    real_price = ProtoMessage:newGoodsPrice(),
+    limit_buy_num = nil,
+    disable_time = nil,
+    sub_goods = {}
+  }
+end
+
+function ProtoMessage:newShopData_ConsumeInfo_RewardTakenInfo()
+  return {level = nil, is_reward_taken = nil}
+end
+
+function ProtoMessage:newShopData_ConsumeInfo()
+  return {
+    total_consume_num = nil,
+    reward_taken_info = {}
+  }
+end
+
+function ProtoMessage:newShopData()
+  return {
+    id = nil,
+    consume_info = ProtoMessage:newShopData_ConsumeInfo(),
+    goods_data = {},
+    random_shop_shown_indexes = {},
+    max_refresh_count = nil,
+    refresh_count = nil,
+    version = nil,
+    disable_time = nil
+  }
+end
+
+function ProtoMessage:newShopBuyItemInfo()
+  return {goods_item_num = nil, goods_id = nil}
+end
+
+function ProtoMessage:newDBShopGoods()
+  return {
+    id = nil,
+    buy_num = nil,
+    last_refresh_time = nil,
+    next_refresh_time = nil
+  }
+end
+
+function ProtoMessage:newDBShopConsumeReward()
+  return {level = nil, is_taken = nil}
+end
+
+function ProtoMessage:newDBShopConsumeInfo()
+  return {
+    goods_type = ProtoEnum.GoodsType.GT_NONE,
+    goods_id = nil,
+    total_consume_num = nil,
+    rewards = {}
+  }
+end
+
+function ProtoMessage:newDBShopOne()
+  return {
+    id = nil,
+    version = nil,
+    goods_list = {},
+    random_shop_shown_indexes = {},
+    last_refresh_time = nil,
+    max_refresh_count = nil,
+    refresh_count = nil,
+    acc_consume = ProtoMessage:newDBShopConsumeInfo(),
+    goods_group = {}
+  }
+end
+
+function ProtoMessage:newDBGoodsGroupData()
+  return {
+    group_id = nil,
+    buy_num = nil,
+    last_refresh_time = nil
+  }
+end
+
+function ProtoMessage:newDBShopSharedData()
+  return {
+    goods_group = {}
+  }
+end
+
+function ProtoMessage:newMonthCardData()
+  return {
+    id = nil,
+    left_days = nil,
+    buy_time = nil,
+    sign_days = nil,
+    last_sign_time = nil,
+    continue_time = nil,
+    reset_time = nil,
+    daily_rewards = nil,
+    daily_tips_show = nil
+  }
+end
+
+function ProtoMessage:newDBShop()
+  return {
+    shops = {},
+    month_card = ProtoMessage:newMonthCardData(),
+    seq = nil,
+    shared_data = ProtoMessage:newDBShopSharedData()
+  }
+end
+
+function ProtoMessage:newOssReason()
+  return {
+    reason = nil,
+    sub_reason1 = nil,
+    sub_reason2 = nil,
+    sub_reason3 = nil
+  }
+end
+
+function ProtoMessage:newMidasFailRetryPresentInfo()
+  return {
+    charge_val = nil,
+    billno = nil,
+    try_times = nil,
+    reason = ProtoMessage:newOssReason(),
+    bill_no = nil,
+    is_finish = nil
+  }
+end
+
+function ProtoMessage:newMidasFailRetryPresentList()
+  return {
+    fails = {},
+    try_last_time = nil
+  }
+end
+
+function ProtoMessage:newMidasDistriBillInfo()
+  return {
+    billno = nil,
+    update_time = nil,
+    goods_id = nil,
+    create_time = nil
+  }
+end
+
+function ProtoMessage:newMidasDistriBillList()
+  return {
+    billnos = {}
+  }
+end
+
+function ProtoMessage:newChargeInfo()
+  return {
+    money_num = nil,
+    charge_times = nil,
+    last_update_time = nil
+  }
+end
+
+function ProtoMessage:newChargeInfoList()
+  return {
+    charges = {}
+  }
+end
+
+function ProtoMessage:newMidasFailfo()
+  return {
+    charge_val = nil,
+    billno = nil,
+    try_times = nil,
+    reason = ProtoMessage:newOssReason(),
+    bill_no = nil,
+    is_finish = nil,
+    last_try_time = nil,
+    type = nil
+  }
+end
+
+function ProtoMessage:newMidasFailRetryList()
+  return {
+    fails = {}
+  }
+end
+
+function ProtoMessage:newMidasMoneyInfo()
+  return {
+    last_recharge_points_num = nil,
+    last_recharge_points_time = nil,
+    midas_balance = nil,
+    midas_save_amt = nil,
+    fail_data_nouse = ProtoMessage:newMidasFailRetryPresentList(),
+    out_game_buy_num = nil,
+    charge_data = ProtoMessage:newChargeInfoList(),
+    last_update_time = nil,
+    free_balance = nil,
+    use_charge_points_num = nil,
+    pay_points_num = nil,
+    last_charge_money_num = nil,
+    last_charge_time = nil,
+    last_usecharge_money_num = nil,
+    last_usecharge_time = nil,
+    gid = nil,
+    midas_gen_save_amt = nil,
+    distribute_amt = nil,
+    total_test_amt = nil,
+    is_calc_test_amt = nil,
+    fail_data = ProtoMessage:newMidasFailRetryList(),
+    last_try_time = nil
+  }
+end
+
+function ProtoMessage:newMailCustomContent()
+  return {
+    excel_id = nil,
+    reward_list = {},
+    rewards = ProtoMessage:newGoodsReward()
+  }
+end
+
+function ProtoMessage:newTlogPlayerInfo()
+  return {
+    game_svr_id = nil,
+    event_time = nil,
+    app_id = nil,
+    plat_id = nil,
+    world_id = nil,
+    openid = nil,
+    uin = nil,
+    role_name = nil,
+    role_level = nil
+  }
+end
+
+function ProtoMessage:newMailParamInfo()
+  return {key = nil, value = nil}
+end
+
+function ProtoMessage:newMailParamList()
+  return {
+    content_param_list = {},
+    title_param_list = {}
+  }
+end
+
+function ProtoMessage:newMailRecvBrief()
+  return {
+    mail_gid = nil,
+    mail_conf_id = nil,
+    params = ProtoMessage:newMailParamList(),
+    reward = ProtoMessage:newGoodsReward(),
+    title = nil,
+    contents = nil,
+    reward_id = nil,
+    guard_id = nil,
+    add_time = nil,
+    expire_at = nil,
+    mail_serial_num = nil,
+    mail_sub_type = nil
+  }
+end
+
+function ProtoMessage:newMailFailInfo()
+  return {
+    brief_info = ProtoMessage:newMailRecvBrief(),
+    fail_num = nil
+  }
+end
+
+function ProtoMessage:newDungeonInfo()
+  return {
+    dungeon_id = nil,
+    last_enter_time = nil,
+    dungeon_finish_count = nil,
+    total_finish_count = nil,
+    dungeon_inst_id = nil,
+    scene_inst_id = nil,
+    cell_id = nil,
+    pt = ProtoMessage:newPoint(),
+    destroy = nil,
+    last_quit_halfway = nil,
+    from_scene_cfg_id = nil,
+    from_pos = ProtoMessage:newPoint(),
+    current_finish = nil,
+    last_leave_time = nil,
+    open_stage_ids = {},
+    ack_bst_finish = nil,
+    finish_stage_ids = {},
+    need_reset_stage = nil,
+    first_enter_time = nil,
+    first_finish_time = nil,
+    collect_finish = nil,
+    finished_stage_ids = {}
+  }
+end
+
+function ProtoMessage:newPlayerDungeonInfo()
+  return {
+    dungeon_infos = {},
+    delay_reset_check = nil,
+    back_to_bigworld_scene_id = nil,
+    back_to_bigworld_pt = ProtoMessage:newPoint(),
+    will_to_dungeon_cfg_id = nil
+  }
+end
+
+function ProtoMessage:newDungeonStateInfo()
+  return {
+    dungeon_id = nil,
+    dungeon_state = nil,
+    done_count = nil,
+    entered = nil,
+    from_scene_cfg_id = nil,
+    from_pt = ProtoMessage:newPoint(),
+    need_bst_finish = nil,
+    finish_stage_ids = {},
+    finished_stage_ids = {}
+  }
+end
+
+function ProtoMessage:newGuideGroup()
+  return {
+    group_id = nil,
+    finish_all = nil,
+    finish_index = {}
+  }
+end
+
+function ProtoMessage:newActivityPetTripLotteryRecord()
+  return {
+    activity_id = nil,
+    result = nil,
+    lottery_id = nil,
+    total_happy_value = nil,
+    wish_choice = nil,
+    total_record_num = nil,
+    goods_id = nil,
+    goods_type = nil,
+    num = nil,
+    pet_gift_num = nil
+  }
+end
+
+function ProtoMessage:newSeasonCatchRewardInfo()
+  return {reward_refresh_time = nil, reward_daily_num = nil}
+end
+
+function ProtoMessage:newPlayerMiscInfo()
+  return {
+    cur_selected_throw_item = ProtoMessage:newThrowItemInfo(),
+    diamond_buy_star_times = nil,
+    cur_selected_magic_item_gid = nil,
+    star_recover_time = nil,
+    player_rp_behavior_list = {},
+    minute_send_add_friend_count = nil,
+    battle_ai_world_num = {},
+    star_debris_recover_time = nil,
+    star_debris_state = nil,
+    storage_goods = {},
+    gp_contest_info = ProtoMessage:newPlayerGPContestInfo(),
+    pve_challenge_pet_selected_id = nil,
+    friend_num_cache = nil,
+    guide_info = {},
+    home_level_reward_info = ProtoMessage:newHomeLevelRewardInfo(),
+    query_h5_succ = nil,
+    last_move_merge_time = nil,
+    last_fashionbond_tab = nil,
+    ios_rating_popup_time = nil,
+    netbar_reward_expiration = nil,
+    gift_code = nil,
+    plat_friend_num_cache = nil,
+    video_recording = nil,
+    player_rp_behavior_using_list = {},
+    activity_lottery_records = {},
+    offline_operation_consume_state = ProtoMessage:newOfflineOperationConsumeState(),
+    has_aicoach_shown_notify = nil,
+    season_catch_reward_info = ProtoMessage:newSeasonCatchRewardInfo()
+  }
+end
+
+function ProtoMessage:newPlayerBookData()
+  return {
+    book_data = {}
+  }
+end
+
+function ProtoMessage:newGuideBook()
+  return {
+    id = nil,
+    stamps = {},
+    unlocked_at = nil
+  }
+end
+
+function ProtoMessage:newPlayerWorldMapInfo()
+  return {
+    guide_books = {}
+  }
+end
+
+function ProtoMessage:newPlayerMageBookInfo()
+  return {
+    npcs = {},
+    delayed_npcs = {},
+    delayed_items = {},
+    helper_npcs = {},
+    helper_assign = {},
+    enabled = nil,
+    npc_refresh_time = nil,
+    helper_assign_time = nil,
+    camp_info = {},
+    camp_assign = {}
+  }
+end
+
+function ProtoMessage:newPetTeamShareData()
+  return {
+    valid_pet_gids = {}
+  }
+end
+
+function ProtoMessage:newPlayerMailFailInfo()
+  return {
+    mail_fail_info_list = {}
+  }
+end
+
+function ProtoMessage:newEvalutionGroupShareForm()
+  return {evaluation_group = nil, card_quality = nil}
+end
+
+function ProtoMessage:newShareFormItem()
+  return {id = nil}
+end
+
+function ProtoMessage:newPlayerShareFormInfo()
+  return {
+    share_form_item = {},
+    evaluation_share_form_info = {}
+  }
+end
+
+function ProtoMessage:newPlayerQQAchievementStats()
+  return {use_pet_ball_num = nil}
+end
+
+function ProtoMessage:newPlayerQQAchievementInfo()
+  return {
+    cur_day = nil,
+    day_acc_game_duration = nil,
+    last_stat_time = nil,
+    achievement_reg_channel = nil,
+    stats = ProtoMessage:newPlayerQQAchievementStats()
+  }
+end
+
+function ProtoMessage:newPlayerEmojiItem()
+  return {emoji_id = nil, is_unlock = nil}
+end
+
+function ProtoMessage:newPlayerEmojiBagInfo()
+  return {
+    emoji_list = {}
+  }
+end
+
+function ProtoMessage:newPetCertiMedalHistory()
+  return {activity_id = nil, pet_chains = nil}
+end
+
+function ProtoMessage:newPlayerPetMedalInfo()
+  return {
+    medal_infos = {},
+    collection = {},
+    addi_info = {},
+    pet_certi_history = {}
+  }
+end
+
+function ProtoMessage:newCliPetMedalInfo()
+  return {
+    collection = {}
+  }
+end
+
+function ProtoMessage:newPlayerGiftInfo()
+  return {
+    gift_giving_datas = {},
+    check_giving_gift_timestamp = nil
+  }
+end
+
+function ProtoMessage:newPlayerBattleData_ObserveBattleData()
+  return {
+    uin = nil,
+    flag = nil,
+    backup_scene = ProtoMessage:newPlayerSceneInfo(),
+    observe_start_time = nil
+  }
+end
+
+function ProtoMessage:newPlayerBattleData()
+  return {
+    create_battle_info = ProtoMessage:newCreateBattleInfo(),
+    battle_inst_id = nil,
+    battle_field_id = nil,
+    source_data = ProtoMessage:newSourceData(),
+    settle_step = ProtoEnum.PlayerBattleData.SETTLE_STEP.SETTLE_STEP_IDLE,
+    settle_info = ProtoMessage:newBattleSettleInfo(),
+    scene_rpc_ing = nil,
+    scene_rpc_cnt = nil,
+    scene_settle_info = ProtoMessage:newPlayerBattleData_SceneSettleInfo(),
+    need_check = nil,
+    observe_battle = ProtoMessage:newPlayerBattleData_ObserveBattleData(),
+    bfid_inc_id = nil,
+    z2b_create_ing = nil
+  }
+end
+
+function ProtoMessage:newPlayerMailDataInfo()
+  return {mail_cache_num = nil, last_marquee_check_time = nil}
+end
+
+function ProtoMessage:newIdipMailSerialInfo()
+  return {serial = nil, update_time = nil}
+end
+
+function ProtoMessage:newIdipMailSerialList()
+  return {
+    serials = {}
+  }
+end
+
+function ProtoMessage:newPlayerSvrDataInfo()
+  return {
+    time_offset = nil,
+    last_daily_tick_time = nil,
+    dungeon_info = ProtoMessage:newPlayerDungeonInfo(),
+    hope_data = ProtoMessage:newPlayerHopeData(),
+    battle_pass_info = ProtoMessage:newPlayerBattlePassInfo(),
+    card_info = ProtoMessage:newPlayerCardInfo(),
+    sub_task_info = ProtoMessage:newPlayerSubTaskInfo(),
+    appearance_info = ProtoMessage:newPlayerAppearanceInfo(),
+    share_form_info = ProtoMessage:newPlayerShareFormInfo(),
+    battle_data = ProtoMessage:newPlayerBattleData(),
+    received_mail_list = {},
+    receive_failed_mail_list = {},
+    attachment_receive_fail_mail_list = {},
+    next_mail_expire_time = nil,
+    send_fail_mail_brief = {},
+    adventure_data = ProtoMessage:newPlayerAdventureData(),
+    visit_data = ProtoMessage:newPlayerVisitData(),
+    invest_task = ProtoMessage:newPlayerInvestTaskData(),
+    teleports = {},
+    teach_infos = {},
+    activity_info = ProtoMessage:newPlayerActivityInfo(),
+    copy_data = ProtoMessage:newPlayerCopyData(),
+    exchange_info = ProtoMessage:newPlayerExchangeInfo(),
+    player_interact_info = ProtoMessage:newPlayerInteractInfo(),
+    mage_book_info = ProtoMessage:newPlayerMageBookInfo(),
+    task_summary_data = ProtoMessage:newTaskSummaryList(),
+    money_info = ProtoMessage:newMidasMoneyInfo(),
+    shiny_pet_day_info = ProtoMessage:newPlayerShinyPetDayInfo(),
+    distribute_billnos = ProtoMessage:newMidasDistriBillList(),
+    last_pet_stat_report_time = nil,
+    last_pet_world_stat_update_time = nil,
+    spec_flower_seeds = {},
+    area_check_infos = {},
+    last_pet_battle_stat_update_time = nil,
+    crop_fruits = ProtoMessage:newPlayerCropFruitList(),
+    npc_idip_action = ProtoMessage:newSceneIdipActionNpcList(),
+    gift_limit_info = ProtoMessage:newPlayerGiftLimitList(),
+    badge_challenge_data = ProtoMessage:newBadgeChallengeData(),
+    mail_version = nil,
+    season_info = ProtoMessage:newSeasonInfo(),
+    gift_info = ProtoMessage:newPlayerGiftInfo(),
+    gifts_limit_info = ProtoMessage:newPlayerTypeGiftLimitList(),
+    items_limit_info = {},
+    pet_medal_info = ProtoMessage:newPlayerPetMedalInfo(),
+    share_info = ProtoMessage:newPlayerShareInfo(),
+    pet_egg_data = ProtoMessage:newPlayerPetEggData(),
+    goods_trans = ProtoMessage:newGoodsModifyTransAllInfo(),
+    pet_team_share_data = ProtoMessage:newPetTeamShareData(),
+    shop = ProtoMessage:newDBShop(),
+    last_check_exchange_goods_time = nil,
+    mail_fail_info = ProtoMessage:newPlayerMailFailInfo(),
+    liabilities_mail_send_info = ProtoMessage:newDailySendMailList(),
+    season_adventure = ProtoMessage:newPlayerSeasonAdventureData(),
+    teaching_tab_info = ProtoMessage:newPlayerTeachingTabInfo(),
+    mail_info = ProtoMessage:newPlayerMailDataInfo(),
+    npc_lottery_data = {},
+    badge_trial_data = ProtoMessage:newBadgeTrialData(),
+    idip_mail_serials = ProtoMessage:newIdipMailSerialList(),
+    opt_reward_info = ProtoMessage:newOptReWardNumList(),
+    content_reward_info = ProtoMessage:newContentOptReWardNumList(),
+    flow_gid = nil
+  }
+end
+
+function ProtoMessage:newPlayerRedPointInfo()
+  return {
+    group_info = {},
+    cached_group_info = {}
+  }
+end
+
+function ProtoMessage:newMusicApplyInfo()
+  return {music_id = nil, apply_list_id = nil}
+end
+
+function ProtoMessage:newPlayerMusicInfo()
+  return {
+    music_id_list = {},
+    apply_list = {}
+  }
+end
+
+function ProtoMessage:newPlayerStarLightInfo()
+  return {
+    current_progress = nil,
+    unexchange_wishing_star_num = nil,
+    current_efficiency = nil,
+    today_star_light_num = nil,
+    need_notify_refresh = nil
+  }
+end
+
+function ProtoMessage:newPlayerPetInfo()
+  return {
+    pet_data = {},
+    catch_info = {},
+    generation_gid = nil,
+    fellow_gid = nil,
+    bag_pos_gid = {},
+    seen_monster_bits = nil,
+    team_info = ProtoMessage:newPetTeamInfo(),
+    handbook = ProtoMessage:newPetHandbook(),
+    backpack_info = ProtoMessage:newPetBackpackInfo(),
+    habit_info = ProtoMessage:newPetHabitInfo(),
+    statistics_info = ProtoMessage:newPetStatisticsInfo(),
+    travel_info = {},
+    visit_remain_catch_times = nil,
+    next_visit_catch_refresh_time = nil,
+    team_infos = {},
+    visit_remain_shiny_catch_times = nil,
+    last_visit_shiny_catch_refresh_time = nil,
+    deleted_pet_list = ProtoMessage:newDeletedPetList(),
+    home_pet_info = {},
+    version = nil,
+    pseudo_egg_shiny_cum_prob = {},
+    gift_egg_list = ProtoMessage:newGiftEggList(),
+    pet_report_info = {},
+    last_write_friend_db_time = nil,
+    mirror_pet_data = {},
+    pet_once_patch_version = nil,
+    pet_use_info = {},
+    backtrack_info = {},
+    pseudo_egg_glass_cum_prob = {},
+    pet_medal_info = ProtoMessage:newCliPetMedalInfo(),
+    pet_task_info = ProtoMessage:newPetTaskInfo(),
+    monitor_info = ProtoMessage:newPlayerPetMonitorInfo(),
+    current_select_pet_gid = nil,
+    report_brief_info = ProtoMessage:newPetReportBriefInfo(),
+    backtrack_round_info = ProtoMessage:newPetBacktrackRoundInfo()
+  }
+end
+
+function ProtoMessage:newPlayerCommonInfo()
+  return {
+    coupon = nil,
+    coin = nil,
+    coin_locked = nil,
+    elo = nil,
+    in_game_time = nil,
+    tod_updated_time = nil,
+    scene_info = ProtoMessage:newPlayerSceneInfo(),
+    level_award_info = ProtoMessage:newPlayerLevelAwardInfo(),
+    climb_chapter = ProtoMessage:newPlayerClimbChapterInfo(),
+    start_server_ai = nil,
+    in_dungeon_id = {},
+    online_visit_owner = nil,
+    ban_player_reason = nil,
+    chat_permission_date = nil,
+    ban_chat_reason = nil,
+    select_pet_conf_id = nil,
+    region_id = nil,
+    select_pet_conf_id_list = {},
+    next_region_group_id = nil,
+    pet_select_region_id = {},
+    visit_permission_setting = nil,
+    navigation_mode_type = nil,
+    home_last_visit_time = nil,
+    is_home_visiting = nil,
+    home_owner_uin = nil,
+    is_online_visiting_home = nil,
+    home_source_scene_cfg_id = nil,
+    home_source_scene_inst_id = nil,
+    home_source_location = ProtoMessage:newPoint(),
+    ban_info = ProtoMessage:newPlayerBanInfo()
+  }
+end
+
+function ProtoMessage:newPlayerBattlePassExpInfo()
+  return {
+    last_week_exp = nil,
+    level = nil,
+    exp = nil,
+    last_refresh_time = nil
+  }
+end
+
+function ProtoMessage:newPlayerBattlePassRewardInfo_RewardTakenInfo()
+  return {
+    is_free_reward_taken = nil,
+    is_paid_reward_taken = nil,
+    bp_level = nil
+  }
+end
+
+function ProtoMessage:newPlayerBattlePassRewardInfo()
+  return {
+    reward_taken_info = {}
+  }
+end
+
+function ProtoMessage:newPlayerBattlePassTaskInfo()
+  return {
+    daily_task_ids = {},
+    repeat_task_ids = {},
+    last_daily_task_reset_time = nil,
+    task_info_list = {}
+  }
+end
+
+function ProtoMessage:newPlayerBattlePassInfo()
+  return {
+    battle_pass_id = nil,
+    theme_id = nil,
+    exp_info = ProtoMessage:newPlayerBattlePassExpInfo(),
+    reward_info = ProtoMessage:newPlayerBattlePassRewardInfo(),
+    task_info = ProtoMessage:newPlayerBattlePassTaskInfo(),
+    bought_gift_sub_bag_item_ids = {}
+  }
+end
+
+function ProtoMessage:newGiftDropWeightBagNumItem()
+  return {id = nil, num = nil}
+end
+
+function ProtoMessage:newGiftDropWeithBagNumInfo()
+  return {
+    id_type = nil,
+    items = {}
+  }
+end
+
+function ProtoMessage:newPlayerBagItemIdFlagInfo()
+  return {id = nil, flag = nil}
+end
+
+function ProtoMessage:newPlayerBagItemIdFlagTypeInfo()
+  return {
+    type = nil,
+    items = {}
+  }
+end
+
+function ProtoMessage:newPlayerBagItemIdFlagList()
+  return {
+    bag_flag_items = {}
+  }
+end
+
+function ProtoMessage:newBagItemExpireInfo()
+  return {
+    id = nil,
+    expire_time = nil,
+    num = nil,
+    gid = nil,
+    is_finish_conver = nil
+  }
+end
+
+function ProtoMessage:newBagItemExpireList()
+  return {
+    items = {}
+  }
+end
+
+function ProtoMessage:newPlayerBagInfo()
+  return {
+    gid = nil,
+    item_list = {},
+    equipped_ball_num = nil,
+    had_item_info = {},
+    bag_backpack = ProtoMessage:newBagBackpackInfo(),
+    pet_medal_task_info = {},
+    had_item_list = {},
+    is_copy = nil,
+    version = nil,
+    drop_weight_info = {},
+    mask_bag_list = {},
+    last_check_mask_time = nil,
+    bag_item_id_flag = ProtoMessage:newPlayerBagItemIdFlagList(),
+    bag_item_expire_list = ProtoMessage:newBagItemExpireList()
+  }
+end
+
+function ProtoMessage:newPlayerBlackData()
+  return {black_uin = nil, block_time = nil}
+end
+
+function ProtoMessage:newPlayerObserveBattleBlackData()
+  return {
+    battle_id = nil,
+    black_list = {}
+  }
+end
+
+function ProtoMessage:newPlayerBlackInfo()
+  return {
+    black_list = {},
+    observe_battle_black_list = ProtoMessage:newPlayerObserveBattleBlackData()
+  }
+end
+
+function ProtoMessage:newPlayerClientWaterMarkInfo()
+  return {close_watermark = nil, end_time = nil}
+end
+
+function ProtoMessage:newPlayerInfo()
+  return {
+    brief_info = ProtoMessage:newPlayerBriefInfo(),
+    common_info = ProtoMessage:newPlayerCommonInfo(),
+    bag_info = ProtoMessage:newPlayerBagInfo(),
+    pet_info = ProtoMessage:newPlayerPetInfo(),
+    ability_info = ProtoMessage:newPlayerAbilityInfo(),
+    story_flag_info = ProtoMessage:newPlayerStoryFlagInfo(),
+    misc_info = ProtoMessage:newPlayerMiscInfo(),
+    world_map_info = ProtoMessage:newPlayerWorldMapInfo(),
+    svr_data_info = ProtoMessage:newPlayerSvrDataInfo(),
+    red_point_info = ProtoMessage:newPlayerRedPointInfo(),
+    black_info = ProtoMessage:newPlayerBlackInfo(),
+    pvp_his_cli = ProtoMessage:newPlayerPvpHisCli(),
+    music_info = ProtoMessage:newPlayerMusicInfo(),
+    star_light_info = ProtoMessage:newPlayerStarLightInfo(),
+    emoji_bag_info = ProtoMessage:newPlayerEmojiBagInfo(),
+    lottery_confirm = ProtoMessage:newPlayerLotteryRewardConfirmBagInfo(),
+    client_water_mark_info = ProtoMessage:newPlayerClientWaterMarkInfo(),
+    start_up_privilege_info = ProtoMessage:newPlayerStartUpPrivilegeInfo()
+  }
+end
+
+function ProtoMessage:newPlayerPetEggData()
+  return {
+    egg_core_records = {}
+  }
+end
+
+function ProtoMessage:newCDKeyInfo()
+  return {cdkey = nil, used = nil}
+end
+
+function ProtoMessage:newPlayerCDKeyInfo()
+  return {
+    cdkey_list = {}
+  }
+end
+
+function ProtoMessage:newPlayerGiftLimitItem()
+  return {
+    id = nil,
+    cnt = nil,
+    last_update_time = nil
+  }
+end
+
+function ProtoMessage:newPlayerGiftLimitList()
+  return {
+    items = {}
+  }
+end
+
+function ProtoMessage:newPlayerTypeGiftLimitItem()
+  return {
+    items = {},
+    type = nil
+  }
+end
+
+function ProtoMessage:newPlayerTypeGiftLimitList()
+  return {
+    items = {}
+  }
+end
+
+function ProtoMessage:newDailySendMailItem()
+  return {id = nil, mail_send_times = nil}
+end
+
+function ProtoMessage:newDailySendMailInfo()
+  return {
+    type = nil,
+    items = {}
+  }
+end
+
+function ProtoMessage:newDailySendMailList()
+  return {
+    items = {}
+  }
+end
+
+function ProtoMessage:newDailyItemReasonGetInfo()
+  return {
+    guard_id = nil,
+    total_num = nil,
+    total_times = nil,
+    has_limited = nil
+  }
+end
+
+function ProtoMessage:newDailyGetItemLimitInfo()
+  return {
+    id = nil,
+    reason_gets = {}
+  }
+end
+
+function ProtoMessage:newOptReWardNumInfo()
+  return {opt_id = nil, num = nil}
+end
+
+function ProtoMessage:newOptReWardNumList()
+  return {
+    items = {}
+  }
+end
+
+function ProtoMessage:newContentOptReWardNumInfo()
+  return {
+    content_id = nil,
+    num = nil,
+    reward_id = nil
+  }
+end
+
+function ProtoMessage:newContentReWardNumInfo()
+  return {reward_id = nil, num = nil}
+end
+
+function ProtoMessage:newContentOptReWardNumItem()
+  return {
+    type_id = nil,
+    items = {},
+    reward_items = {}
+  }
+end
+
+function ProtoMessage:newContentOptReWardNumList()
+  return {
+    type_items = {},
+    week_time = nil,
+    item_num = nil
+  }
+end
+
+function ProtoMessage:newDailyGetItemLimitlist()
+  return {
+    goods_type = nil,
+    items = {}
+  }
+end
+
+function ProtoMessage:newPlayerBattleData_RewardNpcInfo()
+  return {npc_conf_id = nil, npc_num = nil}
+end
+
+function ProtoMessage:newPlayerBattleData_SceneSettleInfo()
+  return {
+    catch_pet_cnt = nil,
+    npc_info = {}
+  }
+end
+
+function ProtoMessage:newStampInfo()
+  return {unlock_num = nil, unlocked_at = nil}
+end
+
+function ProtoMessage:newRedPointGroup()
+  return {
+    reason_type = nil,
+    point_data = {}
+  }
+end
+
+function ProtoMessage:newPlayerTeleportData()
+  return {id = nil, lv = nil}
+end
+
+function ProtoMessage:newPlayerCopyData()
+  return {src_uin = nil, copy_time = nil}
+end
+
+function ProtoMessage:newPlayerCropFruitInfo()
+  return {
+    owl_sanctuary_id = nil,
+    num = nil,
+    bag_item_id = nil
+  }
+end
+
+function ProtoMessage:newPlayerCropFruitList()
+  return {
+    crop_fruit_list = {}
+  }
+end
+
+function ProtoMessage:newPlayerShareRewardInfo()
+  return {
+    reward_group_type = nil,
+    shared_times = nil,
+    last_share_timestamp = nil,
+    last_refresh_timestamp = nil
+  }
+end
+
+function ProtoMessage:newPlayerShareInfo()
+  return {
+    reward_groups = {}
+  }
+end
+
+function ProtoMessage:newPlayerSyncInfo()
+  return {
+    level = nil,
+    exp = nil,
+    battle_state = ProtoEnum.PlayerBattleState.PLAYER_BATTLE_STATE_IDLE,
+    coupon = nil,
+    coin = nil,
+    coin_locked = nil,
+    elo = nil,
+    servertime = nil,
+    name = nil,
+    sex = nil,
+    in_dungeon_id = {},
+    world_level = nil,
+    online_visit_owner = nil,
+    select_pet_conf_id = nil,
+    vitem_info = ProtoMessage:newPlayerVItemInfo(),
+    select_pet_conf_id_list = {},
+    pet_select_region_id = {}
+  }
+end
+
+function ProtoMessage:newServerPref()
+  return {
+    int_value = nil,
+    list_value = {},
+    str_value = nil,
+    key = nil
+  }
+end
+
+function ProtoMessage:newHeroPref()
+  return {
+    id = nil,
+    prefs = {}
+  }
+end
+
+function ProtoMessage:newPlayerServerPref()
+  return {
+    hero_prefs = {}
+  }
+end
+
+function ProtoMessage:newPlayerCliBuffInfo()
+  return {
+    buff = nil,
+    sever_pref = ProtoMessage:newPlayerServerPref()
+  }
+end
+
+function ProtoMessage:newPlayerCardInfo_CardItemOwnedInfo()
+  return {
+    card_item_id = nil,
+    card_item_get_timestamp = nil,
+    card_item_num = nil
+  }
+end
+
+function ProtoMessage:newPlayerCardInfo()
+  return {
+    last_name_changed_time = nil,
+    icon_owned = {},
+    skin_owned = {},
+    label_owned = {},
+    cached_name = nil
+  }
+end
+
+function ProtoMessage:newPlayerCatchBallRewardInfo()
+  return {
+    last_reward_time = nil,
+    next_reward_time = nil,
+    catch_ball_reward_num = nil,
+    enable_reward = nil,
+    red_point_sent = nil
+  }
+end
+
+function ProtoMessage:newPlayerAreaCheckInfo()
+  return {
+    area_id = nil,
+    radius = nil,
+    conf_id = nil
+  }
+end
+
+function ProtoMessage:newPlayerTeachInfo()
+  return {
+    teach_id = nil,
+    status = ProtoEnum.PlayerTeachInfo.TeachStatus.LOCK,
+    unlock_time = nil,
+    multi_condi_bit = nil,
+    multi_condi_priority = nil
+  }
+end
+
+function ProtoMessage:newTeachingUnlockProgress()
+  return {
+    type = ProtoEnum.SkillDamType.SDT_INVALID,
+    count = nil,
+    break_award_sort = {}
+  }
+end
+
+function ProtoMessage:newTeachingTask()
+  return {
+    id = nil,
+    is_complete = nil,
+    is_rewarded = nil
+  }
+end
+
+function ProtoMessage:newTeaching()
+  return {
+    id = nil,
+    is_unlock = nil,
+    unlock_progress = {}
+  }
+end
+
+function ProtoMessage:newPlayerTeachingTabInfo()
+  return {
+    type_advantage = {},
+    type_advantage_tasks = {},
+    combat_mechanism = {},
+    combat_mechanism_tasks = {}
+  }
+end
+
+function ProtoMessage:newLotteryRewardRecord()
+  return {
+    reward_conf_id = nil,
+    total_claimed = nil,
+    daily_claimed = nil,
+    last_claim_day = nil,
+    weely_claimed = nil
+  }
+end
+
+function ProtoMessage:newPlayerNpcLotteryData()
+  return {
+    logic_id = nil,
+    logic_version = nil,
+    lottery_pool_id = nil,
+    reward_records = {},
+    logic_ver = nil,
+    daily_reset_time = nil,
+    weely_reset_time = nil
+  }
+end
+
 function ProtoMessage:newPlayerSocialAccountInfo()
   return {
     openid = nil,
@@ -8728,6 +10282,12 @@ function ProtoMessage:newPlayerBattlePassSocialInfo()
   }
 end
 
+function ProtoMessage:newPlayerSocialBlackInfo()
+  return {
+    black_list = {}
+  }
+end
+
 function ProtoMessage:newPlayerSocialAdditionalInfo()
   return {
     cli_login_channel = nil,
@@ -8735,7 +10295,8 @@ function ProtoMessage:newPlayerSocialAdditionalInfo()
     setting_brief_info = ProtoMessage:newPlayerSettingBriefInfo(),
     deletion_info = ProtoMessage:newPlayerDeletionInfo(),
     player_tags = {},
-    battle_pass_info = ProtoMessage:newPlayerBattlePassSocialInfo()
+    battle_pass_info = ProtoMessage:newPlayerBattlePassSocialInfo(),
+    black_info = ProtoMessage:newPlayerSocialBlackInfo()
   }
 end
 
@@ -9269,7 +10830,8 @@ function ProtoMessage:newActorInfo_NpcBase()
     create_visiting_uins = {},
     create_avatar_name = nil,
     habitat_id = nil,
-    owl_sanctuary_content_cfg_id = nil
+    owl_sanctuary_content_cfg_id = nil,
+    precious_egg_type = nil
   }
 end
 
@@ -10036,7 +11598,8 @@ function ProtoMessage:newActorInfo_Avatar()
     wearing_item = {},
     roleplay_prop_info = ProtoMessage:newActorInfo_RoleplayPropInfo(),
     camera_info = ProtoMessage:newActorInfo_AvatarCamera(),
-    avatar_ai_info = ProtoMessage:newActorInfo_AvatarAI()
+    avatar_ai_info = ProtoMessage:newActorInfo_AvatarAI(),
+    custom_anims = ProtoMessage:newPlayerSettings_PlayerCustomAnims()
   }
 end
 
@@ -10240,7 +11803,8 @@ function ProtoMessage:newOldFlavorSceneRequiredPlayerInfo()
     pet_gids = {},
     current_select_pet_gid = nil,
     big_world_pet_data = {},
-    main_team_gids = {}
+    main_team_gids = {},
+    npc_refresh_ban_infos = {}
   }
 end
 
@@ -10248,7 +11812,8 @@ function ProtoMessage:newSceneRequiredPlayerInfo()
   return {
     player_tags = {},
     daily_online_time = nil,
-    together_starlight_bonus_ratio = nil
+    together_starlight_bonus_ratio = nil,
+    custom_anims = ProtoMessage:newPlayerSettings_PlayerCustomAnims()
   }
 end
 
@@ -10334,7 +11899,8 @@ function ProtoMessage:newActorPartData_NpcBase()
     create_visiting_uins = {},
     create_avatar_name = nil,
     npc_belong_owl_content_id = nil,
-    refresh_batch_id = nil
+    refresh_batch_id = nil,
+    precious_egg_type = nil
   }
 end
 
@@ -10945,7 +12511,7 @@ function ProtoMessage:newActorCompData_AnimSkillPlayer()
 end
 
 function ProtoMessage:newActorCompData_Db()
-  return {}
+  return {last_writeback_timestamp = nil, last_full_dirty_timestamp = nil}
 end
 
 function ProtoMessage:newContentTraceData()
@@ -11211,7 +12777,8 @@ function ProtoMessage:newActorCompData_WorldMap()
     sync_entry_types = nil,
     gamecfg_ver = nil,
     layered_world_map_explore_info = ProtoMessage:newLayeredWorldMapExploreInfo(),
-    auto_track_npc_infos = {}
+    auto_track_npc_infos = {},
+    special_npc_infos = {}
   }
 end
 
@@ -12049,6 +13616,7 @@ function ProtoMessage:newActorCompData_NpcGuard()
     ban_func_list = {},
     npc_refresh_ban_time = nil,
     npc_refresh_ban_probability = nil,
+    npc_refresh_ban_infos = {},
     guard_limit_data = {}
   }
 end
@@ -13540,239 +15108,6 @@ function ProtoMessage:newLastEquipBall()
   return {EquipBallId = nil}
 end
 
-function ProtoMessage:newGoodsPrice()
-  return {
-    num = nil,
-    goods_type = ProtoEnum.GoodsType.GT_NONE,
-    goods_id = nil
-  }
-end
-
-function ProtoMessage:newSubGoodsData()
-  return {
-    goods_id = nil,
-    origin_price = ProtoMessage:newGoodsPrice(),
-    real_price = ProtoMessage:newGoodsPrice(),
-    is_gift = nil
-  }
-end
-
-function ProtoMessage:newGoodsData()
-  return {
-    goods_id = nil,
-    buy_num = nil,
-    next_refresh_time = nil,
-    origin_price = ProtoMessage:newGoodsPrice(),
-    real_price = ProtoMessage:newGoodsPrice(),
-    limit_buy_num = nil,
-    disable_time = nil,
-    sub_goods = {}
-  }
-end
-
-function ProtoMessage:newShopData_ConsumeInfo_RewardTakenInfo()
-  return {level = nil, is_reward_taken = nil}
-end
-
-function ProtoMessage:newShopData_ConsumeInfo()
-  return {
-    total_consume_num = nil,
-    reward_taken_info = {}
-  }
-end
-
-function ProtoMessage:newShopData()
-  return {
-    id = nil,
-    consume_info = ProtoMessage:newShopData_ConsumeInfo(),
-    goods_data = {},
-    random_shop_shown_indexes = {},
-    max_refresh_count = nil,
-    refresh_count = nil,
-    version = nil,
-    disable_time = nil
-  }
-end
-
-function ProtoMessage:newShopBuyItemInfo()
-  return {goods_item_num = nil, goods_id = nil}
-end
-
-function ProtoMessage:newDBShopGoods()
-  return {
-    id = nil,
-    buy_num = nil,
-    last_refresh_time = nil,
-    next_refresh_time = nil
-  }
-end
-
-function ProtoMessage:newDBShopConsumeReward()
-  return {level = nil, is_taken = nil}
-end
-
-function ProtoMessage:newDBShopConsumeInfo()
-  return {
-    goods_type = ProtoEnum.GoodsType.GT_NONE,
-    goods_id = nil,
-    total_consume_num = nil,
-    rewards = {}
-  }
-end
-
-function ProtoMessage:newDBShopOne()
-  return {
-    id = nil,
-    version = nil,
-    goods_list = {},
-    random_shop_shown_indexes = {},
-    last_refresh_time = nil,
-    max_refresh_count = nil,
-    refresh_count = nil,
-    acc_consume = ProtoMessage:newDBShopConsumeInfo(),
-    goods_group = {}
-  }
-end
-
-function ProtoMessage:newDBGoodsGroupData()
-  return {
-    group_id = nil,
-    buy_num = nil,
-    last_refresh_time = nil
-  }
-end
-
-function ProtoMessage:newDBShopSharedData()
-  return {
-    goods_group = {}
-  }
-end
-
-function ProtoMessage:newMonthCardData()
-  return {
-    id = nil,
-    left_days = nil,
-    buy_time = nil,
-    sign_days = nil,
-    last_sign_time = nil,
-    continue_time = nil,
-    reset_time = nil,
-    daily_rewards = nil,
-    daily_tips_show = nil
-  }
-end
-
-function ProtoMessage:newDBShop()
-  return {
-    shops = {},
-    month_card = ProtoMessage:newMonthCardData(),
-    seq = nil,
-    shared_data = ProtoMessage:newDBShopSharedData()
-  }
-end
-
-function ProtoMessage:newOssReason()
-  return {
-    reason = nil,
-    sub_reason1 = nil,
-    sub_reason2 = nil,
-    sub_reason3 = nil
-  }
-end
-
-function ProtoMessage:newMidasFailRetryPresentInfo()
-  return {
-    charge_val = nil,
-    billno = nil,
-    try_times = nil,
-    reason = ProtoMessage:newOssReason(),
-    bill_no = nil,
-    is_finish = nil
-  }
-end
-
-function ProtoMessage:newMidasFailRetryPresentList()
-  return {
-    fails = {},
-    try_last_time = nil
-  }
-end
-
-function ProtoMessage:newMidasDistriBillInfo()
-  return {
-    billno = nil,
-    update_time = nil,
-    goods_id = nil,
-    create_time = nil
-  }
-end
-
-function ProtoMessage:newMidasDistriBillList()
-  return {
-    billnos = {}
-  }
-end
-
-function ProtoMessage:newChargeInfo()
-  return {
-    money_num = nil,
-    charge_times = nil,
-    last_update_time = nil
-  }
-end
-
-function ProtoMessage:newChargeInfoList()
-  return {
-    charges = {}
-  }
-end
-
-function ProtoMessage:newMidasFailfo()
-  return {
-    charge_val = nil,
-    billno = nil,
-    try_times = nil,
-    reason = ProtoMessage:newOssReason(),
-    bill_no = nil,
-    is_finish = nil,
-    last_try_time = nil,
-    type = nil
-  }
-end
-
-function ProtoMessage:newMidasFailRetryList()
-  return {
-    fails = {}
-  }
-end
-
-function ProtoMessage:newMidasMoneyInfo()
-  return {
-    last_recharge_points_num = nil,
-    last_recharge_points_time = nil,
-    midas_balance = nil,
-    midas_save_amt = nil,
-    fail_data_nouse = ProtoMessage:newMidasFailRetryPresentList(),
-    out_game_buy_num = nil,
-    charge_data = ProtoMessage:newChargeInfoList(),
-    last_update_time = nil,
-    free_balance = nil,
-    use_charge_points_num = nil,
-    pay_points_num = nil,
-    last_charge_money_num = nil,
-    last_charge_time = nil,
-    last_usecharge_money_num = nil,
-    last_usecharge_time = nil,
-    gid = nil,
-    midas_gen_save_amt = nil,
-    distribute_amt = nil,
-    total_test_amt = nil,
-    is_calc_test_amt = nil,
-    fail_data = ProtoMessage:newMidasFailRetryList(),
-    last_try_time = nil
-  }
-end
-
 function ProtoMessage:newAutoParam()
   return {
     key = nil,
@@ -13851,1252 +15186,6 @@ function ProtoMessage:newHomePetGmStealInfo()
     name = nil,
     goods_num = nil,
     goods_total_num = nil
-  }
-end
-
-function ProtoMessage:newMailCustomContent()
-  return {
-    excel_id = nil,
-    reward_list = {},
-    rewards = ProtoMessage:newGoodsReward()
-  }
-end
-
-function ProtoMessage:newTlogPlayerInfo()
-  return {
-    game_svr_id = nil,
-    event_time = nil,
-    app_id = nil,
-    plat_id = nil,
-    world_id = nil,
-    openid = nil,
-    uin = nil,
-    role_name = nil,
-    role_level = nil
-  }
-end
-
-function ProtoMessage:newMailParamInfo()
-  return {key = nil, value = nil}
-end
-
-function ProtoMessage:newMailParamList()
-  return {
-    content_param_list = {},
-    title_param_list = {}
-  }
-end
-
-function ProtoMessage:newMailRecvBrief()
-  return {
-    mail_gid = nil,
-    mail_conf_id = nil,
-    params = ProtoMessage:newMailParamList(),
-    reward = ProtoMessage:newGoodsReward(),
-    title = nil,
-    contents = nil,
-    reward_id = nil,
-    guard_id = nil,
-    add_time = nil,
-    expire_at = nil,
-    mail_serial_num = nil,
-    mail_sub_type = nil
-  }
-end
-
-function ProtoMessage:newMailFailInfo()
-  return {
-    brief_info = ProtoMessage:newMailRecvBrief(),
-    fail_num = nil
-  }
-end
-
-function ProtoMessage:newMageNpcItem()
-  return {
-    id = nil,
-    unlocked = nil,
-    awarded = nil
-  }
-end
-
-function ProtoMessage:newMageNpcInfo()
-  return {
-    id = nil,
-    items = {},
-    unlocked = nil,
-    disabled_in_camp = nil,
-    assist_times = nil
-  }
-end
-
-function ProtoMessage:newMageNpcAssignInfo()
-  return {
-    id = nil,
-    type = nil,
-    npcs = {}
-  }
-end
-
-function ProtoMessage:newMageCampAssignInfo()
-  return {id = nil, rest_conf_id = nil}
-end
-
-function ProtoMessage:newMageNpcCampInfo()
-  return {
-    id = nil,
-    task_finish = nil,
-    disabled = nil
-  }
-end
-
-function ProtoMessage:newBookData_NightmareData()
-  return {done = nil}
-end
-
-function ProtoMessage:newBookData_BloodMagicData()
-  return {done = nil, reward = nil}
-end
-
-function ProtoMessage:newBookData_NotebookKeliData_Clew()
-  return {
-    stage = nil,
-    is_new = nil,
-    unlock = nil
-  }
-end
-
-function ProtoMessage:newBookData_NotebookKeliData()
-  return {
-    to_do_done = {},
-    clews = {},
-    black_text = ProtoMessage:newBookData_NotebookKeliData_Clew(),
-    medal_state = nil
-  }
-end
-
-function ProtoMessage:newBookData()
-  return {
-    book_type = ProtoEnum.TaleTaskType.TTT_NONE,
-    book_id = nil,
-    unlock = nil,
-    unlock_timestamp = nil,
-    nightmare_data = ProtoMessage:newBookData_NightmareData(),
-    blood_magic_data = ProtoMessage:newBookData_BloodMagicData(),
-    notebook_keli_data = ProtoMessage:newBookData_NotebookKeliData()
-  }
-end
-
-function ProtoMessage:newObserveBattle()
-  return {
-    deny = nil,
-    mode = ProtoEnum.ObserveBattleMode.OBM_MODE_1
-  }
-end
-
-function ProtoMessage:newPlayerSettings_Pvp()
-  return {
-    observe_battle = ProtoMessage:newObserveBattle(),
-    open_rank = nil
-  }
-end
-
-function ProtoMessage:newPlayerSettings_Friendship()
-  return {
-    can_be_searched = nil,
-    can_be_sugguested = nil,
-    can_be_add_friend = nil,
-    can_stranger_visit = nil
-  }
-end
-
-function ProtoMessage:newPlayerSettings_UserSubscribe()
-  return {
-    hatch_egg = nil,
-    travel = nil,
-    debris_full = nil,
-    new_activity = nil,
-    friend_battle = nil,
-    exchange_egg = nil,
-    friend_visit = nil
-  }
-end
-
-function ProtoMessage:newPlayerSettings_PersonalizedRecommendations()
-  return {friend_pr = nil}
-end
-
-function ProtoMessage:newPlayerSettings()
-  return {
-    observe_battle = ProtoMessage:newObserveBattle(),
-    friendship = ProtoMessage:newPlayerSettings_Friendship(),
-    quality = nil,
-    is_hide_unlock_skill = nil,
-    user_subsribe = ProtoMessage:newPlayerSettings_UserSubscribe(),
-    pvp = ProtoMessage:newPlayerSettings_Pvp(),
-    recommendations = ProtoMessage:newPlayerSettings_PersonalizedRecommendations()
-  }
-end
-
-function ProtoMessage:newGrassTrialFusedSkillData()
-  return {
-    base_skill_id = nil,
-    fused_power = nil,
-    fused_energy_cost = nil,
-    fusion_count = nil,
-    fusion_max = nil,
-    skill_type = nil,
-    merged_skill_ids = {},
-    slot_pos = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialPet()
-  return {
-    pet_gid = nil,
-    base_conf_id = nil,
-    current_hp = nil,
-    max_hp = nil,
-    level = nil,
-    energy_ceiling = nil,
-    growth = nil,
-    skills = {},
-    acquired_feature_ids = {},
-    acquired_shard_effect_ids = {}
-  }
-end
-
-function ProtoMessage:newGrassTrialNodeRecord()
-  return {
-    chapter_id = nil,
-    node_index = nil,
-    event_conf_id = nil,
-    opponent_monster_id = nil,
-    is_completed = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialNodeEvent()
-  return {
-    slot_index = nil,
-    event_conf_id = nil,
-    reward_id = nil,
-    event_refresh_cost = nil,
-    reward_refresh_cost = nil,
-    random_skills = {},
-    level = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialNodeSelection()
-  return {
-    node_events = {},
-    event_refresh_count = nil,
-    reward_refresh_count = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialEventSelected()
-  return {
-    event_conf_id = nil,
-    reward_id = nil,
-    is_waiting_recieve = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialChallengeData()
-  return {
-    state = nil,
-    trial_conf_id = nil,
-    current_chapter_id = nil,
-    current_node_index = nil,
-    trial_pet_data = ProtoMessage:newGrassTrialPet(),
-    initial_skill_id = nil,
-    remaining_coin = nil,
-    active_trial_effect_ids = {},
-    completed_nodes = {},
-    chapter_event_pool = {},
-    current_selection = ProtoMessage:newGrassTrialNodeSelection(),
-    challenge_start_time = nil,
-    accumulated_score = nil,
-    discovered_monster_ids = {},
-    fusion_type = nil,
-    event_selected = ProtoMessage:newGrassTrialEventSelected(),
-    first_dungeon_id = nil,
-    leaved_second_scene = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialReviewRecord()
-  return {
-    settle_timestamp = nil,
-    petbase_conf_id = nil,
-    pet_level = nil,
-    pet_growth = nil,
-    trial_conf_id = nil,
-    is_victory = nil,
-    challenge_duration = nil,
-    node_records = {},
-    review_skills = {},
-    review_feature_ids = {},
-    review_shard_ids = {}
-  }
-end
-
-function ProtoMessage:newGrassTrialReviewSkillInfo()
-  return {
-    base_skill_id = nil,
-    fusion_count = nil,
-    merged_skill_ids = {}
-  }
-end
-
-function ProtoMessage:newGrassTrialHandbookSlotReward()
-  return {
-    trial_conf_id = nil,
-    reward_id = nil,
-    reward_count = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialHandbookSlotState()
-  return {
-    pet_base_id = nil,
-    slot_index = nil,
-    slot_type = nil,
-    slot_reward = {}
-  }
-end
-
-function ProtoMessage:newGrassTrialLogSceneRecord()
-  return {
-    log_conf_id = nil,
-    discovered_monster_ids = {},
-    final_reward_claimed = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialPeriodReward()
-  return {
-    required_score = nil,
-    state = ProtoMessage:newRewardState()
-  }
-end
-
-function ProtoMessage:newGrassTrialPeriodData()
-  return {
-    period_conf_id = nil,
-    period_reward = {},
-    current_period_score = nil
-  }
-end
-
-function ProtoMessage:newGrassTrialProgressData()
-  return {
-    cleared_trial_ids = {},
-    first_reward_claimed_trial_ids = {},
-    handbook_slots = {},
-    review_records = {},
-    log_records = {}
-  }
-end
-
-function ProtoMessage:newGrassTrialData()
-  return {
-    challenge_data = ProtoMessage:newGrassTrialChallengeData(),
-    progress_data = ProtoMessage:newGrassTrialProgressData(),
-    period_data = ProtoMessage:newGrassTrialPeriodData()
-  }
-end
-
-function ProtoMessage:newBadgeTrialData()
-  return {
-    grass_trial_data = ProtoMessage:newGrassTrialData()
-  }
-end
-
-function ProtoMessage:newDungeonInfo()
-  return {
-    dungeon_id = nil,
-    last_enter_time = nil,
-    dungeon_finish_count = nil,
-    total_finish_count = nil,
-    dungeon_inst_id = nil,
-    scene_inst_id = nil,
-    cell_id = nil,
-    pt = ProtoMessage:newPoint(),
-    destroy = nil,
-    last_quit_halfway = nil,
-    from_scene_cfg_id = nil,
-    from_pos = ProtoMessage:newPoint(),
-    current_finish = nil,
-    last_leave_time = nil,
-    open_stage_ids = {},
-    ack_bst_finish = nil,
-    finish_stage_ids = {},
-    need_reset_stage = nil,
-    first_enter_time = nil,
-    first_finish_time = nil,
-    collect_finish = nil,
-    finished_stage_ids = {}
-  }
-end
-
-function ProtoMessage:newPlayerDungeonInfo()
-  return {
-    dungeon_infos = {},
-    delay_reset_check = nil,
-    back_to_bigworld_scene_id = nil,
-    back_to_bigworld_pt = ProtoMessage:newPoint(),
-    will_to_dungeon_cfg_id = nil
-  }
-end
-
-function ProtoMessage:newDungeonStateInfo()
-  return {
-    dungeon_id = nil,
-    dungeon_state = nil,
-    done_count = nil,
-    entered = nil,
-    from_scene_cfg_id = nil,
-    from_pt = ProtoMessage:newPoint(),
-    need_bst_finish = nil,
-    finish_stage_ids = {},
-    finished_stage_ids = {}
-  }
-end
-
-function ProtoMessage:newGuideGroup()
-  return {
-    group_id = nil,
-    finish_all = nil,
-    finish_index = {}
-  }
-end
-
-function ProtoMessage:newActivityPetTripLotteryRecord()
-  return {
-    activity_id = nil,
-    result = nil,
-    lottery_id = nil,
-    total_happy_value = nil,
-    wish_choice = nil,
-    total_record_num = nil,
-    goods_id = nil,
-    goods_type = nil,
-    num = nil,
-    pet_gift_num = nil
-  }
-end
-
-function ProtoMessage:newSeasonCatchRewardInfo()
-  return {reward_refresh_time = nil, reward_daily_num = nil}
-end
-
-function ProtoMessage:newPlayerMiscInfo()
-  return {
-    cur_selected_throw_item = ProtoMessage:newThrowItemInfo(),
-    diamond_buy_star_times = nil,
-    cur_selected_magic_item_gid = nil,
-    star_recover_time = nil,
-    player_rp_behavior_list = {},
-    minute_send_add_friend_count = nil,
-    battle_ai_world_num = {},
-    star_debris_recover_time = nil,
-    star_debris_state = nil,
-    storage_goods = {},
-    gp_contest_info = ProtoMessage:newPlayerGPContestInfo(),
-    pve_challenge_pet_selected_id = nil,
-    friend_num_cache = nil,
-    guide_info = {},
-    home_level_reward_info = ProtoMessage:newHomeLevelRewardInfo(),
-    query_h5_succ = nil,
-    last_move_merge_time = nil,
-    last_fashionbond_tab = nil,
-    ios_rating_popup_time = nil,
-    netbar_reward_expiration = nil,
-    gift_code = nil,
-    plat_friend_num_cache = nil,
-    video_recording = nil,
-    player_rp_behavior_using_list = {},
-    activity_lottery_records = {},
-    offline_operation_consume_state = ProtoMessage:newOfflineOperationConsumeState(),
-    has_aicoach_shown_notify = nil,
-    season_catch_reward_info = ProtoMessage:newSeasonCatchRewardInfo()
-  }
-end
-
-function ProtoMessage:newPlayerBookData()
-  return {
-    book_data = {}
-  }
-end
-
-function ProtoMessage:newGuideBook()
-  return {
-    id = nil,
-    stamps = {},
-    unlocked_at = nil
-  }
-end
-
-function ProtoMessage:newPlayerWorldMapInfo()
-  return {
-    guide_books = {}
-  }
-end
-
-function ProtoMessage:newPlayerMageBookInfo()
-  return {
-    npcs = {},
-    delayed_npcs = {},
-    delayed_items = {},
-    helper_npcs = {},
-    helper_assign = {},
-    enabled = nil,
-    npc_refresh_time = nil,
-    helper_assign_time = nil,
-    camp_info = {},
-    camp_assign = {}
-  }
-end
-
-function ProtoMessage:newPetTeamShareData()
-  return {
-    valid_pet_gids = {}
-  }
-end
-
-function ProtoMessage:newPlayerMailFailInfo()
-  return {
-    mail_fail_info_list = {}
-  }
-end
-
-function ProtoMessage:newEvalutionGroupShareForm()
-  return {evaluation_group = nil, card_quality = nil}
-end
-
-function ProtoMessage:newShareFormItem()
-  return {id = nil}
-end
-
-function ProtoMessage:newPlayerShareFormInfo()
-  return {
-    share_form_item = {},
-    evaluation_share_form_info = {}
-  }
-end
-
-function ProtoMessage:newPlayerQQAchievementStats()
-  return {use_pet_ball_num = nil}
-end
-
-function ProtoMessage:newPlayerQQAchievementInfo()
-  return {
-    cur_day = nil,
-    day_acc_game_duration = nil,
-    last_stat_time = nil,
-    achievement_reg_channel = nil,
-    stats = ProtoMessage:newPlayerQQAchievementStats()
-  }
-end
-
-function ProtoMessage:newPlayerEmojiItem()
-  return {emoji_id = nil, is_unlock = nil}
-end
-
-function ProtoMessage:newPlayerEmojiBagInfo()
-  return {
-    emoji_list = {}
-  }
-end
-
-function ProtoMessage:newPetCertiMedalHistory()
-  return {activity_id = nil, pet_chains = nil}
-end
-
-function ProtoMessage:newPlayerPetMedalInfo()
-  return {
-    medal_infos = {},
-    collection = {},
-    addi_info = {},
-    pet_certi_history = {}
-  }
-end
-
-function ProtoMessage:newCliPetMedalInfo()
-  return {
-    collection = {}
-  }
-end
-
-function ProtoMessage:newPlayerGiftInfo()
-  return {
-    gift_giving_datas = {},
-    check_giving_gift_timestamp = nil
-  }
-end
-
-function ProtoMessage:newPlayerBattleData_ObserveBattleData()
-  return {
-    uin = nil,
-    flag = nil,
-    backup_scene = ProtoMessage:newPlayerSceneInfo(),
-    observe_start_time = nil
-  }
-end
-
-function ProtoMessage:newPlayerBattleData()
-  return {
-    create_battle_info = ProtoMessage:newCreateBattleInfo(),
-    battle_inst_id = nil,
-    battle_field_id = nil,
-    source_data = ProtoMessage:newSourceData(),
-    settle_step = ProtoEnum.PlayerBattleData.SETTLE_STEP.SETTLE_STEP_IDLE,
-    settle_info = ProtoMessage:newBattleSettleInfo(),
-    scene_rpc_ing = nil,
-    scene_rpc_cnt = nil,
-    scene_settle_info = ProtoMessage:newPlayerBattleData_SceneSettleInfo(),
-    need_check = nil,
-    observe_battle = ProtoMessage:newPlayerBattleData_ObserveBattleData(),
-    bfid_inc_id = nil,
-    z2b_create_ing = nil
-  }
-end
-
-function ProtoMessage:newPlayerMailDataInfo()
-  return {mail_cache_num = nil, last_marquee_check_time = nil}
-end
-
-function ProtoMessage:newIdipMailSerialInfo()
-  return {serial = nil, update_time = nil}
-end
-
-function ProtoMessage:newIdipMailSerialList()
-  return {
-    serials = {}
-  }
-end
-
-function ProtoMessage:newPlayerSvrDataInfo()
-  return {
-    time_offset = nil,
-    last_daily_tick_time = nil,
-    dungeon_info = ProtoMessage:newPlayerDungeonInfo(),
-    hope_data = ProtoMessage:newPlayerHopeData(),
-    battle_pass_info = ProtoMessage:newPlayerBattlePassInfo(),
-    card_info = ProtoMessage:newPlayerCardInfo(),
-    sub_task_info = ProtoMessage:newPlayerSubTaskInfo(),
-    appearance_info = ProtoMessage:newPlayerAppearanceInfo(),
-    share_form_info = ProtoMessage:newPlayerShareFormInfo(),
-    battle_data = ProtoMessage:newPlayerBattleData(),
-    received_mail_list = {},
-    receive_failed_mail_list = {},
-    attachment_receive_fail_mail_list = {},
-    next_mail_expire_time = nil,
-    send_fail_mail_brief = {},
-    adventure_data = ProtoMessage:newPlayerAdventureData(),
-    visit_data = ProtoMessage:newPlayerVisitData(),
-    invest_task = ProtoMessage:newPlayerInvestTaskData(),
-    teleports = {},
-    teach_infos = {},
-    activity_info = ProtoMessage:newPlayerActivityInfo(),
-    copy_data = ProtoMessage:newPlayerCopyData(),
-    exchange_info = ProtoMessage:newPlayerExchangeInfo(),
-    player_interact_info = ProtoMessage:newPlayerInteractInfo(),
-    mage_book_info = ProtoMessage:newPlayerMageBookInfo(),
-    task_summary_data = ProtoMessage:newTaskSummaryList(),
-    money_info = ProtoMessage:newMidasMoneyInfo(),
-    shiny_pet_day_info = ProtoMessage:newPlayerShinyPetDayInfo(),
-    distribute_billnos = ProtoMessage:newMidasDistriBillList(),
-    last_pet_stat_report_time = nil,
-    last_pet_world_stat_update_time = nil,
-    spec_flower_seeds = {},
-    area_check_infos = {},
-    last_pet_battle_stat_update_time = nil,
-    crop_fruits = ProtoMessage:newPlayerCropFruitList(),
-    npc_idip_action = ProtoMessage:newSceneIdipActionNpcList(),
-    gift_limit_info = ProtoMessage:newPlayerGiftLimitList(),
-    badge_challenge_data = ProtoMessage:newBadgeChallengeData(),
-    mail_version = nil,
-    season_info = ProtoMessage:newSeasonInfo(),
-    gift_info = ProtoMessage:newPlayerGiftInfo(),
-    gifts_limit_info = ProtoMessage:newPlayerTypeGiftLimitList(),
-    items_limit_info = {},
-    pet_medal_info = ProtoMessage:newPlayerPetMedalInfo(),
-    share_info = ProtoMessage:newPlayerShareInfo(),
-    pet_egg_data = ProtoMessage:newPlayerPetEggData(),
-    goods_trans = ProtoMessage:newGoodsModifyTransAllInfo(),
-    pet_team_share_data = ProtoMessage:newPetTeamShareData(),
-    shop = ProtoMessage:newDBShop(),
-    last_check_exchange_goods_time = nil,
-    mail_fail_info = ProtoMessage:newPlayerMailFailInfo(),
-    liabilities_mail_send_info = ProtoMessage:newDailySendMailList(),
-    season_adventure = ProtoMessage:newPlayerSeasonAdventureData(),
-    teaching_tab_info = ProtoMessage:newPlayerTeachingTabInfo(),
-    mail_info = ProtoMessage:newPlayerMailDataInfo(),
-    npc_lottery_data = {},
-    badge_trial_data = ProtoMessage:newBadgeTrialData(),
-    idip_mail_serials = ProtoMessage:newIdipMailSerialList(),
-    opt_reward_info = ProtoMessage:newOptReWardNumList(),
-    flow_gid = nil
-  }
-end
-
-function ProtoMessage:newPlayerRedPointInfo()
-  return {
-    group_info = {},
-    cached_group_info = {}
-  }
-end
-
-function ProtoMessage:newMusicApplyInfo()
-  return {music_id = nil, apply_list_id = nil}
-end
-
-function ProtoMessage:newPlayerMusicInfo()
-  return {
-    music_id_list = {},
-    apply_list = {}
-  }
-end
-
-function ProtoMessage:newPlayerStarLightInfo()
-  return {
-    current_progress = nil,
-    unexchange_wishing_star_num = nil,
-    current_efficiency = nil,
-    today_star_light_num = nil,
-    need_notify_refresh = nil
-  }
-end
-
-function ProtoMessage:newPlayerPetInfo()
-  return {
-    pet_data = {},
-    catch_info = {},
-    generation_gid = nil,
-    fellow_gid = nil,
-    bag_pos_gid = {},
-    seen_monster_bits = nil,
-    team_info = ProtoMessage:newPetTeamInfo(),
-    handbook = ProtoMessage:newPetHandbook(),
-    backpack_info = ProtoMessage:newPetBackpackInfo(),
-    habit_info = ProtoMessage:newPetHabitInfo(),
-    statistics_info = ProtoMessage:newPetStatisticsInfo(),
-    travel_info = {},
-    visit_remain_catch_times = nil,
-    next_visit_catch_refresh_time = nil,
-    team_infos = {},
-    visit_remain_shiny_catch_times = nil,
-    last_visit_shiny_catch_refresh_time = nil,
-    deleted_pet_list = ProtoMessage:newDeletedPetList(),
-    home_pet_info = {},
-    version = nil,
-    pseudo_egg_shiny_cum_prob = {},
-    gift_egg_list = ProtoMessage:newGiftEggList(),
-    pet_report_info = {},
-    last_write_friend_db_time = nil,
-    mirror_pet_data = {},
-    pet_once_patch_version = nil,
-    pet_use_info = {},
-    backtrack_info = {},
-    pseudo_egg_glass_cum_prob = {},
-    pet_medal_info = ProtoMessage:newCliPetMedalInfo(),
-    pet_task_info = ProtoMessage:newPetTaskInfo(),
-    monitor_info = ProtoMessage:newPlayerPetMonitorInfo(),
-    current_select_pet_gid = nil,
-    report_brief_info = ProtoMessage:newPetReportBriefInfo()
-  }
-end
-
-function ProtoMessage:newPlayerCommonInfo()
-  return {
-    coupon = nil,
-    coin = nil,
-    coin_locked = nil,
-    elo = nil,
-    in_game_time = nil,
-    tod_updated_time = nil,
-    scene_info = ProtoMessage:newPlayerSceneInfo(),
-    level_award_info = ProtoMessage:newPlayerLevelAwardInfo(),
-    climb_chapter = ProtoMessage:newPlayerClimbChapterInfo(),
-    start_server_ai = nil,
-    in_dungeon_id = {},
-    online_visit_owner = nil,
-    ban_player_reason = nil,
-    chat_permission_date = nil,
-    ban_chat_reason = nil,
-    select_pet_conf_id = nil,
-    region_id = nil,
-    select_pet_conf_id_list = {},
-    next_region_group_id = nil,
-    pet_select_region_id = {},
-    visit_permission_setting = nil,
-    navigation_mode_type = nil,
-    home_last_visit_time = nil,
-    is_home_visiting = nil,
-    home_owner_uin = nil,
-    is_online_visiting_home = nil,
-    home_source_scene_cfg_id = nil,
-    home_source_scene_inst_id = nil,
-    home_source_location = ProtoMessage:newPoint(),
-    ban_info = ProtoMessage:newPlayerBanInfo()
-  }
-end
-
-function ProtoMessage:newPlayerBattlePassExpInfo()
-  return {
-    last_week_exp = nil,
-    level = nil,
-    exp = nil,
-    last_refresh_time = nil
-  }
-end
-
-function ProtoMessage:newPlayerBattlePassRewardInfo_RewardTakenInfo()
-  return {
-    is_free_reward_taken = nil,
-    is_paid_reward_taken = nil,
-    bp_level = nil
-  }
-end
-
-function ProtoMessage:newPlayerBattlePassRewardInfo()
-  return {
-    reward_taken_info = {}
-  }
-end
-
-function ProtoMessage:newPlayerBattlePassTaskInfo()
-  return {
-    daily_task_ids = {},
-    repeat_task_ids = {},
-    last_daily_task_reset_time = nil,
-    task_info_list = {}
-  }
-end
-
-function ProtoMessage:newPlayerBattlePassInfo()
-  return {
-    battle_pass_id = nil,
-    theme_id = nil,
-    exp_info = ProtoMessage:newPlayerBattlePassExpInfo(),
-    reward_info = ProtoMessage:newPlayerBattlePassRewardInfo(),
-    task_info = ProtoMessage:newPlayerBattlePassTaskInfo(),
-    bought_gift_sub_bag_item_ids = {}
-  }
-end
-
-function ProtoMessage:newGiftDropWeightBagNumItem()
-  return {id = nil, num = nil}
-end
-
-function ProtoMessage:newGiftDropWeithBagNumInfo()
-  return {
-    id_type = nil,
-    items = {}
-  }
-end
-
-function ProtoMessage:newPlayerBagItemIdFlagInfo()
-  return {id = nil, flag = nil}
-end
-
-function ProtoMessage:newPlayerBagItemIdFlagTypeInfo()
-  return {
-    type = nil,
-    items = {}
-  }
-end
-
-function ProtoMessage:newPlayerBagItemIdFlagList()
-  return {
-    bag_flag_items = {}
-  }
-end
-
-function ProtoMessage:newBagItemExpireInfo()
-  return {
-    id = nil,
-    expire_time = nil,
-    num = nil,
-    gid = nil,
-    is_finish_conver = nil
-  }
-end
-
-function ProtoMessage:newBagItemExpireList()
-  return {
-    items = {}
-  }
-end
-
-function ProtoMessage:newPlayerBagInfo()
-  return {
-    gid = nil,
-    item_list = {},
-    equipped_ball_num = nil,
-    had_item_info = {},
-    bag_backpack = ProtoMessage:newBagBackpackInfo(),
-    pet_medal_task_info = {},
-    had_item_list = {},
-    is_copy = nil,
-    version = nil,
-    drop_weight_info = {},
-    mask_bag_list = {},
-    last_check_mask_time = nil,
-    bag_item_id_flag = ProtoMessage:newPlayerBagItemIdFlagList(),
-    bag_item_expire_list = ProtoMessage:newBagItemExpireList()
-  }
-end
-
-function ProtoMessage:newPlayerBlackData()
-  return {black_uin = nil, block_time = nil}
-end
-
-function ProtoMessage:newPlayerObserveBattleBlackData()
-  return {
-    battle_id = nil,
-    black_list = {}
-  }
-end
-
-function ProtoMessage:newPlayerBlackInfo()
-  return {
-    black_list = {},
-    observe_battle_black_list = ProtoMessage:newPlayerObserveBattleBlackData()
-  }
-end
-
-function ProtoMessage:newPlayerClientWaterMarkInfo()
-  return {close_watermark = nil, end_time = nil}
-end
-
-function ProtoMessage:newPlayerInfo()
-  return {
-    brief_info = ProtoMessage:newPlayerBriefInfo(),
-    common_info = ProtoMessage:newPlayerCommonInfo(),
-    bag_info = ProtoMessage:newPlayerBagInfo(),
-    pet_info = ProtoMessage:newPlayerPetInfo(),
-    ability_info = ProtoMessage:newPlayerAbilityInfo(),
-    story_flag_info = ProtoMessage:newPlayerStoryFlagInfo(),
-    misc_info = ProtoMessage:newPlayerMiscInfo(),
-    world_map_info = ProtoMessage:newPlayerWorldMapInfo(),
-    svr_data_info = ProtoMessage:newPlayerSvrDataInfo(),
-    red_point_info = ProtoMessage:newPlayerRedPointInfo(),
-    black_info = ProtoMessage:newPlayerBlackInfo(),
-    pvp_his_cli = ProtoMessage:newPlayerPvpHisCli(),
-    music_info = ProtoMessage:newPlayerMusicInfo(),
-    star_light_info = ProtoMessage:newPlayerStarLightInfo(),
-    emoji_bag_info = ProtoMessage:newPlayerEmojiBagInfo(),
-    lottery_confirm = ProtoMessage:newPlayerLotteryRewardConfirmBagInfo(),
-    client_water_mark_info = ProtoMessage:newPlayerClientWaterMarkInfo(),
-    start_up_privilege_info = ProtoMessage:newPlayerStartUpPrivilegeInfo()
-  }
-end
-
-function ProtoMessage:newPlayerPetEggData()
-  return {
-    egg_core_records = {}
-  }
-end
-
-function ProtoMessage:newCDKeyInfo()
-  return {cdkey = nil, used = nil}
-end
-
-function ProtoMessage:newPlayerCDKeyInfo()
-  return {
-    cdkey_list = {}
-  }
-end
-
-function ProtoMessage:newPlayerGiftLimitItem()
-  return {
-    id = nil,
-    cnt = nil,
-    last_update_time = nil
-  }
-end
-
-function ProtoMessage:newPlayerGiftLimitList()
-  return {
-    items = {}
-  }
-end
-
-function ProtoMessage:newPlayerTypeGiftLimitItem()
-  return {
-    items = {},
-    type = nil
-  }
-end
-
-function ProtoMessage:newPlayerTypeGiftLimitList()
-  return {
-    items = {}
-  }
-end
-
-function ProtoMessage:newDailySendMailItem()
-  return {id = nil, mail_send_times = nil}
-end
-
-function ProtoMessage:newDailySendMailInfo()
-  return {
-    type = nil,
-    items = {}
-  }
-end
-
-function ProtoMessage:newDailySendMailList()
-  return {
-    items = {}
-  }
-end
-
-function ProtoMessage:newDailyItemReasonGetInfo()
-  return {
-    guard_id = nil,
-    total_num = nil,
-    total_times = nil,
-    has_limited = nil
-  }
-end
-
-function ProtoMessage:newDailyGetItemLimitInfo()
-  return {
-    id = nil,
-    reason_gets = {}
-  }
-end
-
-function ProtoMessage:newOptReWardNumInfo()
-  return {opt_id = nil, num = nil}
-end
-
-function ProtoMessage:newOptReWardNumList()
-  return {
-    items = {}
-  }
-end
-
-function ProtoMessage:newDailyGetItemLimitlist()
-  return {
-    goods_type = nil,
-    items = {}
-  }
-end
-
-function ProtoMessage:newPlayerBattleData_RewardNpcInfo()
-  return {npc_conf_id = nil, npc_num = nil}
-end
-
-function ProtoMessage:newPlayerBattleData_SceneSettleInfo()
-  return {
-    catch_pet_cnt = nil,
-    npc_info = {}
-  }
-end
-
-function ProtoMessage:newStampInfo()
-  return {unlock_num = nil, unlocked_at = nil}
-end
-
-function ProtoMessage:newRedPointGroup()
-  return {
-    reason_type = nil,
-    point_data = {}
-  }
-end
-
-function ProtoMessage:newPlayerTeleportData()
-  return {id = nil, lv = nil}
-end
-
-function ProtoMessage:newPlayerCopyData()
-  return {src_uin = nil, copy_time = nil}
-end
-
-function ProtoMessage:newPlayerCropFruitInfo()
-  return {
-    owl_sanctuary_id = nil,
-    num = nil,
-    bag_item_id = nil
-  }
-end
-
-function ProtoMessage:newPlayerCropFruitList()
-  return {
-    crop_fruit_list = {}
-  }
-end
-
-function ProtoMessage:newPlayerShareRewardInfo()
-  return {
-    reward_group_type = nil,
-    shared_times = nil,
-    last_share_timestamp = nil,
-    last_refresh_timestamp = nil
-  }
-end
-
-function ProtoMessage:newPlayerShareInfo()
-  return {
-    reward_groups = {}
-  }
-end
-
-function ProtoMessage:newPlayerSyncInfo()
-  return {
-    level = nil,
-    exp = nil,
-    battle_state = ProtoEnum.PlayerBattleState.PLAYER_BATTLE_STATE_IDLE,
-    coupon = nil,
-    coin = nil,
-    coin_locked = nil,
-    elo = nil,
-    servertime = nil,
-    name = nil,
-    sex = nil,
-    in_dungeon_id = {},
-    world_level = nil,
-    online_visit_owner = nil,
-    select_pet_conf_id = nil,
-    vitem_info = ProtoMessage:newPlayerVItemInfo(),
-    select_pet_conf_id_list = {},
-    pet_select_region_id = {}
-  }
-end
-
-function ProtoMessage:newServerPref()
-  return {
-    int_value = nil,
-    list_value = {},
-    str_value = nil,
-    key = nil
-  }
-end
-
-function ProtoMessage:newHeroPref()
-  return {
-    id = nil,
-    prefs = {}
-  }
-end
-
-function ProtoMessage:newPlayerServerPref()
-  return {
-    hero_prefs = {}
-  }
-end
-
-function ProtoMessage:newPlayerCliBuffInfo()
-  return {
-    buff = nil,
-    sever_pref = ProtoMessage:newPlayerServerPref()
-  }
-end
-
-function ProtoMessage:newPlayerCardInfo_CardItemOwnedInfo()
-  return {
-    card_item_id = nil,
-    card_item_get_timestamp = nil,
-    card_item_num = nil
-  }
-end
-
-function ProtoMessage:newPlayerCardInfo()
-  return {
-    last_name_changed_time = nil,
-    icon_owned = {},
-    skin_owned = {},
-    label_owned = {},
-    cached_name = nil
-  }
-end
-
-function ProtoMessage:newPlayerCatchBallRewardInfo()
-  return {
-    last_reward_time = nil,
-    next_reward_time = nil,
-    catch_ball_reward_num = nil,
-    enable_reward = nil,
-    red_point_sent = nil
-  }
-end
-
-function ProtoMessage:newPlayerAreaCheckInfo()
-  return {
-    area_id = nil,
-    radius = nil,
-    conf_id = nil
-  }
-end
-
-function ProtoMessage:newPlayerTeachInfo()
-  return {
-    teach_id = nil,
-    status = ProtoEnum.PlayerTeachInfo.TeachStatus.LOCK,
-    unlock_time = nil,
-    multi_condi_bit = nil,
-    multi_condi_priority = nil
-  }
-end
-
-function ProtoMessage:newTeachingUnlockProgress()
-  return {
-    type = ProtoEnum.SkillDamType.SDT_INVALID,
-    count = nil,
-    break_award_sort = {}
-  }
-end
-
-function ProtoMessage:newTeachingTask()
-  return {
-    id = nil,
-    is_complete = nil,
-    is_rewarded = nil
-  }
-end
-
-function ProtoMessage:newTeaching()
-  return {
-    id = nil,
-    is_unlock = nil,
-    unlock_progress = {}
-  }
-end
-
-function ProtoMessage:newPlayerTeachingTabInfo()
-  return {
-    type_advantage = {},
-    type_advantage_tasks = {},
-    combat_mechanism = {},
-    combat_mechanism_tasks = {}
-  }
-end
-
-function ProtoMessage:newLotteryRewardRecord()
-  return {
-    reward_conf_id = nil,
-    total_claimed = nil,
-    daily_claimed = nil,
-    last_claim_day = nil,
-    weely_claimed = nil
-  }
-end
-
-function ProtoMessage:newPlayerNpcLotteryData()
-  return {
-    logic_id = nil,
-    logic_version = nil,
-    lottery_pool_id = nil,
-    reward_records = {},
-    logic_ver = nil,
-    daily_reset_time = nil,
-    weely_reset_time = nil
   }
 end
 
@@ -17307,7 +17396,8 @@ function ProtoMessage:newSpaceActionCollection()
     camera_skin_change = ProtoMessage:newSpaceAct_CameraSkinChange(),
     npc_mutation_info_change = ProtoMessage:newSpaceAct_NpcMutationInfoChange(),
     roleplay_hold_info_chg_ntf = ProtoMessage:newSpaceAct_RoleplayHoldInfoChgNtf(),
-    option_b_or_w_list_uins_chg_ntf = ProtoMessage:newSpaceAct_OptionBlackOrWhiteListUinsChgNtf()
+    option_b_or_w_list_uins_chg_ntf = ProtoMessage:newSpaceAct_OptionBlackOrWhiteListUinsChgNtf(),
+    player_custom_anim_change = ProtoMessage:newSpaceAct_PlayerCustomAnimChange()
   }
 end
 
@@ -18097,6 +18187,13 @@ function ProtoMessage:newSpaceAct_NpcMutationInfoChange()
     npc_obj_id = nil,
     mutation_type = nil,
     glass_info = ProtoMessage:newGlassInfo()
+  }
+end
+
+function ProtoMessage:newSpaceAct_PlayerCustomAnimChange()
+  return {
+    actor_id = nil,
+    custom_anims = ProtoMessage:newPlayerSettings_PlayerCustomAnims()
   }
 end
 
@@ -18931,6 +19028,16 @@ function ProtoMessage:newZonePetEvoluteRsp()
   }
 end
 
+function ProtoMessage:newZonePetPauseEvoluteReq()
+  return {pet_gid = nil}
+end
+
+function ProtoMessage:newZonePetPauseEvoluteRsp()
+  return {
+    ret_info = ProtoMessage:newRetInfo()
+  }
+end
+
 function ProtoMessage:newZonePetEquipSkillReq()
   return {
     equip_info = {},
@@ -19360,14 +19467,17 @@ end
 
 function ProtoMessage:newZonePetFreeReq()
   return {
-    pet_gid = {}
+    pet_gid = {},
+    need_backtrack = nil
   }
 end
 
 function ProtoMessage:newZonePetFreeRsp()
   return {
     ret_info = ProtoMessage:newRetInfo(),
-    pet_gid = {}
+    pet_gid = {},
+    need_backtrack = nil,
+    backtrack_usage_count = nil
   }
 end
 
@@ -20022,6 +20132,43 @@ function ProtoMessage:newZoneGetFriendExtInfoListRsp()
   }
 end
 
+function ProtoMessage:newZoneBatchGetOthersSocialExtDataReq()
+  return {
+    uin_list = {},
+    ext_data_types = {}
+  }
+end
+
+function ProtoMessage:newPlayerSocialExtData_Profile()
+  return {name = nil, card_icon_selected = nil}
+end
+
+function ProtoMessage:newPlayerSocialExtData_RecentInfo()
+  return {
+    online = nil,
+    last_logout_time = nil,
+    battle_brief_info = ProtoMessage:newPlayerBattleBriefInfo(),
+    pos_info = ProtoMessage:newFriendPositionInfo(),
+    visit_info = ProtoMessage:newFriendVisitInfo()
+  }
+end
+
+function ProtoMessage:newPlayerSocialExtData()
+  return {
+    uin = nil,
+    search_ret = nil,
+    profile = ProtoMessage:newPlayerSocialExtData_Profile(),
+    recent_info = ProtoMessage:newPlayerSocialExtData_RecentInfo()
+  }
+end
+
+function ProtoMessage:newZoneBatchGetOthersSocialExtDataRsp()
+  return {
+    ret_info = ProtoMessage:newRetInfo(),
+    ext_datas = {}
+  }
+end
+
 function ProtoMessage:newZoneFriendSearchPlayerReq()
   return {uin = nil}
 end
@@ -20033,7 +20180,8 @@ function ProtoMessage:newZoneFriendSearchPlayerRsp()
     is_friend = nil,
     is_black_role = nil,
     ban_info = ProtoMessage:newBanInfo(),
-    can_be_add_friend = nil
+    can_be_add_friend = nil,
+    is_black_me = nil
   }
 end
 
@@ -24605,7 +24753,8 @@ function ProtoMessage:newZoneBacktrackPetRsp()
     is_for_check = nil,
     pet_gid = nil,
     reward_list = {},
-    show_info = ProtoMessage:newPetBacktrackShowInfo()
+    show_info = ProtoMessage:newPetBacktrackShowInfo(),
+    backtrack_usage_count = nil
   }
 end
 
@@ -24627,7 +24776,8 @@ function ProtoMessage:newZoneQueryBacktrackPetRewardRsp()
   return {
     pet_gid = {},
     reward_list = {},
-    ret_info = ProtoMessage:newRetInfo()
+    ret_info = ProtoMessage:newRetInfo(),
+    backtrack_usage_count = nil
   }
 end
 
@@ -25796,6 +25946,17 @@ function ProtoMessage:newZoneDistributeBillNotify()
     ret_info = ProtoMessage:newRetInfo(),
     goods_id = nil,
     create_time = nil
+  }
+end
+
+function ProtoMessage:newZoneTerritoryTrialHistoryReq()
+  return {}
+end
+
+function ProtoMessage:newZoneTerritoryTrialHistoryRsp()
+  return {
+    ret_info = ProtoMessage:newRetInfo(),
+    history_list = {}
   }
 end
 

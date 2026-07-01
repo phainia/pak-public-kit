@@ -108,6 +108,9 @@ function UMG_CompassIcon_C:OnConstruct()
   end
   self:PCKeySetting()
   local IsHiddenRed = _G.NRCModuleManager:DoCmd(_G.ShopModuleCmd.OnGetIsHiddenShopItemRed)
+  self.NrcRedPoint:ClearIgnoreRedPointDataList()
+  self.NrcRedPoint:SetIgnoreRedPointDataList(Enum.RedPointReason.RPR_ACTIVITY_TAB_NOTIFY, {300006})
+  self.NrcRedPoint:SetIgnoreRedPointDataList(Enum.RedPointReason.RPR_ACTIVITY_TAB_REWARD, {300006})
   if IsHiddenRed then
     self.NrcRedPoint:SetupKey(1, nil, nil, Enum.RedPointReason.RPR_MALLGOODS_POINT_REWARD)
   else
@@ -1827,9 +1830,11 @@ function UMG_CompassIcon_C:PlayStarlightChangeAnim(InStarlightInfo, IncrementSta
     elseif InStarlightInfo.current_progress then
       local curPercent = self.ProgressBar_46.Percent
       local newPercent = InStarlightInfo.current_progress / 10000
-      local animEndTime = self.LuoPan_Add:GetEndTime()
-      self:StopAllAnimations()
-      self:PlayAnimationTimeRange(self.LuoPan_Add, curPercent * animEndTime, newPercent * animEndTime)
+      if newPercent - curPercent > 0.01 then
+        local animEndTime = self.LuoPan_Add:GetEndTime()
+        self:StopAllAnimations()
+        self:PlayAnimationTimeRange(self.LuoPan_Add, curPercent * animEndTime, newPercent * animEndTime)
+      end
     end
   end
   self.DescriptionStarlight_1:SetText(string.format("+%d", IncrementStarlight))

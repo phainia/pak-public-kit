@@ -429,7 +429,7 @@ function UMG_Shop_C:OnAddEventListener()
   self:RegisterEvent(self, ShopModuleEvent.CloseRefreshBtn, self.CloseRefreshBtn)
   self:RegisterEvent(self, ShopModuleEvent.SetItemPlayAnimUp, self.ItemPlayAnimUp)
   self:RegisterEvent(self, PayModuleEvent.OnChargeBackgroundSuccess, self.RefreshMoneyInfo)
-  _G.BattleEventCenter:Bind(self, BattleEvent.ROUND_START, BattlePerformEvent.TurnPlayStart)
+  _G.BattleEventCenter:Bind(self, BattleEvent.ROUND_START, BattleEvent.StartAttackPlayer)
   _G.NRCEventCenter:RegisterEvent("UMG_Shop_C", self, BattleEvent.LeaveBattle, self.OnLeaveBattle)
 end
 
@@ -438,7 +438,7 @@ function UMG_Shop_C:OnLeaveBattle()
 end
 
 function UMG_Shop_C:OnBattleEvent(eventName, ...)
-  if eventName == BattleEvent.ROUND_START or eventName == BattlePerformEvent.TurnPlayStart then
+  if eventName == BattleEvent.ROUND_START or eventName == BattleEvent.StartAttackPlayer then
     self:DoClose()
   end
 end

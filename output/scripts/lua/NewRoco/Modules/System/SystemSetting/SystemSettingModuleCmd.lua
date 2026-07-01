@@ -47,4 +47,7 @@ SystemSettingModuleCmd.ForgetSecondaryPassword = "SystemSettingModuleCmd.ForgetS
 SystemSettingModuleCmd.OpenSecondaryPasswordCancelForceDisable = "SystemSettingModuleCmd.OpenSecondaryPasswordCancelForceDisable"
 SystemSettingModuleCmd.EncryptInputText = "SystemSettingModuleCmd.EncryptInputText"
 SystemSettingModuleCmd.ChangePlayerName = "SystemSettingModuleCmd.ChangePlayerName"
+SystemSettingModuleCmd.GetCustomAnimCfgBySelectedIdx = "SystemSettingModuleCmd.GetCustomAnimCfgBySelectedIdx"
+SystemSettingModuleCmd.GetCustomAnimCfgByActor = "SystemSettingModuleCmd.GetCustomAnimCfgByActor"
+SystemSettingModuleCmd.GetRoleAnimationCfgByType = "SystemSettingModuleCmd.GetRoleAnimationCfgByType"
 return SystemSettingModuleCmd

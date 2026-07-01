@@ -130,6 +130,7 @@ function PlayerModule:OnActive()
   self:RegisterCmd(_G.PlayerModuleCmd.GetRidePetEyeViewOffset, self.GetRidePetEyeViewOffset)
   self:RegisterCmd(_G.PlayerModuleCmd.OnAbnormalStatusChange, self.OnAbnormalStatusChange)
   self:RegisterCmd(_G.PlayerModuleCmd.HIDE_NOVISIT_PLAYER, self.HideNotVisitPlayer)
+  self:RegisterCmd(_G.PlayerModuleCmd.OnPlayerCustomAnimChange, self.OnPlayerCustomAnimChange)
   _G.ZoneServer:AddProtocolListener(self, ProtoCMD.ZoneSvrCmd.ZONE_PLAYER_PET_HP_CHANGE_NOTIFY, self.OnPlayerPetHpChangeNotify)
   _G.ZoneServer:AddProtocolListener(self, ProtoCMD.ZoneSvrCmd.ZONE_PLAYER_ADD_ROLE_ENERGY_NOTIFY, self.OnPlayerEnergyAddNotify)
   _G.ZoneServer:AddProtocolListener(self, ProtoCMD.ZoneSvrCmd.ZONE_INTERACT_ACTION_RESULT_NTF, self.OnInteractionActionResultNotify)
@@ -2275,6 +2276,14 @@ function PlayerModule:OnAbnormalStatusChange(action)
     end
   else
     Log.Error("player or AbnormalStatusComponent not found", id, statusId, action.start_time_ms)
+  end
+end
+
+function PlayerModule:OnPlayerCustomAnimChange(action)
+  local id = action.actor_id
+  local player = self._playerDic[id]
+  if player and player.serverData then
+    player.serverData.custom_anims = action.custom_anims
   end
 end
 

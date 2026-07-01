@@ -128,6 +128,7 @@ function UMG_PetRightPanel_C:OnActive(petInfoMain, petData, bShowSendMark)
   self:OnSelectPetChange(self.uiData.petData)
   self:CheckCanSendToFriend()
   self:UpdateTimeRewindBtnVisibility()
+  self:UpdateHandbookBtnVisibility()
   if 3 == GlobalConfig.OpenMainPanelFromDebugBtn then
     self:OnMenuButtonClick(2)
   else
@@ -285,6 +286,9 @@ function UMG_PetRightPanel_C:OnAddEventListener()
   self:RegisterEvent(self, PetUIModuleEvent.SetAttributeState, self.CloseSwitchButton)
   self:RegisterEvent(self, PetUIModuleEvent.OnNewPetBagEnterScreenState, self.OnChangeCloseBtnStyle)
   self:RegisterEvent(self, PetUIModuleEvent.OnOpenNewPetBag, self.OnOpenNewPetBag)
+  if self.HandbookBtn then
+    self:AddButtonListener(self.HandbookBtn.btnLevelUp, self.OnHandbookBtnClick)
+  end
   self:AddButtonListener(self.ShareBtn.btnLevelUp, self.OnShareClick)
   self:AddButtonListener(self.GiftColleaguesBtn.btnLevelUp, self.OnGiftBtnClick)
   self:AddButtonListener(self.TimeRewindBtn.btnLevelUp, self.OnTimeRewindBtnClicked)
@@ -296,6 +300,9 @@ end
 function UMG_PetRightPanel_C:OnRemoveEventListener()
   self:RemoveButtonListener(self.ShareBtn.btnLevelUp)
   self:RemoveButtonListener(self.TimeRewindBtn.btnLevelUp)
+  if self.HandbookBtn then
+    self:RemoveButtonListener(self.HandbookBtn.btnLevelUp)
+  end
   _G.NRCEventCenter:UnRegisterEvent(self, ShareUIModuleEvent.SHOW_ENTRANCE_REWARD, self.CheckShowShareReward)
   _G.NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.OnNewPetBagReleaseLifeModeChanged, self.OnNewPetBagReleaseLifeModeChanged)
 end
@@ -545,6 +552,7 @@ function UMG_PetRightPanel_C:OnSelectPet(_petData, isCheck, bOnlyPetDataRefresh)
   self:SetButtonsVisibility(true)
   self:SetTopBtnPanelVisibility(true)
   self:UpdateTimeRewindBtnVisibility()
+  self:UpdateHandbookBtnVisibility()
   if not bOnlyPetDataRefresh then
     self:OnErasePetSkillRedPoint()
   end
@@ -934,6 +942,12 @@ function UMG_PetRightPanel_C:OnTimeRewindBtnClicked()
   end
 end
 
+function UMG_PetRightPanel_C:OnHandbookBtnClick()
+  if self.uiData and self.uiData.petData and self.uiData.petData.gid then
+    _G.NRCModuleManager:DoCmd(_G.HandbookModuleCmd.OpenHandBookContentViewByPetGid, self.uiData.petData.gid)
+  end
+end
+
 function UMG_PetRightPanel_C:SetFullScreenMaskShow(bShow)
   if self.FullScreenMask == nil then
     return
@@ -1048,6 +1062,28 @@ function UMG_PetRightPanel_C:UpdateTimeRewindBtnVisibility()
   end
   local bCanTraceBack = PetUtils.CheckPetIsCanTraceBack(self.uiData.petData, true, true, true)
   self.TimeRewindBtn:SetVisibility(bCanTraceBack and bCanShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
+end
+
+function UMG_PetRightPanel_C:UpdateHandbookBtnVisibility()
+  if self.uiData == nil then
+    Log.Error("UMG_PetRightPanel_C:UpdateTimeRewindBtnVisibility uiData is nil")
+    return
+  end
+  if nil == self.uiData.petData then
+    Log.Error("UMG_PetRightPanel_C:UpdateTimeRewindBtnVisibility petData is nil")
+    return
+  end
+  local bCanShow = true
+  local EnterType = _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.GetEnterPetPanelType)
+  if EnterType == PetUIModuleEnum.EnterType.PetInheritance or EnterType == PetUIModuleEnum.EnterType.PetAltar then
+    bCanShow = false
+  end
+  local friendInfo = _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.GetFriendInfoToPetMain)
+  if friendInfo and friendInfo.type ~= _G.ProtoEnum.PlayerRelationshipType.PRT_SELF then
+    bCanShow = false
+  end
+  self.HandbookBtn:SetVisibility(bCanShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
+  self.HandbookBtnBox:SetVisibility(bCanShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
 end
 
 function UMG_PetRightPanel_C:OnNewPetBagReleaseLifeModeChanged()

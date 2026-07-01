@@ -14,15 +14,18 @@ function UMG_TimeRewindPopup_C:OnActive(petGID)
   Log.Debug("UMG_TimeRewindPopup_C:OnActive")
   self:LoadAnimation(0)
   self:SetCommonPopUpInfo(self.PopUp2)
+  self:SetBtnRightRoundCountText()
   self:SetLoadingView(petGID)
 end
 
 function UMG_TimeRewindPopup_C:OnDeactive()
   self:RemoveButtonListener(self.DetailsBtn.btnLevelUp)
+  self:UnRegisterEvent(self, PetUIModuleEvent.OnUpdatePetBacktrackRoundCount)
 end
 
 function UMG_TimeRewindPopup_C:OnAddEventListener()
   self:AddButtonListener(self.DetailsBtn.btnLevelUp, self.OnClickDetailsBtn)
+  self:RegisterEvent(self, PetUIModuleEvent.OnUpdatePetBacktrackRoundCount, self.SetBtnRightRoundCountText)
 end
 
 function UMG_TimeRewindPopup_C:ReceiveRspData(petGID, traceBackShowInfo, rewardList)
@@ -75,6 +78,7 @@ function UMG_TimeRewindPopup_C:UpdateView()
     self.Switcher:SetActiveWidgetIndex(0)
   end
   self:SetCommonPopUpInfo(self.PopUp2)
+  self:SetBtnRightRoundCountText()
   self:SetTextContent()
   self:SetCurPetInfoView()
   self:SetBackTracePetInfoView()
@@ -187,11 +191,37 @@ function UMG_TimeRewindPopup_C:SetCommonPopUpInfo(PopUp)
   PopUp:SetPanelInfo(CommonPopUpData)
 end
 
+function UMG_TimeRewindPopup_C:SetBtnRightRoundCountText()
+  if UE4.UObject.IsValid(self.TitleCanvas) then
+    local num = _G.NRCModeManager:DoCmd(PetUIModuleCmd.GetCurrentSeasonkRoundCount)
+    local str = string.format(LuaText.pet_rollback_number_tip, num)
+    self.TitleCanvas:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    self.Tips:SetText(str)
+  end
+end
+
 function UMG_TimeRewindPopup_C:OnBtnCancelClicked()
   self:ClosePanel()
 end
 
 function UMG_TimeRewindPopup_C:OnBtnOkClicked()
+  self:ShowRollbackConfirmDialog()
+end
+
+function UMG_TimeRewindPopup_C:ShowRollbackConfirmDialog()
+  local DialogContext = require("NewRoco.Modules.System.TipsModule.DialogContext")
+  local Context = DialogContext()
+  Context:SetTitle(LuaText.pet_rollback_check_title):SetContent(LuaText.pet_rollback_check_describe):SetMode(DialogContext.Mode.OK_CANCEL):SetCloseOnCancel(true):SetCloseOnOK(true):SetCallback(self, self.OnRollbackConfirmCallback):SetClickAnywhereClose(true)
+  _G.NRCModuleManager:DoCmd(TipsModuleCmd.Dialog_OpenDialog, Context)
+end
+
+function UMG_TimeRewindPopup_C:OnRollbackConfirmCallback(result)
+  if result then
+    self:StartingTheRollback()
+  end
+end
+
+function UMG_TimeRewindPopup_C:StartingTheRollback()
   _G.NRCAudioManager:PlaySound2DAuto(41401001, "UMG_TimeRewindPopup_C:OnBtnOkClicked")
   Log.Debug("UMG_TimeRewindPopup_C:OnBtnOkClicked")
   if self.petGID == nil then

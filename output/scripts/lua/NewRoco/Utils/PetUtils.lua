@@ -320,6 +320,10 @@ function PetUtils.CheckIsForbidSelectPetInFreeMode(PetGID, bShowTips)
         _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.pet_trip_54)
       end
     end
+    local bCanTraceBack = PetUtils.CheckPetIsCanTraceBack(PetData, true, false, true)
+    if bCanTraceBack then
+      IsForbidSelectPetInFreeMode = true
+    end
   end
   return IsForbidSelectPetInFreeMode
 end
@@ -1894,7 +1898,7 @@ function PetUtils.GetEvolutionPetBaseId(petData)
   local TargetEvoPetBaseId
   local playerRedPointInfo = _G.DataModelMgr.PlayerDataModel:GetRedPointInfo()
   for k, v in ipairs(playerRedPointInfo) do
-    if (v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK) and v.point_data and #v.point_data > 0 then
+    if (v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK or v.reason_type == _G.Enum.RedPointReason.RPR_QUIET_PET_EVOLVE) and v.point_data and #v.point_data > 0 then
       for key, val in ipairs(v.point_data) do
         local dataList = string.Split(val, ".")
         if petData and petData.gid == tonumber(dataList[1]) then
@@ -2886,6 +2890,12 @@ function PetUtils.CheckPetIsCanFree(petData, onlyCheck, bIgnorePvpOrPveTeam, App
     end
     return bCanFree
   end
+  if FreeReasonType == PetUIModuleEnum.PetFreeReasonType.FreeInFreeMode and PetUtils.CheckPetIsCanTraceBack(petData, true, false, true) then
+    if not onlyCheck then
+      _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.pet_rollback_free_ban_1)
+    end
+    return bCanFree
+  end
   bCanFree = true
   return bCanFree
 end
@@ -2911,6 +2921,9 @@ end
 
 function PetUtils.CheckPetIsCanTraceBack(petData, onlyCheck, checkForShow, bIgnorePvpOrPveTeam, ApplyTraceBackPvpOrPvePetCaller, ApplyTraceBackPvpOrPvePetCallback)
   Log.Debug("PetUtils.CheckPetIsCanTraceBack")
+  if 0 == _G.NRCModeManager:DoCmd(_G.PetUIModuleCmd.GetCurrentSeasonkRoundCount) then
+    return false
+  end
   if nil == onlyCheck then
     onlyCheck = true
   end
@@ -3071,7 +3084,7 @@ function PetUtils.CommonPetHandleCheck(checkType, petData, onlyCheck, bIgnorePvp
   if nil == petBaseConf then
     return bCanHandle
   end
-  if petBaseConf.ban_free and 1 == petBaseConf.ban_free then
+  if checkType ~= PetUIModuleEnum.PetCommonHandleCheckType.TraceBack and petBaseConf.ban_free and 1 == petBaseConf.ban_free then
     if not onlyCheck then
       if checkType == PetUIModuleEnum.PetCommonHandleCheckType.Free then
         _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.umg_petbag_2 .. petBaseConf.name .. LuaText.umg_petbag_3)

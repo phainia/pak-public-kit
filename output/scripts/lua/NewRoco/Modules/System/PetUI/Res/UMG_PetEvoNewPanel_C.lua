@@ -100,6 +100,9 @@ function UMG_PetEvoNewPanel_C:OnBtnCloseClick()
   if isSelectBtn then
     return
   end
+  if self.uiData and self.uiData[1] and self.uiData[1].petGid then
+    _G.NRCModuleManager:DoCmd(PetUIModuleCmd.SendPetPauseEvoluteReq, self.uiData[1].petGid)
+  end
   _G.NRCAudioManager:PlaySound2DAuto(41401014, "UMG_PetLeftPanelMenuButton_C:OnTouchEnded")
   self:DispatchEvent(PetUIModuleEvent.OnNewEvoPanelClosed, false)
   local touchReasonType = _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.GetPanelSelectBtnReason, panelName).CLOSE

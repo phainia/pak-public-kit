@@ -169,6 +169,7 @@ PetUIModuleEvent.ShowPetInfoMainUI = "PetUIModuleEvent.ShowPetInfoMainUI"
 PetUIModuleEvent.ShowHideRecommendedBtn = "PetUIModuleEvent.ShowHideRecommendedBtn"
 PetUIModuleEvent.ShowHideGiftColleaguesBtn = "PetUIModuleEvent.ShowHideGiftColleaguesBtn"
 PetUIModuleEvent.ShowHideTimeRewindBtn = "PetUIModuleEvent.ShowHideTimeRewindBtn"
+PetUIModuleEvent.ShowHideHandbookBtn = "PetUIModuleEvent.ShowHideHandbookBtn"
 PetUIModuleEvent.OnNewEvoPanelOpened = "PetUIModuleEvent.OnNewEvoPanelOpened"
 PetUIModuleEvent.OnNewEvoPanelClosed = "PetUIModuleEvent.OnNewEvoPanelClosed"
 PetUIModuleEvent.OnNewEvoPanelDestruct = "PetUIModuleEvent.OnNewEvoPanelDestruct"
@@ -284,4 +285,5 @@ PetUIModuleEvent.OnNewPetBagExitScreen = "PetUIModuleEvent.OnNewPetBagExitScreen
 PetUIModuleEvent.OnNewPetBagExitFree = "PetUIModuleEvent.OnNewPetBagExitFree"
 PetUIModuleEvent.OnUpdatePetImage3dData = "PetUIModuleEvent.OnUpdatePetImage3dData"
 PetUIModuleEvent.OnPetPortableBagTouchEnded = "PetUIModuleEvent.OnPetPortableBagTouchEnded"
+PetUIModuleEvent.OnUpdatePetBacktrackRoundCount = "PetUIModuleEvent.OnUpdatePetBacktrackRoundCount"
 return PetUIModuleEvent

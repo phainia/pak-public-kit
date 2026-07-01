@@ -116,7 +116,9 @@ function UMG_PvPSubPanel_C:OnRemoveEventListener()
 end
 
 function UMG_PvPSubPanel_C:OnAnimationFinished(anim)
-  self.CWView_WeekendBenefitsPanel:OnAnimationFinished(anim)
+  if self.CWView_WeekendBenefitsPanel then
+    self.CWView_WeekendBenefitsPanel:OnAnimationFinished(anim)
+  end
 end
 
 function UMG_PvPSubPanel_C:OnBtnWeeklyReward()

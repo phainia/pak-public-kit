@@ -352,7 +352,7 @@ function UMG_Modify_C:OnChangeApply()
           local goods = {}
           goods.goods_id = NeedItem.itemId
           goods.goods_num = NeedItem.needNum
-          goods.goods_type = ProtoEnum.GoodsType.GT_BAGITEM
+          goods.goods_type = NeedItem.itemType or ProtoEnum.GoodsType.GT_BAGITEM
           table.insert(itemIdList, 1, goods)
         end
         local exchangeInfo = {}
@@ -366,6 +366,9 @@ function UMG_Modify_C:OnChangeApply()
         UseItemInfo.item_conf_id = self.bloodUIDataList[self.selectBloodIndex].BloodItemID
         UseItemInfo.num = 1
         UseItemInfo.para = self.bloodUIDataList[self.selectBloodIndex].petGid
+        if UseItemInfo.item_conf_id == 102022 then
+          UseItemInfo.para2 = self.bloodUIDataList[self.selectBloodIndex].tarBloodID
+        end
         table.insert(useItemList, UseItemInfo)
         _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.PetTeamShareQuickAdjust, exchangeInfoList, useItemList, {
           ItemConfId = self.bloodUIDataList[self.selectBloodIndex].BloodItemID,
@@ -489,10 +492,18 @@ function UMG_Modify_C:OnOK()
         local bagItemName = ""
         for i, item in ipairs(self.bloodUIDataList[self.selectBloodIndex].NeedItemList) do
           table.insert(itemIdList, item.itemId)
-          local bagItemConf = _G.DataConfigManager:GetBagItemConf(item.itemId)
-          bagItemName = string.format("%s%s", bagItemName, bagItemConf.name)
-          if i ~= #self.bloodUIDataList[self.selectBloodIndex].NeedItemList then
-            bagItemName = bagItemName .. "\227\128\129"
+          if item.itemType == Enum.GoodsType.GT_BAGITEM then
+            local bagItemConf = _G.DataConfigManager:GetBagItemConf(item.itemId)
+            bagItemName = string.format("%s%s", bagItemName, bagItemConf.name)
+            if i ~= #self.bloodUIDataList[self.selectBloodIndex].NeedItemList then
+              bagItemName = bagItemName .. "\227\128\129"
+            end
+          elseif item.itemType == Enum.GoodsType.GT_VITEM then
+            local vitemConf = _G.DataConfigManager:GetVisualItemConf(item.itemId)
+            bagItemName = string.format("%s%s", bagItemName, vitemConf.displayName)
+            if i ~= #self.bloodUIDataList[self.selectBloodIndex].NeedItemList then
+              bagItemName = bagItemName .. "\227\128\129"
+            end
           end
         end
         local text = string.format(LuaText.lineup_code_change_nature_tips4, bagItemName)

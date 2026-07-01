@@ -16,6 +16,7 @@ function UMG_NpcInfo_MysteriousStore_C:OnActive(npcInfo)
     self.NPCDes:SetText(worldMapCfg.worldmap_npc_des)
   end
   self.HotItemText:SetText(LuaText.map_random_shop_text_4)
+  self.BatchText_1:SetText(LuaText.map_random_shop_text_4)
   self.CollectGoodsDesText:SetText(LuaText.map_random_shop_text_2)
   self.updateTimer = _G.TimerManager:CreateTimer(self, "UMG_NpcInfo_MysteriousStore_C:OnUpdate", math.maxinteger, self.OnUpdate, nil, 1)
   local module = _G.NRCModuleManager:GetModule("BigMapModule")
@@ -67,6 +68,20 @@ function UMG_NpcInfo_MysteriousStore_C:OnUpdate()
   else
     self.HotItemTime:SetText("00:00:00")
   end
+  if self.disableTime3 and "" ~= self.disableTime3 then
+    local disableTimeSec = self.disableTime3
+    if disableTimeSec and disableTimeSec > 0 then
+      local leftSec = UIUtils.GetRemainingTime(disableTimeSec, nowTime)
+      self.BatchItemTime0:SetText(UIUtils.FormatTimeString(leftSec))
+      if leftSec <= 0 then
+        bShouldReq = true
+      end
+    else
+      self.BatchItemTime0:SetText("00:00:00")
+    end
+  else
+    self.BatchItemTime0:SetText("00:00:00")
+  end
   if self.disableTime2 and "" ~= self.disableTime2 then
     local disableTimeSec = self.disableTime2
     if disableTimeSec and disableTimeSec > 0 then
@@ -101,16 +116,20 @@ function UMG_NpcInfo_MysteriousStore_C:UpdatePanelInfo(rsp)
     self.ShopName:SetText(shopCfg.shop_name)
   end
   local HotItemList = {}
+  local CrossItemList = {}
   local CommonItemList = {}
   local targetItemList = {}
   self.disableTime = math.maxinteger
   self.disableTime2 = math.maxinteger
+  self.disableTime3 = math.maxinteger
   local showIconGoodID
   for _, item in ipairs(shopData.goods_data) do
     local itemCfg = _G.DataConfigManager:GetRandomGoodsConf(item.goods_id)
     if itemCfg then
       if itemCfg.special_goods_type == _G.Enum.SpecialGoodsType.SGT_HOTSALES then
         table.insert(HotItemList, item)
+      elseif itemCfg.special_goods_type == _G.Enum.SpecialGoodsType.SGT_CROSSDAY then
+        table.insert(CrossItemList, item)
       elseif itemCfg.special_goods_type == _G.Enum.SpecialGoodsType.SGT_NORMAL then
         table.insert(CommonItemList, item)
       elseif itemCfg.special_goods_type == _G.Enum.SpecialGoodsType.SGT_TARGET then
@@ -124,6 +143,11 @@ function UMG_NpcInfo_MysteriousStore_C:UpdatePanelInfo(rsp)
       self.disableTime = item.disable_time
     end
   end
+  for _, item in ipairs(CrossItemList) do
+    if item.disable_time and (not self.disableTime3 or item.disable_time < self.disableTime3) and 0 ~= item.disable_time then
+      self.disableTime3 = item.disable_time
+    end
+  end
   for _, item in ipairs(targetItemList) do
     if item.disable_time and (not self.disableTime2 or item.disable_time < self.disableTime2) and 0 ~= item.disable_time then
       self.disableTime2 = item.disable_time
@@ -133,9 +157,18 @@ function UMG_NpcInfo_MysteriousStore_C:UpdatePanelInfo(rsp)
     self.CanvasPanel:SetVisibility(UE4.ESlateVisibility.Visible)
     local shopList = _G.NRCModuleManager:DoCmd(_G.NPCShopUIModuleCmd.SetMysteriousStoreShopList, HotItemList)
     self.HotItemGridView:InitGridView(shopList)
+    self.BatchText_1:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.CanvasPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.HotItemGridView:InitGridView({})
+  end
+  if #CrossItemList > 0 then
+    self.CanvasPanel_Batch0:SetVisibility(UE4.ESlateVisibility.Visible)
+    local shopList = _G.NRCModuleManager:DoCmd(_G.NPCShopUIModuleCmd.SetMysteriousStoreShopList, CrossItemList)
+    self.BatchItemGridView0:InitGridView(shopList)
+  else
+    self.CanvasPanel_Batch0:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.BatchItemGridView0:InitGridView({})
   end
   if #CommonItemList > 0 then
     self.NextRefreshTime = CommonItemList[1].next_refresh_time

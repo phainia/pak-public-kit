@@ -172,7 +172,9 @@ path/to/output/
 
 缺少环境时的处理方式：
 
-- `.NET SDK` 不存在时，尝试安装到 `.tools/dotnet`。
+- `.NET SDK` 优先使用 `PATH` 中的 `dotnet`；也可用 `DOTNET_BIN=/path/to/dotnet` 指定。
+- 如果没有 `dotnet` 但存在 Nix，脚本会通过 `nix shell nixpkgs#dotnet-sdk_10 --command dotnet` 运行；可用 `NRC_DOTNET_NIX_PACKAGE` 改包名。
+- 如果不希望脚本自动下载 `.tools/dotnet`，设置 `NRC_DOTNET_AUTO_INSTALL=0`。
 - `uv` 存在时使用 `uv run python`。
 - `uv` 不存在但有 Python 时，使用 `.venv`。
 - Node.js 不存在但有 Homebrew 时，尝试 `brew install node`。

@@ -473,6 +473,7 @@ function BattleRuntimeData:Reset()
   self.resultUiState = nil
   self.battle_tasks = {}
   self.is_online_multiplayer = nil
+  self.isObserver = false
 end
 
 function BattleRuntimeData:ResetAllData()

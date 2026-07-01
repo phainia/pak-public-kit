@@ -1256,6 +1256,12 @@ function SceneModule:OnConstruct()
       self.AlwaysToFirst,
       SeasonIntegrationModuleCmd.OnBonusCatchLimitTips,
       ""
+    },
+    player_custom_anim_change = {
+      "",
+      "actor_id",
+      "",
+      PlayerModuleCmd.OnPlayerCustomAnimChange
     }
   }
   self.bNoLoadingTeleport = false

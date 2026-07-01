@@ -166,6 +166,11 @@ function UMG_LobbyMainInner_Icon1_C:UpdateIcon()
     self.Icon:SetPath(self.data.icon_path)
     self.NRCText_35:SetText(self.data.icon_name)
     if redPointKey then
+      if redPointKey == self.RedPointKeyMap.activity then
+        self.NrcRedPoint:ClearIgnoreRedPointDataList()
+        self.NrcRedPoint:SetIgnoreRedPointDataList(Enum.RedPointReason.RPR_ACTIVITY_TAB_NOTIFY, {300006})
+        self.NrcRedPoint:SetIgnoreRedPointDataList(Enum.RedPointReason.RPR_ACTIVITY_TAB_REWARD, {300006})
+      end
       self.NrcRedPoint:SetupKey(redPointKey)
     end
   end

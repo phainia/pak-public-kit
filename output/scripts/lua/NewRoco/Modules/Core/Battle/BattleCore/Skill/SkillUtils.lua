@@ -4,6 +4,7 @@ local ProtoEnum = require("Data.PB.ProtoEnum")
 local BuffUtils = require("NewRoco.Modules.Core.Battle.Entity.Components.Buff.BuffUtils")
 local PriorityEnum = require("PriorityEnum")
 local BattleUtils = require("NewRoco.Modules.Core.Battle.Common.BattleUtils")
+local Enum = require("Data.Config.Enum")
 SkillUtils.hitAnimationName = {
   "hit1",
   "hit2",
@@ -537,6 +538,38 @@ function SkillUtils.IsACameraAction(skillAction)
     end
   end
   return false
+end
+
+function SkillUtils.GetCustomizeAnimName(type, index)
+  local conf = _G.NRCModuleManager:DoCmd(_G.SystemSettingModuleCmd.GetRoleAnimationCfgByType, type)
+  if conf then
+    local animationData = conf.animation_list[index]
+    if animationData then
+      return animationData.animation
+    end
+  end
+  return nil
+end
+
+function SkillUtils.CustomizeTypeDefaultIndex(type)
+  if type == Enum.PlayerAnimationCustomizeType.PACT_PVE_WIN_NORMAL then
+    return _G.DataConfigManager:GetRoleGlobalConfig("player_pact_pve_win_normal_default").num
+  elseif type == Enum.PlayerAnimationCustomizeType.PACT_PVP_LOSE_NORMAL then
+    return _G.DataConfigManager:GetRoleGlobalConfig("player_pact_pvp_lose_normal_default").num
+  elseif type == Enum.PlayerAnimationCustomizeType.PACT_ALCHEMY_PANEL then
+    return _G.DataConfigManager:GetRoleGlobalConfig("player_pact_alchemy_panel_default").num
+  end
+  Log.Warning("Unknown PlayerAnimationCustomizeType", type)
+  return 1
+end
+
+function SkillUtils.CustomizeTypeToString(type)
+  for name, value in pairs(Enum.PlayerAnimationCustomizeType) do
+    if value == type then
+      return name
+    end
+  end
+  return ""
 end
 
 return SkillUtils

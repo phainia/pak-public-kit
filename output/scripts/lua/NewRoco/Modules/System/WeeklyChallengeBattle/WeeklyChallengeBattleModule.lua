@@ -495,7 +495,6 @@ function WeeklyChallengeBattleModule:OnCmdEquipPetSkills(petGid, skillIds)
   for index, skillId in ipairs(skillIds) do
     table.insert(req.equip_info, {id = skillId, pos = index})
   end
-  Log.Info(string.format("WeeklyChallengeBattleModule:OnCmdEquipPetSkills \232\163\133\229\164\135\230\138\128\232\131\189. PetGid: %s, Skills: %s", tostring(petGid), table.concat(skillIds, ", ")))
   _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_PET_EQUIP_SKILL_REQ, req, self, self.OnEquipPetSkillsRsp, false, false)
 end
 

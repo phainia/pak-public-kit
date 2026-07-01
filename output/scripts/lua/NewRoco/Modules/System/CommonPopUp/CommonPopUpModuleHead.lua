@@ -6,6 +6,7 @@ function CommonPopUpModuleHead:OnConstruct()
   self:BindCmd(_G.CommonPopUpModuleCmd.CloseRemindPanel, "OnCmdCloseRemindPanel")
   self:BindCmd(_G.CommonPopUpModuleCmd.OpenCommonPopUpWithItem, "OpenCommonPopUpWithItem")
   self:BindCmd(_G.CommonPopUpModuleCmd.OpenActivityCommonPanel, "OpenActivityCommonPanel")
+  self:BindCmd(_G.CommonPopUpModuleCmd.OpenActivityCommonPanelById, "OpenActivityCommonPanelById")
 end
 
 return CommonPopUpModuleHead

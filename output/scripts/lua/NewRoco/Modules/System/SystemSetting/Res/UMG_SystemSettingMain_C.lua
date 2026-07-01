@@ -30,6 +30,19 @@ local EPermission = {
   FriendVisit = "FriendVisit"
 }
 
+local function GetCurCustomAnimSelectIdx(animType)
+  local playerSettingsForCustomAnims = _G.NRCModuleManager:DoCmd(_G.SystemSettingModuleCmd.GetPlayerSettings)
+  if playerSettingsForCustomAnims and playerSettingsForCustomAnims.customAnims and playerSettingsForCustomAnims.customAnims.custom_anim_list then
+    for _, customAnim in ipairs(playerSettingsForCustomAnims.customAnims.custom_anim_list) do
+      if customAnim.custom_anim_type == animType then
+        return customAnim.selected_index
+      end
+    end
+  end
+  local _, selectIdx = _G.NRCModuleManager:DoCmd(_G.SystemSettingModuleCmd.GetCustomAnimCfgByActor, animType)
+  return selectIdx
+end
+
 function UMG_SystemSettingMain_C:OnConstruct()
   Log.Error("UMG_SystemSettingMain_C:OnConstruct1")
   _G.DataModelMgr.PlayerDataModel:AddPanelMusic(Enum.MusicApplyType.MAT_UI, Enum.InterfaceType.IT_SET)
@@ -679,6 +692,33 @@ function UMG_SystemSettingMain_C:SetUpMainInfo()
         CloseAnnotationBtn = self.HitTestBgBtn_1
       }
       table.insert(modeItemList, propPlaceData)
+      local customAnimations = self.module.data:GetCustomAnimations()
+      if not NRCEnv:IsCreatePlayerMode() and customAnimations then
+        for _, v in ipairs(customAnimations) do
+          local curSelectIdx = GetCurCustomAnimSelectIdx(v.animationType) or 0
+          if curSelectIdx < 0 then
+            curSelectIdx = 0
+          elseif curSelectIdx >= #v.options then
+            curSelectIdx = #v.options - 1
+          end
+          local curValue = v.options[curSelectIdx + 1].Value
+          table.insert(modeItemList, {
+            itemTitle = v.name,
+            itemType = 3,
+            Call = self,
+            DropDownListInfo = v.options,
+            DropDownListKey = "customAnimations",
+            DropDownListExtraKey = v,
+            DropDownListSelectValue = curValue,
+            CloseSelectionBtn = self.HitTestBgBtn,
+            CloseAnnotationBtn = self.HitTestBgBtn_1,
+            bNeedDescribe = v.tipsId and 0 ~= v.tipsId,
+            describeBtnHandler = _G.MakeWeakFunctor(nil, function(tipsId)
+              _G.NRCModuleManager:DoCmd(_G.CommonPopUpModuleCmd.OpenActivityCommonPanelById, tipsId, _G.LuaText.player_animation_customize_title)
+            end, v.tipsId)
+          })
+        end
+      end
       local level = UE4.UNRCQualityLibrary.GetFrameQuality()
       local selectIndex = 0
       local config = self.module.data:GetGraphicConfigByKey("FPS")
@@ -1534,6 +1574,17 @@ function UMG_SystemSettingMain_C:GetModeListItemByDropDownListKey(DropDownListKe
   end
 end
 
+function UMG_SystemSettingMain_C:GetModeListItemByDropDownListKeyEx(DropDownListKey)
+  local ret = {}
+  for i = 1, self.ModeList:GetItemCount() do
+    local item = self.ModeList:GetItemByIndex(i - 1)
+    if item.uiData.DropDownListKey == DropDownListKey then
+      table.insert(ret, item)
+    end
+  end
+  return ret
+end
+
 function UMG_SystemSettingMain_C:OnQueryPlayerSettingsRsp(rsp)
   if 0 ~= rsp.ret_info.ret_code then
     Log.Error("\230\159\165\232\175\162\231\142\169\229\174\182\232\174\190\231\189\174\229\164\177\232\180\165", table.tostring(rsp))
@@ -2282,6 +2333,22 @@ function UMG_SystemSettingMain_C:RefreshDropDownList(key, value, extraKey, bIsRe
       self:ShowDropDownListCallback({IsOpenMenu = false})
     end
   end
+  if "customAnimations" ~= key then
+    local customAnimationItems = self:GetModeListItemByDropDownListKeyEx("customAnimations")
+    if customAnimationItems then
+      for _, animItem in ipairs(customAnimationItems) do
+        if animItem.DropDownList then
+          local animData = animItem.uiData.DropDownListExtraKey
+          if animData then
+            local animSelectIdx = GetCurCustomAnimSelectIdx(animData.animationType)
+            if animSelectIdx then
+              animItem.DropDownList:SelectItemByIndexDirectly(animSelectIdx)
+            end
+          end
+        end
+      end
+    end
+  end
   local level = UE4.UNRCQualityLibrary.GetFrameQuality()
   local selectIndex = 0
   local config = self.module.data:GetGraphicConfigByKey("FPS")
@@ -2578,6 +2645,7 @@ function UMG_SystemSettingMain_C:RefreshDropDownList(key, value, extraKey, bIsRe
   end
   self:RefreshJoystickMode(key, value)
   self:RefreshPropPlaceMode(key, value)
+  self:RefreshCustomAnimations(key, extraKey, value)
   local DeviceLoadPercent = UE4.UNRCQualityLibrary.GetDeviceLoad() / 100
   self.LoadSchedule:SetPercent(DeviceLoadPercent)
   if DeviceLoadPercent < 0.66 then
@@ -2606,6 +2674,33 @@ end
 function UMG_SystemSettingMain_C:RefreshPropPlaceMode(key, value)
   if "propPlaceMode" == key then
     _G.NRCModuleManager:DoCmd(_G.MainUIModuleCmd.SetPropPlaceMode, 1 == value)
+  end
+end
+
+function UMG_SystemSettingMain_C:RefreshCustomAnimations(key, extraKey, value)
+  if "customAnimations" == key and extraKey then
+    local modifyFlag = false
+    local newPlayerSettings = {}
+    local playerSettings = _G.NRCModuleManager:DoCmd(_G.SystemSettingModuleCmd.GetPlayerSettings)
+    if playerSettings and playerSettings.customAnims and playerSettings.customAnims.custom_anim_list then
+      local tempSettings = {}
+      table.deepCopy(playerSettings, tempSettings)
+      newPlayerSettings.customAnims = tempSettings.customAnims
+    else
+      newPlayerSettings.customAnims = _G.ProtoMessage:newPlayerSettings_PlayerCustomAnims()
+    end
+    if newPlayerSettings.customAnims and newPlayerSettings.customAnims.custom_anim_list then
+      for _, v in ipairs(newPlayerSettings.customAnims.custom_anim_list) do
+        if v.custom_anim_type == extraKey.animationType and v.selected_index ~= value then
+          v.selected_index = value
+          modifyFlag = true
+          break
+        end
+      end
+    end
+    if modifyFlag then
+      _G.NRCModuleManager:DoCmd(_G.SystemSettingModuleCmd.ReqModifyPlayerSettings, newPlayerSettings)
+    end
   end
 end
 

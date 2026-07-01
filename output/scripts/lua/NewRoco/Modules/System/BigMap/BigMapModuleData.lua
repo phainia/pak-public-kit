@@ -2355,7 +2355,7 @@ function BigMapModuleData:GetNpcInfoByConfigId(configId, sceneResId)
 end
 
 function BigMapModuleData:GetNPCInfoByEntryId(entryId, logicId)
-  if entryId > 0 then
+  if entryId then
     for sceneResId, pieceNpcInfos in pairs(self.npcDatas) do
       for mapPiece, npcInfos in pairs(pieceNpcInfos) do
         if npcInfos[entryId] then

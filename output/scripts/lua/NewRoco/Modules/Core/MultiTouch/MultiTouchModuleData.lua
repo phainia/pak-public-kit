@@ -86,7 +86,8 @@ function MultiTouchModuleData:Ctor()
       ACCEPT = 8,
       DELETE = 9,
       WATCH = 10,
-      QQINVITE = 11
+      QQINVITE = 11,
+      TeleportAndWatch = 12
     },
     EggIncubatePanel = {
       DAZZLING = 0,

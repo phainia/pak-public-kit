@@ -79,4 +79,5 @@ TipsModuleCmd.CloseTipsPanel = "TipsModuleCmd.CloseTipsPanel"
 TipsModuleCmd.CheckHasMapTips = "TipsModuleCmd.CheckHasMapTips"
 TipsModuleCmd.OnShowContinuousCatchTip = "TipsModuleCmd.OnShowContinuousCatchTip"
 TipsModuleCmd.IsTipPaused = "TipsModuleCmd.IsTipPaused"
+TipsModuleCmd.RemoveTargetDialog = "TipsModuleCmd.RemoveTargetDialog"
 return TipsModuleCmd

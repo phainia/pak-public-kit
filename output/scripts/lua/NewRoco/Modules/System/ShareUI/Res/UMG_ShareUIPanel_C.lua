@@ -561,6 +561,14 @@ function UMG_ShareUIPanel_C:ExecuteShareByPicture()
       local Width = subSharePanel.FileTexture:Blueprint_GetSizeX()
       local Height = subSharePanel.FileTexture:Blueprint_GetSizeY()
       local DesiredSize = UE.FVector2D(Width, Height)
+      if not RocoEnv.PLATFORM_WINDOWS and (Width > 2580 or Height > 1080) then
+        local ratio = Width / Height
+        if ratio > 2.388888888888889 then
+          DesiredSize = UE.FVector2D(2580, math.floor(2580 / ratio))
+        else
+          DesiredSize = UE.FVector2D(math.floor(1080 * ratio), 1080)
+        end
+      end
       result = UE.UPlatformImageLibrary.SaveUserWidgetToImageByCustomSize(UE4Helper.GetCurrentWorld(), sharePanel, WaterMaskPhotoPath, DesiredSize)
       writtenPath = WaterMaskPhotoPath
     else

@@ -1161,6 +1161,9 @@ function PlayerToyComponent:PlayJumpBoxAnim(OutPlayer, NPC, Caller, OnSkillFinis
     self:RevertPLayer()
     NPC:SetVisible(false)
     NPC:SetNotDestroyFlag(false)
+    if NpcView.OnShouldDestroy then
+      NpcView:OnShouldDestroy()
+    end
     if Caller and OnSkillFinished then
       Caller:OnSkillFinished()
     end

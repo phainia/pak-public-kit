@@ -48,12 +48,21 @@ function ShareModule:OnShareCallback(ret)
     if self:CheckShareSuccessQQ(ret.RetCode, ret.ThirdChannelCode) or self:CheckShareSuccessWeChat(ret.RetCode, ret.ThirdChannelCode) then
       _G.NRCModuleManager:DoCmd(ShareUIModuleCmd.TryGetShareRewardReq)
     end
+    if 0 ~= ret.RetCode then
+      _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.share_fail_tips or "")
+    end
   elseif ret.SourceMethodName == "OnQueryFriendNotify" then
     _G.NRCEventCenter:DispatchEvent(NRCSDKManagerEvent.OnQueryFriendNotify, ret)
   elseif ret.SourceMethodName == "OnSendResult" then
     Log.Debug("OnSendResult:", ret.RetCode, ret.RetMsg, ret.ThirdChannelCode, ret.ThirdChannelMsg)
+    if 0 ~= ret.RetCode then
+      _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.share_fail_tips or "")
+    end
   elseif ret.SourceMethodName == "OnShareResult" then
     Log.Debug("OnShareResult:", ret.RetCode, ret.RetMsg, ret.ThirdChannelCode, ret.ThirdChannelMsg)
+    if 0 ~= ret.RetCode then
+      _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.share_fail_tips or "")
+    end
   elseif ret.SourceMethodName == "OnMediaIDGetNotify" then
     local jsonStr = ret.ExtraJson
     Log.Debug("OnMediaIDGetNotify:" .. jsonStr .. ", and ret.RetMsg is " .. ret.RetMsg)
@@ -63,8 +72,12 @@ function ShareModule:OnShareCallback(ret)
     end
   elseif ret.SourceMethodName == "OnUSSDKResult" then
     Log.Debug("OnShareResult:", ret.RetCode, ret.RetMsg, ret.ThirdChannelCode, ret.ThirdChannelMsg)
-    if 1 ~= ret.RetCode and ret.ThirdChannelCode == -10000005 then
-      _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.share_fail_tips3 or "")
+    if 1 ~= ret.RetCode then
+      if ret.ThirdChannelCode == -10000005 then
+        _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.share_fail_tips3 or "")
+      else
+        _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.share_fail_tips or "")
+      end
     end
   end
 end

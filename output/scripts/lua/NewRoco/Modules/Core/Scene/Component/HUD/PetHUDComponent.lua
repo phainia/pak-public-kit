@@ -634,7 +634,7 @@ function PetHUDComponent:GetShowName()
   elseif self.serverData.home_pet and self.serverData.base and self.serverData.base.name then
     name = self.serverData.base.name
   end
-  if name and (1 == self.config.show_level or 0 == self.config.show_level and self.owner.bShowAimedLv or self.owner.config and self.owner.config.throwing_interact_type == _G.Enum.THROWING_INTERACT_TYPE.TIT_WILD_PET and self.colorType == ColorType.Orange or self.colorType == ColorType.Red) and self.serverData and not self:ShouldHideHud() then
+  if name and (1 == self.config.show_level or 0 == self.config.show_level and self.owner.bShowAimedLv or self.owner.config and self.owner.config.throwing_interact_type == _G.Enum.THROWING_INTERACT_TYPE.TIT_WILD_PET and (self.colorType == ColorType.Orange or self.colorType == ColorType.Red)) and self.serverData and not self:ShouldHideHud() then
     return string.format(LuaText.pethudcomponent_1, name, self.serverData.base.lv)
   end
   return name

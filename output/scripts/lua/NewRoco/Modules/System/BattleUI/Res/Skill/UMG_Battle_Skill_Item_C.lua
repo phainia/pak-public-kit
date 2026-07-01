@@ -495,7 +495,7 @@ function UMG_Battle_Skill_Item_C:SetData(skillEntity, stateName, pet, father, sh
   self:SetWidgetVisibilityByName("Cancel", ESlateVisibility.Collapsed)
   local petGuid = self.CastPet and self.CastPet.guid
   if self.fatherList then
-    self.fatherList:UpdateItemDataModel(petGuid, self:GetDataModelSkillId(), self.newDataModel)
+    self.fatherList:UpdateItemDataModel(petGuid, self:GetDataModelSkillEntityId(), self.newDataModel)
   end
   self.newDataModel = {}
 end
@@ -1165,7 +1165,7 @@ function UMG_Battle_Skill_Item_C:DelayPlayAnim(_IsOpen, i)
   self:CancelAllOpenAnimationDelay()
   if self.fatherList then
     local petGuid = self.CastPet and self.CastPet.guid
-    local dataModelChange = self.fatherList:GetItemDataModelChangeInfo(petGuid, self:GetDataModelSkillId())
+    local dataModelChange = self.fatherList:GetItemDataModelChangeInfo(petGuid, self:GetDataModelSkillEntityId())
     if dataModelChange and dataModelChange.before then
       local before = dataModelChange.before
       local after = dataModelChange.after
@@ -1239,7 +1239,7 @@ function UMG_Battle_Skill_Item_C:PlayOpenAnimation(_IsOpen)
     self:StopAllInfoChangeAnimations()
     if self.fatherList then
       local petGuid = self.CastPet and self.CastPet.guid
-      local dataModelChange = self.fatherList:GetItemDataModelChangeInfo(petGuid, self:GetDataModelSkillId())
+      local dataModelChange = self.fatherList:GetItemDataModelChangeInfo(petGuid, self:GetDataModelSkillEntityId())
       if dataModelChange and dataModelChange.after then
         self:RefreshWithDataModel(dataModelChange.after)
       end
@@ -1303,17 +1303,17 @@ end
 
 function UMG_Battle_Skill_Item_C:PlayInfoChangeAnimation()
   local petGuid = self.CastPet and self.CastPet.guid
-  Log.Info("UMG_Battle_Skill_Item_C:PlayInfoChangeAnimation", self:GetDataModelSkillId())
+  Log.Info("UMG_Battle_Skill_Item_C:PlayInfoChangeAnimation", self:GetDataModelSkillEntityId())
   if not self.fatherList then
     return
   end
-  local dataModelChange = self.fatherList:GetItemDataModelChangeInfo(petGuid, self:GetDataModelSkillId())
+  local dataModelChange = self.fatherList:GetItemDataModelChangeInfo(petGuid, self:GetDataModelSkillEntityId())
   if not dataModelChange then
     return
   end
   local afterDataModel = dataModelChange.after
   local beforeDataModel = dataModelChange.before
-  self.fatherList:ClearItemDataModelBefore(petGuid, self:GetDataModelSkillId())
+  self.fatherList:ClearItemDataModelBefore(petGuid, self:GetDataModelSkillEntityId())
   if not afterDataModel then
     return
   end
@@ -1446,6 +1446,17 @@ function UMG_Battle_Skill_Item_C:GetDataModelSkillId()
   if change_src_skill and 0 ~= change_src_skill then
     local skill = self.CastPet and self.CastPet.skillComponent:GetHeadOfChangeSrcSkillChain(self.skill)
     id = _G.SkillUtils.CheckSkillId(skill.id)
+  end
+  return id
+end
+
+function UMG_Battle_Skill_Item_C:GetDataModelSkillEntityId()
+  local selfSkill = self.skill
+  local id = selfSkill and selfSkill.id or -1
+  local change_src_skill = self.skill and self.skill.skillData.change_src_skill
+  if change_src_skill and 0 ~= change_src_skill then
+    local skill = self.CastPet and self.CastPet.skillComponent:GetHeadOfChangeSrcSkillChain(self.skill)
+    id = skill and skill.id or -1
   end
   return id
 end

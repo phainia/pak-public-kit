@@ -34,6 +34,7 @@ function HandbookModule:OnConstruct()
   self:RegisterCmd(HandbookModuleCmd.SetSelectedItemIcon, self.OnChangSelectItemUIIcon)
   self:RegisterCmd(HandbookModuleCmd.CheckTopRedPoint, self.OnCmdCheckTopRedPoint)
   self:RegisterCmd(HandbookModuleCmd.OnOpenContentView, self.OnOpenContentView)
+  self:RegisterCmd(HandbookModuleCmd.OpenHandBookContentViewByPetGid, self.OnCmdOpenHandBookContentViewByPetGid)
   self:RegisterCmd(HandbookModuleCmd.OpenHabitTips, self.OnCmdOpenHabitTips)
   self:RegisterCmd(HandbookModuleCmd.CloseHabitTips, self.OnCmdCloseHabitTips)
   self:RegisterCmd(HandbookModuleCmd.OpenHabitMap, self.OnCmdOpenHabitMap)
@@ -617,6 +618,45 @@ function HandbookModule:OnOpenContentView(_handbookId, _petBaseId, _showBookAim)
       handbookId = _handbookId,
       petbaseId = _petBaseId,
       isShowBookAim = _showBookAim
+    })
+  end
+end
+
+function HandbookModule:OnCmdOpenHandBookContentViewByPetGid(petGid)
+  local isBan = _G.NRCModuleManager:DoCmd(FunctionBanModuleCmd.CheckUIFunctionHide, Enum.FunctionEntrance.FE_HANDBOOK)
+  if isBan and _G.DataModelMgr.PlayerDataModel:GetIsTraceByBag() then
+    _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, LuaText.item_source_worng_tip5)
+    return
+  end
+  local petData = _G.DataModelMgr.PlayerDataModel:GetPetDataByGid(petGid)
+  if nil == petData then
+    Log.Error("HandbookModule:OnCmdOpenHandBookContentViewByPetGid petData is nil, gid=[", petGid, "]")
+    return
+  end
+  local petBaseConfig = _G.DataConfigManager:GetPetbaseConf(petData.base_conf_id)
+  if nil == petBaseConfig then
+    Log.Error("HandbookModule:OnCmdOpenHandBookContentViewByPetGid petBaseConfig is nil, base_conf_id=[", petData.base_conf_id, "]")
+  end
+  local _handbookId = petBaseConfig.pictorial_book_id
+  local _petBaseId = petData.base_conf_id
+  if self:HasPanel("HandbookCover") then
+    local panel = self:GetPanel("HandbookCover")
+    panel:OnOpenAimMainPanel()
+  end
+  self.data:SetHandbookInfo()
+  self.data:SetSelectSubForce(true)
+  if self:HasPanel("HandbookMain") then
+    local Panel = self:GetPanel("HandbookMain")
+    Panel:SetArg({
+      handbookId = _handbookId,
+      petbaseId = _petBaseId,
+      isShowBookAim = false
+    })
+  else
+    self:OpenPanel("HandbookMain", {
+      handbookId = _handbookId,
+      petbaseId = _petBaseId,
+      isShowBookAim = false
     })
   end
 end

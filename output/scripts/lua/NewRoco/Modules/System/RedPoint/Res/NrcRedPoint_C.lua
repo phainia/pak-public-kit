@@ -308,7 +308,7 @@ function NrcRedPoint_C:IterateRootNodeAndGetShowType(Key)
     if RedPointNodeDic[litUpRootNodeKey] then
       local litUpRootNode = RedPointNodeDic[litUpRootNodeKey]
       if Key then
-        for _, p in pairs(litUpRootNode.litUpReasonDic or {}) do
+        for reason, p in pairs(litUpRootNode.litUpReasonDic or {}) do
           if nil == p.splitPointData then
             p.splitPointData = {}
             for i, v in pairs(p.oriPointData) do
@@ -325,23 +325,80 @@ function NrcRedPoint_C:IterateRootNodeAndGetShowType(Key)
               end
             end
             if true == Match then
-              local litUpRootNodeShowType = litUpRootNode.cfg.redpoint_type[1] or 1
-              if RedPointUIShowType < litUpRootNodeShowType then
-                RedPointUIShowType = litUpRootNodeShowType
+              local bNeedIgnore = self:CheckIsIgnoreRedPointDataItem(exKey, reason)
+              if not bNeedIgnore then
+                local litUpRootNodeShowType = litUpRootNode.cfg.redpoint_type[1] or 1
+                if RedPointUIShowType < litUpRootNodeShowType then
+                  RedPointUIShowType = litUpRootNodeShowType
+                end
+                break
               end
-              break
             end
           end
         end
       else
-        local litUpRootNodeShowType = litUpRootNode.cfg.redpoint_type[1] or 1
-        if RedPointUIShowType < litUpRootNodeShowType then
-          RedPointUIShowType = litUpRootNodeShowType
+        local needIgnoreRedCount = self:GetTargetRootRedPointNodeIgnoreRedPointDataNum(litUpRootNode)
+        local validCount = litUpRootNode.redCount - needIgnoreRedCount
+        if validCount > 0 then
+          local litUpRootNodeShowType = litUpRootNode.cfg.redpoint_type[1] or 1
+          if RedPointUIShowType < litUpRootNodeShowType then
+            RedPointUIShowType = litUpRootNodeShowType
+          end
         end
       end
     end
   end
   return RedPointUIShowType
+end
+
+function NrcRedPoint_C:CheckIsIgnoreRedPointDataItem(pointDataItem, redPointReason)
+  local bNeedIgnore = false
+  if nil == pointDataItem then
+    return bNeedIgnore
+  end
+  if nil == self.IgnoreRedPointDataList then
+    return bNeedIgnore
+  end
+  if nil == self.IgnoreRedPointDataList[redPointReason] then
+    return bNeedIgnore
+  end
+  local bContain = false
+  for _, unit_id in pairs(self.IgnoreRedPointDataList[redPointReason] or {}) do
+    if unit_id and RedPointUtils.NumberInDotString(pointDataItem, unit_id) then
+      bContain = true
+      break
+    end
+  end
+  if bContain then
+    bNeedIgnore = true
+  end
+  return bNeedIgnore
+end
+
+function NrcRedPoint_C:GetTargetRootRedPointNodeIgnoreRedPointDataNum(rootRedPointNode)
+  local needIgnoreNum = 0
+  if nil == rootRedPointNode then
+    return needIgnoreNum
+  end
+  if nil == self.IgnoreRedPointDataList then
+    return needIgnoreNum
+  end
+  if nil == self.module then
+    return needIgnoreNum
+  end
+  if nil == self.module.data then
+    return needIgnoreNum
+  end
+  for reason, reasonRedPointDataItem in pairs(rootRedPointNode.litUpReasonDic or {}) do
+    if reason and self.IgnoreRedPointDataList[reason] and reasonRedPointDataItem and reasonRedPointDataItem.oriPointData then
+      for _, ori_point_data_item in pairs(reasonRedPointDataItem.oriPointData or {}) do
+        if self:CheckIsIgnoreRedPointDataItem(ori_point_data_item, reason) then
+          needIgnoreNum = needIgnoreNum + 1
+        end
+      end
+    end
+  end
+  return needIgnoreNum
 end
 
 function NrcRedPoint_C:ShowRedPoint(bShow)

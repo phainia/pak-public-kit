@@ -13,7 +13,8 @@ function BattlePieceCounterSkillPrePlay:OnPlay(Caster, CallBack, CallBackOwner, 
   self.IsFocusPlayer = false
   self:LeaveBulletTime()
   local player = self.Caster.player
-  if player and UE.UObject.IsValid(player.model) and not BattleUtils.IsPlayerUseHumanRes(player) and self.isMySelfPerform then
+  local hasYingDuiAnim = player and UE.UObject.IsValid(player.model) and player.model.RocoAnim and player.model.RocoAnim:HasAnimation(BattleConst.CounterNPCAnim)
+  if hasYingDuiAnim and not BattleUtils.IsPlayerUseHumanRes(player) and self.isMySelfPerform then
     self.IsFocusPlayer = true
     self:EnterBulletTime()
   end

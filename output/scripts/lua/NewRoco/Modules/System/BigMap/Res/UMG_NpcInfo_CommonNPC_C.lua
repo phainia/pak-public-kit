@@ -64,6 +64,14 @@ function UMG_NpcInfo_CommonNPC_C:_UpdateSelector1(_props)
   else
     self.MutualVisits:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
+  if self.CanvasPanel_10 and self.CabinIcon then
+    if string.IsNilOrEmpty(_props.contentImagePath) then
+      self.CanvasPanel_10:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    else
+      self.CanvasPanel_10:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.CabinIcon:SetPath(_props.contentImagePath)
+    end
+  end
 end
 
 function UMG_NpcInfo_CommonNPC_C:_UpdateSelector2(_props)

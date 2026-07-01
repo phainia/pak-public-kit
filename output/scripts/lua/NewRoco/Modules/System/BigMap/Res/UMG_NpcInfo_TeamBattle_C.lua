@@ -182,7 +182,7 @@ function UMG_NpcInfo_TeamBattle_C:_UpdateLegendaryBattle(_props)
   local unLockLevel = 0
   local StarList = {}
   local startStarNum = 0
-  local seasonLegendaryID, strRemainTime
+  local seasonLegendaryID, endTime
   if _props and _props.npcRefreshId then
     seasonLegendaryID = _G.NRCModuleManager:DoCmd(_G.LegendaryBattleModuleCmd.GetSeasonLegendaryID, _props.npcRefreshId)
     if seasonLegendaryID then
@@ -193,21 +193,7 @@ function UMG_NpcInfo_TeamBattle_C:_UpdateLegendaryBattle(_props)
         startStarNum = seasonLegendaryDataConf.start_difficulty
         if seasonLegendaryDataConf.start_time and seasonLegendaryDataConf.duration then
           local start_time = ActivityUtils.ToTimestamp(seasonLegendaryDataConf.start_time)
-          local end_time = start_time + seasonLegendaryDataConf.duration
-          local refreshTime = end_time - _G.ZoneServer:GetServerTime() / 1000
-          if refreshTime >= 0 then
-            local day = math.floor(refreshTime / 86400)
-            local hour = math.floor((refreshTime - day * 86400) / 3600)
-            local min = math.floor((refreshTime - day * 86400 - hour * 3600) / 60)
-            local sec = math.floor(refreshTime % 60)
-            if day > 0 then
-              strRemainTime = string.format(LuaText.activity_RTS1, day, hour)
-            elseif hour > 0 then
-              strRemainTime = string.format(LuaText.activity_RTS2, hour, min)
-            else
-              strRemainTime = string.format(LuaText.magicmanual_challenge_countdown03, min, sec)
-            end
-          end
+          endTime = start_time + seasonLegendaryDataConf.duration
         end
       end
     else
@@ -219,6 +205,7 @@ function UMG_NpcInfo_TeamBattle_C:_UpdateLegendaryBattle(_props)
           for _, value in pairs(ActivityConf) do
             if value.base_id and #value.base_id > 0 and value.base_id[1] == k then
               unLockLevel = value.world_level_required or 0
+              endTime = ActivityUtils.ToTimestamp(value.disappear_time)
               break
             end
           end
@@ -289,11 +276,29 @@ function UMG_NpcInfo_TeamBattle_C:_UpdateLegendaryBattle(_props)
     Attrs[index].Outline:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     index = index + 1
   end
-  if strRemainTime then
-    self.RemainTime:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Text_RemainTime:SetText(strRemainTime)
-  else
-    self.RemainTime:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self:SetLegendaryTime(endTime)
+end
+
+function UMG_NpcInfo_TeamBattle_C:SetLegendaryTime(end_time)
+  self.RemainTime:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if end_time then
+    local refreshTime = end_time - _G.ZoneServer:GetServerTime() / 1000
+    if refreshTime >= 0 then
+      self.RemainTime:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      local day = math.floor(refreshTime / 86400)
+      local hour = math.floor((refreshTime - day * 86400) / 3600)
+      local min = math.floor((refreshTime - day * 86400 - hour * 3600) / 60)
+      local sec = math.floor(refreshTime % 60)
+      local btnText = ""
+      if day > 0 then
+        btnText = string.format(LuaText.activity_RTS1, day, hour)
+      elseif hour > 0 then
+        btnText = string.format(LuaText.activity_RTS2, hour, min)
+      else
+        btnText = string.format(LuaText.magicmanual_challenge_countdown03, min, sec)
+      end
+      self.Text_RemainTime:SetText(btnText)
+    end
   end
 end
 

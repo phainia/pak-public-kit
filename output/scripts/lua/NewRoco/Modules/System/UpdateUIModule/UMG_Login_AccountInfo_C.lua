@@ -55,71 +55,7 @@ function UMG_Login_AccountInfo_C:OnActive()
 end
 
 function UMG_Login_AccountInfo_C:RefreshWaterMask()
-  if _G.DataModelMgr.PlayerDataModel and _G.DataModelMgr.PlayerDataModel.playerInfo and _G.DataModelMgr.PlayerDataModel.playerInfo.client_water_mark_info then
-    Log.Error("UMG_Login_AccountInfo_C: RefreshWaterMask close_watermark", _G.DataModelMgr.PlayerDataModel.playerInfo.client_water_mark_info.close_watermark)
-    Log.Error("UMG_Login_AccountInfo_C: RefreshWaterMask end_time", _G.DataModelMgr.PlayerDataModel.playerInfo.client_water_mark_info.end_time)
-    Log.Error("UMG_Login_AccountInfo_C: RefreshWaterMask ServerTime", _G.ZoneServer:GetServerTime() / 1000)
-    if _G.DataModelMgr.PlayerDataModel.playerInfo.client_water_mark_info.close_watermark and _G.DataModelMgr.PlayerDataModel.playerInfo.client_water_mark_info.end_time then
-      if _G.DataModelMgr.PlayerDataModel.playerInfo.client_water_mark_info.end_time > _G.ZoneServer:GetServerTime() / 1000 then
-        self.MarkCanvas:SetVisibility(UE4.ESlateVisibility.Collapsed)
-        self.DelayWaterMarkId = _G.DelayManager:DelaySeconds(1, self.RefreshWaterMask, self)
-      else
-        self.MarkCanvas:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-        if self.DelayWaterMarkId then
-          _G.DelayManager:CancelDelayById(self.DelayWaterMarkId)
-          self.DelayWaterMarkId = nil
-        end
-        local uid = _G.DataModelMgr.PlayerDataModel.playerInfo.brief_info.uin
-        if #self.Marks > 0 then
-          for i = 1, #self.Marks do
-            self.Marks[i]:UpdateUid(uid)
-          end
-        end
-        local ViewPortSize = UE4.UWidgetLayoutLibrary.GetViewportSize(UE4Helper.GetCurrentWorld())
-        local LineNum = math.ceil(ViewPortSize.Y / 1080)
-        local ColNum = math.ceil(ViewPortSize.X / 2340) * 5
-        for i = 1, LineNum do
-          for j = 1, ColNum do
-            local pos = UE4.FVector2D(500 * (j - 1), 1080 * (i - 1))
-            local size = UE4.FVector2D(500, 1080)
-            local MarkItem = UE4.UWidgetBlueprintLibrary.Create(self, self.Mark)
-            self.MarkCanvas:AddChildToCanvas(MarkItem)
-            MarkItem:UpdateUid(uid)
-            MarkItem.Slot:SetPosition(pos)
-            MarkItem.Slot:SetSize(size)
-            table.insert(self.Marks, MarkItem)
-          end
-        end
-      end
-    else
-      self.MarkCanvas:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-      if self.DelayWaterMarkId then
-        _G.DelayManager:CancelDelayById(self.DelayWaterMarkId)
-        self.DelayWaterMarkId = nil
-      end
-      local uid = _G.DataModelMgr.PlayerDataModel.playerInfo.brief_info.uin
-      if #self.Marks > 0 then
-        for i = 1, #self.Marks do
-          self.Marks[i]:UpdateUid(uid)
-        end
-      end
-      local ViewPortSize = UE4.UWidgetLayoutLibrary.GetViewportSize(UE4Helper.GetCurrentWorld())
-      local LineNum = math.ceil(ViewPortSize.Y / 1080)
-      local ColNum = math.ceil(ViewPortSize.X / 2340) * 5
-      for i = 1, LineNum do
-        for j = 1, ColNum do
-          local pos = UE4.FVector2D(500 * (j - 1), 1080 * (i - 1))
-          local size = UE4.FVector2D(500, 1080)
-          local MarkItem = UE4.UWidgetBlueprintLibrary.Create(self, self.Mark)
-          self.MarkCanvas:AddChildToCanvas(MarkItem)
-          MarkItem:UpdateUid(uid)
-          MarkItem.Slot:SetPosition(pos)
-          MarkItem.Slot:SetSize(size)
-          table.insert(self.Marks, MarkItem)
-        end
-      end
-    end
-  end
+  self.MarkCanvas:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function UMG_Login_AccountInfo_C:RefreshUID()

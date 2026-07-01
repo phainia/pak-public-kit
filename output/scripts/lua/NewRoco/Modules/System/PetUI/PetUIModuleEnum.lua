@@ -21,7 +21,8 @@ PetUIModuleEnum.OpenSortType = {
   PetInheritance = 8,
   PetPartnerActivity = 9,
   CertificationActivity = 10,
-  BattleRogue = 11
+  BattleRogue = 11,
+  TerritoryTrial = 12
 }
 PetUIModuleEnum.EnterType = {
   PetAltar = 0,
@@ -150,5 +151,10 @@ PetUIModuleEnum.CommonListItemPet1Anim = {
   In = 1,
   Out = 2,
   Normal = 3
+}
+PetUIModuleEnum.PetSkillSortRuleType = {
+  Default = 1,
+  DamType = 2,
+  Cost = 3
 }
 return PetUIModuleEnum

@@ -4,6 +4,7 @@ local UMG_Pass_PresentAGift_C = _G.NRCPanelBase:Extend("UMG_Pass_PresentAGift_C"
 function UMG_Pass_PresentAGift_C:OnConstruct()
   self:OnAddEventListener()
   self.isFirstOpen = true
+  self.MAX_ITEM_COUNT = 94
 end
 
 function UMG_Pass_PresentAGift_C:OnDestruct()
@@ -69,9 +70,13 @@ function UMG_Pass_PresentAGift_C:PlayInGiftAnimation()
   if self.curScrollLv then
     animLv = self.curScrollLv
   end
+  if animLv > self.MAX_ITEM_COUNT then
+    animLv = self.MAX_ITEM_COUNT
+  end
   if self.ItemDatas and #self.ItemDatas > 0 then
     self:HideListItems(animLv, #self.ItemDatas)
-    self:DelaySeconds(0, function()
+    self:DelayFrames(3, function()
+      self.List_1:SetRenderOpacity(1)
       self:PlayListAnimation(animLv, #self.ItemDatas, true)
     end)
   end
@@ -98,15 +103,8 @@ function UMG_Pass_PresentAGift_C:PlayListAnimation(from, to, isIn)
     from = 1
   end
   for i = from, to do
-    local item = self.List_1:GetItemByIndex(i - 1)
-    if not item then
-      return
-    end
-    if isIn then
-      item:PlayInAnimation(0.04 * (i - from + 4))
-    else
-      item:PlayNormalAnimation()
-    end
+    local delay = isIn and 0.04 * (i - from + 4) or 0
+    self.List_1:OpItemByIndex(i, isIn and 1 or 0, delay)
   end
 end
 
@@ -291,8 +289,11 @@ function UMG_Pass_PresentAGift_C:SetupItems()
       self.ItemWidth = item:GetDesiredSize().X
       self.List_1:SetRenderOpacity(0)
       self:DelayFrames(2, function()
-        self.List_1:SetRenderOpacity(1)
-        self.List_1:ScrollToIndex(self.curLevel - 1 >= 0 and self.curLevel - 1 or 0, true)
+        local toIdx = self.curLevel - 1 >= 0 and self.curLevel - 1 or 0
+        if toIdx > self.MAX_ITEM_COUNT then
+          toIdx = self.MAX_ITEM_COUNT
+        end
+        self.List_1:ScrollToIndex(toIdx, true)
         self:ListInit()
       end)
       self.curScrollLv = self.curLevel

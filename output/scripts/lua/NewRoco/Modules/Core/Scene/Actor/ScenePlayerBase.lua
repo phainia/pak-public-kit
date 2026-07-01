@@ -428,6 +428,10 @@ end
 function ScenePlayerBase:OnAvatarComplete()
   self.avatarLoaded = true
   self:SetLightChannel()
+  local matComp = UE.UObject.IsValid(self.viewObj) and self.viewObj:GetComponentByClass(UE.URocoMaterialComponent)
+  if matComp then
+    matComp:SetOverrideNature(-1)
+  end
 end
 
 function ScenePlayerBase:GetFullSalonId(configId, colorIndex)

@@ -6,19 +6,15 @@ local AICoachModuleUtils = require("NewRoco.Modules.System.AICoachModule.AICoach
 local FriendEnum = require("NewRoco.Modules.System.Friend.FriendEnum")
 local AICoachModuleEvent = require("NewRoco.Modules.System.AICoachModule.AICoachModuleEvent")
 local rapidjson = require("rapidjson")
+local FriendModuleEvent = require("NewRoco.Modules.System.Friend.FriendModuleEvent")
 local UMG_FriendTeamPanel_C = _G.NRCPanelBase:Extend("UMG_FriendTeamPanel_C")
 
 function UMG_FriendTeamPanel_C:OnConstruct()
   self.data = self.module:GetData("PetUIModuleData")
-  self.isNeedEnterAnim = false
-  self.timerID = nil
-  self.AIEmotionType = nil
   local maxInputConfig = _G.DataConfigManager:GetGlobalConfig("share_pet_search_word_limit", true)
   self.maxInputLength = maxInputConfig and maxInputConfig.num or 10
   self:OnAddEventListener()
   UIUtils.SafeSetVisibility(self.BtnRefresh, UE4.ESlateVisibility.Collapsed, true)
-  self.NRCText_166:SetText(LuaText.ai_coach_18)
-  self.AIChat:SetText(LuaText.ai_coach_19)
 end
 
 function UMG_FriendTeamPanel_C:OnDestruct()
@@ -62,13 +58,8 @@ function UMG_FriendTeamPanel_C:OnDeactive()
     end
   end
   if self.bOpenFromActivity and self.isShowAIEntry then
-    self:CancelDelay()
+    self.AICoachGvoice1:OnDeactive()
     _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.OnCloseAICoachByScene, Enum.AIcoachSceneType.AST_Group_Recommend)
-    UpdateManager:UnRegister(self)
-  end
-  if self.timerID then
-    _G.DelayManager:CancelDelayById(self.timerID)
-    self.timerID = nil
   end
 end
 
@@ -76,12 +67,10 @@ function UMG_FriendTeamPanel_C:OnAddEventListener()
   self:RegisterEvent(self, PetUIModuleEvent.UpdateFriendPetTeamList, self.UpdateUIInfo)
   _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, PetUIModuleEvent.PetTeamManagementSelChanged, self.OnPetTeamManagementSelChanged)
   _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, AICoachModuleEvent.OnNotifyAICoachTeamRecommend, self.OnNotifyAICoachTeamRecommend)
-  _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, AICoachModuleEvent.OnNotifyAICoachNarrationTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, AICoachModuleEvent.OnNotifyAICoachTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, AICoachModuleEvent.OnNotifyAICoachEmotionChange, self.OnNotifyAICoachEmotionChange)
-  _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, AICoachModuleEvent.OnNotifyAICoachRequestFinish, self.OnNotifyAICoachRequestFinish)
   _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, AICoachModuleEvent.OnRecoverSceneAICoachState, self.OnRecoverSceneAICoachState)
   _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, PetUIModuleEvent.UseAICoachRecommendTeam, self.UseAICoachRecommendTeam)
+  _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, FriendModuleEvent.OpenChatGvoicePanel, self.OnOpenAIRequest)
+  _G.NRCEventCenter:RegisterEvent("UMG_FriendTeamPanel_C", self, FriendModuleEvent.OpenAIChatGvoicePanel, self.OnOpenAIRequestText)
   self.InputBox.OnTextChanged:Add(self, self.OnTextChanged)
   self.InputBox.OnTextEndTransaction:Add(self, self.OnTextEndTransaction)
   self:AddButtonListener(self.Btn_Search.btnLevelUp, self.OnSearchButtonClicked)
@@ -89,92 +78,26 @@ function UMG_FriendTeamPanel_C:OnAddEventListener()
   self:AddButtonListener(self.Btn_paste, self.OnPastBtnClicked)
   self:AddButtonListener(self.Btn_Delete, self.OnClearInputBoxBtnClicked)
   self:AddButtonListener(self.Btn2.btnLevelUp, self.OnDoubtBtnClicked)
-  self:AddButtonListener(self.btnClose.btnClose, self.OnCloseTips)
-  self:AddButtonListener(self.BtnTimePet, self.OnOpenAIRequest)
 end
 
 function UMG_FriendTeamPanel_C:OnRemoveEventListener()
   self:UnRegisterEvent(self, PetUIModuleEvent.UpdateFriendPetTeamList)
   _G.NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.PetTeamManagementSelChanged, self.OnPetTeamManagementSelChanged)
   _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachTeamRecommend, self.OnNotifyAICoachTeamRecommend)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachNarrationTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachEmotionChange, self.OnNotifyAICoachEmotionChange)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachRequestFinish, self.OnNotifyAICoachRequestFinish)
   _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnRecoverSceneAICoachState, self.OnRecoverSceneAICoachState)
   _G.NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.UseAICoachRecommendTeam, self.UseAICoachRecommendTeam)
+  _G.NRCEventCenter:UnRegisterEvent(self, FriendModuleEvent.OpenChatGvoicePanel, self.OnOpenAIRequest)
+  _G.NRCEventCenter:UnRegisterEvent(self, FriendModuleEvent.OpenAIChatGvoicePanel, self.OnOpenAIRequestText)
 end
 
 function UMG_FriendTeamPanel_C:OnPetTeamManagementSelChanged()
   self:UpdateUIInfo()
 end
 
-function UMG_FriendTeamPanel_C:OnNotifyAICoachEmotionChange(emotionType)
-  if not self:IsCurrAICoachSceneTypeMatch() then
-    return
-  end
-  self:OnPlayAICoachEmotion(emotionType)
-end
-
 function UMG_FriendTeamPanel_C:OnRecoverSceneAICoachState(sceneType)
   if sceneType == Enum.AIcoachSceneType.AST_Group_Recommend then
-    self:OnPlayAICoachEmotion(AICoachModuleUtils.EnumAICoachEmotion.Idle)
-    self:PlayAnimation(self.Text_2_Out)
-    self.TextPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.isNeedEnterAnim = true
+    self.AICoachGvoice1:RecoverSceneAICoachState()
   end
-end
-
-function UMG_FriendTeamPanel_C:OnPlayAICoachEmotion(emotionType)
-  if self.AIEmotionType and self.AIEmotionType == emotionType then
-    return
-  end
-  if self.AIEmotionType == AICoachModuleUtils.EnumAICoachEmotion.Idle and emotionType == AICoachModuleUtils.EnumAICoachEmotion.Think then
-    self:PlayAnimation(self.AICoach_cut_1)
-  elseif self.AIEmotionType == AICoachModuleUtils.EnumAICoachEmotion.Think and emotionType == AICoachModuleUtils.EnumAICoachEmotion.Answer then
-    self:PlayAnimation(self.AICoach_cut_2)
-  elseif self.AIEmotionType == AICoachModuleUtils.EnumAICoachEmotion.Answer and emotionType == AICoachModuleUtils.EnumAICoachEmotion.Idle then
-    self:PlayAnimation(self.AICoach_cut_3)
-  elseif self.AIEmotionType == AICoachModuleUtils.EnumAICoachEmotion.Think and emotionType == AICoachModuleUtils.EnumAICoachEmotion.Idle then
-    self:PlayAnimation(self.AICoach_cut_4)
-  end
-  self.AIEmotionType = emotionType
-end
-
-function UMG_FriendTeamPanel_C:IsCurrAICoachSceneTypeMatch()
-  local sceneType = _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.GetCurrAICoachScene)
-  return sceneType == Enum.AIcoachSceneType.AST_Group_Recommend
-end
-
-function UMG_FriendTeamPanel_C:OnNotifyAICoachTextUpdate(answerStr)
-  if not self:IsCurrAICoachSceneTypeMatch() then
-    return
-  end
-  if self.isNeedEnterAnim then
-    self:PlayAnimation(self.Text_2_In)
-    self.TextPanel:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.isNeedEnterAnim = false
-  end
-  self.ChatContent:SetText(answerStr)
-end
-
-function UMG_FriendTeamPanel_C:OnNotifyAICoachRequestFinish()
-  if not self:IsCurrAICoachSceneTypeMatch() then
-    return
-  end
-  if self.timerID then
-    _G.DelayManager:CancelDelayById(self.timerID)
-    self.timerID = nil
-  end
-  self.timerID = _G.DelayManager:DelaySeconds(5, function()
-    if self and self:IsValid() then
-      self.isNeedEnterAnim = true
-      self.timerID = nil
-      self:PlayAnimation(self.Text_2_Out)
-    else
-      Log.Warning("UMG_FriendTeamPanel_C:OnNotifyAICoachRequestFinish - Panel is no longer valid")
-    end
-  end)
 end
 
 function UMG_FriendTeamPanel_C:OnAnimationFinished(anim)
@@ -182,12 +105,6 @@ function UMG_FriendTeamPanel_C:OnAnimationFinished(anim)
     self:PlayAnimation(self.Loop)
   elseif anim == self.Out then
     self:DoClose()
-  elseif anim == self.Text_1_Out then
-    if not self.isReverse then
-      self.TipstPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
-  elseif anim == self.AICoach_cut_1 then
-    self:PlayAnimation(self.AICoach_cut_1_loop)
   end
 end
 
@@ -209,22 +126,15 @@ end
 
 function UMG_FriendTeamPanel_C:OnUpdateAICoachInfo(bOpenFromActivity)
   if bOpenFromActivity and self.isShowAIEntry then
-    self.Progress:SetPercent(0)
-    UpdateManager:Register(self)
-    self.AICoachGvoice:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.TextPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.isNeedEnterAnim = true
-    self.TipstPanel:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self:PlayAnimationReverse(self.Text_1_Out)
-    self.isReverse = true
-    self.AIEmotionType = AICoachModuleUtils.EnumAICoachEmotion.Idle
-    local delayTime = _G.DataConfigManager:GetGlobalConfig("ai_coach_tips_time").num or 5
-    self:DelaySeconds(delayTime, self.OnCloseTips, self)
+    self.AICoachGvoice1:OnActive()
+    self.AICoachGvoice1:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.AICoachGvoice1:OnOpenAICoach(Enum.AIcoachSceneType.AST_Group_Recommend, true)
+    self.AICoachGvoice1:SetAICoachClickCallback(self, self.OnOpenAIRequestText)
     _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.OnOpenAICoachBySceneType, Enum.AIcoachSceneType.AST_Group_Recommend)
     self:PlayAICoachGuide()
     _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.OnReportEvent, "team_recomm_page_expo")
   else
-    self.AICoachGvoice:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.AICoachGvoice1:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -239,25 +149,17 @@ function UMG_FriendTeamPanel_C:PlayAICoachGuide()
   end
 end
 
-function UMG_FriendTeamPanel_C:OnTick()
-  if self.bOpenFromActivity and self.isShowAIEntry then
-    local isVoicePlaying = _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.GetIsVoicePlaying)
-    if isVoicePlaying then
-      local voiceLevel = _G.GVoiceManager:GetSpeakerLevel()
-      self.Progress:SetPercent(voiceLevel * 2)
-    end
+function UMG_FriendTeamPanel_C:OnOpenAIRequestText()
+  if self.module:HasPanel("AdjustTeam") then
+    return
   end
-end
-
-function UMG_FriendTeamPanel_C:OnCloseTips()
-  _G.NRCAudioManager:PlaySound2DAuto(41401003, "UMG_FriendTeamPanel_C:OnCloseTips")
-  self:PlayAnimation(self.Text_1_out)
-  self.isReverse = false
+  _G.NRCAudioManager:PlaySound2DAuto(40002013, "UMG_FriendTeamPanel_C:OnOpenAIRequestText")
+  self.AIChatGvoice:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.AIChatGvoice:OnInitialize()
 end
 
 function UMG_FriendTeamPanel_C:OnOpenAIRequest()
-  _G.NRCAudioManager:PlaySound2DAuto(40002013, "UMG_FriendTeamPanel_C:OnOpenAIRequest")
-  if not self:IsCurrAICoachSceneTypeMatch() then
+  if self.module:HasPanel("AdjustTeam") then
     return
   end
   local bGranted = UE.UNRCPermissionMgr.IfPermissionGranted(UE.ENRCPermissionType.RecordAudio)
@@ -271,9 +173,6 @@ function UMG_FriendTeamPanel_C:OnOpenAIRequest()
     self.AIGvoice:StartActive()
     _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.OnReportEvent, "team_recomm_coach_icon_click")
     _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.SetAICoachTeamDiffJson, self:GetCurrTeamListData())
-    if self.TipstPanel:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
-      self:OnCloseTips()
-    end
   else
     local IsFirstTime = UE.UNRCPermissionMgr.IsFirstTimeRequest(UE.ENRCPermissionType.RecordAudio)
     if IsFirstTime then

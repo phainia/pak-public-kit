@@ -81,6 +81,7 @@ function TipsModuleHead:OnConstruct()
   self:BindCmd(TipsModuleCmd.CheckHasMapTips, "OnCmdCheckHasMapTips")
   self:BindCmd(TipsModuleCmd.OnShowContinuousCatchTip, "OnShowContinuousCatchTip")
   self:BindCmd(TipsModuleCmd.IsTipPaused, "IsTipPaused")
+  self:BindCmd(TipsModuleCmd.RemoveTargetDialog, "OnCmdRemoveTargetDialog")
 end
 
 return TipsModuleHead

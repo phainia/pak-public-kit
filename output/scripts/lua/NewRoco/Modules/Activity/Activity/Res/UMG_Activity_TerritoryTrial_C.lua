@@ -39,6 +39,7 @@ function UMG_Activity_TerritoryTrial_C:OnAddEventListener()
   self:AddButtonListener(self.AwardBtn, self.OpenRewardPanel)
   self:AddButtonListener(self.ExamineBtn, self.OpenTrialDetailPanel)
   self:AddButtonListener(self.GoBtn.btnLevelUp, self.GotoTerritoryTrial)
+  self:AddButtonListener(self.PastReviewsBtn.btnLevelUp, self.OpenPastPanel)
   self:RegisterEvent(self, ActivityModuleEvent.RefreshTerritoryTrialActivityData, self.InitPanel)
 end
 
@@ -46,6 +47,7 @@ function UMG_Activity_TerritoryTrial_C:OnRemoveEventListener()
   self:RemoveButtonListener(self.AwardBtn)
   self:RemoveButtonListener(self.ExamineBtn)
   self:RemoveButtonListener(self.GoBtn.btnLevelUp)
+  self:RemoveButtonListener(self.PastReviewsBtn.btnLevelUp)
   self:UnRegisterEvent(self, ActivityModuleEvent.RefreshTerritoryTrialActivityData)
 end
 
@@ -226,6 +228,15 @@ function UMG_Activity_TerritoryTrial_C:GotoTerritoryTrial()
   end
   local redirect_id = _G.DataConfigManager:GetTerritoryTrialConf(self.activityInst:GetSinglePartId()).redirect
   ActivityUtils.DoActivityOptionCmd(redirect_id)
+end
+
+function UMG_Activity_TerritoryTrial_C:OpenPastPanel()
+  _G.NRCAudioManager:PlaySound2DAuto(41401003, "UMG_Activity_TerritoryTrial_C:OpenPastPanel")
+  if self.activityInst and self.activityInst:IsActivityInactive() then
+    ActivityUtils.ShowActivityExpiredTips()
+    return
+  end
+  _G.NRCModuleManager:DoCmd(_G.ActivityModuleCmd.OnCmdOpenPastTerritoryTrial, self.activityInst:GetActivityId())
 end
 
 return UMG_Activity_TerritoryTrial_C

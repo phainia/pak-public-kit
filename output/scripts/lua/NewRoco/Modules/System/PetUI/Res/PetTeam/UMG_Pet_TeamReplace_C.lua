@@ -73,6 +73,7 @@ function UMG_Pet_TeamReplace_C:OnActive(teamType, selTeamIdx, petGid, slotId, mo
   do
     local _, nextState = self:GetCurrAndNextState()
     nextState.modifyPetMode = mode
+    nextState.onActiveFlag = {}
     self:SetState(nextState)
   end
   self.curTeamType = teamType
@@ -1663,6 +1664,9 @@ function UMG_Pet_TeamReplace_C:RenderWidget(prevProps, currProps, prevState, cur
   local currRecycleBtnHighLightOutAnimPlaying = currState and currState.recycleBtnHighLightOutAnimPlaying
   local prevRecycleBtnShowDisplay = prevState and prevState.recycleBtnShowDisplay
   local currRecycleBtnShowDisplay = currState and currState.recycleBtnShowDisplay
+  local prevOnActiveFlag = prevState and prevState.onActiveFlag
+  local currOnActiveFlag = currState and currState.onActiveFlag
+  local onActiveFlagChanged = prevOnActiveFlag ~= currOnActiveFlag
   if prevPetListItemDataList ~= currPetListItemDataList then
     local HeadShowPetListRef = self.HeadShowPetList or {}
     local refreshAll = true
@@ -1810,7 +1814,7 @@ function UMG_Pet_TeamReplace_C:RenderWidget(prevProps, currProps, prevState, cur
       self.ExchangeBtn_1:SetIsEnabled(true)
     end
   end
-  if prevKey ~= currKey and currKey == WidgetStateManager.InitKey or prevEnableTeamGridTouchProxy ~= currEnableTeamGridTouchProxy or prevDragContext ~= currDragContext or prevWarehouseIsScrollingToPage ~= currWarehouseIsScrollingToPage then
+  if prevKey ~= currKey and currKey == WidgetStateManager.InitKey or prevEnableTeamGridTouchProxy ~= currEnableTeamGridTouchProxy or prevDragContext ~= currDragContext or onActiveFlagChanged or prevWarehouseIsScrollingToPage ~= currWarehouseIsScrollingToPage then
     local teamProxyProps = {}
     if currEnableTeamGridTouchProxy then
       teamProxyProps.key = "teamProxy"
@@ -1839,7 +1843,7 @@ function UMG_Pet_TeamReplace_C:RenderWidget(prevProps, currProps, prevState, cur
     end
     self.TeamGridTouchProxy:SetVisibility(teamGridTouchProxyVisibility)
   end
-  if prevKey ~= currKey and currKey == WidgetStateManager.InitKey or prevEnableWarehouseGridTouchProxy ~= currEnableWarehouseGridTouchProxy or prevDragContext ~= currDragContext or prevWarehouseIsScrollingToPage ~= currWarehouseIsScrollingToPage or prevWarehouseColCount ~= currWarehouseColCount or prevWarehouseRowCount ~= currWarehouseRowCount then
+  if prevKey ~= currKey and currKey == WidgetStateManager.InitKey or prevEnableWarehouseGridTouchProxy ~= currEnableWarehouseGridTouchProxy or prevDragContext ~= currDragContext or prevWarehouseIsScrollingToPage ~= currWarehouseIsScrollingToPage or prevWarehouseColCount ~= currWarehouseColCount or prevWarehouseRowCount ~= currWarehouseRowCount or onActiveFlagChanged then
     local warehouseProxyProps = {}
     if currEnableWarehouseGridTouchProxy then
       warehouseProxyProps.key = "warehouseProxy"
@@ -1875,7 +1879,7 @@ function UMG_Pet_TeamReplace_C:RenderWidget(prevProps, currProps, prevState, cur
     end
     self.WarehouseGridTouchProxy:SetVisibility(warehouseGridTouchProxyVisibility)
   end
-  if prevKey ~= currKey and currKey == WidgetStateManager.InitKey or prevEnableRecycleGridTouchProxy ~= currEnableRecycleGridTouchProxy or prevDragContext ~= currDragContext or prevWarehouseIsScrollingToPage ~= currWarehouseIsScrollingToPage then
+  if prevKey ~= currKey and currKey == WidgetStateManager.InitKey or prevEnableRecycleGridTouchProxy ~= currEnableRecycleGridTouchProxy or prevDragContext ~= currDragContext or onActiveFlagChanged or prevWarehouseIsScrollingToPage ~= currWarehouseIsScrollingToPage then
     local recycleProxyProps = {}
     if currEnableRecycleGridTouchProxy then
       recycleProxyProps.key = "warehouseProxy"
@@ -2228,9 +2232,7 @@ function UMG_Pet_TeamReplace_C:OnWidgetDidUpdate(prevProps, currProps, prevState
     self:OnDragHoveringStateUpdateFromGridTouchProxy(UMG_Pet_TeamReplace_C.GridType.RecycleBlock, false, false)
   end
   if prevShowPetData ~= currShowPetData then
-    local _, nextState = self:GetCurrAndNextState()
-    nextState.isChangeSkill = false
-    self:SetState(nextState)
+    self:OnShowPetDataChanged(prevShowPetData, currShowPetData)
   end
   local prevChangePetSkillPanelCanShow = prevState and prevState.changePetSkillPanelCanShow
   local currChangePetSkillPanelCanShow = currState and currState.changePetSkillPanelCanShow
@@ -2239,6 +2241,16 @@ function UMG_Pet_TeamReplace_C:OnWidgetDidUpdate(prevProps, currProps, prevState
     if ChangePetSkillsPanel then
       ChangePetSkillsPanel:OnDisable()
     end
+  end
+end
+
+function UMG_Pet_TeamReplace_C:OnShowPetDataChanged(prevShowPetData, currShowPetData)
+  local prevPetGid = prevShowPetData and prevShowPetData.gid
+  local currPetGid = currShowPetData and currShowPetData.gid
+  if prevPetGid ~= currPetGid then
+    local _, nextState = self:GetCurrAndNextState()
+    nextState.isChangeSkill = false
+    self:SetState(nextState)
   end
 end
 
@@ -3192,12 +3204,6 @@ end
 
 function UMG_Pet_TeamReplace_C:OnPvpPetTeamEquipPetSkills()
   local state = self:GetState()
-  local isChangeSkill = state and state.isChangeSkill or false
-  if isChangeSkill then
-    local _, nextState = self:GetCurrAndNextState()
-    nextState.isChangeSkill = false
-    self:SetState(nextState)
-  end
   local _, nextState = self:GetCurrAndNextState()
   nextState.updateSelPetDataFlag = {}
   nextState.pvpPetTeamEquipPetSkillsUpdatedFlag = {}

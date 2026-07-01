@@ -291,6 +291,7 @@ end
 function RideAllBuff_KeepBalance:OnRemotePlayerBuffFinish(param)
   self:SetAnimationSuccess(false)
   self.RideAllAnimInstance.bInKeepBalance = false
+  self:StartOrStopBalanceFx(false)
   self.RidePet.CharacterMovement:SetMovementMode(UE.EMovementMode.MOVE_Walking)
   self.RideComp:ChangeSocketWhileRiding(self._sourceSocketName)
   Base.OnRemotePlayerBuffFinish(self, param)

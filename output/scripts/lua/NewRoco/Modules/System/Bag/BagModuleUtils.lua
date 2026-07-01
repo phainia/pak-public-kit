@@ -201,7 +201,7 @@ function BagModuleUtils.GetConvertAfterItemsList(_data)
           local bFound = false
           for _, existingItem in ipairs(afterConvertList) do
             if existingItem.itemType == converseInfo.converse_type and existingItem.itemId == converseInfo.converse_id then
-              existingItem.itemNum = existingItem.itemNum + (converseInfo.converse_num or 1)
+              existingItem.itemNum = existingItem.itemNum + (converseInfo.converse_num or 1) * (expireInfo.num or 1)
               bFound = true
               break
             end
@@ -210,7 +210,7 @@ function BagModuleUtils.GetConvertAfterItemsList(_data)
             local afterItem = _G.NRCCommonItemIconData()
             afterItem.itemType = converseInfo.converse_type
             afterItem.itemId = converseInfo.converse_id
-            afterItem.itemNum = converseInfo.converse_num or 1
+            afterItem.itemNum = (converseInfo.converse_num or 1) * (expireInfo.num or 1)
             afterItem.bShowNum = true
             afterItem.bShowTip = true
             table.insert(afterConvertList, afterItem)

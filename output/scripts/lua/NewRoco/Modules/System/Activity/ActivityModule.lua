@@ -95,7 +95,7 @@ function ActivityModule:OnConstruct()
   self:RegPanel("CommonFashionRewardSelect", "/Game/NewRoco/Modules/System/Activity/Res/UMG_Activity_FashionAward_AwardSelect", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, "In_0", "Out_0", true)
   self:RegPanel("SelectPartnerPetPanel", "/Game/NewRoco/Modules/System/Activity/Res/UMG_Activity_PetPeer_Selection", _G.Enum.UILayerType.UI_LAYER_POPUP, true, nil, nil, true)
   self:RegPanel("UMG_KingCelebrationHomepage", "/Game/NewRoco/Modules/System/Activity/Res/UMG_KingCelebrationHomepage", _G.Enum.UILayerType.UI_LAYER_POPUP, nil)
-  self:RegPanel("SeasonPreheating_RecordBook", "/Game/NewRoco/Modules/System/Activity/Res/UMG_Activity_SeasonPreheating_RecordBook", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, "In", "Out", true)
+  self:RegPanel("SeasonPreheating_RecordBook", nil, _G.Enum.UILayerType.UI_LAYER_POPUP, nil, "In", "Out", true)
   self:RegPanel("WeekendLoginGiftPopUp", "/Game/NewRoco/Modules/System/Activity/Res/UMG_Activity_WeekendLoginGiftPopUp", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, "In", nil, true)
   self:RegPanel("SelectionOfBranchColleges", "/Game/NewRoco/Modules/System/Activity/Res/UMG_SelectionOfBranchColleges", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, true)
   self:RegPanel("OrdinaryReward", "/Game/NewRoco/Modules/System/Activity/Res/UMG_OrdinaryReward", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, true)
@@ -130,6 +130,7 @@ function ActivityModule:OnConstruct()
   self:RegPanel("ChallengeProgressRewardPanel", "/Game/NewRoco/Modules/System/Activity/Res/UMG_Activity_PersonalChallenge.UMG_Activity_PersonalChallenge", _G.Enum.UILayerType.UI_LAYER_FULLSCREEN, nil, "In", "Out", true)
   self:RegPanel("ObservationNotesDetailsPanel", "/Game/NewRoco/Modules/System/Activity/Res/UMG_Activity_ObservationNotes_Details.UMG_Activity_ObservationNotes_Details", _G.Enum.UILayerType.UI_LAYER_POPUP, nil, nil, nil, true)
   self:RegPanel("PreDownloadPopupPanel", "/Game/NewRoco/Modules/System/Activity/Res/UMG_PreDownloadPopup.UMG_PreDownloadPopup", _G.Enum.UILayerType.UI_LAYER_DIALOGUE)
+  self:RegPanel("PastActivityTerritory", "/Game/NewRoco/Modules/System/Activity/Res/UMG_PastActivity_Territory.UMG_PastActivity_Territory", _G.Enum.UILayerType.UI_LAYER_FULLSCREEN, nil, "In", "Out", true)
 end
 
 function ActivityModule:OnActive()
@@ -606,7 +607,15 @@ function ActivityModule:OpenCommonFashionRewardSelectPanel(bagItem, treasureCfg)
   end
 end
 
-function ActivityModule:OpenSeasonPreheatingRecordBookPanel(itemObject)
+function ActivityModule:OpenSeasonPreheatingRecordBookPanel(itemObject, umgPath)
+  if string.IsNilOrEmpty(umgPath) then
+    Log.Error("ActivityModule:OpenSeasonPreheatingRecordBookPanel: umgPath is nil or empty.")
+    return
+  end
+  local panelData = self:GetPanelData("SeasonPreheating_RecordBook")
+  if panelData then
+    panelData.panelPath = NRCUtils.FormatBlueprintAssetPath(umgPath)
+  end
   self:OpenPanel("SeasonPreheating_RecordBook", itemObject)
 end
 
@@ -1490,6 +1499,19 @@ function ActivityModule:OnEnterOrLeaveDropActivityArea(notify)
     end
   end
   Log.Debug("====================SpecificTimeActivityObject:OnEnterOrLeaveDropActivityArea", notify.action_type)
+end
+
+function ActivityModule:OnCmdOpenPastTerritoryTrial(cur_activity_id)
+  self.cur_activity_id = cur_activity_id
+  local req = _G.ProtoMessage:newZoneTerritoryTrialHistoryReq()
+  _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_TERRITORY_TRIAL_HISTORY_REQ, req, self, self.OnGetTerritoryTrialPastActivityData, false, true)
+end
+
+function ActivityModule:OnGetTerritoryTrialPastActivityData(rsp)
+  if 0 == rsp.ret_info.ret_code and rsp.history_list then
+    self:OpenPanel("PastActivityTerritory", rsp.history_list, self.cur_activity_id)
+    self.cur_activity_id = nil
+  end
 end
 
 return ActivityModule

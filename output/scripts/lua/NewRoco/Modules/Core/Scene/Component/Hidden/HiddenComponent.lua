@@ -417,6 +417,9 @@ function HiddenComponent:SetCanInteract(enable)
   if not self.owner.InteractionComponent then
     return
   end
+  if self:IsMimicType() and self.owner:GetThrowInteractType() == Enum.THROWING_INTERACT_TYPE.TIT_WILD_PET then
+    return
+  end
   if enable then
     self.owner.InteractionComponent:SetInteractionEnable(true, NPCModuleEnum.NpcInteractDisableFlag.HIDDEN_COMP)
   else

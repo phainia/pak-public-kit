@@ -111,33 +111,29 @@ function TakePhotoCompetitionActivityObject:GetCurrentStage()
 end
 
 function TakePhotoCompetitionActivityObject:ReqGetHotPhoto()
-  local currentTime = ActivityUtils.GetSvrTimestamp()
-  if self.hotPhotoTimeStamp == nil or currentTime - self.hotPhotoTimeStamp >= 120 then
-    local reqMsg = _G.ProtoMessage:newZoneActivityPhotoContestHotReq()
-    reqMsg.activity_id = self:GetActivityId()
-    if self:IsRestPhase() then
-      local totalPhases = self:GetPartIds()
-      local randomPhaseIndex = math.random(1, #totalPhases - 1)
-      reqMsg.activity_sub_id = totalPhases[randomPhaseIndex]
-    else
-      reqMsg.activity_sub_id = self:GetActivityData().current_phase_id
-    end
-    _G.ZoneServer:SendWithHandler(ProtoCMD.ZoneSvrCmd.ZONE_ACTIVITY_PHOTO_CONTEST_HOT_REQ, reqMsg, self, self.OnActivityPhotoContestHotRsp, nil, false)
+  self.hotPhotoTimeStamp = ActivityUtils.GetSvrTimestamp()
+  local reqMsg = _G.ProtoMessage:newZoneActivityPhotoContestHotReq()
+  reqMsg.activity_id = self:GetActivityId()
+  if self:IsRestPhase() then
+    local totalPhases = self:GetPartIds()
+    local randomPhaseIndex = math.random(1, #totalPhases - 1)
+    reqMsg.activity_sub_id = totalPhases[randomPhaseIndex]
   else
-    _G.NRCEventCenter:DispatchEvent(ActivityModuleEvent.TakePhotoCompetitionActivityHotPhotoEvent)
+    reqMsg.activity_sub_id = self:GetActivityData().current_phase_id
   end
+  _G.ZoneServer:SendWithHandler(ProtoCMD.ZoneSvrCmd.ZONE_ACTIVITY_PHOTO_CONTEST_HOT_REQ, reqMsg, self, self.OnActivityPhotoContestHotRsp, nil, false)
 end
 
 function TakePhotoCompetitionActivityObject:OnActivityPhotoContestHotRsp(rsp)
   self.hotPhotoRsp = rsp
   if 0 == rsp.ret_info.ret_code then
     if rsp.uin and 0 ~= rsp.uin then
-      self.hotPhotoTimeStamp = ActivityUtils.GetSvrTimestamp()
+      Log.Info("[HotPhoto]TakePhotoCompetitionActivityObject:OnActivityPhotoContestHotRsp uin", rsp.uin)
     else
-      Log.Info("TakePhotoCompetitionActivityObject:OnActivityPhotoContestHotRsp \229\189\147\229\137\141\230\151\160\231\131\173\233\151\168\231\133\167\231\137\135")
+      Log.Info("[HotPhoto]TakePhotoCompetitionActivityObject:OnActivityPhotoContestHotRsp \229\189\147\229\137\141\230\151\160\231\131\173\233\151\168\231\133\167\231\137\135")
     end
   else
-    Log.Info("TakePhotoCompetitionActivityObject:OnActivityPhotoContestHotRsp ret_code = ", rsp.ret_info.ret_code)
+    Log.Info("[HotPhoto]TakePhotoCompetitionActivityObject:OnActivityPhotoContestHotRsp ret_code = ", rsp.ret_info.ret_code)
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_3207)
   end
   _G.NRCEventCenter:DispatchEvent(ActivityModuleEvent.TakePhotoCompetitionActivityHotPhotoEvent)
@@ -145,6 +141,10 @@ end
 
 function TakePhotoCompetitionActivityObject:GetHotPhoto()
   return self.hotPhotoRsp
+end
+
+function TakePhotoCompetitionActivityObject:GetHotPhotoTimeStamp()
+  return self.hotPhotoTimeStamp
 end
 
 function TakePhotoCompetitionActivityObject:GetMySubmission(phase_id)

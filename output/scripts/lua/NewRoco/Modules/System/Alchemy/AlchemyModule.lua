@@ -17,6 +17,7 @@ local AlchemyShowStatusEnum = {
   DO_SHOW = 5,
   SHOW_REWARD = 6
 }
+local ALCHEMY_CUSTOM_SETTING_TYPE = "PACT_ALCHEMY_PANEL"
 
 function AlchemyModule:OnConstruct()
   self.data = self:SetData("AlchemyModuleData", "NewRoco.Modules.System.Alchemy.AlchemyModuleData")
@@ -559,8 +560,17 @@ function AlchemyModule:PlayAlchemyShowReal(Queue, Success)
 end
 
 function AlchemyModule:ShowRewardFinish()
-  self:PlayPerformById(111, self, self.DoNothing)
+  self:PlayPerformById(111, self, self.DoNothing, nil, self, self.ShowPreStart)
   self:SetStatus(AlchemyShowStatusEnum.IDLE)
+end
+
+function AlchemyModule:ShowPreStart(skillObj)
+  local Blackboard = skillObj and skillObj.Blackboard
+  if not Blackboard then
+    return
+  end
+  local AlchemyShowAnimName = _G.NRCModuleManager:DoCmd(_G.SystemSettingModuleCmd.GetCustomAnimCfgByActor, _G.Enum.PlayerAnimationCustomizeType.PACT_ALCHEMY_PANEL)
+  Blackboard:SetValueAsString(ALCHEMY_CUSTOM_SETTING_TYPE, AlchemyShowAnimName)
 end
 
 function AlchemyModule:DoNothing()

@@ -17,6 +17,7 @@ local UIUtilsTotal = require("NewRoco.Utils.UIUtils")
 local TipObject = require("NewRoco.Modules.System.TipsModule.Utils.TipObject")
 local FunctionBanUIController = require("NewRoco.Modules.System.FunctionBan.FunctionBanUIController")
 local BigMapModuleEnum = require("NewRoco.Modules.System.BigMap.BigMapModuleEnum")
+local BigMapModuleEvent = require("NewRoco.Modules.System.BigMap.BigMapModuleEvent")
 local FriendModule = NRCModuleBase:Extend("FriendModule")
 local FunctionEntranceMain = Enum.FunctionEntrance.FE_FRIEND
 
@@ -79,6 +80,7 @@ function FriendModule:OnConstruct()
   _G.NRCEventCenter:RegisterEvent("FriendModule", self, SceneEvent.OnTeleportNotify, self.HandleSceneEvent_OnTeleportNotify)
   _G.NRCEventCenter:RegisterEvent("FriendModule", self, BattleEvent.EnterBattle, self.CmdBattleClosePlane_Team)
   _G.NRCEventCenter:RegisterEvent("FriendModule", self, _G.NRCGlobalEvent.ON_RECONNECT_FINISH, self.OnReconnect)
+  _G.NRCEventCenter:RegisterEvent("FriendModule", self, BigMapModuleEvent.OnTeleportToPlayerResult, self.OnTeleportToPlayerResult)
   _G.DataModelMgr.PlayerDataModel:AddEventListener(self, PlayerDataEvent.VISIT_OWNER_CHANGED, self.OnVisitPlayerInfoSyncNotify)
   _G.NRCEventCenter:RegisterEvent("FriendModule", self, SceneEvent.OnEnterSceneFinishNtyAckEnd, self.AfterEnterScene)
   _G.NRCEventCenter:RegisterEvent("FriendModule", self, SceneEvent.EntranceVisibleZone, self.OnPlayerEntranceVisibleZone)
@@ -437,6 +439,7 @@ function FriendModule:UpdateChatBubbles(DeltaTime)
 end
 
 function FriendModule:OnReconnect()
+  Log.Debug("FriendModule:OnReconnect")
   local hasPanel = self:HasPanel("Chat_Main")
   if hasPanel then
     local panel = self:GetPanel("Chat_Main")
@@ -455,6 +458,7 @@ function FriendModule:OnReconnect()
   _G.NRCPanelManager:CloseAllPanelByLayer(_G.Enum.UILayerType.UI_LAYER_POPUP)
   _G.NRCModuleManager:DoCmd(_G.MainUIModuleCmd.TryDisplayAdditionalTarget)
   _G.NRCModuleManager:DoCmd(MainUIModuleCmd.CloseQuickChat)
+  self:ClearPendingWatchBattle()
 end
 
 function FriendModule:SetEmojiRanges()
@@ -1972,6 +1976,12 @@ function FriendModule:OnSetWhetherCanBeSearchedRsp(Rsp)
 end
 
 function FriendModule:OnFriendSearchPlayer(_uin)
+  if _G.DataModelMgr.PlayerDataModel:CheckHasBlackByPlayerUin(_uin) then
+    Log.DebugFormat("FriendModule:OnFriendSearchPlayer _uin = %s is in blacklist", tostring(_uin))
+    local Text = LuaText.search_UID_blacklist
+    _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, Text)
+    return
+  end
   local Now = os.msTime() / 1000.0
   if self.LastSearchPlayerUin == _uin and self.LastSearchPlayerRsp and Now - (self.LastSearchPlayerTime or 0) <= 1.0 then
     Log.DebugFormat("[FriendModule:OnFriendSearchPlayer] Using cached search result for uin %s", tostring(_uin))
@@ -1985,12 +1995,21 @@ function FriendModule:OnFriendSearchPlayer(_uin)
   _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_FRIEND_SEARCH_PLAYER_REQ, req, self, self.OnFriendSearchPlayerRsp, false, true)
 end
 
-function FriendModule:OnFriendSearchPlayerRsp(Rsp)
+function FriendModule:OnFriendSearchPlayerRsp(Rsp, Req)
   if Rsp and Rsp.player_info and Rsp.player_info.uin then
     self.LastSearchPlayerUin = Rsp.player_info.uin
   end
   self.LastSearchPlayerRsp = Rsp
   if 0 == Rsp.ret_info.ret_code then
+    if Rsp.is_black_me then
+      Log.DebugFormat("FriendModule:OnFriendSearchPlayerRsp is_black_me = %s, uin = %s", tostring(Rsp.is_black_me), tostring(Req.uin))
+      local Text = LuaText.search_UID_in_blacklist
+      _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, Text)
+      self.data:SetIsSearchSucceed(false)
+      self.data:SetIsFriend(false)
+      self.data:SetSearchInfo(nil)
+      return
+    end
     self.data:SetIsSearchSucceed(true)
     if Rsp.player_info and Rsp.can_be_add_friend ~= nil then
       Rsp.player_info.can_be_add_friend = Rsp.can_be_add_friend
@@ -2088,6 +2107,9 @@ function FriendModule:OnModifyFriendInfoRsp(_rsp)
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.input_sensitive_words_tips)
   elseif _rsp.ret_info.ret_code == ProtoEnum.MOBA_RET.FriendError.ERR_FRIEND_NOTE_FULL_BLANK then
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_1095)
+  elseif _rsp.ret_info.ret_code == ProtoEnum.MOBA_RET.ErrorCode.ERR_COMMON_SYSTEM_MAINTENANCE then
+    _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_1126)
+    Log.ErrorFormat("[FriendModule:OnModifyFriendTopRsp] failed, ret_code = %s, type = %s", tostring(_rsp.ret_info.ret_code), tostring(_rsp.type))
   elseif _rsp.ret_info.ret_code == ProtoEnum.MOBA_RET.FriendError.ERR_FRIEND_FULL_PINNED then
     local tips = string.safeFormat(LuaText.Error_Code_13022, self.data:GetFriendTopMaxNum())
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, tips)
@@ -2238,6 +2260,12 @@ function FriendModule:OnModifyPlayerRemarkRsp(_rsp)
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.friendmodule_2)
   elseif _rsp.ret_info.ret_code == ProtoEnum.MOBA_RET.ZoneErr.ERR_ZONE_NAME_DUPLICATE then
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.card_name_repet_tips)
+  elseif _rsp.ret_info.ret_code == 1126 then
+    _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_1126)
+    Log.Error("[FriendModule:OnModifyPlayerRemarkRsp] ret_code = 1126")
+  elseif _rsp.ret_info.ret_code == 2494 then
+    _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_2494)
+    Log.Error("[FriendModule:OnModifyPlayerRemarkRsp] ret_code = 2494")
   elseif _rsp.ret_info.ret_code == ProtoEnum.MOBA_RET.ZoneErr.ERR_ZONE_NAME_EMPTY then
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.card_name_empty_tips)
   else
@@ -2308,6 +2336,7 @@ function FriendModule:OnDestruct()
     self.MoveEndHandler = nil
   end
   _G.NRCEventCenter:UnRegisterEvent(self, SceneEvent.OnEnterSceneFinishNtyAckEnd, self.AfterEnterScene)
+  _G.NRCEventCenter:UnRegisterEvent(self, BigMapModuleEvent.OnTeleportToPlayerResult, self.OnTeleportToPlayerResult)
   if self.chatBubbleController_Ref then
     self.chatBubbleController:DestroyForLua()
     self.chatBubbleController_Ref = nil
@@ -2615,6 +2644,9 @@ function FriendModule:OnZoneChatSendChatMessageRsp(rsp)
   elseif recode == _G.ProtoEnum.MOBA_RET.ChatErr.ERR_CHAT_MSG_NOT_EMOJI then
     local tip = _G.DataConfigManager:GetLocalizationConf("input_sensitive_words_tips").msg
     _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.TopHud_ShowTips, tip)
+  elseif recode == ProtoEnum.MOBA_RET.ErrorCode.ERR_COMMON_SYSTEM_MAINTENANCE then
+    _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_1126)
+    Log.ErrorFormat("FriendModule:OnZoneChatSendChatMessageRsp error code = %s", tostring(rsp.ret_info.ret_code))
   elseif recode == _G.ProtoEnum.MOBA_RET.ChatErr.ERR_CHAT_SEND_MSG_SPAN_TOO_SMALL then
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.chat_message_send_CD)
   else
@@ -3385,6 +3417,20 @@ function FriendModule:OnModifySignatureRsp(_rsp)
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.card_signature_modify_tips)
   elseif _rsp.ret_info.ret_code == ProtoEnum.MOBA_RET.ZoneErr.ERR_ZONE_ILLEGAL_CHAR then
     _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.input_sensitive_words_tips)
+  elseif _rsp.ret_info.ret_code == 1126 then
+    _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_1126)
+    Log.Error("FriendModule:OnModifySignatureRsp ret_code = 1126")
+  elseif _rsp.ret_info.ret_code == 2494 and _rsp.ban_info then
+    Log.Error("FriendModule:OnModifySignatureRsp ret_code = 2494")
+    local banConfig = _G.DataConfigManager:GetGlobalConfig("banned_notice")
+    local uin = _rsp.ban_info.uin
+    local ban_time = os.date("%Y-%m-%d %H:%M:%S", _rsp.ban_info.ban_time)
+    local reasonStr = _rsp.ban_info.ban_reason or ""
+    local contenText = string.format(banConfig.str, uin, ban_time, reasonStr)
+    local dialogContext = DialogContext()
+    dialogContext:SetTitle(LuaText.TIPS):SetContent(contenText):SetMode(DialogContext.Mode.OK):SetCloseOnOK(true)
+    _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.Dialog_OpenDialog, dialogContext)
+    Log.ErrorFormat("FriendModule:OnModifySignatureRsp ret_code = 2494, contenText = %s", contenText)
   elseif _rsp.ret_info.ret_code == _G.ProtoEnum.MOBA_RET.ZoneErr.ERR_ZONE_COMMON_BANNED and _rsp.ban_info then
     local banConfig = _G.DataConfigManager:GetGlobalConfig("banned_notice")
     local uin = _rsp.ban_info.uin
@@ -3813,6 +3859,37 @@ function FriendModule:OnZoneBattleWatchRsp()
   Log.Debug("FriendModule:OnZoneBattleWatchRsp \229\143\145\232\181\183\232\167\130\230\136\152\232\175\183\230\177\130\229\155\158\229\140\133...")
 end
 
+function FriendModule:OnCmdSetPendingWatchBattle(battlerUin)
+  self.pendingWatchBattleUin = battlerUin
+  Log.DebugFormat("FriendModule:OnCmdSetPendingWatchBattle battlerUin=%s", tostring(battlerUin))
+end
+
+function FriendModule:OnTeleportToPlayerResult(success, retCode)
+  Log.DebugFormat("FriendModule:OnTeleportToPlayerResult success=%s, retCode=%s, pendingWatchBattleUin=%s", tostring(success), tostring(retCode), tostring(self.pendingWatchBattleUin))
+  if not self.pendingWatchBattleUin then
+    return
+  end
+  if not success then
+    local canStillWatch = retCode == ProtoEnum.MOBA_RET.ZoneSceneTeleportToPlayerError.ERR_ZONE_SCENE_TELEPORT_TO_PLAYER_VISIBLE_CIRCLE_IN_RULE_SCOPE
+    if canStillWatch then
+      Log.DebugFormat("FriendModule:OnTeleportToPlayerResult start auto watch friend battle, pendingWatchBattleUin=%s", tostring(self.pendingWatchBattleUin))
+      local battlerUin = self.pendingWatchBattleUin
+      self:ClearPendingWatchBattle()
+      _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.WatchFriendBattle, battlerUin)
+    else
+      Log.DebugFormat("FriendModule:OnTeleportToPlayerResult failed, retCode=%s, clear pending watch", tostring(retCode))
+      self:ClearPendingWatchBattle()
+      local touchReasonType = _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.GetPanelSelectBtnReason, "Friend").WATCH
+      _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.UnlockIsSelectBtn, "FriendModule", "Friend", touchReasonType)
+    end
+  end
+end
+
+function FriendModule:ClearPendingWatchBattle()
+  Log.Debug("FriendModule:ClearPendingWatchBattle")
+  self.pendingWatchBattleUin = nil
+end
+
 function FriendModule:OnCmdOpenPlaneTeam()
   self:OpenPanel("Plane_Team")
 end
@@ -3926,6 +4003,12 @@ function FriendModule:OnReceiveNewCardLabelNotify(newCardLabelNotify)
 end
 
 function FriendModule:AfterEnterScene(notify, isReconnecting, isEnteringCell, preMapId, mapID)
+  if not isEnteringCell and self.pendingWatchBattleUin then
+    Log.DebugFormat("FriendModule:AfterEnterScene start auto watch friend battle, pendingWatchBattleUin=%s", tostring(self.pendingWatchBattleUin))
+    local battlerUin = self.pendingWatchBattleUin
+    self:ClearPendingWatchBattle()
+    _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.WatchFriendBattle, battlerUin)
+  end
   if self.bHadReqInitializeCardInfo == false then
     self:InitializeCardInfo()
   end

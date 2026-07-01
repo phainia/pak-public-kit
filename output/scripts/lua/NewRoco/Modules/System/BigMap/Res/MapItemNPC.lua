@@ -96,7 +96,9 @@ function MapItemNPC:Refresh(itemData)
         itemWidget:PlayTraceEffect(false)
       end
       itemWidget:UpdateMapShowLevel(iconData.curMapSliderScale)
-      itemWidget:SetShowTime(_npcInfo)
+      if worldMapConf.default_track_type == Enum.DefaultTrackType.DTT_NONE then
+        itemWidget:SetShowTime(_npcInfo)
+      end
       itemWidget:SetMapLayerIconVisible(BigMapModuleEnum.CreatorPriority.NpcIcons)
       itemWidget:SetPetOwnerVisible()
       local curShowLayerId = NRCModuleManager:DoCmd(BigMapModuleCmd.GetCurShowLayerId)

@@ -353,7 +353,12 @@ function UMG_ShowMagicMessage_C:InitUI()
       self.ShareBtn:SetVisibility(UE4.ESlateVisibility.Visible)
     end
   end
-  local checkBan = _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_COMMENT_MESSAGE_MESSAGE, false)
+  local checkBan
+  if self.feedInfo.category == ProtoEnum.MarkGameplay.MK_MAGIC_MESSAGE then
+    checkBan = _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_COMMENT_MESSAGE_MESSAGE, false)
+  elseif self.feedInfo.category == ProtoEnum.MarkGameplay.MK_MAGIC_VIDEO then
+    checkBan = _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_RECOR_COMMENT, false)
+  end
   self.WidgetSwitcher_Comment:SetActiveWidgetIndex(checkBan and 1 or 0)
   self.lastOffset = 0
   self.topContentHeight = 0
@@ -786,7 +791,11 @@ end
 
 function UMG_ShowMagicMessage_C:OnClickCommentGreyBtn()
   _G.NRCAudioManager:PlaySound2DAuto(40008006, "UMG_ShowMagicMessage_C:OnClickCommentBtn")
-  _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_COMMENT_MESSAGE_MESSAGE, true)
+  if self.feedInfo.category == ProtoEnum.MarkGameplay.MK_MAGIC_MESSAGE then
+    _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_COMMENT_MESSAGE_MESSAGE, true)
+  elseif self.feedInfo.category == ProtoEnum.MarkGameplay.MK_MAGIC_VIDEO then
+    _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_RECOR_COMMENT, true)
+  end
 end
 
 function UMG_ShowMagicMessage_C:OnChangeAttitude(attitude)

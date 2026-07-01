@@ -75,7 +75,7 @@ end
 function UMG_ChatGvoice_C:OnAddEventListener(isAdd)
   if isAdd then
     self:AddButtonListener(self.Btn_Send.btnLevelUp, self.ChangeButtonState)
-    self:AddButtonListener(self.Btn_Cancel.btnLevelUp, self.CloseVisibility)
+    self:AddButtonListener(self.Btn_Cancel.btnLevelUp, self.ClickCancel)
     self:AddDelegateListener(self.Text1.OnTextChanged, self.OnTextChanged)
   else
     self:RemoveButtonListener(self.Btn_Send.btnLevelUp)
@@ -192,6 +192,11 @@ function UMG_ChatGvoice_C:RestChatGvoiceState()
   self:OnRecoverGameVoice()
 end
 
+function UMG_ChatGvoice_C:ClickCancel()
+  self.bOpenAIChatGvoice = true
+  self:CloseVisibility()
+end
+
 function UMG_ChatGvoice_C:CloseVisibility(IsNotSound)
   if not IsNotSound then
     _G.NRCAudioManager:PlaySound2DAuto(41401015, "UMG_ChatGvoice_C:CloseVisibility")
@@ -266,7 +271,18 @@ end
 
 function UMG_ChatGvoice_C:OnAnimationFinished(anim)
   if anim == self.Out then
-    _G.NRCEventCenter:DispatchEvent(FriendModuleEvent.ChangeChatGvoiceVisibility, false)
+    self:ChangeRegisterVoiceEvent(false)
+    self:OnAddEventListener(false)
+    if self.IsRecording then
+      _G.GVoiceManager:StopRecording(false)
+    end
+    self:IsWaitSpeechFalse()
+    self:RestChatGvoiceState()
+    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.bOpenAIChatGvoice then
+      _G.NRCEventCenter:DispatchEvent(FriendModuleEvent.OpenAIChatGvoicePanel)
+      self.bOpenAIChatGvoice = nil
+    end
   end
 end
 

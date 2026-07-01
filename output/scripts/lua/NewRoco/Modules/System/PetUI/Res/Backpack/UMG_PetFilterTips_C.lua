@@ -130,6 +130,9 @@ function UMG_PetFilterTips_C:OnActive(OpenType, FilterHiddenParam)
   elseif OpenType == PetUIModuleEnum.OpenSortType.BattleRogue then
     self:HiddenOrShowStrongPoint(true)
     self.OldFilter = self.data.chooseTypeListBattleRogue
+  elseif OpenType == PetUIModuleEnum.OpenSortType.TerritoryTrial then
+    self:HiddenOrShowStrongPoint(false)
+    self.OldFilter = self.data.chooseTypeListTerritoryTrial
   end
   if OpenType == PetUIModuleEnum.OpenSortType.HomePetFeeding and self.OldFilter.GenderFilter then
     self.GenderFilter = table.deepCopy(self.OldFilter.GenderFilter, self.GenderFilter, false)
@@ -546,6 +549,8 @@ function UMG_PetFilterTips_C:ClosePanel()
     self.data.chooseTypeListCertification = self.OldFilter
   elseif self.OpenType == PetUIModuleEnum.OpenSortType.BattleRogue then
     self.data.chooseTypeListBattleRogue = self.OldFilter
+  elseif self.OpenType == PetUIModuleEnum.OpenSortType.TerritoryTrial then
+    self.data.chooseTypeListTerritoryTrial = self.OldFilter
   end
   self:LoadAnimation(2)
 end
@@ -636,6 +641,15 @@ function UMG_PetFilterTips_C:RestartFilter()
     }
   elseif self.OpenType == PetUIModuleEnum.OpenSortType.CertificationActivity then
     self.data.chooseTypeListCertification = {
+      DepartmentFilter = self.DepartmentFilter,
+      TalentFilter = self.TalentFilter,
+      NaturePositiveEffectFilter = self.NaturePositiveEffectFilter,
+      AttributeFilter = self.AttributeFilter,
+      PartnerMarkerFilter = self.PartnerMarkerFilter,
+      SpecialityFilter = self.SpecialityFilter
+    }
+  elseif self.OpenType == PetUIModuleEnum.OpenSortType.TerritoryTrial then
+    self.data.chooseTypeListTerritoryTrial = {
       DepartmentFilter = self.DepartmentFilter,
       TalentFilter = self.TalentFilter,
       NaturePositiveEffectFilter = self.NaturePositiveEffectFilter,
@@ -762,6 +776,16 @@ function UMG_PetFilterTips_C:ApplyFilter()
       SpecialityFilter = self.SpecialityFilter
     }
     _G.NRCEventCenter:DispatchEvent(PetUIModuleEvent.FilterPet, self.data.chooseTypeListBattleRogue)
+  elseif self.OpenType == PetUIModuleEnum.OpenSortType.TerritoryTrial then
+    self.data.chooseTypeListTerritoryTrial = {
+      DepartmentFilter = self.DepartmentFilter,
+      TalentFilter = self.TalentFilter,
+      NaturePositiveEffectFilter = self.NaturePositiveEffectFilter,
+      AttributeFilter = self.AttributeFilter,
+      PartnerMarkerFilter = self.PartnerMarkerFilter,
+      SpecialityFilter = self.SpecialityFilter
+    }
+    _G.NRCEventCenter:DispatchEvent(PetUIModuleEvent.FilterPet, self.data.chooseTypeListTerritoryTrial)
   end
   self:LoadAnimation(2)
 end

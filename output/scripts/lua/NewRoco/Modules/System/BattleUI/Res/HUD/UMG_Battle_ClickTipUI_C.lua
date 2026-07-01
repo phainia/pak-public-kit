@@ -1,5 +1,6 @@
 require("UnLuaEx")
 local Enum = require("Data.Config.Enum")
+local BattleEvent = require("NewRoco.Modules.Core.Battle.Common.BattleEvent")
 local BattleUtils = require("NewRoco.Modules.Core.Battle.Common.BattleUtils")
 local Base = _G.NRCUmgClass
 local UMG_Battle_ClickTipUI_C = Base:Extend("UMG_Battle_ClickTipUI_C")
@@ -89,6 +90,19 @@ function UMG_Battle_ClickTipUI_C:SetData(_data, ownerPet)
   self.data = _data
   self.ownerPet = ownerPet
   self:SetActiveAnimation()
+end
+
+function UMG_Battle_ClickTipUI_C:Show()
+  self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if self.ownerPet and self.ownerPet.card then
+    _G.BattleEventCenter:Dispatch(BattleEvent.BATTLE_CLICK_TIP_UI_SHOW, self, self.ownerPet, self.ClickBtn)
+  end
+end
+
+function UMG_Battle_ClickTipUI_C:Hide()
+  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  _G.BattleEventCenter:Dispatch(BattleEvent.BATTLE_CLICK_TIP_UI_HIDE, self)
+  self.ownerPet = nil
 end
 
 function UMG_Battle_ClickTipUI_C:SetActiveAnimation()

@@ -514,9 +514,8 @@ function UMG_ChallengeItem_C:SetLegendDataInfo(IsMapToMagicManual)
   self.unLockLevel = 0
   self.StarList = {}
   self.startStarNum = 0
-  local seasonLegendaryID
   if self.LegendData and self.LegendData.content_cfg_id then
-    seasonLegendaryID = _G.NRCModuleManager:DoCmd(_G.LegendaryBattleModuleCmd.GetSeasonLegendaryID, self.LegendData.content_cfg_id)
+    local end_time
     if seasonLegendaryID then
       local seasonLegendaryDataConf = _G.DataConfigManager:GetSeasonLegendaryBattleEvent(seasonLegendaryID)
       if seasonLegendaryDataConf then
@@ -525,26 +524,9 @@ function UMG_ChallengeItem_C:SetLegendDataInfo(IsMapToMagicManual)
         self.startStarNum = seasonLegendaryDataConf.start_difficulty
         if seasonLegendaryDataConf.start_time and seasonLegendaryDataConf.duration then
           local start_time = ActivityUtils.ToTimestamp(seasonLegendaryDataConf.start_time)
-          local end_time = start_time + seasonLegendaryDataConf.duration
-          local refreshTime = end_time - _G.ZoneServer:GetServerTime() / 1000
-          if refreshTime >= 0 then
-            self.TimeSwitcher_0:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-            local day = math.floor(refreshTime / 86400)
-            local hour = math.floor((refreshTime - day * 86400) / 3600)
-            local min = math.floor((refreshTime - day * 86400 - hour * 3600) / 60)
-            local sec = math.floor(refreshTime % 60)
-            local btnText = ""
-            if day > 0 then
-              btnText = string.format(LuaText.activity_RTS1, day, hour)
-            elseif hour > 0 then
-              btnText = string.format(LuaText.activity_RTS2, hour, min)
-            else
-              btnText = string.format(LuaText.magicmanual_challenge_countdown03, min, sec)
-            end
-            self.Text_Time:SetText(btnText)
-          end
+          end_time = start_time + seasonLegendaryDataConf.duration
         end
-        if seasonLegendaryDataConf.frame_1 ~= nil and "" ~= seasonLegendaryDataConf.frame_1 and nil ~= seasonLegendaryDataConf.frame_2 and "" ~= seasonLegendaryDataConf.frame_2 then
+        if seasonLegendaryDataConf.frame_1 ~= nil and seasonLegendaryDataConf.frame_1 ~= "" and nil ~= seasonLegendaryDataConf.frame_2 and "" ~= seasonLegendaryDataConf.frame_2 then
           self.SwitcherBG:SetActiveWidgetIndex(4)
         end
       end
@@ -557,6 +539,7 @@ function UMG_ChallengeItem_C:SetLegendDataInfo(IsMapToMagicManual)
           for _, value in pairs(ActivityConf) do
             if value.base_id and #value.base_id > 0 and value.base_id[1] == k then
               self.unLockLevel = value.world_level_required or 0
+              end_time = ActivityUtils.ToTimestamp(value.disappear_time)
               break
             end
           end
@@ -564,6 +547,9 @@ function UMG_ChallengeItem_C:SetLegendDataInfo(IsMapToMagicManual)
           self.startStarNum = v.start_difficulty
         end
       end
+    end
+    if end_time then
+      self:SetLegendaryTime(end_time)
     end
   end
   local visitorList = _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.GetOnlineVisitorList)
@@ -689,6 +675,28 @@ function UMG_ChallengeItem_C:SetLegendDataInfo(IsMapToMagicManual)
   self.BtnSwitch:SetActiveWidgetIndex(0)
   self:SetBgColor(unit_type[1], seasonLegendaryID)
   self:SetBtnBgByUnitType(unit_type[1], seasonLegendaryID)
+end
+
+function UMG_ChallengeItem_C:SetLegendaryTime(end_time)
+  if end_time then
+    local refreshTime = end_time - _G.ZoneServer:GetServerTime() / 1000
+    if refreshTime >= 0 then
+      self.TimeSwitcher_0:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      local day = math.floor(refreshTime / 86400)
+      local hour = math.floor((refreshTime - day * 86400) / 3600)
+      local min = math.floor((refreshTime - day * 86400 - hour * 3600) / 60)
+      local sec = math.floor(refreshTime % 60)
+      local btnText = ""
+      if day > 0 then
+        btnText = string.format(LuaText.activity_RTS1, day, hour)
+      elseif hour > 0 then
+        btnText = string.format(LuaText.activity_RTS2, hour, min)
+      else
+        btnText = string.format(LuaText.magicmanual_challenge_countdown03, min, sec)
+      end
+      self.Text_Time:SetText(btnText)
+    end
+  end
 end
 
 function UMG_ChallengeItem_C:SetBossDataInfo(IsMapToMagicManual)

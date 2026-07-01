@@ -1699,6 +1699,7 @@ end
 function UMG_ClosetPanel_C:UpdateListByType(bFashion, typeEnum, bIgnoreInit, bSkipTurnAround)
   self.data.bChooseClosetFashionTab = bFashion
   self.data.closetChooseTabType = typeEnum
+  self:UpdateGorgeousMagicBtnVisible(nil)
   local curWandId = self.module:OnCmdGetCurSuitWandId()
   if false == bFashion and typeEnum == Enum.SalonLabelType.SLT_HAIR then
   elseif bFashion and typeEnum == Enum.FashionLabelType.FLT_SUIT then
@@ -2908,20 +2909,6 @@ function UMG_ClosetPanel_C:EnterSuitUpgradePanel(suitId, packageId)
 end
 
 function UMG_ClosetPanel_C:OnSelectEmptySuitIndex(selectedSuitIndex)
-  local itemsToRemove = {}
-  if self.data.TempAppearData then
-    for k, v in ipairs(self.data.TempAppearData) do
-      table.insert(itemsToRemove, {
-        FashionType = v.FashionType,
-        FashionId = v.FashionId
-      })
-    end
-    for k, v in ipairs(itemsToRemove) do
-      if v.FashionType ~= _G.Enum.FashionLabelType.FLT_WAND then
-        self.module:OnCmdSetClosetAvatar(true, v.FashionType, v.FashionId, nil, false)
-      end
-    end
-  end
   local salonIds = {}
   if self.data.TempBeautyData then
     for k, v in ipairs(self.data.TempBeautyData) do

@@ -84,6 +84,22 @@ SceneUtils.TagRef1v1v1_against = {
 }
 SceneUtils.EnableBattleExtraMemberFetching = true
 SceneUtils.DelayReportPosNpcList = {}
+SceneUtils.AlterBASToSALS = {
+  [Enum.BattleAIStatus.BAS_DRILL] = Enum.SpaceActorLogicStatus.SALS_DRILL,
+  [Enum.BattleAIStatus.BAS_STATIC] = Enum.SpaceActorLogicStatus.SALS_STATIC,
+  [Enum.BattleAIStatus.BAS_MIMIC] = Enum.SpaceActorLogicStatus.SALS_MIMIC,
+  [Enum.BattleAIStatus.BAS_HIDE] = Enum.SpaceActorLogicStatus.SALS_HIDE,
+  [Enum.BattleAIStatus.BAS_MIMIC_OPTION] = Enum.SpaceActorLogicStatus.SALS_MIMIC_OPTION,
+  [Enum.BattleAIStatus.BAS_GHOST] = Enum.SpaceActorLogicStatus.SALS_GHOST,
+  [Enum.BattleAIStatus.BAS_THUNDER] = Enum.SpaceActorLogicStatus.SALS_THUNDER,
+  [Enum.BattleAIStatus.BAS_DIVING] = Enum.SpaceActorLogicStatus.SALS_DIVING,
+  [Enum.BattleAIStatus.BAS_FISHJUMP] = Enum.SpaceActorLogicStatus.SALS_FISHJUMP,
+  [Enum.BattleAIStatus.BAS_TRAIL] = Enum.SpaceActorLogicStatus.SALS_TRAIL,
+  [Enum.BattleAIStatus.BAS_FALLING] = Enum.SpaceActorLogicStatus.SALS_FALLING,
+  [Enum.BattleAIStatus.BAS_NIGHTMARE] = Enum.SpaceActorLogicStatus.SALS_NIGHTMARE_ELITE,
+  [Enum.BattleAIStatus.BAS_DRILL_IMME] = Enum.SpaceActorLogicStatus.SALS_DRILL_IMME,
+  [Enum.BattleAIStatus.BAS_NIGHTMARE_KEEP] = Enum.SpaceActorLogicStatus.SALS_NIGHTMARE_KEEP
+}
 
 function SceneUtils.GetPosInArea(areaId)
   local area = DataConfigManager:GetAreaConf(areaId)
@@ -948,29 +964,27 @@ function SceneUtils.GetCatchRate(Session, NPC)
     end
   end
   local bMatchBallState = false
-  local hasTrue = false
-  if NPC.AIComponent then
-    local BallConf = BallID and 0 ~= BallID and _G.DataConfigManager:GetBallConf(BallID)
-    local tableConfState = BallConf and BallConf.param_blackboard
-    if tableConfState and #tableConfState > 0 then
-      for _, param in ipairs(tableConfState) do
-        if NPC.AIComponent.AIController:QueryCrossBlackboardValue(param, LuaParamType.Bool) == true then
-          hasTrue = true
+  local BallConf = BallID and 0 ~= BallID and _G.DataConfigManager:GetBallConf(BallID)
+  local tableConfState = BallConf and BallConf.param_blackboard
+  if tableConfState and #tableConfState > 0 then
+    for _, param in ipairs(tableConfState) do
+      if SceneUtils.AlterBASToSALS[param] then
+        if NPC:IsLogicStatus(SceneUtils.AlterBASToSALS[param]) then
+          bMatchBallState = true
         end
-        if hasTrue then
-          break
-        end
+      elseif NPC.AIComponent and NPC.AIComponent:HasBattleState(param) then
+        bMatchBallState = true
       end
-    end
-    if hasTrue then
-      bMatchBallState = true
+      if bMatchBallState then
+        break
+      end
     end
   end
   local Rate = BattleUtils.CalculateCatchMonsterRate(BallID, MonsterConf.id, NPCLevel, catchTimes, npcAIState, dist, Dizzy, bMatchBallState, guaranteeRate, lastCatchTime) or 0
   if 0 ~= npcAIState & _G.ProtoEnum.ThrowTargetNpcAIStatus.RESIST_CATCH then
     Rate = 0
   end
-  if true == SceneUtils.debugOpenChangeCatchRate then
+  if SceneUtils.debugOpenChangeCatchRate == true then
     Rate = SceneUtils.debugCatchRate
   end
   if GlobalConfig.ShowCatchRate then

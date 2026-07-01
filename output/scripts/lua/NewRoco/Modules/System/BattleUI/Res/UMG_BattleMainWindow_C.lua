@@ -149,6 +149,7 @@ function UMG_BattleMainWindow_C:OnConstruct()
   initState.isRecordButtonShow = false
   initState.recordButtonShowType = WidgetShowType.Hide
   initState.isRecordButtonShowDisplay = false
+  initState.isCanCatch = false
   local petHpInfoList = {}
   for i = 1, 3 do
     local petHpInfo = {}
@@ -201,7 +202,6 @@ function UMG_BattleMainWindow_C:OnConstruct()
   self.LeaderCardDeck = {}
   self.is_show_resonance = false
   self.first_open_battle_rule = false
-  self.isCanCatch = false
   self.TerritoryTrialEnemyInformationProps = {}
   if BattleUtils.IsTerritoryTrialBattle() then
     self.isTerritoryTrialEnemyInformationNeedLoad = true
@@ -820,6 +820,7 @@ function UMG_BattleMainWindow_C:OnBattleEvent(eventName, ...)
     local _, nextState = self:GetCurrAndNextState()
     nextState.isPlayerSkillPerforming = false
     self:SetState(nextState)
+    self:RefreshAnyEnemyIsDifferentColor()
     return true
   elseif eventName == BattleEvent.SimulateClickBag then
     self:ChangeOperateMode(BattleEnum.Operation.ENUM_ITEM)
@@ -885,14 +886,26 @@ end
 
 function UMG_BattleMainWindow_C:OnPetShieldBreak(battlePet)
   self:UpdateCanCatchState()
-  local battleCard = battlePet and battlePet.card
-  local petInfo = battleCard and battleCard.petInfo
-  local commonPetInfo = petInfo and petInfo.battle_common_pet_info
-  local mutationType = commonPetInfo and commonPetInfo.mutation_type
-  if PetMutationUtils.GetMutationValue(mutationType, _G.Enum.MutationDiffType.MDT_SHINING) then
-    _G.NRCModeManager:DoCmd(_G.BattleUIModuleCmd.OpenBattlePopUpDiscoveringDifferentlyColoredPetTips, 2.5)
-  end
   self:TryShowPetDifferentColors(battlePet)
+  self:RefreshAnyEnemyIsDifferentColor()
+end
+
+function UMG_BattleMainWindow_C:RefreshAnyEnemyIsDifferentColor()
+  local currState, nextState = self:GetCurrAndNextState()
+  local currEnemyPetPosMap = currState and currState.enemyPetPosMap or {}
+  local anyEnemyIsDifferentColor = false
+  for i, battlePet in pairs(currEnemyPetPosMap) do
+    local battleCard = battlePet and battlePet.card
+    local petInfo = battleCard and battleCard.petInfo
+    local commonPetInfo = petInfo and petInfo.battle_common_pet_info
+    local mutationType = commonPetInfo and commonPetInfo.mutation_type
+    if PetMutationUtils.GetMutationValue(mutationType, _G.Enum.MutationDiffType.MDT_SHINING) then
+      anyEnemyIsDifferentColor = true
+      break
+    end
+  end
+  nextState.anyEnemyIsDifferentColor = anyEnemyIsDifferentColor
+  self:SetState(nextState)
 end
 
 function UMG_BattleMainWindow_C:TryShowEnemyPetsDifferentColors()
@@ -910,10 +923,17 @@ function UMG_BattleMainWindow_C:TryShowPetDifferentColors(battlePet)
   local mutationType = commonPetInfo and commonPetInfo.mutation_type
   local isShining = PetMutationUtils.GetMutationValue(mutationType, _G.Enum.MutationDiffType.MDT_SHINING)
   local battlePetComponents = battlePet and battlePet.battlePetComponents
-  local isCanCatch = self.isCanCatch or false
+  local state = self:GetState()
+  local isCanCatch = state and state.isCanCatch or false
   local showShining = isCanCatch and isShining
   if battlePetComponents then
     battlePetComponents:SetIsDifferentColorsPet(showShining)
+  end
+end
+
+function UMG_BattleMainWindow_C:TryOpenBattlePopUpDiscoveringDifferentlyColoredPetTips(anyEnemyIsDifferentColor, isCanCatch)
+  if anyEnemyIsDifferentColor and isCanCatch then
+    _G.NRCModeManager:DoCmd(_G.BattleUIModuleCmd.OpenBattlePopUpDiscoveringDifferentlyColoredPetTips, 2.5)
   end
 end
 
@@ -2022,7 +2042,9 @@ function UMG_BattleMainWindow_C:UpdateCanCatchState()
   if isBadgeChallenge then
     isCanCatch = false
   end
-  self.isCanCatch = isCanCatch
+  local _, nextState = self:GetCurrAndNextState()
+  nextState.isCanCatch = isCanCatch
+  self:SetState(nextState)
 end
 
 function UMG_BattleMainWindow_C:SetCardDeck(player)
@@ -3120,6 +3142,10 @@ function UMG_BattleMainWindow_C:OnWidgetDidUpdate(prevProps, currProps, prevStat
   local currHpBarsAndCardDecksConstructed = currState and currState.hpBarsAndCardDecksConstructed or false
   local prevIsPlayerSkillPerforming = prevState and prevState.isPlayerSkillPerforming or false
   local currIsPlayerSkillPerforming = currState and currState.isPlayerSkillPerforming or false
+  local prevAnyEnemyIsDifferentColor = prevState and prevState.anyEnemyIsDifferentColor or false
+  local currAnyEnemyIsDifferentColor = currState and currState.anyEnemyIsDifferentColor or false
+  local prevIsCanCatch = prevState and prevState.isCanCatch or false
+  local currIsCanCatch = currState and currState.isCanCatch or false
   if prevIsInfoShow ~= currIsInfoShow or prevIsOpenInfoAnimPlaying ~= currIsOpenInfoAnimPlaying or prevIsCloseInfoAnimPlaying ~= currIsCloseInfoAnimPlaying or prevInfoShowType ~= currInfoShowType then
     self:UpdateInfoShowType(currIsInfoShow, currInfoShowType, currIsOpenInfoAnimPlaying, currIsCloseInfoAnimPlaying)
   end
@@ -3156,6 +3182,9 @@ function UMG_BattleMainWindow_C:OnWidgetDidUpdate(prevProps, currProps, prevStat
     if not currIsOpenInfoAnimPlaying and not currIsCloseInfoAnimPlaying and currHpBarsAndCardDecksConstructed and (not currIsPlayerSkillPerforming or not currIsInfoShow) then
       self:UpdatePetHpInfoDisplayState(currPetHpInfoList)
     end
+  end
+  if prevAnyEnemyIsDifferentColor ~= currAnyEnemyIsDifferentColor or prevIsCanCatch ~= currIsCanCatch then
+    self:TryOpenBattlePopUpDiscoveringDifferentlyColoredPetTips(currAnyEnemyIsDifferentColor, currIsCanCatch)
   end
 end
 

@@ -1392,7 +1392,7 @@
         {
           "goods_type": 1,
           "goods_id": 320020,
-          "goods_count": 30
+          "goods_count": 25
         }
       ],
       "is_realign_end": true
@@ -2093,8 +2093,8 @@
       "reward_group": [
         {
           "goods_type": 1,
-          "goods_id": 100206,
-          "goods_count": 1
+          "goods_id": 100699,
+          "goods_count": 300
         }
       ]
     },
@@ -2397,7 +2397,7 @@
     },
     "1600160": {
       "id": 1600160,
-      "part_desc": "参与玩闹时刻，与梦想三三玩闹第1关",
+      "part_desc": "参与玩闹时刻，通过梦想三三玩闹第1关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2414,7 +2414,7 @@
     },
     "1600161": {
       "id": 1600161,
-      "part_desc": "参与玩闹时刻，与梦想三三玩闹第2关",
+      "part_desc": "参与玩闹时刻，通过梦想三三玩闹第2关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2431,7 +2431,7 @@
     },
     "1600162": {
       "id": 1600162,
-      "part_desc": "参与玩闹时刻，与梦想三三玩闹第3关",
+      "part_desc": "参与玩闹时刻，通过梦想三三玩闹第3关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2448,7 +2448,7 @@
     },
     "1600163": {
       "id": 1600163,
-      "part_desc": "参与玩闹时刻，与寒音蛇玩闹第1关",
+      "part_desc": "参与玩闹时刻，通过寒音蛇玩闹第1关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2465,7 +2465,7 @@
     },
     "1600164": {
       "id": 1600164,
-      "part_desc": "参与玩闹时刻，与寒音蛇玩闹第2关",
+      "part_desc": "参与玩闹时刻，通过寒音蛇玩闹第2关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2482,7 +2482,7 @@
     },
     "1600165": {
       "id": 1600165,
-      "part_desc": "参与玩闹时刻，与寒音蛇玩闹第3关",
+      "part_desc": "参与玩闹时刻，通过寒音蛇玩闹第3关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2499,7 +2499,7 @@
     },
     "1600166": {
       "id": 1600166,
-      "part_desc": "参与玩闹时刻，与魔眷鸟玩闹第1关",
+      "part_desc": "参与玩闹时刻，通过魔眷鸟玩闹第1关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2516,7 +2516,7 @@
     },
     "1600167": {
       "id": 1600167,
-      "part_desc": "参与玩闹时刻，与魔眷鸟玩闹第2关",
+      "part_desc": "参与玩闹时刻，通过魔眷鸟玩闹第2关",
       "condition_group": [
         {
           "condition_enum": 3,
@@ -2533,7 +2533,7 @@
     },
     "1600168": {
       "id": 1600168,
-      "part_desc": "参与玩闹时刻，与魔眷鸟玩闹第3关",
+      "part_desc": "参与玩闹时刻，通过魔眷鸟玩闹第3关",
       "condition_group": [
         {
           "condition_enum": 3,

@@ -364,6 +364,31 @@ function SystemSettingModuleData:InitConfig()
     SALS.SALS_WAIT_FOR_OTHERS,
     SALS.SALS_TELEPORT_TOGETHER
   }
+  self.customAnimations = {}
+  self.customAnimationTypeToIdx = {}
+  local allCustomAnimationCfg = _G.DataConfigManager:GetAllByName("SET_ROLE_ANIMATION_CONF")
+  if allCustomAnimationCfg then
+    for index, cfg in ipairs(allCustomAnimationCfg) do
+      self.customAnimationTypeToIdx[cfg.player_animation_customize_type] = index
+      if cfg.animation_list and #cfg.animation_list > 0 then
+        local curAnimation = {}
+        curAnimation.id = cfg.id
+        curAnimation.name = cfg.type_name
+        curAnimation.animationType = cfg.player_animation_customize_type
+        curAnimation.tipsId = _G.DataModelMgr.PlayerDataModel:IsMale() and cfg.tips_male or cfg.tips_female
+        curAnimation.options = {}
+        for animIdx, animation in ipairs(cfg.animation_list) do
+          table.insert(curAnimation.options, {
+            Name = animation.name,
+            Value = animIdx - 1
+          })
+        end
+        table.insert(self.customAnimations, curAnimation)
+      else
+        Log.Error("SystemSettingModuleData:InitCustomAnimations: animation_list is empty!", cfg.id)
+      end
+    end
+  end
 end
 
 function SystemSettingModuleData:GetGraphicConfigByKey(key)
@@ -376,6 +401,17 @@ end
 
 function SystemSettingModuleData:GetPlayerConfigByKey(key)
   return self.PlayerConfig[key]
+end
+
+function SystemSettingModuleData:GetCustomAnimations()
+  return self.customAnimations
+end
+
+function SystemSettingModuleData:GetRoleAnimationCfgByType(animType)
+  local id = animType and self.customAnimationTypeToIdx[animType]
+  if id then
+    return _G.DataConfigManager:GetSetRoleAnimationConf(id)
+  end
 end
 
 function SystemSettingModuleData:GetEncryptPhoneNum(phoneNum)

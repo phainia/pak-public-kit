@@ -153,6 +153,22 @@ function AreaAndZoneModule:OnReconnectFinish()
   self.zoneInfoArrayNew = {}
 end
 
+function AreaAndZoneModule:UpdateZoneInfoArrayNew(bEnter, areaFuncId, areaId)
+  if bEnter then
+    if self.zoneInfoArrayNew[areaFuncId] == nil then
+      self.zoneInfoArrayNew[areaFuncId] = {}
+    end
+    table.insertUnique(self.zoneInfoArrayNew[areaFuncId], areaId)
+  else
+    if self.zoneInfoArrayNew[areaFuncId] then
+      table.removeValue(self.zoneInfoArrayNew[areaFuncId], areaId)
+    end
+    if table.isEmpty(self.zoneInfoArrayNew[areaFuncId]) then
+      table.clear(self.zoneInfoArrayNew[areaFuncId])
+    end
+  end
+end
+
 function AreaAndZoneModule:OnCatcherEnter(action)
   self.AbilityBanManager:OnEnterArea(action and action.entered_area_id)
   local funcConf = _G.DataConfigManager:GetAreaFuncConf(action.area_func_conf_id)
@@ -160,8 +176,7 @@ function AreaAndZoneModule:OnCatcherEnter(action)
     Log.Error("AreaConf\228\184\141\229\173\152\229\156\168\239\188\140\232\175\183\230\163\128\230\159\165\233\133\141\231\189\174\227\128\130\227\128\130\227\128\130", action.area_func_conf_id)
     return
   end
-  local area_func_id = funcConf.id
-  self.zoneInfoArrayNew[area_func_id] = (self.zoneInfoArrayNew[area_func_id] or 0) + 1
+  self:UpdateZoneInfoArrayNew(true, action.area_func_conf_id, action.entered_area_id)
   local index = 1
   local already_exist = false
   for i, info in ipairs(self.zoneInfoArray:Items()) do
@@ -271,15 +286,8 @@ function AreaAndZoneModule:OnCatcherLeave(action)
     Log.Error("\229\144\142\229\143\176\228\184\139\229\143\145\231\154\132area_func_conf_id\230\160\185\230\156\172\228\184\141\229\173\152\229\156\168\239\188\140\229\156\176\229\144\141\231\155\184\229\133\179\233\128\187\232\190\145\229\164\167\230\166\130\231\142\135\228\188\154\230\156\137\233\151\174\233\162\152\239\188\140\232\175\183\228\189\191\231\148\168\229\146\140\229\174\162\230\136\183\231\171\175\229\140\185\233\133\141\231\154\132\230\156\141\229\138\161\229\153\168", action.left_area_id, action.area_func_conf_id)
     return
   end
+  self:UpdateZoneInfoArrayNew(false, action.area_func_conf_id, action.left_area_id)
   local area_func_id = funcConf.id
-  local ref_count = self.zoneInfoArrayNew[area_func_id] or 0
-  ref_count = ref_count - 1
-  if ref_count > 0 then
-    self.zoneInfoArrayNew[area_func_id] = ref_count
-    self:Log("OnCatcherLeave refCount still > 0, skip remove", area_func_id, ref_count)
-    return
-  end
-  self.zoneInfoArrayNew[area_func_id] = nil
   local index = 0
   for i, info in ipairs(self.zoneInfoArray:Items()) do
     local item = info.Conf
@@ -289,7 +297,9 @@ function AreaAndZoneModule:OnCatcherLeave(action)
     end
   end
   if 0 ~= index then
-    self.zoneInfoArray:RemoveAt(index)
+    if not self.zoneInfoArrayNew[area_func_id] or self.zoneInfoArrayNew[area_func_id] and 0 == #self.zoneInfoArrayNew[area_func_id] then
+      self.zoneInfoArray:RemoveAt(index)
+    end
     if not self.zoneInfoArray:IsEmpty() then
       local playerAreaInfo = self.zoneInfoArray:Get(1)
       self.playerZoneInfo = playerAreaInfo.Conf
@@ -297,7 +307,7 @@ function AreaAndZoneModule:OnCatcherLeave(action)
     else
       self.playerZoneInfo = nil
     end
-    if nil ~= self.playerZoneInfo then
+    if self.playerZoneInfo ~= nil then
       self:OnAreaChange(self.playerZoneInfo.id, false)
       local mainUIModule = _G.NRCModuleManager:GetModule("MainUIModule")
       if mainUIModule then

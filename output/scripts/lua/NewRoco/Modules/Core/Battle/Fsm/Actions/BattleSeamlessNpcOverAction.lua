@@ -40,6 +40,7 @@ function BattleSeamlessNpcOverAction:OnEnter()
         self:TryGetNpc()
         _G.BattleManager.vBattleField:HideAllWaterPlatforms()
         _G.NRCModuleManager:DoCmd(_G.PlayerModuleCmd.HIDE_LOCAL_PLAYER, false)
+        self:SaveBlackBoardValues()
         self:Play(self.npc, {
           Player.viewObj
         }, BattleConst.Define.PveNPCLeaveBattleWin, false)
@@ -63,6 +64,16 @@ function BattleSeamlessNpcOverAction:OnEnter()
     end
     self:Finish()
   end
+end
+
+function BattleSeamlessNpcOverAction:SaveBlackBoardValues()
+  local bbValues = {}
+  local customizeType = _G.Enum.PlayerAnimationCustomizeType.PACT_PVE_WIN_NORMAL
+  local player = _G.BattleManager.battlePawnManager:GetTeamPlayer(BattleEnum.Team.ENUM_TEAM)
+  local playerSelectedIndex = player:GetAnimationCustomizeIndex(customizeType)
+  local key, value = _G.BattleUtils.GetCustomizeConditionKeyValue(customizeType, playerSelectedIndex)
+  table.insert(bbValues, {key, value})
+  self:SetCacheBlackboardValue(bbValues)
 end
 
 function BattleSeamlessNpcOverAction:TryGetNpc()

@@ -25,7 +25,7 @@ function UMG_Common_Remind_C:OnActive(_param)
     UpdateManager:UnRegister(self)
   end
   self:LoadAnimation(0)
-  UE4.UNRCAudioManager.Get():PlaySound2DAuto(41400007, "UMG_Dialog_C:OnActive")
+  _G.NRCAudioManager:PlaySound2DAuto(41400007, "UMG_Dialog_C:OnActive")
 end
 
 function UMG_Common_Remind_C:OnDeactive()
@@ -162,7 +162,7 @@ function UMG_Common_Remind_C:OnBtnLeft()
     self.CommonPopUpData.Btn_LeftHandler(self.CommonPopUpData.Call)
   end
   if self.CommonPopUpData and self.CommonPopUpData.bPlayBtnSound then
-    UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401002, "UMG_Dialog_C:OnClickCancelButton")
+    _G.NRCAudioManager:PlaySound2DAuto(41401002, "UMG_Dialog_C:OnClickCancelButton")
   end
   self.clickLeft = true
   self:LoadAnimation(2)
@@ -176,7 +176,7 @@ function UMG_Common_Remind_C:OnBtnRight()
     self.CommonPopUpData.Btn_RightHandler(self.CommonPopUpData.Call)
   end
   if self.CommonPopUpData and self.CommonPopUpData.bPlayBtnSound then
-    UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401001, "UMG_Dialog_C:OnClickOkButton")
+    _G.NRCAudioManager:PlaySound2DAuto(41401001, "UMG_Dialog_C:OnClickOkButton")
   end
   self.clickRight = true
   self:LoadAnimation(2)
@@ -187,7 +187,7 @@ function UMG_Common_Remind_C:OnBtnGrayState()
     self.CommonPopUpData.Btn_GrayStateHandler(self.CommonPopUpData.Call)
   end
   if self.CommonPopUpData and self.CommonPopUpData.bPlayBtnSound then
-    UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401001, "UMG_Dialog_C:OnBtnGrayState")
+    _G.NRCAudioManager:PlaySound2DAuto(41401001, "UMG_Dialog_C:OnBtnGrayState")
   end
 end
 
@@ -199,7 +199,7 @@ function UMG_Common_Remind_C:OnFullScreen_Close()
     self.CommonPopUpData.ClosePanelHandler(self.CommonPopUpData.Call)
   end
   if self.CommonPopUpData and self.CommonPopUpData.bPlayBtnSound then
-    UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401002, "UMG_Dialog_C:OnClickCancelButton")
+    _G.NRCAudioManager:PlaySound2DAuto(41401002, "UMG_Dialog_C:OnClickCancelButton")
   end
   self:LoadAnimation(2)
 end
@@ -222,7 +222,7 @@ function UMG_Common_Remind_C:OnBtnClose()
     self.CommonPopUpData.Btn_CloseHandler(self.CommonPopUpData.Call)
   end
   if self.CommonPopUpData and self.CommonPopUpData.bPlayBtnSound then
-    UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401002, "UMG_Dialog_C:OnClickCancelButton")
+    _G.NRCAudioManager:PlaySound2DAuto(41401002, "UMG_Dialog_C:OnClickCancelButton")
   end
   self:LoadAnimation(2)
 end

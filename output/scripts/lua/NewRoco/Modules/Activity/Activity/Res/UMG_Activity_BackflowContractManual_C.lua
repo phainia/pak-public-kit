@@ -375,45 +375,13 @@ end
 
 function UMG_Activity_BackflowContractManual_C:GetBPReward(rsp)
   if 0 == rsp.ret_info.ret_code then
-    local popupInitData = {}
+    local popupInitData = rsp.ret_info.goods_reward.rewards
     for _, v in ipairs(self.BP_data) do
       if v.state == _G.ProtoEnum.PlayerActivityInfo.ActivityRewardState.ARS_WAIT then
         v.state = _G.ProtoEnum.PlayerActivityInfo.ActivityRewardState.ARS_DONE
-        local rewardData = _G.DataConfigManager:GetRewardConf(v.reward_id).RewardItem[1]
-        local bFind = false
-        for _, initData in ipairs(popupInitData) do
-          if initData.id == rewardData.Id and initData.type == rewardData.Type then
-            initData.num = initData.num + rewardData.Count
-            bFind = true
-            break
-          end
-        end
-        if not bFind then
-          local popupData = _G.ProtoMessage:newGoodsItem()
-          popupData.id = rewardData.Id
-          popupData.num = rewardData.Count
-          popupData.type = rewardData.Type
-          table.insert(popupInitData, popupData)
-        end
       end
       if v.state2 == _G.ProtoEnum.PlayerActivityInfo.ActivityRewardState.ARS_WAIT then
         v.state2 = _G.ProtoEnum.PlayerActivityInfo.ActivityRewardState.ARS_DONE
-        local rewardData = _G.DataConfigManager:GetRewardConf(v.reward_id2).RewardItem[1]
-        local bFind = false
-        for _, initData in ipairs(popupInitData) do
-          if initData.id == rewardData.Id and initData.type == rewardData.Type then
-            initData.num = initData.num + rewardData.Count
-            bFind = true
-            break
-          end
-        end
-        if not bFind then
-          local popupData = _G.ProtoMessage:newGoodsItem()
-          popupData.id = rewardData.Id
-          popupData.num = rewardData.Count
-          popupData.type = rewardData.Type
-          table.insert(popupInitData, popupData)
-        end
       end
     end
     _G.NRCModuleManager:DoCmd(_G.CommonPopUpModuleCmd.OpenNPCShopItemRewardsPanel, popupInitData)

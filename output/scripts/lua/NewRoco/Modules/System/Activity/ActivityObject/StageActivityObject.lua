@@ -223,6 +223,9 @@ function StageActivityObject:OnSvrUpdateActivityData(_cmdId, _updateData, _initU
     if stageData.sub_stage_data then
       for _, _subStageData in ipairs(stageData.sub_stage_data) do
         for _, _rewardData in ipairs(_subStageData.reward_data or {}) do
+          if self:GetActivityBelongSystem() == _G.Enum.BelongSystem.BS_RECALL_ACTIVITY and _subStageData.reward_data and #_subStageData.reward_data < #self.stageStatus then
+            self.stageStatus = {}
+          end
           self:UpdateStageStatus(_subStageData.activity_stage_id, _rewardData.stage_index, _rewardData.is_reward_taken, false)
         end
       end

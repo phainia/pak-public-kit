@@ -459,6 +459,9 @@ function BattleShowPetByAppearance:PlayShowPetSkill(mainContext, skillContext, e
   else
     skillObject.BattleFieldLimitType = UE.EBattleFieldLimitType.Ground
   end
+  if battlePlayer.roleInfo then
+    skillObject.BattleGenderType = battlePlayer.roleInfo.base.sex
+  end
   local skillStartResult = skillComponent:LoadAndPlaySkill(skillObject)
   if skillStartResult ~= UE.ESkillStartResult.Success then
     Log.Error("[BattleShowPetByAppearance] LoadAndPlaySkill result is not success", skillStartResult)
@@ -495,7 +498,7 @@ function BattleShowPetByAppearance:PrepareForG6(skillContext)
       skillContext.battlePlayer:PrepareForG6()
     end
     if skillContext.targetPet then
-      skillContext.targetPet:PrepareForG6()
+      skillContext.targetPet:PrepareForG6(skillContext.skillObject)
     end
   end
 end

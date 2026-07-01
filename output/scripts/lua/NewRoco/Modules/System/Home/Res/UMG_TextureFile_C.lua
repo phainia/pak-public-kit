@@ -3,13 +3,15 @@ local UMG_TextureFile_C = _G.NRCViewBase:Extend("UMG_TextureFile_C")
 function UMG_TextureFile_C:OnActive()
 end
 
-function UMG_TextureFile_C:SetTexture(FileTexture, ContentSlot)
+function UMG_TextureFile_C:SetTexture(FileTexture, ContentSlot, Width, Height)
   assert(FileTexture)
   assert(ContentSlot)
   self.World = UE4Helper.GetCurrentWorld()
   self.FileTexture = FileTexture
   self.ContentSlot = ContentSlot
-  self.Photo:SetBrush(UE.UWidgetBlueprintLibrary.MakeBrushFromTexture(FileTexture))
+  self.Width = Width
+  self.Height = Height
+  self.Photo:SetBrush(UE.UWidgetBlueprintLibrary.MakeBrushFromTexture(FileTexture, self.Width, self.Height))
   self:UpdateTransform()
 end
 
@@ -21,8 +23,8 @@ function UMG_TextureFile_C:UpdateTransform()
   if self.FileTexture and self.ContentSlot then
     local dpi = UE.UWidgetLayoutLibrary.GetViewportScale(self.World)
     local size = UE.UWidgetLayoutLibrary.GetViewportSize(self.World)
-    local Width = self.FileTexture:Blueprint_GetSizeX()
-    local Height = self.FileTexture:Blueprint_GetSizeY()
+    local Width = self.Width > 0 and self.Width or self.FileTexture:Blueprint_GetSizeX()
+    local Height = self.Height > 0 and self.Height or self.FileTexture:Blueprint_GetSizeY()
     local DesiredViewportSize = size
     local DeltaWidth = DesiredViewportSize.X / Width
     local DeltaHeight = DesiredViewportSize.Y / Height

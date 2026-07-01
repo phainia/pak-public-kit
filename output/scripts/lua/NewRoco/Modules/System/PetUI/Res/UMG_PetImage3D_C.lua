@@ -1951,6 +1951,7 @@ function UMG_PetImage3D_C:OnNewEvoPanelDestruct()
   _G.NRCModuleManager:GetModule("PetUIModule"):DispatchEvent(PetUIModuleEvent.Hide_CloseBtn, true)
   _G.NRCModuleManager:GetModule("PetUIModule"):DispatchEvent(PetUIModuleEvent.ShowHideRecommendedBtn, true)
   _G.NRCModuleManager:GetModule("PetUIModule"):DispatchEvent(PetUIModuleEvent.ShowHideTimeRewindBtn, true)
+  _G.NRCModuleManager:GetModule("PetUIModule"):DispatchEvent(PetUIModuleEvent.ShowHideHandbookBtn, true)
   _G.NRCModuleManager:GetModule("PetUIModule"):DispatchEvent(PetUIModuleEvent.ShowHideGiftColleaguesBtn, true)
   _G.NRCModuleManager:DoCmd(PetUIModuleCmd.SetPetMainShareBtnVisibility, true)
   if self.skillCamera then

@@ -1128,6 +1128,10 @@ function BP_NPCCharacter_C:SetIKEnable(boo)
   self.IkOverride = boo
 end
 
+function BP_NPCCharacter_C:GetIKEnable()
+  return self.IkOverride
+end
+
 function BP_NPCCharacter_C:ConfigureInitStatus()
   local SceneCharacter = self.sceneCharacter
   local MoveComp = self.CharacterMovement

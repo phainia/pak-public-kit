@@ -20,8 +20,42 @@ UMG_PetHatchingItem_C.eggType = {
   CustomGlass = 6
 }
 
+local function TruncateByChar(str, maxCount, suffix)
+  if type(str) ~= "string" or "" == str then
+    return str or ""
+  end
+  maxCount = maxCount or 5
+  suffix = suffix or ""
+  local charCount = 0
+  local byteEnd = 0
+  local i = 1
+  local len = #str
+  while i <= len do
+    local b = string.byte(str, i)
+    local step
+    if b < 128 then
+      step = 1
+    elseif b < 224 then
+      step = 2
+    elseif b < 240 then
+      step = 3
+    else
+      step = 4
+    end
+    charCount = charCount + 1
+    if maxCount < charCount then
+      return string.sub(str, 1, byteEnd) .. suffix
+    end
+    byteEnd = i + step - 1
+    i = i + step
+  end
+  return str
+end
+
 function UMG_PetHatchingItem_C:OnConstruct()
   _G.NRCEventCenter:RegisterEvent(self.name, self, PetUIModuleEvent.OnUpdateHatchSecs, self.OnUpdateHatchSecs)
+  self:AddButtonListener(self.Particulars.btnLevelUp, self.OnClickQuestionBtn)
+  self:AddButtonListener(self.Particulars_Selected.btnLevelUp, self.OnClickQuestionBtn)
 end
 
 function UMG_PetHatchingItem_C:OnDestruct()
@@ -46,6 +80,10 @@ function UMG_PetHatchingItem_C:Init()
 end
 
 function UMG_PetHatchingItem_C:SetName(name)
+  if name then
+    local maxCount = _G.DataConfigManager:GetPetGlobalConfig("egg_name_display_max_text").num or 5
+    name = TruncateByChar(name, maxCount, "..")
+  end
   for i, v in pairs(self.EggNameList) do
     v:SetText(name)
   end
@@ -139,6 +177,10 @@ function UMG_PetHatchingItem_C:OnItemUpdate(_data, datalist, index)
     self.NotSelected:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Select:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Empty:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ParticularsBtn:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Particulars:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.ParticularsBtn_Selected:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Particulars_Selected:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     local oldEggType = self:GetEggType()
     if oldEggType ~= self.eggType.Normal and self.bSelected then
@@ -170,6 +212,10 @@ function UMG_PetHatchingItem_C:OnItemUpdate(_data, datalist, index)
     self.Empty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.RedDot:SetupKey(0)
     self.PetEggTypeIconItem:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ParticularsBtn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Particulars:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.ParticularsBtn_Selected:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Particulars_Selected:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -417,6 +463,14 @@ function UMG_PetHatchingItem_C:OnAnimationFinished(aim)
   elseif aim == self.Ysxc_In and not self.bSelected then
     self:PlayAnimation(self.Ysxc_loop, 0, 0)
   end
+end
+
+function UMG_PetHatchingItem_C:OnClickQuestionBtn()
+  if self.itemInfo == nil then
+    return
+  end
+  local remainCnt, maxCnt, isBattleState, Position, overrideNum, Caller, CallBack, OpenCallBack, showErrorTipsWhenNotFound, showDefaultIconWhenNotFound
+  _G.NRCModeManager:DoCmd(TipsModuleCmd.Tips_OpenItemTips, self.itemInfo.bagItem.id, _G.Enum.GoodsType.GT_BAGITEM, false, remainCnt, maxCnt, isBattleState, Position, overrideNum, Caller, CallBack, OpenCallBack, showErrorTipsWhenNotFound, showDefaultIconWhenNotFound, self.itemInfo.gid)
 end
 
 function UMG_PetHatchingItem_C:OnUpdateHatchSecs(rsp)

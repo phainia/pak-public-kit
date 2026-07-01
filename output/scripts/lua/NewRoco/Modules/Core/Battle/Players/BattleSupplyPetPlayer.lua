@@ -307,8 +307,8 @@ function BattleSupplyPetPlayer:OnSupplyPostStart(name, skill)
     v:ActiveSwimComponent(false)
     v.buffComponent:OnPetBeCatch()
     v:ShowPet()
-    v:PrepareForG6()
     v:ResetToBornPosition()
+    v:PrepareForG6(skill)
   end
 end
 

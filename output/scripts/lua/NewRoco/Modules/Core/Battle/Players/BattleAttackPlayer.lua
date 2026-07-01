@@ -243,6 +243,12 @@ function L14_1(A0_2, A1_2)
   L8_2 = BattleEvent.DefenceOtherStart
   L9_2 = BattleEvent.DefenceOtherEnd
   L2_2(L3_2, L4_2, L5_2, L6_2, L7_2, L8_2, L9_2)
+  L2_2 = BattleEventCenter
+  L3_2 = L2_2
+  L2_2 = L2_2.Dispatch
+  L4_2 = BattleEvent.StartAttackPlayer
+  L5_2 = A0_2.SkillObject
+  L2_2(L3_2, L4_2, L5_2)
   L2_2 = A0_2.SkillConf
   L2_2 = L2_2.type
   L3_2 = Enum.SkillActiveType
@@ -300,7 +306,7 @@ function L14_1(A0_2, A1_2)
         L2_2 = L2_2.IsDead
         L2_2 = L2_2(L3_2)
         if not L2_2 then
-          goto lbl_152
+          goto lbl_157
         end
       end
     end
@@ -314,7 +320,7 @@ function L14_1(A0_2, A1_2)
     L2_2 = A0_2.OnFinish
     L2_2(L3_2)
     do return end
-    ::lbl_152::
+    ::lbl_157::
     L2_2 = A0_2.Caster
     L2_2 = L2_2.player
     A0_2.CasterPlayer = L2_2
@@ -2804,12 +2810,12 @@ function L14_1(A0_2)
     L2_2 = A0_2.performNode
     L2_2 = L2_2.OwnerGroup
     L2_2 = L2_2.RecordMinExecIdx
+    L3_2 = A0_2.performNode
+    L3_2 = L3_2.OwnerGroup
+    L4_2 = L3_2
+    L3_2 = L3_2.StopRecord
+    L3_2(L4_2)
     if L2_2 >= 0 then
-      L3_2 = A0_2.performNode
-      L3_2 = L3_2.OwnerGroup
-      L4_2 = L3_2
-      L3_2 = L3_2.StopRecord
-      L3_2(L4_2)
       L3_2 = A0_2.performNode
       L3_2 = L3_2.OwnerGroup
       L3_2 = L3_2.OwnerCluster

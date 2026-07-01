@@ -2,6 +2,7 @@ local TipObject = require("NewRoco.Modules.System.TipsModule.Utils.TipObject")
 local BagModuleEvent = require("NewRoco.Modules.System.Bag.BagModuleEvent")
 local BagModuleEnum = require("NewRoco.Modules.System.Bag.BagModuleEnum")
 local PetUtils = require("NewRoco.Utils.PetUtils")
+local TimeUtils = require("NewRoco.Modules.System.EnvSystem.TimeUtils")
 local BagModuleData = _G.NRCData:Extend("BagModuleData")
 BagModuleData.CustomEnum = {
   SKILL_MACHINE = 0,
@@ -1766,19 +1767,7 @@ function BagModuleData:CalculateExpireTimeDifference(expireTimeStr)
   if not expireTimeStr or "" == expireTimeStr then
     return 0
   end
-  local year, month, day, hour, minute, second = expireTimeStr:match("(%d+)-(%d+)-(%d+) (%d+):(%d+):(%d+)")
-  if not year then
-    Log.Error("\230\151\182\233\151\180\230\160\188\229\188\143\233\148\153\232\175\175: " .. expireTimeStr)
-    return 0
-  end
-  local expireTimestamp = os.time({
-    year = tonumber(year),
-    month = tonumber(month),
-    day = tonumber(day),
-    hour = tonumber(hour),
-    min = tonumber(minute),
-    sec = tonumber(second)
-  })
+  local expireTimestamp = TimeUtils.ToTimeStamp(expireTimeStr)
   local currentTimestamp = _G.ZoneServer:GetServerTime() / 1000
   local timeDifference = expireTimestamp - currentTimestamp
   local hoursDifference = timeDifference / 3600

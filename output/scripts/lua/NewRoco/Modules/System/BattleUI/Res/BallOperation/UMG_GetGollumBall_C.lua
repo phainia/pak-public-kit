@@ -45,7 +45,7 @@ function UMG_GetGollumBall_C:OnAddEventListener()
   _G.NRCEventCenter:RegisterEvent("UMG_GetGollumBall_C", self, _G.AlchemyModuleEvent.AlchemyItemChanged, self.AlchemyItemChanged)
   _G.NRCEventCenter:RegisterEvent("UMG_GetGollumBall_C", self, _G.AlchemyModuleEvent.SetExchangeMaterial, self.OnSetExchangeMaterial)
   _G.NRCEventCenter:RegisterEvent("UMG_GetGollumBall_C", self, BagModuleEvent.GoodChangeTypeEnum.GT_BAGITEM, self.RefreshList)
-  _G.BattleEventCenter:Bind(self, BattleEvent.ROUND_START, BattleEvent.UI_INSTANT_UPDATE_ITEM, _G.BattlePerformEvent.TurnPlayStart)
+  _G.BattleEventCenter:Bind(self, BattleEvent.ROUND_START, BattleEvent.UI_INSTANT_UPDATE_ITEM, BattleEvent.StartAttackPlayer)
 end
 
 function UMG_GetGollumBall_C:TryClosePanel()
@@ -76,7 +76,10 @@ function UMG_GetGollumBall_C:UnBindInputAction()
 end
 
 function UMG_GetGollumBall_C:OnBattleEvent(eventName, ...)
-  if eventName == BattleEvent.ROUND_START or eventName == _G.BattlePerformEvent.TurnPlayStart then
+  if eventName == BattleEvent.ROUND_START then
+    _G.NRCModuleManager:DoCmd(_G.CommonPopUpModuleCmd.CloseNPCShopItemRewardsPanel)
+    self:DoClose()
+  elseif eventName == BattleEvent.StartAttackPlayer then
     _G.NRCModuleManager:DoCmd(_G.CommonPopUpModuleCmd.CloseNPCShopItemRewardsPanel)
     self:DoClose()
   elseif eventName == BattleEvent.UI_INSTANT_UPDATE_ITEM then

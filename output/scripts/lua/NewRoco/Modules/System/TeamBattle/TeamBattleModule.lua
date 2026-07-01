@@ -431,7 +431,7 @@ function TeamBattleModule:GetOwnerSelectTeamBattlePetBaseId()
   end
   if self.teamBattleInfo.select_flower_owner_id then
     Log.Debug("UMG_PrewarInformation_C:SetFlowerSeedFusionInfo", self.teamBattleInfo.select_flower_owner_id)
-    local visit_flower_seed_boss_datas = self.teamBattleInfo.visit_flower_seed_boss_datas
+    local visit_flower_seed_boss_datas = self.teamBattleInfo.visit_flower_seed_boss_datas or {}
     local visit_flower_seed_boss_data
     for i, v in pairs(visit_flower_seed_boss_datas) do
       if v and v.owner_id == self.teamBattleInfo.select_flower_owner_id then
@@ -553,7 +553,7 @@ end
 
 function TeamBattleModule:SetVisitSelectTeamBattlePetRsp(rsp)
   if 0 == rsp.ret_info.ret_code and rsp.uin and rsp.npc_logic_id then
-    local visit_flower_seed_boss_datas = self.teamBattleInfo.visit_flower_seed_boss_datas
+    local visit_flower_seed_boss_datas = self.teamBattleInfo.visit_flower_seed_boss_datas or {}
     self.teamBattleInfo.select_flower_owner_id = rsp.uin
     local visit_flower_seed_boss_data
     if rsp.uin == _G.DataModelMgr.PlayerDataModel:GetPlayerVisitOwnerUin() then
@@ -916,7 +916,7 @@ function TeamBattleModule:ConfirmBattleType(bTeam)
 end
 
 function TeamBattleModule:GetFusionInfoByUin(uin)
-  local visit_flower_seed_boss_datas = self.teamBattleInfo and self.teamBattleInfo.visit_flower_seed_boss_datas
+  local visit_flower_seed_boss_datas = self.teamBattleInfo and self.teamBattleInfo.visit_flower_seed_boss_datas or {}
   if visit_flower_seed_boss_datas then
     for i, v in pairs(visit_flower_seed_boss_datas) do
       if v.owner_id == uin then

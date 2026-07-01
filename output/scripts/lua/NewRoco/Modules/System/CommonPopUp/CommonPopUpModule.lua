@@ -169,4 +169,20 @@ function CommonPopUpModule:OpenActivityCommonPanel(data)
   end
 end
 
+function CommonPopUpModule:OpenActivityCommonPanelById(id, title)
+  local cfg = _G.DataConfigManager:GetActivitySpecialTxtConf(id, true)
+  if cfg then
+    local activityCommonData = {}
+    activityCommonData.titleText = title
+    activityCommonData.entries = {}
+    for _, v in ipairs(cfg.explain_group) do
+      local entry = {}
+      entry.desc = v.txt
+      entry.imagPath = v.image_path
+      table.insert(activityCommonData.entries, entry)
+    end
+    self:OpenActivityCommonPanel(activityCommonData)
+  end
+end
+
 return CommonPopUpModule

@@ -21,6 +21,7 @@ function UMG_MagicMessageComment_Item_C:OnAddEventListener()
   self.Button_Praise.OnClicked:Add(self, self.OnClickPraise)
   self.Btn_More.OnClicked:Add(self, self.OnClickMoreBtn)
   self.Btn_MoreContent.OnClicked:Add(self, self.OnClickMoreContentBtn)
+  self.Btn_MoreContent_Trans.OnClicked:Add(self, self.OnClickMoreContentTransBtn)
   _G.NRCEventCenter:RegisterEvent(self.name, self, _G.MainUIModuleEvent.ClickMagicMessageCommentMoreEvent, self.UpdateMoreContent)
 end
 
@@ -56,7 +57,13 @@ function UMG_MagicMessageComment_Item_C:OnItemUpdate(_data, datalist, index)
     self.Text_PraiseNum:SetText(self.data.good_num)
   end
   self.WidgetSwitcher_Praise:SetActiveWidgetIndex(self.data.comment_attitude == ProtoEnum.FeedCommentAttitudeType.FEED_COMMENT_ATTITUDE_TYPE_GOOD and 1 or 0)
-  self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.CanvasPanel_More:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.OnlineStatus:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if self.data.uin ~= _G.DataModelMgr.PlayerDataModel:GetPlayerUin() then
+    local req = _G.ProtoMessage:newZoneFriendSearchPlayerReq()
+    req.uin = self.data.uin
+    _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_FRIEND_SEARCH_PLAYER_REQ, req, self, self.OnSearchPlayerRsp, false, true)
+  end
 end
 
 function UMG_MagicMessageComment_Item_C:SetTime(timeSeconds)
@@ -124,16 +131,20 @@ end
 
 function UMG_MagicMessageComment_Item_C:OnSearchPlayerRsp(rsp)
   if 0 == rsp.ret_info.ret_code and rsp.player_info then
-    local source = rsp.is_friend and FriendEnum.Source.Friend or FriendEnum.Source.Scene
-    _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.OpenStudentCardPanel, rsp.player_info, FriendEnum.AdminFriendType.Others, source, nil)
+    if rsp.player_info.online then
+      self.OnlineStatus:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+      self.Text_OnlineStatus:SetText(LuaText.friend_list_online_text)
+    else
+      self.OnlineStatus:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   end
 end
 
 function UMG_MagicMessageComment_Item_C:OnClickMoreBtn()
   if self.data then
-    if self.Btn_MoreContent:GetVisibility() == UE4.ESlateVisibility.Collapsed then
+    if self.CanvasPanel_More:GetVisibility() == UE4.ESlateVisibility.Collapsed then
       _G.NRCEventCenter:DispatchEvent(_G.MainUIModuleEvent.ClickMagicMessageCommentMoreEvent, self.data.feedback_id)
-    elseif self.Btn_MoreContent:GetVisibility() == UE4.ESlateVisibility.Visible then
+    elseif self.CanvasPanel_More:GetVisibility() == UE4.ESlateVisibility.Visible then
       _G.NRCEventCenter:DispatchEvent(_G.MainUIModuleEvent.ClickMagicMessageCommentMoreEvent, 0)
     end
   end
@@ -142,24 +153,34 @@ end
 function UMG_MagicMessageComment_Item_C:UpdateMoreContent(feedback_id)
   if self.data then
     if 0 == feedback_id then
-      self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.CanvasPanel_More:SetVisibility(UE4.ESlateVisibility.Collapsed)
     elseif self.data.feedback_id ~= feedback_id then
-      self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.CanvasPanel_More:SetVisibility(UE4.ESlateVisibility.Collapsed)
     else
-      self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Visible)
+      self.CanvasPanel_More:SetVisibility(UE4.ESlateVisibility.Visible)
       local curPlayerUni = _G.DataModelMgr.PlayerDataModel:GetPlayerUin()
       if curPlayerUni == self.data.uin then
+        self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Visible)
         self.Text_More:SetText(LuaText.magic_message_comment_delete)
+        self.Btn_MoreContent_Trans:SetVisibility(UE4.ESlateVisibility.Collapsed)
       else
+        self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Visible)
         self.Text_More:SetText(LuaText.magic_message_comment_report)
+        self.Btn_MoreContent_Trans:SetVisibility(UE4.ESlateVisibility.Visible)
+        self.Text_More_Trans:SetText(LuaText.visible_circle_teleport_btn_text)
       end
     end
   end
 end
 
 function UMG_MagicMessageComment_Item_C:OnClickMoreContentBtn()
-  self.Btn_MoreContent:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.CanvasPanel_More:SetVisibility(UE4.ESlateVisibility.Collapsed)
   _G.NRCEventCenter:DispatchEvent(_G.MainUIModuleEvent.ClickMagicMessageCommentMoreContentEvent, self.data)
+end
+
+function UMG_MagicMessageComment_Item_C:OnClickMoreContentTransBtn()
+  self.CanvasPanel_More:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  _G.NRCModuleManager:DoCmd(BigMapModuleCmd.OnCmdTeleportToPlayerReq, self.data.uin)
 end
 
 function UMG_MagicMessageComment_Item_C:OnDeactive()

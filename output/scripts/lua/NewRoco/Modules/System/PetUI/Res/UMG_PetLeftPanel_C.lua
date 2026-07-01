@@ -1323,6 +1323,7 @@ function UMG_PetLeftPanel_C:OpenEggPanel()
   self.petInfoMainCtrl.ViewingBtn:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.petInfoMainCtrl:ShowHideGiftColleaguesBtn(false)
   self:DispatchEvent(PetUIModuleEvent.ShowHideTimeRewindBtn, false)
+  self:DispatchEvent(PetUIModuleEvent.ShowHideHandbookBtn, false)
   if self.petInfoMainCtrl.ComboBox_Popup:GetVisibility() == UE4.ESlateVisibility.Visible then
     self.petInfoMainCtrl.ComboBox_Popup:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.petInfoMainCtrl.IsShowShareBox = false

@@ -18,10 +18,6 @@ function RecallMainActivityObject:GetActivityData()
   return self.activityData
 end
 
-function RecallMainActivityObject:SyncActivityDataOnAvailable()
-  self:ReqGetPlayerActivityData()
-end
-
 function RecallMainActivityObject:OnReconnectFinish()
   self:ReqGetPlayerActivityData()
   return true

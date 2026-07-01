@@ -3,16 +3,47 @@ local BattleCard = require("NewRoco.Modules.Core.Battle.Entity.Card.BattleCard")
 local BattleEnum = require("NewRoco.Modules.Core.Battle.Common.BattleEnum")
 local Base = require("NewRoco.TUI.BP_NRCItemBase_C")
 local UMG_Battle_ReservesPets_Item_C = Base:Extend("UMG_Battle_ReservesPets_Item_C")
+local ItemData = _G.NRCClass:Extend("UMG_Battle_ReservesPets_Item.Data")
+
+function ItemData:FillAsCard(card, subCardList, index, reservesPetNum)
+  self.card = card
+  self.subCardList = subCardList
+  if self.card then
+    self.reservesState = BattleEnum.ReservesPetState.Appeared
+  elseif index <= reservesPetNum then
+    self.reservesState = BattleEnum.ReservesPetState.NotAppeared
+  else
+    self.reservesState = BattleEnum.ReservesPetState.NotExist
+  end
+end
+
+function ItemData:FillAsInfo(info, subInfoList, index, reservesPetNum)
+  self.info = info
+  self.subInfoList = subInfoList
+  if self.info then
+    self.reservesState = BattleEnum.ReservesPetState.Appeared
+  elseif index <= reservesPetNum then
+    self.reservesState = BattleEnum.ReservesPetState.NotAppeared
+  else
+    self.reservesState = BattleEnum.ReservesPetState.NotExist
+  end
+end
+
+UMG_Battle_ReservesPets_Item_C.Data = ItemData
 
 function UMG_Battle_ReservesPets_Item_C:OnConstruct()
   self.cache = {}
-  self.TouchButton.OnClicked:Add(self, self._OnPetInfoShow)
-  self.AttrButton.OnClicked:Add(self, self._OnPetInfoShow)
+  local buttonVisibility = UE.ESlateVisibility.Collapsed
+  local switcherVisibility = UE.ESlateVisibility.Visible
+  self.TouchButton:SetVisibility(buttonVisibility)
+  self.AttrButton:SetVisibility(buttonVisibility)
+  self.Switcher:SetVisibility(switcherVisibility)
+  if self.List then
+    self.List:InitGridView({})
+  end
 end
 
 function UMG_Battle_ReservesPets_Item_C:OnDestruct()
-  self.TouchButton.OnClicked:Remove(self, self._OnPetInfoShow)
-  self.AttrButton.OnClicked:Remove(self, self._OnPetInfoShow)
 end
 
 function UMG_Battle_ReservesPets_Item_C:OnItemUpdate(data, datalist, index)
@@ -23,7 +54,29 @@ function UMG_Battle_ReservesPets_Item_C:OnItemUpdate(data, datalist, index)
     self:_UpdateHeadIcon(data)
     self:_UpdateHPBar(data)
     self:_UpdatePetType(data)
+    self:_UpdateSubList(data)
+    self:_UpdateBackground(data)
   end
+end
+
+function UMG_Battle_ReservesPets_Item_C:OnTouchStarted(MyGeometry, InTouchEvent)
+  local childTouchContext = self.childTouchContext
+  self.childTouchContext = nil
+  local cache = self.cache
+  local card = cache and cache.card
+  local info = cache and cache.info
+  if childTouchContext then
+    card = childTouchContext and childTouchContext.card
+    info = childTouchContext and childTouchContext.info
+  end
+  local OnTouchStart = cache and cache.OnTouchStart
+  local context = {}
+  context.card = card
+  context.info = info
+  if OnTouchStart then
+    tcall(nil, OnTouchStart, context)
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
 function UMG_Battle_ReservesPets_Item_C:_UpdateState(data)
@@ -203,6 +256,7 @@ end
 function UMG_Battle_ReservesPets_Item_C:_UpdateCacheData(data)
   self.cache.card = data.card
   self.cache.info = data.info
+  self.cache.OnTouchStart = data and data.OnTouchStart
 end
 
 function UMG_Battle_ReservesPets_Item_C:_OnPetInfoShow()
@@ -222,6 +276,61 @@ function UMG_Battle_ReservesPets_Item_C:_OnPetInfoShow()
     _G.NRCModuleManager:DoCmd(_G.BattleUIModuleCmd.OpenBattleChangePetConfirmPanel, data)
   else
     Log.Warning("UMG_Battle_ReservesPets_Item_C:_OnPetInfoShow battlepet is invalid")
+  end
+end
+
+function UMG_Battle_ReservesPets_Item_C:OnChildTouchStart(touchContext)
+  self.childTouchContext = touchContext
+end
+
+function UMG_Battle_ReservesPets_Item_C:_UpdateBackground(data)
+  local card = data and data.card
+  local info = data and data.info
+  local petInfo = card and card.petInfo
+  local cardPetInsideInfo = petInfo and petInfo.battle_inside_pet_info
+  local infoPetInsideInfo = info and info.battle_inside_pet_info
+  local insideInfo = cardPetInsideInfo or infoPetInsideInfo
+  local buff145SourcePetId = insideInfo and insideInfo.buff145_source_pet or 0
+  local bg1Visibility = UE.ESlateVisibility.Collapsed
+  if buff145SourcePetId > 0 then
+    bg1Visibility = UE.ESlateVisibility.SelfHitTestInvisible
+  end
+  if self.Bg_1 then
+    self.Bg_1:SetVisibility(bg1Visibility)
+  end
+end
+
+function UMG_Battle_ReservesPets_Item_C:_UpdateSubList(data)
+  local card = data and data.card
+  local subCardList = data and data.subCardList or {}
+  local info = data and data.info
+  local subInfoList = data and data.subInfoList or {}
+  local dataList = {}
+  local listVisibility = UE.ESlateVisibility.Collapsed
+  local OnTouchStart = data and data.OnTouchStart
+  if card and next(subCardList) then
+    local reservesPetNum = #subCardList
+    for i, subCard in ipairs(subCardList) do
+      local desc = ItemData()
+      desc:FillAsCard(subCard, subCardList, i, reservesPetNum)
+      desc.OnTouchStart = _G.MakeWeakFunctor(self, self.OnChildTouchStart)
+      table.insert(dataList, desc)
+    end
+  elseif info and next(subInfoList) then
+    local reservesPetNum = #subInfoList
+    for i, subInfo in ipairs(subInfoList) do
+      local desc = ItemData()
+      desc:FillAsInfo(subInfo, subCardList, i, reservesPetNum)
+      desc.OnTouchStart = _G.MakeWeakFunctor(self, self.OnChildTouchStart)
+      table.insert(dataList, desc)
+    end
+  end
+  if #dataList > 0 then
+    listVisibility = UE.ESlateVisibility.SelfHitTestInvisible
+  end
+  if self.List then
+    self.List:InitGridView(dataList)
+    self.List:SetVisibility(listVisibility)
   end
 end
 

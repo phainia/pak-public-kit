@@ -305,9 +305,28 @@ function BattlePerformCluster:AddGroupInServerExecuteQueue(group)
   if not group.OwnerCluster then
     return
   end
+  local headNode = group.OwnerCluster.HeadGroup.HeadNode
   for _, node in ipairs(group.GroupNodes or {}) do
-    if not node.isPerformed then
+    if node ~= headNode and not node.isPerformed then
       self:AddNodeInServerExecuteQueue(node)
+    end
+  end
+end
+
+function BattlePerformCluster:AddKeepOrderClustersHeadInServerExecuteQueue(overNode)
+  if 0 == #self.keepOrderClusters then
+    return
+  end
+  if not overNode then
+    return
+  end
+  if overNode ~= self.HeadGroup.HeadNode then
+    return
+  end
+  for _, v in ipairs(self.keepOrderClusters) do
+    local headNode = v.HeadGroup and v.HeadGroup.HeadNode
+    if headNode and not headNode.isPerformed then
+      self:AddNodeInServerExecuteQueue(headNode)
     end
   end
 end
@@ -321,6 +340,7 @@ function BattlePerformCluster:AddNodeInServerExecuteQueue(node)
   end
   local nodeExecIdx = node:GetExecIdx()
   if not self.ServerExecuteQueue:Contains(nodeExecIdx) then
+    Log.Debug("zgx AddNodeInServerExecuteQueue", nodeExecIdx, self.HeadGroup.GroupId)
     self.ServerExecuteQueue:EnQueue(nodeExecIdx)
   end
 end
@@ -334,6 +354,17 @@ function BattlePerformCluster:RemoveClusterInServerExecuteQueue(cluster)
   end
   for _, group in ipairs(cluster.ClusterGroups or {}) do
     self:RemoveGroupInServerExecuteQueue(group)
+  end
+end
+
+function BattlePerformCluster:NotifyFriendlyRemoveNodeInServerExecuteQueue(overNode)
+  if not overNode then
+    return
+  end
+  for _, v in ipairs(self.FriendlyClusters) do
+    if table.contains(v.keepOrderClusters, self) then
+      v:RemoveNodeInServerExecuteQueue(overNode)
+    end
   end
 end
 
@@ -355,6 +386,7 @@ function BattlePerformCluster:RemoveNodeInServerExecuteQueue(node)
   end
   local nodeExecIdx = node:GetExecIdx()
   local top = self.ServerExecuteQueue:GetTop()
+  Log.Debug("zgx RemoveNodeInServerExecuteQueue", top, nodeExecIdx, self.HeadGroup.GroupId)
   self.ServerExecuteQueue:Remove(nodeExecIdx)
   if top == nodeExecIdx then
     for _, group in ipairs(self.ClusterGroups) do
@@ -381,7 +413,7 @@ function BattlePerformCluster:CheckCanPlayNode(node)
   local topExecIdx = self.ServerExecuteQueue:GetTop()
   if topExecIdx < node:GetExecIdx() then
     if self:CheckDeadLockForExecIdx(topExecIdx) then
-      Log.Error("zgx Has DeadLock!!!!")
+      Log.Error("zgx Has DeadLock!!!!", topExecIdx, node:GetExecIdx())
       return true
     end
     return false

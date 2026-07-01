@@ -459,7 +459,8 @@ function UMG_NpcInfo_C:UpdatePanel1Info(_npcInfo)
     bShowCatchTime = false,
     petCircadian = Enum.PetCircadian.PC_ALLDAY,
     state = nil,
-    isFound = nil
+    isFound = nil,
+    contentImagePath = nil
   }
   local npcCfg = _npcInfo.npcCfg
   if self.worldMap then
@@ -474,6 +475,9 @@ function UMG_NpcInfo_C:UpdatePanel1Info(_npcInfo)
       props.desc = self.worldMap.worldmap_npc_des or ""
     elseif npcCfg then
       props.desc = npcCfg.worldmap_npc_des or ""
+    end
+    if self.worldMap.dungeon_title_bg then
+      props.contentImagePath = self.worldMap.dungeon_title_bg
     end
     self.StudyTourTime:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.NRCImage_72:SetVisibility(UE4.ESlateVisibility.Collapsed)

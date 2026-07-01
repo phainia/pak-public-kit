@@ -64,6 +64,7 @@ BattleConst.EnterAnimName = {
 BattleConst.BattleDepthCam = "/Game/NewRoco/Modules/Core/Battle/BattleDepthCam/BP_BattleDepthCam.BP_BattleDepthCam_C"
 BattleConst.BattleCharacterMaskCamera = "/Game/NewRoco/Modules/Core/Battle/Camera/BP_BattleCharacterMaskCamera.BP_BattleCharacterMaskCamera_C"
 BattleConst.CounterSkillPreFx = "/Game/ArtRes/Effects/G6Skill/Jineng/G6_Nor_YDJ001.G6_Nor_YDJ001_C"
+BattleConst.CounterNPCAnim = "YingDui"
 BattleConst.CounterSkillPreNpc = "/Game/ArtRes/Effects/G6Skill/NPC/G6_NPC_World_YingDui.G6_NPC_World_YingDui_C"
 BattleConst.BPBall = "/Game/NewRoco/Modules/Core/NPC/PetBall/BP_NPCItemPetBall_A001.BP_NPCItemPetBall_A001_C"
 BattleConst.BallPaths = {

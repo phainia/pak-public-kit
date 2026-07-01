@@ -734,6 +734,9 @@ function TakePhotosModule:ReqChangeCameraTexture(SkinId)
   
   local function OnTakePhotoFlash(Req, Rsp)
     Log.Debug("[TakePhoto] rsp set camera skin", Rsp and Rsp.ret_info and Rsp.ret_info.ret_code)
+    if Rsp.ret_info and 0 == Rsp.ret_info.ret_code then
+      _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.takephoto_cameraskin_change_success)
+    end
   end
   
   NRCModuleManager:DoCmd(NPCModuleCmd.ReqControlNpc, ContentId, OpType, nil, OnTakePhotoFlash, nil, SkinId)

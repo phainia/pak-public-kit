@@ -206,21 +206,24 @@ function UMG_Activity_TakePhotoCompetition_BigPhoto_C:SetIconAndName(uin)
       local playerName = friendData.name
       self.Text_PlayerName:SetText(playerName)
     else
-      self:Log("SetIconAndName ZONE_FRIEND_SEARCH_PLAYER_REQ", uin)
-      local req = _G.ProtoMessage:newZoneFriendSearchPlayerReq()
-      req.uin = uin
-      _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_FRIEND_SEARCH_PLAYER_REQ, req, self, self.OnSearchPlayerRsp, false, true)
+      self:Log("SetIconAndName ZONE_BATCH_GET_OTHERS_SOCIAL_EXT_DATA_REQ", uin)
+      local req = _G.ProtoMessage:newZoneBatchGetOthersSocialExtDataReq()
+      table.insert(req.uin_list, uin)
+      req.ext_data_types = {
+        Enum.SocialExtDataType.SEDT_PROFILE
+      }
+      _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_BATCH_GET_OTHERS_SOCIAL_EXT_DATA_REQ, req, self, self.OnSearchPlayerRsp, false, true)
     end
   end
 end
 
 function UMG_Activity_TakePhotoCompetition_BigPhoto_C:OnSearchPlayerRsp(rsp)
-  self:Log("SetIconAndName ZoneFriendSearchPlayerRsp", rsp.ret_info.ret_code, rsp.player_info and rsp.player_info.name)
-  if 0 == rsp.ret_info.ret_code and rsp.player_info then
-    self.searchPlayerRsp = rsp
-    local card_icon_selected = rsp.player_info.card_icon_selected
+  self:Log("SetIconAndName ZoneBatchGetOthersSocialExtDataRsp", rsp.ret_info.ret_code)
+  if 0 == rsp.ret_info.ret_code and rsp.ext_datas and rsp.ext_datas[1] and rsp.ext_datas[1].profile then
+    local playerInfo = rsp.ext_datas[1].profile
+    local card_icon_selected = playerInfo.card_icon_selected
     self:SetHeadIcon(card_icon_selected)
-    local playerName = rsp.player_info.name
+    local playerName = playerInfo.name
     self.Text_PlayerName:SetText(playerName)
   end
 end

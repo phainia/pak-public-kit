@@ -76,6 +76,9 @@ function SystemSettingModule:OnActive()
   self:RegisterCmd(_G.SystemSettingModuleCmd.QuitSleepMode, self.QuitSleepMode)
   self:RegisterCmd(_G.SystemSettingModuleCmd.EnterSleepModeOnDebug, self.EnterSleepModeOnDebug)
   self:RegisterCmd(_G.SystemSettingModuleCmd.ChangePlayerName, self.ChangePlayerName)
+  self:RegisterCmd(_G.SystemSettingModuleCmd.GetCustomAnimCfgBySelectedIdx, self.GetCustomAnimCfgBySelectedIdx)
+  self:RegisterCmd(_G.SystemSettingModuleCmd.GetCustomAnimCfgByActor, self.GetCustomAnimCfgByActor)
+  self:RegisterCmd(_G.SystemSettingModuleCmd.GetRoleAnimationCfgByType, self.GetRoleAnimationCfgByType)
   _G.NRCEventCenter:RegisterEvent("SystemSettingModule", self, _G.NRCGlobalEvent.OnRocoTouchEnd, self.OnScreenTouchEnd)
   _G.NRCEventCenter:RegisterEvent("SystemSettingModule", self, _G.NRCGlobalEvent.OnRocoTouchStart, self.OnScreenTouchStart)
   self.data:BuildButtonTypeToButtonSettingConfMap()
@@ -260,6 +263,9 @@ function SystemSettingModule:OnApplyConfig(key, value, extraKey)
       if newPlayerSettings.pvp then
         self.data.playerSettings.pvp = newPlayerSettings.pvp
       end
+      if newPlayerSettings.custom_anims then
+        self.data.playerSettings.customAnims = newPlayerSettings.custom_anims
+      end
     end
   elseif "DLSS" == key then
     if extraKey then
@@ -296,6 +302,7 @@ function SystemSettingModule:OnApplyConfig(key, value, extraKey)
     end
   elseif "joystickMode" == key then
   elseif "propPlaceMode" == key then
+  elseif "customAnimations" == key then
   else
     UE4.UNRCQualityLibrary.SetImageQuality(UE4.ENRCImageQuality.Custom)
     UE4.UNRCQualityLibrary.SetGroupQualityLevel(key, value)
@@ -539,6 +546,9 @@ function SystemSettingModule:OnCmdReqModifyPlayerSettings(newPlayerSettings)
   end
   if newPlayerSettings.pvp then
     req.settings.pvp = newPlayerSettings.pvp
+  end
+  if newPlayerSettings.customAnims then
+    req.settings.custom_anims = newPlayerSettings.customAnims
   end
   local OnlineModule = _G.NRCModuleManager:GetModule("OnlineModule")
   local onlineModuleData = OnlineModule.data
@@ -1251,6 +1261,44 @@ function SystemSettingModule:EncryptInputText(inputText, authInfo)
   else
     Log.Error("SystemSettingModule:EncryptInputTex public_key md5 \228\184\141\228\184\128\232\135\180\239\188\129")
   end
+end
+
+function SystemSettingModule:GetCustomAnimCfgBySelectedIdx(animType, selectedIdx)
+  if not selectedIdx then
+    return
+  end
+  local cfg = self.data:GetRoleAnimationCfgByType(animType)
+  if cfg and cfg.animation_list and #cfg.animation_list > 0 then
+    if selectedIdx < 0 then
+      selectedIdx = 0
+    elseif selectedIdx >= #cfg.animation_list then
+      selectedIdx = #cfg.animation_list - 1
+    end
+    local animCfg = cfg.animation_list[selectedIdx + 1]
+    return animCfg and animCfg.animation, selectedIdx
+  end
+end
+
+function SystemSettingModule:GetCustomAnimCfgByActor(animType, actor)
+  actor = actor or _G.NRCModuleManager:DoCmd(_G.PlayerModuleCmd.GET_LOCAL_PLAYER)
+  if not actor then
+    Log.Debug("SystemSettingModule:GetCustomAnimCfgByActor, actor is nil")
+    return
+  end
+  local curAnimList = actor.serverData and actor.serverData.custom_anims and actor.serverData.custom_anims.custom_anim_list
+  if curAnimList then
+    for _, anim in ipairs(curAnimList) do
+      if anim.custom_anim_type == animType then
+        return self:GetCustomAnimCfgBySelectedIdx(animType, anim.selected_index)
+      end
+    end
+  else
+    Log.Debug("SystemSettingModule:GetCustomAnimCfgByActor, empty custom_anim_list")
+  end
+end
+
+function SystemSettingModule:GetRoleAnimationCfgByType(animType)
+  return self.data:GetRoleAnimationCfgByType(animType)
 end
 
 return SystemSettingModule

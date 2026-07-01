@@ -181,6 +181,7 @@ function AICoachModule:OnOpenRecodeVoice()
     self.isAICoachActive = false
     self:OnUpdateAICoachEmotion(AICoachModuleUtils.EnumAICoachEmotion.Idle)
   end
+  self:OnRecoverGameAudio()
 end
 
 function AICoachModule:OnRequestPlayerInWhiteList()
@@ -285,7 +286,7 @@ function AICoachModule:OnReceiveAICoachAnswer(rsp)
       fullText = fullText .. v.content
     end
     self.data:OnUpdateShowText(fullText)
-    _G.NRCEventCenter:DispatchEvent(AICoachModuleEvent.OnNotifyAICoachTextUpdate, self.data:GetShowText())
+    _G.NRCEventCenter:DispatchEvent(AICoachModuleEvent.OnNotifyAICoachNarrationTextUpdate, self.data:GetShowText())
     beginAnswer = true
   end
   if result.textChunks and #result.textChunks > 0 then
@@ -294,6 +295,9 @@ function AICoachModule:OnReceiveAICoachAnswer(rsp)
       return a.index < b.index
     end)
     for i, v in pairs(result.textChunks) do
+      if 0 == v.index then
+        v.content = "\227\128\130" .. v.content
+      end
       fullText = fullText .. v.content
     end
     self.data:OnUpdateShowText(fullText)

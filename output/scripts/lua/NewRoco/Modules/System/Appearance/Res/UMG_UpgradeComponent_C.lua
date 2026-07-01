@@ -401,11 +401,6 @@ function UMG_UpgradeComponent_C:OnClickDemountBtn(index)
 end
 
 function UMG_UpgradeComponent_C:OnClickUnunlockBtn()
-  if self.bHasSuit then
-    _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, _G.LuaText.tips_notice_suits_escalate)
-  else
-    _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, _G.LuaText.levelup_tips_buy_clothes)
-  end
 end
 
 function UMG_UpgradeComponent_C:OnClickMyMedalBtn()
@@ -1156,7 +1151,7 @@ function UMG_UpgradeComponent_C:PushNewItemToStack(itemId, type)
       element.type = type
       element.mainTitle = suitConf.name
       element.subTitle = self.suitInfo.suitTitle
-      element.bShowDetail = false
+      element.bShowDetail = true
       element.bShowGorgeous = false
       element.gorgeousType = 0
       table.insert(self.titleAndButtonStateStack, element)

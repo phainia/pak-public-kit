@@ -583,11 +583,13 @@ end
 function HandbookModuleData:CheckAwardRedPoint()
   local showRedPoint = false
   local isCollectAll = true
+  local clientRewardCount = 0
   self:GetHandBookRewardStates()
   local curAwardConf = {}
   for i, v in pairs(self.HandbookAwardConf) do
     local awardConf = v
     if awardConf.belong_area_handbook == self.CurHandbookAreaType then
+      clientRewardCount = clientRewardCount + 1
       table.insert(curAwardConf, awardConf)
     end
   end
@@ -603,11 +605,16 @@ function HandbookModuleData:CheckAwardRedPoint()
   end
   local curRewardStates = self.HandBookRewardStates[self.CurHandbookAreaType]
   if curRewardStates then
+    local serverRewardCount = 0
     for i = 1, #curRewardStates do
       if false == curRewardStates[i] then
         isCollectAll = false
         break
       end
+      serverRewardCount = serverRewardCount + 1
+    end
+    if isCollectAll and clientRewardCount > serverRewardCount then
+      isCollectAll = false
     end
   end
   return showRedPoint, isCollectAll

@@ -17,6 +17,7 @@ function BattleEvolutionSelectAction:Ctor(name, properties)
   self.BattlePet = nil
   self.skillObj = nil
   self.IsEvolution = false
+  self.IsPauseEvolution = false
   self:SetActionType(BattleActionBase.ActionType.ClientPlayerSelectAction)
 end
 
@@ -71,7 +72,7 @@ function BattleEvolutionSelectAction:PlayEvoWaitSkill(battlePet)
 end
 
 function BattleEvolutionSelectAction:AddListeners()
-  _G.BattleEventCenter:Bind(self, BattleEvent.EVOLUTION_CONFIRM)
+  _G.BattleEventCenter:Bind(self, BattleEvent.EVOLUTION_CONFIRM, BattleEvent.EVOLUTION_PAUSE)
 end
 
 function BattleEvolutionSelectAction:RemoveListeners()
@@ -88,9 +89,10 @@ function BattleEvolutionSelectAction:CancelEvolutionSkill()
 end
 
 function BattleEvolutionSelectAction:OnFinish()
-  if self.IsEvolution then
+  if self.IsEvolution or self.IsPauseEvolution then
     _G.NRCModuleManager:DoCmd(BattleUIModuleCmd.Close_Battle_Evolution_Select)
     self.IsEvolution = false
+    self.IsPauseEvolution = false
   end
   if self.BattlePet and self.BattlePet.battlePetComponents then
     self.BattlePet.battlePetComponents:IsShowPetEvolutionBubbleUI(false)
@@ -138,7 +140,25 @@ function BattleEvolutionSelectAction:OnBattleEvent(eventName, ...)
     self.IsEvolution = true
     self:SendEvolutionReq()
     return true
+  elseif eventName == BattleEvent.EVOLUTION_PAUSE then
+    self.IsPauseEvolution = true
+    self:SendPauseEvolutionReq()
+    return true
   end
+end
+
+function BattleEvolutionSelectAction:SendPauseEvolutionReq()
+  local req = BattleNetManager:BuildBattleCmdPushbackReq()
+  req.req_type = ProtoEnum.BATTLE_REQ_TYPE.CMD_EVOLUTION
+  local battleRoundFlowReq = {}
+  battleRoundFlowReq.req_type = ProtoEnum.BATTLE_REQ_TYPE.CMD_EVOLUTION
+  battleRoundFlowReq.evolution = {pause_evolute = true}
+  table.insert(req.req, battleRoundFlowReq)
+  _G.BattleNetManager:SendBattleCmdPushbackReq(req, self, self.OnPauseEvolutionSent)
+  self:Finish()
+end
+
+function BattleEvolutionSelectAction:OnPauseEvolutionSent()
 end
 
 return BattleEvolutionSelectAction

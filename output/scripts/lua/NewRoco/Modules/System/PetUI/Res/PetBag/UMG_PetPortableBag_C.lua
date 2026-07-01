@@ -52,6 +52,7 @@ function UMG_PetPortableBag_C:OnAddEventListener()
   self:AddButtonListener(self.SwitchBtn.btnLevelUp, self.ClosePanel)
   self:AddButtonListener(self.EditBoxButton, self.OnClickEditBoxBtn)
   self:AddButtonListener(self.ScreenBtn.btnLevelUp, self.OnClickScreenBtn)
+  self:AddButtonListener(self.Btn_Reset.btnLevelUp, self.OnBtnResetClick)
   self:AddButtonListener(self.ReleaseLifeBtn.btnLevelUp, self.OnSwitchReleaseLifeMode)
   self:AddButtonListener(self.Btn_ReleaseLife.btnLevelUp, self.OnFreeBtnClick)
   self:AddButtonListener(self.LeftArrowBtn.btnLevelUp, self.OnClickLeftArrowBtn)
@@ -93,6 +94,25 @@ function UMG_PetPortableBag_C:OnAddEventListener()
   _G.NRCEventCenter:RegisterEvent("UMG_PetPortableBag_C", self, _G.NRCGlobalEvent.OnRocoTouchStart, self.OnRocoTouchStartHandler)
   _G.NRCEventCenter:RegisterEvent("UMG_PetPortableBag_C", self, _G.NRCGlobalEvent.OnRocoTouchMove, self.OnRocoTouchMoveHandler)
   _G.NRCEventCenter:RegisterEvent("UMG_PetPortableBag_C", self, _G.NRCGlobalEvent.OnRocoTouchEnd, self.OnRocoTouchEndHandler)
+  if self.BagPetList and self.BagPetList.SetItemCanClickChecker then
+    self.BagPetList:SetItemCanClickChecker(self.OnPortableBagItemCanClick, self)
+  end
+end
+
+function UMG_PetPortableBag_C:OnPortableBagItemCanClick(item, index, userClick)
+  if not item or not UE4.UObject.IsValid(item) then
+    return true
+  end
+  if _G.NRCModuleManager:DoCmd(PetUIModuleCmd.GetPetPortableBagReleaseLifeMode) and item.IsRawGrayInFreeMode and item:IsRawGrayInFreeMode(false) then
+    local petGid = item.uiData and item.uiData.gid
+    local PetData = petGid and _G.DataModelMgr.PlayerDataModel:GetPetDataByGid(petGid)
+    local bCanTraceBack = PetData and PetUtils.CheckPetIsCanTraceBack(PetData, true, true, true)
+    if bCanTraceBack and userClick then
+      _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.pet_rollback_free_ban_1)
+    end
+    return false
+  end
+  return true
 end
 
 function UMG_PetPortableBag_C:OnDeactive()
@@ -190,6 +210,41 @@ function UMG_PetPortableBag_C:InitData()
     self.ScreenBtn:SetPath(UEPath.Box_Screen_2, UEPath.Box_Screen_2, UEPath.Box_Screen_2)
   end
   self.bInitBagPet = false
+end
+
+function UMG_PetPortableBag_C:SetResetVisible(bShow)
+  if not self.Reset then
+    return
+  end
+  if bShow then
+    local isFiltering, filterList = self:GetCachePetListInfo()
+    if not isFiltering then
+      bShow = false
+    end
+  end
+  local targetState = bShow and "in" or "out"
+  if self._curResetAnimState == targetState then
+    return
+  end
+  self._curResetAnimState = targetState
+  if bShow then
+    self.Reset:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    if self.Reset_Out then
+      self:StopAnimation(self.Reset_Out)
+    end
+    if self.Reset_In then
+      self:PlayAnimation(self.Reset_In)
+    end
+  else
+    if self.Reset_In then
+      self:StopAnimation(self.Reset_In)
+    end
+    if self.Reset_Out then
+      self:PlayAnimation(self.Reset_Out)
+    else
+      self.Reset:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end
 end
 
 function UMG_PetPortableBag_C:InitOrResetAllQuickSelectPetGidList()
@@ -343,6 +398,7 @@ end
 function UMG_PetPortableBag_C:UpdateBottomPanel()
   local isFiltering, filterList = self:GetCachePetListInfo()
   self.NRCSwitcher_0:SetActiveWidgetIndex(isFiltering and 1 or 0)
+  self:SetResetVisible(self.isShowFilterPanel == false and isFiltering)
   if not self.isShowFilterPanel then
     if isFiltering and 0 == #filterList then
       self.LeftArrowBtn.btnLevelUp:SetIsEnabled(false)
@@ -391,6 +447,7 @@ function UMG_PetPortableBag_C:OnSwitchBagItemDisableState(isDisable)
     self.Left:SetVisibility(UE4.ESlateVisibility.Visible)
     self:OnSwitchDefaultMode()
   end
+  self:SetResetVisible(not isDisable)
 end
 
 function UMG_PetPortableBag_C:OnSwitchReleaseLifeMode()
@@ -488,6 +545,9 @@ function UMG_PetPortableBag_C:CheckIsCanBeQuickSelect(petData)
   end
   if IsCanBeFree and not IsInBigWorldTeam and not IsInFreeList and not IsGrown then
     IsCanBeQuickSelect = true
+  end
+  if PetUtils.CheckPetIsCanTraceBack(petData, true, false, true) then
+    IsCanBeQuickSelect = false
   end
   return IsCanBeQuickSelect
 end
@@ -1033,7 +1093,10 @@ end
 function UMG_PetPortableBag_C:OnUpdateBoxInfo(boxData, index)
   self:SetIsCanHandleFreeListInReleaseLifeMode(false)
   if boxData then
-    self:SetCurBoxInfo(boxData.id)
+    local isFiltering, _ = self:GetCachePetListInfo()
+    if not isFiltering then
+      self:SetCurBoxInfo(boxData.id)
+    end
     self.module:SetLastOpenBoxId(boxData.id)
     self.LastOpenBoxId = boxData.id
   end
@@ -1065,6 +1128,7 @@ function UMG_PetPortableBag_C:OnRefreshNewPetBagFilter()
   self:SetIsCanHandleFreeListInReleaseLifeMode(false)
   self.LastOpenBoxId = self.module:GetLastOpenBoxId()
   self:SetCurBoxInfo(self.LastOpenBoxId)
+  self:DispatchEvent(PetUIModuleEvent.OnChageSelectPetBagBoxItem, self.LastOpenBoxId - 1)
   self:SetIsCanHandleFreeListInReleaseLifeMode(true)
 end
 
@@ -1319,6 +1383,7 @@ end
 
 function UMG_PetPortableBag_C:OnShowPetEvo(bShow, bAnim)
   self:PlayAnimation(bShow and self.Evo_Out or self.Evo_In)
+  self:SetResetVisible(bShow)
   _G.NRCModuleManager:DoCmd(PetUIModuleCmd.SetIsPlayPetSkill, false)
   self:DispatchEvent(PetUIModuleEvent.OpenDetailCameraLocation, bShow and 2 or 3)
 end
@@ -1391,6 +1456,7 @@ end
 
 function UMG_PetPortableBag_C:OnOpenDetailPanel(isOpenDetailedInfoPanel)
   self:PlayAnimation(isOpenDetailedInfoPanel and self.Evo_In or self.Evo_Out)
+  self:SetResetVisible(not isOpenDetailedInfoPanel)
 end
 
 function UMG_PetPortableBag_C:CheckIsSelectBtn()
@@ -1655,12 +1721,15 @@ function UMG_PetPortableBag_C:OnAnimationFinished(Anim)
     self:PlayAnimation(self.put_Out)
     if self.CanScroll then
       self.DragArea:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self:SetResetVisible(true)
     end
   elseif Anim == self.switch_1 then
     self:SetFreeAreaPos()
   elseif Anim == self.In then
     local touchReasonType = _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.GetPanelSelectBtnReason, "PetBox").OPEN
     _G.NRCModuleManager:DoCmd(MultiTouchModuleCmd.UnlockIsSelectBtn, "PetUIModule", "PetBox", touchReasonType)
+  elseif Anim == self.Reset_Out and self._curResetAnimState == "out" and self.Reset then
+    self.Reset:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -1737,6 +1806,7 @@ function UMG_PetPortableBag_C:OnDragStart(ItemUiData, ItemIndex)
   self.BagPetList:EndInertialScrolling()
   self.BagPetList:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self.BagPetList:ForceLayoutPrepass()
+  self:SetResetVisible(false)
   self:ShowExchangeIcon(true)
   self:OnInitDragItem()
   self:CheckBoxPanel(true)
@@ -2022,6 +2092,9 @@ function UMG_PetPortableBag_C:DragPetToBox(box_id, pos)
       if dragPetIndex ~= box_id or dragPetIsInTeam then
         if dragPetIsInTeam then
           self.dragPetPos = self.dragPetPos - (self.curTeamIndex - 1) * MAX_TEAM_PET_NUM
+        else
+          local _, petPos = self:GetBoxPetIndex(dragPetGid)
+          self.dragPetPos = petPos + 1
         end
         local ori_info = {
           pet_gid = dragPetGid,
@@ -2389,10 +2462,6 @@ function UMG_PetPortableBag_C:CheckBoxPanel(bDragStart)
   if self.readyToClose then
     return
   end
-  local isFiltering, _ = self:GetCachePetListInfo()
-  if isFiltering then
-    return
-  end
   if not bDragStart then
     if self.module:HasPanel("NewPetBagBox") and self.module:GetNewPetBagBoxPanelOpenState() then
       if not self.bOpenBoxPanel then
@@ -2401,13 +2470,28 @@ function UMG_PetPortableBag_C:CheckBoxPanel(bDragStart)
       end
       self.bOpenBoxPanel = nil
     end
-  elseif self.module:HasPanel("NewPetBagBox") and self.module:GetNewPetBagBoxPanelOpenState() then
-    self.bOpenBoxPanel = true
   else
-    self.bOpenBoxPanel = nil
-    self:SetIsCanHandleFreeListInReleaseLifeMode(false)
-    _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.OpenNewPetBagBoxPanel)
-    self:SetIsCanHandleFreeListInReleaseLifeMode(true)
+    local cacheFilterData = self.module:GetCachePetBoxFilterData()
+    local bFiltering = self.module:IsFilteringCondition(cacheFilterData.Condition)
+    if bFiltering and self.dragPetInfo and self.dragPetInfo.petInfo then
+      local dragPetGid = self.dragPetInfo.petInfo.gid
+      if dragPetGid then
+        local dragPetIndex, dragPetIsInTeam = self:GetPetTeamIndexOrBoxID(dragPetGid)
+        if not dragPetIsInTeam then
+          self:DispatchEvent(PetUIModuleEvent.OnChageSelectPetBagBoxItem, dragPetIndex - 1)
+        else
+          self:DispatchEvent(PetUIModuleEvent.OnChageSelectPetBagBoxItem, nil)
+        end
+      end
+    end
+    if self.module:HasPanel("NewPetBagBox") and self.module:GetNewPetBagBoxPanelOpenState() then
+      self.bOpenBoxPanel = true
+    else
+      self.bOpenBoxPanel = nil
+      self:SetIsCanHandleFreeListInReleaseLifeMode(false)
+      _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.OpenNewPetBagBoxPanel)
+      self:SetIsCanHandleFreeListInReleaseLifeMode(true)
+    end
   end
 end
 
@@ -2527,6 +2611,29 @@ function UMG_PetPortableBag_C:OnNewPetBagExitScreen()
   self.module:InitCachePetBoxFilterData()
   self.module:OnCmdFilterPetBoxData({}, filterCondition, true)
   self:OnLeavePetBoxFilter()
+end
+
+function UMG_PetPortableBag_C:OnBtnResetClick()
+  local filterCondition = {
+    FilterPetIdCondition = {},
+    FilterTalentCondition = {},
+    FilterDepartCondition = {},
+    FilterNatureCondition = {},
+    FilterAttributeCondition = {},
+    FilterPetMarkCondition = {},
+    FilterStrongCondition = {},
+    FilterTimeCondition = {},
+    FilterTraceBackCondition = {},
+    FilterBloodCondition = {}
+  }
+  local cacheFilterData = self.module:GetCachePetBoxFilterData()
+  if cacheFilterData then
+    cacheFilterData.Condition = filterCondition
+    self.module:SetCachePetBoxFilterData(cacheFilterData)
+  end
+  self.module:InitCachePetBoxFilterData()
+  self.module:OnCmdFilterPetBoxData({}, filterCondition, true)
+  self:UpdateBottomPanel()
 end
 
 return UMG_PetPortableBag_C

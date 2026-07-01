@@ -100,8 +100,45 @@ function BattleObject:Log(...)
   end
 end
 
-function BattleObject:PrepareForG6()
+function BattleObject:SetIKEnable(bEnable)
   if self.model and UE4.UObject.IsValid(self.model) then
+    self.model:SetIKEnable(bEnable)
+  end
+end
+
+function BattleObject:GetIKEnable(bEnable)
+  if self.model and UE4.UObject.IsValid(self.model) then
+    return self.model:GetIKEnable()
+  end
+  return false
+end
+
+local Feature_DisableIKNames = {
+  "G6_Suits66_KuKuGu1_1_N_ZhaoHuan",
+  "G6_Suits66_KuKuGu2_1_N_ZhaoHuan",
+  "G6_Suits66_KuKuGu3_1_N_ZhaoHuan"
+}
+
+local function IsAllowSetIK_V101_V110(skillObject)
+  if skillObject and UE4.UObject.IsValid(skillObject) then
+    local name = skillObject:GetName()
+    for i = 1, #Feature_DisableIKNames do
+      local keywords = Feature_DisableIKNames[i]
+      local bContains = string.find(name, keywords, 1, true)
+      if bContains then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+function BattleObject:PrepareForG6(skillObject)
+  if self.model and UE4.UObject.IsValid(self.model) then
+    if IsAllowSetIK_V101_V110(skillObject) then
+      self.modelIKEnable = self:GetIKEnable()
+      self:SetIKEnable(false)
+    end
     local meshComp = self.model:GetComponentByClass(UE4.USkeletalMeshComponent)
     if meshComp and UE4.UObject.IsValid(meshComp) then
       self.modelBoundsScale = meshComp.BoundsScale
@@ -114,6 +151,10 @@ end
 
 function BattleObject:RecoverFromG6()
   if self.model and UE4.UObject.IsValid(self.model) then
+    if self.modelIKEnable then
+      self:SetIKEnable(self.modelIKEnable)
+      self.modelIKEnable = nil
+    end
     local meshComp = self.model:GetComponentByClass(UE4.USkeletalMeshComponent)
     if meshComp and UE4.UObject.IsValid(meshComp) then
       if self.modelBoundsScale then

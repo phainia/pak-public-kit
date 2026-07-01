@@ -1932,7 +1932,8 @@ function SceneNpc:OnLoadResource()
       mutation_type = self.serverData.npc_base.mutation_type,
       nature = self.serverData.npc_base.nature,
       glass_info = self.serverData.npc_base.glass_info,
-      base_conf_id = self:GetPetbaseId()
+      base_conf_id = self:GetPetbaseId(),
+      precious_egg_type = self.serverData.npc_base.precious_egg_type
     }
     if self:IsPetEgg() then
       PetMutationUtils.SetPetDataGlassActorType(petData, PetMutationUtils.GlassActorType.NormalEgg)

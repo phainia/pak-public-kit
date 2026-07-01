@@ -1183,8 +1183,10 @@ function BigMapModule:OnWorldMapTeleportToPlayerRsp(_rsp)
     Log.DebugFormat("BigMapModule:OnWorldMapTeleportToPlayerRsp success, uin = %s, posX = %s, posY = %s, posZ = %s", tostring(_rsp.uin), tostring(_rsp.target_pt.pos.x), tostring(_rsp.target_pt.pos.y), tostring(_rsp.target_pt.pos.z))
     self:OnCmdCloseWorldMap()
     self:ClosePanel("MapRightPanel")
+    _G.NRCEventCenter:DispatchEvent(BigMapModuleEvent.OnTeleportToPlayerResult, true, 0)
   else
     Log.ErrorFormat("BigMapModule:OnWorldMapTeleportToPlayerRsp failed, ret_code = %s", tostring(_rsp.ret_info.ret_code))
+    _G.NRCEventCenter:DispatchEvent(BigMapModuleEvent.OnTeleportToPlayerResult, false, _rsp.ret_info.ret_code)
   end
 end
 
@@ -1199,8 +1201,10 @@ end
 function BigMapModule:OnWorldMapTeleportToPlayerRsp(_rsp)
   if 0 == _rsp.ret_info.ret_code then
     Log.Debug("BigMapModule:OnWorldMapTeleportToPlayerRsp success!!")
+    _G.NRCEventCenter:DispatchEvent(BigMapModuleEvent.OnTeleportToPlayerResult, true, 0)
   else
     Log.ErrorFormat("BigMapModule:OnWorldMapTeleportToPlayerRsp failed, ret_code = %s", tostring(_rsp.ret_info.ret_code))
+    _G.NRCEventCenter:DispatchEvent(BigMapModuleEvent.OnTeleportToPlayerResult, false, _rsp.ret_info.ret_code)
   end
 end
 
@@ -1208,17 +1212,17 @@ function BigMapModule:OnCmdTeleportToPlayerReq(Uin)
   local isUIFunctionBan = _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, Enum.FunctionEntrance.FE_TELEPORT_ROLE, true)
   if isUIFunctionBan then
     Log.Warning("BigMapModule:OnCmdTeleportToPlayerReq function baned FE_TELEPORT_ROLE")
-    return
+    return false
   end
   if _G.NRCModeManager:DoCmd(_G.BattleUIModuleCmd.CheckInFightingOrObserver) then
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.battle_chat_not_teleport)
-    return
+    return false
   end
   local bBan = _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.GetFunctionState, _G.Enum.PlayerFunctionBanType.PFBT_TELEPORT_FEIEND)
   if bBan then
     Log.Warning("BigMapModule:OnCmdTeleportToPlayerReq function baned PFBT_TELEPORT_FEIEND")
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.visible_circle_list_btn_func_ban_tips)
-    return
+    return false
   end
   local curSecTime = os.msTime() / 1000
   local teleportLastTimeSec = self.data:GetTeleportLastTimeStampSec()
@@ -1226,7 +1230,7 @@ function BigMapModule:OnCmdTeleportToPlayerReq(Uin)
   if CDTime > curSecTime - teleportLastTimeSec then
     Log.WarningFormat("BigMapModule:OnCmdTeleportToPlayerReq in CD time, curSecTime=%s, teleportLastTimeSec=%s, CDTime=%s", tostring(curSecTime), tostring(teleportLastTimeSec), tostring(CDTime))
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.visible_circle_list_btn_CD_tips)
-    return
+    return false
   end
   self.data:SetTeleportLastTimeStampSec(curSecTime)
   local isVisitor = false
@@ -1248,6 +1252,7 @@ function BigMapModule:OnCmdTeleportToPlayerReq(Uin)
   else
     self:OnCmdZoneSceneTeleportToPlayerReq(Uin)
   end
+  return true
 end
 
 function BigMapModule:OnCmdSendZoneDungeonInfoQueryReq(dungeonNpcInfo, dungeonId)

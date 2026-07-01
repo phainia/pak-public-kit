@@ -58,7 +58,13 @@ function UMG_Activity_TakePhotoCompetition_C:OnEnable(firstLoad)
     Log.Error("UMG_Activity_TakePhotoCompetition_C:OnEnable activityInst not found")
     return
   end
-  activityInst:ReqGetHotPhoto()
+  self.refreshInterval = _G.DataConfigManager:GetActivityGlobalConfig("takephoto_competition_auto_refresh").num
+  local currentTime = ActivityUtils.GetSvrTimestamp()
+  local hotPhotoTimeStamp = activityInst:GetHotPhotoTimeStamp()
+  if nil ~= hotPhotoTimeStamp and currentTime - hotPhotoTimeStamp < self.refreshInterval then
+    Log.Info("[HotPhoto]UMG_Activity_TakePhotoCompetition_C:OnEnable SetHotPhoto")
+    self:SetHotPhoto()
+  end
   self.bPlayingAnim = false
   if firstLoad then
     self:RefreshPanel()
@@ -67,9 +73,9 @@ end
 
 function UMG_Activity_TakePhotoCompetition_C:OnDisable()
   Base.OnDisable(self)
-  if self.photoCheckTimer then
-    _G.TimerManager:RemoveTimer(self.photoCheckTimer)
-    self.photoCheckTimer = nil
+  if self.checkCountDown then
+    _G.TimerManager:RemoveTimer(self.checkCountDown)
+    self.checkCountDown = nil
   end
 end
 
@@ -77,6 +83,20 @@ function UMG_Activity_TakePhotoCompetition_C:OnRefreshActivityData()
   Log.Info("UMG_Activity_TakePhotoCompetition_C:OnRefreshActivityData")
   self.activityInst:CheckSubmissionReward()
   self:RefreshPanel()
+end
+
+function UMG_Activity_TakePhotoCompetition_C:OnTick(deltaTime)
+  local activityInst = self.activityInst
+  if not activityInst or activityInst:IsActivityInactive() then
+    return
+  end
+  local currentTime = ActivityUtils.GetSvrTimestamp()
+  local hotPhotoTimeStamp = self.activityInst:GetHotPhotoTimeStamp()
+  if nil == hotPhotoTimeStamp or currentTime - hotPhotoTimeStamp >= self.refreshInterval then
+    self:PlayAnimation(self.Popular_Refresh)
+    Log.Info("[HotPhoto]UMG_Activity_TakePhotoCompetition_C:OnTick ReqGetHotPhoto")
+    self.activityInst:ReqGetHotPhoto()
+  end
 end
 
 function UMG_Activity_TakePhotoCompetition_C:RefreshPanel()
@@ -172,8 +192,8 @@ function UMG_Activity_TakePhotoCompetition_C:RefreshPanel()
       end
       local currentSec = ActivityUtils.GetSvrTimestamp()
       local leftSec = self.endTimeStamp - currentSec
-      if not self.photoCheckTimer then
-        self.photoCheckTimer = _G.TimerManager:CreateTimer(self, "UMG_Activity_TakePhotoCompetition_C:RefreshPanel", leftSec, self.OnTimerUpdate, self.OnTimerEnd, 0.5)
+      if not self.checkCountDown then
+        self.checkCountDown = _G.TimerManager:CreateTimer(self, "UMG_Activity_TakePhotoCompetition_C:RefreshPanel", leftSec, self.OnTimerUpdate, self.OnTimerEnd, 0.5)
         self:OnTimerUpdate()
       end
     elseif curStage == ActivityEnum.TakePhotoCompetitionStage.Competition then
@@ -248,9 +268,9 @@ function UMG_Activity_TakePhotoCompetition_C:OnTimerUpdate()
 end
 
 function UMG_Activity_TakePhotoCompetition_C:OnTimerEnd()
-  if self.photoCheckTimer then
-    _G.TimerManager:RemoveTimer(self.photoCheckTimer)
-    self.photoCheckTimer = nil
+  if self.checkCountDown then
+    _G.TimerManager:RemoveTimer(self.checkCountDown)
+    self.checkCountDown = nil
   end
   if self.activityInst then
     self.activityInst:SyncActivityDataOnAvailable()
@@ -525,21 +545,24 @@ function UMG_Activity_TakePhotoCompetition_C:SetIconAndName(uin)
       local playerName = friendData.name
       self.Text_PlayerName:SetText(playerName)
     else
-      self:Log("SetIconAndName ZONE_FRIEND_SEARCH_PLAYER_REQ", uin)
-      local req = _G.ProtoMessage:newZoneFriendSearchPlayerReq()
-      req.uin = uin
-      _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_FRIEND_SEARCH_PLAYER_REQ, req, self, self.OnSearchPlayerRsp, false, true)
+      self:Log("SetIconAndName ZONE_BATCH_GET_OTHERS_SOCIAL_EXT_DATA_REQ", uin)
+      local req = _G.ProtoMessage:newZoneBatchGetOthersSocialExtDataReq()
+      table.insert(req.uin_list, uin)
+      req.ext_data_types = {
+        Enum.SocialExtDataType.SEDT_PROFILE
+      }
+      _G.ZoneServer:SendWithHandler(_G.ProtoCMD.ZoneSvrCmd.ZONE_BATCH_GET_OTHERS_SOCIAL_EXT_DATA_REQ, req, self, self.OnSearchPlayerRsp, false, true)
     end
   end
 end
 
 function UMG_Activity_TakePhotoCompetition_C:OnSearchPlayerRsp(rsp)
-  self:Log("SetIconAndName ZoneFriendSearchPlayerRsp", rsp.ret_info.ret_code, rsp.player_info and rsp.player_info.name)
-  if 0 == rsp.ret_info.ret_code and rsp.player_info then
+  self:Log("SetIconAndName ZoneFriendSearchPlayerRsp", rsp.ret_info.ret_code)
+  if 0 == rsp.ret_info.ret_code and rsp.ext_datas and rsp.ext_datas[1] and rsp.ext_datas[1].profile then
     self.CanvasProfilePicture:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    local card_icon_selected = rsp.player_info.card_icon_selected
+    local card_icon_selected = rsp.ext_datas[1].profile.card_icon_selected
     self:SetHeadIcon(card_icon_selected)
-    local playerName = rsp.player_info.name
+    local playerName = rsp.ext_datas[1].profile.name
     self.Text_PlayerName:SetText(playerName)
   else
     self.CanvasProfilePicture:SetVisibility(UE4.ESlateVisibility.Collapsed)

@@ -463,14 +463,17 @@ function TakePhotosUtils.ResetPostProgressFocalRegion()
   end
 end
 
-function TakePhotosUtils.ReportPhoto(uin, mini_photo_url, photo_url, activity_id)
-  Log.Debug("ReportPhoto", uin, mini_photo_url, photo_url, activity_id)
+function TakePhotosUtils.ReportPhoto(uin, mini_photo_url, photo_url, activity_sub_id)
+  Log.Debug("ReportPhoto", uin, mini_photo_url, photo_url, activity_sub_id)
   if not uin or string.IsNilOrEmpty(mini_photo_url) or string.IsNilOrEmpty(photo_url) then
     return
   end
-  activity_id = activity_id or 0
-  local seasonInfo = _G.NRCModuleManager:DoCmd(_G.SeasonIntegrationModuleCmd.GetSeasonInfo)
-  local season_id = seasonInfo and seasonInfo.season_id or 0
+  activity_sub_id = activity_sub_id or 0
+  local activity_id = 0
+  local takePhotoActivityInst = _G.NRCModuleManager:DoCmd(_G.ActivityModuleCmd.GetActivityInstByType, Enum.ActivityType.ATP_TAKEPHOTO_COMPETITION)
+  if takePhotoActivityInst and #takePhotoActivityInst > 0 then
+    activity_id = takePhotoActivityInst[1]:GetActivityId()
+  end
   local PhotoDisplayUtils = require("NewRoco.Modules.System.TakePhotos.Common.PhotoDisplayUtils")
   local miniPicName = PhotoDisplayUtils.ParseActivityPhotoParams(mini_photo_url)
   local picName = PhotoDisplayUtils.ParseActivityPhotoParams(photo_url)
@@ -480,7 +483,7 @@ function TakePhotosUtils.ReportPhoto(uin, mini_photo_url, photo_url, activity_id
   reportData.business_data.report_scene = ProtoEnum.SafetyBusinessInfo.ReportScense.RPTSS_ORGANIZATION_INFORMATION_SCENE
   reportData.business_data.report_entrance = 2
   reportData.business_data.pic_url_array = {mini_photo_url, photo_url}
-  reportData.business_data.callback = "{\"image_thumbnail\":\"" .. miniPicName .. "\",\"image_FS\":\"" .. picName .. "\",\"event_id\":" .. activity_id .. ",\"season_id\":" .. season_id .. "}"
+  reportData.business_data.callback = "{\"image_thumbnail\":\"" .. miniPicName .. "\",\"image_FS\":\"" .. picName .. "\",\"event_id\":" .. activity_id .. ",\"season_id\":" .. activity_sub_id .. "}"
   _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.OpenFriendReport, reportData)
 end
 

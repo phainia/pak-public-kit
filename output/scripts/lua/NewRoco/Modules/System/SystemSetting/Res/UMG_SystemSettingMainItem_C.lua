@@ -62,7 +62,7 @@ function UMG_SystemSettingMainItem_C:InitInfo()
   end
   if self.uiData.bNeedDescribe then
     self.BtnDetails:SetVisibility(UE4.ESlateVisibility.Visible)
-    self.DetailTips.Title:SetText(self.uiData.describeText)
+    self.DetailTips.Title:SetText(self.uiData.describeText or "")
   else
     self.BtnDetails:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.DetailTips:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -203,6 +203,11 @@ end
 
 function UMG_SystemSettingMainItem_C:ShowDetailsText()
   _G.NRCAudioManager:PlaySound2DAuto(41401011, "UMG_SystemSettingMain_Item_C:ShowDetailsText")
+  local handler = self.uiData and self.uiData.describeBtnHandler
+  if handler then
+    handler()
+    return
+  end
   self.CloseAnnotationBtn:SetVisibility(UE4.ESlateVisibility.Visible)
   self.DetailTips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.bShowDetails = true

@@ -29,6 +29,7 @@ function UMG_Activity_Tab_C:OnItemUpdate(_data, datalist, index)
       if 3 == mainTabId then
         self.RedDot:ClearIgnoreRedPointDataList()
         self.RedDot:SetIgnoreRedPointDataList(Enum.RedPointReason.RPR_ACTIVITY_TAB_NOTIFY, {300006})
+        self.RedDot:SetIgnoreRedPointDataList(Enum.RedPointReason.RPR_ACTIVITY_TAB_REWARD, {300006})
       end
       self.RedDot:SetupKey(redPointIds[mainTabId], nil, _data.extraKeyList)
     else

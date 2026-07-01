@@ -1087,6 +1087,22 @@ function BattleManager:OnEnterBattleNotify(notify)
   NRCModeManager:GetCurMode():DisablePanelByLayer(_G.Enum.UILayerType.UI_LAYER_DIALOGUE)
   NRCModeManager:GetCurMode():DisablePanelByLayer(_G.Enum.UILayerType.UI_LAYER_FULLSCREEN)
   NRCModeManager:GetCurMode():ClosePanelByLayer(_G.Enum.UILayerType.UI_LAYER_POPUP)
+  if BattleUtils.IsWatchingBattle() then
+    Log.Debug("BattleManager:OnBattleEnterNotify IsWatchingBattle()")
+    local mainUIModule = _G.NRCModuleManager:GetModule("MainUIModule")
+    if mainUIModule then
+      local npcInteractMainPanel = mainUIModule:GetPanel("NPCInteractMain")
+      if npcInteractMainPanel then
+        if npcInteractMainPanel:GetVisibility() == UE4.ESlateVisibility.Visible or npcInteractMainPanel:GetVisibility() == UE4.ESlateVisibility.SelfHitTestInvisible then
+          mainUIModule:DisablePanel("NPCInteractMain")
+          Log.Debug("BattleManager:OnBattleEnterNotify manual disable panel NPCInteractMain")
+        elseif not npcInteractMainPanel.ShouldCollapse then
+          npcInteractMainPanel.ShouldCollapse = true
+          Log.Debug("BattleManager:OnBattleEnterNotify ShouldCollapse is false, need to change to true")
+        end
+      end
+    end
+  end
   _G.NRCSDKManager:SetEnterBattle()
 end
 

@@ -222,6 +222,7 @@ function UMG_NPCListItem_C:SetData(npcData)
     end
     self.ItemDesc:SetText(showTitle)
   end
+  self:SetPetOwnerVisible()
 end
 
 function UMG_NPCListItem_C:GetIconPath(icon, switcherIndex)
@@ -351,6 +352,25 @@ function UMG_NPCListItem_C:GetHiddenGlassIcon()
     end
   end
   return ""
+end
+
+function UMG_NPCListItem_C:SetPetOwnerVisible()
+  if not self.MutualVisits then
+    return
+  end
+  self.MutualVisits:SetPath(UEPath.PetOwnerIcon)
+  local localPlayer = NRCModuleManager:DoCmd(PlayerModuleCmd.GET_LOCAL_PLAYER)
+  if localPlayer then
+    local playerId = localPlayer:GetServerId()
+    if self.uiData.ownerId and self.uiData.ownerId ~= playerId then
+      self.MutualVisits:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      if self.EntranceCave then
+        self.EntranceCave:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
+    else
+      self.MutualVisits:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end
 end
 
 return UMG_NPCListItem_C

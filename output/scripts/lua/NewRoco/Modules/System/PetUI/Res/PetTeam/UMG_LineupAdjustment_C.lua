@@ -6,6 +6,7 @@ local PetUtils = require("NewRoco.Utils.PetUtils")
 local PetUIModuleEnum = require("NewRoco.Modules.System.PetUI.PetUIModuleEnum")
 local PetUIModuleEvent = require("NewRoco.Modules.System.PetUI.PetUIModuleEvent")
 local PVPRankedMatchModuleUtils = require("NewRoco.Modules.System.PVPQualifier.PVPRankedMatchModuleUtils")
+local FriendModuleEvent = require("NewRoco.Modules.System.Friend.FriendModuleEvent")
 local UMG_LineupAdjustment_C = _G.NRCPanelBase:Extend("UMG_LineupAdjustment_C")
 local LostType = {
   Magic = 1,
@@ -29,20 +30,17 @@ function UMG_LineupAdjustment_C:OnInitAICoachShowUI()
   local isSystemOpen = _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.GetSysAICoachSceneIsOpen, Enum.FunctionEntrance.FE_AI_COACH_TEAM)
   local isAllOpen = isAICoachOpen and isAIInWhiteList and isSystemOpen
   self.isOpenFromAICoach = false
-  self.isNeedEnterAnim = false
-  self.AIEmotionType = nil
-  self.NRCText_166:SetText(LuaText.ai_coach_18)
   if isAllOpen and AICoachTeamData and AICoachTeamData.teamData and AICoachTeamData.activityID then
     _G.NRCModeManager:DoCmd(AICoachModuleCmd.OnOpenAICoachBySceneTypeWithoutSession, Enum.AIcoachSceneType.AST_Group_Detail)
     self.isOpenFromAICoach = true
     _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.OnReportEvent, "team_recomm_detail_expo")
-    self.AICoachGvoice:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.TextPanel:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Progress:SetPercent(0)
-    self.isNeedEnterAnim = true
+    self.AICoachGvoice1:OnActive()
+    self.AICoachGvoice1:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.AICoachGvoice1:OnOpenAICoach(Enum.AIcoachSceneType.AST_Group_Detail, false)
+    self.AICoachGvoice1:SetAICoachClickCallback(self, self.OnOpenAIRequestText)
     _G.NRCEventCenter:DispatchEvent(AICoachModuleEvent.OnRecoverSceneAICoachState, Enum.AIcoachSceneType.AST_Group_Recommend)
   else
-    self.AICoachGvoice:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.AICoachGvoice1:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -128,6 +126,8 @@ end
 
 function UMG_LineupAdjustment_C:OnDeactive()
   _G.NRCEventCenter:UnRegisterEvent(self, _G.NRCGlobalEvent.ON_RECONNECT_FINISH, self._OnReconnect)
+  _G.NRCEventCenter:UnRegisterEvent(self, FriendModuleEvent.OpenChatGvoicePanel, self.OnOpenAICoachRequest)
+  _G.NRCEventCenter:UnRegisterEvent(self, FriendModuleEvent.OpenAIChatGvoicePanel, self.OnOpenAIRequestText)
   NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.ChangeTeamMagic, self.ChangeTeamMagic)
   NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.ChangePetSkill, self.ChangePetSkill)
   NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.RefreshAdjustPetPanel, self.RefreshAdjustPetPanel)
@@ -135,10 +135,6 @@ function UMG_LineupAdjustment_C:OnDeactive()
     _G.NRCModeManager:DoCmd(AICoachModuleCmd.OnCloseAICoachByScene, Enum.AIcoachSceneType.AST_Group_Detail)
   end
   self.module:GetData():SetAICoachRecommendTeamUIData({})
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachNarrationTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachEmotionChange, self.OnNotifyAICoachEmotionChange)
-  _G.NRCEventCenter:UnRegisterEvent(self, AICoachModuleEvent.OnNotifyAICoachRequestFinish, self.OnNotifyAICoachRequestFinish)
 end
 
 function UMG_LineupAdjustment_C:SolveDeficiencyBtnClick()
@@ -175,10 +171,8 @@ function UMG_LineupAdjustment_C:OnAddEventListener()
   NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, PetUIModuleEvent.ChangeTeamMagic, self.ChangeTeamMagic)
   NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, PetUIModuleEvent.ChangePetSkill, self.ChangePetSkill)
   _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, _G.NRCGlobalEvent.ON_RECONNECT_FINISH, self._OnReconnect)
-  _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, AICoachModuleEvent.OnNotifyAICoachNarrationTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, AICoachModuleEvent.OnNotifyAICoachTextUpdate, self.OnNotifyAICoachTextUpdate)
-  _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, AICoachModuleEvent.OnNotifyAICoachEmotionChange, self.OnNotifyAICoachEmotionChange)
-  _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, AICoachModuleEvent.OnNotifyAICoachRequestFinish, self.OnNotifyAICoachRequestFinish)
+  _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, FriendModuleEvent.OpenChatGvoicePanel, self.OnOpenAICoachRequest)
+  _G.NRCEventCenter:RegisterEvent("UMG_LineupAdjustment_C", self, FriendModuleEvent.OpenAIChatGvoicePanel, self.OnOpenAIRequestText)
 end
 
 function UMG_LineupAdjustment_C:_OnReconnect()
@@ -792,67 +786,19 @@ function UMG_LineupAdjustment_C:OnSaveBtnClick()
   end
 end
 
-function UMG_LineupAdjustment_C:IsCurrAICoachSceneTypeMatch()
-  local sceneType = _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.GetCurrAICoachScene)
-  return sceneType == Enum.AIcoachSceneType.AST_Group_Detail
-end
-
-function UMG_LineupAdjustment_C:OnNotifyAICoachTextUpdate(text)
-  if not self:IsCurrAICoachSceneTypeMatch() then
-    return
-  end
-  if self.isNeedEnterAnim then
-    self:PlayAnimation(self.AICoach_Open)
-    self.TextPanel:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.isNeedEnterAnim = false
-  end
-  self.ChatContent:SetText(text)
-end
-
 function UMG_LineupAdjustment_C:OnAnimFinished(Animation)
   if Animation == self.In and self.isOpenFromAICoach then
     local text = _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.GetAICoachReplyText)
     if text and "" ~= text then
-      self.isNeedEnterAnim = true
-      self:OnNotifyAICoachTextUpdate(text)
+      self.AICoachGvoice1:SetAICoachText(text)
     end
   end
 end
 
-function UMG_LineupAdjustment_C:OnNotifyAICoachEmotionChange(emotionType)
-  if not self:IsCurrAICoachSceneTypeMatch() then
-    return
-  end
-  if self.AIEmotionType and self.AIEmotionType == emotionType then
-    return
-  end
-  self.AIEmotionType = emotionType
-  if emotionType == AICoachModuleUtils.EnumAICoachEmotion.Idle then
-    self.AICoach:SetPath(UEPath.AICoachEmotionPath.Idle)
-  elseif emotionType == AICoachModuleUtils.EnumAICoachEmotion.Think then
-    self.AICoach:SetPath(UEPath.AICoachEmotionPath.Think)
-  elseif emotionType == AICoachModuleUtils.EnumAICoachEmotion.Answer then
-    self.AICoach:SetPath(UEPath.AICoachEmotionPath.Answer)
-  end
-end
-
-function UMG_LineupAdjustment_C:OnNotifyAICoachRequestFinish()
-  if not self:IsCurrAICoachSceneTypeMatch() then
-    return
-  end
-  if self.timerID then
-    _G.DelayManager:CancelDelayById(self.timerID)
-    self.timerID = nil
-  end
-  self.timerID = _G.DelayManager:DelaySeconds(5, function()
-    if self and self:IsValid() then
-      self.isNeedEnterAnim = true
-      self.timerID = nil
-      self:PlayAnimation(self.AICoach_Close)
-    else
-      Log.Warning("UMG_FriendTeamPanel_C:OnNotifyAICoachRequestFinish - Panel is no longer valid")
-    end
-  end)
+function UMG_LineupAdjustment_C:OnOpenAIRequestText()
+  _G.NRCAudioManager:PlaySound2DAuto(40002013, "UMG_LineupAdjustment_C:OnOpenAIRequestText")
+  self.AIChatGvoice:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.AIChatGvoice:OnInitialize()
 end
 
 function UMG_LineupAdjustment_C:OnOpenAICoachRequest()
@@ -882,16 +828,6 @@ function UMG_LineupAdjustment_C:OnOpenAICoachRequest()
       })
     else
       _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.chat_gvoice_microphone_premission_not_open)
-    end
-  end
-end
-
-function UMG_LineupAdjustment_C:OnTick()
-  if self.isOpenFromAICoach then
-    local isVoicePlaying = _G.NRCModuleManager:DoCmd(_G.AICoachModuleCmd.GetIsVoicePlaying)
-    if isVoicePlaying then
-      local voiceLevel = _G.GVoiceManager:GetSpeakerLevel()
-      self.Progress:SetPercent(voiceLevel * 2)
     end
   end
 end
@@ -1346,7 +1282,9 @@ function UMG_LineupAdjustment_C:SolveAllLostType()
           end
           local UseItemInfo = {}
           UseItemInfo.gid = 0
-          UseItemInfo.item_conf_id = item.BloodItemID
+          local exchangeConf = DataConfigManager:GetExchangeConf(item.exchangeID)
+          local getItemId = exchangeConf and exchangeConf.get_item and exchangeConf.get_item[1] and exchangeConf.get_item[1].get_goods_id
+          UseItemInfo.item_conf_id = item.BloodItemID or getItemId
           UseItemInfo.num = 1
           UseItemInfo.para = item.petGid
           table.insert(useItemList, UseItemInfo)
@@ -2117,7 +2055,8 @@ function UMG_LineupAdjustment_C:CalcuLostData()
           local petDataInfo = _G.DataModelMgr.PlayerDataModel:GetPetDataByGid(fullpetdata.petData.gid)
           local sharedPetDataSkillID = fullpetdata.sharedPetData.skills[j].id
           local hasLearned = false
-          for _, skill in pairs(petDataInfo.skill.skill_data) do
+          local skillData = petDataInfo and petDataInfo.skill and petDataInfo.skill.skill_data or {}
+          for _, skill in pairs(skillData) do
             if skill.id == sharedPetDataSkillID and skill.is_learned then
               hasLearned = true
             end
@@ -2192,11 +2131,11 @@ function UMG_LineupAdjustment_C:CalcuBloodDiff()
         self.needBloodItemList[i].petGid = fullpetdata.petData.gid
         if 23 ~= tarBloodID then
           self.needBloodItemList[i].tarBloodID = tarBloodID
-          local NeedItemList, exchangeID = NRCModuleManager:DoCmd(PetUIModuleCmd.CalcuBloodChangeNeedItems, BloodItemID)
+          local NeedItemList, exchangeID, GetItemId = NRCModuleManager:DoCmd(PetUIModuleCmd.CalcuBloodChangeNeedItems, BloodItemID)
           self.needBloodItemList[i].NeedItemList = NeedItemList
           self.needBloodItemList[i].exchangeID = exchangeID
           self.needBloodItemList[i].IsIgnore = IsIgnore
-          self.needBloodItemList[i].BloodItemID = BloodItemID
+          self.needBloodItemList[i].BloodItemID = GetItemId or BloodItemID
           self.fullPetData[i].needBloodItemList = self.needBloodItemList[i]
         end
       else

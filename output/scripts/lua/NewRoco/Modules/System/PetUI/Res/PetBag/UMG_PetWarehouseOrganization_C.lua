@@ -174,7 +174,11 @@ end
 function UMG_PetWarehouseOrganization_C:OnChageSelectPetBagBoxItem(SelectBoxIndex)
   self.SelectBoxIndex = SelectBoxIndex
   if self.bNeedToInit == false then
-    self.ItemList:SelectItemByIndex(self.SelectBoxIndex)
+    if self.SelectBoxIndex then
+      self.ItemList:SelectItemByIndex(self.SelectBoxIndex)
+    else
+      self.ItemList:ClearSelection()
+    end
   end
 end
 
@@ -216,6 +220,9 @@ function UMG_PetWarehouseOrganization_C:OnClickCloseBtn()
 end
 
 function UMG_PetWarehouseOrganization_C:OnClickSortingBtn()
+  if not self.CanScroll then
+    return
+  end
   _G.NRCAudioManager:PlaySound2DAuto(40002003, "UMG_PetWarehouseOrganization_C:OnClickSortingBtn")
   self.EnterEditState = true
   self.newSelectBoxID = nil
@@ -251,12 +258,18 @@ function UMG_PetWarehouseOrganization_C:GetOriBoxList()
 end
 
 function UMG_PetWarehouseOrganization_C:OnClickSortedOutBtn()
+  if not self.CanScroll then
+    return
+  end
   _G.NRCAudioManager:PlaySound2DAuto(40002003, "UMG_PetWarehouseOrganization_C:OnClickSortedOutBtn")
   local curBoxIndex = self.ItemList:GetSelectedIndex()
   _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.OpenBoxOrganizationFethod, curBoxIndex)
 end
 
 function UMG_PetWarehouseOrganization_C:OnClickResetBtn()
+  if not self.CanScroll then
+    return
+  end
   _G.NRCAudioManager:PlaySound2DAuto(41401003, "UMG_PetWarehouseOrganization_C:OnClickResetBtn")
   local popUpData = _G.NRCCommonPopUpData()
   popUpData.Call = self

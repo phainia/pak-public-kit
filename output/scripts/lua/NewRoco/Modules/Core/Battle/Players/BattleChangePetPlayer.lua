@@ -419,7 +419,7 @@ function BattleChangePetPlayer:OnCallPetPostStart(eventName, skill)
     battlePet:ActiveSwimComponent(false)
     battlePet.buffComponent:OnPetBeCatch()
     battlePet:ShowPet(false)
-    battlePet:PrepareForG6()
+    battlePet:PrepareForG6(skill)
   end
 end
 

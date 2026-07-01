@@ -54,6 +54,11 @@ function HomeEditService:InEditMode()
 end
 
 function HomeEditService:TryCreateItemInfo(FurnitureData, ScreenPos)
+  if self.ThePreviewDecoData then
+    HomeIndoorSandbox:LogDebug("Cannot create props during preview decoration")
+    self:NotifyEditSpawnPropsStatus(HomeEnum.EnmEditPropsStatus.PRE_CHECK_FAILED_ESTABLISH)
+    return
+  end
   self.EditCreateItemInfoScreenPos = ScreenPos
   local FurnitureItemConf = FurnitureData.FurnitureItemConf
   if HomeIndoorSandbox:Ensure(FurnitureItemConf, "cannot found furniture item conf") then
@@ -74,6 +79,7 @@ function HomeEditService:TryCreateItemInfo(FurnitureData, ScreenPos)
     local RoomData = HomeIndoorSandbox.Server.WorldData:GetRoomData(RoomId)
     if not RoomData then
       HomeIndoorSandbox:Ensure(false, "Invalid Room", RoomId)
+      self:NotifyEditSpawnPropsStatus(HomeEnum.EnmEditPropsStatus.PRE_CHECK_FAILED_ESTABLISH)
       return
     end
     local Count = RoomData:GetPropsCount()
@@ -210,6 +216,10 @@ function HomeEditService:NotifyEditSpawnPropsStatus(Status, PropsData)
 end
 
 function HomeEditService:TrySelectProps(ScreenPos, TouchRequirePropsData, bDisableSelectAnchorOffset)
+  if self.ThePreviewDecoData then
+    HomeIndoorSandbox:LogDebug("Cannot select props during preview decoration")
+    return
+  end
   local TargetPropsActor
   HomeIndoorSandbox:LogDebug("ScreenPos=", ScreenPos)
   if not TouchRequirePropsData then

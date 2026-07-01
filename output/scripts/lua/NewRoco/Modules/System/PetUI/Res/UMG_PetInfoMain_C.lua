@@ -274,9 +274,13 @@ function UMG_PetInfoMain_C:OnAddEventListener()
   self:AddButtonListener(self.ShareBtn.btnLevelUp, self.OnShareClick)
   self:RegisterEvent(self, PetUIModuleEvent.OnCloseEggPanel, self.OnCloseEggClick)
   self:AddButtonListener(self.GiftColleaguesBtn.btnLevelUp, self.OnGiftBtnClick)
+  if self.HandbookBtn then
+    self:AddButtonListener(self.HandbookBtn.btnLevelUp, self.OnHandbookBtnClick)
+  end
   self:RegisterEvent(self, PetUIModuleEvent.OnSendPetFailed, self.OnSendPetFailed)
   self:RegisterEvent(self, PetUIModuleEvent.ShowHideGiftColleaguesBtn, self.ShowHideGiftColleaguesBtn)
   self:RegisterEvent(self, PetUIModuleEvent.ShowHideTimeRewindBtn, self.ShowHideTimeRewindBtn)
+  self:RegisterEvent(self, PetUIModuleEvent.ShowHideHandbookBtn, self.ShowHideHandbookBtn)
   self:RegisterEvent(self, PetUIModuleEvent.SetAttributeState, self.CloseSwitchButton)
   _G.NRCEventCenter:RegisterEvent(self.name, self, ShareUIModuleEvent.SHOW_ENTRANCE_REWARD, self.CheckShowShareReward)
   _G.DataModelMgr.PlayerDataModel:AddEventListener(self, ENUM_PLAYER_DATA_EVENT.UPDATE_DATA, self.OnPlayerDataUpdate)
@@ -297,6 +301,9 @@ function UMG_PetInfoMain_C:OnRemoveEventListener()
   _G.NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.OnShareComboBoxSelectChanged, self.SelectShareType)
   self:RemoveButtonListener(self.ShareBtn.btnLevelUp)
   self:RemoveButtonListener(self.TimeRewindBtn.btnLevelUp)
+  if self.HandbookBtn then
+    self:RemoveButtonListener(self.HandbookBtn.btnLevelUp)
+  end
   self:UnRegisterEvent(self, PetUIModuleEvent.OnCloseEggPanel)
   self:UnRegisterEvent(self, PetUIModuleEvent.OnSendPetFailed)
   self:UnRegisterEvent(self, PetUIModuleEvent.ShowHideGiftColleaguesBtn)
@@ -381,6 +388,8 @@ function UMG_PetInfoMain_C:OnPlayerDataUpdate(UpdateGoodType, PetDataChangeItemL
   if UpdateGoodType == _G.Enum.GoodsType.GT_PET and self.petInfo and self.petInfo.petData then
     self.petInfo.petData = _G.DataModelMgr.PlayerDataModel:GetPetDataByGid(self.petInfo.petData.gid)
     self:UpdateTimeRewindBtnVisibility()
+    self:UpdateHandbookBtnVisibility()
+    self:CheckCanSendToFriend()
   end
 end
 
@@ -404,6 +413,12 @@ end
 function UMG_PetInfoMain_C:OnGiftBtnClick()
   if self.petData and self.petData.gid then
     _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.SendPetToFriend, self.petData.gid, true)
+  end
+end
+
+function UMG_PetInfoMain_C:OnHandbookBtnClick()
+  if self.petData and self.petData.gid then
+    _G.NRCModuleManager:DoCmd(_G.HandbookModuleCmd.OpenHandBookContentViewByPetGid, self.petData.gid)
   end
 end
 
@@ -633,6 +648,7 @@ function UMG_PetInfoMain_C:OnSelectPet(index, petInfo, needAudio, notUpdatePetMi
   self.currentSelectedPetGid = petInfo.gid
   self:OnSelectPetChange(petInfo.petData)
   self:UpdateTimeRewindBtnVisibility()
+  self:UpdateHandbookBtnVisibility()
   self:SetTopBtnPanelVisibility(true)
   self.NeedSelectAudio = true
 end
@@ -671,6 +687,36 @@ function UMG_PetInfoMain_C:UpdateTimeRewindBtnVisibility(bShow)
     self.TimeRewindBtn:SetVisibility(bCanTraceBack and bCanShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
   else
     self.TimeRewindBtnBox:SetVisibility(bShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function UMG_PetInfoMain_C:UpdateHandbookBtnVisibility(bShow)
+  if self.petInfo == nil then
+    Log.Debug("UMG_PetInfoMain_C:UpdateHandbookBtnVisibility petInfo is nil")
+    self.HandbookBtnBox:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  if nil == self.petInfo.petData then
+    Log.Debug("UMG_PetInfoMain_C:UpdateHandbookBtnVisibility petData is nil")
+    self.HandbookBtnBox:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  if nil == bShow then
+    local bCanShow = true
+    local bPetBan = _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.CheckPetBanFlag, self.petInfo.petData)
+    if bPetBan then
+      bCanShow = false
+    end
+    if self.module and self.module:HasPanel("PetEvoNewPanel") then
+      bCanShow = false
+    end
+    local friendInfo = _G.NRCModuleManager:DoCmd(_G.PetUIModuleCmd.GetFriendInfoToPetMain)
+    if friendInfo and friendInfo.type ~= _G.ProtoEnum.PlayerRelationshipType.PRT_SELF then
+      bCanShow = false
+    end
+    self.HandbookBtn:SetVisibility(bCanShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
+  else
+    self.HandbookBtnBox:SetVisibility(bShow and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -1065,6 +1111,7 @@ function UMG_PetInfoMain_C:EnterEggPanelHideComponents()
   self:OnShowHideRecommendedBtn(false)
   self.ShareBtn:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:UpdateTimeRewindBtnVisibility(false)
+  self:UpdateHandbookBtnVisibility(false)
 end
 
 function UMG_PetInfoMain_C:ExitEggPanelHideComponents()
@@ -1072,6 +1119,7 @@ function UMG_PetInfoMain_C:ExitEggPanelHideComponents()
   self:ShowOrHideCloseBtn(true)
   self:OnShowHideRecommendedBtn(true)
   self:UpdateTimeRewindBtnVisibility(true)
+  self:UpdateHandbookBtnVisibility(true)
   if self.ShareIsOpen then
     if self.petData and self.petData.gid then
       local isHidden = _G.NRCModuleManager:DoCmd(_G.PVPRankedMatchModuleCmd.CmdIsTrailPet, self.petData.gid)
@@ -1108,9 +1156,14 @@ function UMG_PetInfoMain_C:ShowHideTimeRewindBtn(bShow)
   self:UpdateTimeRewindBtnVisibility(bShow)
 end
 
+function UMG_PetInfoMain_C:ShowHideHandbookBtn(bShow)
+  self:UpdateHandbookBtnVisibility(bShow)
+end
+
 function UMG_PetInfoMain_C:CloseSwitchButton(isDisable)
   self.BtnReturn.btnClose:SetIsEnabled(not isDisable)
   self:UpdateTimeRewindBtnVisibility()
+  self:UpdateHandbookBtnVisibility()
 end
 
 function UMG_PetInfoMain_C:CheckEnterType()

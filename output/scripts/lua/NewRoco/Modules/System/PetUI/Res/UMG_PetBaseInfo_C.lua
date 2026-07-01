@@ -239,7 +239,7 @@ function UMG_PetBaseInfo_C:RefreshEvoState()
   self.data.EvoTargetCfgId = nil
   local playerRedPointInfo = _G.DataModelMgr.PlayerDataModel:GetRedPointInfo()
   for k, v in ipairs(playerRedPointInfo) do
-    if (v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK) and v.point_data and #v.point_data > 0 then
+    if (v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK or v.reason_type == _G.Enum.RedPointReason.RPR_QUIET_PET_EVOLVE) and v.point_data and #v.point_data > 0 then
       for key, val in ipairs(v.point_data) do
         local dataList = string.Split(val, ".")
         if self.uiData and self.uiData.petData and self.uiData.petData.gid == tonumber(dataList[1]) then
@@ -270,7 +270,7 @@ end
 function UMG_PetBaseInfo_C:OnPetRedPointNotify(notify)
   if notify and notify.rp_group and #notify.rp_group > 0 then
     for k, v in ipairs(notify.rp_group) do
-      if v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK then
+      if v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK or v.reason_type == _G.Enum.RedPointReason.RPR_QUIET_PET_EVOLVE then
         self:RefreshEvoState()
       end
     end
@@ -1085,7 +1085,7 @@ function UMG_PetBaseInfo_C:GetEvolutionPetBaseId(petBaseID)
   local TargetEvoPetBaseId
   local playerRedPointInfo = _G.DataModelMgr.PlayerDataModel:GetRedPointInfo()
   for k, v in ipairs(playerRedPointInfo) do
-    if (v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK) and v.point_data and #v.point_data > 0 then
+    if (v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_TEAM or v.reason_type == _G.Enum.RedPointReason.RPR_PET_EVOLVE_BACKPACK or v.reason_type == _G.Enum.RedPointReason.RPR_QUIET_PET_EVOLVE) and v.point_data and #v.point_data > 0 then
       for key, val in ipairs(v.point_data) do
         local dataList = string.Split(val, ".")
         if self.uiData and self.uiData.petData and self.uiData.petData.gid == tonumber(dataList[1]) then

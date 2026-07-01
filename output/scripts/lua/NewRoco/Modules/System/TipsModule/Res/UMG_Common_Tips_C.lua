@@ -139,6 +139,9 @@ function UMG_Common_Tips_C:OnActive(context)
     else
       self.PetEggItem:SetEggIcon(self.randomEggData, context.iconPath)
     end
+  elseif self:CheckIsPetEggItem(context) then
+    self.ItemSwitcher:SetActiveWidgetIndex(3)
+    self.PetEggItem:SetEggIconWithItemId(context.goodsId)
   else
     self.MakeupProp:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Icon1:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -495,6 +498,20 @@ function UMG_Common_Tips_C:GetRandomEggData()
     end
   end
   return nil
+end
+
+function UMG_Common_Tips_C:CheckIsPetEggItem(context)
+  local ret = false
+  if context and context.goodsId then
+    local BagItemConf = _G.DataConfigManager:GetBagItemConf(context.goodsId)
+    if BagItemConf then
+      local BagItemType = BagItemConf.type
+      if BagItemType == _G.Enum.BagItemType.BI_PET_EGG then
+        ret = true
+      end
+    end
+  end
+  return ret
 end
 
 function UMG_Common_Tips_C:CheckIsCustomGlassPiece(context)

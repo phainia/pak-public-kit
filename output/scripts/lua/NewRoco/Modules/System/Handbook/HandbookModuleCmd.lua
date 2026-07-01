@@ -28,6 +28,7 @@ HandbookModuleCmd.SetDisableRewardAnimationState = "HandbookModuleCmd.SetDisable
 HandbookModuleCmd.SetClickTime = "HandbookModuleCmd.SetClickTime"
 HandbookModuleCmd.SetSelectedItemIcon = "HandbookModuleCmd.SetSelectedItemIcon"
 HandbookModuleCmd.OnOpenContentView = "HandbookModuleCmd.OnOpenContentView"
+HandbookModuleCmd.OpenHandBookContentViewByPetGid = "HandbookModuleCmd.OpenHandBookContentViewByPetGid"
 HandbookModuleCmd.OnGetHandbookPetIds = "HandbookModuleCmd.OnGetHandbookPetIds"
 HandbookModuleCmd.IsContainHandbookPetId = "HandbookModuleCmd.IsContainHandbookPetId"
 HandbookModuleCmd.ResetComboBox = "HandbookModuleCmd.ResetComboBox"

@@ -90,7 +90,10 @@ function PreHeatCollectItemObject:OnClick()
       ActivityUtils.SendMsgToSvr(_G.ProtoCMD.ZoneSvrCmd.ZONE_ACTIVITY_PRE_HEAT_REWARD_REQ, req, self, self.OnZoneActivityPreHeatRewardRsp)
     end
   elseif status == ActivityEnum.ItemStatus.Finished then
-    _G.NRCModuleManager:DoCmd(_G.ActivityModuleCmd.OpenSeasonPreheatingRecordBookPanel, self)
+    local owner = self:GetOwner()
+    if owner then
+      owner:OpenSeasonPreheatingRecordBookPanel(self)
+    end
   end
   local key, extraKey = self:GetRedpointData()
   if key then
@@ -214,6 +217,10 @@ end
 
 function PreHeatActivityObject:OnCollectItemObjectStatusChanged(itemObject)
   self:SendEvent(ActivityModuleEvent.PreHeatActivity_CollectItemStatusChanged, self, itemObject)
+end
+
+function PreHeatActivityObject:OpenSeasonPreheatingRecordBookPanel(itemObject)
+  _G.NRCModuleManager:DoCmd(_G.ActivityModuleCmd.OpenSeasonPreheatingRecordBookPanel, itemObject, self.preHeatCfg and self.preHeatCfg.manuscript_umg)
 end
 
 function PreHeatActivityObject:SyncActivityDataOnAvailable()

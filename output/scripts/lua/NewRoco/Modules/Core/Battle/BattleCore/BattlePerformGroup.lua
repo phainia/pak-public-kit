@@ -218,7 +218,10 @@ function BattlePerformGroup:NodeCompleteCallBack(overNode)
       overNode.IsCompleteCallBack = true
       self.NeedPerformNodeCount = self.NeedPerformNodeCount - 1
     end
+    self.OwnerCluster:RemoveNodeInServerExecuteQueue(overNode)
     if overNode == self.HeadNode then
+      self.OwnerCluster:AddKeepOrderClustersHeadInServerExecuteQueue(overNode)
+      self.OwnerCluster:AddNodeInServerExecuteQueue()
       self:AutoTriggerAllNodes()
     else
       self:TryTriggerNextAfterNodeComplete(overNode)
@@ -226,12 +229,7 @@ function BattlePerformGroup:NodeCompleteCallBack(overNode)
     if not self:CheckGroupOver() then
       self:CheckGroupStuck()
     end
-    for _, v in ipairs(self.OwnerCluster.FriendlyClusters) do
-      if table.contains(v.keepOrderClusters, self.OwnerCluster) then
-        v:RemoveNodeInServerExecuteQueue(overNode)
-      end
-    end
-    self.OwnerCluster:RemoveNodeInServerExecuteQueue(overNode)
+    self.OwnerCluster:NotifyFriendlyRemoveNodeInServerExecuteQueue(overNode)
   end
 end
 

@@ -117,7 +117,9 @@ TipEnum.TipsPauseReason = {
   DungeonReward = 16384,
   MagicReplay = 32768,
   PreparationPanel = 65536,
-  SceneRunTest = 131072
+  SceneRunTest = 131072,
+  BadgeChallenge = 262144,
+  FashionRunTest = 524288
 }
 TipEnum.OpenPetTipsType = {
   None = 0,

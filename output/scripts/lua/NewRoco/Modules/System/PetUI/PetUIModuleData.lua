@@ -96,6 +96,14 @@ function PetUIModuleData:Ctor()
     PartnerMarkerFilter = {},
     SpecialityFilter = {}
   }
+  self.chooseTypeListTerritoryTrial = {
+    DepartmentFilter = {},
+    TalentFilter = {},
+    NaturePositiveEffectFilter = {},
+    AttributeFilter = {},
+    PartnerMarkerFilter = {},
+    SpecialityFilter = {}
+  }
   self.OpenPanelPetData = nil
   self.CulCanEvo = false
   self.CulCanBreakThrough = false
@@ -138,6 +146,13 @@ function PetUIModuleData:Ctor()
   self.teamType = nil
   self.selTeamIdx = nil
   self.AssumptionEquipSkill = {}
+  self.PET_SKILL_SRC_BITS = {
+    PNSS_PET_LEVEL_UP = 1,
+    PNSS_SKILL_BOOK = 2,
+    PNSS_PET_BLOOD = 4,
+    PNSS_LEGENDARY = 8
+  }
+  self.cachedPetSkillSource = _G.MakeWeakTable({}, "kv")
   self.PetFriendInfo = nil
   self.ShiningWeekendTeamData = nil
   self.ShiningWeekendTeamOpenIndex = nil
@@ -861,6 +876,129 @@ function PetUIModuleData:SetAssumptionEquipSkill(petGid, AssumptionEquipSkill)
     end
   end
   return not isEqual
+end
+
+function PetUIModuleData:GetPetSkillSource(petBaseId, skillId)
+  local petCache = self.cachedPetSkillSource[petBaseId]
+  if petCache then
+    local bitmask = petCache.bitmask[skillId] or 0
+    local unlockLv = petCache.lv[skillId] or 0
+    return self:_ConvertBitmaskToSourceTypes(bitmask), unlockLv
+  end
+  return {}, 0
+end
+
+function PetUIModuleData:GetPetSkillSourceFlag(petBaseId, skillId)
+  local petCache = self.cachedPetSkillSource[petBaseId]
+  if petCache then
+    return petCache.bitmask[skillId] or 0, petCache.lv[skillId] or 0
+  end
+  return 0, 0
+end
+
+function PetUIModuleData:_ConvertBitmaskToSourceTypes(bitmask)
+  local sourceTypes = {}
+  if 0 ~= bitmask & 1 << _G.Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP then
+    table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP)
+  end
+  if 0 ~= bitmask & 1 << _G.Enum.PetNewSkillSrc.PNSS_LEGENDARY then
+    table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_LEGENDARY)
+  end
+  if 0 ~= bitmask & 1 << _G.Enum.PetNewSkillSrc.PNSS_SKILL_BOOK then
+    table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_SKILL_BOOK)
+  end
+  if 0 ~= bitmask & 1 << _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD then
+    table.insert(sourceTypes, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+  end
+  return sourceTypes
+end
+
+function PetUIModuleData:CachePetSkillSource(petBaseId, skillId, sourceType, unLockLv)
+  if not self.cachedPetSkillSource[petBaseId] then
+    self.cachedPetSkillSource[petBaseId] = {
+      bitmask = {},
+      lv = {}
+    }
+  end
+  self.cachedPetSkillSource[petBaseId].bitmask[skillId] = (self.cachedPetSkillSource[petBaseId].bitmask[skillId] or 0) | 1 << sourceType
+  if sourceType == _G.Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP then
+    self.cachedPetSkillSource[petBaseId].lv[skillId] = unLockLv
+  end
+end
+
+function PetUIModuleData:InitPetSkillSourceInfo(petBaseId, skillId)
+  local petBaseConf = _G.DataConfigManager:GetPetbaseConf(petBaseId)
+  if petBaseConf then
+    local levelSkillConf = _G.DataConfigManager:GetLevelSkillConf(petBaseConf.level_skill_conf_id)
+    if levelSkillConf then
+      for i, v in ipairs(levelSkillConf.level) do
+        self:CachePetSkillSource(petBaseId, v.param, _G.Enum.PetNewSkillSrc.PNSS_PET_LEVEL_UP, v.level_point)
+      end
+      for i, v in ipairs(levelSkillConf.machine_skill_group) do
+        self:CachePetSkillSource(petBaseId, v.machine_skill_id, _G.Enum.PetNewSkillSrc.PNSS_SKILL_BOOK)
+      end
+      if 0 ~= levelSkillConf.blood_skill_COMMON then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_COMMON, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_GRASS then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_GRASS, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_FIRE then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_FIRE, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_WATER then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_WATER, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_LIGHT then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_LIGHT, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_STONE then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_STONE, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_ICE then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_ICE, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_DRAGON then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_DRAGON, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_ELECTRIC then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_ELECTRIC, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_TOXIC then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_TOXIC, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_INSECT then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_INSECT, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_FIGHT then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_FIGHT, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_WING then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_WING, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_MOE then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_MOE, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_GHOST then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_GHOST, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_DEMON then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_DEMON, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_MECHANIC then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_MECHANIC, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if 0 ~= levelSkillConf.blood_skill_PHANTOM then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.blood_skill_PHANTOM, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+      end
+      if levelSkillConf.legendary_skill > 0 then
+        self:CachePetSkillSource(petBaseId, levelSkillConf.legendary_skill, _G.Enum.PetNewSkillSrc.PNSS_LEGENDARY)
+      end
+    end
+  end
+  if not self.cachedPetSkillSource[petBaseId] or not self.cachedPetSkillSource[petBaseId].bitmask[skillId] then
+    self:CachePetSkillSource(petBaseId, skillId, _G.Enum.PetNewSkillSrc.PNSS_PET_BLOOD)
+  end
 end
 
 return PetUIModuleData

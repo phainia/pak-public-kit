@@ -49,7 +49,8 @@ function ZoneServer:Ctor()
     [ProtoCMD.ZoneSvrCmd.ZONE_SCENE_END_THROW_RSP] = {
       50104,
       50079,
-      ProtoEnum.MOBA_RET.SceneErr.ERR_SCENE_CATCH_FORBID
+      ProtoEnum.MOBA_RET.SceneErr.ERR_SCENE_CATCH_FORBID,
+      ProtoEnum.MOBA_RET.SceneErr.ERR_SCENE_THROW_INTERACT_FAIL_TARGET_NOT_IN_AOI
     },
     [ProtoCMD.ZoneSvrCmd.ZONE_SCENE_CREATE_SCENE_PET_RSP] = {50104},
     [ProtoCMD.ZoneSvrCmd.ZONE_SCENE_NPC_NEXT_ACT_RSP] = {50104},
@@ -261,7 +262,11 @@ function ZoneServer:Connect(typeid, zoneid, ipOrDomain, port, encryptMethod, key
           clbIpUE4StrArr:Add(v)
         end
       end
+      _G.NRCSDKManager:PerfBeginMark("ConnectToZone")
+      _G.NRCSDKManager:PerfBeginExclude("ConnectToZone")
       _G.NRCNetworkManager:ConnectToZone(self.connectID, typeid, zoneid, 0, ipOrDomain, port, keyMakingMethod or 0, encryptMethod or 0, authType, authChannel, clbIpUE4StrArr)
+      _G.NRCSDKManager:PerfEndExclude("ConnectToZone")
+      _G.NRCSDKManager:PerfEndMark("ConnectToZone")
       _G.ZoneServer:OpenWaitingUI("ConnectToZone", LuaText.NET_CONNECTING)
     else
       Log.Warning("[ZoneServer] Connect self:IsConnecting() = true")

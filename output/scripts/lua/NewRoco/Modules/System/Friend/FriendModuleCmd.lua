@@ -68,6 +68,7 @@ FriendModuleCmd.LabelListSelectedChange = "FriendModuleCmd.LabelListSelectedChan
 FriendModuleCmd.SetSelectFriendIndex = "FriendModuleCmd.SetSelectFriendIndex"
 FriendModuleCmd.ActorEnterAction = "FriendModuleCmd.ActorEnterAction"
 FriendModuleCmd.WatchFriendBattle = "FriendModuleCmd.WatchFriendBattle"
+FriendModuleCmd.SetPendingWatchBattle = "FriendModuleCmd.SetPendingWatchBattle"
 FriendModuleCmd.OpenCardEditingComponent = "FriendModuleCmd.OpenCardEditingComponent"
 FriendModuleCmd.OpenCardChangeBackground = "FriendModuleCmd.OpenCardChangeBackground"
 FriendModuleCmd.OpenCardComponentSelectList = "FriendModuleCmd.OpenCardComponentSelectList"

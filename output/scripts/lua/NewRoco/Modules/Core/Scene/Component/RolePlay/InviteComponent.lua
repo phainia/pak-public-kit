@@ -92,6 +92,23 @@ function InviteComponent:Invite(playerUin, interactType, param, bTogether)
     Log.Error("InviteComponent:Invite No Param")
     return
   end
+  if interactType == ProtoEnum.InteractInviteType.IIT_INVITE_TOGETHER and _G.DataModelMgr.PlayerDataModel:IsVisitState() then
+    local isInSameVisitTeam = false
+    local visitorList = _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.GetOnlineVisitorList)
+    if visitorList and #visitorList > 0 then
+      for k, v in ipairs(visitorList) do
+        if v.uin == tonumber(playerUin) then
+          isInSameVisitTeam = true
+          break
+        end
+      end
+    end
+    if not isInSameVisitTeam and not self:IsFriendWithVisitOwner() then
+      Log.DebugFormat("InviteComponent:Invite not owner and not friend with owner, can not invite other players to together, playerUin=%s, interactType=%s", tostring(playerUin), tostring(interactType))
+      _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.relationtree_invite_stranger_online_tips)
+      return
+    end
+  end
   local targetPlayer = _G.NRCModuleManager:DoCmd(_G.PlayerModuleCmd.GetPlayerByUin, playerUin)
   local Dis = targetPlayer and self.owner:DistanceTo(targetPlayer) or -1
   if Dis < 0 then
@@ -152,6 +169,17 @@ function InviteComponent:Invite(playerUin, interactType, param, bTogether)
     local ErrorCode = InteractErrorCode.COMMON_ABNORMAL_STATUS
     self:ShowErrorMsg(ErrorCode)
   end
+end
+
+function InviteComponent:IsFriendWithVisitOwner()
+  local ownerUin = _G.DataModelMgr.PlayerDataModel:GetPlayerVisitOwnerUin()
+  if not ownerUin or 0 == ownerUin then
+    return false
+  end
+  if _G.DataModelMgr.PlayerDataModel:IsVisitOwner() then
+    return true
+  end
+  return _G.DataModelMgr.PlayerDataModel:IsFriend(ownerUin)
 end
 
 function InviteComponent:InviteCancel(caller, callback)
@@ -263,6 +291,11 @@ function InviteComponent:InviteAcceptOnlyOption(playerUin)
   end
   if Info.InteractType == ProtoEnum.InteractInviteType.IIT_REQUEST_TOGETHER or Info.InteractType == ProtoEnum.InteractInviteType.IIT_INVITE_TOGETHER then
     if _G.DataModelMgr.PlayerDataModel:IsVisitState() then
+      if Info.InteractType == ProtoEnum.InteractInviteType.IIT_REQUEST_TOGETHER and not self:IsFriendWithVisitOwner() then
+        Log.DebugFormat("InviteComponent:InviteAcceptOnlyOption not owner and not friend with owner, can not agree request together, playerUin = %s", tostring(playerUin))
+        _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_50748)
+        return
+      end
       local isPlayerExitVisitor = false
       local visitorList = _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.GetOnlineVisitorList)
       for k, v in ipairs(visitorList) do
@@ -292,6 +325,10 @@ function InviteComponent:InviteAcceptOnlyOption(playerUin)
     end
   elseif Info.InteractType == ProtoEnum.InteractInviteType.IIT_REQUEST_VISIT then
     if _G.DataModelMgr.PlayerDataModel:IsVisitState() then
+      if not self:IsFriendWithVisitOwner() then
+        _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.Error_Code_50748)
+        return
+      end
       local isPlayerExitVisitor = false
       local visitorList = _G.NRCModuleManager:DoCmd(_G.FriendModuleCmd.GetOnlineVisitorList)
       for k, v in ipairs(visitorList) do

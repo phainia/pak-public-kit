@@ -282,6 +282,8 @@ function HomeServer:ReqUploadRooms(Callback, RoomIdList, bForce, InSerialize)
     if not bSuccess then
       if _protoData.ret_info and _protoData.ret_info.ret_code == ProtoEnum.MOBA_RET.ZoneErr.ERR_ZONE_HOME_LAYOUT_REVIEW_FAILED then
         HomeIndoorSandbox.HomeTipsServ:ShowImportTips(LuaText.home_layout_release_contravention_tips)
+      elseif _protoData.ret_info and _protoData.ret_info.ret_code == 1126 then
+        HomeIndoorSandbox.HomeTipsServ:ShowImportTips(LuaText.Error_Code_1126)
       else
         HomeIndoorSandbox.HomeTipsServ:ShowImportTips(LuaText.home_layout_release_fail_tips)
       end

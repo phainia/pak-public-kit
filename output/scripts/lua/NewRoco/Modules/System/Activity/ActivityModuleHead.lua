@@ -105,6 +105,7 @@ function ActivityModuleHead:OnConstruct()
   self:BindCmd(_G.ActivityModuleCmd.OnCmdOpenPreDownload, "OnCmdOpenPreDownloadPopupPanel")
   self:BindCmd(_G.ActivityModuleCmd.MarkActivityCommonOpenTipsPerform, "MarkActivityCommonOpenTipsPerform")
   self:BindCmd(_G.ActivityModuleCmd.PreLoadDownloadActivityPanel, "PreLoadDownloadActivityPanel")
+  self:BindCmd(_G.ActivityModuleCmd.OnCmdOpenPastTerritoryTrial, "OnCmdOpenPastTerritoryTrial")
 end
 
 return ActivityModuleHead

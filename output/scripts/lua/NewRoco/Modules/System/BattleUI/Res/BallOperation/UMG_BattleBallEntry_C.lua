@@ -30,7 +30,7 @@ function UMG_BattleBallEntry_C:Initialize(Initializer)
 end
 
 function UMG_BattleBallEntry_C:Construct()
-  _G.BattleEventCenter:Bind(self, BattleEvent.BATTLE_CLICKED_BALL, BattleEvent.CHANGE_OPERATE_TYPE, BattleEvent.UI_INSTANT_UPDATE_BALL_NUM)
+  _G.BattleEventCenter:Bind(self, BattleEvent.BATTLE_CLICKED_BALL, BattleEvent.CHANGE_OPERATE_TYPE)
   self.props = {}
   self._timer = 0
   self._longPressThreshold = BattleConst.ItemLongPressThreshold
@@ -51,8 +51,6 @@ function UMG_BattleBallEntry_C:OnBattleEvent(eventName, ...)
   if eventName == BattleEvent.BATTLE_CLICKED_BALL then
   elseif eventName == BattleEvent.CHANGE_OPERATE_TYPE then
     self:OnOperatePanelChanged(...)
-  elseif eventName == BattleEvent.UI_INSTANT_UPDATE_BALL_NUM then
-    self:UpdateBallNum(...)
   end
 end
 
@@ -104,6 +102,12 @@ function UMG_BattleBallEntry_C:Tick(geometry, deltaTime)
   end
 end
 
+function UMG_BattleBallEntry_C:SetInit()
+  self.SelectedImage:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.NubBg:SetColorAndOpacity(UE4.FLinearColor(0.904661, 0.854993, 0.752942, 1))
+  self.Bg:SetRenderOpacity(1)
+end
+
 function UMG_BattleBallEntry_C:RefreshBallSelected()
   if not self.ballData or not self.ballData.isSelected then
     UE4.UNRCAudioManager.Get():PlaySound2DAuto(1004, "UMG_BattleBallEntry_C:OnClickedBall")
@@ -112,6 +116,8 @@ function UMG_BattleBallEntry_C:RefreshBallSelected()
       self.NubBg:SetColorAndOpacity(UE4.FLinearColor(0.904661, 0.854993, 0.752942, 1))
       self.Bg:SetRenderOpacity(1)
     end
+    self.NubBg:SetColorAndOpacity(UE4.FLinearColor(0.904661, 0.854993, 0.752942, 1))
+    self.Bg:SetRenderOpacity(1)
   else
     self.UMG_BattleClickFX:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     self.SelectedImage:SetVisibility(UE4.ESlateVisibility.Visible)
@@ -282,18 +288,6 @@ function UMG_BattleBallEntry_C:SetData(itemData)
   self:RefreshEmptyAndBanImage()
 end
 
-function UMG_BattleBallEntry_C:UpdateBallNum(BallIdNumMap)
-  if not self.ballData or not self.ballData.id then
-    return
-  end
-  local newNum = BallIdNumMap[self.ballData.id]
-  if not newNum then
-    return
-  end
-  self.ballData.num = newNum
-  self.NumTxt:SetText(tostring(self.ballData.num))
-end
-
 function UMG_BattleBallEntry_C:HidePoint()
   if self.point0 then
     self.point0:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -384,10 +378,6 @@ function UMG_BattleBallEntry_C:RefreshEmptyAndBanImage()
   local banImageVisibility = UE4.ESlateVisibility.Collapsed
   local emptyImageVisibility = UE4.ESlateVisibility.Collapsed
   local emptyImageOpacity = 1
-  if not bCanCatch then
-    banImageVisibility = UE4.ESlateVisibility.SelfHitTestInvisible
-    emptyImageVisibility = UE4.ESlateVisibility.SelfHitTestInvisible
-  end
   if not ballData or not ballData:IsValid() then
     banImageVisibility = UE4.ESlateVisibility.Collapsed
     emptyImageVisibility = UE4.ESlateVisibility.SelfHitTestInvisible

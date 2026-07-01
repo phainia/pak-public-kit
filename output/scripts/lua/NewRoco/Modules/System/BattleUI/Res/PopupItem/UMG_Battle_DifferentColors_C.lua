@@ -20,12 +20,17 @@ function UMG_Battle_DifferentColors_C:TryInitStateManager()
   stateManager:Init({
     owner = self,
     initState = initState,
+    DeriveStateFromProps = self.DeriveStateFromProps,
     UpdateDerivedState = self.UpdateDerivedState,
     RenderWidget = self.RenderWidget,
     OnWidgetDidUpdate = self.OnWidgetDidUpdate
   })
   self.stateManager = stateManager
   self.isInitStateManager = true
+end
+
+function UMG_Battle_DifferentColors_C.DeriveStateFromProps(prevState, nextProps)
+  return prevState
 end
 
 function UMG_Battle_DifferentColors_C.UpdateDerivedState(prevProps, currProps, prevState, currState, derivedState)

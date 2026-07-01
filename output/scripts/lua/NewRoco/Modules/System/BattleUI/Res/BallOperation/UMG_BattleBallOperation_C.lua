@@ -472,18 +472,46 @@ function UMG_BattleBallOperation_C:CreateBalls(ExcludeZero)
 end
 
 function UMG_BattleBallOperation_C:RefreshBallList()
-  local balls = self:CreateBalls(true)
-  if not balls then
-    Log.Error("UMG_BattleBallOperation_C:RefreshBallList  fail to create balls")
-    return
-  end
-  local BallIdNumMap = {}
-  for _, ball in pairs(balls) do
-    if ball.id and ball.num then
-      BallIdNumMap[ball.id] = ball.num
+  if self.ballListIndexToVisibleBall then
+    for _, ballEntry in pairs(self.ballListIndexToVisibleBall) do
+      if ballEntry then
+        ballEntry.isSelected = false
+        ballEntry:SetInit()
+      end
     end
   end
-  _G.BattleEventCenter:Dispatch(BattleEvent.UI_INSTANT_UPDATE_BALL_NUM, BallIdNumMap)
+  self.ballListIndexToVisibleBall = {}
+  local balls = self:CreateBalls()
+  if not balls then
+    Log.Error("UMG_BattleBallOperation_C:InitBallData  fail to create balls")
+    return
+  end
+  self:UpdateBallDataList(balls)
+  local selfBalls = self.Balls or {}
+  local ballListIndexToVisibleBall = self.ballListIndexToVisibleBall or {}
+  self:RefreshSelectPCKey(selfBalls, ballListIndexToVisibleBall)
+  local initScrollOffset = _G.BattleManager.battleRuntimeData.ballListScrollOffset or 0
+  if initScrollOffset <= 0 then
+    initScrollOffset = 0.1
+  end
+  initScrollOffset = math.min(initScrollOffset, self.ArcScrollView:GetMaxScrollOffset())
+  self.ArcScrollView:NRCSetScrollOffset(initScrollOffset)
+  self.ArcScrollView:RefreshPageIndexWithOffset()
+  for _, ballEntry in pairs(ballListIndexToVisibleBall) do
+    if ballEntry then
+      ballEntry.isSelected = false
+      ballEntry:SetInit()
+    end
+  end
+  local ballData = _G.BattleManager.battleRuntimeData.catchInfo and _G.BattleManager.battleRuntimeData.catchInfo.currentBallData
+  if ballData and self.currentBallDataList then
+    for _, ball in ipairs(self.currentBallDataList) do
+      if ball and ball:IsValid() and ball.gid == ballData.gid then
+        _G.BattleEventCenter:Dispatch(BattleEvent.BATTLE_CLICKED_BALL, ball)
+        break
+      end
+    end
+  end
 end
 
 function UMG_BattleBallOperation_C:InitBallData(bNeedSelect, selectIndex)

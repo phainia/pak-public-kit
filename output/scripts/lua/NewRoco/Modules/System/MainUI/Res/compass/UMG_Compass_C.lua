@@ -628,11 +628,6 @@ function UMG_Compass_C:CreateNpcHelper(npcInfo, compassData, worldMap, logic_id)
       self.NpcIcons[logic_id] = self:CreateNpcData(compassData, worldMap, self.TraceNpcLayer)
       self.NpcIcons[logic_id]:SetTrace(true, nil, 1, false)
       self:AddToForceTrackMap(logic_id, defaultTrackType)
-      local traceInfo = {
-        traceType = BigMapModuleEnum.TraceType.TempTrace,
-        npcInfo = npcInfo
-      }
-      table.insert(self.compassTraceInfo, traceInfo)
     else
       self.NpcIcons[logic_id] = self:CreateNpcData(compassData, worldMap)
       self:AddToLimitNumTrackTypeCache(logic_id, defaultTrackType, curFrameNum)

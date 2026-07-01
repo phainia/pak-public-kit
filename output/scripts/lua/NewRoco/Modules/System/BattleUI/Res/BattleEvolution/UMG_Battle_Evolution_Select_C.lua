@@ -4,6 +4,7 @@ local BattleUtils = require("NewRoco.Modules.Core.Battle.Common.BattleUtils")
 local BattleUIModuleCmd = require("NewRoco.Modules.System.BattleUI.BattleUIModuleCmd")
 local PetUIModule = require("NewRoco.Modules.System.PetUI.PetUIModuleCmd")
 local PetUIModuleEvent = require("NewRoco.Modules.System.PetUI.PetUIModuleEvent")
+local DialogContext = require("NewRoco.Modules.System.TipsModule.DialogContext")
 local UMG_Battle_Evolution_Select_C = _G.NRCPanelBase:Extend("UMG_Battle_Evolution_Select_C")
 
 function UMG_Battle_Evolution_Select_C:Construct()
@@ -14,9 +15,15 @@ function UMG_Battle_Evolution_Select_C:Construct()
   self.uiData = nil
   self.Gid = nil
   self.battlePetId = nil
+  self.queueElement = nil
+  self.Close:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function UMG_Battle_Evolution_Select_C:Destruct()
+  if self.queueElement then
+    _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.RemoveTargetDialog, self.queueElement)
+  end
+  self.queueElement = nil
   self:RemoveListeners()
   UpdateManager:UnRegister(self)
 end
@@ -28,15 +35,18 @@ end
 
 function UMG_Battle_Evolution_Select_C:AddListeners()
   self.BtnConfirm.btnLevelUp.OnClicked:Add(self, self.OnBtnConfirmClicked)
+  self.Close.btnClose.OnClicked:Add(self, self.OnClickedPauseEvolute)
   _G.NRCEventCenter:RegisterEvent("UMG_Battle_Evolution_Select_C", self, PetUIModuleEvent.PetEvolutionFail, self.OnPetEvolutionFail)
 end
 
 function UMG_Battle_Evolution_Select_C:RemoveListeners()
   self.BtnConfirm.btnLevelUp.OnClicked:Remove(self, self.OnBtnConfirmClicked)
+  self.Close.btnClose.OnClicked:Remove(self, self.OnClickedPauseEvolute)
   _G.NRCEventCenter:UnRegisterEvent(self, PetUIModuleEvent.PetEvolutionFail, self.OnPetEvolutionFail)
 end
 
 function UMG_Battle_Evolution_Select_C:Show(petBaseConfId, petData)
+  self.Close:SetVisibility(UE4.ESlateVisibility.Collapsed)
   UpdateManager:Register(self)
   self.uiData = petData
   self.Gid = petData and petData.petGid
@@ -61,6 +71,7 @@ function UMG_Battle_Evolution_Select_C:Show(petBaseConfId, petData)
     self:UpdateText(ids)
     self:UpdateIcon()
     self:UpdateIBlackMask()
+    self.Close:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     local ids = {petBaseConfId}
     self:UpdateText(ids)
@@ -69,6 +80,47 @@ function UMG_Battle_Evolution_Select_C:Show(petBaseConfId, petData)
     self.petBaseConfId = petBaseConfId
     self:ShowQuestionMark(true)
     self:UpdateIBlackMask()
+  end
+end
+
+function UMG_Battle_Evolution_Select_C:OnClickedPauseEvolute()
+  if self.petBaseConfId == nil then
+    self:OpenPauseEvoluteRemind()
+  end
+end
+
+function UMG_Battle_Evolution_Select_C:OpenPauseEvoluteRemind()
+  local petBaseConfId = self.petBaseConfId
+  local BattleManager = _G.BattleManager
+  local isInBattle = BattleManager and BattleManager:IsInBattle()
+  local isWatchingBattle = BattleUtils.IsWatchingBattle()
+  local canOpenPauseEvoluteRemind = true
+  if nil ~= petBaseConfId then
+    canOpenPauseEvoluteRemind = false
+  end
+  if isInBattle and isWatchingBattle then
+    canOpenPauseEvoluteRemind = false
+  end
+  if canOpenPauseEvoluteRemind then
+    local Ctx = DialogContext()
+    Ctx:SetTitle(LuaText.TIPS)
+    Ctx:SetContent(LuaText.umg_petevolution_10)
+    Ctx:SetMode(DialogContext.Mode.OK_CANCEL)
+    Ctx:SetCallbackOkOnly(self, self.SendPauseEvoluteEvent)
+    Ctx:SetCloseOnCancel(true)
+    Ctx:SetClickAnywhereClose(true)
+    _, self.queueElement = _G.NRCModuleManager:DoCmd(_G.TipsModuleCmd.Dialog_OpenDialog, Ctx)
+  end
+end
+
+function UMG_Battle_Evolution_Select_C:SendPauseEvoluteEvent()
+  if self.petBaseConfId == nil then
+    _G.BattleEventCenter:Dispatch(BattleEvent.EVOLUTION_PAUSE)
+    _G.NRCModuleManager:DoCmd(BattleUIModuleCmd.CloseBattleRedPanel)
+    self:ClearAllEnhancedInput()
+    if self.panelData then
+      self:DoClose()
+    end
   end
 end
 

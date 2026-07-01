@@ -12,9 +12,11 @@ function UMG_PetFreeCaptiveAnimals_C:OnConstruct()
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnDestruct()
+  self:UnRegisterEvent(self, PetUIModuleEvent.OnUpdatePetBacktrackRoundCount)
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnAddEventListener()
+  self:RegisterEvent(self, PetUIModuleEvent.OnUpdatePetBacktrackRoundCount, self.SetPetTitle)
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnActive(_data, stateType, coverRewardList)
@@ -27,6 +29,7 @@ function UMG_PetFreeCaptiveAnimals_C:OnActive(_data, stateType, coverRewardList)
   self.uiData.PetFreeAward = {}
   self.uiData.UnlockedHabitItemNum = {}
   self.coverRewardList = coverRewardList
+  self:SetPetTitle()
   self:SetCommonPopUpInfo()
   self:SetUpList()
   self:SetNewBelowList()
@@ -38,7 +41,7 @@ function UMG_PetFreeCaptiveAnimals_C:SetCommonPopUpInfo()
   if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.None then
     CommonPopUpData.Desc = _G.DataConfigManager:GetLocalizationConf("pet_remove_text").msg
   elseif self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet then
-    CommonPopUpData.Desc = _G.DataConfigManager:GetLocalizationConf("pet_free_return_tip").msg
+    CommonPopUpData.Desc = _G.DataConfigManager:GetLocalizationConf("pet_rollback_free_tip").msg
   end
   CommonPopUpData.Btn_RightText = LuaText.umg_petfreecaptiveanimals_2
   CommonPopUpData.Btn_LeftText = LuaText.umg_petfreecaptiveanimals_1
@@ -46,8 +49,40 @@ function UMG_PetFreeCaptiveAnimals_C:SetCommonPopUpInfo()
   CommonPopUpData.Btn_LeftHandler = self.OnBtnCancelClick
   CommonPopUpData.Btn_RightHandler = self.OnBtnOkClick
   CommonPopUpData.ClosePanelHandler = self.OnBtnWhiteClick
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet then
+    CommonPopUpData.TitleText = ""
+    CommonPopUpData.Btn_RightText = LuaText.pet_rollback_free_button_2
+    CommonPopUpData.Btn_LeftText = LuaText.pet_rollback_free_button_1
+  end
   self.OnPcCloseHandler = CommonPopUpData.ClosePanelHandler
   self.PopUp3:SetPanelInfo(CommonPopUpData)
+end
+
+function UMG_PetFreeCaptiveAnimals_C:SetPetTitle()
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet then
+    self.GeneralTitle:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.TitleCanvas:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.ReleaseReturn:SetText(LuaText.pet_rollback_free_des_1)
+    self.ReleasePet:SetText(LuaText.pet_rollback_free_des_2)
+    local num = _G.NRCModeManager:DoCmd(PetUIModuleCmd.GetCurrentSeasonkRoundCount)
+    local str = string.format(LuaText.pet_rollback_number_tip, num)
+    self.Tips:SetText(str)
+    local petData = #self.uiData.petList > 0 and self.uiData.petList[1]
+    if petData then
+      local petBaseConf = _G.DataConfigManager:GetPetbaseConf(petData.base_conf_id)
+      if petBaseConf then
+        local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
+        self.NRCpetIcon:SetPath(modelConf.icon)
+        self.QuestionMark:SetPath(modelConf.icon)
+        self.Title:SetText(LuaText.pet_rollback_free_title_1)
+      end
+    end
+  else
+    self.ReleaseReturn:SetText(LuaText.pet_free_describe_2)
+    self.ReleasePet:SetText(LuaText.pet_free_describe_1)
+    self.GeneralTitle:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.TitleCanvas:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
 end
 
 function UMG_PetFreeCaptiveAnimals_C:SetButtonIcon(okIcon, cancelIcon)
@@ -119,33 +154,36 @@ function UMG_PetFreeCaptiveAnimals_C:GetNewBaseInfoReward(_PetData)
 end
 
 function UMG_PetFreeCaptiveAnimals_C:SetUpList()
-  local PetFreeList = {}
-  local petData = self.uiData.petList
-  local gid = {}
-  if petData then
-    for i, _petData in ipairs(petData) do
-      local petBaseConf = _G.DataConfigManager:GetPetbaseConf(_petData.base_conf_id)
-      if petBaseConf then
-        local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
-        table.insert(gid, _petData.gid)
-        table.insert(PetFreeList, {
-          IconListInfo = _petData.level,
-          gid = _petData.gid,
-          PetIcon = modelConf,
-          IsTeamPet = false,
-          PetBasicProperty = petBaseConf.quality,
-          PetBaseId = _petData.base_conf_id,
-          mutation_typ = _petData.mutation_type,
-          glass_info = _petData.glass_info
-        })
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.None then
+    self.NRCSwitcher_List:SetActiveWidgetIndex(0)
+    local PetFreeList = {}
+    local petData = self.uiData.petList
+    local gid = {}
+    if petData then
+      for i, _petData in ipairs(petData) do
+        local petBaseConf = _G.DataConfigManager:GetPetbaseConf(_petData.base_conf_id)
+        if petBaseConf then
+          local modelConf = _G.DataConfigManager:GetModelConf(petBaseConf.model_conf)
+          table.insert(gid, _petData.gid)
+          table.insert(PetFreeList, {
+            IconListInfo = _petData.level,
+            gid = _petData.gid,
+            PetIcon = modelConf,
+            IsTeamPet = false,
+            PetBasicProperty = petBaseConf.quality,
+            PetBaseId = _petData.base_conf_id,
+            mutation_typ = _petData.mutation_type,
+            glass_info = _petData.glass_info
+          })
+        end
       end
     end
+    self.uiData.gid = gid
+    PetFreeList = self:SortFreePetList(PetFreeList)
+    self.uiData.PetFreeInfo = PetFreeList
+    self.UpList1:InitGridView(PetFreeList)
+    self.Switcher_Bg:SetActiveWidgetIndex(0)
   end
-  self.uiData.gid = gid
-  PetFreeList = self:SortFreePetList(PetFreeList)
-  self.uiData.PetFreeInfo = PetFreeList
-  self.UpList1:InitGridView(PetFreeList)
-  self.Switcher_Bg:SetActiveWidgetIndex(0)
 end
 
 function UMG_PetFreeCaptiveAnimals_C:SortFreePetList(_PetFreeList)
@@ -373,43 +411,43 @@ function UMG_PetFreeCaptiveAnimals_C:AddReward(BagItemId, Num)
   end
 end
 
-function UMG_PetFreeCaptiveAnimals_C:UpdateList()
-  local wardItemInfo = self.uiData.PetFreeAward
-  if self.coverRewardList then
-    wardItemInfo = self.coverRewardList
+function UMG_PetFreeCaptiveAnimals_C:BuildRewardIconList(rawList, isCoverList)
+  local rewardsTable = {}
+  if not rawList then
+    return rewardsTable
   end
   local itemInfo = {}
-  for i, item in pairs(wardItemInfo) do
-    if self.coverRewardList == nil then
-      local itemCfg = item.Id > 0 and _G.DataConfigManager:GetBagItemConf(item.Id) or nil
-      table.insert(itemInfo, {
-        itemCfg = itemCfg,
-        itemId = item.Id,
-        itemCount = item.Count,
-        itemType = item.Type
-      })
+  for _, item in pairs(rawList) do
+    local itemId, itemCount, itemType
+    if isCoverList then
+      itemId, itemCount, itemType = item.id, item.num, item.Type
     else
-      local itemCfg = item.id > 0 and _G.DataConfigManager:GetBagItemConf(item.id) or nil
+      itemId, itemCount, itemType = item.Id, item.Count, item.Type
+    end
+    if itemId and itemId > 0 then
+      local itemCfg = _G.DataConfigManager:GetBagItemConf(itemId)
       table.insert(itemInfo, {
         itemCfg = itemCfg,
-        itemId = item.id,
-        itemCount = item.num,
-        itemType = item.Type
+        itemId = itemId,
+        itemCount = itemCount,
+        itemType = itemType
       })
     end
   end
-  
-  local function compare(a, b)
+  table.sort(itemInfo, function(a, b)
+    if not a.itemCfg then
+      return false
+    end
+    if not b.itemCfg then
+      return true
+    end
     if a.itemCfg.item_quality ~= b.itemCfg.item_quality then
       return a.itemCfg.item_quality > b.itemCfg.item_quality
     else
       return a.itemCfg.sort_id < b.itemCfg.sort_id
     end
-  end
-  
-  table.sort(itemInfo, compare)
-  local rewardsTable = {}
-  for k, v in ipairs(itemInfo) do
+  end)
+  for _, v in ipairs(itemInfo) do
     local rewards = _G.NRCCommonItemIconData()
     rewards.itemType = _G.Enum.GoodsType.GT_BAGITEM
     rewards.itemId = v.itemId
@@ -418,7 +456,40 @@ function UMG_PetFreeCaptiveAnimals_C:UpdateList()
     rewards.bShowTip = true
     table.insert(rewardsTable, rewards)
   end
-  self.BelowList1:InitGridView(rewardsTable)
+  return rewardsTable
+end
+
+function UMG_PetFreeCaptiveAnimals_C:BuildRewardLists()
+  local petData = self.uiData.petList
+  self.uiData.PetFreeAward = {}
+  for i, _petData in ipairs(petData) do
+    local AwardList = PetUtils.GetPetFreeAwradList(_petData)
+    self.uiData.PetFreeAward = PetUtils.AddRewardToItemList(AwardList, self.uiData.PetFreeAward)
+    self:GetNewBaseInfoReward(_petData)
+  end
+  local clientRewards = self:BuildRewardIconList(self.uiData and self.uiData.PetFreeAward, false)
+  local coverRewards = self:BuildRewardIconList(self.coverRewardList, true)
+  return clientRewards, coverRewards
+end
+
+function UMG_PetFreeCaptiveAnimals_C:UpdateList()
+  local clientRewards, coverRewards = self:BuildRewardLists()
+  local rewardsTable = self.coverRewardList and #coverRewards > 0 and coverRewards or clientRewards
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.None then
+    self.BelowList1:InitGridView(rewardsTable)
+  else
+    self:UpdateLeftItemList(clientRewards)
+    self:UpdateRightItemList(coverRewards)
+  end
+end
+
+function UMG_PetFreeCaptiveAnimals_C:UpdateLeftItemList(datas)
+  self.NRCSwitcher_List:SetActiveWidgetIndex(1)
+  self.BelowList2:InitGridView(datas)
+end
+
+function UMG_PetFreeCaptiveAnimals_C:UpdateRightItemList(datas)
+  self.BelowList1:InitGridView(datas)
 end
 
 function UMG_PetFreeCaptiveAnimals_C:GetReward(_abilities, _petfree_sort, _level, GrowOrder)
@@ -434,14 +505,28 @@ function UMG_PetFreeCaptiveAnimals_C:GetReward(_abilities, _petfree_sort, _level
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnBtnCancelClick()
-  UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401002, "UMG_PetWarehouse_C:OnNRCButtonB")
-  self:LoadAnimation(2)
-  self:DispatchEvent(PetUIModuleEvent.PET_FREE_CANCEL)
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.None then
+    UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401014, "UMG_PetWarehouse_C:OnNRCButtonB")
+    self:LoadAnimation(2)
+    self:DispatchEvent(PetUIModuleEvent.PET_FREE_CANCEL)
+  else
+    local isBan = _G.NRCModuleManager:DoCmd(_G.FunctionBanModuleCmd.CheckUIFunctionBan, _G.Enum.FunctionEntrance.FE_PET_FREE, true)
+    if isBan then
+      return
+    end
+    local IsPrecious, TypeString = PetUtils.IsPreciousPet(self.uiData.petList)
+    if IsPrecious then
+      self:OpenPreciousDialogPanel(TypeString, true)
+      return
+    end
+    self:OnFree()
+  end
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnBtnWhiteClick()
   UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401014, "UMG_PetWarehouse_C:OnNRCButtonB")
   self:LoadAnimation(2)
+  self:DispatchEvent(PetUIModuleEvent.PET_FREE_CANCEL)
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnBtnOkClick()
@@ -454,7 +539,11 @@ function UMG_PetFreeCaptiveAnimals_C:OnBtnOkClick()
     self:OpenPreciousDialogPanel(TypeString)
     return
   end
-  self:OnFreeOk()
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.None then
+    self:OnFree()
+  else
+    self:OnFreeTraceBack()
+  end
 end
 
 function UMG_PetFreeCaptiveAnimals_C:OnAnimationFinished(Animation)
@@ -463,19 +552,36 @@ function UMG_PetFreeCaptiveAnimals_C:OnAnimationFinished(Animation)
   end
 end
 
-function UMG_PetFreeCaptiveAnimals_C:OnFreeOk()
+function UMG_PetFreeCaptiveAnimals_C:OnFreeOk(need_backtrack)
   local gid = self.uiData.gid
+  if self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.IncludeCanTraceBackPet then
+    gid = {
+      self.uiData.petList[1].gid
+    }
+  end
   UE4.UNRCAudioManager.Get():PlaySound2DAuto(41401001, "UMG_PetWarehouse_C:OnNRCButtonB")
-  NRCModuleManager:DoCmd(PetUIModuleCmd.SendFangShengPet, gid)
+  NRCModuleManager:DoCmd(PetUIModuleCmd.SendFangShengPet, gid, need_backtrack)
   self:DoClose()
 end
 
-function UMG_PetFreeCaptiveAnimals_C:OpenPreciousDialogPanel(PetTypeString)
+function UMG_PetFreeCaptiveAnimals_C:OnFree()
+  self:OnFreeOk(false)
+end
+
+function UMG_PetFreeCaptiveAnimals_C:OnFreeTraceBack()
+  self:OnFreeOk(true)
+end
+
+function UMG_PetFreeCaptiveAnimals_C:OpenPreciousDialogPanel(PetTypeString, isFree)
   local DialogContext = require("NewRoco.Modules.System.TipsModule.DialogContext")
   local Context = DialogContext()
   local ContentTitle = _G.DataConfigManager:GetLocalizationConf("TIPS").msg
   local ContentText = string.format(LuaText.rare_pet_release_tips, PetTypeString)
-  Context:SetTitle(ContentTitle):SetContent(ContentText):SetMode(DialogContext.Mode.OK_CANCEL):SetButtonText(LuaText.tips_dialog_butten_accept, LuaText.tips_dialog_butten_cancel):SetCloseOnCancel(true):SetCallbackOkOnly(self, self.OnFreeOk):SetClickAnywhereClose(true)
+  local isDefault = self.stateType == PetUIModuleEnum.PetFreeCaptivePanelStateType.None
+  if isFree then
+    isDefault = true
+  end
+  Context:SetTitle(ContentTitle):SetContent(ContentText):SetMode(DialogContext.Mode.OK_CANCEL):SetButtonText(LuaText.tips_dialog_butten_accept, LuaText.tips_dialog_butten_cancel):SetCloseOnCancel(true):SetCallbackOkOnly(self, isDefault and self.OnFree or self.OnFreeTraceBack):SetClickAnywhereClose(true)
   _G.NRCModuleManager:DoCmd(TipsModuleCmd.Dialog_OpenDialog, Context)
 end
 

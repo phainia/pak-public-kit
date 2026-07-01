@@ -1912,7 +1912,8 @@ Enum.CommandPriority = setmetatable({
   CP_CMD_USE_ITEM = 5,
   CP_CMD_SKILL_STATE = 5,
   CP_CMD_CHG_PET = 10,
-  CP_CMD_CATCH_PET = 11
+  CP_CMD_CATCH_PET = 11,
+  CP_CMD_OWNER_CATCH_PET = 12
 }, EnumMeta)
 Enum.PetTrainType = setmetatable({
   PTT_NONE = 0,
@@ -2652,7 +2653,8 @@ Enum.MallRecommendType = setmetatable({MRT_NULL = 0, MRT_RECOMMEND = 1}, EnumMet
 Enum.SpecialGoodsType = setmetatable({
   SGT_NORMAL = 0,
   SGT_HOTSALES = 1,
-  SGT_TARGET = 2
+  SGT_TARGET = 2,
+  SGT_CROSSDAY = 3
 }, EnumMeta)
 Enum.CycleResetType = setmetatable({CST_DAY = 0, CST_WEEK = 1}, EnumMeta)
 Enum.ItemBehavior = setmetatable({
@@ -5326,6 +5328,7 @@ Enum.FunctionEntrance = setmetatable({
   FE_S2_HANDBOOK = 87,
   FE_PHOTO_CONTEST = 88,
   FE_RANKBOARD = 89,
+  FE_CARD = 92,
   FE_PET_ADD_PET_EXP = 1010000,
   FE_PET_GROW = 1020000,
   FE_PET_FREE = 1030000,
@@ -5334,6 +5337,9 @@ Enum.FunctionEntrance = setmetatable({
   FE_PET_CHANGE_TALENT = 1060000,
   FE_PET_CHANGE_NATURE_EFFECT = 1070000,
   FE_PET_IMPROVE_TALENT = 1080000,
+  FE_PET_RENAME = 1090000,
+  FE_PET_TEAM_RENAME = 1100000,
+  FE_PET_BOX_RENAME = 1110000,
   FE_BAG_TAB_BALL = 2010000,
   FE_BAG_TAB_MATERIAL = 2020000,
   FE_BAG_TAB_PRECIOUS = 2030000,
@@ -5342,6 +5348,7 @@ Enum.FunctionEntrance = setmetatable({
   FE_BAG_TAB_PET_EGG = 2060000,
   FE_BAG_TAB_PET_FRUIT = 2070000,
   FT_MAP_PET_TRAVEL = 3010000,
+  FE_MAP_MARK_RENAME = 3020000,
   FE_HANDBOOK_REWARD = 5010000,
   FE_HANDBOOK_TRACE = 5020000,
   FE_PVP_BLOOD = 6010000,
@@ -5360,6 +5367,7 @@ Enum.FunctionEntrance = setmetatable({
   FE_WEGAME_FRIEND = 10010000,
   FE_QQ_FRIEND_INVITE = 10020000,
   FE_WX_FRIEND_INVITE = 10030000,
+  FE_FRIEND_REMARK = 10040000,
   FE_CHARGE_MONTHLY_CARD = 11010000,
   FE_CHARGE_GIFT_BOX = 11020000,
   FE_CHARGE_REPLENISH = 11030000,
@@ -5446,7 +5454,15 @@ Enum.FunctionEntrance = setmetatable({
   FE_AI_COACH_ACTIVITY = 81050000,
   FE_AI_COACH_TEAM = 81060000,
   FE_RANKBOARD_FETCH_DB = 89010000,
-  FE_BATTLE_GET_BALL = 90000001
+  FE_BATTLE_GET_BALL = 90000001,
+  FE_FASHION_CHANGE_RENAME = 18010000,
+  FE_HOME_ROOM_RENAME = 58010000,
+  FE_EDIT_HOME_RENAME = 63010000,
+  FE_CARD_PLAYER_RENAME = 92000001,
+  FE_CARD_SET_PLAYER_SIGNATURE = 92000002,
+  FE_CARD_CHANGE_BACKGROUND = 92000003,
+  FE_CHAT_MULTI_TEAM = 9010000,
+  FE_CHAT_PRIVATE_CHAT = 9020000
 }, EnumMeta)
 Enum.EntranceUnlockCondition = setmetatable({
   EUC_ROLE_LEVEL = 1,
@@ -5732,7 +5748,8 @@ Enum.RedPointReason = setmetatable({
   RPR_AICOACH_FIRST_OPEN = 186,
   RPR_UNLOCK_CAMERA_SKIN = 187,
   RPR_PRE_DOWNLOAD_REWARD = 188,
-  RPR_PRE_DOWNLOAD_START = 191
+  RPR_PRE_DOWNLOAD_START = 191,
+  RPR_QUIET_PET_EVOLVE = 206
 }, EnumMeta)
 Enum.RedPointType = setmetatable({
   RPT_COMMON = 1,
@@ -6821,6 +6838,7 @@ Enum.WhitelistTagType = setmetatable({
   WTT_CPU = 3,
   WTT_ACT_YEYOU = 4,
   WTT_ACT_FANLI = 5,
+  WTT_LLM_PET_FOLLOW = 6,
   WTT_MAIL_TAG_BEGIN = 10000,
   WTT_MAIL_TAG_END = 20000
 }, EnumMeta)
@@ -8112,5 +8130,25 @@ Enum.DefaultTrackType = setmetatable({
   DTT_NIGHTMARE = 2,
   DTT_SURPRISEBOX = 3,
   DTT_SHINE = 4
+}, EnumMeta)
+Enum.PlayerAnimationCustomizeType = setmetatable({
+  PACT_NONE = 0,
+  PACT_ALCHEMY_PANEL = 1,
+  PACT_PVP_LOSE_NORMAL = 2,
+  PACT_PVE_WIN_NORMAL = 3
+}, EnumMeta)
+Enum.NpcRefreshBanType = setmetatable({
+  NRBT_NONE = 0,
+  NRBT_NORMAL_WILD = 1,
+  NRBT_BONUS = 2,
+  NRBT_NORMAL_FLOWER = 3,
+  NRBT_PET_LAY_EGG = 4,
+  NRBT_LEGENDARY = 5,
+  NRBT_SPECIAL_FLOWER = 6
+}, EnumMeta)
+Enum.SocialExtDataType = setmetatable({
+  SEDT_NONE = 0,
+  SEDT_PROFILE = 1,
+  SEDT_RECENT_INFO = 2
 }, EnumMeta)
 return setmetatable(Enum, EnumMeta)

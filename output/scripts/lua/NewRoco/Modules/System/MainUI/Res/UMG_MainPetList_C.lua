@@ -156,7 +156,7 @@ function UMG_MainPetList_C:InitPanelInfo(NeedThrowSession, bForceInit, cancelThr
   if cancelThrow then
     self.curPage = curPage
     self.PageNum = PageNum
-    self:ScrollToPage(curPage)
+    self:ScrollToPage(curPage, nil, true)
     local selectPetIndex = _G.NRCModeManager:DoCmd(MainUIModuleCmd.GetSelectPetIndex)
     if selectPetIndex and selectPetIndex > 0 then
       local selectIndex = (self.curPage - 1) * 6 + selectPetIndex
@@ -199,7 +199,7 @@ function UMG_MainPetList_C:InitPanelInfo(NeedThrowSession, bForceInit, cancelThr
   end
   self.curPage = curPage
   self.PageNum = PageNum
-  self:ScrollToPage(curPage)
+  self:ScrollToPage(curPage, nil, true)
   local selectPetIndex = _G.NRCModeManager:DoCmd(MainUIModuleCmd.GetSelectPetIndex)
   if selectPetIndex and selectPetIndex > 0 then
     local selectIndex = (self.curPage - 1) * 6 + selectPetIndex
@@ -271,12 +271,18 @@ function UMG_MainPetList_C:ScrollNextPage(wheelData)
   self:ScrollToPage(self.curPage)
 end
 
-function UMG_MainPetList_C:ScrollToPage(_page, _animateTime)
+function UMG_MainPetList_C:ScrollToPage(_page, _animateTime, SkipScroll)
   if _page >= 0 and _page <= self.PageNum then
-    _G.NRCModeManager:DoCmd(MainUIModuleCmd.SetMainUICanCache, false)
     self.curPage = _page
-    self.scrollingTimeLeft = _animateTime or self.pageScrollTime
     self.desiredScrollOffset = (self.curPage - 1) * self.PageHeight
+    if SkipScroll then
+      self.scrollingTimeLeft = 0
+      self.ScrollBox_65:SetScrollOffset(self.desiredScrollOffset)
+      _G.NRCModeManager:DoCmd(MainUIModuleCmd.RefreshMainUICache)
+    else
+      _G.NRCModeManager:DoCmd(MainUIModuleCmd.SetMainUICanCache, false)
+      self.scrollingTimeLeft = _animateTime or self.pageScrollTime
+    end
     return true
   end
   return false

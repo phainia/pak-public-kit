@@ -305,6 +305,12 @@ end
 function UMG_RelationTree_Item_Pet_C:UpdateItemIconByRide(IconType)
   if self.ItemData then
     if not self:IsSelf() then
+      local PlayerUin = _G.NRCModeManager:DoCmd(_G.RelationTreeCmd.GetCurOpenPetPanelPlayerUin)
+      if not _G.DataModelMgr.PlayerDataModel:IsFriend(PlayerUin) then
+        self.headPortrait:SetPath(self.ItemData.StateStruct[self.State].icon[RelationTreeRidePetItem.IconType.Land])
+        self.Mask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        return
+      end
     end
     if IconType ~= RelationTreeRidePetItem.IconType.None then
       if self.ItemData.StateStruct[self.State].icon[IconType] and self.ItemData.StateStruct[self.State].icon[IconType] ~= "" then
@@ -328,27 +334,31 @@ end
 function UMG_RelationTree_Item_Pet_C:UpdatePetInfoEnableTouch(PetNpc, Dis, CurAnge)
   if PetNpc and self.ItemData and self.ItemData.InteractionTreeTypeDefault == Enum.InteractiontreeTypeDefault.ITTD_PET_TOUCH and Dis and CurAnge then
     local PlayerUin = _G.NRCModeManager:DoCmd(_G.RelationTreeCmd.GetCurOpenPetPanelPlayerUin)
-    local InTakePhotoWorld = NRCModuleManager:DoCmd(TakePhotosModuleCmd.IfInTakePhotoWorldPreviewMode) or NRCModuleManager:DoCmd(TakePhotosModuleCmd.IfInTakePhotoTripodMode)
-    if self:IsSelf() and not InTakePhotoWorld then
-      local InterComp = PetNpc:EnsureComponent(InteractionComponent)
-      if InterComp then
-        local NpcOption = InterComp:GetOptionByInteractType(Enum.InteractType.IT_MANUAL_BOND)
-        if NpcOption and NpcOption:IsPetBond() and NpcOption:IsOptionEnable() then
-          self.isIntimate = true
-        else
-          self.isIntimate = false
+    if self:IsSelf() or _G.DataModelMgr.PlayerDataModel:IsFriend(PlayerUin) then
+      local InTakePhotoWorld = NRCModuleManager:DoCmd(TakePhotosModuleCmd.IfInTakePhotoWorldPreviewMode) or NRCModuleManager:DoCmd(TakePhotosModuleCmd.IfInTakePhotoTripodMode)
+      if self:IsSelf() and not InTakePhotoWorld then
+        local InterComp = PetNpc:EnsureComponent(InteractionComponent)
+        if InterComp then
+          local NpcOption = InterComp:GetOptionByInteractType(Enum.InteractType.IT_MANUAL_BOND)
+          if NpcOption and NpcOption:IsPetBond() and NpcOption:IsOptionEnable() then
+            self.isIntimate = true
+          else
+            self.isIntimate = false
+          end
         end
       end
-    end
-    if Dis <= BOND_TOUCH_DISTANCE * BOND_TOUCH_DISTANCE and CurAnge <= BOND_TOUCH_VISION_RANGE then
-      if PetNpc.AIComponent then
-        local ctrl = PetNpc.AIComponent:GetControllerSafe()
-        if ctrl then
-          local inst, _, _ = ctrl:GetGroupInfos()
-          if 0 ~= inst then
-            self.IsEnableTouch = PetTouchState.IsInAnyGroup
-            PetNpc:SetPetBondActive(false, 1)
-            self.Mask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      if Dis <= BOND_TOUCH_DISTANCE * BOND_TOUCH_DISTANCE and CurAnge <= BOND_TOUCH_VISION_RANGE then
+        if PetNpc.AIComponent then
+          local ctrl = PetNpc.AIComponent:GetControllerSafe()
+          if ctrl then
+            local inst, _, _ = ctrl:GetGroupInfos()
+            if 0 ~= inst then
+              self.IsEnableTouch = PetTouchState.IsInAnyGroup
+              PetNpc:SetPetBondActive(false, 1)
+              self.Mask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+            else
+              self:IsCanEnbaleTouchSetting(PetNpc)
+            end
           else
             self:IsCanEnbaleTouchSetting(PetNpc)
           end
@@ -356,14 +366,16 @@ function UMG_RelationTree_Item_Pet_C:UpdatePetInfoEnableTouch(PetNpc, Dis, CurAn
           self:IsCanEnbaleTouchSetting(PetNpc)
         end
       else
-        self:IsCanEnbaleTouchSetting(PetNpc)
+        PetNpc:SetPetBondActive(false, 1)
+        self.IsEnableTouch = PetTouchState.IsNotCanTouch
+        if Dis <= BOND_TOUCH_DISTANCE * BOND_TOUCH_DISTANCE and CurAnge > BOND_TOUCH_VISION_RANGE then
+          self.IsEnableTouch = PetTouchState.IsNotCanTouchForAnge
+        end
+        self.Mask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       end
     else
       PetNpc:SetPetBondActive(false, 1)
-      self.IsEnableTouch = PetTouchState.IsNotCanTouch
-      if Dis <= BOND_TOUCH_DISTANCE * BOND_TOUCH_DISTANCE and CurAnge > BOND_TOUCH_VISION_RANGE then
-        self.IsEnableTouch = PetTouchState.IsNotCanTouchForAnge
-      end
+      self.IsEnableTouch = PetTouchState.IsNotFriendPet
       self.Mask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
     self:PlayerPetEnableTouchAnimation()
@@ -472,13 +484,21 @@ function UMG_RelationTree_Item_Pet_C:OnSelectButton()
     _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, Text)
     return
   end
-  if self.ItemData.InteractionTreeTypeDefault == Enum.InteractiontreeTypeDefault.ITTD_RIDE and self.RideBlock then
-    if player and player.buffComponent and player.buffComponent:HasBuff(ScenePlayerRideFriendPetBuff.BuffName) then
-      Log.Debug("UMG_RelationTree_Item_Pet_C:OnSelectButton is requesting, no need to show tips")
+  if self.ItemData.InteractionTreeTypeDefault == Enum.InteractiontreeTypeDefault.ITTD_RIDE then
+    if self.RideBlock then
+      if player and player.buffComponent and player.buffComponent:HasBuff(ScenePlayerRideFriendPetBuff.BuffName) then
+        Log.Debug("UMG_RelationTree_Item_Pet_C:OnSelectButton is requesting, no need to show tips")
+        return
+      end
+      _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.RLTT_Error_Code_2443)
       return
     end
-    _G.NRCModeManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, LuaText.RLTT_Error_Code_2443)
-    return
+    local PlayerUin = _G.NRCModeManager:DoCmd(_G.RelationTreeCmd.GetCurOpenPetPanelPlayerUin)
+    if not self:IsSelf() and not _G.DataModelMgr.PlayerDataModel:IsFriend(PlayerUin) then
+      local Text = LuaText.interactiontree_ride_request_text_3
+      _G.NRCModuleManager:DoCmd(TipsModuleCmd.TopHud_ShowTips, Text)
+      return
+    end
   end
   _G.NRCAudioManager:PlaySound2DAuto(41401003, "UMG_RelationTree_Item_Pet_C:OnConfirm")
   if _G.NRCModeManager:DoCmd(_G.RelationTreeCmd.GetRelationItemSelectCD) > 0 then

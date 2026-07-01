@@ -834,6 +834,10 @@ function UMG_Common_ListItemIcon_C:SetIcon(icon_path)
         self.IconSwitcher:SetActiveWidgetIndex(2)
         self.PetEggIcon:SetEggIcon(egg_data, icon_path)
         return
+      elseif not egg_data and self.IconSwitcher and self.PetEggIcon and self.uiData.itemId then
+        self.IconSwitcher:SetActiveWidgetIndex(2)
+        self.PetEggIcon:SetEggIconWithItemId(self.uiData.itemId)
+        return
       end
     end
   end

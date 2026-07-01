@@ -37,7 +37,11 @@ function NRCNetworkManager:GetConnectState(connectID)
 end
 
 function NRCNetworkManager:ReConnect(connectID)
+  _G.NRCSDKManager:PerfBeginMark("ReConnect")
+  _G.NRCSDKManager:PerfBeginExclude("ReConnect")
   self.bind:ReConnect(connectID)
+  _G.NRCSDKManager:PerfEndExclude("ReConnect")
+  _G.NRCSDKManager:PerfEndMark("ReConnect")
 end
 
 function NRCNetworkManager:GetIP(connectID)
